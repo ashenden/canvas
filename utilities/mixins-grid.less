@@ -2,7 +2,7 @@
 -------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-utilities/mixin-grid.less
+utilities/mixins-grid.less
 
 -------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
@@ -22,14 +22,14 @@ Container (Fixed)
 ---------------------------------------------------------------------------------------------------- */
 
 .container-fixed(@gutter: @grid-gutter-width) {
-	
+
 	margin-right: auto;
 	margin-left: auto;
 	padding-left:  (@gutter / 2);
 	padding-right: (@gutter / 2);
-	
+
 	&:extend(.clearfix all);
-	
+
 }
 
 
@@ -46,12 +46,12 @@ Row
 ---------------------------------------------------------------------------------------------------- */
 
 .make-row(@gutter: @grid-gutter-width) {
-	
+
 	margin-left:  (@gutter / -2);
 	margin-right: (@gutter / -2);
-	
+
 	&:extend(.clearfix all);
-	
+
 }
 
 
@@ -74,32 +74,32 @@ Mini Column
 ---------------------------------------------------------------------------------------------------- */
 
 .make-mini-column(@columns; @gutter: @grid-gutter-width) {
-	
+
 	position: relative;
 	float: left;
 	width: percentage((@columns / @grid-columns));
 	min-height: 1px;
 	padding-left:  (@gutter / 2);
 	padding-right: (@gutter / 2);
-	
+
 }
 
 .make-mini-column-offset(@columns) {
-	
+
 	margin-left: percentage((@columns / @grid-columns));
-	
+
 }
 
 .make-mini-column-push(@columns) {
-	
+
 	left: percentage((@columns / @grid-columns));
-	
+
 }
 
 .make-mini-column-pull(@columns) {
-	
+
 	right: percentage((@columns / @grid-columns));
-	
+
 }
 
 
@@ -109,49 +109,49 @@ Small Column
 ---------------------------------------------------------------------------------------------------- */
 
 .make-small-column(@columns; @gutter: @grid-gutter-width) {
-	
+
 	position: relative;
 	min-height: 1px;
 	padding-left:  (@gutter / 2);
 	padding-right: (@gutter / 2);
-	
+
 	@media (min-width: @screen-small-min) {
-		
+
 		float: left;
 		width: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-small-column-offset(@columns) {
-	
+
 	@media (min-width: @screen-small-min) {
-		
+
 		margin-left: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-small-column-push(@columns) {
-	
+
 	@media (min-width: @screen-small-min) {
-		
+
 		left: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-small-column-pull(@columns) {
-	
+
 	@media (min-width: @screen-small-min) {
-		
+
 		right: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 
@@ -161,49 +161,49 @@ Medium Column
 ---------------------------------------------------------------------------------------------------- */
 
 .make-medium-column(@columns; @gutter: @grid-gutter-width) {
-	
+
 	position: relative;
 	min-height: 1px;
 	padding-left:  (@gutter / 2);
 	padding-right: (@gutter / 2);
-	
+
 	@media (min-width: @screen-medium-min) {
-		
+
 		float: left;
 		width: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-medium-column-offset(@columns) {
-	
+
 	@media (min-width: @screen-medium-min) {
-		
+
 		margin-left: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-medium-column-push(@columns) {
-	
+
 	@media (min-width: @screen-medium-min) {
-		
+
 		left: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-medium-column-pull(@columns) {
-	
+
 	@media (min-width: @screen-medium-min) {
-		
+
 		right: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 
@@ -213,47 +213,47 @@ Large Column
 ---------------------------------------------------------------------------------------------------- */
 
 .make-large-column(@columns; @gutter: @grid-gutter-width) {
-	
+
 	position: relative;
 	min-height: 1px;
 	padding-left:  (@gutter / 2);
 	padding-right: (@gutter / 2);
-	
+
 	@media (min-width: @screen-large-min) {
-		
+
 		float: left;
 		width: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-large-column-offset(@columns) {
-	
+
 	@media (min-width: @screen-large-min) {
-		
+
 		margin-left: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-large-column-push(@columns) {
-	
+
 	@media (min-width: @screen-large-min) {
-		
+
 		left: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
 
 .make-large-column-pull(@columns) {
-	
+
 	@media (min-width: @screen-large-min) {
-		
+
 		right: percentage((@columns / @grid-columns));
-		
+
 	}
-	
+
 }
