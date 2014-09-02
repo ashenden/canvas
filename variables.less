@@ -100,12 +100,20 @@ Screen Sizes
 
 
 /* ----------------------------------------------------------------------------------------------------
+Screen Resolutions
+---------------------------------------------------------------------------------------------------- */
+
+@screen-resolution-2x-active:																	true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
 Grid
 ---------------------------------------------------------------------------------------------------- */
 
 @grid-columns-count:																			12;
 
-@grid-gutter-width:																				20px;
+@grid-gutter-width:																				24px;
 @grid-container-fluid-gutter-width:																@grid-gutter-width;
 
 // Mini Screen (Phone)
@@ -117,21 +125,496 @@ Grid
 
 // Small Screen (Tablet)
 
-@grid-gutter-width-screen-small:																30px;
+@grid-gutter-width-screen-small:																32px;
 @grid-column-width-screen-small:																(@grid-container-width-screen-small - ((@grid-columns-count - 1) * @grid-gutter-width-screen-small)) / @grid-columns-count;
 @grid-container-width-screen-small:																730px;
 @grid-container-fluid-gutter-width-screen-small:												@grid-gutter-width-screen-small;
 
 // Medium Screen (Laptop)
 
-@grid-gutter-width-screen-medium:																40px;
+@grid-gutter-width-screen-medium:																48px;
 @grid-column-width-screen-medium:																(@grid-container-width-screen-medium - ((@grid-columns-count - 1) * @grid-gutter-width-screen-medium)) / @grid-columns-count;
 @grid-container-width-screen-medium:															920px;
 @grid-container-fluid-gutter-width-screen-medium:												@grid-gutter-width-screen-medium;
 
 // Large Screen (Desktop)
 
-@grid-gutter-width-screen-large:																60px;
+@grid-gutter-width-screen-large:																64px;
 @grid-column-width-screen-large:																(@grid-container-width-screen-large - ((@grid-columns-count - 1) * @grid-gutter-width-screen-large)) / @grid-columns-count;
 @grid-container-width-screen-large:																1160px;
 @grid-container-fluid-gutter-width-screen-large:												@grid-gutter-width-screen-large;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Spacing Unit
+---------------------------------------------------------------------------------------------------- */
+
+@base-spacing-unit:																				@grid-gutter-width * 1.0;
+@base-spacing-unit-screen-mini:																	@grid-gutter-width * 1.0;
+@base-spacing-unit-screen-small:																@grid-gutter-width-screen-small * 1.0;
+@base-spacing-unit-screen-medium:																@grid-gutter-width-screen-medium * 1.0;
+@base-spacing-unit-screen-large:																@grid-gutter-width-screen-large * 1.0;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Foundation
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Body
+---------------------------------------------------------------------------------------------------- */
+
+@body-background-color:																			@white;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Canvas
+---------------------------------------------------------------------------------------------------- */
+
+@canvas-background-color:																		@white;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Canvas Pod
+---------------------------------------------------------------------------------------------------- */
+
+@canvas-pod-light-background-color:																~`color_lightness("@{gray}", 80)`;
+@canvas-pod-dark-background-color:																~`color_lightness("@{gray}", -80)`;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Container Pod
+---------------------------------------------------------------------------------------------------- */
+
+@container-pod-padding-vertical:																@base-spacing-unit * 1.0;
+@container-pod-padding-vertical-screen-mini:													@base-spacing-unit-screen-mini * 1.0;
+@container-pod-padding-vertical-screen-small:													@base-spacing-unit-screen-small * 1.0;
+@container-pod-padding-vertical-screen-medium:													@base-spacing-unit-screen-medium * 1.0;
+@container-pod-padding-vertical-screen-large:													@base-spacing-unit-screen-large * 1.0;
+
+// Short Container Pod
+
+@container-pod-short-padding-vertical:															@base-spacing-unit * 2.0;
+@container-pod-short-padding-vertical-screen-mini:												@base-spacing-unit-screen-mini * 2.0;
+@container-pod-short-padding-vertical-screen-small:												@base-spacing-unit-screen-small * 2.0;
+@container-pod-short-padding-vertical-screen-medium:											@base-spacing-unit-screen-medium * 2.0;
+@container-pod-short-padding-vertical-screen-large:												@base-spacing-unit-screen-large * 2.0;
+
+// Tall Container Pod
+
+@container-pod-tall-padding-vertical:															@base-spacing-unit * 2.0;
+@container-pod-tall-padding-vertical-screen-mini:												@base-spacing-unit-screen-mini * 2.0;
+@container-pod-tall-padding-vertical-screen-small:												@base-spacing-unit-screen-small * 2.0;
+@container-pod-tall-padding-vertical-screen-medium:												@base-spacing-unit-screen-medium * 2.0;
+@container-pod-tall-padding-vertical-screen-large:												@base-spacing-unit-screen-large * 2.0;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Typography
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Font Families
+---------------------------------------------------------------------------------------------------- */
+
+@font-family-sans-serif:																		"Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:																				Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+@font-family-monospace:																			Monaco, Menlo, Consolas, "Courier New", monospace;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Body Text
+---------------------------------------------------------------------------------------------------- */
+
+// Body Text Styling
+
+@body-text-color:																				~`color_lightness("@{gray}", 0)`;
+@body-text-font-family:																			@font-family-sans-serif;
+@body-text-font-size:																			13px;
+@body-text-font-style:																			normal;
+@body-text-font-weight:																			400;
+@body-text-line-height:																			16px;
+@body-text-transform:																			none;
+@body-text-shadow:																				none;
+
+// Body Text Links
+
+@body-text-link-text-color:																		~`color_lightness("@{blue}", 0)`;
+@body-text-link-text-decoration:																none;
+
+@body-text-link-hover-text-color:																~`color_lightness("@{blue}", -20)`;
+@body-text-link-hover-text-decoration:															underline;
+
+@body-text-link-active-text-color:																~`color_lightness("@{blue}", -40)`;
+@body-text-link-active-text-decoration:															none;
+
+@body-text-link-disabled-text-color:															@body-text-link-text-color;
+@body-text-link-disabled-text-decoration:														none;
+@body-text-link-disabled-opacity:																0.5;
+
+// Body Text Margins
+
+@body-text-margin-top:																			@base-spacing-unit * 1.0;
+@body-text-margin-bottom:																		@base-spacing-unit * 0.5;
+
+@body-text-short-margin-top:																	@body-text-margin-top;
+@body-text-short-margin-bottom:																	@base-spacing-unit * 0.25;
+
+@body-text-tall-margin-top:																		@body-text-margin-top;
+@body-text-tall-margin-bottom:																	@base-spacing-unit * 1.0;
+
+// Body Text Responsive Text Scaling
+
+@body-text-font-size-scale-screen-mini:															@base-spacing-unit-screen-mini / @base-spacing-unit;
+@body-text-font-size-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@body-text-font-size-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@body-text-font-size-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+@body-text-line-height-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@body-text-line-height-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@body-text-line-height-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@body-text-line-height-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+// Body Text Responsive Margin Scaling
+
+@body-text-margin-top-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@body-text-margin-top-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@body-text-margin-top-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@body-text-margin-top-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+@body-text-margin-bottom-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@body-text-margin-bottom-scale-screen-small:													@base-spacing-unit-screen-small / @base-spacing-unit;
+@body-text-margin-bottom-scale-screen-medium:													@base-spacing-unit-screen-medium / @base-spacing-unit;
+@body-text-margin-bottom-scale-screen-large:													@base-spacing-unit-screen-large / @base-spacing-unit;
+
+// Body Text Emphasize Styling
+
+@body-text-emphasize-color:																		~`color_lightness("@{gray}", -20)`;
+@body-text-emphasize-font-family:																@body-text-font-family;
+@body-text-emphasize-font-size:																	@body-text-font-size;
+@body-text-emphasize-font-style:																@body-text-font-style;
+@body-text-emphasize-font-weight:																700;
+@body-text-emphasize-line-height:																@body-text-line-height;
+@body-text-emphasize-transform:																	@body-text-transform;
+@body-text-emphasize-shadow:																	@body-text-shadow;
+
+// Body Text Emphasize Links
+
+@body-text-emphasize-link-text-color:															@body-text-link-text-color;
+@body-text-emphasize-link-text-decoration:														@body-text-link-text-decoration;
+
+@body-text-emphasize-link-hover-text-color:														@body-text-link-hover-text-color;
+@body-text-emphasize-link-hover-text-decoration:												@body-text-link-hover-text-decoration;
+
+@body-text-emphasize-link-active-text-color:													@body-text-link-active-text-color;
+@body-text-emphasize-link-active-text-decoration:												@body-text-link-active-text-decoration;
+
+@body-text-emphasize-link-disabled-text-color:													@body-text-link-disabled-text-color;
+@body-text-emphasize-link-disabled-text-decoration:												@body-text-link-disabled-text-decoration;
+@body-text-emphasize-link-disabled-opacity:														@body-text-link-disabled-opacity;
+
+// Body Text Emphasize Styling
+
+@body-text-mute-color:																			~`color_lightness("@{gray}", 20)`;
+@body-text-mute-font-family:																	@body-text-font-family;
+@body-text-mute-font-size:																		@body-text-font-size;
+@body-text-mute-font-style:																		@body-text-font-style;
+@body-text-mute-font-weight:																	200;
+@body-text-mute-line-height:																	@body-text-line-height;
+@body-text-mute-transform:																		@body-text-transform;
+@body-text-mute-shadow:																			@body-text-shadow;
+
+// Body Text Mute Links
+
+@body-text-mute-link-text-color:																@body-text-link-text-color;
+@body-text-mute-link-text-decoration:															@body-text-link-text-decoration;
+
+@body-text-mute-link-hover-text-color:															@body-text-link-hover-text-color;
+@body-text-mute-link-hover-text-decoration:														@body-text-link-hover-text-decoration;
+
+@body-text-mute-link-active-text-color:															@body-text-link-active-text-color;
+@body-text-mute-link-active-text-decoration:													@body-text-link-active-text-decoration;
+
+@body-text-mute-link-disabled-text-color:														@body-text-link-disabled-text-color;
+@body-text-mute-link-disabled-text-decoration:													@body-text-link-disabled-text-decoration;
+@body-text-mute-link-disabled-opacity:															@body-text-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Small Text
+---------------------------------------------------------------------------------------------------- */
+
+// Small Text Styling
+
+@small-text-color:																				~`color_lightness("@{gray}", 20)`;
+@small-text-font-family:																		@font-family-sans-serif;
+@small-text-font-size:																			11px;
+@small-text-font-style:																			normal;
+@small-text-font-weight:																		400;
+@small-text-line-height:																		13px;
+@small-text-transform:																			none;
+@small-text-shadow:																				none;
+
+// Small Text Links
+
+@small-text-link-text-color:																	~`color_lightness("@{blue}", 0)`;
+@small-text-link-text-decoration:																none;
+
+@small-text-link-hover-text-color:																~`color_lightness("@{blue}", -20)`;
+@small-text-link-hover-text-decoration:															underline;
+
+@small-text-link-active-text-color:																~`color_lightness("@{blue}", -40)`;
+@small-text-link-active-text-decoration:														none;
+
+@small-text-link-disabled-text-color:															@small-text-link-text-color;
+@small-text-link-disabled-text-decoration:														none;
+@small-text-link-disabled-opacity:																0.5;
+
+// Small Text Margins
+
+@small-text-margin-top:																			@base-spacing-unit * 1.0;
+@small-text-margin-bottom:																		@base-spacing-unit * 0.5;
+
+@small-text-short-margin-top:																	@small-text-margin-top;
+@small-text-short-margin-bottom:																@base-spacing-unit * 0.25;
+
+@small-text-tall-margin-top:																	@small-text-margin-top;
+@small-text-tall-margin-bottom:																	@base-spacing-unit * 1.0;
+
+// Small Text Responsive Text Scaling
+
+@small-text-font-size-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@small-text-font-size-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@small-text-font-size-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@small-text-font-size-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+@small-text-line-height-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@small-text-line-height-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@small-text-line-height-scale-screen-medium:													@base-spacing-unit-screen-medium / @base-spacing-unit;
+@small-text-line-height-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+// Small Text Responsive Margin Scaling
+
+@small-text-margin-top-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@small-text-margin-top-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@small-text-margin-top-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@small-text-margin-top-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+@small-text-margin-bottom-scale-screen-mini:													@base-spacing-unit-screen-mini / @base-spacing-unit;
+@small-text-margin-bottom-scale-screen-small:													@base-spacing-unit-screen-small / @base-spacing-unit;
+@small-text-margin-bottom-scale-screen-medium:													@base-spacing-unit-screen-medium / @base-spacing-unit;
+@small-text-margin-bottom-scale-screen-large:													@base-spacing-unit-screen-large / @base-spacing-unit;
+
+// Small Text Emphasize Styling
+
+@small-text-emphasize-color:																	~`color_lightness("@{gray}", 0)`;
+@small-text-emphasize-font-family:																@small-text-font-family;
+@small-text-emphasize-font-size:																@small-text-font-size;
+@small-text-emphasize-font-style:																@small-text-font-style;
+@small-text-emphasize-font-weight:																700;
+@small-text-emphasize-line-height:																@small-text-line-height;
+@small-text-emphasize-transform:																@small-text-transform;
+@small-text-emphasize-shadow:																	@small-text-shadow;
+
+// Small Text Emphasize Links
+
+@small-text-emphasize-link-text-color:															@small-text-link-text-color;
+@small-text-emphasize-link-text-decoration:														@small-text-link-text-decoration;
+
+@small-text-emphasize-link-hover-text-color:													@small-text-link-hover-text-color;
+@small-text-emphasize-link-hover-text-decoration:												@small-text-link-hover-text-decoration;
+
+@small-text-emphasize-link-active-text-color:													@small-text-link-active-text-color;
+@small-text-emphasize-link-active-text-decoration:												@small-text-link-active-text-decoration;
+
+@small-text-emphasize-link-disabled-text-color:													@small-text-link-disabled-text-color;
+@small-text-emphasize-link-disabled-text-decoration:											@small-text-link-disabled-text-decoration;
+@small-text-emphasize-link-disabled-opacity:													@small-text-link-disabled-opacity;
+
+// Small Text Emphasize Styling
+
+@small-text-mute-color:																			~`color_lightness("@{gray}", 40)`;
+@small-text-mute-font-family:																	@small-text-font-family;
+@small-text-mute-font-size:																		@small-text-font-size;
+@small-text-mute-font-style:																	@small-text-font-style;
+@small-text-mute-font-weight:																	200;
+@small-text-mute-line-height:																	@small-text-line-height;
+@small-text-mute-transform:																		@small-text-transform;
+@small-text-mute-shadow:																		@small-text-shadow;
+
+// Small Text Mute Links
+
+@small-text-mute-link-text-color:																@small-text-link-text-color;
+@small-text-mute-link-text-decoration:															@small-text-link-text-decoration;
+
+@small-text-mute-link-hover-text-color:															@small-text-link-hover-text-color;
+@small-text-mute-link-hover-text-decoration:													@small-text-link-hover-text-decoration;
+
+@small-text-mute-link-active-text-color:														@small-text-link-active-text-color;
+@small-text-mute-link-active-text-decoration:													@small-text-link-active-text-decoration;
+
+@small-text-mute-link-disabled-text-color:														@small-text-link-disabled-text-color;
+@small-text-mute-link-disabled-text-decoration:													@small-text-link-disabled-text-decoration;
+@small-text-mute-link-disabled-opacity:															@small-text-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Lead Text
+---------------------------------------------------------------------------------------------------- */
+
+// Lead Text Styling
+
+@lead-text-color:																				~`color_lightness("@{gray}", -20)`;
+@lead-text-font-family:																			@font-family-sans-serif;
+@lead-text-font-size:																			13px;
+@lead-text-font-style:																			normal;
+@lead-text-font-weight:																			400;
+@lead-text-line-height:																			16px;
+@lead-text-transform:																			none;
+@lead-text-shadow:																				none;
+
+// Lead Text Links
+
+@lead-text-link-text-color:																		~`color_lightness("@{blue}", 0)`;
+@lead-text-link-text-decoration:																none;
+
+@lead-text-link-hover-text-color:																~`color_lightness("@{blue}", -20)`;
+@lead-text-link-hover-text-decoration:															underline;
+
+@lead-text-link-active-text-color:																~`color_lightness("@{blue}", -40)`;
+@lead-text-link-active-text-decoration:															none;
+
+@lead-text-link-disabled-text-color:															@lead-text-link-text-color;
+@lead-text-link-disabled-text-decoration:														none;
+@lead-text-link-disabled-opacity:																0.5;
+
+// Lead Text Margins
+
+@lead-text-margin-top:																			@base-spacing-unit * 1.0;
+@lead-text-margin-bottom:																		@base-spacing-unit * 0.5;
+
+@lead-text-short-margin-top:																	@lead-text-margin-top;
+@lead-text-short-margin-bottom:																	@base-spacing-unit * 0.25;
+
+@lead-text-tall-margin-top:																		@lead-text-margin-top;
+@lead-text-tall-margin-bottom:																	@base-spacing-unit * 1.0;
+
+// Lead Text Responsive Text Scaling
+
+@lead-text-font-size-scale-screen-mini:															@base-spacing-unit-screen-mini / @base-spacing-unit;
+@lead-text-font-size-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@lead-text-font-size-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@lead-text-font-size-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+@lead-text-line-height-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@lead-text-line-height-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@lead-text-line-height-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@lead-text-line-height-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+// Lead Text Responsive Margin Scaling
+
+@lead-text-margin-top-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@lead-text-margin-top-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@lead-text-margin-top-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@lead-text-margin-top-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+@lead-text-margin-bottom-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@lead-text-margin-bottom-scale-screen-small:													@base-spacing-unit-screen-small / @base-spacing-unit;
+@lead-text-margin-bottom-scale-screen-medium:													@base-spacing-unit-screen-medium / @base-spacing-unit;
+@lead-text-margin-bottom-scale-screen-large:													@base-spacing-unit-screen-large / @base-spacing-unit;
+
+// Lead Text Emphasize Styling
+
+@lead-text-emphasize-color:																		~`color_lightness("@{gray}", -40)`;
+@lead-text-emphasize-font-family:																@lead-text-font-family;
+@lead-text-emphasize-font-size:																	@lead-text-font-size;
+@lead-text-emphasize-font-style:																@lead-text-font-style;
+@lead-text-emphasize-font-weight:																700;
+@lead-text-emphasize-line-height:																@lead-text-line-height;
+@lead-text-emphasize-transform:																	@lead-text-transform;
+@lead-text-emphasize-shadow:																	@lead-text-shadow;
+
+// Lead Text Emphasize Links
+
+@lead-text-emphasize-link-text-color:															@lead-text-link-text-color;
+@lead-text-emphasize-link-text-decoration:														@lead-text-link-text-decoration;
+
+@lead-text-emphasize-link-hover-text-color:														@lead-text-link-hover-text-color;
+@lead-text-emphasize-link-hover-text-decoration:												@lead-text-link-hover-text-decoration;
+
+@lead-text-emphasize-link-active-text-color:													@lead-text-link-active-text-color;
+@lead-text-emphasize-link-active-text-decoration:												@lead-text-link-active-text-decoration;
+
+@lead-text-emphasize-link-disabled-text-color:													@lead-text-link-disabled-text-color;
+@lead-text-emphasize-link-disabled-text-decoration:												@lead-text-link-disabled-text-decoration;
+@lead-text-emphasize-link-disabled-opacity:														@lead-text-link-disabled-opacity;
+
+// Lead Text Emphasize Styling
+
+@lead-text-mute-color:																			~`color_lightness("@{gray}", 0)`;
+@lead-text-mute-font-family:																	@lead-text-font-family;
+@lead-text-mute-font-size:																		@lead-text-font-size;
+@lead-text-mute-font-style:																		@lead-text-font-style;
+@lead-text-mute-font-weight:																	200;
+@lead-text-mute-line-height:																	@lead-text-line-height;
+@lead-text-mute-transform:																		@lead-text-transform;
+@lead-text-mute-shadow:																			@lead-text-shadow;
+
+// Lead Text Mute Links
+
+@lead-text-mute-link-text-color:																@lead-text-link-text-color;
+@lead-text-mute-link-text-decoration:															@lead-text-link-text-decoration;
+
+@lead-text-mute-link-hover-text-color:															@lead-text-link-hover-text-color;
+@lead-text-mute-link-hover-text-decoration:														@lead-text-link-hover-text-decoration;
+
+@lead-text-mute-link-active-text-color:															@lead-text-link-active-text-color;
+@lead-text-mute-link-active-text-decoration:													@lead-text-link-active-text-decoration;
+
+@lead-text-mute-link-disabled-text-color:														@lead-text-link-disabled-text-color;
+@lead-text-mute-link-disabled-text-decoration:													@lead-text-link-disabled-text-decoration;
+@lead-text-mute-link-disabled-opacity:															@lead-text-link-disabled-opacity;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

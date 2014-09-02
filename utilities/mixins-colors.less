@@ -65,18 +65,19 @@ Lighten and Darken Colors
 
         var delta = max - min;
         saturation = lightness > 0.5 ? delta / (2 - max - min) : delta / (max + min);
+        
         switch(max) {
-            case r:
+            case red:
 
             	hue = (green - blue) / delta + (green < blue ? 6 : 0);
             	break;
 
-            case g:
+            case green:
 
             	hue = (blue - red) / delta + 2;
             	break;
 
-            case b:
+            case blue:
 
             	hue = (red - green) / delta + 4;
             	break;

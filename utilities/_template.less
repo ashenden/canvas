@@ -2,7 +2,7 @@
 -------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-utilities/mixins-layout.less
+template.less
 
 -------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
@@ -16,168 +16,89 @@ utilities/mixins-layout.less
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Clearfix
+Screen Size: Mini (@screen-mini) and above
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
-.clearfix {
 
-    *zoom: 1;
 
-    &:before,
-    &:after {
+& when (@screen-mini-active) {
 
-        display: table;
-        content: "";
-        line-height: 0;
-
-    }
-
-    &:after {
-
-        clear: both;
-
-    }
-
+	@media (min-width: @screen-mini) {
+		
+	}
+	
 }
-
-
-
 
 
 
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-IE7 Fixes
+Screen Size: Small (@screen-small) and above
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
-.ie7-inline-block() {
+& when (@screen-small-active) {
 
-    *display: inline;
-    *zoom: 1;
-
+	@media (min-width: @screen-small) {
+		
+	}
+	
 }
-
-.ie7-restore-left-whitespace() {
-
-    *margin-left: .3em;
-
-    &:first-child {
-
-        *margin-left: 0;
-
-    }
-
-}
-
-.ie7-restore-right-whitespace() {
-
-    *margin-right: .3em;
-
-}
-
-
-
 
 
 
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Focus
+Screen Size: Medium (@screen-medium) and above
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
-.tab-focus() {
+& when (@screen-medium-active) {
 
-    outline: thin dotted #333;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+	@media (min-width: @screen-medium) {
+		
+	}
 
 }
-
-
-
 
 
 
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Center Block Elements
+Screen Size: Large (@screen-large) and above
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
-.center-block() {
+& when (@screen-large-active) {
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+	@media (min-width: @screen-large) {
+		
+	}
+	
 }
-
-
-
 
 
 
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Sizing
+Screen Resolution: 2x
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
-.size(@width; @height) {
+& when (@screen-resolution-2x-active) {
 
-    width: @width;
-    height: @height;
-    behavior: url("@{css3pie-path}PIE.php");
-
-}
-
-.square(@size) {
-
-    .size(@size; @size);
-
-}
-
-.box-sizing(@boxmodel) {
-	
-	-webkit-box-sizing: @boxmodel;
-	-moz-box-sizing: @boxmodel;
-	box-sizing: @boxmodel;
-	
-}
-
-.backface-visibility(@visibility){
-	
-	-webkit-backface-visibility: @visibility;
-	-moz-backface-visibility: @visibility;
-	backface-visibility: @visibility;
-	
-}
-
-.background-clip(@clip) {
-	
-	-webkit-background-clip: @clip;
-	-moz-background-clip: @clip;
-	background-clip: @clip;
-	
-}
-
-.background-size(@size) {
-	
-	-webkit-background-size: @size;
-	-moz-background-size: @size;
-	-o-background-size: @size;
-	background-size: @size;
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		
+	}
 	
 }

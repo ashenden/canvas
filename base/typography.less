@@ -1,0 +1,798 @@
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+base/typography.less
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Body
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+body {
+	
+	.text-styling (
+		
+		@body-text-color,
+		@body-text-font-family,
+		@body-text-font-size,
+		@body-text-font-style,
+		@body-text-font-weight,
+		@body-text-line-height,
+		@body-text-transform,
+		@body-text-shadow
+		
+	);
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Links
+	---------------------------------------------------------------------------------------------------- */
+	
+	a {
+		
+		color: @body-text-link-text-color;
+		text-decoration: @body-text-link-text-decoration;
+		
+		&:hover {
+			
+			color: @body-text-link-hover-text-color;
+			text-decoration: @body-text-link-hover-text-decoration;
+			
+		}
+		
+		&:active {
+			
+			color: @body-text-link-active-text-color;
+			text-decoration: @body-text-link-active-text-decoration;
+			
+		}
+		
+		&:disabled,
+		&.disabled {
+			
+			color: @body-text-link-active-text-color;
+			text-decoration: @body-text-link-active-text-decoration;
+			
+		}
+		
+	}
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Emphasize
+	---------------------------------------------------------------------------------------------------- */
+	
+	strong,
+	.emphasize {
+		
+		.text-styling (
+			
+			@body-text-emphasize-color,
+			@body-text-emphasize-font-family,
+			@body-text-emphasize-font-size,
+			@body-text-emphasize-font-style,
+			@body-text-emphasize-font-weight,
+			@body-text-emphasize-line-height,
+			@body-text-emphasize-transform,
+			@body-text-emphasize-shadow
+			
+		);
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Links
+		---------------------------------------------------------------------------------------------------- */
+		
+		a {
+			
+			color: @body-text-emphasize-link-text-color;
+			text-decoration: @body-text-emphasize-link-text-decoration;
+			
+			&:hover {
+				
+				color: @body-text-emphasize-link-hover-text-color;
+				text-decoration: @body-text-emphasize-link-hover-text-decoration;
+				
+			}
+			
+			&:active {
+				
+				color: @body-text-emphasize-link-active-text-color;
+				text-decoration: @body-text-emphasize-link-active-text-decoration;
+				
+			}
+			
+			&:disabled,
+			&.disabled {
+				
+				color: @body-text-emphasize-link-active-text-color;
+				text-decoration: @body-text-emphasize-link-active-text-decoration;
+				
+			}
+			
+		}
+		
+	}
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Mute
+	---------------------------------------------------------------------------------------------------- */
+	
+	.mute {
+		
+		.text-styling (
+			
+			@body-text-mute-color,
+			@body-text-mute-font-family,
+			@body-text-mute-font-size,
+			@body-text-mute-font-style,
+			@body-text-mute-font-weight,
+			@body-text-mute-line-height,
+			@body-text-mute-transform,
+			@body-text-mute-shadow
+			
+		);
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Links
+		---------------------------------------------------------------------------------------------------- */
+		
+		a {
+			
+			color: @body-text-mute-link-text-color;
+			text-decoration: @body-text-mute-link-text-decoration;
+			
+			&:hover {
+				
+				color: @body-text-mute-link-hover-text-color;
+				text-decoration: @body-text-mute-link-hover-text-decoration;
+				
+			}
+			
+			&:active {
+				
+				color: @body-text-mute-link-active-text-color;
+				text-decoration: @body-text-mute-link-active-text-decoration;
+				
+			}
+			
+			&:disabled,
+			&.disabled {
+				
+				color: @body-text-mute-link-active-text-color;
+				text-decoration: @body-text-mute-link-active-text-decoration;
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Paragraph
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+p {
+	
+	.text-styling (
+		
+		@body-text-color,
+		@body-text-font-family,
+		@body-text-font-size,
+		@body-text-font-style,
+		@body-text-font-weight,
+		@body-text-line-height,
+		@body-text-transform,
+		@body-text-shadow
+		
+	);
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Links
+	---------------------------------------------------------------------------------------------------- */
+	
+	a {
+		
+		color: @body-text-link-text-color;
+		text-decoration: @body-text-link-text-decoration;
+		
+		&:hover {
+			
+			color: @body-text-link-hover-text-color;
+			text-decoration: @body-text-link-hover-text-decoration;
+			
+		}
+		
+		&:active {
+			
+			color: @body-text-link-active-text-color;
+			text-decoration: @body-text-link-active-text-decoration;
+			
+		}
+		
+		&:disabled,
+		&.disabled {
+			
+			color: @body-text-link-active-text-color;
+			text-decoration: @body-text-link-active-text-decoration;
+			
+		}
+		
+	}
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Emphasize
+	---------------------------------------------------------------------------------------------------- */
+	
+	strong,
+	.emphasize,
+	&.emphasize {
+		
+		.text-styling (
+			
+			@body-text-emphasize-color,
+			@body-text-emphasize-font-family,
+			@body-text-emphasize-font-size,
+			@body-text-emphasize-font-style,
+			@body-text-emphasize-font-weight,
+			@body-text-emphasize-line-height,
+			@body-text-emphasize-transform,
+			@body-text-emphasize-shadow
+			
+		);
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Links
+		---------------------------------------------------------------------------------------------------- */
+		
+		a {
+			
+			color: @body-text-emphasize-link-text-color;
+			text-decoration: @body-text-emphasize-link-text-decoration;
+			
+			&:hover {
+				
+				color: @body-text-emphasize-link-hover-text-color;
+				text-decoration: @body-text-emphasize-link-hover-text-decoration;
+				
+			}
+			
+			&:active {
+				
+				color: @body-text-emphasize-link-active-text-color;
+				text-decoration: @body-text-emphasize-link-active-text-decoration;
+				
+			}
+			
+			&:disabled,
+			&.disabled {
+				
+				color: @body-text-emphasize-link-active-text-color;
+				text-decoration: @body-text-emphasize-link-active-text-decoration;
+				
+			}
+			
+		}
+		
+	}
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Mute
+	---------------------------------------------------------------------------------------------------- */
+	
+	.mute
+	&.mute {
+		
+		.text-styling (
+			
+			@body-text-mute-color,
+			@body-text-mute-font-family,
+			@body-text-mute-font-size,
+			@body-text-mute-font-style,
+			@body-text-mute-font-weight,
+			@body-text-mute-line-height,
+			@body-text-mute-transform,
+			@body-text-mute-shadow
+			
+		);
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Links
+		---------------------------------------------------------------------------------------------------- */
+		
+		a {
+			
+			color: @body-text-mute-link-text-color;
+			text-decoration: @body-text-mute-link-text-decoration;
+			
+			&:hover {
+				
+				color: @body-text-mute-link-hover-text-color;
+				text-decoration: @body-text-mute-link-hover-text-decoration;
+				
+			}
+			
+			&:active {
+				
+				color: @body-text-mute-link-active-text-color;
+				text-decoration: @body-text-mute-link-active-text-decoration;
+				
+			}
+			
+			&:disabled,
+			&.disabled {
+				
+				color: @body-text-mute-link-active-text-color;
+				text-decoration: @body-text-mute-link-active-text-decoration;
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Small Text
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+.small {
+	
+	.text-styling (
+		
+		@small-text-color,
+		@small-text-font-family,
+		@small-text-font-size,
+		@small-text-font-style,
+		@small-text-font-weight,
+		@small-text-line-height,
+		@small-text-transform,
+		@small-text-shadow
+		
+	);
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Links
+	---------------------------------------------------------------------------------------------------- */
+	
+	a {
+		
+		color: @small-text-link-text-color;
+		text-decoration: @small-text-link-text-decoration;
+		
+		&:hover {
+			
+			color: @small-text-link-hover-text-color;
+			text-decoration: @small-text-link-hover-text-decoration;
+			
+		}
+		
+		&:active {
+			
+			color: @small-text-link-active-text-color;
+			text-decoration: @small-text-link-active-text-decoration;
+			
+		}
+		
+		&:disabled,
+		&.disabled {
+			
+			color: @small-text-link-active-text-color;
+			text-decoration: @small-text-link-active-text-decoration;
+			
+		}
+		
+	}
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Emphasize
+	---------------------------------------------------------------------------------------------------- */
+	
+	.emphasize,
+	&.emphasize {
+		
+		.text-styling (
+			
+			@small-text-emphasize-color,
+			@small-text-emphasize-font-family,
+			@small-text-emphasize-font-size,
+			@small-text-emphasize-font-style,
+			@small-text-emphasize-font-weight,
+			@small-text-emphasize-line-height,
+			@small-text-emphasize-transform,
+			@small-text-emphasize-shadow
+			
+		);
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Links
+		---------------------------------------------------------------------------------------------------- */
+		
+		a {
+			
+			color: @small-text-emphasize-link-text-color;
+			text-decoration: @small-text-emphasize-link-text-decoration;
+			
+			&:hover {
+				
+				color: @small-text-emphasize-link-hover-text-color;
+				text-decoration: @small-text-emphasize-link-hover-text-decoration;
+				
+			}
+			
+			&:active {
+				
+				color: @small-text-emphasize-link-active-text-color;
+				text-decoration: @small-text-emphasize-link-active-text-decoration;
+				
+			}
+			
+			&:disabled,
+			&.disabled {
+				
+				color: @small-text-emphasize-link-active-text-color;
+				text-decoration: @small-text-emphasize-link-active-text-decoration;
+				
+			}
+			
+		}
+		
+	}
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Mute
+	---------------------------------------------------------------------------------------------------- */
+	
+	strong,
+	.mute
+	&.mute {
+		
+		.text-styling (
+			
+			@small-text-mute-color,
+			@small-text-mute-font-family,
+			@small-text-mute-font-size,
+			@small-text-mute-font-style,
+			@small-text-mute-font-weight,
+			@small-text-mute-line-height,
+			@small-text-mute-transform,
+			@small-text-mute-shadow
+			
+		);
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Links
+		---------------------------------------------------------------------------------------------------- */
+		
+		a {
+			
+			color: @small-text-mute-link-text-color;
+			text-decoration: @small-text-mute-link-text-decoration;
+			
+			&:hover {
+				
+				color: @small-text-mute-link-hover-text-color;
+				text-decoration: @small-text-mute-link-hover-text-decoration;
+				
+			}
+			
+			&:active {
+				
+				color: @small-text-mute-link-active-text-color;
+				text-decoration: @small-text-mute-link-active-text-decoration;
+				
+			}
+			
+			&:disabled,
+			&.disabled {
+				
+				color: @small-text-mute-link-active-text-color;
+				text-decoration: @small-text-mute-link-active-text-decoration;
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Lead Text
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+.lead {
+	
+	.text-styling (
+		
+		@lead-text-color,
+		@lead-text-font-family,
+		@lead-text-font-size,
+		@lead-text-font-style,
+		@lead-text-font-weight,
+		@lead-text-line-height,
+		@lead-text-transform,
+		@lead-text-shadow
+		
+	);
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Links
+	---------------------------------------------------------------------------------------------------- */
+	
+	a {
+		
+		color: @lead-text-link-text-color;
+		text-decoration: @lead-text-link-text-decoration;
+		
+		&:hover {
+			
+			color: @lead-text-link-hover-text-color;
+			text-decoration: @lead-text-link-hover-text-decoration;
+			
+		}
+		
+		&:active {
+			
+			color: @lead-text-link-active-text-color;
+			text-decoration: @lead-text-link-active-text-decoration;
+			
+		}
+		
+		&:disabled,
+		&.disabled {
+			
+			color: @lead-text-link-active-text-color;
+			text-decoration: @lead-text-link-active-text-decoration;
+			
+		}
+		
+	}
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Emphasize
+	---------------------------------------------------------------------------------------------------- */
+	
+	strong,
+	.emphasize,
+	&.emphasize {
+		
+		.text-styling (
+			
+			@lead-text-emphasize-color,
+			@lead-text-emphasize-font-family,
+			@lead-text-emphasize-font-size,
+			@lead-text-emphasize-font-style,
+			@lead-text-emphasize-font-weight,
+			@lead-text-emphasize-line-height,
+			@lead-text-emphasize-transform,
+			@lead-text-emphasize-shadow
+			
+		);
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Links
+		---------------------------------------------------------------------------------------------------- */
+		
+		a {
+			
+			color: @lead-text-emphasize-link-text-color;
+			text-decoration: @lead-text-emphasize-link-text-decoration;
+			
+			&:hover {
+				
+				color: @lead-text-emphasize-link-hover-text-color;
+				text-decoration: @lead-text-emphasize-link-hover-text-decoration;
+				
+			}
+			
+			&:active {
+				
+				color: @lead-text-emphasize-link-active-text-color;
+				text-decoration: @lead-text-emphasize-link-active-text-decoration;
+				
+			}
+			
+			&:disabled,
+			&.disabled {
+				
+				color: @lead-text-emphasize-link-active-text-color;
+				text-decoration: @lead-text-emphasize-link-active-text-decoration;
+				
+			}
+			
+		}
+		
+	}
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Mute
+	---------------------------------------------------------------------------------------------------- */
+	
+	.mute
+	&.mute {
+		
+		.text-styling (
+			
+			@lead-text-mute-color,
+			@lead-text-mute-font-family,
+			@lead-text-mute-font-size,
+			@lead-text-mute-font-style,
+			@lead-text-mute-font-weight,
+			@lead-text-mute-line-height,
+			@lead-text-mute-transform,
+			@lead-text-mute-shadow
+			
+		);
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Links
+		---------------------------------------------------------------------------------------------------- */
+		
+		a {
+			
+			color: @lead-text-mute-link-text-color;
+			text-decoration: @lead-text-mute-link-text-decoration;
+			
+			&:hover {
+				
+				color: @lead-text-mute-link-hover-text-color;
+				text-decoration: @lead-text-mute-link-hover-text-decoration;
+				
+			}
+			
+			&:active {
+				
+				color: @lead-text-mute-link-active-text-color;
+				text-decoration: @lead-text-mute-link-active-text-decoration;
+				
+			}
+			
+			&:disabled,
+			&.disabled {
+				
+				color: @lead-text-mute-link-active-text-color;
+				text-decoration: @lead-text-mute-link-active-text-decoration;
+				
+			}
+			
+		}
+		
+	}
+	
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Screen Size: Mini (@screen-mini) and above
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+& when (@screen-mini-active) {
+
+	@media (min-width: @screen-mini) {
+		
+	}
+	
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Screen Size: Small (@screen-small) and above
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+& when (@screen-small-active) {
+
+	@media (min-width: @screen-small) {
+		
+	}
+	
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Screen Size: Medium (@screen-medium) and above
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+& when (@screen-medium-active) {
+
+	@media (min-width: @screen-medium) {
+		
+	}
+
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Screen Size: Large (@screen-large) and above
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+& when (@screen-large-active) {
+
+	@media (min-width: @screen-large) {
+		
+	}
+	
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Screen Resolution: 2x
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+& when (@screen-resolution-2x-active) {
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		
+	}
+	
+}
