@@ -127,6 +127,10 @@ Body Text Responsive Margin Scaling
 Body Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@body-text-emphasize-enabled:																	true;
+
+// Body Text Emphasize Styling
+
 @body-text-emphasize-color:																		~`color_lightness("@{gray}", -50)`;
 @body-text-emphasize-font-family:																@body-text-font-family;
 @body-text-emphasize-font-size:																	@body-text-font-size;
@@ -157,6 +161,10 @@ Body Text Emphasize
 Body Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
+@body-text-mute-enabled:																		true;
+
+// Body Text Mute Styling
+
 @body-text-mute-color:																			~`color_lightness("@{gray}", 50)`;
 @body-text-mute-font-family:																	@body-text-font-family;
 @body-text-mute-font-size:																		@body-text-font-size;
@@ -186,6 +194,10 @@ Body Text Mute
 /* ----------------------------------------------------------------------------------------------------
 Body Text Inverse
 ---------------------------------------------------------------------------------------------------- */
+
+@body-text-inverse-enabled:																		true;
+
+// Body Text Inverse Styling
 
 @body-text-inverse-color:																		~`color_lightness("@{gray}", -20)`;
 @body-text-inverse-shadow:																		@body-text-shadow;
@@ -265,6 +277,10 @@ Small Text
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
+
+
+
+@small-text-enabled:																			true;
 
 
 
@@ -353,6 +369,10 @@ Small Text Responsive Margin Scaling
 Small Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@small-text-emphasize-enabled:																	@body-text-emphasize-enabled;
+
+// Small Text Emphasize Styling
+
 @small-text-emphasize-color:																	~`color_lightness("@{gray}", 30)`;
 @small-text-emphasize-font-family:																@small-text-font-family;
 @small-text-emphasize-font-size:																@small-text-font-size;
@@ -382,6 +402,10 @@ Small Text Emphasize
 /* ----------------------------------------------------------------------------------------------------
 Small Text Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@small-text-mute-enabled:																		@body-text-mute-enabled;
+
+// Small Text Mute Styling
 
 @small-text-mute-color:																			~`color_lightness("@{gray}", 70)`;
 @small-text-mute-font-family:																	@small-text-font-family;
@@ -413,10 +437,14 @@ Small Text Mute
 Small Text Inverse
 ---------------------------------------------------------------------------------------------------- */
 
+@small-text-inverse-enabled:																	@body-text-inverse-enabled;
+
+// Small Text Inverse Styling
+
 @small-text-inverse-color:																		~`color_lightness("@{gray}", -40)`;
 @small-text-inverse-shadow:																		@small-text-shadow;
 
-// Small Text inverse Links
+// Small Text Inverse Links
 
 @small-text-inverse-link-text-color:															@small-text-link-text-color;
 @small-text-inverse-link-text-decoration:														@small-text-link-text-decoration;
@@ -491,6 +519,10 @@ Lead Text
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
+
+
+
+@lead-text-enabled:																				true;
 
 
 
@@ -579,6 +611,10 @@ Lead Text Responsive Margin Scaling
 Lead Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@lead-text-emphasize-enabled:																	@body-text-emphasize-enabled;
+
+// Lead Text Emphasize Styling
+
 @lead-text-emphasize-color:																		~`color_lightness("@{gray}", -50)`;
 @lead-text-emphasize-font-family:																@lead-text-font-family;
 @lead-text-emphasize-font-size:																	@lead-text-font-size;
@@ -609,6 +645,10 @@ Lead Text Emphasize
 Lead Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
+@lead-text-mute-enabled:																		@body-text-mute-enabled;
+
+// Lead Text Mute Styling
+
 @lead-text-mute-color:																			~`color_lightness("@{gray}", -10)`;
 @lead-text-mute-font-family:																	@lead-text-font-family;
 @lead-text-mute-font-size:																		@lead-text-font-size;
@@ -638,6 +678,10 @@ Lead Text Mute
 /* ----------------------------------------------------------------------------------------------------
 Lead Text Inverse
 ---------------------------------------------------------------------------------------------------- */
+
+@lead-text-inverse-enabled:																		@body-text-inverse-enabled;
+
+// Lead Text Inverse Styling
 
 @lead-text-inverse-color:																		~`color_lightness("@{gray}", 0)`;
 @lead-text-inverse-shadow:																		@lead-text-shadow;
@@ -720,7 +764,7 @@ Heading H1 Text
 
 
 
-@heading-h1-text-active:																		true;
+@heading-h1-text-enabled:																		true;
 
 
 
@@ -809,7 +853,7 @@ Heading H1 Text Responsive Margin Scaling
 Heading H1 Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h1-text-emphasize-active:																true;
+@heading-h1-text-emphasize-enabled:																@body-text-emphasize-enabled;
 
 // Heading H1 Text Emphasize Styling
 
@@ -843,7 +887,7 @@ Heading H1 Text Emphasize
 Heading H1 Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h1-text-mute-active:																true;
+@heading-h1-text-mute-enabled:																	@body-text-mute-enabled;
 
 // Heading H1 Text Mute Styling
 
@@ -877,7 +921,7 @@ Heading H1 Text Mute
 Heading H1 Inverse
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h1-text-inverse-active:																true;
+@heading-h1-text-inverse-enabled:																@body-text-inverse-enabled;
 
 // Heading H1 Text Inverse Styling
 
@@ -962,7 +1006,7 @@ Heading H2 Text
 
 
 
-@heading-h2-text-active:																		true;
+@heading-h2-text-enabled:																		true;
 
 
 
@@ -1051,7 +1095,7 @@ Heading H2 Text Responsive Margin Scaling
 Heading H2 Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h2-text-emphasize-active:																true;
+@heading-h2-text-emphasize-enabled:																@body-text-emphasize-enabled;
 
 // Heading H2 Text Emphasize Styling
 
@@ -1085,7 +1129,7 @@ Heading H2 Text Emphasize
 Heading H2 Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h2-text-mute-active:																	true;
+@heading-h2-text-mute-enabled:																	@body-text-mute-enabled;
 
 // Heading H2 Text Mute Styling
 
@@ -1119,7 +1163,7 @@ Heading H2 Text Mute
 Heading H2 Inverse
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h2-text-inverse-active:																true;
+@heading-h2-text-inverse-enabled:																@body-text-inverse-enabled;
 
 // Heading H2 Text Inverse Styling
 
@@ -1204,7 +1248,7 @@ Heading H3 Text
 
 
 
-@heading-h3-text-active:																		true;
+@heading-h3-text-enabled:																		true;
 
 
 
@@ -1293,7 +1337,7 @@ Heading H3 Text Responsive Margin Scaling
 Heading H3 Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h3-text-emphasize-active:																true;
+@heading-h3-text-emphasize-enabled:																@body-text-emphasize-enabled;
 
 // Heading H3 Text Inverse Styling
 
@@ -1327,7 +1371,7 @@ Heading H3 Text Emphasize
 Heading H3 Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h3-text-mute-active:																	true;
+@heading-h3-text-mute-enabled:																	@body-text-mute-enabled;
 
 // Heading H3 Text Inverse Styling
 
@@ -1361,7 +1405,7 @@ Heading H3 Text Mute
 Heading H3 Inverse
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h3-text-inverse-active:																true;
+@heading-h3-text-inverse-enabled:																@body-text-inverse-enabled;
 
 // Heading H3 Text Inverse Styling
 
@@ -1446,7 +1490,7 @@ Heading H4 Text
 
 
 
-@heading-h4-text-active:																		true;
+@heading-h4-text-enabled:																		true;
 
 
 
@@ -1535,7 +1579,7 @@ Heading H4 Text Responsive Margin Scaling
 Heading H4 Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h4-text-emphasize-active:																true;
+@heading-h4-text-emphasize-enabled:																@body-text-emphasize-enabled;
 
 // Heading H4 Text Emphasize Styling
 
@@ -1569,7 +1613,7 @@ Heading H4 Text Emphasize
 Heading H4 Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h4-text-mute-active:																	true;
+@heading-h4-text-mute-enabled:																	@body-text-mute-enabled;
 
 // Heading H4 Text Mute Styling
 
@@ -1603,7 +1647,7 @@ Heading H4 Text Mute
 Heading H4 Inverse
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h4-text-inverse-active:																true;
+@heading-h4-text-inverse-enabled:																@body-text-inverse-enabled;
 
 // Heading H4 Text Inverse Styling
 
@@ -1688,7 +1732,7 @@ Heading H5 Text
 
 
 
-@heading-h5-text-active:																		true;
+@heading-h5-text-enabled:																		true;
 
 
 
@@ -1777,7 +1821,7 @@ Heading H5 Text Responsive Margin Scaling
 Heading H5 Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h5-text-emphasize-active:																true;
+@heading-h5-text-emphasize-enabled:																@body-text-emphasize-enabled;
 
 // Heading H5 Text Emphasize Styling
 
@@ -1811,7 +1855,7 @@ Heading H5 Text Emphasize
 Heading H5 Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h5-text-mute-active:																	true;
+@heading-h5-text-mute-enabled:																	@body-text-mute-enabled;
 
 // Heading H5 Text Mute Styling
 
@@ -1845,7 +1889,7 @@ Heading H5 Text Mute
 Heading H5 Inverse
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h5-text-inverse-active:																true;
+@heading-h5-text-inverse-enabled:																@body-text-inverse-enabled;
 
 // Heading H5 Text Inverse Styling
 
@@ -1930,7 +1974,7 @@ Heading H6 Text
 
 
 
-@heading-h6-text-active:																		true;
+@heading-h6-text-enabled:																		true;
 
 /* ----------------------------------------------------------------------------------------------------
 Heading H6 Text Styling
@@ -2017,7 +2061,7 @@ Heading H6 Text Responsive Margin Scaling
 Heading H6 Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h6-text-emphasize-active:																true;
+@heading-h6-text-emphasize-enabled:																@body-text-emphasize-enabled;
 
 // Heading H6 Text Emphasize Styling
 
@@ -2051,7 +2095,7 @@ Heading H6 Text Emphasize
 Heading H6 Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h6-text-mute-active:																	true;
+@heading-h6-text-mute-enabled:																	@body-text-mute-enabled;
 
 // Heading H6 Text Mute Styling
 
@@ -2085,7 +2129,7 @@ Heading H6 Text Mute
 Heading H6 Inverse
 ---------------------------------------------------------------------------------------------------- */
 
-@heading-h6-text-inverse-active:																true;
+@heading-h6-text-inverse-enabled:																@body-text-inverse-enabled;
 
 // Heading H6 Inverse Styling
 

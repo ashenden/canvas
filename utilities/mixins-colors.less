@@ -189,8 +189,7 @@ Gradients
 		background-image: -o-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
 		background-image: linear-gradient(to right, @color-1 @color-1-stop, @color-2 @color-2-stop);
 		background-repeat: repeat-x;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@color-1),argb(@color-2)));
-
+		filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=1)");
 	}
 
 	.vertical(@color-1: #555, @color-2: #333) {
@@ -205,7 +204,7 @@ Gradients
 		background-image: -o-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
 		background-image: linear-gradient(to bottom, @color-1 @color-1-stop, @color-2 @color-2-stop);
 		background-repeat: repeat-x;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@color-1),argb(@color-2)));
+		filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=0)");
 
 	}
 
@@ -224,7 +223,7 @@ Gradients
 		background-image: -o-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
 		background-image: linear-gradient(to right, @color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
 		background-repeat: no-repeat;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)", argb(@color-1), argb(@color-3)));
+		filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-3}', GradientType=1)");;
 
 	}
 
@@ -234,7 +233,7 @@ Gradients
 		background-image: -o-linear-gradient(@color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
 		background-image: linear-gradient(@color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
 		background-repeat: no-repeat;
-		filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", argb(@color-1), argb(@color-3)));
+		filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-3}', GradientType=0)");
 
 	}
 
