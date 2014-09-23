@@ -16,6 +16,29 @@ base/buttons.less
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
+Button Toolbar
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+.button-toolbar {
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Button Styles
+	---------------------------------------------------------------------------------------------------- */
+	
+	
+	
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
 Button
 
 -------------------------------------------------------------------------------------------------------
@@ -40,6 +63,23 @@ Button
 	padding-left: @button-padding-horizontal;
 	padding-right: @button-padding-horizontal;
 	border-style: solid;
+	
+	/* ----------------------------------------------------------------------------------------------------
+	Block Button
+	---------------------------------------------------------------------------------------------------- */
+	
+	&.button-wide {
+		
+		display: block;
+		width: 100%;
+		
+		+ .button {
+			
+			margin-top: @button-collection-spacing;
+			
+		}
+		
+	}
 	
 }
 
@@ -4411,6 +4451,36 @@ Screen Size: Mini (@screen-mini) and above
 			padding-left: floor(@button-padding-horizontal * @button-padding-horizontal-scale-screen-mini);
 			padding-right: floor(@button-padding-horizontal * @button-padding-horizontal-scale-screen-mini);
 			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			Block Button
+			---------------------------------------------------------------------------------------------------- */
+			
+			&.button-wide {
+				
+				&.button-wide-below-screen-mini {
+					
+					width: auto;
+					display: inline-block;
+					margin-top: 0px;
+					
+				}
+				
+				+ .button {
+					
+					margin-top: @button-collection-spacing-screen-mini;
+					
+					&.button-wide-below-screen-mini {
+						
+						margin-top: 0px;
+						
+					}
+					
+				}
+				
+			}
+			
 		}
 		
 		
@@ -4558,6 +4628,37 @@ Screen Size: Small (@screen-small) and above
 			.box-sizing-padding-vertical(floor(@button-height * @button-height-scale-screen-small), floor(@button-text-line-height * @button-text-line-height-scale-screen-small));
 			padding-left: floor(@button-padding-horizontal * @button-padding-horizontal-scale-screen-small);
 			padding-right: floor(@button-padding-horizontal * @button-padding-horizontal-scale-screen-small);
+			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			Block Button
+			---------------------------------------------------------------------------------------------------- */
+			
+			&.button-wide {
+				
+				&.button-wide-below-screen-small {
+					
+					width: auto;
+					display: inline-block;
+					margin-top: 0px;
+					
+				}
+				
+				+ .button {
+					
+					margin-top: @button-collection-spacing-screen-small;
+					
+					&.button-wide-below-screen-mini,
+					&.button-wide-below-screen-small {
+						
+						margin-top: 0px;
+						
+					}
+					
+				}
+				
+			}
 			
 		}
 		
@@ -4707,6 +4808,38 @@ Screen Size: Medium (@screen-medium) and above
 			padding-left: floor(@button-padding-horizontal * @button-padding-horizontal-scale-screen-medium);
 			padding-right: floor(@button-padding-horizontal * @button-padding-horizontal-scale-screen-medium);
 			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			Block Button
+			---------------------------------------------------------------------------------------------------- */
+			
+			&.button-wide {
+				
+				&.button-wide-below-screen-medium {
+					
+					width: auto;
+					display: inline-block;
+					margin-top: 0px;
+					
+				}
+				
+				+ .button {
+					
+					margin-top: @button-collection-spacing-screen-medium;
+					
+					&.button-wide-below-screen-mini,
+					&.button-wide-below-screen-small,
+					&.button-wide-below-screen-medium {
+						
+						margin-top: 0px;
+						
+					}
+					
+				}
+				
+			}
+			
 		}
 		
 		
@@ -4854,6 +4987,39 @@ Screen Size: Large (@screen-large) and above
 			.box-sizing-padding-vertical(floor(@button-height * @button-height-scale-screen-large), floor(@button-text-line-height * @button-text-line-height-scale-screen-large));
 			padding-left: floor(@button-padding-horizontal * @button-padding-horizontal-scale-screen-large);
 			padding-right: floor(@button-padding-horizontal * @button-padding-horizontal-scale-screen-large);
+			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			Block Button
+			---------------------------------------------------------------------------------------------------- */
+			
+			&.button-wide {
+				
+				&.button-wide-below-screen-large {
+					
+					width: auto;
+					display: inline-block;
+					margin-top: 0px;
+					
+				}
+				
+				+ .button {
+					
+					margin-top: @button-collection-spacing-screen-large;
+					
+					&.button-wide-below-screen-mini,
+					&.button-wide-below-screen-small,
+					&.button-wide-below-screen-medium,
+					&.button-wide-below-screen-large {
+						
+						margin-top: 0px;
+						
+					}
+					
+				}
+				
+			}
 			
 		}
 		
