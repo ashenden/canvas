@@ -1,0 +1,866 @@
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+variables/forms.less
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Margins
+---------------------------------------------------------------------------------------------------- */
+
+@form-margin-top:																				0px;
+@form-margin-bottom:																			@base-spacing-unit * 1.0;
+
+@form-short-margin-top:																			0px;
+@form-short-margin-bottom:																		@base-spacing-unit * 0.5;
+
+@form-tall-margin-top:																			0px;
+@form-tall-margin-bottom:																		@base-spacing-unit * 1.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Responsive Margin Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-margin-top-scale-screen-mini:																@base-spacing-unit-screen-mini / @base-spacing-unit;
+@form-margin-top-scale-screen-small:															@base-spacing-unit-screen-small / @base-spacing-unit;
+@form-margin-top-scale-screen-medium:															@base-spacing-unit-screen-medium / @base-spacing-unit;
+@form-margin-top-scale-screen-large:															@base-spacing-unit-screen-large / @base-spacing-unit;
+
+@form-margin-bottom-scale-screen-mini:															@base-spacing-unit-screen-mini / @base-spacing-unit;
+@form-margin-bottom-scale-screen-small:															@base-spacing-unit-screen-small / @base-spacing-unit;
+@form-margin-bottom-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@form-margin-bottom-scale-screen-large:															@base-spacing-unit-screen-large / @base-spacing-unit;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Label
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-label-enabled:																			true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-color:																				~`color_lightness("@{gray}", -50)`;
+@form-label-font-family:																		@font-family-sans-serif;
+@form-label-font-size:																			@body-text-font-size * 1.0;
+@form-label-font-style:																			normal;
+@form-label-font-weight:																		400;
+@form-label-line-height:																		@body-text-line-height * 1.0;
+@form-label-transform:																			none;
+@form-label-shadow:																				none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-link-text-color:																	~`color_lightness("@{blue}", 0)`;
+@form-label-link-text-decoration:																none;
+
+@form-label-link-hover-text-color:																~`color_lightness("@{blue}", -20)`;
+@form-label-link-hover-text-decoration:															underline;
+
+@form-label-link-active-text-color:																~`color_lightness("@{blue}", -40)`;
+@form-label-link-active-text-decoration:														none;
+
+@form-label-link-disabled-text-color:															@form-label-link-text-color;
+@form-label-link-disabled-text-decoration:														none;
+@form-label-link-disabled-opacity:																0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Margin
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-margin-top:																			@body-text-margin-top * 0.5;
+@form-label-margin-bottom:																		@body-text-margin-bottom * 0.5;
+
+@form-label-short-margin-top:																	@body-text-short-margin-top * 0.5;
+@form-label-short-margin-bottom:																@body-text-short-margin-bottom * 0.5;
+
+@form-label-tall-margin-top:																	@body-text-tall-margin-top * 0.5;
+@form-label-tall-margin-bottom:																	@body-text-tall-margin-bottom * 0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Responsive Text Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-font-size-scale-screen-mini:														@body-text-font-size-scale-screen-mini;
+@form-label-font-size-scale-screen-small:														@body-text-font-size-scale-screen-small;
+@form-label-font-size-scale-screen-medium:														@body-text-font-size-scale-screen-medium;
+@form-label-font-size-scale-screen-large:														@body-text-font-size-scale-screen-large;
+
+@form-label-line-height-scale-screen-mini:														@form-label-font-size-scale-screen-mini;
+@form-label-line-height-scale-screen-small:														@form-label-font-size-scale-screen-small;
+@form-label-line-height-scale-screen-medium:													@form-label-font-size-scale-screen-medium;
+@form-label-line-height-scale-screen-large:														@form-label-font-size-scale-screen-large;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Responsive Margin Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-margin-top-scale-screen-mini:														@body-text-margin-top-scale-screen-mini;
+@form-label-margin-top-scale-screen-small:														@body-text-margin-top-scale-screen-small;
+@form-label-margin-top-scale-screen-medium:														@body-text-margin-top-scale-screen-medium;
+@form-label-margin-top-scale-screen-large:														@body-text-margin-top-scale-screen-large;
+
+@form-label-margin-bottom-scale-screen-mini:													@body-text-margin-bottom-scale-screen-mini;
+@form-label-margin-bottom-scale-screen-small:													@body-text-margin-bottom-scale-screen-small;
+@form-label-margin-bottom-scale-screen-medium:													@body-text-margin-bottom-scale-screen-medium;
+@form-label-margin-bottom-scale-screen-large:													@body-text-margin-bottom-scale-screen-large;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-emphasize-enabled:																	@body-text-emphasize-enabled;
+
+// Label Emphasize Styling
+
+@form-label-emphasize-color:																	~`color_lightness("@{gray}", -80)`;
+@form-label-emphasize-font-family:																@form-label-font-family;
+@form-label-emphasize-font-size:																@form-label-font-size;
+@form-label-emphasize-font-style:																@form-label-font-style;
+@form-label-emphasize-font-weight:																500;
+@form-label-emphasize-line-height:																@form-label-line-height;
+@form-label-emphasize-transform:																@form-label-transform;
+@form-label-emphasize-shadow:																	@form-label-shadow;
+
+// Label Emphasize Links
+
+@form-label-emphasize-link-text-color:															@form-label-link-text-color;
+@form-label-emphasize-link-text-decoration:														@form-label-link-text-decoration;
+
+@form-label-emphasize-link-hover-text-color:													@form-label-link-hover-text-color;
+@form-label-emphasize-link-hover-text-decoration:												@form-label-link-hover-text-decoration;
+
+@form-label-emphasize-link-active-text-color:													@form-label-link-active-text-color;
+@form-label-emphasize-link-active-text-decoration:												@form-label-link-active-text-decoration;
+
+@form-label-emphasize-link-disabled-text-color:													@form-label-link-disabled-text-color;
+@form-label-emphasize-link-disabled-text-decoration:											@form-label-link-disabled-text-decoration;
+@form-label-emphasize-link-disabled-opacity:													@form-label-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-mute-enabled:																		@body-text-mute-enabled;
+
+// Label Mute Styling
+
+@form-label-mute-color:																			~`color_lightness("@{gray}", 0)`;
+@form-label-mute-font-family:																	@form-label-font-family;
+@form-label-mute-font-size:																		@form-label-font-size;
+@form-label-mute-font-style:																	@form-label-font-style;
+@form-label-mute-font-weight:																	200;
+@form-label-mute-line-height:																	@form-label-line-height;
+@form-label-mute-transform:																		@form-label-transform;
+@form-label-mute-shadow:																		@form-label-shadow;
+
+// Label Mute Links
+
+@form-label-mute-link-text-color:																@form-label-link-text-color;
+@form-label-mute-link-text-decoration:															@form-label-link-text-decoration;
+
+@form-label-mute-link-hover-text-color:															@form-label-link-hover-text-color;
+@form-label-mute-link-hover-text-decoration:													@form-label-link-hover-text-decoration;
+
+@form-label-mute-link-active-text-color:														@form-label-link-active-text-color;
+@form-label-mute-link-active-text-decoration:													@form-label-link-active-text-decoration;
+
+@form-label-mute-link-disabled-text-color:														@form-label-link-disabled-text-color;
+@form-label-mute-link-disabled-text-decoration:													@form-label-link-disabled-text-decoration;
+@form-label-mute-link-disabled-opacity:															@form-label-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-inverse-enabled:																	@body-text-inverse-enabled;
+
+// Label Inverse Styling
+
+@form-label-inverse-color:																		~`color_lightness("@{gray}", -40)`;
+@form-label-inverse-shadow:																		@form-label-shadow;
+
+// Label Inverse Links
+
+@form-label-inverse-link-text-color:															@form-label-link-text-color;
+@form-label-inverse-link-text-decoration:														@form-label-link-text-decoration;
+
+@form-label-inverse-link-hover-text-color:														@form-label-link-hover-text-color;
+@form-label-inverse-link-hover-text-decoration:													@form-label-link-hover-text-decoration;
+
+@form-label-inverse-link-active-text-color:														@form-label-link-active-text-color;
+@form-label-inverse-link-active-text-decoration:												@form-label-link-active-text-decoration;
+
+@form-label-inverse-link-disabled-text-color:													@form-label-link-disabled-text-color;
+@form-label-inverse-link-disabled-text-decoration:												@form-label-link-disabled-text-decoration;
+@form-label-inverse-link-disabled-opacity:														@form-label-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-inverse-emphasize-color:															~`color_lightness("@{gray}", -20)`;
+@form-label-inverse-emphasize-shadow:															@form-label-inverse-shadow;
+
+// Label Emphasize Links
+
+@form-label-inverse-emphasize-link-text-color:													@form-label-inverse-link-text-color;
+@form-label-inverse-emphasize-link-text-decoration:												@form-label-inverse-link-text-decoration;
+
+@form-label-inverse-emphasize-link-hover-text-color:											@form-label-inverse-link-hover-text-color;
+@form-label-inverse-emphasize-link-hover-text-decoration:										@form-label-inverse-link-hover-text-decoration;
+
+@form-label-inverse-emphasize-link-active-text-color:											@form-label-inverse-link-active-text-color;
+@form-label-inverse-emphasize-link-active-text-decoration:										@form-label-inverse-link-active-text-decoration;
+
+@form-label-inverse-emphasize-link-disabled-text-color:											@form-label-inverse-link-disabled-text-color;
+@form-label-inverse-emphasize-link-disabled-text-decoration:									@form-label-inverse-link-disabled-text-decoration;
+@form-label-inverse-emphasize-link-disabled-opacity:											@form-label-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-inverse-mute-color:																	~`color_lightness("@{gray}", -60)`;
+@form-label-inverse-mute-shadow:																@form-label-inverse-shadow;
+
+// Label mute Links
+
+@form-label-inverse-mute-link-text-color:														@form-label-inverse-link-text-color;
+@form-label-inverse-mute-link-text-decoration:													@form-label-inverse-link-text-decoration;
+
+@form-label-inverse-mute-link-hover-text-color:													@form-label-inverse-link-hover-text-color;
+@form-label-inverse-mute-link-hover-text-decoration:											@form-label-inverse-link-hover-text-decoration;
+
+@form-label-inverse-mute-link-active-text-color:												@form-label-inverse-link-active-text-color;
+@form-label-inverse-mute-link-active-text-decoration:											@form-label-inverse-link-active-text-decoration;
+
+@form-label-inverse-mute-link-disabled-text-color:												@form-label-inverse-link-disabled-text-color;
+@form-label-inverse-mute-link-disabled-text-decoration:											@form-label-inverse-link-disabled-text-decoration;
+@form-label-inverse-mute-link-disabled-opacity:													@form-label-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-control-enabled:																			true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control Styles
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-text-font-size:																	@button-text-font-size;
+@form-control-text-line-height:																	@button-text-line-height;
+@form-control-height:																			@button-height;
+@form-control-padding-horizontal:																@button-padding-horizontal;
+@form-control-border-radius:																	@button-border-radius;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control Responsive Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-text-font-size-scale-screen-mini:													@button-text-font-size-scale-screen-mini;
+@form-control-text-font-size-scale-screen-small:												@button-text-font-size-scale-screen-small;
+@form-control-text-font-size-scale-screen-medium:												@button-text-font-size-scale-screen-medium;
+@form-control-text-font-size-scale-screen-large:												@button-text-font-size-scale-screen-large;
+
+@form-control-text-line-height-scale-screen-mini:												@button-text-line-height-scale-screen-mini;
+@form-control-text-line-height-scale-screen-small:												@button-text-line-height-scale-screen-small;
+@form-control-text-line-height-scale-screen-medium:												@button-text-line-height-scale-screen-medium;
+@form-control-text-line-height-scale-screen-large:												@button-text-line-height-scale-screen-large;
+
+@form-control-height-scale-screen-mini:															@button-height-scale-screen-mini;
+@form-control-height-scale-screen-small:														@button-height-scale-screen-small;
+@form-control-height-scale-screen-medium:														@button-height-scale-screen-medium;
+@form-control-height-scale-screen-large:														@button-height-scale-screen-large;
+
+@form-control-padding-horizontal-scale-screen-mini:												@button-padding-horizontal-scale-screen-mini;
+@form-control-padding-horizontal-scale-screen-small:											@button-padding-horizontal-scale-screen-small;
+@form-control-padding-horizontal-scale-screen-medium:											@button-padding-horizontal-scale-screen-medium;
+@form-control-padding-horizontal-scale-screen-large:											@button-padding-horizontal-scale-screen-large;
+
+@form-control-border-radius-scale-screen-mini:													@button-border-radius-scale-screen-mini;
+@form-control-border-radius-scale-screen-small:													@button-border-radius-scale-screen-small;
+@form-control-border-radius-scale-screen-medium:												@button-border-radius-scale-screen-medium;
+@form-control-border-radius-scale-screen-large:													@button-border-radius-scale-screen-large;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Button (Mini)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-control-mini-enabled:																		@button-mini-enabled;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button (Mini) Styles
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-mini-text-font-size:																@button-mini-text-font-size;
+@form-control-mini-text-line-height:															@button-mini-text-line-height;
+@form-control-mini-height:																		@button-mini-height;
+@form-control-mini-padding-horizontal:															@button-mini-padding-horizontal;
+@form-control-mini-border-radius:																@button-mini-border-radius;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button (Mini) Responsive Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-mini-text-font-size-scale-screen-mini:											@button-mini-text-font-size-scale-screen-mini;
+@form-control-mini-text-font-size-scale-screen-small:											@button-mini-text-font-size-scale-screen-small;
+@form-control-mini-text-font-size-scale-screen-medium:											@button-mini-text-font-size-scale-screen-medium;
+@form-control-mini-text-font-size-scale-screen-large:											@button-mini-text-font-size-scale-screen-large;
+
+@form-control-mini-text-line-height-scale-screen-mini:											@button-mini-text-line-height-scale-screen-mini;
+@form-control-mini-text-line-height-scale-screen-small:											@button-mini-text-line-height-scale-screen-small;
+@form-control-mini-text-line-height-scale-screen-medium:										@button-mini-text-line-height-scale-screen-medium;
+@form-control-mini-text-line-height-scale-screen-large:											@button-mini-text-line-height-scale-screen-large;
+
+@form-control-mini-height-scale-screen-mini:													@button-mini-height-scale-screen-mini;
+@form-control-mini-height-scale-screen-small:													@button-mini-height-scale-screen-small;
+@form-control-mini-height-scale-screen-medium:													@button-mini-height-scale-screen-medium;
+@form-control-mini-height-scale-screen-large:													@button-mini-height-scale-screen-large;
+
+@form-control-mini-padding-horizontal-scale-screen-mini:										@button-mini-padding-horizontal-scale-screen-mini;
+@form-control-mini-padding-horizontal-scale-screen-small:										@button-mini-padding-horizontal-scale-screen-small;
+@form-control-mini-padding-horizontal-scale-screen-medium:										@button-mini-padding-horizontal-scale-screen-medium;
+@form-control-mini-padding-horizontal-scale-screen-large:										@button-mini-padding-horizontal-scale-screen-large;
+
+@form-control-mini-border-radius-scale-screen-mini:												@button-mini-border-radius-scale-screen-mini;
+@form-control-mini-border-radius-scale-screen-small:											@button-mini-border-radius-scale-screen-small;
+@form-control-mini-border-radius-scale-screen-medium:											@button-mini-border-radius-scale-screen-medium;
+@form-control-mini-border-radius-scale-screen-large:											@button-mini-border-radius-scale-screen-large;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Button (Small)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-control-small-enabled:																	@button-small-enabled;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button (Small) Styles
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-small-text-font-size:																@button-small-text-font-size;
+@form-control-small-text-line-height:															@button-small-text-line-height;
+@form-control-small-height:																		@button-small-height;
+@form-control-small-padding-horizontal:															@button-small-padding-horizontal;
+@form-control-small-border-radius:																@button-small-border-radius;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button (Small) Responsive Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-small-text-font-size-scale-screen-mini:											@button-small-text-font-size-scale-screen-mini;
+@form-control-small-text-font-size-scale-screen-small:											@button-small-text-font-size-scale-screen-small;
+@form-control-small-text-font-size-scale-screen-medium:											@button-small-text-font-size-scale-screen-medium;
+@form-control-small-text-font-size-scale-screen-large:											@button-small-text-font-size-scale-screen-large;
+
+@form-control-small-text-line-height-scale-screen-mini:											@button-small-text-line-height-scale-screen-mini;
+@form-control-small-text-line-height-scale-screen-small:										@button-small-text-line-height-scale-screen-small;
+@form-control-small-text-line-height-scale-screen-medium:										@button-small-text-line-height-scale-screen-medium;
+@form-control-small-text-line-height-scale-screen-large:										@button-small-text-line-height-scale-screen-large;
+
+@form-control-small-height-scale-screen-mini:													@button-small-height-scale-screen-mini;
+@form-control-small-height-scale-screen-small:													@button-small-height-scale-screen-small;
+@form-control-small-height-scale-screen-medium:													@button-small-height-scale-screen-medium;
+@form-control-small-height-scale-screen-large:													@button-small-height-scale-screen-large;
+
+@form-control-small-padding-horizontal-scale-screen-mini:										@button-small-padding-horizontal-scale-screen-mini;
+@form-control-small-padding-horizontal-scale-screen-small:										@button-small-padding-horizontal-scale-screen-small;
+@form-control-small-padding-horizontal-scale-screen-medium:										@button-small-padding-horizontal-scale-screen-medium;
+@form-control-small-padding-horizontal-scale-screen-large:										@button-small-padding-horizontal-scale-screen-large;
+
+@form-control-small-border-radius-scale-screen-mini:											@button-small-border-radius-scale-screen-mini;
+@form-control-small-border-radius-scale-screen-small:											@button-small-border-radius-scale-screen-small;
+@form-control-small-border-radius-scale-screen-medium:											@button-small-border-radius-scale-screen-medium;
+@form-control-small-border-radius-scale-screen-large:											@button-small-border-radius-scale-screen-large;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Button (Large)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-control-large-enabled:																		@button-large-enabled;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button (Large) Styles
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-large-text-font-size:																@button-large-text-font-size;
+@form-control-large-text-line-height:															@button-large-text-line-height;
+@form-control-large-height:																		@button-large-height;
+@form-control-large-padding-horizontal:															@button-large-padding-horizontal;
+@form-control-large-border-radius:																@button-large-border-radius;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button (Large) Responsive Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-large-text-font-size-scale-screen-mini:											@button-large-text-font-size-scale-screen-mini;
+@form-control-large-text-font-size-scale-screen-small:											@button-large-text-font-size-scale-screen-small;
+@form-control-large-text-font-size-scale-screen-medium:											@button-large-text-font-size-scale-screen-medium;
+@form-control-large-text-font-size-scale-screen-large:											@button-large-text-font-size-scale-screen-large;
+
+@form-control-large-text-line-height-scale-screen-mini:											@button-large-text-line-height-scale-screen-mini;
+@form-control-large-text-line-height-scale-screen-small:										@button-large-text-line-height-scale-screen-small;
+@form-control-large-text-line-height-scale-screen-medium:										@button-large-text-line-height-scale-screen-medium;
+@form-control-large-text-line-height-scale-screen-large:										@button-large-text-line-height-scale-screen-large;
+
+@form-control-large-height-scale-screen-mini:													@button-large-height-scale-screen-mini;
+@form-control-large-height-scale-screen-small:													@button-large-height-scale-screen-small;
+@form-control-large-height-scale-screen-medium:													@button-large-height-scale-screen-medium;
+@form-control-large-height-scale-screen-large:													@button-large-height-scale-screen-large;
+
+@form-control-large-padding-horizontal-scale-screen-mini:										@button-large-padding-horizontal-scale-screen-mini;
+@form-control-large-padding-horizontal-scale-screen-small:										@button-large-padding-horizontal-scale-screen-small;
+@form-control-large-padding-horizontal-scale-screen-medium:										@button-large-padding-horizontal-scale-screen-medium;
+@form-control-large-padding-horizontal-scale-screen-large:										@button-large-padding-horizontal-scale-screen-large;
+
+@form-control-large-border-radius-scale-screen-mini:											@button-large-border-radius-scale-screen-mini;
+@form-control-large-border-radius-scale-screen-small:											@button-large-border-radius-scale-screen-small;
+@form-control-large-border-radius-scale-screen-medium:											@button-large-border-radius-scale-screen-medium;
+@form-control-large-border-radius-scale-screen-large:											@button-large-border-radius-scale-screen-large;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Button (Jumbo)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-control-jumbo-enabled:																	@button-jumbo-enabled;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button (Jumbo) Styles
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-jumbo-text-font-size:																@button-jumbo-text-font-size;
+@form-control-jumbo-text-line-height:															@button-jumbo-text-line-height;
+@form-control-jumbo-height:																		@button-jumbo-height;
+@form-control-jumbo-padding-horizontal:															@button-jumbo-padding-horizontal;
+@form-control-jumbo-border-radius:																@button-jumbo-border-radius;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button (Jumbo) Responsive Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-jumbo-text-font-size-scale-screen-mini:											@button-jumbo-text-font-size-scale-screen-mini;
+@form-control-jumbo-text-font-size-scale-screen-small:											@button-jumbo-text-font-size-scale-screen-small;
+@form-control-jumbo-text-font-size-scale-screen-medium:											@button-jumbo-text-font-size-scale-screen-medium;
+@form-control-jumbo-text-font-size-scale-screen-large:											@button-jumbo-text-font-size-scale-screen-large;
+
+@form-control-jumbo-text-line-height-scale-screen-mini:											@button-jumbo-text-line-height-scale-screen-mini;
+@form-control-jumbo-text-line-height-scale-screen-small:										@button-jumbo-text-line-height-scale-screen-small;
+@form-control-jumbo-text-line-height-scale-screen-medium:										@button-jumbo-text-line-height-scale-screen-medium;
+@form-control-jumbo-text-line-height-scale-screen-large:										@button-jumbo-text-line-height-scale-screen-large;
+
+@form-control-jumbo-height-scale-screen-mini:													@button-jumbo-height-scale-screen-mini;
+@form-control-jumbo-height-scale-screen-small:													@button-jumbo-height-scale-screen-small;
+@form-control-jumbo-height-scale-screen-medium:													@button-jumbo-height-scale-screen-medium;
+@form-control-jumbo-height-scale-screen-large:													@button-jumbo-height-scale-screen-large;
+
+@form-control-jumbo-padding-horizontal-scale-screen-mini:										@button-jumbo-padding-horizontal-scale-screen-mini;
+@form-control-jumbo-padding-horizontal-scale-screen-small:										@button-jumbo-padding-horizontal-scale-screen-small;
+@form-control-jumbo-padding-horizontal-scale-screen-medium:										@button-jumbo-padding-horizontal-scale-screen-medium;
+@form-control-jumbo-padding-horizontal-scale-screen-large:										@button-jumbo-padding-horizontal-scale-screen-large;
+
+@form-control-jumbo-border-radius-scale-screen-mini:											@button-jumbo-border-radius-scale-screen-mini;
+@form-control-jumbo-border-radius-scale-screen-small:											@button-jumbo-border-radius-scale-screen-small;
+@form-control-jumbo-border-radius-scale-screen-medium:											@button-jumbo-border-radius-scale-screen-medium;
+@form-control-jumbo-border-radius-scale-screen-large:											@button-jumbo-border-radius-scale-screen-large;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Default)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Default) State: Normal
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-default-text-color:																~`color_lightness("@{gray}", -40)`;
+@form-control-default-text-font-family:															@font-family-sans-serif;
+@form-control-default-text-font-style:															normal;
+@form-control-default-text-font-weight:															400;
+@form-control-default-text-transform:															none;
+@form-control-default-text-shadow:																none;
+@form-control-default-text-rendering:															optimizelegibility;
+@form-control-default-placeholder-text-color:													~`color_lightness("@{gray}", 0)`;
+@form-control-default-background-color:															@white;
+@form-control-default-background-gradient-color-top:											none;
+@form-control-default-background-gradient-color-bottom:											none;
+@form-control-default-border-width:																0px;
+@form-control-default-border-color:																none;
+@form-control-default-border-top-width:															@form-control-default-border-width;
+@form-control-default-border-top-color:															@form-control-default-border-color;
+@form-control-default-border-right-width:														@form-control-default-border-width;
+@form-control-default-border-right-color:														@form-control-default-border-color;
+@form-control-default-border-bottom-width:														@form-control-default-border-width;
+@form-control-default-border-bottom-color:														@form-control-default-border-color;
+@form-control-default-border-left-width:														@form-control-default-border-width;
+@form-control-default-border-left-color:														@form-control-default-border-color;
+@form-control-default-shadow:																	0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Default) State: Hover
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-default-hover-text-color:															~`color_lightness("@{gray}", -40)`;
+@form-control-default-hover-text-font-family:													@font-family-sans-serif;
+@form-control-default-hover-text-font-style:													normal;
+@form-control-default-hover-text-font-weight:													400;
+@form-control-default-hover-text-transform:														none;
+@form-control-default-hover-text-shadow:														none;
+@form-control-default-hover-text-rendering:														optimizelegibility;
+@form-control-default-hover-placeholder-text-color:												~`color_lightness("@{gray}", -10)`;
+@form-control-default-hover-background-color:													@white;
+@form-control-default-hover-background-gradient-color-top:										none;
+@form-control-default-hover-background-gradient-color-bottom:									none;
+@form-control-default-hover-border-width:														0px;
+@form-control-default-hover-border-color:														none;
+@form-control-default-hover-border-top-width:													@form-control-default-hover-border-width;
+@form-control-default-hover-border-top-color:													@form-control-default-hover-border-color;
+@form-control-default-hover-border-right-width:													@form-control-default-hover-border-width;
+@form-control-default-hover-border-right-color:													@form-control-default-hover-border-color;
+@form-control-default-hover-border-bottom-width:												@form-control-default-hover-border-width;
+@form-control-default-hover-border-bottom-color:												@form-control-default-hover-border-color;
+@form-control-default-hover-border-left-width:													@form-control-default-hover-border-width;
+@form-control-default-hover-border-left-color:													@form-control-default-hover-border-color;
+@form-control-default-hover-shadow:																0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Default) State: Focus
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-default-focus-text-color:															~`color_lightness("@{blue}", 0)`;
+@form-control-default-focus-text-font-family:													@font-family-sans-serif;
+@form-control-default-focus-text-font-style:													normal;
+@form-control-default-focus-text-font-weight:													400;
+@form-control-default-focus-text-transform:														none;
+@form-control-default-focus-text-shadow:														none;
+@form-control-default-focus-text-rendering:														optimizelegibility;
+@form-control-default-focus-placeholder-text-color:												~`color_lightness("@{blue}", 70)`;
+@form-control-default-focus-background-color:													~`color_lightness("@{blue}", 98)`;
+@form-control-default-focus-background-gradient-color-top:										none;
+@form-control-default-focus-background-gradient-color-bottom:									none;
+@form-control-default-focus-border-width:														0px;
+@form-control-default-focus-border-color:														none;
+@form-control-default-focus-border-top-width:													@form-control-default-focus-border-width;
+@form-control-default-focus-border-top-color:													@form-control-default-focus-border-color;
+@form-control-default-focus-border-right-width:													@form-control-default-focus-border-width;
+@form-control-default-focus-border-right-color:													@form-control-default-focus-border-color;
+@form-control-default-focus-border-bottom-width:												@form-control-default-focus-border-width;
+@form-control-default-focus-border-bottom-color:												@form-control-default-focus-border-color;
+@form-control-default-focus-border-left-width:													@form-control-default-focus-border-width;
+@form-control-default-focus-border-left-color:													@form-control-default-focus-border-color;
+@form-control-default-focus-shadow:																0px 0px 0px 1px @blue;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Default) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-default-disabled-opacity:															0.5;
+@form-control-default-disabled-text-color:														@form-control-default-text-color;
+@form-control-default-disabled-text-font-family:												@form-control-default-text-font-family;
+@form-control-default-disabled-text-font-style:													@form-control-default-text-font-style;
+@form-control-default-disabled-text-font-weight:												@form-control-default-text-font-weight;
+@form-control-default-disabled-text-transform:													@form-control-default-text-transform;
+@form-control-default-disabled-text-shadow:														@form-control-default-text-shadow;
+@form-control-default-disabled-text-rendering:													@form-control-default-text-rendering;
+@form-control-default-disabled-placeholder-text-color:											@form-control-default-placeholder-text-color;
+@form-control-default-disabled-background-color:												@form-control-default-background-color;
+@form-control-default-disabled-background-gradient-color-top:									@form-control-default-background-gradient-color-top;
+@form-control-default-disabled-background-gradient-color-bottom:								@form-control-default-background-gradient-color-bottom;
+@form-control-default-disabled-border-width:													@form-control-default-border-width;
+@form-control-default-disabled-border-color:													@form-control-default-border-color;
+@form-control-default-disabled-border-top-width:												@form-control-default-border-top-width;
+@form-control-default-disabled-border-top-color:												@form-control-default-border-top-color;
+@form-control-default-disabled-border-right-width:												@form-control-default-border-right-width;
+@form-control-default-disabled-border-right-color:												@form-control-default-border-right-color;
+@form-control-default-disabled-border-bottom-width:												@form-control-default-border-bottom-width;
+@form-control-default-disabled-border-bottom-color:												@form-control-default-border-bottom-color;
+@form-control-default-disabled-border-left-width:												@form-control-default-border-left-width;
+@form-control-default-disabled-border-left-color:												@form-control-default-border-left-color;
+@form-control-default-disabled-shadow:															@form-control-default-shadow;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Default, Inverse)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-control-default-inverse-enabled:															true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Default, Inverse) State: Normal
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-default-inverse-text-color:														~`color_lightness("@{white}", 0)`;
+@form-control-default-inverse-text-font-family:													@font-family-sans-serif;
+@form-control-default-inverse-text-font-style:													normal;
+@form-control-default-inverse-text-font-weight:													400;
+@form-control-default-inverse-text-transform:													none;
+@form-control-default-inverse-text-shadow:														none;
+@form-control-default-inverse-text-rendering:													optimizelegibility;
+@form-control-default-inverse-placeholder-text-color:											~`color_lightness("@{gray}", -40)`;
+@form-control-default-inverse-background-color:													rgba(255, 255, 255, 0.2);
+@form-control-default-inverse-background-gradient-color-top:									none;
+@form-control-default-inverse-background-gradient-color-bottom:									none;
+@form-control-default-inverse-border-width:														0px;
+@form-control-default-inverse-border-color:														none;
+@form-control-default-inverse-border-top-width:													@form-control-default-inverse-border-width;
+@form-control-default-inverse-border-top-color:													@form-control-default-inverse-border-color;
+@form-control-default-inverse-border-right-width:												@form-control-default-inverse-border-width;
+@form-control-default-inverse-border-right-color:												@form-control-default-inverse-border-color;
+@form-control-default-inverse-border-bottom-width:												@form-control-default-inverse-border-width;
+@form-control-default-inverse-border-bottom-color:												@form-control-default-inverse-border-color;
+@form-control-default-inverse-border-left-width:												@form-control-default-inverse-border-width;
+@form-control-default-inverse-border-left-color:												@form-control-default-inverse-border-color;
+@form-control-default-inverse-shadow:															none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Default, Inverse) State: Hover
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-default-inverse-hover-text-color:													~`color_lightness("@{white}", 0)`;
+@form-control-default-inverse-hover-text-font-family:											@font-family-sans-serif;
+@form-control-default-inverse-hover-text-font-style:											normal;
+@form-control-default-inverse-hover-text-font-weight:											400;
+@form-control-default-inverse-hover-text-transform:												none;
+@form-control-default-inverse-hover-text-shadow:												none;
+@form-control-default-inverse-hover-text-rendering:												optimizelegibility;
+@form-control-default-inverse-hover-placeholder-text-color:										~`color_lightness("@{gray}", -40)`;
+@form-control-default-inverse-hover-background-color:											rgba(255, 255, 255, 0.25);
+@form-control-default-inverse-hover-background-gradient-color-top:								none;
+@form-control-default-inverse-hover-background-gradient-color-bottom:							none;
+@form-control-default-inverse-hover-border-width:												0px;
+@form-control-default-inverse-hover-border-color:												none;
+@form-control-default-inverse-hover-border-top-width:											@form-control-default-inverse-hover-border-width;
+@form-control-default-inverse-hover-border-top-color:											@form-control-default-inverse-hover-border-color;
+@form-control-default-inverse-hover-border-right-width:											@form-control-default-inverse-hover-border-width;
+@form-control-default-inverse-hover-border-right-color:											@form-control-default-inverse-hover-border-color;
+@form-control-default-inverse-hover-border-bottom-width:										@form-control-default-inverse-hover-border-width;
+@form-control-default-inverse-hover-border-bottom-color:										@form-control-default-inverse-hover-border-color;
+@form-control-default-inverse-hover-border-left-width:											@form-control-default-inverse-hover-border-width;
+@form-control-default-inverse-hover-border-left-color:											@form-control-default-inverse-hover-border-color;
+@form-control-default-inverse-hover-shadow:														none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Default, Inverse) State: Focus
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-default-inverse-focus-text-color:													~`color_lightness("@{white}", 0)`;
+@form-control-default-inverse-focus-text-font-family:											@font-family-sans-serif;
+@form-control-default-inverse-focus-text-font-style:											normal;
+@form-control-default-inverse-focus-text-font-weight:											400;
+@form-control-default-inverse-focus-text-transform:												none;
+@form-control-default-inverse-focus-text-shadow:												none;
+@form-control-default-inverse-focus-text-rendering:												optimizelegibility;
+@form-control-default-inverse-focus-background-color:											rgba(255, 255, 255, 0.4);
+@form-control-default-inverse-focus-placeholder-text-color:										~`color_lightness("@{gray}", -40)`;
+@form-control-default-inverse-focus-background-gradient-color-top:								none;
+@form-control-default-inverse-focus-background-gradient-color-bottom:							none;
+@form-control-default-inverse-focus-border-width:												0px;
+@form-control-default-inverse-focus-border-color:												none;
+@form-control-default-inverse-focus-border-top-width:											@form-control-default-inverse-focus-border-width;
+@form-control-default-inverse-focus-border-top-color:											@form-control-default-inverse-focus-border-color;
+@form-control-default-inverse-focus-border-right-width:											@form-control-default-inverse-focus-border-width;
+@form-control-default-inverse-focus-border-right-color:											@form-control-default-inverse-focus-border-color;
+@form-control-default-inverse-focus-border-bottom-width:										@form-control-default-inverse-focus-border-width;
+@form-control-default-inverse-focus-border-bottom-color:										@form-control-default-inverse-focus-border-color;
+@form-control-default-inverse-focus-border-left-width:											@form-control-default-inverse-focus-border-width;
+@form-control-default-inverse-focus-border-left-color:											@form-control-default-inverse-focus-border-color;
+@form-control-default-inverse-focus-shadow:														none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Default, Inverse) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-default-inverse-disabled-opacity:													0.5;
+@form-control-default-inverse-disabled-text-color:												@form-control-default-inverse-text-color;
+@form-control-default-inverse-disabled-text-font-family:										@form-control-default-inverse-text-font-family;
+@form-control-default-inverse-disabled-text-font-style:											@form-control-default-inverse-text-font-style;
+@form-control-default-inverse-disabled-text-font-weight:										@form-control-default-inverse-text-font-weight;
+@form-control-default-inverse-disabled-text-transform:											@form-control-default-inverse-text-transform;
+@form-control-default-inverse-disabled-text-shadow:												@form-control-default-inverse-text-shadow;
+@form-control-default-inverse-disabled-text-rendering:											@form-control-default-inverse-text-rendering;
+@form-control-default-inverse-disabled-placeholder-text-color:									@form-control-default-inverse-placeholder-text-color;
+@form-control-default-inverse-disabled-background-color:										@form-control-default-inverse-background-color;
+@form-control-default-inverse-disabled-background-gradient-color-top:							@form-control-default-inverse-background-gradient-color-top;
+@form-control-default-inverse-disabled-background-gradient-color-bottom:						@form-control-default-inverse-background-gradient-color-bottom;
+@form-control-default-inverse-disabled-border-width:											@form-control-default-inverse-border-width;
+@form-control-default-inverse-disabled-border-color:											@form-control-default-inverse-border-color;
+@form-control-default-inverse-disabled-border-top-width:										@form-control-default-inverse-border-top-width;
+@form-control-default-inverse-disabled-border-top-color:										@form-control-default-inverse-border-top-color;
+@form-control-default-inverse-disabled-border-right-width:										@form-control-default-inverse-border-right-width;
+@form-control-default-inverse-disabled-border-right-color:										@form-control-default-inverse-border-right-color;
+@form-control-default-inverse-disabled-border-bottom-width:										@form-control-default-inverse-border-bottom-width;
+@form-control-default-inverse-disabled-border-bottom-color:										@form-control-default-inverse-border-bottom-color;
+@form-control-default-inverse-disabled-border-left-width:										@form-control-default-inverse-border-left-width;
+@form-control-default-inverse-disabled-border-left-color:										@form-control-default-inverse-border-left-color;
+@form-control-default-inverse-disabled-shadow:													@form-control-default-inverse-shadow;
+
+
+
+
+
+
+

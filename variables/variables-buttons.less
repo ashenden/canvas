@@ -16,6 +16,62 @@ variables/buttons.less
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
+Button Collection
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button Collection Spacing
+---------------------------------------------------------------------------------------------------- */
+
+@button-collection-spacing:																		@base-spacing-unit * 0.2;
+@button-collection-spacing-screen-mini:															@base-spacing-unit-screen-mini * 0.2;
+@button-collection-spacing-screen-small:														@base-spacing-unit-screen-small * 0.2;
+@button-collection-spacing-screen-medium:														@base-spacing-unit-screen-medium * 0.15;
+@button-collection-spacing-screen-large:														@base-spacing-unit-screen-large * 0.15;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button Collection Margins
+---------------------------------------------------------------------------------------------------- */
+
+@button-collection-margin-top:																	0px;
+@button-collection-margin-bottom:																@base-spacing-unit * 0.5;
+
+@button-collection-short-margin-top:															0px;
+@button-collection-short-margin-bottom:															@base-spacing-unit * 0.25;
+
+@button-collection-tall-margin-top:																0px;
+@button-collection-tall-margin-bottom:															@base-spacing-unit * 1.0;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button Collection Responsive Margin Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@button-collection-margin-top-scale-screen-mini:												1.0;
+@button-collection-margin-top-scale-screen-small:												1.1;
+@button-collection-margin-top-scale-screen-medium:												1.2;
+@button-collection-margin-top-scale-screen-large:												1.2;
+
+@button-collection-margin-bottom-scale-screen-mini:												1.0;
+@button-collection-margin-bottom-scale-screen-small:											1.1;
+@button-collection-margin-bottom-scale-screen-medium:											1.2;
+@button-collection-margin-bottom-scale-screen-large:											1.2;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
 Button
 
 -------------------------------------------------------------------------------------------------------
@@ -31,6 +87,7 @@ Button Styles
 @button-text-line-height:																		16px;
 @button-height:																					28px;
 @button-padding-horizontal:																		@base-spacing-unit * 0.5;
+@button-border-radius:																			4px;
 
 
 
@@ -58,6 +115,11 @@ Button Responsive Scaling
 @button-padding-horizontal-scale-screen-medium:													@button-height-scale-screen-medium;
 @button-padding-horizontal-scale-screen-large:													@button-height-scale-screen-large;
 
+@button-border-radius-scale-screen-mini:														@button-text-font-size-scale-screen-mini;
+@button-border-radius-scale-screen-small:														@button-text-font-size-scale-screen-small;
+@button-border-radius-scale-screen-medium:														@button-text-font-size-scale-screen-medium;
+@button-border-radius-scale-screen-large:														@button-text-font-size-scale-screen-large;
+
 
 
 
@@ -73,6 +135,10 @@ Button (Mini)
 
 
 
+@button-mini-enabled:																			true;
+
+
+
 /* ----------------------------------------------------------------------------------------------------
 Button (Mini) Styles
 ---------------------------------------------------------------------------------------------------- */
@@ -81,6 +147,7 @@ Button (Mini) Styles
 @button-mini-text-line-height:																	floor(@button-text-line-height * 0.6);
 @button-mini-height:																			floor(@button-height * 0.6);
 @button-mini-padding-horizontal:																@button-padding-horizontal * 0.6;
+@button-mini-border-radius:																		2px;
 
 
 
@@ -108,6 +175,11 @@ Button (Mini) Responsive Scaling
 @button-mini-padding-horizontal-scale-screen-medium:											@button-mini-height-scale-screen-medium;
 @button-mini-padding-horizontal-scale-screen-large:												@button-mini-height-scale-screen-large;
 
+@button-mini-border-radius-scale-screen-mini:													@button-mini-text-font-size-scale-screen-mini;
+@button-mini-border-radius-scale-screen-small:													@button-mini-text-font-size-scale-screen-small;
+@button-mini-border-radius-scale-screen-medium:													@button-mini-text-font-size-scale-screen-medium;
+@button-mini-border-radius-scale-screen-large:													@button-mini-text-font-size-scale-screen-large;
+
 
 
 
@@ -116,26 +188,31 @@ Button (Mini) Responsive Scaling
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Button (Large)
+Button (Small)
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
 
 
+@button-small-enabled:																			true;
+
+
+
 /* ----------------------------------------------------------------------------------------------------
-Button (Large) Styles
+Button (Small) Styles
 ---------------------------------------------------------------------------------------------------- */
 
 @button-small-text-font-size:																	floor(@button-text-font-size * 0.8);
 @button-small-text-line-height:																	floor(@button-text-line-height * 0.8);
 @button-small-height:																			floor(@button-height * 0.8);
 @button-small-padding-horizontal:																@button-padding-horizontal * 0.8;
+@button-small-border-radius:																	3px;
 
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Large) Responsive Scaling
+Button (Small) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
 @button-small-text-font-size-scale-screen-mini:													@button-text-font-size-scale-screen-mini;
@@ -158,6 +235,11 @@ Button (Large) Responsive Scaling
 @button-small-padding-horizontal-scale-screen-medium:											@button-small-height-scale-screen-medium;
 @button-small-padding-horizontal-scale-screen-large:											@button-small-height-scale-screen-large;
 
+@button-small-border-radius-scale-screen-mini:													@button-small-text-font-size-scale-screen-mini;
+@button-small-border-radius-scale-screen-small:													@button-small-text-font-size-scale-screen-small;
+@button-small-border-radius-scale-screen-medium:												@button-small-text-font-size-scale-screen-medium;
+@button-small-border-radius-scale-screen-large:													@button-small-text-font-size-scale-screen-large;
+
 
 
 
@@ -173,6 +255,10 @@ Button (Large)
 
 
 
+@button-large-enabled:																			true;
+
+
+
 /* ----------------------------------------------------------------------------------------------------
 Button (Large) Styles
 ---------------------------------------------------------------------------------------------------- */
@@ -181,6 +267,7 @@ Button (Large) Styles
 @button-large-text-line-height:																	floor(@button-text-line-height * 1.2);
 @button-large-height:																			floor(@button-height * 1.2);
 @button-large-padding-horizontal:																@button-padding-horizontal * 1.4;
+@button-large-border-radius:																	5px;
 
 
 
@@ -208,6 +295,11 @@ Button (Large) Responsive Scaling
 @button-large-padding-horizontal-scale-screen-medium:											@button-large-height-scale-screen-medium;
 @button-large-padding-horizontal-scale-screen-large:											@button-large-height-scale-screen-large;
 
+@button-large-border-radius-scale-screen-mini:													@button-large-text-font-size-scale-screen-mini;
+@button-large-border-radius-scale-screen-small:													@button-large-text-font-size-scale-screen-small;
+@button-large-border-radius-scale-screen-medium:												@button-large-text-font-size-scale-screen-medium;
+@button-large-border-radius-scale-screen-large:													@button-large-text-font-size-scale-screen-large;
+
 
 
 
@@ -223,6 +315,10 @@ Button (Jumbo)
 
 
 
+@button-jumbo-enabled:																			true;
+
+
+
 /* ----------------------------------------------------------------------------------------------------
 Button (Jumbo) Styles
 ---------------------------------------------------------------------------------------------------- */
@@ -231,6 +327,7 @@ Button (Jumbo) Styles
 @button-jumbo-text-line-height:																	floor(@button-text-line-height * 1.6);
 @button-jumbo-height:																			floor(@button-height * 1.6);
 @button-jumbo-padding-horizontal:																@button-padding-horizontal * 2.0;
+@button-jumbo-border-radius:																	6px;
 
 
 
@@ -257,6 +354,11 @@ Button (Jumbo) Responsive Scaling
 @button-jumbo-padding-horizontal-scale-screen-small:											@button-jumbo-height-scale-screen-small;
 @button-jumbo-padding-horizontal-scale-screen-medium:											@button-jumbo-height-scale-screen-medium;
 @button-jumbo-padding-horizontal-scale-screen-large:											@button-jumbo-height-scale-screen-large;
+
+@button-jumbo-border-radius-scale-screen-mini:													@button-jumbo-text-font-size-scale-screen-mini;
+@button-jumbo-border-radius-scale-screen-small:													@button-jumbo-text-font-size-scale-screen-small;
+@button-jumbo-border-radius-scale-screen-medium:												@button-jumbo-text-font-size-scale-screen-medium;
+@button-jumbo-border-radius-scale-screen-large:													@button-jumbo-text-font-size-scale-screen-large;
 
 
 
@@ -288,7 +390,6 @@ Button (Default) State: Normal
 @button-default-background-color:																rgba(0, 0, 0, 0.1);
 @button-default-background-gradient-color-top:													none;
 @button-default-background-gradient-color-bottom:												none;
-@button-default-border-radius:																	4px;
 @button-default-border-width:																	0px;
 @button-default-border-color:																	none;
 @button-default-border-top-width:																@button-default-border-width;
@@ -318,7 +419,6 @@ Button (Default) State: Hover
 @button-default-hover-background-color:															rgba(0, 0, 0, 0.15);
 @button-default-hover-background-gradient-color-top:											none;
 @button-default-hover-background-gradient-color-bottom:											none;
-@button-default-hover-border-radius:															4px;
 @button-default-hover-border-width:																0px;
 @button-default-hover-border-color:																none;
 @button-default-hover-border-top-width:															@button-default-hover-border-width;
@@ -348,7 +448,6 @@ Button (Default) State: Active
 @button-default-active-background-color:														rgba(0, 0, 0, 0.2);
 @button-default-active-background-gradient-color-top:											none;
 @button-default-active-background-gradient-color-bottom:										none;
-@button-default-active-border-radius:															4px;
 @button-default-active-border-width:															0px;
 @button-default-active-border-color:															none;
 @button-default-active-border-top-width:														@button-default-active-border-width;
@@ -379,7 +478,6 @@ Button (Default) State: disabled
 @button-default-disabled-background-color:														@button-default-background-color;
 @button-default-disabled-background-gradient-color-top:											@button-default-background-gradient-color-top;
 @button-default-disabled-background-gradient-color-bottom:										@button-default-background-gradient-color-bottom;
-@button-default-disabled-border-radius:															@button-default-border-radius;
 @button-default-disabled-border-width:															@button-default-border-width;
 @button-default-disabled-border-color:															@button-default-border-color;
 @button-default-disabled-border-top-width:														@button-default-border-top-width;
@@ -426,7 +524,6 @@ Button (Default, Link) State: Normal
 @button-default-link-background-color:															none;
 @button-default-link-background-gradient-color-top:												none;
 @button-default-link-background-gradient-color-bottom:											none;
-@button-default-link-border-radius:																@button-default-border-radius;
 @button-default-link-border-width:																@button-default-border-width;
 @button-default-link-border-color:																none;
 @button-default-link-border-top-width:															@button-default-link-border-width;
@@ -456,7 +553,6 @@ Button (Default, Link) State: Hover
 @button-default-link-hover-background-color:													none;
 @button-default-link-hover-background-gradient-color-top:										none;
 @button-default-link-hover-background-gradient-color-bottom:									none;
-@button-default-link-hover-border-radius:														@button-default-hover-border-radius;
 @button-default-link-hover-border-width:														@button-default-hover-border-width;
 @button-default-link-hover-border-color:														none;
 @button-default-link-hover-border-top-width:													@button-default-link-hover-border-width;
@@ -486,7 +582,6 @@ Button (Default, Link) State: Active
 @button-default-link-active-background-color:													none;
 @button-default-link-active-background-gradient-color-top:										none;
 @button-default-link-active-background-gradient-color-bottom:									none;
-@button-default-link-active-border-radius:														@button-default-active-border-radius;
 @button-default-link-active-border-width:														@button-default-active-border-width;
 @button-default-link-active-border-color:														none;
 @button-default-link-active-border-top-width:													@button-default-link-active-border-width;
@@ -517,7 +612,6 @@ Button (Default, Link) State: Disabled
 @button-default-link-disabled-background-color:													@button-default-link-background-color;
 @button-default-link-disabled-background-gradient-color-top:									@button-default-link-background-gradient-color-top;
 @button-default-link-disabled-background-gradient-color-bottom:									@button-default-link-background-gradient-color-bottom;
-@button-default-link-disabled-border-radius:													@button-default-link-border-radius;
 @button-default-link-disabled-border-width:														@button-default-link-border-width;
 @button-default-link-disabled-border-color:														@button-default-link-border-color;
 @button-default-link-disabled-border-top-width:													@button-default-link-border-top-width;
@@ -564,7 +658,6 @@ Button (Default, Stroke) State: Normal
 @button-default-stroke-background-color:														none;
 @button-default-stroke-background-gradient-color-top:											none;
 @button-default-stroke-background-gradient-color-bottom:										none;
-@button-default-stroke-border-radius:															@button-default-border-radius;
 @button-default-stroke-border-width:															0px;
 @button-default-stroke-border-color:															none;
 @button-default-stroke-border-top-width:														@button-default-stroke-border-width;
@@ -594,7 +687,6 @@ Button (Default, Stroke) State: Hover
 @button-default-stroke-hover-background-color:													none;
 @button-default-stroke-hover-background-gradient-color-top:										none;
 @button-default-stroke-hover-background-gradient-color-bottom:									none;
-@button-default-stroke-hover-border-radius:														@button-default-hover-border-radius;
 @button-default-stroke-hover-border-width:														0px;
 @button-default-stroke-hover-border-color:														none;
 @button-default-stroke-hover-border-top-width:													@button-default-stroke-hover-border-width;
@@ -624,7 +716,6 @@ Button (Default, Stroke) State: Active
 @button-default-stroke-active-background-color:													none;
 @button-default-stroke-active-background-gradient-color-top:									none;
 @button-default-stroke-active-background-gradient-color-bottom:									none;
-@button-default-stroke-active-border-radius:													@button-default-active-border-radius;
 @button-default-stroke-active-border-width:														0px;
 @button-default-stroke-active-border-color:														none;
 @button-default-stroke-active-border-top-width:													@button-default-stroke-active-border-width;
@@ -655,7 +746,6 @@ Button (Default, Stroke) State: Disabled
 @button-default-stroke-disabled-background-color:												@button-default-stroke-background-color;
 @button-default-stroke-disabled-background-gradient-color-top:									@button-default-stroke-background-gradient-color-top;
 @button-default-stroke-disabled-background-gradient-color-bottom:								@button-default-stroke-background-gradient-color-bottom;
-@button-default-stroke-disabled-border-radius:													@button-default-stroke-border-radius;
 @button-default-stroke-disabled-border-width:													@button-default-stroke-border-width;
 @button-default-stroke-disabled-border-color:													@button-default-stroke-border-color;
 @button-default-stroke-disabled-border-top-width:												@button-default-stroke-border-top-width;
@@ -702,7 +792,6 @@ Button (Default, Inverse) State: Normal
 @button-default-inverse-background-color:														rgba(255, 255, 255, 0.2);
 @button-default-inverse-background-gradient-color-top:											none;
 @button-default-inverse-background-gradient-color-bottom:										none;
-@button-default-inverse-border-radius:															4px;
 @button-default-inverse-border-width:															0px;
 @button-default-inverse-border-color:															none;
 @button-default-inverse-border-top-width:														@button-default-inverse-border-width;
@@ -732,7 +821,6 @@ Button (Default, Inverse) State: Hover
 @button-default-inverse-hover-background-color:													rgba(255, 255, 255, 0.25);
 @button-default-inverse-hover-background-gradient-color-top:									none;
 @button-default-inverse-hover-background-gradient-color-bottom:									none;
-@button-default-inverse-hover-border-radius:													4px;
 @button-default-inverse-hover-border-width:														0px;
 @button-default-inverse-hover-border-color:														none;
 @button-default-inverse-hover-border-top-width:													@button-default-inverse-hover-border-width;
@@ -762,7 +850,6 @@ Button (Default, Inverse) State: Active
 @button-default-inverse-active-background-color:												rgba(255, 255, 255, 0.4);
 @button-default-inverse-active-background-gradient-color-top:									none;
 @button-default-inverse-active-background-gradient-color-bottom:								none;
-@button-default-inverse-active-border-radius:													4px;
 @button-default-inverse-active-border-width:													0px;
 @button-default-inverse-active-border-color:													none;
 @button-default-inverse-active-border-top-width:												@button-default-inverse-active-border-width;
@@ -793,7 +880,6 @@ Button (Default, Inverse) State: Disabled
 @button-default-inverse-disabled-background-color:												@button-default-inverse-background-color;
 @button-default-inverse-disabled-background-gradient-color-top:									@button-default-inverse-background-gradient-color-top;
 @button-default-inverse-disabled-background-gradient-color-bottom:								@button-default-inverse-background-gradient-color-bottom;
-@button-default-inverse-disabled-border-radius:													@button-default-inverse-border-radius;
 @button-default-inverse-disabled-border-width:													@button-default-inverse-border-width;
 @button-default-inverse-disabled-border-color:													@button-default-inverse-border-color;
 @button-default-inverse-disabled-border-top-width:												@button-default-inverse-border-top-width;
@@ -840,7 +926,6 @@ Button (Default, Inverse, Link) State: Normal
 @button-default-inverse-link-background-color:													none;
 @button-default-inverse-link-background-gradient-color-top:										none;
 @button-default-inverse-link-background-gradient-color-bottom:									none;
-@button-default-inverse-link-border-radius:														@button-default-inverse-border-radius;
 @button-default-inverse-link-border-width:														@button-default-inverse-border-width;
 @button-default-inverse-link-border-color:														none;
 @button-default-inverse-link-border-top-width:													@button-default-inverse-link-border-width;
@@ -870,7 +955,6 @@ Button (Default, Inverse, Link) State: Hover
 @button-default-inverse-link-hover-background-color:											none;
 @button-default-inverse-link-hover-background-gradient-color-top:								none;
 @button-default-inverse-link-hover-background-gradient-color-bottom:							none;
-@button-default-inverse-link-hover-border-radius:												@button-default-inverse-hover-border-radius;
 @button-default-inverse-link-hover-border-width:												@button-default-inverse-hover-border-width;
 @button-default-inverse-link-hover-border-color:												none;
 @button-default-inverse-link-hover-border-top-width:											@button-default-inverse-link-hover-border-width;
@@ -900,7 +984,6 @@ Button (Default, Inverse, Link) State: Active
 @button-default-inverse-link-active-background-color:											none;
 @button-default-inverse-link-active-background-gradient-color-top:								none;
 @button-default-inverse-link-active-background-gradient-color-bottom:							none;
-@button-default-inverse-link-active-border-radius:												@button-default-inverse-active-border-radius;
 @button-default-inverse-link-active-border-width:												@button-default-inverse-active-border-width;
 @button-default-inverse-link-active-border-color:												none;
 @button-default-inverse-link-active-border-top-width:											@button-default-inverse-link-active-border-width;
@@ -931,7 +1014,6 @@ Button (Default, Inverse, Link) State: Disabled
 @button-default-inverse-link-disabled-background-color:											@button-default-inverse-link-background-color;
 @button-default-inverse-link-disabled-background-gradient-color-top:							@button-default-inverse-link-background-gradient-color-top;
 @button-default-inverse-link-disabled-background-gradient-color-bottom:							@button-default-inverse-link-background-gradient-color-bottom;
-@button-default-inverse-link-disabled-border-radius:											@button-default-inverse-link-border-radius;
 @button-default-inverse-link-disabled-border-width:												@button-default-inverse-link-border-width;
 @button-default-inverse-link-disabled-border-color:												@button-default-inverse-link-border-color;
 @button-default-inverse-link-disabled-border-top-width:											@button-default-inverse-link-border-top-width;
@@ -978,7 +1060,6 @@ Button (Default, Inverse, Stroke) State: Normal
 @button-default-inverse-stroke-background-color:												none;
 @button-default-inverse-stroke-background-gradient-color-top:									none;
 @button-default-inverse-stroke-background-gradient-color-bottom:								none;
-@button-default-inverse-stroke-border-radius:													@button-default-inverse-border-radius;
 @button-default-inverse-stroke-border-width:													0px;
 @button-default-inverse-stroke-border-color:													none;
 @button-default-inverse-stroke-border-top-width:												@button-default-inverse-stroke-border-width;
@@ -1008,7 +1089,6 @@ Button (Default, Inverse, Stroke) State: Hover
 @button-default-inverse-stroke-hover-background-color:											none;
 @button-default-inverse-stroke-hover-background-gradient-color-top:								none;
 @button-default-inverse-stroke-hover-background-gradient-color-bottom:							none;
-@button-default-inverse-stroke-hover-border-radius:												@button-default-inverse-hover-border-radius;
 @button-default-inverse-stroke-hover-border-width:												0px;
 @button-default-inverse-stroke-hover-border-color:												none;
 @button-default-inverse-stroke-hover-border-top-width:											@button-default-inverse-stroke-hover-border-width;
@@ -1038,7 +1118,6 @@ Button (Default, Inverse, Stroke) State: Active
 @button-default-inverse-stroke-active-background-color:											none;
 @button-default-inverse-stroke-active-background-gradient-color-top:							none;
 @button-default-inverse-stroke-active-background-gradient-color-bottom:							none;
-@button-default-inverse-stroke-active-border-radius:											@button-default-inverse-active-border-radius;
 @button-default-inverse-stroke-active-border-width:												0px;
 @button-default-inverse-stroke-active-border-color:												none;
 @button-default-inverse-stroke-active-border-top-width:											@button-default-inverse-stroke-active-border-width;
@@ -1069,7 +1148,6 @@ Button (Default, Inverse, Stroke) State: Disabled
 @button-default-inverse-stroke-disabled-background-color:										@button-default-inverse-stroke-background-color;
 @button-default-inverse-stroke-disabled-background-gradient-color-top:							@button-default-inverse-stroke-background-gradient-color-top;
 @button-default-inverse-stroke-disabled-background-gradient-color-bottom:						@button-default-inverse-stroke-background-gradient-color-bottom;
-@button-default-inverse-stroke-disabled-border-radius:											@button-default-inverse-stroke-border-radius;
 @button-default-inverse-stroke-disabled-border-width:											@button-default-inverse-stroke-border-width;
 @button-default-inverse-stroke-disabled-border-color:											@button-default-inverse-stroke-border-color;
 @button-default-inverse-stroke-disabled-border-top-width:										@button-default-inverse-stroke-border-top-width;
@@ -1116,7 +1194,6 @@ Button (Primary) State: Normal
 @button-primary-background-color:																~`color_lightness("@{blue}", 0)`;
 @button-primary-background-gradient-color-top:													none;
 @button-primary-background-gradient-color-bottom:												none;
-@button-primary-border-radius:																	4px;
 @button-primary-border-width:																	0px;
 @button-primary-border-color:																	none;
 @button-primary-border-top-width:																@button-primary-border-width;
@@ -1146,7 +1223,6 @@ Button (Primary) State: Hover
 @button-primary-hover-background-color:															~`color_lightness("@{blue}", -10)`;
 @button-primary-hover-background-gradient-color-top:											none;
 @button-primary-hover-background-gradient-color-bottom:											none;
-@button-primary-hover-border-radius:															4px;
 @button-primary-hover-border-width:																0px;
 @button-primary-hover-border-color:																none;
 @button-primary-hover-border-top-width:															@button-primary-hover-border-width;
@@ -1176,7 +1252,6 @@ Button (Primary) State: Active
 @button-primary-active-background-color:														~`color_lightness("@{blue}", -20)`;
 @button-primary-active-background-gradient-color-top:											none;
 @button-primary-active-background-gradient-color-bottom:										none;
-@button-primary-active-border-radius:															4px;
 @button-primary-active-border-width:															0px;
 @button-primary-active-border-color:															none;
 @button-primary-active-border-top-width:														@button-primary-active-border-width;
@@ -1207,7 +1282,6 @@ Button (Primary) State: disabled
 @button-primary-disabled-background-color:														@button-primary-background-color;
 @button-primary-disabled-background-gradient-color-top:											@button-primary-background-gradient-color-top;
 @button-primary-disabled-background-gradient-color-bottom:										@button-primary-background-gradient-color-bottom;
-@button-primary-disabled-border-radius:															@button-primary-border-radius;
 @button-primary-disabled-border-width:															@button-primary-border-width;
 @button-primary-disabled-border-color:															@button-primary-border-color;
 @button-primary-disabled-border-top-width:														@button-primary-border-top-width;
@@ -1254,7 +1328,6 @@ Button (Primary, Link) State: Normal
 @button-primary-link-background-color:															none;
 @button-primary-link-background-gradient-color-top:												none;
 @button-primary-link-background-gradient-color-bottom:											none;
-@button-primary-link-border-radius:																@button-primary-border-radius;
 @button-primary-link-border-width:																@button-primary-border-width;
 @button-primary-link-border-color:																none;
 @button-primary-link-border-top-width:															@button-primary-link-border-width;
@@ -1284,7 +1357,6 @@ Button (Primary, Link) State: Hover
 @button-primary-link-hover-background-color:													none;
 @button-primary-link-hover-background-gradient-color-top:										none;
 @button-primary-link-hover-background-gradient-color-bottom:									none;
-@button-primary-link-hover-border-radius:														@button-primary-hover-border-radius;
 @button-primary-link-hover-border-width:														@button-primary-hover-border-width;
 @button-primary-link-hover-border-color:														none;
 @button-primary-link-hover-border-top-width:													@button-primary-link-hover-border-width;
@@ -1314,7 +1386,6 @@ Button (Primary, Link) State: Active
 @button-primary-link-active-background-color:													none;
 @button-primary-link-active-background-gradient-color-top:										none;
 @button-primary-link-active-background-gradient-color-bottom:									none;
-@button-primary-link-active-border-radius:														@button-primary-active-border-radius;
 @button-primary-link-active-border-width:														@button-primary-active-border-width;
 @button-primary-link-active-border-color:														none;
 @button-primary-link-active-border-top-width:													@button-primary-link-active-border-width;
@@ -1345,7 +1416,6 @@ Button (Primary, Link) State: Disabled
 @button-primary-link-disabled-background-color:													@button-primary-link-background-color;
 @button-primary-link-disabled-background-gradient-color-top:									@button-primary-link-background-gradient-color-top;
 @button-primary-link-disabled-background-gradient-color-bottom:									@button-primary-link-background-gradient-color-bottom;
-@button-primary-link-disabled-border-radius:													@button-primary-link-border-radius;
 @button-primary-link-disabled-border-width:														@button-primary-link-border-width;
 @button-primary-link-disabled-border-color:														@button-primary-link-border-color;
 @button-primary-link-disabled-border-top-width:													@button-primary-link-border-top-width;
@@ -1392,7 +1462,6 @@ Button (Primary, Stroke) State: Normal
 @button-primary-stroke-background-color:														none;
 @button-primary-stroke-background-gradient-color-top:											none;
 @button-primary-stroke-background-gradient-color-bottom:										none;
-@button-primary-stroke-border-radius:															@button-primary-border-radius;
 @button-primary-stroke-border-width:															0px;
 @button-primary-stroke-border-color:															none;
 @button-primary-stroke-border-top-width:														@button-primary-stroke-border-width;
@@ -1422,7 +1491,6 @@ Button (Primary, Stroke) State: Hover
 @button-primary-stroke-hover-background-color:													none;
 @button-primary-stroke-hover-background-gradient-color-top:										none;
 @button-primary-stroke-hover-background-gradient-color-bottom:									none;
-@button-primary-stroke-hover-border-radius:														@button-primary-hover-border-radius;
 @button-primary-stroke-hover-border-width:														0px;
 @button-primary-stroke-hover-border-color:														none;
 @button-primary-stroke-hover-border-top-width:													@button-primary-stroke-hover-border-width;
@@ -1452,7 +1520,6 @@ Button (Primary, Stroke) State: Active
 @button-primary-stroke-active-background-color:													none;
 @button-primary-stroke-active-background-gradient-color-top:									none;
 @button-primary-stroke-active-background-gradient-color-bottom:									none;
-@button-primary-stroke-active-border-radius:													@button-primary-active-border-radius;
 @button-primary-stroke-active-border-width:														0px;
 @button-primary-stroke-active-border-color:														none;
 @button-primary-stroke-active-border-top-width:													@button-primary-stroke-active-border-width;
@@ -1483,7 +1550,6 @@ Button (Primary, Stroke) State: Disabled
 @button-primary-stroke-disabled-background-color:												@button-primary-stroke-background-color;
 @button-primary-stroke-disabled-background-gradient-color-top:									@button-primary-stroke-background-gradient-color-top;
 @button-primary-stroke-disabled-background-gradient-color-bottom:								@button-primary-stroke-background-gradient-color-bottom;
-@button-primary-stroke-disabled-border-radius:													@button-primary-stroke-border-radius;
 @button-primary-stroke-disabled-border-width:													@button-primary-stroke-border-width;
 @button-primary-stroke-disabled-border-color:													@button-primary-stroke-border-color;
 @button-primary-stroke-disabled-border-top-width:												@button-primary-stroke-border-top-width;
@@ -1530,7 +1596,6 @@ Button (Primary, Inverse) State: Normal
 @button-primary-inverse-background-color:														@button-primary-text-color;
 @button-primary-inverse-background-gradient-color-top:											none;
 @button-primary-inverse-background-gradient-color-bottom:										none;
-@button-primary-inverse-border-radius:															4px;
 @button-primary-inverse-border-width:															0px;
 @button-primary-inverse-border-color:															none;
 @button-primary-inverse-border-top-width:														@button-primary-inverse-border-width;
@@ -1560,7 +1625,6 @@ Button (Primary, Inverse) State: Hover
 @button-primary-inverse-hover-background-color:													@button-primary-hover-text-color;
 @button-primary-inverse-hover-background-gradient-color-top:									none;
 @button-primary-inverse-hover-background-gradient-color-bottom:									none;
-@button-primary-inverse-hover-border-radius:													4px;
 @button-primary-inverse-hover-border-width:														0px;
 @button-primary-inverse-hover-border-color:														none;
 @button-primary-inverse-hover-border-top-width:													@button-primary-inverse-hover-border-width;
@@ -1590,7 +1654,6 @@ Button (Primary, Inverse) State: Active
 @button-primary-inverse-active-background-color:												@button-primary-active-text-color;
 @button-primary-inverse-active-background-gradient-color-top:									none;
 @button-primary-inverse-active-background-gradient-color-bottom:								none;
-@button-primary-inverse-active-border-radius:													4px;
 @button-primary-inverse-active-border-width:													0px;
 @button-primary-inverse-active-border-color:													none;
 @button-primary-inverse-active-border-top-width:												@button-primary-inverse-active-border-width;
@@ -1621,7 +1684,6 @@ Button (Primary, Inverse) State: Disabled
 @button-primary-inverse-disabled-background-color:												@button-primary-inverse-background-color;
 @button-primary-inverse-disabled-background-gradient-color-top:									@button-primary-inverse-background-gradient-color-top;
 @button-primary-inverse-disabled-background-gradient-color-bottom:								@button-primary-inverse-background-gradient-color-bottom;
-@button-primary-inverse-disabled-border-radius:													@button-primary-inverse-border-radius;
 @button-primary-inverse-disabled-border-width:													@button-primary-inverse-border-width;
 @button-primary-inverse-disabled-border-color:													@button-primary-inverse-border-color;
 @button-primary-inverse-disabled-border-top-width:												@button-primary-inverse-border-top-width;
@@ -1668,7 +1730,6 @@ Button (Primary, Inverse, Link) State: Normal
 @button-primary-inverse-link-background-color:													none;
 @button-primary-inverse-link-background-gradient-color-top:										none;
 @button-primary-inverse-link-background-gradient-color-bottom:									none;
-@button-primary-inverse-link-border-radius:														@button-primary-inverse-border-radius;
 @button-primary-inverse-link-border-width:														@button-primary-inverse-border-width;
 @button-primary-inverse-link-border-color:														none;
 @button-primary-inverse-link-border-top-width:													@button-primary-inverse-link-border-width;
@@ -1698,7 +1759,6 @@ Button (Primary, Inverse, Link) State: Hover
 @button-primary-inverse-link-hover-background-color:											none;
 @button-primary-inverse-link-hover-background-gradient-color-top:								none;
 @button-primary-inverse-link-hover-background-gradient-color-bottom:							none;
-@button-primary-inverse-link-hover-border-radius:												@button-primary-inverse-hover-border-radius;
 @button-primary-inverse-link-hover-border-width:												@button-primary-inverse-hover-border-width;
 @button-primary-inverse-link-hover-border-color:												none;
 @button-primary-inverse-link-hover-border-top-width:											@button-primary-inverse-link-hover-border-width;
@@ -1728,7 +1788,6 @@ Button (Primary, Inverse, Link) State: Active
 @button-primary-inverse-link-active-background-color:											none;
 @button-primary-inverse-link-active-background-gradient-color-top:								none;
 @button-primary-inverse-link-active-background-gradient-color-bottom:							none;
-@button-primary-inverse-link-active-border-radius:												@button-primary-inverse-active-border-radius;
 @button-primary-inverse-link-active-border-width:												@button-primary-inverse-active-border-width;
 @button-primary-inverse-link-active-border-color:												none;
 @button-primary-inverse-link-active-border-top-width:											@button-primary-inverse-link-active-border-width;
@@ -1759,7 +1818,6 @@ Button (Primary, Inverse, Link) State: Disabled
 @button-primary-inverse-link-disabled-background-color:											@button-primary-inverse-link-background-color;
 @button-primary-inverse-link-disabled-background-gradient-color-top:							@button-primary-inverse-link-background-gradient-color-top;
 @button-primary-inverse-link-disabled-background-gradient-color-bottom:							@button-primary-inverse-link-background-gradient-color-bottom;
-@button-primary-inverse-link-disabled-border-radius:											@button-primary-inverse-link-border-radius;
 @button-primary-inverse-link-disabled-border-width:												@button-primary-inverse-link-border-width;
 @button-primary-inverse-link-disabled-border-color:												@button-primary-inverse-link-border-color;
 @button-primary-inverse-link-disabled-border-top-width:											@button-primary-inverse-link-border-top-width;
@@ -1806,7 +1864,6 @@ Button (Primary, Inverse, Stroke) State: Normal
 @button-primary-inverse-stroke-background-color:												none;
 @button-primary-inverse-stroke-background-gradient-color-top:									none;
 @button-primary-inverse-stroke-background-gradient-color-bottom:								none;
-@button-primary-inverse-stroke-border-radius:													@button-primary-inverse-border-radius;
 @button-primary-inverse-stroke-border-width:													0px;
 @button-primary-inverse-stroke-border-color:													none;
 @button-primary-inverse-stroke-border-top-width:												@button-primary-inverse-stroke-border-width;
@@ -1836,7 +1893,6 @@ Button (Primary, Inverse, Stroke) State: Hover
 @button-primary-inverse-stroke-hover-background-color:											none;
 @button-primary-inverse-stroke-hover-background-gradient-color-top:								none;
 @button-primary-inverse-stroke-hover-background-gradient-color-bottom:							none;
-@button-primary-inverse-stroke-hover-border-radius:												@button-primary-inverse-hover-border-radius;
 @button-primary-inverse-stroke-hover-border-width:												0px;
 @button-primary-inverse-stroke-hover-border-color:												none;
 @button-primary-inverse-stroke-hover-border-top-width:											@button-primary-inverse-stroke-hover-border-width;
@@ -1866,7 +1922,6 @@ Button (Primary, Inverse, Stroke) State: Active
 @button-primary-inverse-stroke-active-background-color:											none;
 @button-primary-inverse-stroke-active-background-gradient-color-top:							none;
 @button-primary-inverse-stroke-active-background-gradient-color-bottom:							none;
-@button-primary-inverse-stroke-active-border-radius:											@button-primary-inverse-active-border-radius;
 @button-primary-inverse-stroke-active-border-width:												0px;
 @button-primary-inverse-stroke-active-border-color:												none;
 @button-primary-inverse-stroke-active-border-top-width:											@button-primary-inverse-stroke-active-border-width;
@@ -1897,7 +1952,6 @@ Button (Primary, Inverse, Stroke) State: Disabled
 @button-primary-inverse-stroke-disabled-background-color:										@button-primary-inverse-stroke-background-color;
 @button-primary-inverse-stroke-disabled-background-gradient-color-top:							@button-primary-inverse-stroke-background-gradient-color-top;
 @button-primary-inverse-stroke-disabled-background-gradient-color-bottom:						@button-primary-inverse-stroke-background-gradient-color-bottom;
-@button-primary-inverse-stroke-disabled-border-radius:											@button-primary-inverse-stroke-border-radius;
 @button-primary-inverse-stroke-disabled-border-width:											@button-primary-inverse-stroke-border-width;
 @button-primary-inverse-stroke-disabled-border-color:											@button-primary-inverse-stroke-border-color;
 @button-primary-inverse-stroke-disabled-border-top-width:										@button-primary-inverse-stroke-border-top-width;
@@ -1944,7 +1998,6 @@ Button (Success) State: Normal
 @button-success-background-color:																~`color_lightness("@{green}", 0)`;
 @button-success-background-gradient-color-top:													none;
 @button-success-background-gradient-color-bottom:												none;
-@button-success-border-radius:																	4px;
 @button-success-border-width:																	0px;
 @button-success-border-color:																	none;
 @button-success-border-top-width:																@button-success-border-width;
@@ -1974,7 +2027,6 @@ Button (Success) State: Hover
 @button-success-hover-background-color:															~`color_lightness("@{green}", -10)`;
 @button-success-hover-background-gradient-color-top:											none;
 @button-success-hover-background-gradient-color-bottom:											none;
-@button-success-hover-border-radius:															4px;
 @button-success-hover-border-width:																0px;
 @button-success-hover-border-color:																none;
 @button-success-hover-border-top-width:															@button-success-hover-border-width;
@@ -2004,7 +2056,6 @@ Button (Success) State: Active
 @button-success-active-background-color:														~`color_lightness("@{green}", -20)`;
 @button-success-active-background-gradient-color-top:											none;
 @button-success-active-background-gradient-color-bottom:										none;
-@button-success-active-border-radius:															4px;
 @button-success-active-border-width:															0px;
 @button-success-active-border-color:															none;
 @button-success-active-border-top-width:														@button-success-active-border-width;
@@ -2035,7 +2086,6 @@ Button (Success) State: disabled
 @button-success-disabled-background-color:														@button-success-background-color;
 @button-success-disabled-background-gradient-color-top:											@button-success-background-gradient-color-top;
 @button-success-disabled-background-gradient-color-bottom:										@button-success-background-gradient-color-bottom;
-@button-success-disabled-border-radius:															@button-success-border-radius;
 @button-success-disabled-border-width:															@button-success-border-width;
 @button-success-disabled-border-color:															@button-success-border-color;
 @button-success-disabled-border-top-width:														@button-success-border-top-width;
@@ -2082,7 +2132,6 @@ Button (Success, Link) State: Normal
 @button-success-link-background-color:															none;
 @button-success-link-background-gradient-color-top:												none;
 @button-success-link-background-gradient-color-bottom:											none;
-@button-success-link-border-radius:																@button-success-border-radius;
 @button-success-link-border-width:																@button-success-border-width;
 @button-success-link-border-color:																none;
 @button-success-link-border-top-width:															@button-success-link-border-width;
@@ -2112,7 +2161,6 @@ Button (Success, Link) State: Hover
 @button-success-link-hover-background-color:													none;
 @button-success-link-hover-background-gradient-color-top:										none;
 @button-success-link-hover-background-gradient-color-bottom:									none;
-@button-success-link-hover-border-radius:														@button-success-hover-border-radius;
 @button-success-link-hover-border-width:														@button-success-hover-border-width;
 @button-success-link-hover-border-color:														none;
 @button-success-link-hover-border-top-width:													@button-success-link-hover-border-width;
@@ -2142,7 +2190,6 @@ Button (Success, Link) State: Active
 @button-success-link-active-background-color:													none;
 @button-success-link-active-background-gradient-color-top:										none;
 @button-success-link-active-background-gradient-color-bottom:									none;
-@button-success-link-active-border-radius:														@button-success-active-border-radius;
 @button-success-link-active-border-width:														@button-success-active-border-width;
 @button-success-link-active-border-color:														none;
 @button-success-link-active-border-top-width:													@button-success-link-active-border-width;
@@ -2173,7 +2220,6 @@ Button (Success, Link) State: Disabled
 @button-success-link-disabled-background-color:													@button-success-link-background-color;
 @button-success-link-disabled-background-gradient-color-top:									@button-success-link-background-gradient-color-top;
 @button-success-link-disabled-background-gradient-color-bottom:									@button-success-link-background-gradient-color-bottom;
-@button-success-link-disabled-border-radius:													@button-success-link-border-radius;
 @button-success-link-disabled-border-width:														@button-success-link-border-width;
 @button-success-link-disabled-border-color:														@button-success-link-border-color;
 @button-success-link-disabled-border-top-width:													@button-success-link-border-top-width;
@@ -2220,7 +2266,6 @@ Button (Success, Stroke) State: Normal
 @button-success-stroke-background-color:														none;
 @button-success-stroke-background-gradient-color-top:											none;
 @button-success-stroke-background-gradient-color-bottom:										none;
-@button-success-stroke-border-radius:															@button-success-border-radius;
 @button-success-stroke-border-width:															0px;
 @button-success-stroke-border-color:															none;
 @button-success-stroke-border-top-width:														@button-success-stroke-border-width;
@@ -2250,7 +2295,6 @@ Button (Success, Stroke) State: Hover
 @button-success-stroke-hover-background-color:													none;
 @button-success-stroke-hover-background-gradient-color-top:										none;
 @button-success-stroke-hover-background-gradient-color-bottom:									none;
-@button-success-stroke-hover-border-radius:														@button-success-hover-border-radius;
 @button-success-stroke-hover-border-width:														0px;
 @button-success-stroke-hover-border-color:														none;
 @button-success-stroke-hover-border-top-width:													@button-success-stroke-hover-border-width;
@@ -2280,7 +2324,6 @@ Button (Success, Stroke) State: Active
 @button-success-stroke-active-background-color:													none;
 @button-success-stroke-active-background-gradient-color-top:									none;
 @button-success-stroke-active-background-gradient-color-bottom:									none;
-@button-success-stroke-active-border-radius:													@button-success-active-border-radius;
 @button-success-stroke-active-border-width:														0px;
 @button-success-stroke-active-border-color:														none;
 @button-success-stroke-active-border-top-width:													@button-success-stroke-active-border-width;
@@ -2311,7 +2354,6 @@ Button (Success, Stroke) State: Disabled
 @button-success-stroke-disabled-background-color:												@button-success-stroke-background-color;
 @button-success-stroke-disabled-background-gradient-color-top:									@button-success-stroke-background-gradient-color-top;
 @button-success-stroke-disabled-background-gradient-color-bottom:								@button-success-stroke-background-gradient-color-bottom;
-@button-success-stroke-disabled-border-radius:													@button-success-stroke-border-radius;
 @button-success-stroke-disabled-border-width:													@button-success-stroke-border-width;
 @button-success-stroke-disabled-border-color:													@button-success-stroke-border-color;
 @button-success-stroke-disabled-border-top-width:												@button-success-stroke-border-top-width;
@@ -2358,7 +2400,6 @@ Button (Success, Inverse) State: Normal
 @button-success-inverse-background-color:														@button-success-text-color;
 @button-success-inverse-background-gradient-color-top:											none;
 @button-success-inverse-background-gradient-color-bottom:										none;
-@button-success-inverse-border-radius:															4px;
 @button-success-inverse-border-width:															0px;
 @button-success-inverse-border-color:															none;
 @button-success-inverse-border-top-width:														@button-success-inverse-border-width;
@@ -2388,7 +2429,6 @@ Button (Success, Inverse) State: Hover
 @button-success-inverse-hover-background-color:													@button-success-hover-text-color;
 @button-success-inverse-hover-background-gradient-color-top:									none;
 @button-success-inverse-hover-background-gradient-color-bottom:									none;
-@button-success-inverse-hover-border-radius:													4px;
 @button-success-inverse-hover-border-width:														0px;
 @button-success-inverse-hover-border-color:														none;
 @button-success-inverse-hover-border-top-width:													@button-success-inverse-hover-border-width;
@@ -2418,7 +2458,6 @@ Button (Success, Inverse) State: Active
 @button-success-inverse-active-background-color:												@button-success-active-text-color;
 @button-success-inverse-active-background-gradient-color-top:									none;
 @button-success-inverse-active-background-gradient-color-bottom:								none;
-@button-success-inverse-active-border-radius:													4px;
 @button-success-inverse-active-border-width:													0px;
 @button-success-inverse-active-border-color:													none;
 @button-success-inverse-active-border-top-width:												@button-success-inverse-active-border-width;
@@ -2449,7 +2488,6 @@ Button (Success, Inverse) State: Disabled
 @button-success-inverse-disabled-background-color:												@button-success-inverse-background-color;
 @button-success-inverse-disabled-background-gradient-color-top:									@button-success-inverse-background-gradient-color-top;
 @button-success-inverse-disabled-background-gradient-color-bottom:								@button-success-inverse-background-gradient-color-bottom;
-@button-success-inverse-disabled-border-radius:													@button-success-inverse-border-radius;
 @button-success-inverse-disabled-border-width:													@button-success-inverse-border-width;
 @button-success-inverse-disabled-border-color:													@button-success-inverse-border-color;
 @button-success-inverse-disabled-border-top-width:												@button-success-inverse-border-top-width;
@@ -2496,7 +2534,6 @@ Button (Success, Inverse, Link) State: Normal
 @button-success-inverse-link-background-color:													none;
 @button-success-inverse-link-background-gradient-color-top:										none;
 @button-success-inverse-link-background-gradient-color-bottom:									none;
-@button-success-inverse-link-border-radius:														@button-success-inverse-border-radius;
 @button-success-inverse-link-border-width:														@button-success-inverse-border-width;
 @button-success-inverse-link-border-color:														none;
 @button-success-inverse-link-border-top-width:													@button-success-inverse-link-border-width;
@@ -2526,7 +2563,6 @@ Button (Success, Inverse, Link) State: Hover
 @button-success-inverse-link-hover-background-color:											none;
 @button-success-inverse-link-hover-background-gradient-color-top:								none;
 @button-success-inverse-link-hover-background-gradient-color-bottom:							none;
-@button-success-inverse-link-hover-border-radius:												@button-success-inverse-hover-border-radius;
 @button-success-inverse-link-hover-border-width:												@button-success-inverse-hover-border-width;
 @button-success-inverse-link-hover-border-color:												none;
 @button-success-inverse-link-hover-border-top-width:											@button-success-inverse-link-hover-border-width;
@@ -2556,7 +2592,6 @@ Button (Success, Inverse, Link) State: Active
 @button-success-inverse-link-active-background-color:											none;
 @button-success-inverse-link-active-background-gradient-color-top:								none;
 @button-success-inverse-link-active-background-gradient-color-bottom:							none;
-@button-success-inverse-link-active-border-radius:												@button-success-inverse-active-border-radius;
 @button-success-inverse-link-active-border-width:												@button-success-inverse-active-border-width;
 @button-success-inverse-link-active-border-color:												none;
 @button-success-inverse-link-active-border-top-width:											@button-success-inverse-link-active-border-width;
@@ -2587,7 +2622,6 @@ Button (Success, Inverse, Link) State: Disabled
 @button-success-inverse-link-disabled-background-color:											@button-success-inverse-link-background-color;
 @button-success-inverse-link-disabled-background-gradient-color-top:							@button-success-inverse-link-background-gradient-color-top;
 @button-success-inverse-link-disabled-background-gradient-color-bottom:							@button-success-inverse-link-background-gradient-color-bottom;
-@button-success-inverse-link-disabled-border-radius:											@button-success-inverse-link-border-radius;
 @button-success-inverse-link-disabled-border-width:												@button-success-inverse-link-border-width;
 @button-success-inverse-link-disabled-border-color:												@button-success-inverse-link-border-color;
 @button-success-inverse-link-disabled-border-top-width:											@button-success-inverse-link-border-top-width;
@@ -2634,7 +2668,6 @@ Button (Success, Inverse, Stroke) State: Normal
 @button-success-inverse-stroke-background-color:												none;
 @button-success-inverse-stroke-background-gradient-color-top:									none;
 @button-success-inverse-stroke-background-gradient-color-bottom:								none;
-@button-success-inverse-stroke-border-radius:													@button-success-inverse-border-radius;
 @button-success-inverse-stroke-border-width:													0px;
 @button-success-inverse-stroke-border-color:													none;
 @button-success-inverse-stroke-border-top-width:												@button-success-inverse-stroke-border-width;
@@ -2664,7 +2697,6 @@ Button (Success, Inverse, Stroke) State: Hover
 @button-success-inverse-stroke-hover-background-color:											none;
 @button-success-inverse-stroke-hover-background-gradient-color-top:								none;
 @button-success-inverse-stroke-hover-background-gradient-color-bottom:							none;
-@button-success-inverse-stroke-hover-border-radius:												@button-success-inverse-hover-border-radius;
 @button-success-inverse-stroke-hover-border-width:												0px;
 @button-success-inverse-stroke-hover-border-color:												none;
 @button-success-inverse-stroke-hover-border-top-width:											@button-success-inverse-stroke-hover-border-width;
@@ -2694,7 +2726,6 @@ Button (Success, Inverse, Stroke) State: Active
 @button-success-inverse-stroke-active-background-color:											none;
 @button-success-inverse-stroke-active-background-gradient-color-top:							none;
 @button-success-inverse-stroke-active-background-gradient-color-bottom:							none;
-@button-success-inverse-stroke-active-border-radius:											@button-success-inverse-active-border-radius;
 @button-success-inverse-stroke-active-border-width:												0px;
 @button-success-inverse-stroke-active-border-color:												none;
 @button-success-inverse-stroke-active-border-top-width:											@button-success-inverse-stroke-active-border-width;
@@ -2725,7 +2756,6 @@ Button (Success, Inverse, Stroke) State: Disabled
 @button-success-inverse-stroke-disabled-background-color:										@button-success-inverse-stroke-background-color;
 @button-success-inverse-stroke-disabled-background-gradient-color-top:							@button-success-inverse-stroke-background-gradient-color-top;
 @button-success-inverse-stroke-disabled-background-gradient-color-bottom:						@button-success-inverse-stroke-background-gradient-color-bottom;
-@button-success-inverse-stroke-disabled-border-radius:											@button-success-inverse-stroke-border-radius;
 @button-success-inverse-stroke-disabled-border-width:											@button-success-inverse-stroke-border-width;
 @button-success-inverse-stroke-disabled-border-color:											@button-success-inverse-stroke-border-color;
 @button-success-inverse-stroke-disabled-border-top-width:										@button-success-inverse-stroke-border-top-width;
@@ -2772,7 +2802,6 @@ Button (Warning) State: Normal
 @button-warning-background-color:																~`color_lightness("@{orange}", 0)`;
 @button-warning-background-gradient-color-top:													none;
 @button-warning-background-gradient-color-bottom:												none;
-@button-warning-border-radius:																	4px;
 @button-warning-border-width:																	0px;
 @button-warning-border-color:																	none;
 @button-warning-border-top-width:																@button-warning-border-width;
@@ -2802,7 +2831,6 @@ Button (Warning) State: Hover
 @button-warning-hover-background-color:															~`color_lightness("@{orange}", -10)`;
 @button-warning-hover-background-gradient-color-top:											none;
 @button-warning-hover-background-gradient-color-bottom:											none;
-@button-warning-hover-border-radius:															4px;
 @button-warning-hover-border-width:																0px;
 @button-warning-hover-border-color:																none;
 @button-warning-hover-border-top-width:															@button-warning-hover-border-width;
@@ -2832,7 +2860,6 @@ Button (Warning) State: Active
 @button-warning-active-background-color:														~`color_lightness("@{orange}", -20)`;
 @button-warning-active-background-gradient-color-top:											none;
 @button-warning-active-background-gradient-color-bottom:										none;
-@button-warning-active-border-radius:															4px;
 @button-warning-active-border-width:															0px;
 @button-warning-active-border-color:															none;
 @button-warning-active-border-top-width:														@button-warning-active-border-width;
@@ -2863,7 +2890,6 @@ Button (Warning) State: disabled
 @button-warning-disabled-background-color:														@button-warning-background-color;
 @button-warning-disabled-background-gradient-color-top:											@button-warning-background-gradient-color-top;
 @button-warning-disabled-background-gradient-color-bottom:										@button-warning-background-gradient-color-bottom;
-@button-warning-disabled-border-radius:															@button-warning-border-radius;
 @button-warning-disabled-border-width:															@button-warning-border-width;
 @button-warning-disabled-border-color:															@button-warning-border-color;
 @button-warning-disabled-border-top-width:														@button-warning-border-top-width;
@@ -2910,7 +2936,6 @@ Button (Warning, Link) State: Normal
 @button-warning-link-background-color:															none;
 @button-warning-link-background-gradient-color-top:												none;
 @button-warning-link-background-gradient-color-bottom:											none;
-@button-warning-link-border-radius:																@button-warning-border-radius;
 @button-warning-link-border-width:																@button-warning-border-width;
 @button-warning-link-border-color:																none;
 @button-warning-link-border-top-width:															@button-warning-link-border-width;
@@ -2940,7 +2965,6 @@ Button (Warning, Link) State: Hover
 @button-warning-link-hover-background-color:													none;
 @button-warning-link-hover-background-gradient-color-top:										none;
 @button-warning-link-hover-background-gradient-color-bottom:									none;
-@button-warning-link-hover-border-radius:														@button-warning-hover-border-radius;
 @button-warning-link-hover-border-width:														@button-warning-hover-border-width;
 @button-warning-link-hover-border-color:														none;
 @button-warning-link-hover-border-top-width:													@button-warning-link-hover-border-width;
@@ -2970,7 +2994,6 @@ Button (Warning, Link) State: Active
 @button-warning-link-active-background-color:													none;
 @button-warning-link-active-background-gradient-color-top:										none;
 @button-warning-link-active-background-gradient-color-bottom:									none;
-@button-warning-link-active-border-radius:														@button-warning-active-border-radius;
 @button-warning-link-active-border-width:														@button-warning-active-border-width;
 @button-warning-link-active-border-color:														none;
 @button-warning-link-active-border-top-width:													@button-warning-link-active-border-width;
@@ -3001,7 +3024,6 @@ Button (Warning, Link) State: Disabled
 @button-warning-link-disabled-background-color:													@button-warning-link-background-color;
 @button-warning-link-disabled-background-gradient-color-top:									@button-warning-link-background-gradient-color-top;
 @button-warning-link-disabled-background-gradient-color-bottom:									@button-warning-link-background-gradient-color-bottom;
-@button-warning-link-disabled-border-radius:													@button-warning-link-border-radius;
 @button-warning-link-disabled-border-width:														@button-warning-link-border-width;
 @button-warning-link-disabled-border-color:														@button-warning-link-border-color;
 @button-warning-link-disabled-border-top-width:													@button-warning-link-border-top-width;
@@ -3048,7 +3070,6 @@ Button (Warning, Stroke) State: Normal
 @button-warning-stroke-background-color:														none;
 @button-warning-stroke-background-gradient-color-top:											none;
 @button-warning-stroke-background-gradient-color-bottom:										none;
-@button-warning-stroke-border-radius:															@button-warning-border-radius;
 @button-warning-stroke-border-width:															0px;
 @button-warning-stroke-border-color:															none;
 @button-warning-stroke-border-top-width:														@button-warning-stroke-border-width;
@@ -3078,7 +3099,6 @@ Button (Warning, Stroke) State: Hover
 @button-warning-stroke-hover-background-color:													none;
 @button-warning-stroke-hover-background-gradient-color-top:										none;
 @button-warning-stroke-hover-background-gradient-color-bottom:									none;
-@button-warning-stroke-hover-border-radius:														@button-warning-hover-border-radius;
 @button-warning-stroke-hover-border-width:														0px;
 @button-warning-stroke-hover-border-color:														none;
 @button-warning-stroke-hover-border-top-width:													@button-warning-stroke-hover-border-width;
@@ -3108,7 +3128,6 @@ Button (Warning, Stroke) State: Active
 @button-warning-stroke-active-background-color:													none;
 @button-warning-stroke-active-background-gradient-color-top:									none;
 @button-warning-stroke-active-background-gradient-color-bottom:									none;
-@button-warning-stroke-active-border-radius:													@button-warning-active-border-radius;
 @button-warning-stroke-active-border-width:														0px;
 @button-warning-stroke-active-border-color:														none;
 @button-warning-stroke-active-border-top-width:													@button-warning-stroke-active-border-width;
@@ -3139,7 +3158,6 @@ Button (Warning, Stroke) State: Disabled
 @button-warning-stroke-disabled-background-color:												@button-warning-stroke-background-color;
 @button-warning-stroke-disabled-background-gradient-color-top:									@button-warning-stroke-background-gradient-color-top;
 @button-warning-stroke-disabled-background-gradient-color-bottom:								@button-warning-stroke-background-gradient-color-bottom;
-@button-warning-stroke-disabled-border-radius:													@button-warning-stroke-border-radius;
 @button-warning-stroke-disabled-border-width:													@button-warning-stroke-border-width;
 @button-warning-stroke-disabled-border-color:													@button-warning-stroke-border-color;
 @button-warning-stroke-disabled-border-top-width:												@button-warning-stroke-border-top-width;
@@ -3186,7 +3204,6 @@ Button (Warning, Inverse) State: Normal
 @button-warning-inverse-background-color:														@button-warning-text-color;
 @button-warning-inverse-background-gradient-color-top:											none;
 @button-warning-inverse-background-gradient-color-bottom:										none;
-@button-warning-inverse-border-radius:															4px;
 @button-warning-inverse-border-width:															0px;
 @button-warning-inverse-border-color:															none;
 @button-warning-inverse-border-top-width:														@button-warning-inverse-border-width;
@@ -3216,7 +3233,6 @@ Button (Warning, Inverse) State: Hover
 @button-warning-inverse-hover-background-color:													@button-warning-hover-text-color;
 @button-warning-inverse-hover-background-gradient-color-top:									none;
 @button-warning-inverse-hover-background-gradient-color-bottom:									none;
-@button-warning-inverse-hover-border-radius:													4px;
 @button-warning-inverse-hover-border-width:														0px;
 @button-warning-inverse-hover-border-color:														none;
 @button-warning-inverse-hover-border-top-width:													@button-warning-inverse-hover-border-width;
@@ -3246,7 +3262,6 @@ Button (Warning, Inverse) State: Active
 @button-warning-inverse-active-background-color:												@button-warning-active-text-color;
 @button-warning-inverse-active-background-gradient-color-top:									none;
 @button-warning-inverse-active-background-gradient-color-bottom:								none;
-@button-warning-inverse-active-border-radius:													4px;
 @button-warning-inverse-active-border-width:													0px;
 @button-warning-inverse-active-border-color:													none;
 @button-warning-inverse-active-border-top-width:												@button-warning-inverse-active-border-width;
@@ -3277,7 +3292,6 @@ Button (Warning, Inverse) State: Disabled
 @button-warning-inverse-disabled-background-color:												@button-warning-inverse-background-color;
 @button-warning-inverse-disabled-background-gradient-color-top:									@button-warning-inverse-background-gradient-color-top;
 @button-warning-inverse-disabled-background-gradient-color-bottom:								@button-warning-inverse-background-gradient-color-bottom;
-@button-warning-inverse-disabled-border-radius:													@button-warning-inverse-border-radius;
 @button-warning-inverse-disabled-border-width:													@button-warning-inverse-border-width;
 @button-warning-inverse-disabled-border-color:													@button-warning-inverse-border-color;
 @button-warning-inverse-disabled-border-top-width:												@button-warning-inverse-border-top-width;
@@ -3324,7 +3338,6 @@ Button (Warning, Inverse, Link) State: Normal
 @button-warning-inverse-link-background-color:													none;
 @button-warning-inverse-link-background-gradient-color-top:										none;
 @button-warning-inverse-link-background-gradient-color-bottom:									none;
-@button-warning-inverse-link-border-radius:														@button-warning-inverse-border-radius;
 @button-warning-inverse-link-border-width:														@button-warning-inverse-border-width;
 @button-warning-inverse-link-border-color:														none;
 @button-warning-inverse-link-border-top-width:													@button-warning-inverse-link-border-width;
@@ -3354,7 +3367,6 @@ Button (Warning, Inverse, Link) State: Hover
 @button-warning-inverse-link-hover-background-color:											none;
 @button-warning-inverse-link-hover-background-gradient-color-top:								none;
 @button-warning-inverse-link-hover-background-gradient-color-bottom:							none;
-@button-warning-inverse-link-hover-border-radius:												@button-warning-inverse-hover-border-radius;
 @button-warning-inverse-link-hover-border-width:												@button-warning-inverse-hover-border-width;
 @button-warning-inverse-link-hover-border-color:												none;
 @button-warning-inverse-link-hover-border-top-width:											@button-warning-inverse-link-hover-border-width;
@@ -3384,7 +3396,6 @@ Button (Warning, Inverse, Link) State: Active
 @button-warning-inverse-link-active-background-color:											none;
 @button-warning-inverse-link-active-background-gradient-color-top:								none;
 @button-warning-inverse-link-active-background-gradient-color-bottom:							none;
-@button-warning-inverse-link-active-border-radius:												@button-warning-inverse-active-border-radius;
 @button-warning-inverse-link-active-border-width:												@button-warning-inverse-active-border-width;
 @button-warning-inverse-link-active-border-color:												none;
 @button-warning-inverse-link-active-border-top-width:											@button-warning-inverse-link-active-border-width;
@@ -3415,7 +3426,6 @@ Button (Warning, Inverse, Link) State: Disabled
 @button-warning-inverse-link-disabled-background-color:											@button-warning-inverse-link-background-color;
 @button-warning-inverse-link-disabled-background-gradient-color-top:							@button-warning-inverse-link-background-gradient-color-top;
 @button-warning-inverse-link-disabled-background-gradient-color-bottom:							@button-warning-inverse-link-background-gradient-color-bottom;
-@button-warning-inverse-link-disabled-border-radius:											@button-warning-inverse-link-border-radius;
 @button-warning-inverse-link-disabled-border-width:												@button-warning-inverse-link-border-width;
 @button-warning-inverse-link-disabled-border-color:												@button-warning-inverse-link-border-color;
 @button-warning-inverse-link-disabled-border-top-width:											@button-warning-inverse-link-border-top-width;
@@ -3462,7 +3472,6 @@ Button (Warning, Inverse, Stroke) State: Normal
 @button-warning-inverse-stroke-background-color:												none;
 @button-warning-inverse-stroke-background-gradient-color-top:									none;
 @button-warning-inverse-stroke-background-gradient-color-bottom:								none;
-@button-warning-inverse-stroke-border-radius:													@button-warning-inverse-border-radius;
 @button-warning-inverse-stroke-border-width:													0px;
 @button-warning-inverse-stroke-border-color:													none;
 @button-warning-inverse-stroke-border-top-width:												@button-warning-inverse-stroke-border-width;
@@ -3492,7 +3501,6 @@ Button (Warning, Inverse, Stroke) State: Hover
 @button-warning-inverse-stroke-hover-background-color:											none;
 @button-warning-inverse-stroke-hover-background-gradient-color-top:								none;
 @button-warning-inverse-stroke-hover-background-gradient-color-bottom:							none;
-@button-warning-inverse-stroke-hover-border-radius:												@button-warning-inverse-hover-border-radius;
 @button-warning-inverse-stroke-hover-border-width:												0px;
 @button-warning-inverse-stroke-hover-border-color:												none;
 @button-warning-inverse-stroke-hover-border-top-width:											@button-warning-inverse-stroke-hover-border-width;
@@ -3522,7 +3530,6 @@ Button (Warning, Inverse, Stroke) State: Active
 @button-warning-inverse-stroke-active-background-color:											none;
 @button-warning-inverse-stroke-active-background-gradient-color-top:							none;
 @button-warning-inverse-stroke-active-background-gradient-color-bottom:							none;
-@button-warning-inverse-stroke-active-border-radius:											@button-warning-inverse-active-border-radius;
 @button-warning-inverse-stroke-active-border-width:												0px;
 @button-warning-inverse-stroke-active-border-color:												none;
 @button-warning-inverse-stroke-active-border-top-width:											@button-warning-inverse-stroke-active-border-width;
@@ -3553,7 +3560,6 @@ Button (Warning, Inverse, Stroke) State: Disabled
 @button-warning-inverse-stroke-disabled-background-color:										@button-warning-inverse-stroke-background-color;
 @button-warning-inverse-stroke-disabled-background-gradient-color-top:							@button-warning-inverse-stroke-background-gradient-color-top;
 @button-warning-inverse-stroke-disabled-background-gradient-color-bottom:						@button-warning-inverse-stroke-background-gradient-color-bottom;
-@button-warning-inverse-stroke-disabled-border-radius:											@button-warning-inverse-stroke-border-radius;
 @button-warning-inverse-stroke-disabled-border-width:											@button-warning-inverse-stroke-border-width;
 @button-warning-inverse-stroke-disabled-border-color:											@button-warning-inverse-stroke-border-color;
 @button-warning-inverse-stroke-disabled-border-top-width:										@button-warning-inverse-stroke-border-top-width;
@@ -3600,7 +3606,6 @@ Button (Danger) State: Normal
 @button-danger-background-color:																~`color_lightness("@{red}", 0)`;
 @button-danger-background-gradient-color-top:													none;
 @button-danger-background-gradient-color-bottom:												none;
-@button-danger-border-radius:																	4px;
 @button-danger-border-width:																	0px;
 @button-danger-border-color:																	none;
 @button-danger-border-top-width:																@button-danger-border-width;
@@ -3630,7 +3635,6 @@ Button (Danger) State: Hover
 @button-danger-hover-background-color:															~`color_lightness("@{red}", -10)`;
 @button-danger-hover-background-gradient-color-top:												none;
 @button-danger-hover-background-gradient-color-bottom:											none;
-@button-danger-hover-border-radius:																4px;
 @button-danger-hover-border-width:																0px;
 @button-danger-hover-border-color:																none;
 @button-danger-hover-border-top-width:															@button-danger-hover-border-width;
@@ -3660,7 +3664,6 @@ Button (Danger) State: Active
 @button-danger-active-background-color:															~`color_lightness("@{red}", -20)`;
 @button-danger-active-background-gradient-color-top:											none;
 @button-danger-active-background-gradient-color-bottom:											none;
-@button-danger-active-border-radius:															4px;
 @button-danger-active-border-width:																0px;
 @button-danger-active-border-color:																none;
 @button-danger-active-border-top-width:															@button-danger-active-border-width;
@@ -3691,7 +3694,6 @@ Button (Danger) State: disabled
 @button-danger-disabled-background-color:														@button-danger-background-color;
 @button-danger-disabled-background-gradient-color-top:											@button-danger-background-gradient-color-top;
 @button-danger-disabled-background-gradient-color-bottom:										@button-danger-background-gradient-color-bottom;
-@button-danger-disabled-border-radius:															@button-danger-border-radius;
 @button-danger-disabled-border-width:															@button-danger-border-width;
 @button-danger-disabled-border-color:															@button-danger-border-color;
 @button-danger-disabled-border-top-width:														@button-danger-border-top-width;
@@ -3738,7 +3740,6 @@ Button (Danger, Link) State: Normal
 @button-danger-link-background-color:															none;
 @button-danger-link-background-gradient-color-top:												none;
 @button-danger-link-background-gradient-color-bottom:											none;
-@button-danger-link-border-radius:																@button-danger-border-radius;
 @button-danger-link-border-width:																@button-danger-border-width;
 @button-danger-link-border-color:																none;
 @button-danger-link-border-top-width:															@button-danger-link-border-width;
@@ -3768,7 +3769,6 @@ Button (Danger, Link) State: Hover
 @button-danger-link-hover-background-color:														none;
 @button-danger-link-hover-background-gradient-color-top:										none;
 @button-danger-link-hover-background-gradient-color-bottom:										none;
-@button-danger-link-hover-border-radius:														@button-danger-hover-border-radius;
 @button-danger-link-hover-border-width:															@button-danger-hover-border-width;
 @button-danger-link-hover-border-color:															none;
 @button-danger-link-hover-border-top-width:														@button-danger-link-hover-border-width;
@@ -3798,7 +3798,6 @@ Button (Danger, Link) State: Active
 @button-danger-link-active-background-color:													none;
 @button-danger-link-active-background-gradient-color-top:										none;
 @button-danger-link-active-background-gradient-color-bottom:									none;
-@button-danger-link-active-border-radius:														@button-danger-active-border-radius;
 @button-danger-link-active-border-width:														@button-danger-active-border-width;
 @button-danger-link-active-border-color:														none;
 @button-danger-link-active-border-top-width:													@button-danger-link-active-border-width;
@@ -3829,7 +3828,6 @@ Button (Danger, Link) State: Disabled
 @button-danger-link-disabled-background-color:													@button-danger-link-background-color;
 @button-danger-link-disabled-background-gradient-color-top:										@button-danger-link-background-gradient-color-top;
 @button-danger-link-disabled-background-gradient-color-bottom:									@button-danger-link-background-gradient-color-bottom;
-@button-danger-link-disabled-border-radius:														@button-danger-link-border-radius;
 @button-danger-link-disabled-border-width:														@button-danger-link-border-width;
 @button-danger-link-disabled-border-color:														@button-danger-link-border-color;
 @button-danger-link-disabled-border-top-width:													@button-danger-link-border-top-width;
@@ -3876,7 +3874,6 @@ Button (Danger, Stroke) State: Normal
 @button-danger-stroke-background-color:															none;
 @button-danger-stroke-background-gradient-color-top:											none;
 @button-danger-stroke-background-gradient-color-bottom:											none;
-@button-danger-stroke-border-radius:															@button-danger-border-radius;
 @button-danger-stroke-border-width:																0px;
 @button-danger-stroke-border-color:																none;
 @button-danger-stroke-border-top-width:															@button-danger-stroke-border-width;
@@ -3906,7 +3903,6 @@ Button (Danger, Stroke) State: Hover
 @button-danger-stroke-hover-background-color:													none;
 @button-danger-stroke-hover-background-gradient-color-top:										none;
 @button-danger-stroke-hover-background-gradient-color-bottom:									none;
-@button-danger-stroke-hover-border-radius:														@button-danger-hover-border-radius;
 @button-danger-stroke-hover-border-width:														0px;
 @button-danger-stroke-hover-border-color:														none;
 @button-danger-stroke-hover-border-top-width:													@button-danger-stroke-hover-border-width;
@@ -3936,7 +3932,6 @@ Button (Danger, Stroke) State: Active
 @button-danger-stroke-active-background-color:													none;
 @button-danger-stroke-active-background-gradient-color-top:										none;
 @button-danger-stroke-active-background-gradient-color-bottom:									none;
-@button-danger-stroke-active-border-radius:														@button-danger-active-border-radius;
 @button-danger-stroke-active-border-width:														0px;
 @button-danger-stroke-active-border-color:														none;
 @button-danger-stroke-active-border-top-width:													@button-danger-stroke-active-border-width;
@@ -3967,7 +3962,6 @@ Button (Danger, Stroke) State: Disabled
 @button-danger-stroke-disabled-background-color:												@button-danger-stroke-background-color;
 @button-danger-stroke-disabled-background-gradient-color-top:									@button-danger-stroke-background-gradient-color-top;
 @button-danger-stroke-disabled-background-gradient-color-bottom:								@button-danger-stroke-background-gradient-color-bottom;
-@button-danger-stroke-disabled-border-radius:													@button-danger-stroke-border-radius;
 @button-danger-stroke-disabled-border-width:													@button-danger-stroke-border-width;
 @button-danger-stroke-disabled-border-color:													@button-danger-stroke-border-color;
 @button-danger-stroke-disabled-border-top-width:												@button-danger-stroke-border-top-width;
@@ -4014,7 +4008,6 @@ Button (Danger, Inverse) State: Normal
 @button-danger-inverse-background-color:														@button-danger-text-color;
 @button-danger-inverse-background-gradient-color-top:											none;
 @button-danger-inverse-background-gradient-color-bottom:										none;
-@button-danger-inverse-border-radius:															4px;
 @button-danger-inverse-border-width:															0px;
 @button-danger-inverse-border-color:															none;
 @button-danger-inverse-border-top-width:														@button-danger-inverse-border-width;
@@ -4044,7 +4037,6 @@ Button (Danger, Inverse) State: Hover
 @button-danger-inverse-hover-background-color:													@button-danger-hover-text-color;
 @button-danger-inverse-hover-background-gradient-color-top:										none;
 @button-danger-inverse-hover-background-gradient-color-bottom:									none;
-@button-danger-inverse-hover-border-radius:														4px;
 @button-danger-inverse-hover-border-width:														0px;
 @button-danger-inverse-hover-border-color:														none;
 @button-danger-inverse-hover-border-top-width:													@button-danger-inverse-hover-border-width;
@@ -4074,7 +4066,6 @@ Button (Danger, Inverse) State: Active
 @button-danger-inverse-active-background-color:													@button-danger-active-text-color;
 @button-danger-inverse-active-background-gradient-color-top:									none;
 @button-danger-inverse-active-background-gradient-color-bottom:									none;
-@button-danger-inverse-active-border-radius:													4px;
 @button-danger-inverse-active-border-width:														0px;
 @button-danger-inverse-active-border-color:														none;
 @button-danger-inverse-active-border-top-width:													@button-danger-inverse-active-border-width;
@@ -4105,7 +4096,6 @@ Button (Danger, Inverse) State: Disabled
 @button-danger-inverse-disabled-background-color:												@button-danger-inverse-background-color;
 @button-danger-inverse-disabled-background-gradient-color-top:									@button-danger-inverse-background-gradient-color-top;
 @button-danger-inverse-disabled-background-gradient-color-bottom:								@button-danger-inverse-background-gradient-color-bottom;
-@button-danger-inverse-disabled-border-radius:													@button-danger-inverse-border-radius;
 @button-danger-inverse-disabled-border-width:													@button-danger-inverse-border-width;
 @button-danger-inverse-disabled-border-color:													@button-danger-inverse-border-color;
 @button-danger-inverse-disabled-border-top-width:												@button-danger-inverse-border-top-width;
@@ -4152,7 +4142,6 @@ Button (Danger, Inverse, Link) State: Normal
 @button-danger-inverse-link-background-color:													none;
 @button-danger-inverse-link-background-gradient-color-top:										none;
 @button-danger-inverse-link-background-gradient-color-bottom:									none;
-@button-danger-inverse-link-border-radius:														@button-danger-inverse-border-radius;
 @button-danger-inverse-link-border-width:														@button-danger-inverse-border-width;
 @button-danger-inverse-link-border-color:														none;
 @button-danger-inverse-link-border-top-width:													@button-danger-inverse-link-border-width;
@@ -4182,7 +4171,6 @@ Button (Danger, Inverse, Link) State: Hover
 @button-danger-inverse-link-hover-background-color:												none;
 @button-danger-inverse-link-hover-background-gradient-color-top:								none;
 @button-danger-inverse-link-hover-background-gradient-color-bottom:								none;
-@button-danger-inverse-link-hover-border-radius:												@button-danger-inverse-hover-border-radius;
 @button-danger-inverse-link-hover-border-width:													@button-danger-inverse-hover-border-width;
 @button-danger-inverse-link-hover-border-color:													none;
 @button-danger-inverse-link-hover-border-top-width:												@button-danger-inverse-link-hover-border-width;
@@ -4212,7 +4200,6 @@ Button (Danger, Inverse, Link) State: Active
 @button-danger-inverse-link-active-background-color:											none;
 @button-danger-inverse-link-active-background-gradient-color-top:								none;
 @button-danger-inverse-link-active-background-gradient-color-bottom:							none;
-@button-danger-inverse-link-active-border-radius:												@button-danger-inverse-active-border-radius;
 @button-danger-inverse-link-active-border-width:												@button-danger-inverse-active-border-width;
 @button-danger-inverse-link-active-border-color:												none;
 @button-danger-inverse-link-active-border-top-width:											@button-danger-inverse-link-active-border-width;
@@ -4243,7 +4230,6 @@ Button (Danger, Inverse, Link) State: Disabled
 @button-danger-inverse-link-disabled-background-color:											@button-danger-inverse-link-background-color;
 @button-danger-inverse-link-disabled-background-gradient-color-top:								@button-danger-inverse-link-background-gradient-color-top;
 @button-danger-inverse-link-disabled-background-gradient-color-bottom:							@button-danger-inverse-link-background-gradient-color-bottom;
-@button-danger-inverse-link-disabled-border-radius:												@button-danger-inverse-link-border-radius;
 @button-danger-inverse-link-disabled-border-width:												@button-danger-inverse-link-border-width;
 @button-danger-inverse-link-disabled-border-color:												@button-danger-inverse-link-border-color;
 @button-danger-inverse-link-disabled-border-top-width:											@button-danger-inverse-link-border-top-width;
@@ -4290,7 +4276,6 @@ Button (Danger, Inverse, Stroke) State: Normal
 @button-danger-inverse-stroke-background-color:													none;
 @button-danger-inverse-stroke-background-gradient-color-top:									none;
 @button-danger-inverse-stroke-background-gradient-color-bottom:									none;
-@button-danger-inverse-stroke-border-radius:													@button-danger-inverse-border-radius;
 @button-danger-inverse-stroke-border-width:														0px;
 @button-danger-inverse-stroke-border-color:														none;
 @button-danger-inverse-stroke-border-top-width:													@button-danger-inverse-stroke-border-width;
@@ -4320,7 +4305,6 @@ Button (Danger, Inverse, Stroke) State: Hover
 @button-danger-inverse-stroke-hover-background-color:											none;
 @button-danger-inverse-stroke-hover-background-gradient-color-top:								none;
 @button-danger-inverse-stroke-hover-background-gradient-color-bottom:							none;
-@button-danger-inverse-stroke-hover-border-radius:												@button-danger-inverse-hover-border-radius;
 @button-danger-inverse-stroke-hover-border-width:												0px;
 @button-danger-inverse-stroke-hover-border-color:												none;
 @button-danger-inverse-stroke-hover-border-top-width:											@button-danger-inverse-stroke-hover-border-width;
@@ -4350,7 +4334,6 @@ Button (Danger, Inverse, Stroke) State: Active
 @button-danger-inverse-stroke-active-background-color:											none;
 @button-danger-inverse-stroke-active-background-gradient-color-top:								none;
 @button-danger-inverse-stroke-active-background-gradient-color-bottom:							none;
-@button-danger-inverse-stroke-active-border-radius:												@button-danger-inverse-active-border-radius;
 @button-danger-inverse-stroke-active-border-width:												0px;
 @button-danger-inverse-stroke-active-border-color:												none;
 @button-danger-inverse-stroke-active-border-top-width:											@button-danger-inverse-stroke-active-border-width;
@@ -4381,7 +4364,6 @@ Button (Danger, Inverse, Stroke) State: Disabled
 @button-danger-inverse-stroke-disabled-background-color:										@button-danger-inverse-stroke-background-color;
 @button-danger-inverse-stroke-disabled-background-gradient-color-top:							@button-danger-inverse-stroke-background-gradient-color-top;
 @button-danger-inverse-stroke-disabled-background-gradient-color-bottom:						@button-danger-inverse-stroke-background-gradient-color-bottom;
-@button-danger-inverse-stroke-disabled-border-radius:											@button-danger-inverse-stroke-border-radius;
 @button-danger-inverse-stroke-disabled-border-width:											@button-danger-inverse-stroke-border-width;
 @button-danger-inverse-stroke-disabled-border-color:											@button-danger-inverse-stroke-border-color;
 @button-danger-inverse-stroke-disabled-border-top-width:										@button-danger-inverse-stroke-border-top-width;
@@ -4393,31 +4375,6 @@ Button (Danger, Inverse, Stroke) State: Disabled
 @button-danger-inverse-stroke-disabled-border-left-width:										@button-danger-inverse-stroke-border-left-width;
 @button-danger-inverse-stroke-disabled-border-left-color:										@button-danger-inverse-stroke-border-left-color;
 @button-danger-inverse-stroke-disabled-shadow:													@button-danger-inverse-stroke-shadow;
-
-
-
-
-
-
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-
-Button Collection
-
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-Button Collection Spacing
----------------------------------------------------------------------------------------------------- */
-
-@button-collection-spacing:																		@base-spacing-unit * 0.25;
-@button-collection-spacing-screen-mini:															@base-spacing-unit-screen-mini * 0.25;
-@button-collection-spacing-screen-small:														@base-spacing-unit-screen-small * 0.25;
-@button-collection-spacing-screen-medium:														@base-spacing-unit-screen-medium * 0.25;
-@button-collection-spacing-screen-large:														@base-spacing-unit-screen-large * 0.25;
 
 
 
