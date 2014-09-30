@@ -483,14 +483,9 @@ fieldset {
 		.box-sizing(border-box);
 		.appearance(none);
 		position: relative;
-		font-size: @form-control-text-font-size;
-		line-height: @form-control-text-line-height;
-		.box-sizing-padding-vertical (@form-control-height, @form-control-text-line-height);
-		padding-left: @form-control-padding-horizontal;
-		padding-right: @form-control-padding-horizontal;
 		border-style: solid;
-		.border-radius(@form-control-border-radius);
-			
+		.form-control-size('', '');
+		
 	}
 	
 	
@@ -514,12 +509,7 @@ fieldset {
 			Form Control (Mini) Styles
 			---------------------------------------------------------------------------------------------------- */
 			
-			font-size: @form-control-mini-text-font-size;
-			line-height: @form-control-mini-text-line-height;
-			.box-sizing-padding-vertical(@form-control-mini-height, @form-control-mini-text-line-height);
-			padding-left: @form-control-mini-padding-horizontal;
-			padding-right: @form-control-mini-padding-horizontal;
-			.border-radius(@form-control-mini-border-radius);
+			.form-control-size('mini', '');
 			
 		}
 		
@@ -546,12 +536,7 @@ fieldset {
 			Form Control (small) Styles
 			---------------------------------------------------------------------------------------------------- */
 			
-			font-size: @form-control-small-text-font-size;
-			line-height: @form-control-small-text-line-height;
-			.box-sizing-padding-vertical(@form-control-small-height, @form-control-small-text-line-height);
-			padding-left: @form-control-small-padding-horizontal;
-			padding-right: @form-control-small-padding-horizontal;
-			.border-radius(@form-control-small-border-radius);
+			.form-control-size('small', '');
 			
 		}
 		
@@ -578,12 +563,7 @@ fieldset {
 			Form Control (Large) Styles
 			---------------------------------------------------------------------------------------------------- */
 			
-			font-size: @form-control-large-text-font-size;
-			line-height: @form-control-large-text-line-height;
-			.box-sizing-padding-vertical(@form-control-large-height, @form-control-large-text-line-height);
-			padding-left: @form-control-large-padding-horizontal;
-			padding-right: @form-control-large-padding-horizontal;
-			.border-radius(@form-control-large-border-radius);
+			.form-control-size('large', '');
 			
 		}
 		
@@ -610,12 +590,7 @@ fieldset {
 			Form Control (Jumbo) Styles
 			---------------------------------------------------------------------------------------------------- */
 			
-			font-size: @form-control-jumbo-text-font-size;
-			line-height: @form-control-jumbo-text-line-height;
-			.box-sizing-padding-vertical(@form-control-jumbo-height, @form-control-jumbo-text-line-height);
-			padding-left: @form-control-jumbo-padding-horizontal;
-			padding-right: @form-control-jumbo-padding-horizontal;
-			.border-radius(@form-control-jumbo-border-radius);
+			.form-control-size('jumbo', '');
 			
 		}
 		
@@ -640,25 +615,7 @@ fieldset {
 		Form Control (Default) State: Normal
 		---------------------------------------------------------------------------------------------------- */
 		
-		color: @form-control-default-text-color;
-		font-family: @form-control-default-text-font-family;
-		font-style: @form-control-default-text-font-style;
-		font-weight: @form-control-default-text-font-weight;
-		text-transform: @form-control-default-text-transform;
-		text-shadow: @form-control-default-text-shadow;
-		text-rendering: @form-control-default-text-rendering;
-		background: @form-control-default-background-color;
-		#gradient > .vertical(@form-control-default-background-gradient-color-top, @form-control-default-background-gradient-color-bottom);
-		border-top-width: @form-control-default-border-top-width;
-		border-top-color: @form-control-default-border-top-color;
-		border-right-width: @form-control-default-border-right-width;
-		border-right-color: @form-control-default-border-right-color;
-		border-bottom-width: @form-control-default-border-bottom-width;
-		border-bottom-color: @form-control-default-border-bottom-color;
-		border-left-width: @form-control-default-border-left-width;
-		border-left-color: @form-control-default-border-left-color;
-		.box-shadow(@form-control-default-shadow);
-		.placeholder(@form-control-default-placeholder-text-color);
+		.form-control-variant('default');
 		
 		
 		
@@ -680,25 +637,7 @@ fieldset {
 		
 		&:hover {
 			
-			color: @form-control-default-hover-text-color;
-			font-family: @form-control-default-hover-text-font-family;
-			font-style: @form-control-default-hover-text-font-style;
-			font-weight: @form-control-default-hover-text-font-weight;
-			text-transform: @form-control-default-hover-text-transform;
-			text-shadow: @form-control-default-hover-text-shadow;
-			text-rendering: @form-control-default-hover-text-rendering;
-			background: @form-control-default-hover-background-color;
-			#gradient > .vertical(@form-control-default-hover-background-gradient-color-top, @form-control-default-hover-background-gradient-color-bottom);
-			border-top-width: @form-control-default-hover-border-top-width;
-			border-top-color: @form-control-default-hover-border-top-color;
-			border-right-width: @form-control-default-hover-border-right-width;
-			border-right-color: @form-control-default-hover-border-right-color;
-			border-bottom-width: @form-control-default-hover-border-bottom-width;
-			border-bottom-color: @form-control-default-hover-border-bottom-color;
-			border-left-width: @form-control-default-hover-border-left-width;
-			border-left-color: @form-control-default-hover-border-left-color;
-			.box-shadow(@form-control-default-hover-shadow);
-			.placeholder(@form-control-default-hover-placeholder-text-color);
+			.form-control-variant('default-hover');
 			
 		}
 		
@@ -711,25 +650,7 @@ fieldset {
 		&:focus {
 			
 			outline: 0;
-			color: @form-control-default-focus-text-color;
-			font-family: @form-control-default-focus-text-font-family;
-			font-style: @form-control-default-focus-text-font-style;
-			font-weight: @form-control-default-focus-text-font-weight;
-			text-transform: @form-control-default-focus-text-transform;
-			text-shadow: @form-control-default-focus-text-shadow;
-			text-rendering: @form-control-default-focus-text-rendering;
-			background: @form-control-default-focus-background-color;
-			#gradient > .vertical(@form-control-default-focus-background-gradient-color-top, @form-control-default-focus-background-gradient-color-bottom);
-			border-top-width: @form-control-default-focus-border-top-width;
-			border-top-color: @form-control-default-focus-border-top-color;
-			border-right-width: @form-control-default-focus-border-right-width;
-			border-right-color: @form-control-default-focus-border-right-color;
-			border-bottom-width: @form-control-default-focus-border-bottom-width;
-			border-bottom-color: @form-control-default-focus-border-bottom-color;
-			border-left-width: @form-control-default-focus-border-left-width;
-			border-left-color: @form-control-default-focus-border-left-color;
-			.box-shadow(@form-control-default-focus-shadow);
-			.placeholder(@form-control-default-focus-placeholder-text-color);
+			.form-control-variant('default-focus');
 			
 		}
 		
@@ -746,25 +667,7 @@ fieldset {
 			cursor: default !important;
 			pointer-events: none;
 			.opacity(@form-control-default-disabled-opacity);
-			color: @form-control-default-disabled-text-color;
-			font-family: @form-control-default-disabled-text-font-family;
-			font-style: @form-control-default-disabled-text-font-style;
-			font-weight: @form-control-default-disabled-text-font-weight;
-			text-transform: @form-control-default-disabled-text-transform;
-			text-shadow: @form-control-default-disabled-text-shadow;
-			text-rendering: @form-control-default-disabled-text-rendering;
-			background: @form-control-default-disabled-background-color;
-			#gradient > .vertical(@form-control-default-disabled-background-gradient-color-top, @form-control-default-disabled-background-gradient-color-bottom);
-			border-top-width: @form-control-default-disabled-border-top-width;
-			border-top-color: @form-control-default-disabled-border-top-color;
-			border-right-width: @form-control-default-disabled-border-right-width;
-			border-right-color: @form-control-default-disabled-border-right-color;
-			border-bottom-width: @form-control-default-disabled-border-bottom-width;
-			border-bottom-color: @form-control-default-disabled-border-bottom-color;
-			border-left-width: @form-control-default-disabled-border-left-width;
-			border-left-color: @form-control-default-disabled-border-left-color;
-			.box-shadow(@form-control-default-disabled-shadow);
-			.placeholder(@form-control-default-disabled-placeholder-text-color);
+			.form-control-variant('default-disabled');
 			
 		}
 		
@@ -790,25 +693,7 @@ fieldset {
 				Form Control (Default, Inverse) State: Normal
 				---------------------------------------------------------------------------------------------------- */
 				
-				color: @form-control-default-inverse-text-color;
-				font-family: @form-control-default-inverse-text-font-family;
-				font-style: @form-control-default-inverse-text-font-style;
-				font-weight: @form-control-default-inverse-text-font-weight;
-				text-transform: @form-control-default-inverse-text-transform;
-				text-shadow: @form-control-default-inverse-text-shadow;
-				text-rendering: @form-control-default-inverse-text-rendering;
-				background: @form-control-default-inverse-background-color;
-				#gradient > .vertical(@form-control-default-inverse-background-gradient-color-top, @form-control-default-inverse-background-gradient-color-bottom);
-				border-top-width: @form-control-default-inverse-border-top-width;
-				border-top-color: @form-control-default-inverse-border-top-color;
-				border-right-width: @form-control-default-inverse-border-right-width;
-				border-right-color: @form-control-default-inverse-border-right-color;
-				border-bottom-width: @form-control-default-inverse-border-bottom-width;
-				border-bottom-color: @form-control-default-inverse-border-bottom-color;
-				border-left-width: @form-control-default-inverse-border-left-width;
-				border-left-color: @form-control-default-inverse-border-left-color;
-				.box-shadow(@form-control-default-inverse-shadow);
-				.placeholder(@form-control-default-inverse-placeholder-text-color);
+				.form-control-variant('default-inverse');
 				
 				
 				
@@ -818,25 +703,7 @@ fieldset {
 				
 				&:hover {
 					
-					color: @form-control-default-inverse-hover-text-color;
-					font-family: @form-control-default-inverse-hover-text-font-family;
-					font-style: @form-control-default-inverse-hover-text-font-style;
-					font-weight: @form-control-default-inverse-hover-text-font-weight;
-					text-transform: @form-control-default-inverse-hover-text-transform;
-					text-shadow: @form-control-default-inverse-hover-text-shadow;
-					text-rendering: @form-control-default-inverse-hover-text-rendering;
-					background: @form-control-default-inverse-hover-background-color;
-					#gradient > .vertical(@form-control-default-inverse-hover-background-gradient-color-top, @form-control-default-inverse-hover-background-gradient-color-bottom);
-					border-top-width: @form-control-default-inverse-hover-border-top-width;
-					border-top-color: @form-control-default-inverse-hover-border-top-color;
-					border-right-width: @form-control-default-inverse-hover-border-right-width;
-					border-right-color: @form-control-default-inverse-hover-border-right-color;
-					border-bottom-width: @form-control-default-inverse-hover-border-bottom-width;
-					border-bottom-color: @form-control-default-inverse-hover-border-bottom-color;
-					border-left-width: @form-control-default-inverse-hover-border-left-width;
-					border-left-color: @form-control-default-inverse-hover-border-left-color;
-					.box-shadow(@form-control-default-inverse-hover-shadow);
-					.placeholder(@form-control-default-inverse-hover-placeholder-text-color);
+					.form-control-variant('default-inverse-hover');
 					
 				}
 				
@@ -848,25 +715,7 @@ fieldset {
 				
 				&:focus {
 					
-					color: @form-control-default-inverse-focus-text-color;
-					font-family: @form-control-default-inverse-focus-text-font-family;
-					font-style: @form-control-default-inverse-focus-text-font-style;
-					font-weight: @form-control-default-inverse-focus-text-font-weight;
-					text-transform: @form-control-default-inverse-focus-text-transform;
-					text-shadow: @form-control-default-inverse-focus-text-shadow;
-					text-rendering: @form-control-default-inverse-focus-text-rendering;
-					background: @form-control-default-inverse-focus-background-color;
-					#gradient > .vertical(@form-control-default-inverse-focus-background-gradient-color-top, @form-control-default-inverse-focus-background-gradient-color-bottom);
-					border-top-width: @form-control-default-inverse-focus-border-top-width;
-					border-top-color: @form-control-default-inverse-focus-border-top-color;
-					border-right-width: @form-control-default-inverse-focus-border-right-width;
-					border-right-color: @form-control-default-inverse-focus-border-right-color;
-					border-bottom-width: @form-control-default-inverse-focus-border-bottom-width;
-					border-bottom-color: @form-control-default-inverse-focus-border-bottom-color;
-					border-left-width: @form-control-default-inverse-focus-border-left-width;
-					border-left-color: @form-control-default-inverse-focus-border-left-color;
-					.box-shadow(@form-control-default-inverse-focus-shadow);
-					.placeholder(@form-control-default-inverse-focus-placeholder-text-color);
+					.form-control-variant('default-inverse-focus');
 					
 				}
 				
@@ -880,25 +729,289 @@ fieldset {
 				&[disabled] {
 					
 					.opacity(@form-control-default-inverse-disabled-opacity);
-					color: @form-control-default-inverse-disabled-text-color;
-					font-family: @form-control-default-inverse-disabled-text-font-family;
-					font-style: @form-control-default-inverse-disabled-text-font-style;
-					font-weight: @form-control-default-inverse-disabled-text-font-weight;
-					text-transform: @form-control-default-inverse-disabled-text-transform;
-					text-shadow: @form-control-default-inverse-disabled-text-shadow;
-					text-rendering: @form-control-default-inverse-disabled-text-rendering;
-					background: @form-control-default-inverse-disabled-background-color;
-					#gradient > .vertical(@form-control-default-inverse-disabled-background-gradient-color-top, @form-control-default-inverse-disabled-background-gradient-color-bottom);
-					border-top-width: @form-control-default-inverse-disabled-border-top-width;
-					border-top-color: @form-control-default-inverse-disabled-border-top-color;
-					border-right-width: @form-control-default-inverse-disabled-border-right-width;
-					border-right-color: @form-control-default-inverse-disabled-border-right-color;
-					border-bottom-width: @form-control-default-inverse-disabled-border-bottom-width;
-					border-bottom-color: @form-control-default-inverse-disabled-border-bottom-color;
-					border-left-width: @form-control-default-inverse-disabled-border-left-width;
-					border-left-color: @form-control-default-inverse-disabled-border-left-color;
-					.box-shadow(@form-control-default-inverse-disabled-shadow);
-					.placeholder(@form-control-default-inverse-disabled-placeholder-text-color);
+					.form-control-variant('default-inverse-disabled');
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	
+	
+	
+	/* ----------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------
+	
+	Form Control (Success)
+	
+	-------------------------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------- */
+	
+	.form-control.form-control-success {
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Normal
+		---------------------------------------------------------------------------------------------------- */
+		
+		.form-control-variant('success');
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Focus
+		---------------------------------------------------------------------------------------------------- */
+		
+		&:focus {
+			
+			outline: none;
+			
+		}
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Hover
+		---------------------------------------------------------------------------------------------------- */
+		
+		&:hover {
+			
+			.form-control-variant('success-hover');
+			
+		}
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Focus
+		---------------------------------------------------------------------------------------------------- */
+		
+		&:focus {
+			
+			outline: 0;
+			.form-control-variant('success-focus');
+			
+		}
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Disabled
+		---------------------------------------------------------------------------------------------------- */
+		
+		&.disabled,
+		&[disabled] {
+			
+			outline: 0;
+			cursor: success !important;
+			pointer-events: none;
+			.opacity(@form-control-success-disabled-opacity);
+			.form-control-variant('success-disabled');
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		& when (@form-control-success-inverse-enabled) {
+			
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
+			
+			Form Control (Success, Inverse)
+			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
+			
+			&.form-control-inverse {
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Form Control (Success, Inverse) State: Normal
+				---------------------------------------------------------------------------------------------------- */
+				
+				.form-control-variant('success-inverse');
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Form Control (Success, Inverse) State: Hover
+				---------------------------------------------------------------------------------------------------- */
+				
+				&:hover {
+					
+					.form-control-variant('success-inverse-hover');
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Form Control (Success, Inverse) State: Focus
+				---------------------------------------------------------------------------------------------------- */
+				
+				&:focus {
+					
+					.form-control-variant('success-inverse-focus');
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Form Control (Success, Inverse) State: Disabled
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.disabled,
+				&[disabled] {
+					
+					.opacity(@form-control-success-inverse-disabled-opacity);
+					.form-control-variant('success-inverse-disabled');
+					
+				}
+				
+			}
+			
+		}
+		
+	}
+	
+	
+	
+	
+	/* ----------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------
+	
+	Form Control (Error)
+	
+	-------------------------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------- */
+	
+	.form-control.form-control-error {
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Normal
+		---------------------------------------------------------------------------------------------------- */
+		
+		.form-control-variant('error');
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Focus
+		---------------------------------------------------------------------------------------------------- */
+		
+		&:focus {
+			
+			outline: none;
+			
+		}
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Hover
+		---------------------------------------------------------------------------------------------------- */
+		
+		&:hover {
+			
+			.form-control-variant('error-hover');
+			
+		}
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Focus
+		---------------------------------------------------------------------------------------------------- */
+		
+		&:focus {
+			
+			outline: 0;
+			.form-control-variant('error-focus');
+			
+		}
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Disabled
+		---------------------------------------------------------------------------------------------------- */
+		
+		&.disabled,
+		&[disabled] {
+			
+			outline: 0;
+			cursor: error !important;
+			pointer-events: none;
+			.opacity(@form-control-error-disabled-opacity);
+			.form-control-variant('error-disabled');
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		& when (@form-control-error-inverse-enabled) {
+			
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
+			
+			Form Control (Error, Inverse)
+			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
+			
+			&.form-control-inverse {
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Form Control (Error, Inverse) State: Normal
+				---------------------------------------------------------------------------------------------------- */
+				
+				.form-control-variant('error-inverse');
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Form Control (Error, Inverse) State: Hover
+				---------------------------------------------------------------------------------------------------- */
+				
+				&:hover {
+					
+					.form-control-variant('error-inverse-hover');
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Form Control (Error, Inverse) State: Focus
+				---------------------------------------------------------------------------------------------------- */
+				
+				&:focus {
+					
+					.form-control-variant('error-inverse-focus');
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Form Control (Error, Inverse) State: Disabled
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.disabled,
+				&[disabled] {
+					
+					.opacity(@form-control-error-inverse-disabled-opacity);
+					.form-control-variant('error-inverse-disabled');
 					
 				}
 				
@@ -1075,12 +1188,7 @@ fieldset {
 				Form Control Styles
 				---------------------------------------------------------------------------------------------------- */
 				
-				font-size: floor(@form-control-text-font-size * @form-control-text-font-size-scale-screen-mini);
-				line-height: floor(@form-control-text-line-height * @form-control-text-line-height-scale-screen-mini);
-				.box-sizing-padding-vertical(floor(@form-control-height * @form-control-height-scale-screen-mini), floor(@form-control-text-line-height * @form-control-text-line-height-scale-screen-mini));
-				padding-left: floor(@form-control-padding-horizontal * @form-control-padding-horizontal-scale-screen-mini);
-				padding-right: floor(@form-control-padding-horizontal * @form-control-padding-horizontal-scale-screen-mini);
-				.border-radius(@form-control-border-radius * @form-control-border-radius-scale-screen-mini);
+				.form-control-size('', 'screen-mini');
 				
 			}
 			
@@ -1105,12 +1213,7 @@ fieldset {
 					Form Control (Mini) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-mini-text-font-size * @form-control-mini-text-font-size-scale-screen-mini);
-					line-height: floor(@form-control-mini-text-line-height * @form-control-mini-text-line-height-scale-screen-mini);
-					.box-sizing-padding-vertical(floor(@form-control-mini-height * @form-control-mini-height-scale-screen-mini), floor(@form-control-mini-text-line-height * @form-control-mini-text-line-height-scale-screen-mini));
-					padding-left: floor(@form-control-mini-padding-horizontal * @form-control-mini-padding-horizontal-scale-screen-mini);
-					padding-right: floor(@form-control-mini-padding-horizontal * @form-control-mini-padding-horizontal-scale-screen-mini);
-					.border-radius(@form-control-mini-border-radius * @form-control-mini-border-radius-scale-screen-mini);
+					.form-control-size('mini', 'screen-mini');
 					
 				}
 				
@@ -1137,12 +1240,7 @@ fieldset {
 					Form Control (Small) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-small-text-font-size * @form-control-small-text-font-size-scale-screen-mini);
-					line-height: floor(@form-control-small-text-line-height * @form-control-small-text-line-height-scale-screen-mini);
-					.box-sizing-padding-vertical(floor(@form-control-small-height * @form-control-small-height-scale-screen-mini), floor(@form-control-small-text-line-height * @form-control-small-text-line-height-scale-screen-mini));
-					padding-left: floor(@form-control-small-padding-horizontal * @form-control-small-padding-horizontal-scale-screen-mini);
-					padding-right: floor(@form-control-small-padding-horizontal * @form-control-small-padding-horizontal-scale-screen-mini);
-					.border-radius(@form-control-small-border-radius * @form-control-small-border-radius-scale-screen-mini);
+					.form-control-size('small', 'screen-mini');
 					
 				}
 				
@@ -1169,12 +1267,7 @@ fieldset {
 					Form Control (Large) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-large-text-font-size * @form-control-large-text-font-size-scale-screen-mini);
-					line-height: floor(@form-control-large-text-line-height * @form-control-large-text-line-height-scale-screen-mini);
-					.box-sizing-padding-vertical(floor(@form-control-large-height * @form-control-large-height-scale-screen-mini), floor(@form-control-large-text-line-height * @form-control-large-text-line-height-scale-screen-mini));
-					padding-left: floor(@form-control-large-padding-horizontal * @form-control-large-padding-horizontal-scale-screen-mini);
-					padding-right: floor(@form-control-large-padding-horizontal * @form-control-large-padding-horizontal-scale-screen-mini);
-					.border-radius(@form-control-large-border-radius * @form-control-large-border-radius-scale-screen-mini);
+					.form-control-size('large', 'screen-mini');
 					
 				}
 				
@@ -1201,12 +1294,7 @@ fieldset {
 					Form Control (Jumbo) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-jumbo-text-font-size * @form-control-jumbo-text-font-size-scale-screen-mini);
-					line-height: floor(@form-control-jumbo-text-line-height * @form-control-jumbo-text-line-height-scale-screen-mini);
-					.box-sizing-padding-vertical(floor(@form-control-jumbo-height * @form-control-jumbo-height-scale-screen-mini), floor(@form-control-jumbo-text-line-height * @form-control-jumbo-text-line-height-scale-screen-mini));
-					padding-left: floor(@form-control-jumbo-padding-horizontal * @form-control-jumbo-padding-horizontal-scale-screen-mini);
-					padding-right: floor(@form-control-jumbo-padding-horizontal * @form-control-jumbo-padding-horizontal-scale-screen-mini);
-					.border-radius(@form-control-jumbo-border-radius * @form-control-jumbo-border-radius-scale-screen-mini);
+					.form-control-size('jumbo', 'screen-mini');
 					
 				}
 				
@@ -1384,12 +1472,7 @@ fieldset {
 				Form Control Styles
 				---------------------------------------------------------------------------------------------------- */
 				
-				font-size: floor(@form-control-text-font-size * @form-control-text-font-size-scale-screen-small);
-				line-height: floor(@form-control-text-line-height * @form-control-text-line-height-scale-screen-small);
-				.box-sizing-padding-vertical(floor(@form-control-height * @form-control-height-scale-screen-small), floor(@form-control-text-line-height * @form-control-text-line-height-scale-screen-small));
-				padding-left: floor(@form-control-padding-horizontal * @form-control-padding-horizontal-scale-screen-small);
-				padding-right: floor(@form-control-padding-horizontal * @form-control-padding-horizontal-scale-screen-small);
-				.border-radius(@form-control-border-radius * @form-control-border-radius-scale-screen-small);
+				.form-control-size('', 'screen-small');
 				
 			}
 			
@@ -1414,12 +1497,7 @@ fieldset {
 					Form Control (Mini) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-mini-text-font-size * @form-control-mini-text-font-size-scale-screen-small);
-					line-height: floor(@form-control-mini-text-line-height * @form-control-mini-text-line-height-scale-screen-small);
-					.box-sizing-padding-vertical(floor(@form-control-mini-height * @form-control-mini-height-scale-screen-small), floor(@form-control-mini-text-line-height * @form-control-mini-text-line-height-scale-screen-small));
-					padding-left: floor(@form-control-mini-padding-horizontal * @form-control-mini-padding-horizontal-scale-screen-small);
-					padding-right: floor(@form-control-mini-padding-horizontal * @form-control-mini-padding-horizontal-scale-screen-small);
-					.border-radius(@form-control-mini-border-radius * @form-control-mini-border-radius-scale-screen-small);
+					.form-control-size('mini', 'screen-small');
 					
 				}
 				
@@ -1446,12 +1524,7 @@ fieldset {
 					Form Control (Small) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-small-text-font-size * @form-control-small-text-font-size-scale-screen-small);
-					line-height: floor(@form-control-small-text-line-height * @form-control-small-text-line-height-scale-screen-small);
-					.box-sizing-padding-vertical(floor(@form-control-small-height * @form-control-small-height-scale-screen-small), floor(@form-control-small-text-line-height * @form-control-small-text-line-height-scale-screen-small));
-					padding-left: floor(@form-control-small-padding-horizontal * @form-control-small-padding-horizontal-scale-screen-small);
-					padding-right: floor(@form-control-small-padding-horizontal * @form-control-small-padding-horizontal-scale-screen-small);
-					.border-radius(@form-control-small-border-radius * @form-control-small-border-radius-scale-screen-small);
+					.form-control-size('small', 'screen-small');
 					
 				}
 				
@@ -1478,12 +1551,7 @@ fieldset {
 					Form Control (Large) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-large-text-font-size * @form-control-large-text-font-size-scale-screen-small);
-					line-height: floor(@form-control-large-text-line-height * @form-control-large-text-line-height-scale-screen-small);
-					.box-sizing-padding-vertical(floor(@form-control-large-height * @form-control-large-height-scale-screen-small), floor(@form-control-large-text-line-height * @form-control-large-text-line-height-scale-screen-small));
-					padding-left: floor(@form-control-large-padding-horizontal * @form-control-large-padding-horizontal-scale-screen-small);
-					padding-right: floor(@form-control-large-padding-horizontal * @form-control-large-padding-horizontal-scale-screen-small);
-					.border-radius(@form-control-large-border-radius * @form-control-large-border-radius-scale-screen-small);
+					.form-control-size('large', 'screen-small');
 					
 				}
 				
@@ -1510,12 +1578,7 @@ fieldset {
 					Form Control (Jumbo) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-jumbo-text-font-size * @form-control-jumbo-text-font-size-scale-screen-small);
-					line-height: floor(@form-control-jumbo-text-line-height * @form-control-jumbo-text-line-height-scale-screen-small);
-					.box-sizing-padding-vertical(floor(@form-control-jumbo-height * @form-control-jumbo-height-scale-screen-small), floor(@form-control-jumbo-text-line-height * @form-control-jumbo-text-line-height-scale-screen-small));
-					padding-left: floor(@form-control-jumbo-padding-horizontal * @form-control-jumbo-padding-horizontal-scale-screen-small);
-					padding-right: floor(@form-control-jumbo-padding-horizontal * @form-control-jumbo-padding-horizontal-scale-screen-small);
-					.border-radius(@form-control-jumbo-border-radius * @form-control-jumbo-border-radius-scale-screen-small);
+					.form-control-size('jumbo', 'screen-small');
 					
 				}
 				
@@ -1693,12 +1756,7 @@ fieldset {
 				Form Control Styles
 				---------------------------------------------------------------------------------------------------- */
 				
-				font-size: floor(@form-control-text-font-size * @form-control-text-font-size-scale-screen-medium);
-				line-height: floor(@form-control-text-line-height * @form-control-text-line-height-scale-screen-medium);
-				.box-sizing-padding-vertical(floor(@form-control-height * @form-control-height-scale-screen-medium), floor(@form-control-text-line-height * @form-control-text-line-height-scale-screen-medium));
-				padding-left: floor(@form-control-padding-horizontal * @form-control-padding-horizontal-scale-screen-medium);
-				padding-right: floor(@form-control-padding-horizontal * @form-control-padding-horizontal-scale-screen-medium);
-				.border-radius(@form-control-border-radius * @form-control-border-radius-scale-screen-medium);
+				.form-control-size('', 'screen-medium');
 				
 			}
 			
@@ -1723,12 +1781,7 @@ fieldset {
 					Form Control (Mini) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-mini-text-font-size * @form-control-mini-text-font-size-scale-screen-medium);
-					line-height: floor(@form-control-mini-text-line-height * @form-control-mini-text-line-height-scale-screen-medium);
-					.box-sizing-padding-vertical(floor(@form-control-mini-height * @form-control-mini-height-scale-screen-medium), floor(@form-control-mini-text-line-height * @form-control-mini-text-line-height-scale-screen-medium));
-					padding-left: floor(@form-control-mini-padding-horizontal * @form-control-mini-padding-horizontal-scale-screen-medium);
-					padding-right: floor(@form-control-mini-padding-horizontal * @form-control-mini-padding-horizontal-scale-screen-medium);
-					.border-radius(@form-control-mini-border-radius * @form-control-mini-border-radius-scale-screen-medium);
+					.form-control-size('mini', 'screen-medium');
 					
 				}
 				
@@ -1755,12 +1808,7 @@ fieldset {
 					Form Control (Small) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-small-text-font-size * @form-control-small-text-font-size-scale-screen-medium);
-					line-height: floor(@form-control-small-text-line-height * @form-control-small-text-line-height-scale-screen-medium);
-					.box-sizing-padding-vertical(floor(@form-control-small-height * @form-control-small-height-scale-screen-medium), floor(@form-control-small-text-line-height * @form-control-small-text-line-height-scale-screen-medium));
-					padding-left: floor(@form-control-small-padding-horizontal * @form-control-small-padding-horizontal-scale-screen-medium);
-					padding-right: floor(@form-control-small-padding-horizontal * @form-control-small-padding-horizontal-scale-screen-medium);
-					.border-radius(@form-control-small-border-radius * @form-control-small-border-radius-scale-screen-medium);
+					.form-control-size('small', 'screen-medium');
 					
 				}
 				
@@ -1787,12 +1835,7 @@ fieldset {
 					Form Control (Large) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-large-text-font-size * @form-control-large-text-font-size-scale-screen-medium);
-					line-height: floor(@form-control-large-text-line-height * @form-control-large-text-line-height-scale-screen-medium);
-					.box-sizing-padding-vertical(floor(@form-control-large-height * @form-control-large-height-scale-screen-medium), floor(@form-control-large-text-line-height * @form-control-large-text-line-height-scale-screen-medium));
-					padding-left: floor(@form-control-large-padding-horizontal * @form-control-large-padding-horizontal-scale-screen-medium);
-					padding-right: floor(@form-control-large-padding-horizontal * @form-control-large-padding-horizontal-scale-screen-medium);
-					.border-radius(@form-control-large-border-radius * @form-control-large-border-radius-scale-screen-medium);
+					.form-control-size('large', 'screen-medium');
 					
 				}
 				
@@ -1819,12 +1862,7 @@ fieldset {
 					Form Control (Jumbo) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-jumbo-text-font-size * @form-control-jumbo-text-font-size-scale-screen-medium);
-					line-height: floor(@form-control-jumbo-text-line-height * @form-control-jumbo-text-line-height-scale-screen-medium);
-					.box-sizing-padding-vertical(floor(@form-control-jumbo-height * @form-control-jumbo-height-scale-screen-medium), floor(@form-control-jumbo-text-line-height * @form-control-jumbo-text-line-height-scale-screen-medium));
-					padding-left: floor(@form-control-jumbo-padding-horizontal * @form-control-jumbo-padding-horizontal-scale-screen-medium);
-					padding-right: floor(@form-control-jumbo-padding-horizontal * @form-control-jumbo-padding-horizontal-scale-screen-medium);
-					.border-radius(@form-control-jumbo-border-radius * @form-control-jumbo-border-radius-scale-screen-medium);
+					.form-control-size('jumbo', 'screen-medium');
 					
 				}
 				
@@ -2002,12 +2040,7 @@ fieldset {
 				Form Control Styles
 				---------------------------------------------------------------------------------------------------- */
 				
-				font-size: floor(@form-control-text-font-size * @form-control-text-font-size-scale-screen-large);
-				line-height: floor(@form-control-text-line-height * @form-control-text-line-height-scale-screen-large);
-				.box-sizing-padding-vertical(floor(@form-control-height * @form-control-height-scale-screen-large), floor(@form-control-text-line-height * @form-control-text-line-height-scale-screen-large));
-				padding-left: floor(@form-control-padding-horizontal * @form-control-padding-horizontal-scale-screen-large);
-				padding-right: floor(@form-control-padding-horizontal * @form-control-padding-horizontal-scale-screen-large);
-				.border-radius(@form-control-border-radius * @form-control-border-radius-scale-screen-large);
+				.form-control-size('', 'screen-large');
 				
 			}
 			
@@ -2032,12 +2065,7 @@ fieldset {
 					Form Control (Mini) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-mini-text-font-size * @form-control-mini-text-font-size-scale-screen-large);
-					line-height: floor(@form-control-mini-text-line-height * @form-control-mini-text-line-height-scale-screen-large);
-					.box-sizing-padding-vertical(floor(@form-control-mini-height * @form-control-mini-height-scale-screen-large), floor(@form-control-mini-text-line-height * @form-control-mini-text-line-height-scale-screen-large));
-					padding-left: floor(@form-control-mini-padding-horizontal * @form-control-mini-padding-horizontal-scale-screen-large);
-					padding-right: floor(@form-control-mini-padding-horizontal * @form-control-mini-padding-horizontal-scale-screen-large);
-					.border-radius(@form-control-mini-border-radius * @form-control-mini-border-radius-scale-screen-large);
+					.form-control-size('mini', 'screen-large');
 					
 				}
 				
@@ -2064,12 +2092,7 @@ fieldset {
 					Form Control (Small) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-small-text-font-size * @form-control-small-text-font-size-scale-screen-large);
-					line-height: floor(@form-control-small-text-line-height * @form-control-small-text-line-height-scale-screen-large);
-					.box-sizing-padding-vertical(floor(@form-control-small-height * @form-control-small-height-scale-screen-large), floor(@form-control-small-text-line-height * @form-control-small-text-line-height-scale-screen-large));
-					padding-left: floor(@form-control-small-padding-horizontal * @form-control-small-padding-horizontal-scale-screen-large);
-					padding-right: floor(@form-control-small-padding-horizontal * @form-control-small-padding-horizontal-scale-screen-large);
-					.border-radius(@form-control-small-border-radius * @form-control-small-border-radius-scale-screen-large);
+					.form-control-size('small', 'screen-large');
 					
 				}
 				
@@ -2096,12 +2119,7 @@ fieldset {
 					Form Control (Large) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-large-text-font-size * @form-control-large-text-font-size-scale-screen-large);
-					line-height: floor(@form-control-large-text-line-height * @form-control-large-text-line-height-scale-screen-large);
-					.box-sizing-padding-vertical(floor(@form-control-large-height * @form-control-large-height-scale-screen-large), floor(@form-control-large-text-line-height * @form-control-large-text-line-height-scale-screen-large));
-					padding-left: floor(@form-control-large-padding-horizontal * @form-control-large-padding-horizontal-scale-screen-large);
-					padding-right: floor(@form-control-large-padding-horizontal * @form-control-large-padding-horizontal-scale-screen-large);
-					.border-radius(@form-control-large-border-radius * @form-control-large-border-radius-scale-screen-large);
+					.form-control-size('large', 'screen-large');
 					
 				}
 				
@@ -2128,12 +2146,7 @@ fieldset {
 					Form Control (Jumbo) Styles
 					---------------------------------------------------------------------------------------------------- */
 					
-					font-size: floor(@form-control-jumbo-text-font-size * @form-control-jumbo-text-font-size-scale-screen-large);
-					line-height: floor(@form-control-jumbo-text-line-height * @form-control-jumbo-text-line-height-scale-screen-large);
-					.box-sizing-padding-vertical(floor(@form-control-jumbo-height * @form-control-jumbo-height-scale-screen-large), floor(@form-control-jumbo-text-line-height * @form-control-jumbo-text-line-height-scale-screen-large));
-					padding-left: floor(@form-control-jumbo-padding-horizontal * @form-control-jumbo-padding-horizontal-scale-screen-large);
-					padding-right: floor(@form-control-jumbo-padding-horizontal * @form-control-jumbo-padding-horizontal-scale-screen-large);
-					.border-radius(@form-control-jumbo-border-radius * @form-control-jumbo-border-radius-scale-screen-large);
+					.form-control-size('jumbo', 'screen-large');
 					
 				}
 				

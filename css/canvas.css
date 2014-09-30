@@ -159,7 +159,14 @@ utilities/mixins-buttons.less
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Placeholder Text
+Button Variant Styling
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Button Size Styling
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
@@ -183,6 +190,29 @@ Lighten and Darken Colors
 -------------------------------------------------------------------------------------------------------
 
 Gradients
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+utilities/mixins-forms.less
+
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control Variant Styling
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control Size Styling
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
@@ -1248,6 +1278,82 @@ Form Control (Default, Inverse) State: Focus
 ---------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------
 Form Control (Default, Inverse) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Success)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success) State: Normal
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success) State: Hover
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success) State: Focus
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Success, Inverse)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success, Inverse) State: Normal
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success, Inverse) State: Hover
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success, Inverse) State: Focus
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success, Inverse) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Error)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error) State: Normal
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error) State: Hover
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error) State: Focus
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Error, Inverse)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error, Inverse) State: Normal
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error, Inverse) State: Hover
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error, Inverse) State: Focus
+---------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error, Inverse) State: Disabled
 ---------------------------------------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
@@ -2912,13 +3018,13 @@ Button
   *zoom: 1;
   *margin-left: .3em;
   display: inline-block;
+  border-style: solid;
   font-size: 12px;
   line-height: 16px;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 12px;
   padding-right: 12px;
-  border-style: solid;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -2958,8 +3064,8 @@ Button
   line-height: 9px;
   padding-top: 3.5px;
   padding-bottom: 3.5px;
-  padding-left: 7.2px;
-  padding-right: 7.2px;
+  padding-left: 7px;
+  padding-right: 7px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -2979,8 +3085,8 @@ Button
   line-height: 12px;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 9.6px;
-  padding-right: 9.6px;
+  padding-left: 9px;
+  padding-right: 9px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -3000,8 +3106,8 @@ Button
   line-height: 19px;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: 16.8px;
-  padding-right: 16.8px;
+  padding-left: 16px;
+  padding-right: 16px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -3929,9 +4035,6 @@ Button (Default)
   -webkit-box-shadow: none;
   box-shadow: none;
   /* ----------------------------------------------------------------------------------------------------
-		Button (Primary) State: Focus
-		---------------------------------------------------------------------------------------------------- */
-  /* ----------------------------------------------------------------------------------------------------
 		Button (Primary) State: Hover
 		---------------------------------------------------------------------------------------------------- */
   /* ----------------------------------------------------------------------------------------------------
@@ -3961,9 +4064,6 @@ Button (Default)
 			
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
-}
-.button.button-primary:focus {
-  outline: none;
 }
 .button.button-primary:hover {
   color: #ffffff;
@@ -3996,7 +4096,6 @@ Button (Default)
   box-shadow: none;
 }
 .button.button-primary:active {
-  outline: 0;
   color: #c1e0fe;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -4028,9 +4127,6 @@ Button (Default)
 }
 .button.button-primary.disabled,
 .button.button-primary[disabled] {
-  outline: 0;
-  cursor: primary !important;
-  pointer-events: none;
   opacity: 0.5;
   filter: alpha(opacity=50);
   color: #ffffff;
@@ -4791,9 +4887,6 @@ Button (Default)
   -webkit-box-shadow: none;
   box-shadow: none;
   /* ----------------------------------------------------------------------------------------------------
-		Button (Success) State: Focus
-		---------------------------------------------------------------------------------------------------- */
-  /* ----------------------------------------------------------------------------------------------------
 		Button (Success) State: Hover
 		---------------------------------------------------------------------------------------------------- */
   /* ----------------------------------------------------------------------------------------------------
@@ -4823,9 +4916,6 @@ Button (Default)
 			
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
-}
-.button.button-success:focus {
-  outline: none;
 }
 .button.button-success:hover {
   color: #ffffff;
@@ -4858,7 +4948,6 @@ Button (Default)
   box-shadow: none;
 }
 .button.button-success:active {
-  outline: 0;
   color: #e2f2d1;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -4890,9 +4979,6 @@ Button (Default)
 }
 .button.button-success.disabled,
 .button.button-success[disabled] {
-  outline: 0;
-  cursor: success !important;
-  pointer-events: none;
   opacity: 0.5;
   filter: alpha(opacity=50);
   color: #ffffff;
@@ -5653,9 +5739,6 @@ Button (Default)
   -webkit-box-shadow: none;
   box-shadow: none;
   /* ----------------------------------------------------------------------------------------------------
-		Button (Warning) State: Focus
-		---------------------------------------------------------------------------------------------------- */
-  /* ----------------------------------------------------------------------------------------------------
 		Button (Warning) State: Hover
 		---------------------------------------------------------------------------------------------------- */
   /* ----------------------------------------------------------------------------------------------------
@@ -5685,9 +5768,6 @@ Button (Default)
 			
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
-}
-.button.button-warning:focus {
-  outline: none;
 }
 .button.button-warning:hover {
   color: #ffffff;
@@ -5720,7 +5800,6 @@ Button (Default)
   box-shadow: none;
 }
 .button.button-warning:active {
-  outline: 0;
   color: #fce6d7;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -5752,9 +5831,6 @@ Button (Default)
 }
 .button.button-warning.disabled,
 .button.button-warning[disabled] {
-  outline: 0;
-  cursor: warning !important;
-  pointer-events: none;
   opacity: 0.5;
   filter: alpha(opacity=50);
   color: #ffffff;
@@ -6515,9 +6591,6 @@ Button (Default)
   -webkit-box-shadow: none;
   box-shadow: none;
   /* ----------------------------------------------------------------------------------------------------
-		Button (Danger) State: Focus
-		---------------------------------------------------------------------------------------------------- */
-  /* ----------------------------------------------------------------------------------------------------
 		Button (Danger) State: Hover
 		---------------------------------------------------------------------------------------------------- */
   /* ----------------------------------------------------------------------------------------------------
@@ -6547,9 +6620,6 @@ Button (Default)
 			
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
-}
-.button.button-danger:focus {
-  outline: none;
 }
 .button.button-danger:hover {
   color: #ffffff;
@@ -6582,7 +6652,6 @@ Button (Default)
   box-shadow: none;
 }
 .button.button-danger:active {
-  outline: 0;
   color: #fecccc;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
@@ -6614,9 +6683,6 @@ Button (Default)
 }
 .button.button-danger.disabled,
 .button.button-danger[disabled] {
-  outline: 0;
-  cursor: danger !important;
-  pointer-events: none;
   opacity: 0.5;
   filter: alpha(opacity=50);
   color: #ffffff;
@@ -8195,13 +8261,13 @@ label.inverse .mute a.disabled {
   -moz-appearance: none;
   -webkit-appearance: none;
   position: relative;
+  border-style: solid;
   font-size: 12px;
   line-height: 16px;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 12px;
   padding-right: 12px;
-  border-style: solid;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -8221,8 +8287,8 @@ label.inverse .mute a.disabled {
   line-height: 9px;
   padding-top: 3.5px;
   padding-bottom: 3.5px;
-  padding-left: 7.2px;
-  padding-right: 7.2px;
+  padding-left: 7px;
+  padding-right: 7px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -8242,8 +8308,8 @@ label.inverse .mute a.disabled {
   line-height: 12px;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 9.6px;
-  padding-right: 9.6px;
+  padding-left: 9px;
+  padding-right: 9px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -8263,8 +8329,8 @@ label.inverse .mute a.disabled {
   line-height: 19px;
   padding-top: 7px;
   padding-bottom: 7px;
-  padding-left: 16.8px;
-  padding-right: 16.8px;
+  padding-left: 16px;
+  padding-right: 16px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -8679,6 +8745,786 @@ label.inverse .mute a.disabled {
 .form-control.form-control-inverse.disabled::-webkit-input-placeholder,
 .form-control.form-control-inverse[disabled]::-webkit-input-placeholder {
   color: #656565;
+}
+/* ----------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------
+	
+	Form Control (Success)
+	
+	-------------------------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------- */
+.form-control.form-control-success {
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Normal
+		---------------------------------------------------------------------------------------------------- */
+  color: #598c25;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: 0px 0px 0px 1px #70af2f;
+  box-shadow: 0px 0px 0px 1px #70af2f;
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Focus
+		---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Hover
+		---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Focus
+		---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Success) State: Disabled
+		---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
+			
+			Form Control (Success, Inverse)
+			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
+}
+.form-control.form-control-success:-moz-placeholder {
+  color: #6faf2f;
+}
+.form-control.form-control-success::-moz-placeholder {
+  color: #6faf2f;
+}
+.form-control.form-control-success:-ms-input-placeholder {
+  color: #6faf2f;
+}
+.form-control.form-control-success::-webkit-input-placeholder {
+  color: #6faf2f;
+}
+.form-control.form-control-success:focus {
+  outline: none;
+}
+.form-control.form-control-success:hover {
+  color: #43691c;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: 0px 0px 0px 1px #70af2f;
+  box-shadow: 0px 0px 0px 1px #70af2f;
+}
+.form-control.form-control-success:hover:-moz-placeholder {
+  color: #649d2a;
+}
+.form-control.form-control-success:hover::-moz-placeholder {
+  color: #649d2a;
+}
+.form-control.form-control-success:hover:-ms-input-placeholder {
+  color: #649d2a;
+}
+.form-control.form-control-success:hover::-webkit-input-placeholder {
+  color: #649d2a;
+}
+.form-control.form-control-success:focus {
+  outline: 0;
+  color: #6faf2f;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: #fcfdfa;
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: 0px 0px 0px 1px #70af2f;
+  box-shadow: 0px 0px 0px 1px #70af2f;
+}
+.form-control.form-control-success:focus:-moz-placeholder {
+  color: #b7e08d;
+}
+.form-control.form-control-success:focus::-moz-placeholder {
+  color: #b7e08d;
+}
+.form-control.form-control-success:focus:-ms-input-placeholder {
+  color: #b7e08d;
+}
+.form-control.form-control-success:focus::-webkit-input-placeholder {
+  color: #b7e08d;
+}
+.form-control.form-control-success.disabled,
+.form-control.form-control-success[disabled] {
+  outline: 0;
+  cursor: success !important;
+  pointer-events: none;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  color: #598c25;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: 0px 0px 0px 1px #70af2f;
+  box-shadow: 0px 0px 0px 1px #70af2f;
+}
+.form-control.form-control-success.disabled:-moz-placeholder,
+.form-control.form-control-success[disabled]:-moz-placeholder {
+  color: #6faf2f;
+}
+.form-control.form-control-success.disabled::-moz-placeholder,
+.form-control.form-control-success[disabled]::-moz-placeholder {
+  color: #6faf2f;
+}
+.form-control.form-control-success.disabled:-ms-input-placeholder,
+.form-control.form-control-success[disabled]:-ms-input-placeholder {
+  color: #6faf2f;
+}
+.form-control.form-control-success.disabled::-webkit-input-placeholder,
+.form-control.form-control-success[disabled]::-webkit-input-placeholder {
+  color: #6faf2f;
+}
+.form-control.form-control-success.form-control-inverse {
+  /* ----------------------------------------------------------------------------------------------------
+				Form Control (Success, Inverse) State: Normal
+				---------------------------------------------------------------------------------------------------- */
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: rgba(255, 255, 255, 0.2);
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  /* ----------------------------------------------------------------------------------------------------
+				Form Control (Success, Inverse) State: Hover
+				---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+				Form Control (Success, Inverse) State: Focus
+				---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+				Form Control (Success, Inverse) State: Disabled
+				---------------------------------------------------------------------------------------------------- */
+}
+.form-control.form-control-success.form-control-inverse:-moz-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse::-moz-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:-ms-input-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse::-webkit-input-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:hover {
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: rgba(255, 255, 255, 0.25);
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control.form-control-success.form-control-inverse:hover:-moz-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:hover::-moz-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:hover:-ms-input-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:hover::-webkit-input-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:focus {
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: rgba(255, 255, 255, 0.4);
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control.form-control-success.form-control-inverse:focus:-moz-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:focus::-moz-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:focus:-ms-input-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse:focus::-webkit-input-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse.disabled,
+.form-control.form-control-success.form-control-inverse[disabled] {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: rgba(255, 255, 255, 0.2);
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control.form-control-success.form-control-inverse.disabled:-moz-placeholder,
+.form-control.form-control-success.form-control-inverse[disabled]:-moz-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse.disabled::-moz-placeholder,
+.form-control.form-control-success.form-control-inverse[disabled]::-moz-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse.disabled:-ms-input-placeholder,
+.form-control.form-control-success.form-control-inverse[disabled]:-ms-input-placeholder {
+  color: #43691c;
+}
+.form-control.form-control-success.form-control-inverse.disabled::-webkit-input-placeholder,
+.form-control.form-control-success.form-control-inverse[disabled]::-webkit-input-placeholder {
+  color: #43691c;
+}
+/* ----------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------
+	
+	Form Control (Error)
+	
+	-------------------------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------- */
+.form-control.form-control-error {
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Normal
+		---------------------------------------------------------------------------------------------------- */
+  color: #cc0000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: 0px 0px 0px 1px #ff0000;
+  box-shadow: 0px 0px 0px 1px #ff0000;
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Focus
+		---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Hover
+		---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Focus
+		---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+		Form Control (Error) State: Disabled
+		---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
+			
+			Form Control (Error, Inverse)
+			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
+}
+.form-control.form-control-error:-moz-placeholder {
+  color: #ff0000;
+}
+.form-control.form-control-error::-moz-placeholder {
+  color: #ff0000;
+}
+.form-control.form-control-error:-ms-input-placeholder {
+  color: #ff0000;
+}
+.form-control.form-control-error::-webkit-input-placeholder {
+  color: #ff0000;
+}
+.form-control.form-control-error:focus {
+  outline: none;
+}
+.form-control.form-control-error:hover {
+  color: #990000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: 0px 0px 0px 1px #ff0000;
+  box-shadow: 0px 0px 0px 1px #ff0000;
+}
+.form-control.form-control-error:hover:-moz-placeholder {
+  color: #e50000;
+}
+.form-control.form-control-error:hover::-moz-placeholder {
+  color: #e50000;
+}
+.form-control.form-control-error:hover:-ms-input-placeholder {
+  color: #e50000;
+}
+.form-control.form-control-error:hover::-webkit-input-placeholder {
+  color: #e50000;
+}
+.form-control.form-control-error:focus {
+  outline: 0;
+  color: #ff0000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: #fff9f9;
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: 0px 0px 0px 1px #ff0000;
+  box-shadow: 0px 0px 0px 1px #ff0000;
+}
+.form-control.form-control-error:focus:-moz-placeholder {
+  color: #ff7f7f;
+}
+.form-control.form-control-error:focus::-moz-placeholder {
+  color: #ff7f7f;
+}
+.form-control.form-control-error:focus:-ms-input-placeholder {
+  color: #ff7f7f;
+}
+.form-control.form-control-error:focus::-webkit-input-placeholder {
+  color: #ff7f7f;
+}
+.form-control.form-control-error.disabled,
+.form-control.form-control-error[disabled] {
+  outline: 0;
+  cursor: error !important;
+  pointer-events: none;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  color: #cc0000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: 0px 0px 0px 1px #ff0000;
+  box-shadow: 0px 0px 0px 1px #ff0000;
+}
+.form-control.form-control-error.disabled:-moz-placeholder,
+.form-control.form-control-error[disabled]:-moz-placeholder {
+  color: #ff0000;
+}
+.form-control.form-control-error.disabled::-moz-placeholder,
+.form-control.form-control-error[disabled]::-moz-placeholder {
+  color: #ff0000;
+}
+.form-control.form-control-error.disabled:-ms-input-placeholder,
+.form-control.form-control-error[disabled]:-ms-input-placeholder {
+  color: #ff0000;
+}
+.form-control.form-control-error.disabled::-webkit-input-placeholder,
+.form-control.form-control-error[disabled]::-webkit-input-placeholder {
+  color: #ff0000;
+}
+.form-control.form-control-error.form-control-inverse {
+  /* ----------------------------------------------------------------------------------------------------
+				Form Control (Error, Inverse) State: Normal
+				---------------------------------------------------------------------------------------------------- */
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: rgba(255, 255, 255, 0.2);
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  /* ----------------------------------------------------------------------------------------------------
+				Form Control (Error, Inverse) State: Hover
+				---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+				Form Control (Error, Inverse) State: Focus
+				---------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------------------------------------------------------------------
+				Form Control (Error, Inverse) State: Disabled
+				---------------------------------------------------------------------------------------------------- */
+}
+.form-control.form-control-error.form-control-inverse:-moz-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse::-moz-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:-ms-input-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse::-webkit-input-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:hover {
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: rgba(255, 255, 255, 0.25);
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control.form-control-error.form-control-inverse:hover:-moz-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:hover::-moz-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:hover:-ms-input-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:hover::-webkit-input-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:focus {
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: rgba(255, 255, 255, 0.4);
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control.form-control-error.form-control-inverse:focus:-moz-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:focus::-moz-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:focus:-ms-input-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse:focus::-webkit-input-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse.disabled,
+.form-control.form-control-error.form-control-inverse[disabled] {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  color: #ffffff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  text-shadow: none;
+  text-rendering: optimizelegibility;
+  background: rgba(255, 255, 255, 0.2);
+  background-image: -webkit-linear-gradient(top, none 0%, none 100%);
+  background-image: -o-linear-gradient(top, none 0%, none 100%);
+  background-image: linear-gradient(to bottom, none 0%, none 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='none', GradientType=0);
+  background-image: -webkit-linear-gradient(top, none none, #333333 100%);
+  background-image: -o-linear-gradient(top, none none, #333333 100%);
+  background-image: linear-gradient(to bottom, none none, #333333 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='none', endColorstr='#333333', GradientType=0);
+  border-top-width: 0px;
+  border-top-color: none;
+  border-right-width: 0px;
+  border-right-color: none;
+  border-bottom-width: 0px;
+  border-bottom-color: none;
+  border-left-width: 0px;
+  border-left-color: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form-control.form-control-error.form-control-inverse.disabled:-moz-placeholder,
+.form-control.form-control-error.form-control-inverse[disabled]:-moz-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse.disabled::-moz-placeholder,
+.form-control.form-control-error.form-control-inverse[disabled]::-moz-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse.disabled:-ms-input-placeholder,
+.form-control.form-control-error.form-control-inverse[disabled]:-ms-input-placeholder {
+  color: #990000;
+}
+.form-control.form-control-error.form-control-inverse.disabled::-webkit-input-placeholder,
+.form-control.form-control-error.form-control-inverse[disabled]::-webkit-input-placeholder {
+  color: #990000;
 }
 /* ----------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------------

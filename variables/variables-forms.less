@@ -863,4 +863,527 @@ Form Control (Default, Inverse) State: Disabled
 
 
 
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
 
+Form Control (Success)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success) State: Normal
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-success-text-color:																~`color_lightness("@{green}", -20)`;
+@form-control-success-text-font-family:															@font-family-sans-serif;
+@form-control-success-text-font-style:															normal;
+@form-control-success-text-font-weight:															400;
+@form-control-success-text-transform:															none;
+@form-control-success-text-shadow:																none;
+@form-control-success-text-rendering:															optimizelegibility;
+@form-control-success-placeholder-text-color:													~`color_lightness("@{green}", 0)`;
+@form-control-success-background-color:															@white;
+@form-control-success-background-gradient-color-top:											none;
+@form-control-success-background-gradient-color-bottom:											none;
+@form-control-success-border-width:																0px;
+@form-control-success-border-color:																none;
+@form-control-success-border-top-width:															@form-control-success-border-width;
+@form-control-success-border-top-color:															@form-control-success-border-color;
+@form-control-success-border-right-width:														@form-control-success-border-width;
+@form-control-success-border-right-color:														@form-control-success-border-color;
+@form-control-success-border-bottom-width:														@form-control-success-border-width;
+@form-control-success-border-bottom-color:														@form-control-success-border-color;
+@form-control-success-border-left-width:														@form-control-success-border-width;
+@form-control-success-border-left-color:														@form-control-success-border-color;
+@form-control-success-shadow:																	0px 0px 0px 1px @green;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success) State: Hover
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-success-hover-text-color:															~`color_lightness("@{green}", -40)`;
+@form-control-success-hover-text-font-family:													@font-family-sans-serif;
+@form-control-success-hover-text-font-style:													normal;
+@form-control-success-hover-text-font-weight:													400;
+@form-control-success-hover-text-transform:														none;
+@form-control-success-hover-text-shadow:														none;
+@form-control-success-hover-text-rendering:														optimizelegibility;
+@form-control-success-hover-placeholder-text-color:												~`color_lightness("@{green}", -10)`;
+@form-control-success-hover-background-color:													@white;
+@form-control-success-hover-background-gradient-color-top:										none;
+@form-control-success-hover-background-gradient-color-bottom:									none;
+@form-control-success-hover-border-width:														0px;
+@form-control-success-hover-border-color:														none;
+@form-control-success-hover-border-top-width:													@form-control-success-hover-border-width;
+@form-control-success-hover-border-top-color:													@form-control-success-hover-border-color;
+@form-control-success-hover-border-right-width:													@form-control-success-hover-border-width;
+@form-control-success-hover-border-right-color:													@form-control-success-hover-border-color;
+@form-control-success-hover-border-bottom-width:												@form-control-success-hover-border-width;
+@form-control-success-hover-border-bottom-color:												@form-control-success-hover-border-color;
+@form-control-success-hover-border-left-width:													@form-control-success-hover-border-width;
+@form-control-success-hover-border-left-color:													@form-control-success-hover-border-color;
+@form-control-success-hover-shadow:																0px 0px 0px 1px @green;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success) State: Focus
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-success-focus-text-color:															~`color_lightness("@{green}", 0)`;
+@form-control-success-focus-text-font-family:													@font-family-sans-serif;
+@form-control-success-focus-text-font-style:													normal;
+@form-control-success-focus-text-font-weight:													400;
+@form-control-success-focus-text-transform:														none;
+@form-control-success-focus-text-shadow:														none;
+@form-control-success-focus-text-rendering:														optimizelegibility;
+@form-control-success-focus-placeholder-text-color:												~`color_lightness("@{green}", 50)`;
+@form-control-success-focus-background-color:													~`color_lightness("@{green}", 98)`;
+@form-control-success-focus-background-gradient-color-top:										none;
+@form-control-success-focus-background-gradient-color-bottom:									none;
+@form-control-success-focus-border-width:														0px;
+@form-control-success-focus-border-color:														none;
+@form-control-success-focus-border-top-width:													@form-control-success-focus-border-width;
+@form-control-success-focus-border-top-color:													@form-control-success-focus-border-color;
+@form-control-success-focus-border-right-width:													@form-control-success-focus-border-width;
+@form-control-success-focus-border-right-color:													@form-control-success-focus-border-color;
+@form-control-success-focus-border-bottom-width:												@form-control-success-focus-border-width;
+@form-control-success-focus-border-bottom-color:												@form-control-success-focus-border-color;
+@form-control-success-focus-border-left-width:													@form-control-success-focus-border-width;
+@form-control-success-focus-border-left-color:													@form-control-success-focus-border-color;
+@form-control-success-focus-shadow:																0px 0px 0px 1px @green;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-success-disabled-opacity:															0.5;
+@form-control-success-disabled-text-color:														@form-control-success-text-color;
+@form-control-success-disabled-text-font-family:												@form-control-success-text-font-family;
+@form-control-success-disabled-text-font-style:													@form-control-success-text-font-style;
+@form-control-success-disabled-text-font-weight:												@form-control-success-text-font-weight;
+@form-control-success-disabled-text-transform:													@form-control-success-text-transform;
+@form-control-success-disabled-text-shadow:														@form-control-success-text-shadow;
+@form-control-success-disabled-text-rendering:													@form-control-success-text-rendering;
+@form-control-success-disabled-placeholder-text-color:											@form-control-success-placeholder-text-color;
+@form-control-success-disabled-background-color:												@form-control-success-background-color;
+@form-control-success-disabled-background-gradient-color-top:									@form-control-success-background-gradient-color-top;
+@form-control-success-disabled-background-gradient-color-bottom:								@form-control-success-background-gradient-color-bottom;
+@form-control-success-disabled-border-width:													@form-control-success-border-width;
+@form-control-success-disabled-border-color:													@form-control-success-border-color;
+@form-control-success-disabled-border-top-width:												@form-control-success-border-top-width;
+@form-control-success-disabled-border-top-color:												@form-control-success-border-top-color;
+@form-control-success-disabled-border-right-width:												@form-control-success-border-right-width;
+@form-control-success-disabled-border-right-color:												@form-control-success-border-right-color;
+@form-control-success-disabled-border-bottom-width:												@form-control-success-border-bottom-width;
+@form-control-success-disabled-border-bottom-color:												@form-control-success-border-bottom-color;
+@form-control-success-disabled-border-left-width:												@form-control-success-border-left-width;
+@form-control-success-disabled-border-left-color:												@form-control-success-border-left-color;
+@form-control-success-disabled-shadow:															@form-control-success-shadow;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Success, Inverse)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-control-success-inverse-enabled:															true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success, Inverse) State: Normal
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-success-inverse-text-color:														~`color_lightness("@{white}", 0)`;
+@form-control-success-inverse-text-font-family:													@font-family-sans-serif;
+@form-control-success-inverse-text-font-style:													normal;
+@form-control-success-inverse-text-font-weight:													400;
+@form-control-success-inverse-text-transform:													none;
+@form-control-success-inverse-text-shadow:														none;
+@form-control-success-inverse-text-rendering:													optimizelegibility;
+@form-control-success-inverse-placeholder-text-color:											~`color_lightness("@{green}", -40)`;
+@form-control-success-inverse-background-color:													rgba(255, 255, 255, 0.2);
+@form-control-success-inverse-background-gradient-color-top:									none;
+@form-control-success-inverse-background-gradient-color-bottom:									none;
+@form-control-success-inverse-border-width:														0px;
+@form-control-success-inverse-border-color:														none;
+@form-control-success-inverse-border-top-width:													@form-control-success-inverse-border-width;
+@form-control-success-inverse-border-top-color:													@form-control-success-inverse-border-color;
+@form-control-success-inverse-border-right-width:												@form-control-success-inverse-border-width;
+@form-control-success-inverse-border-right-color:												@form-control-success-inverse-border-color;
+@form-control-success-inverse-border-bottom-width:												@form-control-success-inverse-border-width;
+@form-control-success-inverse-border-bottom-color:												@form-control-success-inverse-border-color;
+@form-control-success-inverse-border-left-width:												@form-control-success-inverse-border-width;
+@form-control-success-inverse-border-left-color:												@form-control-success-inverse-border-color;
+@form-control-success-inverse-shadow:															none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success, Inverse) State: Hover
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-success-inverse-hover-text-color:													~`color_lightness("@{white}", 0)`;
+@form-control-success-inverse-hover-text-font-family:											@font-family-sans-serif;
+@form-control-success-inverse-hover-text-font-style:											normal;
+@form-control-success-inverse-hover-text-font-weight:											400;
+@form-control-success-inverse-hover-text-transform:												none;
+@form-control-success-inverse-hover-text-shadow:												none;
+@form-control-success-inverse-hover-text-rendering:												optimizelegibility;
+@form-control-success-inverse-hover-placeholder-text-color:										~`color_lightness("@{green}", -40)`;
+@form-control-success-inverse-hover-background-color:											rgba(255, 255, 255, 0.25);
+@form-control-success-inverse-hover-background-gradient-color-top:								none;
+@form-control-success-inverse-hover-background-gradient-color-bottom:							none;
+@form-control-success-inverse-hover-border-width:												0px;
+@form-control-success-inverse-hover-border-color:												none;
+@form-control-success-inverse-hover-border-top-width:											@form-control-success-inverse-hover-border-width;
+@form-control-success-inverse-hover-border-top-color:											@form-control-success-inverse-hover-border-color;
+@form-control-success-inverse-hover-border-right-width:											@form-control-success-inverse-hover-border-width;
+@form-control-success-inverse-hover-border-right-color:											@form-control-success-inverse-hover-border-color;
+@form-control-success-inverse-hover-border-bottom-width:										@form-control-success-inverse-hover-border-width;
+@form-control-success-inverse-hover-border-bottom-color:										@form-control-success-inverse-hover-border-color;
+@form-control-success-inverse-hover-border-left-width:											@form-control-success-inverse-hover-border-width;
+@form-control-success-inverse-hover-border-left-color:											@form-control-success-inverse-hover-border-color;
+@form-control-success-inverse-hover-shadow:														none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success, Inverse) State: Focus
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-success-inverse-focus-text-color:													~`color_lightness("@{white}", 0)`;
+@form-control-success-inverse-focus-text-font-family:											@font-family-sans-serif;
+@form-control-success-inverse-focus-text-font-style:											normal;
+@form-control-success-inverse-focus-text-font-weight:											400;
+@form-control-success-inverse-focus-text-transform:												none;
+@form-control-success-inverse-focus-text-shadow:												none;
+@form-control-success-inverse-focus-text-rendering:												optimizelegibility;
+@form-control-success-inverse-focus-background-color:											rgba(255, 255, 255, 0.4);
+@form-control-success-inverse-focus-placeholder-text-color:										~`color_lightness("@{green}", -40)`;
+@form-control-success-inverse-focus-background-gradient-color-top:								none;
+@form-control-success-inverse-focus-background-gradient-color-bottom:							none;
+@form-control-success-inverse-focus-border-width:												0px;
+@form-control-success-inverse-focus-border-color:												none;
+@form-control-success-inverse-focus-border-top-width:											@form-control-success-inverse-focus-border-width;
+@form-control-success-inverse-focus-border-top-color:											@form-control-success-inverse-focus-border-color;
+@form-control-success-inverse-focus-border-right-width:											@form-control-success-inverse-focus-border-width;
+@form-control-success-inverse-focus-border-right-color:											@form-control-success-inverse-focus-border-color;
+@form-control-success-inverse-focus-border-bottom-width:										@form-control-success-inverse-focus-border-width;
+@form-control-success-inverse-focus-border-bottom-color:										@form-control-success-inverse-focus-border-color;
+@form-control-success-inverse-focus-border-left-width:											@form-control-success-inverse-focus-border-width;
+@form-control-success-inverse-focus-border-left-color:											@form-control-success-inverse-focus-border-color;
+@form-control-success-inverse-focus-shadow:														none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Success, Inverse) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-success-inverse-disabled-opacity:													0.5;
+@form-control-success-inverse-disabled-text-color:												@form-control-success-inverse-text-color;
+@form-control-success-inverse-disabled-text-font-family:										@form-control-success-inverse-text-font-family;
+@form-control-success-inverse-disabled-text-font-style:											@form-control-success-inverse-text-font-style;
+@form-control-success-inverse-disabled-text-font-weight:										@form-control-success-inverse-text-font-weight;
+@form-control-success-inverse-disabled-text-transform:											@form-control-success-inverse-text-transform;
+@form-control-success-inverse-disabled-text-shadow:												@form-control-success-inverse-text-shadow;
+@form-control-success-inverse-disabled-text-rendering:											@form-control-success-inverse-text-rendering;
+@form-control-success-inverse-disabled-placeholder-text-color:									@form-control-success-inverse-placeholder-text-color;
+@form-control-success-inverse-disabled-background-color:										@form-control-success-inverse-background-color;
+@form-control-success-inverse-disabled-background-gradient-color-top:							@form-control-success-inverse-background-gradient-color-top;
+@form-control-success-inverse-disabled-background-gradient-color-bottom:						@form-control-success-inverse-background-gradient-color-bottom;
+@form-control-success-inverse-disabled-border-width:											@form-control-success-inverse-border-width;
+@form-control-success-inverse-disabled-border-color:											@form-control-success-inverse-border-color;
+@form-control-success-inverse-disabled-border-top-width:										@form-control-success-inverse-border-top-width;
+@form-control-success-inverse-disabled-border-top-color:										@form-control-success-inverse-border-top-color;
+@form-control-success-inverse-disabled-border-right-width:										@form-control-success-inverse-border-right-width;
+@form-control-success-inverse-disabled-border-right-color:										@form-control-success-inverse-border-right-color;
+@form-control-success-inverse-disabled-border-bottom-width:										@form-control-success-inverse-border-bottom-width;
+@form-control-success-inverse-disabled-border-bottom-color:										@form-control-success-inverse-border-bottom-color;
+@form-control-success-inverse-disabled-border-left-width:										@form-control-success-inverse-border-left-width;
+@form-control-success-inverse-disabled-border-left-color:										@form-control-success-inverse-border-left-color;
+@form-control-success-inverse-disabled-shadow:													@form-control-success-inverse-shadow;
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Error)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error) State: Normal
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-error-text-color:																	~`color_lightness("@{red}", -20)`;
+@form-control-error-text-font-family:															@font-family-sans-serif;
+@form-control-error-text-font-style:															normal;
+@form-control-error-text-font-weight:															400;
+@form-control-error-text-transform:																none;
+@form-control-error-text-shadow:																none;
+@form-control-error-text-rendering:																optimizelegibility;
+@form-control-error-placeholder-text-color:														~`color_lightness("@{red}", 0)`;
+@form-control-error-background-color:															@white;
+@form-control-error-background-gradient-color-top:												none;
+@form-control-error-background-gradient-color-bottom:											none;
+@form-control-error-border-width:																0px;
+@form-control-error-border-color:																none;
+@form-control-error-border-top-width:															@form-control-error-border-width;
+@form-control-error-border-top-color:															@form-control-error-border-color;
+@form-control-error-border-right-width:															@form-control-error-border-width;
+@form-control-error-border-right-color:															@form-control-error-border-color;
+@form-control-error-border-bottom-width:														@form-control-error-border-width;
+@form-control-error-border-bottom-color:														@form-control-error-border-color;
+@form-control-error-border-left-width:															@form-control-error-border-width;
+@form-control-error-border-left-color:															@form-control-error-border-color;
+@form-control-error-shadow:																		0px 0px 0px 1px @red;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error) State: Hover
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-error-hover-text-color:															~`color_lightness("@{red}", -40)`;
+@form-control-error-hover-text-font-family:														@font-family-sans-serif;
+@form-control-error-hover-text-font-style:														normal;
+@form-control-error-hover-text-font-weight:														400;
+@form-control-error-hover-text-transform:														none;
+@form-control-error-hover-text-shadow:															none;
+@form-control-error-hover-text-rendering:														optimizelegibility;
+@form-control-error-hover-placeholder-text-color:												~`color_lightness("@{red}", -10)`;
+@form-control-error-hover-background-color:														@white;
+@form-control-error-hover-background-gradient-color-top:										none;
+@form-control-error-hover-background-gradient-color-bottom:										none;
+@form-control-error-hover-border-width:															0px;
+@form-control-error-hover-border-color:															none;
+@form-control-error-hover-border-top-width:														@form-control-error-hover-border-width;
+@form-control-error-hover-border-top-color:														@form-control-error-hover-border-color;
+@form-control-error-hover-border-right-width:													@form-control-error-hover-border-width;
+@form-control-error-hover-border-right-color:													@form-control-error-hover-border-color;
+@form-control-error-hover-border-bottom-width:													@form-control-error-hover-border-width;
+@form-control-error-hover-border-bottom-color:													@form-control-error-hover-border-color;
+@form-control-error-hover-border-left-width:													@form-control-error-hover-border-width;
+@form-control-error-hover-border-left-color:													@form-control-error-hover-border-color;
+@form-control-error-hover-shadow:																0px 0px 0px 1px @red;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error) State: Focus
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-error-focus-text-color:															~`color_lightness("@{red}", 0)`;
+@form-control-error-focus-text-font-family:														@font-family-sans-serif;
+@form-control-error-focus-text-font-style:														normal;
+@form-control-error-focus-text-font-weight:														400;
+@form-control-error-focus-text-transform:														none;
+@form-control-error-focus-text-shadow:															none;
+@form-control-error-focus-text-rendering:														optimizelegibility;
+@form-control-error-focus-placeholder-text-color:												~`color_lightness("@{red}", 50)`;
+@form-control-error-focus-background-color:														~`color_lightness("@{red}", 98)`;
+@form-control-error-focus-background-gradient-color-top:										none;
+@form-control-error-focus-background-gradient-color-bottom:										none;
+@form-control-error-focus-border-width:															0px;
+@form-control-error-focus-border-color:															none;
+@form-control-error-focus-border-top-width:														@form-control-error-focus-border-width;
+@form-control-error-focus-border-top-color:														@form-control-error-focus-border-color;
+@form-control-error-focus-border-right-width:													@form-control-error-focus-border-width;
+@form-control-error-focus-border-right-color:													@form-control-error-focus-border-color;
+@form-control-error-focus-border-bottom-width:													@form-control-error-focus-border-width;
+@form-control-error-focus-border-bottom-color:													@form-control-error-focus-border-color;
+@form-control-error-focus-border-left-width:													@form-control-error-focus-border-width;
+@form-control-error-focus-border-left-color:													@form-control-error-focus-border-color;
+@form-control-error-focus-shadow:																0px 0px 0px 1px @red;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-error-disabled-opacity:															0.5;
+@form-control-error-disabled-text-color:														@form-control-error-text-color;
+@form-control-error-disabled-text-font-family:													@form-control-error-text-font-family;
+@form-control-error-disabled-text-font-style:													@form-control-error-text-font-style;
+@form-control-error-disabled-text-font-weight:													@form-control-error-text-font-weight;
+@form-control-error-disabled-text-transform:													@form-control-error-text-transform;
+@form-control-error-disabled-text-shadow:														@form-control-error-text-shadow;
+@form-control-error-disabled-text-rendering:													@form-control-error-text-rendering;
+@form-control-error-disabled-placeholder-text-color:											@form-control-error-placeholder-text-color;
+@form-control-error-disabled-background-color:													@form-control-error-background-color;
+@form-control-error-disabled-background-gradient-color-top:										@form-control-error-background-gradient-color-top;
+@form-control-error-disabled-background-gradient-color-bottom:									@form-control-error-background-gradient-color-bottom;
+@form-control-error-disabled-border-width:														@form-control-error-border-width;
+@form-control-error-disabled-border-color:														@form-control-error-border-color;
+@form-control-error-disabled-border-top-width:													@form-control-error-border-top-width;
+@form-control-error-disabled-border-top-color:													@form-control-error-border-top-color;
+@form-control-error-disabled-border-right-width:												@form-control-error-border-right-width;
+@form-control-error-disabled-border-right-color:												@form-control-error-border-right-color;
+@form-control-error-disabled-border-bottom-width:												@form-control-error-border-bottom-width;
+@form-control-error-disabled-border-bottom-color:												@form-control-error-border-bottom-color;
+@form-control-error-disabled-border-left-width:													@form-control-error-border-left-width;
+@form-control-error-disabled-border-left-color:													@form-control-error-border-left-color;
+@form-control-error-disabled-shadow:															@form-control-error-shadow;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Form Control (Error, Inverse)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-control-error-inverse-enabled:															true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error, Inverse) State: Normal
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-error-inverse-text-color:															~`color_lightness("@{white}", 0)`;
+@form-control-error-inverse-text-font-family:													@font-family-sans-serif;
+@form-control-error-inverse-text-font-style:													normal;
+@form-control-error-inverse-text-font-weight:													400;
+@form-control-error-inverse-text-transform:														none;
+@form-control-error-inverse-text-shadow:														none;
+@form-control-error-inverse-text-rendering:														optimizelegibility;
+@form-control-error-inverse-placeholder-text-color:												~`color_lightness("@{red}", -40)`;
+@form-control-error-inverse-background-color:													rgba(255, 255, 255, 0.2);
+@form-control-error-inverse-background-gradient-color-top:										none;
+@form-control-error-inverse-background-gradient-color-bottom:									none;
+@form-control-error-inverse-border-width:														0px;
+@form-control-error-inverse-border-color:														none;
+@form-control-error-inverse-border-top-width:													@form-control-error-inverse-border-width;
+@form-control-error-inverse-border-top-color:													@form-control-error-inverse-border-color;
+@form-control-error-inverse-border-right-width:													@form-control-error-inverse-border-width;
+@form-control-error-inverse-border-right-color:													@form-control-error-inverse-border-color;
+@form-control-error-inverse-border-bottom-width:												@form-control-error-inverse-border-width;
+@form-control-error-inverse-border-bottom-color:												@form-control-error-inverse-border-color;
+@form-control-error-inverse-border-left-width:													@form-control-error-inverse-border-width;
+@form-control-error-inverse-border-left-color:													@form-control-error-inverse-border-color;
+@form-control-error-inverse-shadow:																none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error, Inverse) State: Hover
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-error-inverse-hover-text-color:													~`color_lightness("@{white}", 0)`;
+@form-control-error-inverse-hover-text-font-family:												@font-family-sans-serif;
+@form-control-error-inverse-hover-text-font-style:												normal;
+@form-control-error-inverse-hover-text-font-weight:												400;
+@form-control-error-inverse-hover-text-transform:												none;
+@form-control-error-inverse-hover-text-shadow:													none;
+@form-control-error-inverse-hover-text-rendering:												optimizelegibility;
+@form-control-error-inverse-hover-placeholder-text-color:										~`color_lightness("@{red}", -40)`;
+@form-control-error-inverse-hover-background-color:												rgba(255, 255, 255, 0.25);
+@form-control-error-inverse-hover-background-gradient-color-top:								none;
+@form-control-error-inverse-hover-background-gradient-color-bottom:								none;
+@form-control-error-inverse-hover-border-width:													0px;
+@form-control-error-inverse-hover-border-color:													none;
+@form-control-error-inverse-hover-border-top-width:												@form-control-error-inverse-hover-border-width;
+@form-control-error-inverse-hover-border-top-color:												@form-control-error-inverse-hover-border-color;
+@form-control-error-inverse-hover-border-right-width:											@form-control-error-inverse-hover-border-width;
+@form-control-error-inverse-hover-border-right-color:											@form-control-error-inverse-hover-border-color;
+@form-control-error-inverse-hover-border-bottom-width:											@form-control-error-inverse-hover-border-width;
+@form-control-error-inverse-hover-border-bottom-color:											@form-control-error-inverse-hover-border-color;
+@form-control-error-inverse-hover-border-left-width:											@form-control-error-inverse-hover-border-width;
+@form-control-error-inverse-hover-border-left-color:											@form-control-error-inverse-hover-border-color;
+@form-control-error-inverse-hover-shadow:														none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error, Inverse) State: Focus
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-error-inverse-focus-text-color:													~`color_lightness("@{white}", 0)`;
+@form-control-error-inverse-focus-text-font-family:												@font-family-sans-serif;
+@form-control-error-inverse-focus-text-font-style:												normal;
+@form-control-error-inverse-focus-text-font-weight:												400;
+@form-control-error-inverse-focus-text-transform:												none;
+@form-control-error-inverse-focus-text-shadow:													none;
+@form-control-error-inverse-focus-text-rendering:												optimizelegibility;
+@form-control-error-inverse-focus-background-color:												rgba(255, 255, 255, 0.4);
+@form-control-error-inverse-focus-placeholder-text-color:										~`color_lightness("@{red}", -40)`;
+@form-control-error-inverse-focus-background-gradient-color-top:								none;
+@form-control-error-inverse-focus-background-gradient-color-bottom:								none;
+@form-control-error-inverse-focus-border-width:													0px;
+@form-control-error-inverse-focus-border-color:													none;
+@form-control-error-inverse-focus-border-top-width:												@form-control-error-inverse-focus-border-width;
+@form-control-error-inverse-focus-border-top-color:												@form-control-error-inverse-focus-border-color;
+@form-control-error-inverse-focus-border-right-width:											@form-control-error-inverse-focus-border-width;
+@form-control-error-inverse-focus-border-right-color:											@form-control-error-inverse-focus-border-color;
+@form-control-error-inverse-focus-border-bottom-width:											@form-control-error-inverse-focus-border-width;
+@form-control-error-inverse-focus-border-bottom-color:											@form-control-error-inverse-focus-border-color;
+@form-control-error-inverse-focus-border-left-width:											@form-control-error-inverse-focus-border-width;
+@form-control-error-inverse-focus-border-left-color:											@form-control-error-inverse-focus-border-color;
+@form-control-error-inverse-focus-shadow:														none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Control (Error, Inverse) State: Disabled
+---------------------------------------------------------------------------------------------------- */
+
+@form-control-error-inverse-disabled-opacity:													0.5;
+@form-control-error-inverse-disabled-text-color:												@form-control-error-inverse-text-color;
+@form-control-error-inverse-disabled-text-font-family:											@form-control-error-inverse-text-font-family;
+@form-control-error-inverse-disabled-text-font-style:											@form-control-error-inverse-text-font-style;
+@form-control-error-inverse-disabled-text-font-weight:											@form-control-error-inverse-text-font-weight;
+@form-control-error-inverse-disabled-text-transform:											@form-control-error-inverse-text-transform;
+@form-control-error-inverse-disabled-text-shadow:												@form-control-error-inverse-text-shadow;
+@form-control-error-inverse-disabled-text-rendering:											@form-control-error-inverse-text-rendering;
+@form-control-error-inverse-disabled-placeholder-text-color:									@form-control-error-inverse-placeholder-text-color;
+@form-control-error-inverse-disabled-background-color:											@form-control-error-inverse-background-color;
+@form-control-error-inverse-disabled-background-gradient-color-top:								@form-control-error-inverse-background-gradient-color-top;
+@form-control-error-inverse-disabled-background-gradient-color-bottom:							@form-control-error-inverse-background-gradient-color-bottom;
+@form-control-error-inverse-disabled-border-width:												@form-control-error-inverse-border-width;
+@form-control-error-inverse-disabled-border-color:												@form-control-error-inverse-border-color;
+@form-control-error-inverse-disabled-border-top-width:											@form-control-error-inverse-border-top-width;
+@form-control-error-inverse-disabled-border-top-color:											@form-control-error-inverse-border-top-color;
+@form-control-error-inverse-disabled-border-right-width:										@form-control-error-inverse-border-right-width;
+@form-control-error-inverse-disabled-border-right-color:										@form-control-error-inverse-border-right-color;
+@form-control-error-inverse-disabled-border-bottom-width:										@form-control-error-inverse-border-bottom-width;
+@form-control-error-inverse-disabled-border-bottom-color:										@form-control-error-inverse-border-bottom-color;
+@form-control-error-inverse-disabled-border-left-width:											@form-control-error-inverse-border-left-width;
+@form-control-error-inverse-disabled-border-left-color:											@form-control-error-inverse-border-left-color;
+@form-control-error-inverse-disabled-shadow:													@form-control-error-inverse-shadow;
