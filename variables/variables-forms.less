@@ -60,6 +60,54 @@ Form Responsive Margin Scaling
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
+Form Group
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-group-enabled:																			true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Group Margin
+---------------------------------------------------------------------------------------------------- */
+
+@form-group-margin-top:																			0px;
+@form-group-margin-bottom:																		@base-spacing-unit * 0.5;
+
+@form-group-short-margin-top:																	0px;
+@form-group-short-margin-bottom:																@base-spacing-unit * 0.25;
+
+@form-group-tall-margin-top:																	0px;
+@form-group-tall-margin-bottom:																	@base-spacing-unit * 1.0;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Form Responsive Margin Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-group-margin-top-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
+@form-group-margin-top-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
+@form-group-margin-top-scale-screen-medium:														@base-spacing-unit-screen-medium / @base-spacing-unit;
+@form-group-margin-top-scale-screen-large:														@base-spacing-unit-screen-large / @base-spacing-unit;
+
+@form-group-margin-bottom-scale-screen-mini:													@base-spacing-unit-screen-mini / @base-spacing-unit;
+@form-group-margin-bottom-scale-screen-small:													@base-spacing-unit-screen-small / @base-spacing-unit;
+@form-group-margin-bottom-scale-screen-medium:													@base-spacing-unit-screen-medium / @base-spacing-unit;
+@form-group-margin-bottom-scale-screen-large:													@base-spacing-unit-screen-large / @base-spacing-unit;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
 Label
 
 -------------------------------------------------------------------------------------------------------
@@ -75,33 +123,9 @@ Label
 Label Styling
 ---------------------------------------------------------------------------------------------------- */
 
-@form-label-color:																				~`color_lightness("@{gray}", -50)`;
 @form-label-font-family:																		@font-family-sans-serif;
 @form-label-font-size:																			@body-text-font-size * 1.0;
-@form-label-font-style:																			normal;
-@form-label-font-weight:																		400;
 @form-label-line-height:																		@body-text-line-height * 1.0;
-@form-label-transform:																			none;
-@form-label-shadow:																				none;
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-Label Links
----------------------------------------------------------------------------------------------------- */
-
-@form-label-link-text-color:																	~`color_lightness("@{blue}", 0)`;
-@form-label-link-text-decoration:																none;
-
-@form-label-link-hover-text-color:																~`color_lightness("@{blue}", -20)`;
-@form-label-link-hover-text-decoration:															underline;
-
-@form-label-link-active-text-color:																~`color_lightness("@{blue}", -40)`;
-@form-label-link-active-text-decoration:														none;
-
-@form-label-link-disabled-text-color:															@form-label-link-text-color;
-@form-label-link-disabled-text-decoration:														none;
-@form-label-link-disabled-opacity:																0.5;
 
 
 
@@ -160,29 +184,9 @@ Label Emphasize
 
 // Label Emphasize Styling
 
-@form-label-emphasize-color:																	~`color_lightness("@{gray}", -80)`;
 @form-label-emphasize-font-family:																@form-label-font-family;
 @form-label-emphasize-font-size:																@form-label-font-size;
-@form-label-emphasize-font-style:																@form-label-font-style;
-@form-label-emphasize-font-weight:																500;
 @form-label-emphasize-line-height:																@form-label-line-height;
-@form-label-emphasize-transform:																@form-label-transform;
-@form-label-emphasize-shadow:																	@form-label-shadow;
-
-// Label Emphasize Links
-
-@form-label-emphasize-link-text-color:															@form-label-link-text-color;
-@form-label-emphasize-link-text-decoration:														@form-label-link-text-decoration;
-
-@form-label-emphasize-link-hover-text-color:													@form-label-link-hover-text-color;
-@form-label-emphasize-link-hover-text-decoration:												@form-label-link-hover-text-decoration;
-
-@form-label-emphasize-link-active-text-color:													@form-label-link-active-text-color;
-@form-label-emphasize-link-active-text-decoration:												@form-label-link-active-text-decoration;
-
-@form-label-emphasize-link-disabled-text-color:													@form-label-link-disabled-text-color;
-@form-label-emphasize-link-disabled-text-decoration:											@form-label-link-disabled-text-decoration;
-@form-label-emphasize-link-disabled-opacity:													@form-label-link-disabled-opacity;
 
 
 
@@ -194,29 +198,111 @@ Label Mute
 
 // Label Mute Styling
 
-@form-label-mute-color:																			~`color_lightness("@{gray}", 0)`;
 @form-label-mute-font-family:																	@form-label-font-family;
 @form-label-mute-font-size:																		@form-label-font-size;
-@form-label-mute-font-style:																	@form-label-font-style;
-@form-label-mute-font-weight:																	200;
 @form-label-mute-line-height:																	@form-label-line-height;
-@form-label-mute-transform:																		@form-label-transform;
-@form-label-mute-shadow:																		@form-label-shadow;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Label (Default)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Default) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-default-color:																		~`color_lightness("@{gray}", -50)`;
+@form-label-default-font-style:																	normal;
+@form-label-default-font-weight:																400;
+@form-label-default-transform:																	none;
+@form-label-default-shadow:																		none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Default) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-default-link-text-color:															~`color_lightness("@{blue}", 0)`;
+@form-label-default-link-text-decoration:														none;
+
+@form-label-default-link-hover-text-color:														~`color_lightness("@{blue}", -20)`;
+@form-label-default-link-hover-text-decoration:													underline;
+
+@form-label-default-link-active-text-color:														~`color_lightness("@{blue}", -40)`;
+@form-label-default-link-active-text-decoration:												none;
+
+@form-label-default-link-disabled-text-color:													@form-label-default-link-text-color;
+@form-label-default-link-disabled-text-decoration:												none;
+@form-label-default-link-disabled-opacity:														0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Default) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Label Emphasize Styling
+
+@form-label-default-emphasize-color:															~`color_lightness("@{gray}", -80)`;
+@form-label-default-emphasize-font-style:														@form-label-default-font-style;
+@form-label-default-emphasize-font-weight:														500;
+@form-label-default-emphasize-transform:														@form-label-default-transform;
+@form-label-default-emphasize-shadow:															@form-label-default-shadow;
+
+// Label Emphasize Links
+
+@form-label-default-emphasize-link-text-color:													@form-label-default-link-text-color;
+@form-label-default-emphasize-link-text-decoration:												@form-label-default-link-text-decoration;
+
+@form-label-default-emphasize-link-hover-text-color:											@form-label-default-link-hover-text-color;
+@form-label-default-emphasize-link-hover-text-decoration:										@form-label-default-link-hover-text-decoration;
+
+@form-label-default-emphasize-link-active-text-color:											@form-label-default-link-active-text-color;
+@form-label-default-emphasize-link-active-text-decoration:										@form-label-default-link-active-text-decoration;
+
+@form-label-default-emphasize-link-disabled-text-color:											@form-label-default-link-disabled-text-color;
+@form-label-default-emphasize-link-disabled-text-decoration:									@form-label-default-link-disabled-text-decoration;
+@form-label-default-emphasize-link-disabled-opacity:											@form-label-default-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Default) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Label Mute Styling
+
+@form-label-default-mute-color:																	~`color_lightness("@{gray}", 0)`;
+@form-label-default-mute-font-style:															@form-label-default-font-style;
+@form-label-default-mute-font-weight:															200;
+@form-label-default-mute-transform:																@form-label-default-transform;
+@form-label-default-mute-shadow:																@form-label-default-shadow;
 
 // Label Mute Links
 
-@form-label-mute-link-text-color:																@form-label-link-text-color;
-@form-label-mute-link-text-decoration:															@form-label-link-text-decoration;
+@form-label-default-mute-link-text-color:														@form-label-default-link-text-color;
+@form-label-default-mute-link-text-decoration:													@form-label-default-link-text-decoration;
 
-@form-label-mute-link-hover-text-color:															@form-label-link-hover-text-color;
-@form-label-mute-link-hover-text-decoration:													@form-label-link-hover-text-decoration;
+@form-label-default-mute-link-hover-text-color:													@form-label-default-link-hover-text-color;
+@form-label-default-mute-link-hover-text-decoration:											@form-label-default-link-hover-text-decoration;
 
-@form-label-mute-link-active-text-color:														@form-label-link-active-text-color;
-@form-label-mute-link-active-text-decoration:													@form-label-link-active-text-decoration;
+@form-label-default-mute-link-active-text-color:												@form-label-default-link-active-text-color;
+@form-label-default-mute-link-active-text-decoration:											@form-label-default-link-active-text-decoration;
 
-@form-label-mute-link-disabled-text-color:														@form-label-link-disabled-text-color;
-@form-label-mute-link-disabled-text-decoration:													@form-label-link-disabled-text-decoration;
-@form-label-mute-link-disabled-opacity:															@form-label-link-disabled-opacity;
+@form-label-default-mute-link-disabled-text-color:												@form-label-default-link-disabled-text-color;
+@form-label-default-mute-link-disabled-text-decoration:											@form-label-default-link-disabled-text-decoration;
+@form-label-default-mute-link-disabled-opacity:													@form-label-default-link-disabled-opacity;
 
 
 
@@ -224,27 +310,27 @@ Label Mute
 Label Inverse
 ---------------------------------------------------------------------------------------------------- */
 
-@form-label-inverse-enabled:																	@body-text-inverse-enabled;
+@form-label-default-inverse-enabled:															@body-text-inverse-enabled;
 
 // Label Inverse Styling
 
-@form-label-inverse-color:																		~`color_lightness("@{gray}", -40)`;
-@form-label-inverse-shadow:																		@form-label-shadow;
+@form-label-default-inverse-color:																~`color_lightness("@{gray}", -40)`;
+@form-label-default-inverse-shadow:																@form-label-default-shadow;
 
 // Label Inverse Links
 
-@form-label-inverse-link-text-color:															@form-label-link-text-color;
-@form-label-inverse-link-text-decoration:														@form-label-link-text-decoration;
+@form-label-default-inverse-link-text-color:													@form-label-default-link-text-color;
+@form-label-default-inverse-link-text-decoration:												@form-label-default-link-text-decoration;
 
-@form-label-inverse-link-hover-text-color:														@form-label-link-hover-text-color;
-@form-label-inverse-link-hover-text-decoration:													@form-label-link-hover-text-decoration;
+@form-label-default-inverse-link-hover-text-color:												@form-label-default-link-hover-text-color;
+@form-label-default-inverse-link-hover-text-decoration:											@form-label-default-link-hover-text-decoration;
 
-@form-label-inverse-link-active-text-color:														@form-label-link-active-text-color;
-@form-label-inverse-link-active-text-decoration:												@form-label-link-active-text-decoration;
+@form-label-default-inverse-link-active-text-color:												@form-label-default-link-active-text-color;
+@form-label-default-inverse-link-active-text-decoration:										@form-label-default-link-active-text-decoration;
 
-@form-label-inverse-link-disabled-text-color:													@form-label-link-disabled-text-color;
-@form-label-inverse-link-disabled-text-decoration:												@form-label-link-disabled-text-decoration;
-@form-label-inverse-link-disabled-opacity:														@form-label-link-disabled-opacity;
+@form-label-default-inverse-link-disabled-text-color:											@form-label-default-link-disabled-text-color;
+@form-label-default-inverse-link-disabled-text-decoration:										@form-label-default-link-disabled-text-decoration;
+@form-label-default-inverse-link-disabled-opacity:												@form-label-default-link-disabled-opacity;
 
 
 
@@ -252,23 +338,23 @@ Label Inverse
 Label Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
-@form-label-inverse-emphasize-color:															~`color_lightness("@{gray}", -20)`;
-@form-label-inverse-emphasize-shadow:															@form-label-inverse-shadow;
+@form-label-default-inverse-emphasize-color:													~`color_lightness("@{gray}", -20)`;
+@form-label-default-inverse-emphasize-shadow:													@form-label-default-inverse-shadow;
 
 // Label Emphasize Links
 
-@form-label-inverse-emphasize-link-text-color:													@form-label-inverse-link-text-color;
-@form-label-inverse-emphasize-link-text-decoration:												@form-label-inverse-link-text-decoration;
+@form-label-default-inverse-emphasize-link-text-color:											@form-label-default-inverse-link-text-color;
+@form-label-default-inverse-emphasize-link-text-decoration:										@form-label-default-inverse-link-text-decoration;
 
-@form-label-inverse-emphasize-link-hover-text-color:											@form-label-inverse-link-hover-text-color;
-@form-label-inverse-emphasize-link-hover-text-decoration:										@form-label-inverse-link-hover-text-decoration;
+@form-label-default-inverse-emphasize-link-hover-text-color:									@form-label-default-inverse-link-hover-text-color;
+@form-label-default-inverse-emphasize-link-hover-text-decoration:								@form-label-default-inverse-link-hover-text-decoration;
 
-@form-label-inverse-emphasize-link-active-text-color:											@form-label-inverse-link-active-text-color;
-@form-label-inverse-emphasize-link-active-text-decoration:										@form-label-inverse-link-active-text-decoration;
+@form-label-default-inverse-emphasize-link-active-text-color:									@form-label-default-inverse-link-active-text-color;
+@form-label-default-inverse-emphasize-link-active-text-decoration:								@form-label-default-inverse-link-active-text-decoration;
 
-@form-label-inverse-emphasize-link-disabled-text-color:											@form-label-inverse-link-disabled-text-color;
-@form-label-inverse-emphasize-link-disabled-text-decoration:									@form-label-inverse-link-disabled-text-decoration;
-@form-label-inverse-emphasize-link-disabled-opacity:											@form-label-inverse-link-disabled-opacity;
+@form-label-default-inverse-emphasize-link-disabled-text-color:									@form-label-default-inverse-link-disabled-text-color;
+@form-label-default-inverse-emphasize-link-disabled-text-decoration:							@form-label-default-inverse-link-disabled-text-decoration;
+@form-label-default-inverse-emphasize-link-disabled-opacity:									@form-label-default-inverse-link-disabled-opacity;
 
 
 
@@ -276,23 +362,1015 @@ Label Inverse Emphasize
 Label Inverse mute
 ---------------------------------------------------------------------------------------------------- */
 
-@form-label-inverse-mute-color:																	~`color_lightness("@{gray}", -60)`;
-@form-label-inverse-mute-shadow:																@form-label-inverse-shadow;
+@form-label-default-inverse-mute-color:															~`color_lightness("@{gray}", -60)`;
+@form-label-default-inverse-mute-shadow:														@form-label-default-inverse-shadow;
 
 // Label mute Links
 
-@form-label-inverse-mute-link-text-color:														@form-label-inverse-link-text-color;
-@form-label-inverse-mute-link-text-decoration:													@form-label-inverse-link-text-decoration;
+@form-label-default-inverse-mute-link-text-color:												@form-label-default-inverse-link-text-color;
+@form-label-default-inverse-mute-link-text-decoration:											@form-label-default-inverse-link-text-decoration;
 
-@form-label-inverse-mute-link-hover-text-color:													@form-label-inverse-link-hover-text-color;
-@form-label-inverse-mute-link-hover-text-decoration:											@form-label-inverse-link-hover-text-decoration;
+@form-label-default-inverse-mute-link-hover-text-color:											@form-label-default-inverse-link-hover-text-color;
+@form-label-default-inverse-mute-link-hover-text-decoration:									@form-label-default-inverse-link-hover-text-decoration;
 
-@form-label-inverse-mute-link-active-text-color:												@form-label-inverse-link-active-text-color;
-@form-label-inverse-mute-link-active-text-decoration:											@form-label-inverse-link-active-text-decoration;
+@form-label-default-inverse-mute-link-active-text-color:										@form-label-default-inverse-link-active-text-color;
+@form-label-default-inverse-mute-link-active-text-decoration:									@form-label-default-inverse-link-active-text-decoration;
 
-@form-label-inverse-mute-link-disabled-text-color:												@form-label-inverse-link-disabled-text-color;
-@form-label-inverse-mute-link-disabled-text-decoration:											@form-label-inverse-link-disabled-text-decoration;
-@form-label-inverse-mute-link-disabled-opacity:													@form-label-inverse-link-disabled-opacity;
+@form-label-default-inverse-mute-link-disabled-text-color:										@form-label-default-inverse-link-disabled-text-color;
+@form-label-default-inverse-mute-link-disabled-text-decoration:									@form-label-default-inverse-link-disabled-text-decoration;
+@form-label-default-inverse-mute-link-disabled-opacity:											@form-label-default-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Label (Success)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Success) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-success-color:																		~`color_lightness("@{green}", 0)`;
+@form-label-success-font-style:																	normal;
+@form-label-success-font-weight:																@form-label-default-font-weight;
+@form-label-success-transform:																	none;
+@form-label-success-shadow:																		none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Success) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-success-link-text-color:															~`color_lightness("@{green}", 0)`;
+@form-label-success-link-text-decoration:														none;
+
+@form-label-success-link-hover-text-color:														~`color_lightness("@{green}", -20)`;
+@form-label-success-link-hover-text-decoration:													underline;
+
+@form-label-success-link-active-text-color:														~`color_lightness("@{green}", -40)`;
+@form-label-success-link-active-text-decoration:												none;
+
+@form-label-success-link-disabled-text-color:													@form-label-success-link-text-color;
+@form-label-success-link-disabled-text-decoration:												none;
+@form-label-success-link-disabled-opacity:														0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Success) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Label Emphasize Styling
+
+@form-label-success-emphasize-color:															~`color_lightness("@{green}", -20)`;
+@form-label-success-emphasize-font-style:														@form-label-success-font-style;
+@form-label-success-emphasize-font-weight:														@form-label-default-emphasize-font-weight;
+@form-label-success-emphasize-transform:														@form-label-success-transform;
+@form-label-success-emphasize-shadow:															@form-label-success-shadow;
+
+// Label Emphasize Links
+
+@form-label-success-emphasize-link-text-color:													@form-label-success-link-text-color;
+@form-label-success-emphasize-link-text-decoration:												@form-label-success-link-text-decoration;
+
+@form-label-success-emphasize-link-hover-text-color:											@form-label-success-link-hover-text-color;
+@form-label-success-emphasize-link-hover-text-decoration:										@form-label-success-link-hover-text-decoration;
+
+@form-label-success-emphasize-link-active-text-color:											@form-label-success-link-active-text-color;
+@form-label-success-emphasize-link-active-text-decoration:										@form-label-success-link-active-text-decoration;
+
+@form-label-success-emphasize-link-disabled-text-color:											@form-label-success-link-disabled-text-color;
+@form-label-success-emphasize-link-disabled-text-decoration:									@form-label-success-link-disabled-text-decoration;
+@form-label-success-emphasize-link-disabled-opacity:											@form-label-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Success) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Label Mute Styling
+
+@form-label-success-mute-color:																	~`color_lightness("@{green}", 20)`;
+@form-label-success-mute-font-style:															@form-label-success-font-style;
+@form-label-success-mute-font-weight:															@form-label-default-mute-font-weight;
+@form-label-success-mute-transform:																@form-label-success-transform;
+@form-label-success-mute-shadow:																@form-label-success-shadow;
+
+// Label Mute Links
+
+@form-label-success-mute-link-text-color:														@form-label-success-link-text-color;
+@form-label-success-mute-link-text-decoration:													@form-label-success-link-text-decoration;
+
+@form-label-success-mute-link-hover-text-color:													@form-label-success-link-hover-text-color;
+@form-label-success-mute-link-hover-text-decoration:											@form-label-success-link-hover-text-decoration;
+
+@form-label-success-mute-link-active-text-color:												@form-label-success-link-active-text-color;
+@form-label-success-mute-link-active-text-decoration:											@form-label-success-link-active-text-decoration;
+
+@form-label-success-mute-link-disabled-text-color:												@form-label-success-link-disabled-text-color;
+@form-label-success-mute-link-disabled-text-decoration:											@form-label-success-link-disabled-text-decoration;
+@form-label-success-mute-link-disabled-opacity:													@form-label-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-success-inverse-enabled:															@body-text-inverse-enabled;
+
+// Label Inverse Styling
+
+@form-label-success-inverse-color:																~`color_lightness("@{green}", 0)`;
+@form-label-success-inverse-shadow:																@form-label-success-shadow;
+
+// Label Inverse Links
+
+@form-label-success-inverse-link-text-color:													@form-label-success-link-text-color;
+@form-label-success-inverse-link-text-decoration:												@form-label-success-link-text-decoration;
+
+@form-label-success-inverse-link-hover-text-color:												@form-label-success-link-hover-text-color;
+@form-label-success-inverse-link-hover-text-decoration:											@form-label-success-link-hover-text-decoration;
+
+@form-label-success-inverse-link-active-text-color:												@form-label-success-link-active-text-color;
+@form-label-success-inverse-link-active-text-decoration:										@form-label-success-link-active-text-decoration;
+
+@form-label-success-inverse-link-disabled-text-color:											@form-label-success-link-disabled-text-color;
+@form-label-success-inverse-link-disabled-text-decoration:										@form-label-success-link-disabled-text-decoration;
+@form-label-success-inverse-link-disabled-opacity:												@form-label-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-success-inverse-emphasize-color:													~`color_lightness("@{green}", -20)`;
+@form-label-success-inverse-emphasize-shadow:													@form-label-success-inverse-shadow;
+
+// Label Emphasize Links
+
+@form-label-success-inverse-emphasize-link-text-color:											@form-label-success-inverse-link-text-color;
+@form-label-success-inverse-emphasize-link-text-decoration:										@form-label-success-inverse-link-text-decoration;
+
+@form-label-success-inverse-emphasize-link-hover-text-color:									@form-label-success-inverse-link-hover-text-color;
+@form-label-success-inverse-emphasize-link-hover-text-decoration:								@form-label-success-inverse-link-hover-text-decoration;
+
+@form-label-success-inverse-emphasize-link-active-text-color:									@form-label-success-inverse-link-active-text-color;
+@form-label-success-inverse-emphasize-link-active-text-decoration:								@form-label-success-inverse-link-active-text-decoration;
+
+@form-label-success-inverse-emphasize-link-disabled-text-color:									@form-label-success-inverse-link-disabled-text-color;
+@form-label-success-inverse-emphasize-link-disabled-text-decoration:							@form-label-success-inverse-link-disabled-text-decoration;
+@form-label-success-inverse-emphasize-link-disabled-opacity:									@form-label-success-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-success-inverse-mute-color:															~`color_lightness("@{green}", 20)`;
+@form-label-success-inverse-mute-shadow:														@form-label-success-inverse-shadow;
+
+// Label mute Links
+
+@form-label-success-inverse-mute-link-text-color:												@form-label-success-inverse-link-text-color;
+@form-label-success-inverse-mute-link-text-decoration:											@form-label-success-inverse-link-text-decoration;
+
+@form-label-success-inverse-mute-link-hover-text-color:											@form-label-success-inverse-link-hover-text-color;
+@form-label-success-inverse-mute-link-hover-text-decoration:									@form-label-success-inverse-link-hover-text-decoration;
+
+@form-label-success-inverse-mute-link-active-text-color:										@form-label-success-inverse-link-active-text-color;
+@form-label-success-inverse-mute-link-active-text-decoration:									@form-label-success-inverse-link-active-text-decoration;
+
+@form-label-success-inverse-mute-link-disabled-text-color:										@form-label-success-inverse-link-disabled-text-color;
+@form-label-success-inverse-mute-link-disabled-text-decoration:									@form-label-success-inverse-link-disabled-text-decoration;
+@form-label-success-inverse-mute-link-disabled-opacity:											@form-label-success-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Label (Error)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Error) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-error-color:																		~`color_lightness("@{red}", 0)`;
+@form-label-error-font-style:																	normal;
+@form-label-error-font-weight:																	@form-label-default-font-weight;
+@form-label-error-transform:																	none;
+@form-label-error-shadow:																		none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Error) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-error-link-text-color:																~`color_lightness("@{red}", 0)`;
+@form-label-error-link-text-decoration:															none;
+
+@form-label-error-link-hover-text-color:														~`color_lightness("@{red}", -20)`;
+@form-label-error-link-hover-text-decoration:													underline;
+
+@form-label-error-link-active-text-color:														~`color_lightness("@{red}", -40)`;
+@form-label-error-link-active-text-decoration:													none;
+
+@form-label-error-link-disabled-text-color:														@form-label-error-link-text-color;
+@form-label-error-link-disabled-text-decoration:												none;
+@form-label-error-link-disabled-opacity:														0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Error) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Label Emphasize Styling
+
+@form-label-error-emphasize-color:																~`color_lightness("@{red}", -20)`;
+@form-label-error-emphasize-font-style:															@form-label-error-font-style;
+@form-label-error-emphasize-font-weight:														@form-label-default-emphasize-font-weight;
+@form-label-error-emphasize-transform:															@form-label-error-transform;
+@form-label-error-emphasize-shadow:																@form-label-error-shadow;
+
+// Label Emphasize Links
+
+@form-label-error-emphasize-link-text-color:													@form-label-error-link-text-color;
+@form-label-error-emphasize-link-text-decoration:												@form-label-error-link-text-decoration;
+
+@form-label-error-emphasize-link-hover-text-color:												@form-label-error-link-hover-text-color;
+@form-label-error-emphasize-link-hover-text-decoration:											@form-label-error-link-hover-text-decoration;
+
+@form-label-error-emphasize-link-active-text-color:												@form-label-error-link-active-text-color;
+@form-label-error-emphasize-link-active-text-decoration:										@form-label-error-link-active-text-decoration;
+
+@form-label-error-emphasize-link-disabled-text-color:											@form-label-error-link-disabled-text-color;
+@form-label-error-emphasize-link-disabled-text-decoration:										@form-label-error-link-disabled-text-decoration;
+@form-label-error-emphasize-link-disabled-opacity:												@form-label-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label (Error) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Label Mute Styling
+
+@form-label-error-mute-color:																	~`color_lightness("@{red}", 20)`;
+@form-label-error-mute-font-style:																@form-label-error-font-style;
+@form-label-error-mute-font-weight:																@form-label-default-mute-font-weight;
+@form-label-error-mute-transform:																@form-label-error-transform;
+@form-label-error-mute-shadow:																	@form-label-error-shadow;
+
+// Label Mute Links
+
+@form-label-error-mute-link-text-color:															@form-label-error-link-text-color;
+@form-label-error-mute-link-text-decoration:													@form-label-error-link-text-decoration;
+
+@form-label-error-mute-link-hover-text-color:													@form-label-error-link-hover-text-color;
+@form-label-error-mute-link-hover-text-decoration:												@form-label-error-link-hover-text-decoration;
+
+@form-label-error-mute-link-active-text-color:													@form-label-error-link-active-text-color;
+@form-label-error-mute-link-active-text-decoration:												@form-label-error-link-active-text-decoration;
+
+@form-label-error-mute-link-disabled-text-color:												@form-label-error-link-disabled-text-color;
+@form-label-error-mute-link-disabled-text-decoration:											@form-label-error-link-disabled-text-decoration;
+@form-label-error-mute-link-disabled-opacity:													@form-label-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-error-inverse-enabled:																@body-text-inverse-enabled;
+
+// Label Inverse Styling
+
+@form-label-error-inverse-color:																~`color_lightness("@{red}", 0)`;
+@form-label-error-inverse-shadow:																@form-label-error-shadow;
+
+// Label Inverse Links
+
+@form-label-error-inverse-link-text-color:														@form-label-error-link-text-color;
+@form-label-error-inverse-link-text-decoration:													@form-label-error-link-text-decoration;
+
+@form-label-error-inverse-link-hover-text-color:												@form-label-error-link-hover-text-color;
+@form-label-error-inverse-link-hover-text-decoration:											@form-label-error-link-hover-text-decoration;
+
+@form-label-error-inverse-link-active-text-color:												@form-label-error-link-active-text-color;
+@form-label-error-inverse-link-active-text-decoration:											@form-label-error-link-active-text-decoration;
+
+@form-label-error-inverse-link-disabled-text-color:												@form-label-error-link-disabled-text-color;
+@form-label-error-inverse-link-disabled-text-decoration:										@form-label-error-link-disabled-text-decoration;
+@form-label-error-inverse-link-disabled-opacity:												@form-label-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-error-inverse-emphasize-color:														~`color_lightness("@{red}", -20)`;
+@form-label-error-inverse-emphasize-shadow:														@form-label-error-inverse-shadow;
+
+// Label Emphasize Links
+
+@form-label-error-inverse-emphasize-link-text-color:											@form-label-error-inverse-link-text-color;
+@form-label-error-inverse-emphasize-link-text-decoration:										@form-label-error-inverse-link-text-decoration;
+
+@form-label-error-inverse-emphasize-link-hover-text-color:										@form-label-error-inverse-link-hover-text-color;
+@form-label-error-inverse-emphasize-link-hover-text-decoration:									@form-label-error-inverse-link-hover-text-decoration;
+
+@form-label-error-inverse-emphasize-link-active-text-color:										@form-label-error-inverse-link-active-text-color;
+@form-label-error-inverse-emphasize-link-active-text-decoration:								@form-label-error-inverse-link-active-text-decoration;
+
+@form-label-error-inverse-emphasize-link-disabled-text-color:									@form-label-error-inverse-link-disabled-text-color;
+@form-label-error-inverse-emphasize-link-disabled-text-decoration:								@form-label-error-inverse-link-disabled-text-decoration;
+@form-label-error-inverse-emphasize-link-disabled-opacity:										@form-label-error-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Label Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-label-error-inverse-mute-color:															~`color_lightness("@{red}", 20)`;
+@form-label-error-inverse-mute-shadow:															@form-label-error-inverse-shadow;
+
+// Label mute Links
+
+@form-label-error-inverse-mute-link-text-color:													@form-label-error-inverse-link-text-color;
+@form-label-error-inverse-mute-link-text-decoration:											@form-label-error-inverse-link-text-decoration;
+
+@form-label-error-inverse-mute-link-hover-text-color:											@form-label-error-inverse-link-hover-text-color;
+@form-label-error-inverse-mute-link-hover-text-decoration:										@form-label-error-inverse-link-hover-text-decoration;
+
+@form-label-error-inverse-mute-link-active-text-color:											@form-label-error-inverse-link-active-text-color;
+@form-label-error-inverse-mute-link-active-text-decoration:										@form-label-error-inverse-link-active-text-decoration;
+
+@form-label-error-inverse-mute-link-disabled-text-color:										@form-label-error-inverse-link-disabled-text-color;
+@form-label-error-inverse-mute-link-disabled-text-decoration:									@form-label-error-inverse-link-disabled-text-decoration;
+@form-label-error-inverse-mute-link-disabled-opacity:											@form-label-error-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Help Block
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-help-block-enabled:																		true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-font-family:																	@font-family-sans-serif;
+@form-help-block-font-size:																		@small-text-font-size * 1.0;
+@form-help-block-line-height:																	@small-text-line-height * 1.0;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Margin
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-margin-top:																	@form-label-margin-bottom * 0.5;
+@form-help-block-margin-bottom:																	0px;
+
+@form-help-block-short-margin-top:																@form-label-short-margin-bottom * 0.5;
+@form-help-block-short-margin-bottom:															0px;
+
+@form-help-block-tall-margin-top:																@form-label-tall-margin-bottom * 0.5;
+@form-help-block-tall-margin-bottom:															0px;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Responsive Text Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-font-size-scale-screen-mini:													@small-text-font-size-scale-screen-mini;
+@form-help-block-font-size-scale-screen-small:													@small-text-font-size-scale-screen-small;
+@form-help-block-font-size-scale-screen-medium:													@small-text-font-size-scale-screen-medium;
+@form-help-block-font-size-scale-screen-large:													@small-text-font-size-scale-screen-large;
+
+@form-help-block-line-height-scale-screen-mini:													@form-help-block-font-size-scale-screen-mini;
+@form-help-block-line-height-scale-screen-small:												@form-help-block-font-size-scale-screen-small;
+@form-help-block-line-height-scale-screen-medium:												@form-help-block-font-size-scale-screen-medium;
+@form-help-block-line-height-scale-screen-large:												@form-help-block-font-size-scale-screen-large;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Responsive Margin Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-margin-top-scale-screen-mini:													@form-label-margin-top-scale-screen-mini;
+@form-help-block-margin-top-scale-screen-small:													@form-label-margin-top-scale-screen-small;
+@form-help-block-margin-top-scale-screen-medium:												@form-label-margin-top-scale-screen-medium;
+@form-help-block-margin-top-scale-screen-large:													@form-label-margin-top-scale-screen-large;
+
+@form-help-block-margin-bottom-scale-screen-mini:												@form-label-margin-bottom-scale-screen-mini;
+@form-help-block-margin-bottom-scale-screen-small:												@form-label-margin-bottom-scale-screen-small;
+@form-help-block-margin-bottom-scale-screen-medium:												@form-label-margin-bottom-scale-screen-medium;
+@form-help-block-margin-bottom-scale-screen-large:												@form-label-margin-bottom-scale-screen-large;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-emphasize-enabled:																@body-text-emphasize-enabled;
+
+// Help Block Emphasize Styling
+
+@form-help-block-emphasize-font-family:															@form-help-block-font-family;
+@form-help-block-emphasize-font-size:															@form-help-block-font-size;
+@form-help-block-emphasize-line-height:															@form-help-block-line-height;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-mute-enabled:																	@body-text-mute-enabled;
+
+// Help Block Mute Styling
+
+@form-help-block-mute-font-family:																@form-help-block-font-family;
+@form-help-block-mute-font-size:																@form-help-block-font-size;
+@form-help-block-mute-line-height:																@form-help-block-line-height;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Help Block (Default)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Default) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-default-color:																	~`color_lightness("@{gray}", 0)`;
+@form-help-block-default-font-style:															normal;
+@form-help-block-default-font-weight:															400;
+@form-help-block-default-transform:																none;
+@form-help-block-default-shadow:																none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Default) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-default-link-text-color:														~`color_lightness("@{blue}", 0)`;
+@form-help-block-default-link-text-decoration:													none;
+
+@form-help-block-default-link-hover-text-color:													~`color_lightness("@{blue}", -20)`;
+@form-help-block-default-link-hover-text-decoration:											underline;
+
+@form-help-block-default-link-active-text-color:												~`color_lightness("@{blue}", -40)`;
+@form-help-block-default-link-active-text-decoration:											none;
+
+@form-help-block-default-link-disabled-text-color:												@form-help-block-default-link-text-color;
+@form-help-block-default-link-disabled-text-decoration:											none;
+@form-help-block-default-link-disabled-opacity:													0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Default) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Help Block Emphasize Styling
+
+@form-help-block-default-emphasize-color:														~`color_lightness("@{gray}", -80)`;
+@form-help-block-default-emphasize-font-style:													@form-help-block-default-font-style;
+@form-help-block-default-emphasize-font-weight:													500;
+@form-help-block-default-emphasize-transform:													@form-help-block-default-transform;
+@form-help-block-default-emphasize-shadow:														@form-help-block-default-shadow;
+
+// Help Block Emphasize Links
+
+@form-help-block-default-emphasize-link-text-color:												@form-help-block-default-link-text-color;
+@form-help-block-default-emphasize-link-text-decoration:										@form-help-block-default-link-text-decoration;
+
+@form-help-block-default-emphasize-link-hover-text-color:										@form-help-block-default-link-hover-text-color;
+@form-help-block-default-emphasize-link-hover-text-decoration:									@form-help-block-default-link-hover-text-decoration;
+
+@form-help-block-default-emphasize-link-active-text-color:										@form-help-block-default-link-active-text-color;
+@form-help-block-default-emphasize-link-active-text-decoration:									@form-help-block-default-link-active-text-decoration;
+
+@form-help-block-default-emphasize-link-disabled-text-color:									@form-help-block-default-link-disabled-text-color;
+@form-help-block-default-emphasize-link-disabled-text-decoration:								@form-help-block-default-link-disabled-text-decoration;
+@form-help-block-default-emphasize-link-disabled-opacity:										@form-help-block-default-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Default) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Help Block Mute Styling
+
+@form-help-block-default-mute-color:															~`color_lightness("@{gray}", 0)`;
+@form-help-block-default-mute-font-style:														@form-help-block-default-font-style;
+@form-help-block-default-mute-font-weight:														200;
+@form-help-block-default-mute-transform:														@form-help-block-default-transform;
+@form-help-block-default-mute-shadow:															@form-help-block-default-shadow;
+
+// Help Block Mute Links
+
+@form-help-block-default-mute-link-text-color:													@form-help-block-default-link-text-color;
+@form-help-block-default-mute-link-text-decoration:												@form-help-block-default-link-text-decoration;
+
+@form-help-block-default-mute-link-hover-text-color:											@form-help-block-default-link-hover-text-color;
+@form-help-block-default-mute-link-hover-text-decoration:										@form-help-block-default-link-hover-text-decoration;
+
+@form-help-block-default-mute-link-active-text-color:											@form-help-block-default-link-active-text-color;
+@form-help-block-default-mute-link-active-text-decoration:										@form-help-block-default-link-active-text-decoration;
+
+@form-help-block-default-mute-link-disabled-text-color:											@form-help-block-default-link-disabled-text-color;
+@form-help-block-default-mute-link-disabled-text-decoration:									@form-help-block-default-link-disabled-text-decoration;
+@form-help-block-default-mute-link-disabled-opacity:											@form-help-block-default-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-default-inverse-enabled:														@body-text-inverse-enabled;
+
+// Help Block Inverse Styling
+
+@form-help-block-default-inverse-color:															~`color_lightness("@{gray}", -40)`;
+@form-help-block-default-inverse-shadow:														@form-help-block-default-shadow;
+
+// Help Block Inverse Links
+
+@form-help-block-default-inverse-link-text-color:												@form-help-block-default-link-text-color;
+@form-help-block-default-inverse-link-text-decoration:											@form-help-block-default-link-text-decoration;
+
+@form-help-block-default-inverse-link-hover-text-color:											@form-help-block-default-link-hover-text-color;
+@form-help-block-default-inverse-link-hover-text-decoration:									@form-help-block-default-link-hover-text-decoration;
+
+@form-help-block-default-inverse-link-active-text-color:										@form-help-block-default-link-active-text-color;
+@form-help-block-default-inverse-link-active-text-decoration:									@form-help-block-default-link-active-text-decoration;
+
+@form-help-block-default-inverse-link-disabled-text-color:										@form-help-block-default-link-disabled-text-color;
+@form-help-block-default-inverse-link-disabled-text-decoration:									@form-help-block-default-link-disabled-text-decoration;
+@form-help-block-default-inverse-link-disabled-opacity:											@form-help-block-default-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-default-inverse-emphasize-color:												~`color_lightness("@{gray}", -20)`;
+@form-help-block-default-inverse-emphasize-shadow:												@form-help-block-default-inverse-shadow;
+
+// Help Block Emphasize Links
+
+@form-help-block-default-inverse-emphasize-link-text-color:										@form-help-block-default-inverse-link-text-color;
+@form-help-block-default-inverse-emphasize-link-text-decoration:								@form-help-block-default-inverse-link-text-decoration;
+
+@form-help-block-default-inverse-emphasize-link-hover-text-color:								@form-help-block-default-inverse-link-hover-text-color;
+@form-help-block-default-inverse-emphasize-link-hover-text-decoration:							@form-help-block-default-inverse-link-hover-text-decoration;
+
+@form-help-block-default-inverse-emphasize-link-active-text-color:								@form-help-block-default-inverse-link-active-text-color;
+@form-help-block-default-inverse-emphasize-link-active-text-decoration:							@form-help-block-default-inverse-link-active-text-decoration;
+
+@form-help-block-default-inverse-emphasize-link-disabled-text-color:							@form-help-block-default-inverse-link-disabled-text-color;
+@form-help-block-default-inverse-emphasize-link-disabled-text-decoration:						@form-help-block-default-inverse-link-disabled-text-decoration;
+@form-help-block-default-inverse-emphasize-link-disabled-opacity:								@form-help-block-default-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-default-inverse-mute-color:													~`color_lightness("@{gray}", -60)`;
+@form-help-block-default-inverse-mute-shadow:													@form-help-block-default-inverse-shadow;
+
+// Help Block mute Links
+
+@form-help-block-default-inverse-mute-link-text-color:											@form-help-block-default-inverse-link-text-color;
+@form-help-block-default-inverse-mute-link-text-decoration:										@form-help-block-default-inverse-link-text-decoration;
+
+@form-help-block-default-inverse-mute-link-hover-text-color:									@form-help-block-default-inverse-link-hover-text-color;
+@form-help-block-default-inverse-mute-link-hover-text-decoration:								@form-help-block-default-inverse-link-hover-text-decoration;
+
+@form-help-block-default-inverse-mute-link-active-text-color:									@form-help-block-default-inverse-link-active-text-color;
+@form-help-block-default-inverse-mute-link-active-text-decoration:								@form-help-block-default-inverse-link-active-text-decoration;
+
+@form-help-block-default-inverse-mute-link-disabled-text-color:									@form-help-block-default-inverse-link-disabled-text-color;
+@form-help-block-default-inverse-mute-link-disabled-text-decoration:							@form-help-block-default-inverse-link-disabled-text-decoration;
+@form-help-block-default-inverse-mute-link-disabled-opacity:									@form-help-block-default-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Help Block (Success)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Success) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-success-color:																	~`color_lightness("@{green}", 0)`;
+@form-help-block-success-font-style:															normal;
+@form-help-block-success-font-weight:															@form-help-block-default-font-weight;
+@form-help-block-success-transform:																none;
+@form-help-block-success-shadow:																none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Success) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-success-link-text-color:														~`color_lightness("@{green}", 0)`;
+@form-help-block-success-link-text-decoration:													none;
+
+@form-help-block-success-link-hover-text-color:													~`color_lightness("@{green}", -20)`;
+@form-help-block-success-link-hover-text-decoration:											underline;
+
+@form-help-block-success-link-active-text-color:												~`color_lightness("@{green}", -40)`;
+@form-help-block-success-link-active-text-decoration:											none;
+
+@form-help-block-success-link-disabled-text-color:												@form-help-block-success-link-text-color;
+@form-help-block-success-link-disabled-text-decoration:											none;
+@form-help-block-success-link-disabled-opacity:													0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Success) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Help Block Emphasize Styling
+
+@form-help-block-success-emphasize-color:														~`color_lightness("@{green}", -20)`;
+@form-help-block-success-emphasize-font-style:													@form-help-block-success-font-style;
+@form-help-block-success-emphasize-font-weight:													@form-help-block-default-emphasize-font-weight;
+@form-help-block-success-emphasize-transform:													@form-help-block-success-transform;
+@form-help-block-success-emphasize-shadow:														@form-help-block-success-shadow;
+
+// Help Block Emphasize Links
+
+@form-help-block-success-emphasize-link-text-color:												@form-help-block-success-link-text-color;
+@form-help-block-success-emphasize-link-text-decoration:										@form-help-block-success-link-text-decoration;
+
+@form-help-block-success-emphasize-link-hover-text-color:										@form-help-block-success-link-hover-text-color;
+@form-help-block-success-emphasize-link-hover-text-decoration:									@form-help-block-success-link-hover-text-decoration;
+
+@form-help-block-success-emphasize-link-active-text-color:										@form-help-block-success-link-active-text-color;
+@form-help-block-success-emphasize-link-active-text-decoration:									@form-help-block-success-link-active-text-decoration;
+
+@form-help-block-success-emphasize-link-disabled-text-color:									@form-help-block-success-link-disabled-text-color;
+@form-help-block-success-emphasize-link-disabled-text-decoration:								@form-help-block-success-link-disabled-text-decoration;
+@form-help-block-success-emphasize-link-disabled-opacity:										@form-help-block-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Success) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Help Block Mute Styling
+
+@form-help-block-success-mute-color:															~`color_lightness("@{green}", 20)`;
+@form-help-block-success-mute-font-style:														@form-help-block-success-font-style;
+@form-help-block-success-mute-font-weight:														@form-help-block-default-mute-font-weight;
+@form-help-block-success-mute-transform:														@form-help-block-success-transform;
+@form-help-block-success-mute-shadow:															@form-help-block-success-shadow;
+
+// Help Block Mute Links
+
+@form-help-block-success-mute-link-text-color:													@form-help-block-success-link-text-color;
+@form-help-block-success-mute-link-text-decoration:												@form-help-block-success-link-text-decoration;
+
+@form-help-block-success-mute-link-hover-text-color:											@form-help-block-success-link-hover-text-color;
+@form-help-block-success-mute-link-hover-text-decoration:										@form-help-block-success-link-hover-text-decoration;
+
+@form-help-block-success-mute-link-active-text-color:											@form-help-block-success-link-active-text-color;
+@form-help-block-success-mute-link-active-text-decoration:										@form-help-block-success-link-active-text-decoration;
+
+@form-help-block-success-mute-link-disabled-text-color:											@form-help-block-success-link-disabled-text-color;
+@form-help-block-success-mute-link-disabled-text-decoration:									@form-help-block-success-link-disabled-text-decoration;
+@form-help-block-success-mute-link-disabled-opacity:											@form-help-block-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-success-inverse-enabled:														@body-text-inverse-enabled;
+
+// Help Block Inverse Styling
+
+@form-help-block-success-inverse-color:															~`color_lightness("@{green}", 0)`;
+@form-help-block-success-inverse-shadow:														@form-help-block-success-shadow;
+
+// Help Block Inverse Links
+
+@form-help-block-success-inverse-link-text-color:												@form-help-block-success-link-text-color;
+@form-help-block-success-inverse-link-text-decoration:											@form-help-block-success-link-text-decoration;
+
+@form-help-block-success-inverse-link-hover-text-color:											@form-help-block-success-link-hover-text-color;
+@form-help-block-success-inverse-link-hover-text-decoration:									@form-help-block-success-link-hover-text-decoration;
+
+@form-help-block-success-inverse-link-active-text-color:										@form-help-block-success-link-active-text-color;
+@form-help-block-success-inverse-link-active-text-decoration:									@form-help-block-success-link-active-text-decoration;
+
+@form-help-block-success-inverse-link-disabled-text-color:										@form-help-block-success-link-disabled-text-color;
+@form-help-block-success-inverse-link-disabled-text-decoration:									@form-help-block-success-link-disabled-text-decoration;
+@form-help-block-success-inverse-link-disabled-opacity:											@form-help-block-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-success-inverse-emphasize-color:												~`color_lightness("@{green}", -20)`;
+@form-help-block-success-inverse-emphasize-shadow:												@form-help-block-success-inverse-shadow;
+
+// Help Block Emphasize Links
+
+@form-help-block-success-inverse-emphasize-link-text-color:										@form-help-block-success-inverse-link-text-color;
+@form-help-block-success-inverse-emphasize-link-text-decoration:								@form-help-block-success-inverse-link-text-decoration;
+
+@form-help-block-success-inverse-emphasize-link-hover-text-color:								@form-help-block-success-inverse-link-hover-text-color;
+@form-help-block-success-inverse-emphasize-link-hover-text-decoration:							@form-help-block-success-inverse-link-hover-text-decoration;
+
+@form-help-block-success-inverse-emphasize-link-active-text-color:								@form-help-block-success-inverse-link-active-text-color;
+@form-help-block-success-inverse-emphasize-link-active-text-decoration:							@form-help-block-success-inverse-link-active-text-decoration;
+
+@form-help-block-success-inverse-emphasize-link-disabled-text-color:							@form-help-block-success-inverse-link-disabled-text-color;
+@form-help-block-success-inverse-emphasize-link-disabled-text-decoration:						@form-help-block-success-inverse-link-disabled-text-decoration;
+@form-help-block-success-inverse-emphasize-link-disabled-opacity:								@form-help-block-success-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-success-inverse-mute-color:													~`color_lightness("@{green}", 20)`;
+@form-help-block-success-inverse-mute-shadow:													@form-help-block-success-inverse-shadow;
+
+// Help Block mute Links
+
+@form-help-block-success-inverse-mute-link-text-color:											@form-help-block-success-inverse-link-text-color;
+@form-help-block-success-inverse-mute-link-text-decoration:										@form-help-block-success-inverse-link-text-decoration;
+
+@form-help-block-success-inverse-mute-link-hover-text-color:									@form-help-block-success-inverse-link-hover-text-color;
+@form-help-block-success-inverse-mute-link-hover-text-decoration:								@form-help-block-success-inverse-link-hover-text-decoration;
+
+@form-help-block-success-inverse-mute-link-active-text-color:									@form-help-block-success-inverse-link-active-text-color;
+@form-help-block-success-inverse-mute-link-active-text-decoration:								@form-help-block-success-inverse-link-active-text-decoration;
+
+@form-help-block-success-inverse-mute-link-disabled-text-color:									@form-help-block-success-inverse-link-disabled-text-color;
+@form-help-block-success-inverse-mute-link-disabled-text-decoration:							@form-help-block-success-inverse-link-disabled-text-decoration;
+@form-help-block-success-inverse-mute-link-disabled-opacity:									@form-help-block-success-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Help Block (Error)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Error) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-error-color:																	~`color_lightness("@{red}", 0)`;
+@form-help-block-error-font-style:																normal;
+@form-help-block-error-font-weight:																@form-help-block-default-font-weight;
+@form-help-block-error-transform:																none;
+@form-help-block-error-shadow:																	none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Error) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-error-link-text-color:															~`color_lightness("@{red}", 0)`;
+@form-help-block-error-link-text-decoration:													none;
+
+@form-help-block-error-link-hover-text-color:													~`color_lightness("@{red}", -20)`;
+@form-help-block-error-link-hover-text-decoration:												underline;
+
+@form-help-block-error-link-active-text-color:													~`color_lightness("@{red}", -40)`;
+@form-help-block-error-link-active-text-decoration:												none;
+
+@form-help-block-error-link-disabled-text-color:												@form-help-block-error-link-text-color;
+@form-help-block-error-link-disabled-text-decoration:											none;
+@form-help-block-error-link-disabled-opacity:													0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Error) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Help Block Emphasize Styling
+
+@form-help-block-error-emphasize-color:															~`color_lightness("@{red}", -20)`;
+@form-help-block-error-emphasize-font-style:													@form-help-block-error-font-style;
+@form-help-block-error-emphasize-font-weight:													@form-help-block-default-emphasize-font-weight;
+@form-help-block-error-emphasize-transform:														@form-help-block-error-transform;
+@form-help-block-error-emphasize-shadow:														@form-help-block-error-shadow;
+
+// Help Block Emphasize Links
+
+@form-help-block-error-emphasize-link-text-color:												@form-help-block-error-link-text-color;
+@form-help-block-error-emphasize-link-text-decoration:											@form-help-block-error-link-text-decoration;
+
+@form-help-block-error-emphasize-link-hover-text-color:											@form-help-block-error-link-hover-text-color;
+@form-help-block-error-emphasize-link-hover-text-decoration:									@form-help-block-error-link-hover-text-decoration;
+
+@form-help-block-error-emphasize-link-active-text-color:										@form-help-block-error-link-active-text-color;
+@form-help-block-error-emphasize-link-active-text-decoration:									@form-help-block-error-link-active-text-decoration;
+
+@form-help-block-error-emphasize-link-disabled-text-color:										@form-help-block-error-link-disabled-text-color;
+@form-help-block-error-emphasize-link-disabled-text-decoration:									@form-help-block-error-link-disabled-text-decoration;
+@form-help-block-error-emphasize-link-disabled-opacity:											@form-help-block-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block (Error) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Help Block Mute Styling
+
+@form-help-block-error-mute-color:																~`color_lightness("@{red}", 20)`;
+@form-help-block-error-mute-font-style:															@form-help-block-error-font-style;
+@form-help-block-error-mute-font-weight:														@form-help-block-default-mute-font-weight;
+@form-help-block-error-mute-transform:															@form-help-block-error-transform;
+@form-help-block-error-mute-shadow:																@form-help-block-error-shadow;
+
+// Help Block Mute Links
+
+@form-help-block-error-mute-link-text-color:													@form-help-block-error-link-text-color;
+@form-help-block-error-mute-link-text-decoration:												@form-help-block-error-link-text-decoration;
+
+@form-help-block-error-mute-link-hover-text-color:												@form-help-block-error-link-hover-text-color;
+@form-help-block-error-mute-link-hover-text-decoration:											@form-help-block-error-link-hover-text-decoration;
+
+@form-help-block-error-mute-link-active-text-color:												@form-help-block-error-link-active-text-color;
+@form-help-block-error-mute-link-active-text-decoration:										@form-help-block-error-link-active-text-decoration;
+
+@form-help-block-error-mute-link-disabled-text-color:											@form-help-block-error-link-disabled-text-color;
+@form-help-block-error-mute-link-disabled-text-decoration:										@form-help-block-error-link-disabled-text-decoration;
+@form-help-block-error-mute-link-disabled-opacity:												@form-help-block-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-error-inverse-enabled:															@body-text-inverse-enabled;
+
+// Help Block Inverse Styling
+
+@form-help-block-error-inverse-color:															~`color_lightness("@{red}", 0)`;
+@form-help-block-error-inverse-shadow:															@form-help-block-error-shadow;
+
+// Help Block Inverse Links
+
+@form-help-block-error-inverse-link-text-color:													@form-help-block-error-link-text-color;
+@form-help-block-error-inverse-link-text-decoration:											@form-help-block-error-link-text-decoration;
+
+@form-help-block-error-inverse-link-hover-text-color:											@form-help-block-error-link-hover-text-color;
+@form-help-block-error-inverse-link-hover-text-decoration:										@form-help-block-error-link-hover-text-decoration;
+
+@form-help-block-error-inverse-link-active-text-color:											@form-help-block-error-link-active-text-color;
+@form-help-block-error-inverse-link-active-text-decoration:										@form-help-block-error-link-active-text-decoration;
+
+@form-help-block-error-inverse-link-disabled-text-color:										@form-help-block-error-link-disabled-text-color;
+@form-help-block-error-inverse-link-disabled-text-decoration:									@form-help-block-error-link-disabled-text-decoration;
+@form-help-block-error-inverse-link-disabled-opacity:											@form-help-block-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-error-inverse-emphasize-color:													~`color_lightness("@{red}", -20)`;
+@form-help-block-error-inverse-emphasize-shadow:												@form-help-block-error-inverse-shadow;
+
+// Help Block Emphasize Links
+
+@form-help-block-error-inverse-emphasize-link-text-color:										@form-help-block-error-inverse-link-text-color;
+@form-help-block-error-inverse-emphasize-link-text-decoration:									@form-help-block-error-inverse-link-text-decoration;
+
+@form-help-block-error-inverse-emphasize-link-hover-text-color:									@form-help-block-error-inverse-link-hover-text-color;
+@form-help-block-error-inverse-emphasize-link-hover-text-decoration:							@form-help-block-error-inverse-link-hover-text-decoration;
+
+@form-help-block-error-inverse-emphasize-link-active-text-color:								@form-help-block-error-inverse-link-active-text-color;
+@form-help-block-error-inverse-emphasize-link-active-text-decoration:							@form-help-block-error-inverse-link-active-text-decoration;
+
+@form-help-block-error-inverse-emphasize-link-disabled-text-color:								@form-help-block-error-inverse-link-disabled-text-color;
+@form-help-block-error-inverse-emphasize-link-disabled-text-decoration:							@form-help-block-error-inverse-link-disabled-text-decoration;
+@form-help-block-error-inverse-emphasize-link-disabled-opacity:									@form-help-block-error-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Help Block Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-error-inverse-mute-color:														~`color_lightness("@{red}", 20)`;
+@form-help-block-error-inverse-mute-shadow:														@form-help-block-error-inverse-shadow;
+
+// Help Block mute Links
+
+@form-help-block-error-inverse-mute-link-text-color:											@form-help-block-error-inverse-link-text-color;
+@form-help-block-error-inverse-mute-link-text-decoration:										@form-help-block-error-inverse-link-text-decoration;
+
+@form-help-block-error-inverse-mute-link-hover-text-color:										@form-help-block-error-inverse-link-hover-text-color;
+@form-help-block-error-inverse-mute-link-hover-text-decoration:									@form-help-block-error-inverse-link-hover-text-decoration;
+
+@form-help-block-error-inverse-mute-link-active-text-color:										@form-help-block-error-inverse-link-active-text-color;
+@form-help-block-error-inverse-mute-link-active-text-decoration:								@form-help-block-error-inverse-link-active-text-decoration;
+
+@form-help-block-error-inverse-mute-link-disabled-text-color:									@form-help-block-error-inverse-link-disabled-text-color;
+@form-help-block-error-inverse-mute-link-disabled-text-decoration:								@form-help-block-error-inverse-link-disabled-text-decoration;
+@form-help-block-error-inverse-mute-link-disabled-opacity:										@form-help-block-error-inverse-link-disabled-opacity;
 
 
 
@@ -362,7 +1440,7 @@ Form Control Responsive Scaling
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Button (Mini)
+Form Control (Mini)
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
@@ -374,7 +1452,7 @@ Button (Mini)
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Mini) Styles
+Form Control (Mini) Styles
 ---------------------------------------------------------------------------------------------------- */
 
 @form-control-mini-text-font-size:																@button-mini-text-font-size;
@@ -386,7 +1464,7 @@ Button (Mini) Styles
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Mini) Responsive Scaling
+Form Control (Mini) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
 @form-control-mini-text-font-size-scale-screen-mini:											@button-mini-text-font-size-scale-screen-mini;
@@ -422,7 +1500,7 @@ Button (Mini) Responsive Scaling
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Button (Small)
+Form Control (Small)
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
@@ -434,7 +1512,7 @@ Button (Small)
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Small) Styles
+Form Control (Small) Styles
 ---------------------------------------------------------------------------------------------------- */
 
 @form-control-small-text-font-size:																@button-small-text-font-size;
@@ -446,7 +1524,7 @@ Button (Small) Styles
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Small) Responsive Scaling
+Form Control (Small) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
 @form-control-small-text-font-size-scale-screen-mini:											@button-small-text-font-size-scale-screen-mini;
@@ -482,7 +1560,7 @@ Button (Small) Responsive Scaling
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Button (Large)
+Form Control (Large)
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
@@ -494,7 +1572,7 @@ Button (Large)
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Large) Styles
+Form Control (Large) Styles
 ---------------------------------------------------------------------------------------------------- */
 
 @form-control-large-text-font-size:																@button-large-text-font-size;
@@ -506,7 +1584,7 @@ Button (Large) Styles
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Large) Responsive Scaling
+Form Control (Large) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
 @form-control-large-text-font-size-scale-screen-mini:											@button-large-text-font-size-scale-screen-mini;
@@ -542,7 +1620,7 @@ Button (Large) Responsive Scaling
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Button (Jumbo)
+Form Control (Jumbo)
 
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
@@ -554,7 +1632,7 @@ Button (Jumbo)
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Jumbo) Styles
+Form Control (Jumbo) Styles
 ---------------------------------------------------------------------------------------------------- */
 
 @form-control-jumbo-text-font-size:																@button-jumbo-text-font-size;
@@ -566,7 +1644,7 @@ Button (Jumbo) Styles
 
 
 /* ----------------------------------------------------------------------------------------------------
-Button (Jumbo) Responsive Scaling
+Form Control (Jumbo) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
 @form-control-jumbo-text-font-size-scale-screen-mini:											@button-jumbo-text-font-size-scale-screen-mini;
@@ -678,7 +1756,7 @@ Form Control (Default) State: Focus
 @form-control-default-focus-text-transform:														none;
 @form-control-default-focus-text-shadow:														none;
 @form-control-default-focus-text-rendering:														optimizelegibility;
-@form-control-default-focus-placeholder-text-color:												~`color_lightness("@{blue}", 70)`;
+@form-control-default-focus-placeholder-text-color:												~`color_lightness("@{blue}", 60)`;
 @form-control-default-focus-background-color:													~`color_lightness("@{blue}", 98)`;
 @form-control-default-focus-background-gradient-color-top:										none;
 @form-control-default-focus-background-gradient-color-bottom:									none;
@@ -942,7 +2020,7 @@ Form Control (Success) State: Focus
 @form-control-success-focus-text-transform:														none;
 @form-control-success-focus-text-shadow:														none;
 @form-control-success-focus-text-rendering:														optimizelegibility;
-@form-control-success-focus-placeholder-text-color:												~`color_lightness("@{green}", 50)`;
+@form-control-success-focus-placeholder-text-color:												~`color_lightness("@{green}", 10)`;
 @form-control-success-focus-background-color:													~`color_lightness("@{green}", 98)`;
 @form-control-success-focus-background-gradient-color-top:										none;
 @form-control-success-focus-background-gradient-color-bottom:									none;
