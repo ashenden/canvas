@@ -108,6 +108,672 @@ Form Responsive Margin Scaling
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
+Option
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+@form-option-enabled:																			true;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-font-family:																		@font-family-sans-serif;
+@form-option-font-size:																			@body-text-font-size * 1.0;
+@form-option-line-height:																		@body-text-line-height * 1.0;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Padding
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-padding-horizontal:																@base-spacing-unit * 0.25;
+@form-option-padding-horizontal-screen-mini:													@base-spacing-unit-screen-mini * 0.25;
+@form-option-padding-horizontal-screen-small:													@base-spacing-unit-screen-small * 0.25;
+@form-option-padding-horizontal-screen-medium:													@base-spacing-unit-screen-medium * 0.25;
+@form-option-padding-horizontal-screen-large:													@base-spacing-unit-screen-large * 0.25;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Margin
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-margin-top:																		@body-text-margin-top * 0.5;
+@form-option-margin-bottom:																		@body-text-margin-bottom * 0.5;
+
+@form-option-short-margin-top:																	@body-text-short-margin-top * 0.5;
+@form-option-short-margin-bottom:																@body-text-short-margin-bottom * 0.5;
+
+@form-option-tall-margin-top:																	@body-text-tall-margin-top * 0.5;
+@form-option-tall-margin-bottom:																@body-text-tall-margin-bottom * 0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Responsive Text Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-font-size-scale-screen-mini:														@body-text-font-size-scale-screen-mini;
+@form-option-font-size-scale-screen-small:														@body-text-font-size-scale-screen-small;
+@form-option-font-size-scale-screen-medium:														@body-text-font-size-scale-screen-medium;
+@form-option-font-size-scale-screen-large:														@body-text-font-size-scale-screen-large;
+
+@form-option-line-height-scale-screen-mini:														@form-option-font-size-scale-screen-mini;
+@form-option-line-height-scale-screen-small:													@form-option-font-size-scale-screen-small;
+@form-option-line-height-scale-screen-medium:													@form-option-font-size-scale-screen-medium;
+@form-option-line-height-scale-screen-large:													@form-option-font-size-scale-screen-large;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Responsive Margin Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-margin-top-scale-screen-mini:														@body-text-margin-top-scale-screen-mini;
+@form-option-margin-top-scale-screen-small:														@body-text-margin-top-scale-screen-small;
+@form-option-margin-top-scale-screen-medium:													@body-text-margin-top-scale-screen-medium;
+@form-option-margin-top-scale-screen-large:														@body-text-margin-top-scale-screen-large;
+
+@form-option-margin-bottom-scale-screen-mini:													@body-text-margin-bottom-scale-screen-mini;
+@form-option-margin-bottom-scale-screen-small:													@body-text-margin-bottom-scale-screen-small;
+@form-option-margin-bottom-scale-screen-medium:													@body-text-margin-bottom-scale-screen-medium;
+@form-option-margin-bottom-scale-screen-large:													@body-text-margin-bottom-scale-screen-large;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-emphasize-enabled:																	@body-text-emphasize-enabled;
+
+// Option Emphasize Styling
+
+@form-option-emphasize-font-family:																@form-option-font-family;
+@form-option-emphasize-font-size:																@form-option-font-size;
+@form-option-emphasize-line-height:																@form-option-line-height;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-mute-enabled:																		@body-text-mute-enabled;
+
+// Option Mute Styling
+
+@form-option-mute-font-family:																	@form-option-font-family;
+@form-option-mute-font-size:																	@form-option-font-size;
+@form-option-mute-line-height:																	@form-option-line-height;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Checkbox
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-checkbox-width:																	12px;
+@form-option-checkbox-height:																	12px;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Radio
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-radio-width:																		13px;
+@form-option-radio-height:																		13px;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Option (Default)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Default) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-default-color:																		~`color_lightness("@{gray}", -50)`;
+@form-option-default-font-style:																normal;
+@form-option-default-font-weight:																400;
+@form-option-default-transform:																	none;
+@form-option-default-shadow:																	none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Default) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-default-link-text-color:															~`color_lightness("@{blue}", 0)`;
+@form-option-default-link-text-decoration:														none;
+
+@form-option-default-link-hover-text-color:														~`color_lightness("@{blue}", -20)`;
+@form-option-default-link-hover-text-decoration:												underline;
+
+@form-option-default-link-active-text-color:													~`color_lightness("@{blue}", -40)`;
+@form-option-default-link-active-text-decoration:												none;
+
+@form-option-default-link-disabled-text-color:													@form-option-default-link-text-color;
+@form-option-default-link-disabled-text-decoration:												none;
+@form-option-default-link-disabled-opacity:														0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Default) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Option Emphasize Styling
+
+@form-option-default-emphasize-color:															~`color_lightness("@{gray}", -80)`;
+@form-option-default-emphasize-font-style:														@form-option-default-font-style;
+@form-option-default-emphasize-font-weight:														500;
+@form-option-default-emphasize-transform:														@form-option-default-transform;
+@form-option-default-emphasize-shadow:															@form-option-default-shadow;
+
+// Option Emphasize Links
+
+@form-option-default-emphasize-link-text-color:													@form-option-default-link-text-color;
+@form-option-default-emphasize-link-text-decoration:											@form-option-default-link-text-decoration;
+
+@form-option-default-emphasize-link-hover-text-color:											@form-option-default-link-hover-text-color;
+@form-option-default-emphasize-link-hover-text-decoration:										@form-option-default-link-hover-text-decoration;
+
+@form-option-default-emphasize-link-active-text-color:											@form-option-default-link-active-text-color;
+@form-option-default-emphasize-link-active-text-decoration:										@form-option-default-link-active-text-decoration;
+
+@form-option-default-emphasize-link-disabled-text-color:										@form-option-default-link-disabled-text-color;
+@form-option-default-emphasize-link-disabled-text-decoration:									@form-option-default-link-disabled-text-decoration;
+@form-option-default-emphasize-link-disabled-opacity:											@form-option-default-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Default) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Option Mute Styling
+
+@form-option-default-mute-color:																~`color_lightness("@{gray}", 0)`;
+@form-option-default-mute-font-style:															@form-option-default-font-style;
+@form-option-default-mute-font-weight:															200;
+@form-option-default-mute-transform:															@form-option-default-transform;
+@form-option-default-mute-shadow:																@form-option-default-shadow;
+
+// Option Mute Links
+
+@form-option-default-mute-link-text-color:														@form-option-default-link-text-color;
+@form-option-default-mute-link-text-decoration:													@form-option-default-link-text-decoration;
+
+@form-option-default-mute-link-hover-text-color:												@form-option-default-link-hover-text-color;
+@form-option-default-mute-link-hover-text-decoration:											@form-option-default-link-hover-text-decoration;
+
+@form-option-default-mute-link-active-text-color:												@form-option-default-link-active-text-color;
+@form-option-default-mute-link-active-text-decoration:											@form-option-default-link-active-text-decoration;
+
+@form-option-default-mute-link-disabled-text-color:												@form-option-default-link-disabled-text-color;
+@form-option-default-mute-link-disabled-text-decoration:										@form-option-default-link-disabled-text-decoration;
+@form-option-default-mute-link-disabled-opacity:												@form-option-default-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-default-inverse-enabled:															@body-text-inverse-enabled;
+
+// Option Inverse Styling
+
+@form-option-default-inverse-color:																~`color_lightness("@{gray}", -40)`;
+@form-option-default-inverse-shadow:															@form-option-default-shadow;
+
+// Option Inverse Links
+
+@form-option-default-inverse-link-text-color:													@form-option-default-link-text-color;
+@form-option-default-inverse-link-text-decoration:												@form-option-default-link-text-decoration;
+
+@form-option-default-inverse-link-hover-text-color:												@form-option-default-link-hover-text-color;
+@form-option-default-inverse-link-hover-text-decoration:										@form-option-default-link-hover-text-decoration;
+
+@form-option-default-inverse-link-active-text-color:											@form-option-default-link-active-text-color;
+@form-option-default-inverse-link-active-text-decoration:										@form-option-default-link-active-text-decoration;
+
+@form-option-default-inverse-link-disabled-text-color:											@form-option-default-link-disabled-text-color;
+@form-option-default-inverse-link-disabled-text-decoration:										@form-option-default-link-disabled-text-decoration;
+@form-option-default-inverse-link-disabled-opacity:												@form-option-default-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-default-inverse-emphasize-color:													~`color_lightness("@{gray}", -20)`;
+@form-option-default-inverse-emphasize-shadow:													@form-option-default-inverse-shadow;
+
+// Option Emphasize Links
+
+@form-option-default-inverse-emphasize-link-text-color:											@form-option-default-inverse-link-text-color;
+@form-option-default-inverse-emphasize-link-text-decoration:									@form-option-default-inverse-link-text-decoration;
+
+@form-option-default-inverse-emphasize-link-hover-text-color:									@form-option-default-inverse-link-hover-text-color;
+@form-option-default-inverse-emphasize-link-hover-text-decoration:								@form-option-default-inverse-link-hover-text-decoration;
+
+@form-option-default-inverse-emphasize-link-active-text-color:									@form-option-default-inverse-link-active-text-color;
+@form-option-default-inverse-emphasize-link-active-text-decoration:								@form-option-default-inverse-link-active-text-decoration;
+
+@form-option-default-inverse-emphasize-link-disabled-text-color:								@form-option-default-inverse-link-disabled-text-color;
+@form-option-default-inverse-emphasize-link-disabled-text-decoration:							@form-option-default-inverse-link-disabled-text-decoration;
+@form-option-default-inverse-emphasize-link-disabled-opacity:									@form-option-default-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-default-inverse-mute-color:														~`color_lightness("@{gray}", -60)`;
+@form-option-default-inverse-mute-shadow:														@form-option-default-inverse-shadow;
+
+// Option mute Links
+
+@form-option-default-inverse-mute-link-text-color:												@form-option-default-inverse-link-text-color;
+@form-option-default-inverse-mute-link-text-decoration:											@form-option-default-inverse-link-text-decoration;
+
+@form-option-default-inverse-mute-link-hover-text-color:										@form-option-default-inverse-link-hover-text-color;
+@form-option-default-inverse-mute-link-hover-text-decoration:									@form-option-default-inverse-link-hover-text-decoration;
+
+@form-option-default-inverse-mute-link-active-text-color:										@form-option-default-inverse-link-active-text-color;
+@form-option-default-inverse-mute-link-active-text-decoration:									@form-option-default-inverse-link-active-text-decoration;
+
+@form-option-default-inverse-mute-link-disabled-text-color:										@form-option-default-inverse-link-disabled-text-color;
+@form-option-default-inverse-mute-link-disabled-text-decoration:								@form-option-default-inverse-link-disabled-text-decoration;
+@form-option-default-inverse-mute-link-disabled-opacity:										@form-option-default-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Option (Success)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Success) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-success-color:																		~`color_lightness("@{green}", 0)`;
+@form-option-success-font-style:																normal;
+@form-option-success-font-weight:																@form-option-default-font-weight;
+@form-option-success-transform:																	none;
+@form-option-success-shadow:																	none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Success) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-success-link-text-color:															~`color_lightness("@{green}", 0)`;
+@form-option-success-link-text-decoration:														none;
+
+@form-option-success-link-hover-text-color:														~`color_lightness("@{green}", -20)`;
+@form-option-success-link-hover-text-decoration:												underline;
+
+@form-option-success-link-active-text-color:													~`color_lightness("@{green}", -40)`;
+@form-option-success-link-active-text-decoration:												none;
+
+@form-option-success-link-disabled-text-color:													@form-option-success-link-text-color;
+@form-option-success-link-disabled-text-decoration:												none;
+@form-option-success-link-disabled-opacity:														0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Success) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Option Emphasize Styling
+
+@form-option-success-emphasize-color:															~`color_lightness("@{green}", -20)`;
+@form-option-success-emphasize-font-style:														@form-option-success-font-style;
+@form-option-success-emphasize-font-weight:														@form-option-default-emphasize-font-weight;
+@form-option-success-emphasize-transform:														@form-option-success-transform;
+@form-option-success-emphasize-shadow:															@form-option-success-shadow;
+
+// Option Emphasize Links
+
+@form-option-success-emphasize-link-text-color:													@form-option-success-link-text-color;
+@form-option-success-emphasize-link-text-decoration:											@form-option-success-link-text-decoration;
+
+@form-option-success-emphasize-link-hover-text-color:											@form-option-success-link-hover-text-color;
+@form-option-success-emphasize-link-hover-text-decoration:										@form-option-success-link-hover-text-decoration;
+
+@form-option-success-emphasize-link-active-text-color:											@form-option-success-link-active-text-color;
+@form-option-success-emphasize-link-active-text-decoration:										@form-option-success-link-active-text-decoration;
+
+@form-option-success-emphasize-link-disabled-text-color:										@form-option-success-link-disabled-text-color;
+@form-option-success-emphasize-link-disabled-text-decoration:									@form-option-success-link-disabled-text-decoration;
+@form-option-success-emphasize-link-disabled-opacity:											@form-option-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Success) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Option Mute Styling
+
+@form-option-success-mute-color:																~`color_lightness("@{green}", 20)`;
+@form-option-success-mute-font-style:															@form-option-success-font-style;
+@form-option-success-mute-font-weight:															@form-option-default-mute-font-weight;
+@form-option-success-mute-transform:															@form-option-success-transform;
+@form-option-success-mute-shadow:																@form-option-success-shadow;
+
+// Option Mute Links
+
+@form-option-success-mute-link-text-color:														@form-option-success-link-text-color;
+@form-option-success-mute-link-text-decoration:													@form-option-success-link-text-decoration;
+
+@form-option-success-mute-link-hover-text-color:												@form-option-success-link-hover-text-color;
+@form-option-success-mute-link-hover-text-decoration:											@form-option-success-link-hover-text-decoration;
+
+@form-option-success-mute-link-active-text-color:												@form-option-success-link-active-text-color;
+@form-option-success-mute-link-active-text-decoration:											@form-option-success-link-active-text-decoration;
+
+@form-option-success-mute-link-disabled-text-color:												@form-option-success-link-disabled-text-color;
+@form-option-success-mute-link-disabled-text-decoration:										@form-option-success-link-disabled-text-decoration;
+@form-option-success-mute-link-disabled-opacity:												@form-option-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-success-inverse-enabled:															@body-text-inverse-enabled;
+
+// Option Inverse Styling
+
+@form-option-success-inverse-color:																~`color_lightness("@{green}", 0)`;
+@form-option-success-inverse-shadow:															@form-option-success-shadow;
+
+// Option Inverse Links
+
+@form-option-success-inverse-link-text-color:													@form-option-success-link-text-color;
+@form-option-success-inverse-link-text-decoration:												@form-option-success-link-text-decoration;
+
+@form-option-success-inverse-link-hover-text-color:												@form-option-success-link-hover-text-color;
+@form-option-success-inverse-link-hover-text-decoration:										@form-option-success-link-hover-text-decoration;
+
+@form-option-success-inverse-link-active-text-color:											@form-option-success-link-active-text-color;
+@form-option-success-inverse-link-active-text-decoration:										@form-option-success-link-active-text-decoration;
+
+@form-option-success-inverse-link-disabled-text-color:											@form-option-success-link-disabled-text-color;
+@form-option-success-inverse-link-disabled-text-decoration:										@form-option-success-link-disabled-text-decoration;
+@form-option-success-inverse-link-disabled-opacity:												@form-option-success-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-success-inverse-emphasize-color:													~`color_lightness("@{green}", -20)`;
+@form-option-success-inverse-emphasize-shadow:													@form-option-success-inverse-shadow;
+
+// Option Emphasize Links
+
+@form-option-success-inverse-emphasize-link-text-color:											@form-option-success-inverse-link-text-color;
+@form-option-success-inverse-emphasize-link-text-decoration:									@form-option-success-inverse-link-text-decoration;
+
+@form-option-success-inverse-emphasize-link-hover-text-color:									@form-option-success-inverse-link-hover-text-color;
+@form-option-success-inverse-emphasize-link-hover-text-decoration:								@form-option-success-inverse-link-hover-text-decoration;
+
+@form-option-success-inverse-emphasize-link-active-text-color:									@form-option-success-inverse-link-active-text-color;
+@form-option-success-inverse-emphasize-link-active-text-decoration:								@form-option-success-inverse-link-active-text-decoration;
+
+@form-option-success-inverse-emphasize-link-disabled-text-color:								@form-option-success-inverse-link-disabled-text-color;
+@form-option-success-inverse-emphasize-link-disabled-text-decoration:							@form-option-success-inverse-link-disabled-text-decoration;
+@form-option-success-inverse-emphasize-link-disabled-opacity:									@form-option-success-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-success-inverse-mute-color:														~`color_lightness("@{green}", 20)`;
+@form-option-success-inverse-mute-shadow:														@form-option-success-inverse-shadow;
+
+// Option mute Links
+
+@form-option-success-inverse-mute-link-text-color:												@form-option-success-inverse-link-text-color;
+@form-option-success-inverse-mute-link-text-decoration:											@form-option-success-inverse-link-text-decoration;
+
+@form-option-success-inverse-mute-link-hover-text-color:										@form-option-success-inverse-link-hover-text-color;
+@form-option-success-inverse-mute-link-hover-text-decoration:									@form-option-success-inverse-link-hover-text-decoration;
+
+@form-option-success-inverse-mute-link-active-text-color:										@form-option-success-inverse-link-active-text-color;
+@form-option-success-inverse-mute-link-active-text-decoration:									@form-option-success-inverse-link-active-text-decoration;
+
+@form-option-success-inverse-mute-link-disabled-text-color:										@form-option-success-inverse-link-disabled-text-color;
+@form-option-success-inverse-mute-link-disabled-text-decoration:								@form-option-success-inverse-link-disabled-text-decoration;
+@form-option-success-inverse-mute-link-disabled-opacity:										@form-option-success-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Option (Error)
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Error) Styling
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-error-color:																		~`color_lightness("@{red}", 0)`;
+@form-option-error-font-style:																	normal;
+@form-option-error-font-weight:																	@form-option-default-font-weight;
+@form-option-error-transform:																	none;
+@form-option-error-shadow:																		none;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Error) Links
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-error-link-text-color:																~`color_lightness("@{red}", 0)`;
+@form-option-error-link-text-decoration:														none;
+
+@form-option-error-link-hover-text-color:														~`color_lightness("@{red}", -20)`;
+@form-option-error-link-hover-text-decoration:													underline;
+
+@form-option-error-link-active-text-color:														~`color_lightness("@{red}", -40)`;
+@form-option-error-link-active-text-decoration:													none;
+
+@form-option-error-link-disabled-text-color:													@form-option-error-link-text-color;
+@form-option-error-link-disabled-text-decoration:												none;
+@form-option-error-link-disabled-opacity:														0.5;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Error) Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+// Option Emphasize Styling
+
+@form-option-error-emphasize-color:																~`color_lightness("@{red}", -20)`;
+@form-option-error-emphasize-font-style:														@form-option-error-font-style;
+@form-option-error-emphasize-font-weight:														@form-option-default-emphasize-font-weight;
+@form-option-error-emphasize-transform:															@form-option-error-transform;
+@form-option-error-emphasize-shadow:															@form-option-error-shadow;
+
+// Option Emphasize Links
+
+@form-option-error-emphasize-link-text-color:													@form-option-error-link-text-color;
+@form-option-error-emphasize-link-text-decoration:												@form-option-error-link-text-decoration;
+
+@form-option-error-emphasize-link-hover-text-color:												@form-option-error-link-hover-text-color;
+@form-option-error-emphasize-link-hover-text-decoration:										@form-option-error-link-hover-text-decoration;
+
+@form-option-error-emphasize-link-active-text-color:											@form-option-error-link-active-text-color;
+@form-option-error-emphasize-link-active-text-decoration:										@form-option-error-link-active-text-decoration;
+
+@form-option-error-emphasize-link-disabled-text-color:											@form-option-error-link-disabled-text-color;
+@form-option-error-emphasize-link-disabled-text-decoration:										@form-option-error-link-disabled-text-decoration;
+@form-option-error-emphasize-link-disabled-opacity:												@form-option-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option (Error) Mute
+---------------------------------------------------------------------------------------------------- */
+
+// Option Mute Styling
+
+@form-option-error-mute-color:																	~`color_lightness("@{red}", 20)`;
+@form-option-error-mute-font-style:																@form-option-error-font-style;
+@form-option-error-mute-font-weight:															@form-option-default-mute-font-weight;
+@form-option-error-mute-transform:																@form-option-error-transform;
+@form-option-error-mute-shadow:																	@form-option-error-shadow;
+
+// Option Mute Links
+
+@form-option-error-mute-link-text-color:														@form-option-error-link-text-color;
+@form-option-error-mute-link-text-decoration:													@form-option-error-link-text-decoration;
+
+@form-option-error-mute-link-hover-text-color:													@form-option-error-link-hover-text-color;
+@form-option-error-mute-link-hover-text-decoration:												@form-option-error-link-hover-text-decoration;
+
+@form-option-error-mute-link-active-text-color:													@form-option-error-link-active-text-color;
+@form-option-error-mute-link-active-text-decoration:											@form-option-error-link-active-text-decoration;
+
+@form-option-error-mute-link-disabled-text-color:												@form-option-error-link-disabled-text-color;
+@form-option-error-mute-link-disabled-text-decoration:											@form-option-error-link-disabled-text-decoration;
+@form-option-error-mute-link-disabled-opacity:													@form-option-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-error-inverse-enabled:																@body-text-inverse-enabled;
+
+// Option Inverse Styling
+
+@form-option-error-inverse-color:																~`color_lightness("@{red}", 0)`;
+@form-option-error-inverse-shadow:																@form-option-error-shadow;
+
+// Option Inverse Links
+
+@form-option-error-inverse-link-text-color:														@form-option-error-link-text-color;
+@form-option-error-inverse-link-text-decoration:												@form-option-error-link-text-decoration;
+
+@form-option-error-inverse-link-hover-text-color:												@form-option-error-link-hover-text-color;
+@form-option-error-inverse-link-hover-text-decoration:											@form-option-error-link-hover-text-decoration;
+
+@form-option-error-inverse-link-active-text-color:												@form-option-error-link-active-text-color;
+@form-option-error-inverse-link-active-text-decoration:											@form-option-error-link-active-text-decoration;
+
+@form-option-error-inverse-link-disabled-text-color:											@form-option-error-link-disabled-text-color;
+@form-option-error-inverse-link-disabled-text-decoration:										@form-option-error-link-disabled-text-decoration;
+@form-option-error-inverse-link-disabled-opacity:												@form-option-error-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse Emphasize
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-error-inverse-emphasize-color:														~`color_lightness("@{red}", -20)`;
+@form-option-error-inverse-emphasize-shadow:													@form-option-error-inverse-shadow;
+
+// Option Emphasize Links
+
+@form-option-error-inverse-emphasize-link-text-color:											@form-option-error-inverse-link-text-color;
+@form-option-error-inverse-emphasize-link-text-decoration:										@form-option-error-inverse-link-text-decoration;
+
+@form-option-error-inverse-emphasize-link-hover-text-color:										@form-option-error-inverse-link-hover-text-color;
+@form-option-error-inverse-emphasize-link-hover-text-decoration:								@form-option-error-inverse-link-hover-text-decoration;
+
+@form-option-error-inverse-emphasize-link-active-text-color:									@form-option-error-inverse-link-active-text-color;
+@form-option-error-inverse-emphasize-link-active-text-decoration:								@form-option-error-inverse-link-active-text-decoration;
+
+@form-option-error-inverse-emphasize-link-disabled-text-color:									@form-option-error-inverse-link-disabled-text-color;
+@form-option-error-inverse-emphasize-link-disabled-text-decoration:								@form-option-error-inverse-link-disabled-text-decoration;
+@form-option-error-inverse-emphasize-link-disabled-opacity:										@form-option-error-inverse-link-disabled-opacity;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Option Inverse mute
+---------------------------------------------------------------------------------------------------- */
+
+@form-option-error-inverse-mute-color:															~`color_lightness("@{red}", 20)`;
+@form-option-error-inverse-mute-shadow:															@form-option-error-inverse-shadow;
+
+// Option mute Links
+
+@form-option-error-inverse-mute-link-text-color:												@form-option-error-inverse-link-text-color;
+@form-option-error-inverse-mute-link-text-decoration:											@form-option-error-inverse-link-text-decoration;
+
+@form-option-error-inverse-mute-link-hover-text-color:											@form-option-error-inverse-link-hover-text-color;
+@form-option-error-inverse-mute-link-hover-text-decoration:										@form-option-error-inverse-link-hover-text-decoration;
+
+@form-option-error-inverse-mute-link-active-text-color:											@form-option-error-inverse-link-active-text-color;
+@form-option-error-inverse-mute-link-active-text-decoration:									@form-option-error-inverse-link-active-text-decoration;
+
+@form-option-error-inverse-mute-link-disabled-text-color:										@form-option-error-inverse-link-disabled-text-color;
+@form-option-error-inverse-mute-link-disabled-text-decoration:									@form-option-error-inverse-link-disabled-text-decoration;
+@form-option-error-inverse-mute-link-disabled-opacity:											@form-option-error-inverse-link-disabled-opacity;
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
 Label
 
 -------------------------------------------------------------------------------------------------------

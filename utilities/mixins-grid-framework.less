@@ -71,7 +71,7 @@ Float Grid Columns
 	}
 
 	.column(@index, @list) when (@index =< @grid-columns-count) {
-
+		
 		@item: ~".column-@{index}";
 
 		.column((@index + 1), ~"@{list}, @{item}");
@@ -81,8 +81,9 @@ Float Grid Columns
 	.column(@index, @list) when (@index > @grid-columns-count) {
 
 		@{list} {
-
-			float: left;
+			
+			padding-left:  (@grid-gutter-width / 2);
+			padding-right: (@grid-gutter-width / 2);
 
 		}
 
@@ -94,33 +95,36 @@ Float Grid Columns
 
 .float-grid-columns(@class) {
 
-	.column(@index) when (@index = 1) {
+	.column(@index, @class) when (@index = 1) {
 
-		@item: ~".column-@{index}";
+		@item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
 
-		.column((@index + 1), @item);
-
-	}
-
-	.column(@index, @list) when (@index =< @grid-columns-count) {
-
-		@item: ~".column-@{class}-@{index}";
-
-		.column((@index + 1), ~"@{list}, @{item}");
+		.column((@index + 1), @class, @item);
 
 	}
 
-	.column(@index, @list) when (@index > @grid-columns-count) {
+	.column(@index, @class, @list) when (@index =< @grid-columns-count) {
+
+		@item: ~".column-@{index}, .column-mini-@{index}, .column-small-@{index}, .column-medium-@{index}, .column-large-@{index}";
+
+		.column((@index + 1), @class, ~"@{list}, @{item}");
+
+	}
+
+	.column(@index, @class, @list) when (@index > @grid-columns-count) {
 
 		@{list} {
-
-			float: left;
+			
+			@gutter-width: "grid-gutter-width-screen-@{class}";
+			
+			padding-left:  (@@gutter-width / 2);
+			padding-right: (@@gutter-width / 2);
 
 		}
 
 	}
 
-	.column(1);
+	.column(1, @class);
 
 }
 
@@ -131,7 +135,8 @@ Calculate Grid Columns
 .calc-grid-column(@index, @type) when (@type = width) and (@index > 0) {
 
 	.column-@{index} {
-
+		
+		float: left;
 		width: percentage((@index / @grid-columns-count));
 
 	}
@@ -141,7 +146,8 @@ Calculate Grid Columns
 .calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
 
 	.column-@{class}-@{index} {
-
+		
+		float: left;
 		width: percentage((@index / @grid-columns-count));
 
 	}
