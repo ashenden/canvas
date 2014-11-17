@@ -39,8 +39,13 @@ Form Margins
 
 
 /* ----------------------------------------------------------------------------------------------------
-Form Responsive Margin Scaling
+Form Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
+
+@form-scale-screen-mini-enabled:																true;
+@form-scale-screen-small-enabled:																true;
+@form-scale-screen-medium-enabled:																true;
+@form-scale-screen-large-enabled:																true;
 
 @form-margin-top-scale-screen-mini:																@base-spacing-unit-screen-mini / @base-spacing-unit;
 @form-margin-top-scale-screen-small:															@base-spacing-unit-screen-small / @base-spacing-unit;
@@ -87,8 +92,13 @@ Group Margin
 
 
 /* ----------------------------------------------------------------------------------------------------
-Form Responsive Margin Scaling
+Form Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
+
+@form-group-scale-screen-mini-enabled:															@form-scale-screen-mini-enabled;
+@form-group-scale-screen-small-enabled:															@form-scale-screen-small-enabled;
+@form-group-scale-screen-medium-enabled:														@form-scale-screen-medium-enabled;
+@form-group-scale-screen-large-enabled:															@form-scale-screen-large-enabled;
 
 @form-group-margin-top-scale-screen-mini:														@base-spacing-unit-screen-mini / @base-spacing-unit;
 @form-group-margin-top-scale-screen-small:														@base-spacing-unit-screen-small / @base-spacing-unit;
@@ -157,8 +167,13 @@ Option Margin
 
 
 /* ----------------------------------------------------------------------------------------------------
-Option Responsive Text Scaling
+Option Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
+
+@form-option-scale-screen-mini-enabled:															@form-scale-screen-mini-enabled;
+@form-option-scale-screen-small-enabled:														@form-scale-screen-small-enabled;
+@form-option-scale-screen-medium-enabled:														@form-scale-screen-medium-enabled;
+@form-option-scale-screen-large-enabled:														@form-scale-screen-large-enabled;
 
 @form-option-font-size-scale-screen-mini:														@body-text-font-size-scale-screen-mini;
 @form-option-font-size-scale-screen-small:														@body-text-font-size-scale-screen-small;
@@ -169,12 +184,6 @@ Option Responsive Text Scaling
 @form-option-line-height-scale-screen-small:													@form-option-font-size-scale-screen-small;
 @form-option-line-height-scale-screen-medium:													@form-option-font-size-scale-screen-medium;
 @form-option-line-height-scale-screen-large:													@form-option-font-size-scale-screen-large;
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-Option Responsive Margin Scaling
----------------------------------------------------------------------------------------------------- */
 
 @form-option-margin-top-scale-screen-mini:														@body-text-margin-top-scale-screen-mini;
 @form-option-margin-top-scale-screen-small:														@body-text-margin-top-scale-screen-small;
@@ -811,8 +820,13 @@ Label Margin
 
 
 /* ----------------------------------------------------------------------------------------------------
-Label Responsive Text Scaling
+Label Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
+
+@form-label-scale-screen-mini-enabled:															@form-scale-screen-mini-enabled;
+@form-label-scale-screen-small-enabled:															@form-scale-screen-small-enabled;
+@form-label-scale-screen-medium-enabled:														@form-scale-screen-medium-enabled;
+@form-label-scale-screen-large-enabled:															@form-scale-screen-large-enabled;
 
 @form-label-font-size-scale-screen-mini:														@body-text-font-size-scale-screen-mini;
 @form-label-font-size-scale-screen-small:														@body-text-font-size-scale-screen-small;
@@ -823,12 +837,6 @@ Label Responsive Text Scaling
 @form-label-line-height-scale-screen-small:														@form-label-font-size-scale-screen-small;
 @form-label-line-height-scale-screen-medium:													@form-label-font-size-scale-screen-medium;
 @form-label-line-height-scale-screen-large:														@form-label-font-size-scale-screen-large;
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-Label Responsive Margin Scaling
----------------------------------------------------------------------------------------------------- */
 
 @form-label-margin-top-scale-screen-mini:														@body-text-margin-top-scale-screen-mini;
 @form-label-margin-top-scale-screen-small:														@body-text-margin-top-scale-screen-small;
@@ -1447,8 +1455,13 @@ Help Block Margin
 
 
 /* ----------------------------------------------------------------------------------------------------
-Help Block Responsive Text Scaling
+Help Block Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
+
+@form-help-block-scale-screen-mini-enabled:														@form-scale-screen-mini-enabled;
+@form-help-block-scale-screen-small-enabled:													@form-scale-screen-small-enabled;
+@form-help-block-scale-screen-medium-enabled:													@form-scale-screen-medium-enabled;
+@form-help-block-scale-screen-large-enabled:													@form-scale-screen-large-enabled;
 
 @form-help-block-font-size-scale-screen-mini:													@small-text-font-size-scale-screen-mini;
 @form-help-block-font-size-scale-screen-small:													@small-text-font-size-scale-screen-small;
@@ -1459,12 +1472,6 @@ Help Block Responsive Text Scaling
 @form-help-block-line-height-scale-screen-small:												@form-help-block-font-size-scale-screen-small;
 @form-help-block-line-height-scale-screen-medium:												@form-help-block-font-size-scale-screen-medium;
 @form-help-block-line-height-scale-screen-large:												@form-help-block-font-size-scale-screen-large;
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-Help Block Responsive Margin Scaling
----------------------------------------------------------------------------------------------------- */
 
 @form-help-block-margin-top-scale-screen-mini:													@form-label-margin-top-scale-screen-mini;
 @form-help-block-margin-top-scale-screen-small:													@form-label-margin-top-scale-screen-small;
@@ -2073,6 +2080,11 @@ Form Control Styles
 Form Control Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
+@form-control-scale-screen-mini-enabled:														@form-scale-screen-mini-enabled;
+@form-control-scale-screen-small-enabled:														@form-scale-screen-small-enabled;
+@form-control-scale-screen-medium-enabled:														@form-scale-screen-medium-enabled;
+@form-control-scale-screen-large-enabled:														@form-scale-screen-large-enabled;
+
 @form-control-text-font-size-scale-screen-mini:													@button-text-font-size-scale-screen-mini;
 @form-control-text-font-size-scale-screen-small:												@button-text-font-size-scale-screen-small;
 @form-control-text-font-size-scale-screen-medium:												@button-text-font-size-scale-screen-medium;
@@ -2132,6 +2144,11 @@ Form Control (Mini) Styles
 /* ----------------------------------------------------------------------------------------------------
 Form Control (Mini) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
+
+@form-control-mini-scale-screen-mini-enabled:													@form-control-scale-screen-mini-enabled;
+@form-control-mini-scale-screen-small-enabled:													@form-control-scale-screen-small-enabled;
+@form-control-mini-scale-screen-medium-enabled:													@form-control-scale-screen-medium-enabled;
+@form-control-mini-scale-screen-large-enabled:													@form-control-scale-screen-large-enabled;
 
 @form-control-mini-text-font-size-scale-screen-mini:											@button-mini-text-font-size-scale-screen-mini;
 @form-control-mini-text-font-size-scale-screen-small:											@button-mini-text-font-size-scale-screen-small;
@@ -2193,6 +2210,11 @@ Form Control (Small) Styles
 Form Control (Small) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
+@form-control-small-scale-screen-mini-enabled:													@form-control-scale-screen-mini-enabled;
+@form-control-small-scale-screen-small-enabled:													@form-control-scale-screen-small-enabled;
+@form-control-small-scale-screen-medium-enabled:												@form-control-scale-screen-medium-enabled;
+@form-control-small-scale-screen-large-enabled:													@form-control-scale-screen-large-enabled;
+
 @form-control-small-text-font-size-scale-screen-mini:											@button-small-text-font-size-scale-screen-mini;
 @form-control-small-text-font-size-scale-screen-small:											@button-small-text-font-size-scale-screen-small;
 @form-control-small-text-font-size-scale-screen-medium:											@button-small-text-font-size-scale-screen-medium;
@@ -2233,7 +2255,7 @@ Form Control (Large)
 
 
 
-@form-control-large-enabled:																		@button-large-enabled;
+@form-control-large-enabled:																	@button-large-enabled;
 
 
 
@@ -2252,6 +2274,11 @@ Form Control (Large) Styles
 /* ----------------------------------------------------------------------------------------------------
 Form Control (Large) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
+
+@form-control-large-scale-screen-mini-enabled:													@form-control-scale-screen-mini-enabled;
+@form-control-large-scale-screen-small-enabled:													@form-control-scale-screen-small-enabled;
+@form-control-large-scale-screen-medium-enabled:												@form-control-scale-screen-medium-enabled;
+@form-control-large-scale-screen-large-enabled:													@form-control-scale-screen-large-enabled;
 
 @form-control-large-text-font-size-scale-screen-mini:											@button-large-text-font-size-scale-screen-mini;
 @form-control-large-text-font-size-scale-screen-small:											@button-large-text-font-size-scale-screen-small;
@@ -2312,6 +2339,11 @@ Form Control (Jumbo) Styles
 /* ----------------------------------------------------------------------------------------------------
 Form Control (Jumbo) Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
+
+@form-control-jumbo-scale-screen-mini-enabled:													@form-control-scale-screen-mini-enabled;
+@form-control-jumbo-scale-screen-small-enabled:													@form-control-scale-screen-small-enabled;
+@form-control-jumbo-scale-screen-medium-enabled:												@form-control-scale-screen-medium-enabled;
+@form-control-jumbo-scale-screen-large-enabled:													@form-control-scale-screen-large-enabled;
 
 @form-control-jumbo-text-font-size-scale-screen-mini:											@button-jumbo-text-font-size-scale-screen-mini;
 @form-control-jumbo-text-font-size-scale-screen-small:											@button-jumbo-text-font-size-scale-screen-small;
