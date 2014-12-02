@@ -80,92 +80,92 @@ Button Size Styling
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
-.button-size(@variant-size, @variant-screen-size) {
+.button-size(@variant-size, @variant-screen-size) when (@variant-size = '') {
 	
-	& when (@variant-size = '') {
-		
-		& when (@variant-screen-size = '') {
-			
-			@button-variant-text-font-size: "button-text-font-size";
-			@button-variant-text-line-height: "button-text-line-height";
-			@button-variant-height:	"button-height";
-			@button-variant-padding-horizontal: "button-padding-horizontal";
-			@button-variant-border-radius: "button-border-radius";
-			
-			font-size: floor(@@button-variant-text-font-size);
-			line-height: floor(@@button-variant-text-line-height);
-			.box-sizing-padding-vertical(floor(@@button-variant-height), floor(@@button-variant-text-line-height));
-			padding-left: floor(@@button-variant-padding-horizontal);
-			padding-right: floor(@@button-variant-padding-horizontal);
-			.border-radius(@@button-variant-border-radius);
-		
-		}
-		
-		& when not (@variant-screen-size = '') {
-			
-			@button-variant-text-font-size: "button-text-font-size";
-			@button-variant-text-font-size-scale: "button-text-font-size-scale-@{variant-screen-size}";
-			@button-variant-text-line-height: "button-text-line-height";
-			@button-variant-text-line-height-scale: "button-text-line-height-scale-@{variant-screen-size}";
-			@button-variant-height:	"button-height";
-			@button-variant-height-scale: "button-height-scale-@{variant-screen-size}";
-			@button-variant-padding-horizontal: "button-padding-horizontal";
-			@button-variant-padding-horizontal-scale: "button-padding-horizontal-scale-@{variant-screen-size}";
-			@button-variant-border-radius: "button-border-radius";
-			@button-variant-border-radius-scale: "button-border-radius-scale-@{variant-screen-size}";
-			
-			font-size: floor(@@button-variant-text-font-size * @@button-variant-text-font-size-scale);
-			line-height: floor(@@button-variant-text-line-height * @@button-variant-text-line-height-scale);
-			.box-sizing-padding-vertical(floor(@@button-variant-height * @@button-variant-height-scale), floor(@@button-variant-text-line-height * @@button-variant-text-font-size-scale));
-			padding-left: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
-			padding-right: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
-			.border-radius(@@button-variant-border-radius * @@button-variant-border-radius-scale);
-			
-		}
-		
-	}
+	.button-size-screen-size(@variant-size, @variant-screen-size);
 	
-	& when not (@variant-size = '') {
-		
-		& when (@variant-screen-size = '') {
-			
-			@button-variant-text-font-size: "button-@{variant-size}-text-font-size";
-			@button-variant-text-line-height: "button-@{variant-size}-text-line-height";
-			@button-variant-height:	"button-@{variant-size}-height";
-			@button-variant-padding-horizontal: "button-@{variant-size}-padding-horizontal";
-			@button-variant-border-radius: "button-@{variant-size}-border-radius";
-			
-			font-size: floor(@@button-variant-text-font-size);
-			line-height: floor(@@button-variant-text-line-height);
-			.box-sizing-padding-vertical(floor(@@button-variant-height), floor(@@button-variant-text-line-height));
-			padding-left: floor(@@button-variant-padding-horizontal);
-			padding-right: floor(@@button-variant-padding-horizontal);
-			.border-radius(@@button-variant-border-radius);
-		
-		}
-		
-		& when not (@variant-screen-size = '') {
-			
-			@button-variant-text-font-size: "button-@{variant-size}-text-font-size";
-			@button-variant-text-font-size-scale: "button-@{variant-size}-text-font-size-scale-@{variant-screen-size}";
-			@button-variant-text-line-height: "button-@{variant-size}-text-line-height";
-			@button-variant-text-line-height-scale: "button-@{variant-size}-text-line-height-scale-@{variant-screen-size}";
-			@button-variant-height:	"button-@{variant-size}-height";
-			@button-variant-height-scale: "button-@{variant-size}-height-scale-@{variant-screen-size}";
-			@button-variant-padding-horizontal: "button-@{variant-size}-padding-horizontal";
-			@button-variant-padding-horizontal-scale: "button-@{variant-size}-padding-horizontal-scale-@{variant-screen-size}";
-			@button-variant-border-radius: "button-@{variant-size}-border-radius";
-			@button-variant-border-radius-scale: "button-@{variant-size}-border-radius-scale-@{variant-screen-size}";
-			
-			font-size: floor(@@button-variant-text-font-size * @@button-variant-text-font-size-scale);
-			line-height: floor(@@button-variant-text-line-height * @@button-variant-text-line-height-scale);
-			.box-sizing-padding-vertical(floor(@@button-variant-height * @@button-variant-height-scale), floor(@@button-variant-text-line-height * @@button-variant-text-font-size-scale));
-			padding-left: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
-			padding-right: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
-			.border-radius(@@button-variant-border-radius * @@button-variant-border-radius-scale);
-			
-		}
-		
-	}
+}
+	
+.button-size(@variant-size, @variant-screen-size) when (default()) {
+	
+	.button-size-variant-size(@variant-size, @variant-screen-size);
+	
+}
+
+.button-size-screen-size(@variant-size, @variant-screen-size) when (@variant-screen-size = '') {
+	
+	@button-variant-text-font-size: "button-text-font-size";
+	@button-variant-text-line-height: "button-text-line-height";
+	@button-variant-height:	"button-height";
+	@button-variant-padding-horizontal: "button-padding-horizontal";
+	@button-variant-border-radius: "button-border-radius";
+	
+	font-size: floor(@@button-variant-text-font-size);
+	line-height: floor(@@button-variant-text-line-height);
+	.box-sizing-padding-vertical(floor(@@button-variant-height), floor(@@button-variant-text-line-height));
+	padding-left: floor(@@button-variant-padding-horizontal);
+	padding-right: floor(@@button-variant-padding-horizontal);
+	.border-radius(@@button-variant-border-radius);
+
+}
+	
+.button-size-screen-size(@variant-size, @variant-screen-size) when (default()) {
+	
+	@button-variant-text-font-size: "button-text-font-size";
+	@button-variant-text-font-size-scale: "button-text-font-size-scale-@{variant-screen-size}";
+	@button-variant-text-line-height: "button-text-line-height";
+	@button-variant-text-line-height-scale: "button-text-line-height-scale-@{variant-screen-size}";
+	@button-variant-height:	"button-height";
+	@button-variant-height-scale: "button-height-scale-@{variant-screen-size}";
+	@button-variant-padding-horizontal: "button-padding-horizontal";
+	@button-variant-padding-horizontal-scale: "button-padding-horizontal-scale-@{variant-screen-size}";
+	@button-variant-border-radius: "button-border-radius";
+	@button-variant-border-radius-scale: "button-border-radius-scale-@{variant-screen-size}";
+	
+	font-size: floor(@@button-variant-text-font-size * @@button-variant-text-font-size-scale);
+	line-height: floor(@@button-variant-text-line-height * @@button-variant-text-line-height-scale);
+	.box-sizing-padding-vertical(floor(@@button-variant-height * @@button-variant-height-scale), floor(@@button-variant-text-line-height * @@button-variant-text-font-size-scale));
+	padding-left: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
+	padding-right: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
+	.border-radius(@@button-variant-border-radius * @@button-variant-border-radius-scale);
+	
+}
+
+.button-size-variant-size(@variant-size, @variant-screen-size) when (@variant-screen-size = '') {
+	
+	@button-variant-text-font-size: "button-@{variant-size}-text-font-size";
+	@button-variant-text-line-height: "button-@{variant-size}-text-line-height";
+	@button-variant-height:	"button-@{variant-size}-height";
+	@button-variant-padding-horizontal: "button-@{variant-size}-padding-horizontal";
+	@button-variant-border-radius: "button-@{variant-size}-border-radius";
+	
+	font-size: floor(@@button-variant-text-font-size);
+	line-height: floor(@@button-variant-text-line-height);
+	.box-sizing-padding-vertical(floor(@@button-variant-height), floor(@@button-variant-text-line-height));
+	padding-left: floor(@@button-variant-padding-horizontal);
+	padding-right: floor(@@button-variant-padding-horizontal);
+	.border-radius(@@button-variant-border-radius);
+
+}
+	
+.button-size-variant-size(@variant-size, @variant-screen-size) when (default()) {
+	
+	@button-variant-text-font-size: "button-@{variant-size}-text-font-size";
+	@button-variant-text-font-size-scale: "button-@{variant-size}-text-font-size-scale-@{variant-screen-size}";
+	@button-variant-text-line-height: "button-@{variant-size}-text-line-height";
+	@button-variant-text-line-height-scale: "button-@{variant-size}-text-line-height-scale-@{variant-screen-size}";
+	@button-variant-height:	"button-@{variant-size}-height";
+	@button-variant-height-scale: "button-@{variant-size}-height-scale-@{variant-screen-size}";
+	@button-variant-padding-horizontal: "button-@{variant-size}-padding-horizontal";
+	@button-variant-padding-horizontal-scale: "button-@{variant-size}-padding-horizontal-scale-@{variant-screen-size}";
+	@button-variant-border-radius: "button-@{variant-size}-border-radius";
+	@button-variant-border-radius-scale: "button-@{variant-size}-border-radius-scale-@{variant-screen-size}";
+	
+	font-size: floor(@@button-variant-text-font-size * @@button-variant-text-font-size-scale);
+	line-height: floor(@@button-variant-text-line-height * @@button-variant-text-line-height-scale);
+	.box-sizing-padding-vertical(floor(@@button-variant-height * @@button-variant-height-scale), floor(@@button-variant-text-line-height * @@button-variant-text-font-size-scale));
+	padding-left: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
+	padding-right: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
+	.border-radius(@@button-variant-border-radius * @@button-variant-border-radius-scale);
 	
 }

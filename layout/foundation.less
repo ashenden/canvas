@@ -92,7 +92,7 @@ Canvas
 -------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------- */
 
-.canvas {
+#canvas {
 	
 	position: relative;
 	background-color: @canvas-background-color;
@@ -171,6 +171,108 @@ Container Pod
 		
 	}
 	
+	&.container-pod-divider-top {
+		
+		border-top: 1px solid @border-color;
+		
+		&.container-pod-divider-inverse {
+			
+			border-top: 1px solid @border-color-inverse;
+			
+		}
+		
+	}
+	
+	&.container-pod-divider-bottom {
+		
+		border-bottom: 1px solid @border-color;
+		
+		&.container-pod-divider-inverse {
+			
+			border-bottom: 1px solid @border-color-inverse;
+			
+		}
+		
+	}
+	
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Row Pod
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+.row-pod {
+	
+	position: relative;
+	padding-top: @container-pod-padding-vertical;
+	padding-bottom: @container-pod-padding-vertical;
+	
+	&.row-pod-short {
+		
+		padding-top: @container-pod-short-padding-vertical;
+		padding-bottom: @container-pod-short-padding-vertical;
+		
+	}
+	
+	&.row-pod-tall {
+		
+		padding-top: @container-pod-tall-padding-vertical;
+		padding-bottom: @container-pod-tall-padding-vertical;
+		
+	}
+	
+	&.flush-top {
+		
+		padding-top: 0px !important;
+		
+	}
+	
+	&.flush-bottom {
+		
+		padding-bottom: 0px !important;
+		
+	}
+	
+}
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Column Overflow
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
+
+.column-overflow {
+	
+	margin-top: @container-pod-padding-vertical;
+	
+	&.column-overflow-short {
+	
+		margin-top: @container-pod-short-padding-vertical;
+		
+	}
+	
+	&.column-overflow-tall {
+	
+		margin-top: @container-pod-tall-padding-vertical;
+		
+	}
+	
 }
 
 
@@ -219,6 +321,63 @@ Container Pod
 			
 		}
 		
+		
+		
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		
+		Row Pod
+		
+		-------------------------------------------------------------------------------------------------------
+		---------------------------------------------------------------------------------------------------- */
+		
+		.row-pod {
+			
+			padding-top: @container-pod-padding-vertical-screen-mini;
+			padding-bottom: @container-pod-padding-vertical-screen-mini;
+			
+			&.row-pod-short {
+				
+				padding-top: @container-pod-short-padding-vertical-screen-mini;
+				padding-bottom: @container-pod-short-padding-vertical-screen-mini;
+				
+			}
+			
+			&.row-pod-tall {
+				
+				padding-top: @container-pod-tall-padding-vertical-screen-mini;
+				padding-bottom: @container-pod-tall-padding-vertical-screen-mini;
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		
+		Column Overflow
+		
+		-------------------------------------------------------------------------------------------------------
+		---------------------------------------------------------------------------------------------------- */
+		
+		.column-overflow {
+			
+			&[class*="column-mini-"] {
+				
+				margin-top: 0px;
+				
+			}
+			
+		}
+		
 	}
 	
 }
@@ -249,25 +408,82 @@ Container Pod
 		---------------------------------------------------------------------------------------------------- */
 		
 		.container-pod {
+			
+			padding-top: @container-pod-padding-vertical-screen-small;
+			padding-bottom: @container-pod-padding-vertical-screen-small;
+			
+			&.container-pod-short {
 				
-				padding-top: @container-pod-padding-vertical-screen-small;
-				padding-bottom: @container-pod-padding-vertical-screen-small;
-				
-				&.container-pod-short {
-					
-					padding-top: @container-pod-short-padding-vertical-screen-small;
-					padding-bottom: @container-pod-short-padding-vertical-screen-small;
-					
-				}
-				
-				&.container-pod-tall {
-					
-					padding-top: @container-pod-tall-padding-vertical-screen-small;
-					padding-bottom: @container-pod-tall-padding-vertical-screen-small;
-					
-				}
+				padding-top: @container-pod-short-padding-vertical-screen-small;
+				padding-bottom: @container-pod-short-padding-vertical-screen-small;
 				
 			}
+			
+			&.container-pod-tall {
+				
+				padding-top: @container-pod-tall-padding-vertical-screen-small;
+				padding-bottom: @container-pod-tall-padding-vertical-screen-small;
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		
+		Row Pod
+		
+		-------------------------------------------------------------------------------------------------------
+		---------------------------------------------------------------------------------------------------- */
+		
+		.row-pod {
+			
+			padding-top: @container-pod-padding-vertical-screen-small;
+			padding-bottom: @container-pod-padding-vertical-screen-small;
+			
+			&.row-pod-short {
+				
+				padding-top: @container-pod-short-padding-vertical-screen-small;
+				padding-bottom: @container-pod-short-padding-vertical-screen-small;
+				
+			}
+			
+			&.row-pod-tall {
+				
+				padding-top: @container-pod-tall-padding-vertical-screen-small;
+				padding-bottom: @container-pod-tall-padding-vertical-screen-small;
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		
+		Column Overflow
+		
+		-------------------------------------------------------------------------------------------------------
+		---------------------------------------------------------------------------------------------------- */
+		
+		.column-overflow {
+			
+			&[class*="column-small-"] {
+				
+				margin-top: 0px;
+				
+			}
+			
+		}
 		
 	}
 	
@@ -319,6 +535,63 @@ Container Pod
 			
 		}
 		
+		
+		
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		
+		Row Pod
+		
+		-------------------------------------------------------------------------------------------------------
+		---------------------------------------------------------------------------------------------------- */
+		
+		.row-pod {
+			
+			padding-top: @container-pod-padding-vertical-screen-medium;
+			padding-bottom: @container-pod-padding-vertical-screen-medium;
+			
+			&.row-pod-short {
+				
+				padding-top: @container-pod-short-padding-vertical-screen-medium;
+				padding-bottom: @container-pod-short-padding-vertical-screen-medium;
+				
+			}
+			
+			&.row-pod-tall {
+				
+				padding-top: @container-pod-tall-padding-vertical-screen-medium;
+				padding-bottom: @container-pod-tall-padding-vertical-screen-medium;
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		
+		Column Overflow
+		
+		-------------------------------------------------------------------------------------------------------
+		---------------------------------------------------------------------------------------------------- */
+		
+		[class^="column-"].column-overflow {
+			
+			&[class^="column-medium-"] {
+				
+				margin-top: 0px;
+				
+			}
+			
+		}
+		
 	}
 
 }
@@ -364,6 +637,63 @@ Container Pod
 				
 				padding-top: @container-pod-tall-padding-vertical-screen-large;
 				padding-bottom: @container-pod-tall-padding-vertical-screen-large;
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		
+		Row Pod
+		
+		-------------------------------------------------------------------------------------------------------
+		---------------------------------------------------------------------------------------------------- */
+		
+		.row-pod {
+			
+			padding-top: @container-pod-padding-vertical-screen-large;
+			padding-bottom: @container-pod-padding-vertical-screen-large;
+			
+			&.row-pod-short {
+				
+				padding-top: @container-pod-short-padding-vertical-screen-large;
+				padding-bottom: @container-pod-short-padding-vertical-screen-large;
+				
+			}
+			
+			&.row-pod-tall {
+				
+				padding-top: @container-pod-tall-padding-vertical-screen-large;
+				padding-bottom: @container-pod-tall-padding-vertical-screen-large;
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		/* ----------------------------------------------------------------------------------------------------
+		-------------------------------------------------------------------------------------------------------
+		
+		Column Overflow
+		
+		-------------------------------------------------------------------------------------------------------
+		---------------------------------------------------------------------------------------------------- */
+		
+		[class^="column-"].column-overflow {
+			
+			&[class^="column-large-"] {
+				
+				margin-top: 0px;
 				
 			}
 			

@@ -1498,8 +1498,9 @@ p {
 	
 	-------------------------------------------------------------------------------------------------------
 	---------------------------------------------------------------------------------------------------- */
-		
-	h1 {
+	
+	h1,
+	.h1 {
 		
 		.text-styling (
 			
@@ -1912,7 +1913,8 @@ p {
 	-------------------------------------------------------------------------------------------------------
 	---------------------------------------------------------------------------------------------------- */
 		
-	h2 {
+	h2,
+	.h2 {
 		
 		.text-styling (
 			
@@ -2317,7 +2319,8 @@ p {
 	-------------------------------------------------------------------------------------------------------
 	---------------------------------------------------------------------------------------------------- */
 		
-	h3 {
+	h3,
+	.h3 {
 		
 		.text-styling (
 			
@@ -2722,7 +2725,8 @@ p {
 	-------------------------------------------------------------------------------------------------------
 	---------------------------------------------------------------------------------------------------- */
 		
-	h4 {
+	h4,
+	.h4 {
 		
 		.text-styling (
 			
@@ -3127,7 +3131,8 @@ p {
 	-------------------------------------------------------------------------------------------------------
 	---------------------------------------------------------------------------------------------------- */
 		
-	h5 {
+	h5,
+	.h5 {
 		
 		.text-styling (
 			
@@ -3532,7 +3537,8 @@ p {
 	-------------------------------------------------------------------------------------------------------
 	---------------------------------------------------------------------------------------------------- */
 		
-	h6 {
+	h6,
+	.h6 {
 		
 		.text-styling (
 			
@@ -4415,32 +4421,53 @@ ol {
 	
 	@media (min-width: @screen-mini) {
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Body
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		body {
+		& when (@body-text-scale-screen-mini) {
 			
-			font-size: @body-text-font-size * @body-text-font-size-scale-screen-mini;
-			line-height: @body-text-line-height * @body-text-line-height-scale-screen-mini;
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
 			
+			Body
 			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
 			
-			& when (@body-text-emphasize-enabled) {
+			body {
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Emphasize
-				---------------------------------------------------------------------------------------------------- */
+				font-size: @body-text-font-size * @body-text-font-size-scale-screen-mini;
+				line-height: @body-text-line-height * @body-text-line-height-scale-screen-mini;
 				
-				strong,
-				.emphasize {
+				
+				
+				& when (@body-text-emphasize-enabled) {
 					
-					font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-mini;
-					line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-mini;
+					/* ----------------------------------------------------------------------------------------------------
+					Emphasize
+					---------------------------------------------------------------------------------------------------- */
+					
+					strong,
+					.emphasize {
+						
+						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-mini;
+						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-mini;
+						
+					}
+					
+				}
+				
+				
+				
+				& when (@body-text-mute-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Mute
+					---------------------------------------------------------------------------------------------------- */
+					
+					.mute {
+						
+						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-mini;
+						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-mini;
+						
+					}
 					
 				}
 				
@@ -4448,16 +4475,108 @@ ol {
 			
 			
 			
-			& when (@body-text-mute-enabled) {
+			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
+			
+			Paragraph
+			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
+			
+			p {
+				
+				font-size: @body-text-font-size * @body-text-font-size-scale-screen-mini;
+				line-height: @body-text-line-height * @body-text-line-height-scale-screen-mini;
+				margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-mini;
+				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+				
+				
 				
 				/* ----------------------------------------------------------------------------------------------------
-				Mute
+				Short
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute {
+				&.short {
 					
-					font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-mini;
-					line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-mini;
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-mini;
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				&.short-top {
+					
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-mini;
+					
+				}
+				
+				&.short-bottom {
+					
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Tall
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.tall {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-mini;
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				&.tall-top {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-mini;
+					
+				}
+				
+				&.tall-bottom {
+					
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				
+				
+				& when (@body-text-emphasize-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Emphasize
+					---------------------------------------------------------------------------------------------------- */
+					
+					strong,
+					.emphasize,
+					&.emphasize {
+						
+						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-mini;
+						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-mini;
+						
+					}
+					
+				}
+				
+				
+				
+				& when (@body-text-mute-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Mute
+					---------------------------------------------------------------------------------------------------- */
+					
+					.mute,
+					&.mute {
+						
+						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-mini;
+						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-mini;
+						
+					}
 					
 				}
 				
@@ -4470,116 +4589,7 @@ ol {
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Paragraph
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		p {
-			
-			font-size: @body-text-font-size * @body-text-font-size-scale-screen-mini;
-			line-height: @body-text-line-height * @body-text-line-height-scale-screen-mini;
-			margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-mini;
-			margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Short
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.short {
-				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-mini;
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-			}
-			
-			&.short-top {
-				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-mini;
-				
-			}
-			
-			&.short-bottom {
-				
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Tall
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.tall {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-mini;
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-			}
-			
-			&.tall-top {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-mini;
-				
-			}
-			
-			&.tall-bottom {
-				
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-			}
-			
-			
-			
-			& when (@body-text-emphasize-enabled) {
-				
-				/* ----------------------------------------------------------------------------------------------------
-				Emphasize
-				---------------------------------------------------------------------------------------------------- */
-				
-				strong,
-				.emphasize,
-				&.emphasize {
-					
-					font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-mini;
-					line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-mini;
-					
-				}
-				
-			}
-			
-			
-			
-			& when (@body-text-mute-enabled) {
-				
-				/* ----------------------------------------------------------------------------------------------------
-				Mute
-				---------------------------------------------------------------------------------------------------- */
-				
-				.mute,
-				&.mute {
-					
-					font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-mini;
-					line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-mini;
-					
-				}
-				
-			}
-			
-		}
-		
-		
-		
-		
-		
-		
-		& when (@small-text-enabled) {
+		& when (@small-text-enabled) and (@small-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -4692,7 +4702,7 @@ ol {
 		
 		
 		
-		& when (@lead-text-enabled) {
+		& when (@lead-text-enabled) and (@lead-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -4805,7 +4815,7 @@ ol {
 		
 		
 		
-		& when (@heading-h1-text-enabled) {
+		& when (@heading-h1-text-enabled) and (@heading-h1-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -4815,7 +4825,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h1 {
+			h1,
+			.h1 {
 				
 				font-size: @heading-h1-text-font-size * @heading-h1-text-font-size-scale-screen-mini;
 				line-height: @heading-h1-text-line-height * @heading-h1-text-line-height-scale-screen-mini;
@@ -4918,7 +4929,7 @@ ol {
 		
 		
 		
-		& when (@heading-h2-text-enabled) {
+		& when (@heading-h2-text-enabled) and (@heading-h2-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -4928,7 +4939,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h2 {
+			h2,
+			.h2 {
 				
 				font-size: @heading-h2-text-font-size * @heading-h2-text-font-size-scale-screen-mini;
 				line-height: @heading-h2-text-line-height * @heading-h2-text-line-height-scale-screen-mini;
@@ -5031,7 +5043,7 @@ ol {
 		
 		
 		
-		& when (@heading-h3-text-enabled) {
+		& when (@heading-h3-text-enabled) and (@heading-h3-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -5041,7 +5053,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h3 {
+			h3,
+			.h3 {
 				
 				font-size: @heading-h3-text-font-size * @heading-h3-text-font-size-scale-screen-mini;
 				line-height: @heading-h3-text-line-height * @heading-h3-text-line-height-scale-screen-mini;
@@ -5144,7 +5157,7 @@ ol {
 		
 		
 		
-		& when (@heading-h4-text-enabled) {
+		& when (@heading-h4-text-enabled) and (@heading-h4-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -5154,7 +5167,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h4 {
+			h4,
+			.h4 {
 				
 				font-size: @heading-h4-text-font-size * @heading-h4-text-font-size-scale-screen-mini;
 				line-height: @heading-h4-text-line-height * @heading-h4-text-line-height-scale-screen-mini;
@@ -5257,7 +5271,7 @@ ol {
 		
 		
 		
-		& when (@heading-h5-text-enabled) {
+		& when (@heading-h5-text-enabled) and (@heading-h5-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -5267,7 +5281,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h5 {
+			h5,
+			.h5 {
 				
 				font-size: @heading-h5-text-font-size * @heading-h5-text-font-size-scale-screen-mini;
 				line-height: @heading-h5-text-line-height * @heading-h5-text-line-height-scale-screen-mini;
@@ -5370,7 +5385,7 @@ ol {
 		
 		
 		
-		& when (@heading-h6-text-enabled) {
+		& when (@heading-h6-text-enabled) and (@heading-h6-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -5380,7 +5395,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h6 {
+			h6,
+			.h6 {
 				
 				font-size: @heading-h6-text-font-size * @heading-h6-text-font-size-scale-screen-mini;
 				line-height: @heading-h6-text-line-height * @heading-h6-text-line-height-scale-screen-mini;
@@ -5483,87 +5499,105 @@ ol {
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Lists
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		ul,
-		ol {
-			
-			margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-mini;
-			margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-			
-			
+		& when (@body-text-scale-screen-mini) {
 			
 			/* ----------------------------------------------------------------------------------------------------
-			Short
+			-------------------------------------------------------------------------------------------------------
+			
+			Lists
+			
+			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			&.short {
+			ul,
+			ol {
 				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-mini;
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+				margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-mini;
+				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
 				
-			}
-			
-			&.short-top {
 				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-mini;
 				
-			}
-			
-			&.short-bottom {
+				/* ----------------------------------------------------------------------------------------------------
+				Short
+				---------------------------------------------------------------------------------------------------- */
 				
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Tall
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.tall {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-mini;
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-			}
-			
-			&.tall-top {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-mini;
-				
-			}
-			
-			&.tall-bottom {
-				
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			List Item
-			---------------------------------------------------------------------------------------------------- */
-			
-			li {
-				
-				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 2.0;
-				
-				&:before {
+				&.short {
 					
-					top: ceil((ceil(@body-text-line-height * @body-text-line-height-scale-screen-mini) - ceil(@body-text-font-size * @body-text-font-size-scale-screen-mini * 0.4)) / 2);
-					width: ceil(@body-text-font-size * @body-text-font-size-scale-screen-mini * 0.3);
-					height: ceil(@body-text-font-size * @body-text-font-size-scale-screen-mini * 0.3);
-					.border-radius(ceil(@body-text-font-size * @body-text-font-size-scale-screen-mini * 0.3));
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-mini;
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				&.short-top {
+					
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-mini;
+					
+				}
+				
+				&.short-bottom {
+					
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Tall
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.tall {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-mini;
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				&.tall-top {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-mini;
+					
+				}
+				
+				&.tall-bottom {
+					
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				List Item
+				---------------------------------------------------------------------------------------------------- */
+				
+				li {
+					
+					margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 2.0;
+					
+					&:before {
+						
+						top: ceil((ceil(@body-text-line-height * @body-text-line-height-scale-screen-mini) - ceil(@body-text-font-size * @body-text-font-size-scale-screen-mini * 0.4)) / 2);
+						width: ceil(@body-text-font-size * @body-text-font-size-scale-screen-mini * 0.3);
+						height: ceil(@body-text-font-size * @body-text-font-size-scale-screen-mini * 0.3);
+						.border-radius(ceil(@body-text-font-size * @body-text-font-size-scale-screen-mini * 0.3));
+						
+					}
+					
+					
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Nested List
+					---------------------------------------------------------------------------------------------------- */
+					
+					> ul,
+					> ol {
+						
+						margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
+						margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
+						
+					}
 					
 				}
 				
@@ -5576,65 +5610,51 @@ ol {
 				> ul,
 				> ol {
 					
-					margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
-					margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Inline List
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.list-inline {
+					
+					margin-top: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
+					margin-left: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					
+					> li {
+						
+						margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
+						margin-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+						
+					}
 					
 				}
 				
 			}
-			
-			
-			
+				
+				
+				
 			/* ----------------------------------------------------------------------------------------------------
-			Nested List
+			Ordered List
 			---------------------------------------------------------------------------------------------------- */
 			
-			> ul,
-			> ol {
+			ol {
 				
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Inline List
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.list-inline {
-				
-				margin-top: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
-				margin-left: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
-				
-				> li {
+				li {
 					
-					margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 0.5;
-					margin-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 2.0;
 					
-				}
-				
-			}
-			
-		}
-			
-			
-			
-		/* ----------------------------------------------------------------------------------------------------
-		Ordered List
-		---------------------------------------------------------------------------------------------------- */
-		
-		ol {
-			
-			li {
-				
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-mini * 2.0;
-				
-				&:before {
-					
-					top: 0px;
-					width: auto;
-					height: @body-text-line-height * @body-text-line-height-scale-screen-mini;
+					&:before {
+						
+						top: 0px;
+						width: auto;
+						height: @body-text-line-height * @body-text-line-height-scale-screen-mini;
+						
+					}
 					
 				}
 				
@@ -5663,32 +5683,53 @@ ol {
 
 	@media (min-width: @screen-small) {
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Body
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		body {
+		& when (@body-text-scale-screen-small) {
 			
-			font-size: @body-text-font-size * @body-text-font-size-scale-screen-small;
-			line-height: @body-text-line-height * @body-text-line-height-scale-screen-small;
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
 			
+			Body
 			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
 			
-			& when (@body-text-emphasize-enabled) {
+			body {
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Emphasize
-				---------------------------------------------------------------------------------------------------- */
+				font-size: @body-text-font-size * @body-text-font-size-scale-screen-small;
+				line-height: @body-text-line-height * @body-text-line-height-scale-screen-small;
 				
-				strong,
-				.emphasize {
+				
+				
+				& when (@body-text-emphasize-enabled) {
 					
-					font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-small;
-					line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-small;
+					/* ----------------------------------------------------------------------------------------------------
+					Emphasize
+					---------------------------------------------------------------------------------------------------- */
+					
+					strong,
+					.emphasize {
+						
+						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-small;
+						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-small;
+						
+					}
+					
+				}
+				
+				
+				
+				& when (@body-text-mute-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Mute
+					---------------------------------------------------------------------------------------------------- */
+					
+					.mute {
+						
+						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-small;
+						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-small;
+						
+					}
 					
 				}
 				
@@ -5696,16 +5737,108 @@ ol {
 			
 			
 			
-			& when (@body-text-mute-enabled) {
+			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
+			
+			Paragraph
+			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
+			
+			p {
+				
+				font-size: @body-text-font-size * @body-text-font-size-scale-screen-small;
+				line-height: @body-text-line-height * @body-text-line-height-scale-screen-small;
+				margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-small;
+				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+				
+				
 				
 				/* ----------------------------------------------------------------------------------------------------
-				Mute
+				Short
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute {
+				&.short {
 					
-					font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-small;
-					line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-small;
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-small;
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				&.short-top {
+					
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-small;
+					
+				}
+				
+				&.short-bottom {
+					
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Tall
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.tall {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-small;
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				&.tall-top {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-small;
+					
+				}
+				
+				&.tall-bottom {
+					
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				
+				
+				& when (@body-text-emphasize-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Emphasize
+					---------------------------------------------------------------------------------------------------- */
+					
+					strong,
+					.emphasize,
+					&.emphasize {
+						
+						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-small;
+						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-small;
+						
+					}
+					
+				}
+				
+				
+				
+				& when (@body-text-mute-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Mute
+					---------------------------------------------------------------------------------------------------- */
+					
+					.mute,
+					&.mute {
+						
+						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-small;
+						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-small;
+						
+					}
 					
 				}
 				
@@ -5718,116 +5851,7 @@ ol {
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Paragraph
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		p {
-			
-			font-size: @body-text-font-size * @body-text-font-size-scale-screen-small;
-			line-height: @body-text-line-height * @body-text-line-height-scale-screen-small;
-			margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-small;
-			margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Short
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.short {
-				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-small;
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-			}
-			
-			&.short-top {
-				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-small;
-				
-			}
-			
-			&.short-bottom {
-				
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Tall
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.tall {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-small;
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-			}
-			
-			&.tall-top {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-small;
-				
-			}
-			
-			&.tall-bottom {
-				
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-			}
-			
-			
-			
-			& when (@body-text-emphasize-enabled) {
-				
-				/* ----------------------------------------------------------------------------------------------------
-				Emphasize
-				---------------------------------------------------------------------------------------------------- */
-				
-				strong,
-				.emphasize,
-				&.emphasize {
-					
-					font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-small;
-					line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-small;
-					
-				}
-				
-			}
-			
-			
-			
-			& when (@body-text-mute-enabled) {
-				
-				/* ----------------------------------------------------------------------------------------------------
-				Mute
-				---------------------------------------------------------------------------------------------------- */
-				
-				.mute,
-				&.mute {
-					
-					font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-small;
-					line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-small;
-					
-				}
-				
-			}
-			
-		}
-		
-		
-		
-		
-		
-		
-		& when (@small-text-enabled) {
+		& when (@small-text-enabled) and (@small-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -5940,7 +5964,7 @@ ol {
 		
 		
 		
-		& when (@lead-text-enabled) {
+		& when (@lead-text-enabled) and (@lead-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -6053,7 +6077,7 @@ ol {
 		
 		
 		
-		& when (@heading-h1-text-enabled) {
+		& when (@heading-h1-text-enabled) and (@heading-h1-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -6063,7 +6087,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h1 {
+			h1,
+			.h1 {
 				
 				font-size: @heading-h1-text-font-size * @heading-h1-text-font-size-scale-screen-small;
 				line-height: @heading-h1-text-line-height * @heading-h1-text-line-height-scale-screen-small;
@@ -6166,7 +6191,7 @@ ol {
 		
 		
 		
-		& when (@heading-h2-text-enabled) {
+		& when (@heading-h2-text-enabled) and (@heading-h2-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -6176,7 +6201,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h2 {
+			h2,
+			.h2 {
 				
 				font-size: @heading-h2-text-font-size * @heading-h2-text-font-size-scale-screen-small;
 				line-height: @heading-h2-text-line-height * @heading-h2-text-line-height-scale-screen-small;
@@ -6279,7 +6305,7 @@ ol {
 		
 		
 		
-		& when (@heading-h3-text-enabled) {
+		& when (@heading-h3-text-enabled) and (@heading-h3-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -6289,7 +6315,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h3 {
+			h3,
+			.h3 {
 				
 				font-size: @heading-h3-text-font-size * @heading-h3-text-font-size-scale-screen-small;
 				line-height: @heading-h3-text-line-height * @heading-h3-text-line-height-scale-screen-small;
@@ -6392,7 +6419,7 @@ ol {
 		
 		
 		
-		& when (@heading-h4-text-enabled) {
+		& when (@heading-h4-text-enabled) and (@heading-h4-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -6402,7 +6429,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h4 {
+			h4,
+			.h4 {
 				
 				font-size: @heading-h4-text-font-size * @heading-h4-text-font-size-scale-screen-small;
 				line-height: @heading-h4-text-line-height * @heading-h4-text-line-height-scale-screen-small;
@@ -6505,7 +6533,7 @@ ol {
 		
 		
 		
-		& when (@heading-h5-text-enabled) {
+		& when (@heading-h5-text-enabled) and (@heading-h5-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -6515,7 +6543,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h5 {
+			h5,
+			.h5 {
 				
 				font-size: @heading-h5-text-font-size * @heading-h5-text-font-size-scale-screen-small;
 				line-height: @heading-h5-text-line-height * @heading-h5-text-line-height-scale-screen-small;
@@ -6618,7 +6647,7 @@ ol {
 		
 		
 		
-		& when (@heading-h6-text-enabled) {
+		& when (@heading-h6-text-enabled) and (@heading-h6-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -6628,7 +6657,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h6 {
+			h6,
+			.h6 {
 				
 				font-size: @heading-h6-text-font-size * @heading-h6-text-font-size-scale-screen-small;
 				line-height: @heading-h6-text-line-height * @heading-h6-text-line-height-scale-screen-small;
@@ -6731,87 +6761,105 @@ ol {
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Lists
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		ul,
-		ol {
-			
-			margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-small;
-			margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-			
-			
+		& when (@body-text-scale-screen-small) {
 			
 			/* ----------------------------------------------------------------------------------------------------
-			Short
+			-------------------------------------------------------------------------------------------------------
+			
+			Lists
+			
+			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			&.short {
+			ul,
+			ol {
 				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-small;
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+				margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-small;
+				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
 				
-			}
-			
-			&.short-top {
 				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-small;
 				
-			}
-			
-			&.short-bottom {
+				/* ----------------------------------------------------------------------------------------------------
+				Short
+				---------------------------------------------------------------------------------------------------- */
 				
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Tall
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.tall {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-small;
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-			}
-			
-			&.tall-top {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-small;
-				
-			}
-			
-			&.tall-bottom {
-				
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			List Item
-			---------------------------------------------------------------------------------------------------- */
-			
-			li {
-				
-				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 2.0;
-				
-				&:before {
+				&.short {
 					
-					top: ceil((ceil(@body-text-line-height * @body-text-line-height-scale-screen-small) - ceil(@body-text-font-size * @body-text-font-size-scale-screen-small * 0.4)) / 2);
-					width: ceil(@body-text-font-size * @body-text-font-size-scale-screen-small * 0.3);
-					height: ceil(@body-text-font-size * @body-text-font-size-scale-screen-small * 0.3);
-					.border-radius(ceil(@body-text-font-size * @body-text-font-size-scale-screen-small * 0.3));
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-small;
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				&.short-top {
+					
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-small;
+					
+				}
+				
+				&.short-bottom {
+					
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Tall
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.tall {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-small;
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				&.tall-top {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-small;
+					
+				}
+				
+				&.tall-bottom {
+					
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				List Item
+				---------------------------------------------------------------------------------------------------- */
+				
+				li {
+					
+					margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 2.0;
+					
+					&:before {
+						
+						top: ceil((ceil(@body-text-line-height * @body-text-line-height-scale-screen-small) - ceil(@body-text-font-size * @body-text-font-size-scale-screen-small * 0.4)) / 2);
+						width: ceil(@body-text-font-size * @body-text-font-size-scale-screen-small * 0.3);
+						height: ceil(@body-text-font-size * @body-text-font-size-scale-screen-small * 0.3);
+						.border-radius(ceil(@body-text-font-size * @body-text-font-size-scale-screen-small * 0.3));
+						
+					}
+					
+					
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Nested List
+					---------------------------------------------------------------------------------------------------- */
+					
+					> ul,
+					> ol {
+						
+						margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
+						margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
+						
+					}
 					
 				}
 				
@@ -6824,65 +6872,51 @@ ol {
 				> ul,
 				> ol {
 					
-					margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
-					margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Inline List
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.list-inline {
+					
+					margin-top: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
+					margin-left: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					
+					> li {
+						
+						margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
+						margin-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+						
+					}
 					
 				}
 				
 			}
-			
-			
-			
+				
+				
+				
 			/* ----------------------------------------------------------------------------------------------------
-			Nested List
+			Ordered List
 			---------------------------------------------------------------------------------------------------- */
 			
-			> ul,
-			> ol {
+			ol {
 				
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Inline List
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.list-inline {
-				
-				margin-top: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
-				margin-left: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
-				
-				> li {
+				li {
 					
-					margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 0.5;
-					margin-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 2.0;
 					
-				}
-				
-			}
-			
-		}
-			
-			
-			
-		/* ----------------------------------------------------------------------------------------------------
-		Ordered List
-		---------------------------------------------------------------------------------------------------- */
-		
-		ol {
-			
-			li {
-				
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-small * 2.0;
-				
-				&:before {
-					
-					top: 0px;
-					width: auto;
-					height: @body-text-line-height * @body-text-line-height-scale-screen-small;
+					&:before {
+						
+						top: 0px;
+						width: auto;
+						height: @body-text-line-height * @body-text-line-height-scale-screen-small;
+						
+					}
 					
 				}
 				
@@ -6911,32 +6945,53 @@ ol {
 
 	@media (min-width: @screen-medium) {
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Body
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		body {
+		& when (@body-text-scale-screen-medium) {
 			
-			font-size: @body-text-font-size * @body-text-font-size-scale-screen-medium;
-			line-height: @body-text-line-height * @body-text-line-height-scale-screen-medium;
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
 			
+			Body
 			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
 			
-			& when (@body-text-emphasize-enabled) {
+			body {
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Emphasize
-				---------------------------------------------------------------------------------------------------- */
+				font-size: @body-text-font-size * @body-text-font-size-scale-screen-medium;
+				line-height: @body-text-line-height * @body-text-line-height-scale-screen-medium;
 				
-				strong,
-				.emphasize {
+				
+				
+				& when (@body-text-emphasize-enabled) {
 					
-					font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-medium;
-					line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-medium;
+					/* ----------------------------------------------------------------------------------------------------
+					Emphasize
+					---------------------------------------------------------------------------------------------------- */
+					
+					strong,
+					.emphasize {
+						
+						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-medium;
+						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-medium;
+						
+					}
+					
+				}
+				
+				
+				
+				& when (@body-text-mute-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Mute
+					---------------------------------------------------------------------------------------------------- */
+					
+					.mute {
+						
+						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-medium;
+						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-medium;
+						
+					}
 					
 				}
 				
@@ -6944,16 +6999,108 @@ ol {
 			
 			
 			
-			& when (@body-text-mute-enabled) {
+			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
+			
+			Paragraph
+			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
+			
+			p {
+				
+				font-size: @body-text-font-size * @body-text-font-size-scale-screen-medium;
+				line-height: @body-text-line-height * @body-text-line-height-scale-screen-medium;
+				margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-medium;
+				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+				
+				
 				
 				/* ----------------------------------------------------------------------------------------------------
-				Mute
+				Short
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute {
+				&.short {
 					
-					font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-medium;
-					line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-medium;
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-medium;
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				&.short-top {
+					
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-medium;
+					
+				}
+				
+				&.short-bottom {
+					
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Tall
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.tall {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-medium;
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				&.tall-top {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-medium;
+					
+				}
+				
+				&.tall-bottom {
+					
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				
+				
+				& when (@body-text-emphasize-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Emphasize
+					---------------------------------------------------------------------------------------------------- */
+					
+					strong,
+					.emphasize,
+					&.emphasize {
+						
+						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-medium;
+						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-medium;
+						
+					}
+					
+				}
+				
+				
+				
+				& when (@body-text-mute-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Mute
+					---------------------------------------------------------------------------------------------------- */
+					
+					.mute,
+					&.mute {
+						
+						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-medium;
+						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-medium;
+						
+					}
 					
 				}
 				
@@ -6966,116 +7113,7 @@ ol {
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Paragraph
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		p {
-			
-			font-size: @body-text-font-size * @body-text-font-size-scale-screen-medium;
-			line-height: @body-text-line-height * @body-text-line-height-scale-screen-medium;
-			margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-medium;
-			margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Short
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.short {
-				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-medium;
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-			}
-			
-			&.short-top {
-				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-medium;
-				
-			}
-			
-			&.short-bottom {
-				
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Tall
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.tall {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-medium;
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-			}
-			
-			&.tall-top {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-medium;
-				
-			}
-			
-			&.tall-bottom {
-				
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-			}
-			
-			
-			
-			& when (@body-text-emphasize-enabled) {
-				
-				/* ----------------------------------------------------------------------------------------------------
-				Emphasize
-				---------------------------------------------------------------------------------------------------- */
-				
-				strong,
-				.emphasize,
-				&.emphasize {
-					
-					font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-medium;
-					line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-medium;
-					
-				}
-				
-			}
-			
-			
-			
-			& when (@body-text-mute-enabled) {
-				
-				/* ----------------------------------------------------------------------------------------------------
-				Mute
-				---------------------------------------------------------------------------------------------------- */
-				
-				.mute,
-				&.mute {
-					
-					font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-medium;
-					line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-medium;
-					
-				}
-				
-			}
-			
-		}
-		
-		
-		
-		
-		
-		
-		& when (@small-text-enabled) {
+		& when (@small-text-enabled) and (@small-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -7188,7 +7226,7 @@ ol {
 		
 		
 		
-		& when (@lead-text-enabled) {
+		& when (@lead-text-enabled) and (@lead-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -7301,7 +7339,7 @@ ol {
 		
 		
 		
-		& when (@heading-h1-text-enabled) {
+		& when (@heading-h1-text-enabled) and (@heading-h1-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -7311,7 +7349,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h1 {
+			h1,
+			.h1 {
 				
 				font-size: @heading-h1-text-font-size * @heading-h1-text-font-size-scale-screen-medium;
 				line-height: @heading-h1-text-line-height * @heading-h1-text-line-height-scale-screen-medium;
@@ -7414,7 +7453,7 @@ ol {
 		
 		
 		
-		& when (@heading-h2-text-enabled) {
+		& when (@heading-h2-text-enabled) and (@heading-h2-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -7424,7 +7463,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h2 {
+			h2,
+			.h2 {
 				
 				font-size: @heading-h2-text-font-size * @heading-h2-text-font-size-scale-screen-medium;
 				line-height: @heading-h2-text-line-height * @heading-h2-text-line-height-scale-screen-medium;
@@ -7527,7 +7567,7 @@ ol {
 		
 		
 		
-		& when (@heading-h3-text-enabled) {
+		& when (@heading-h3-text-enabled) and (@heading-h3-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -7537,7 +7577,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h3 {
+			h3,
+			.h3 {
 				
 				font-size: @heading-h3-text-font-size * @heading-h3-text-font-size-scale-screen-medium;
 				line-height: @heading-h3-text-line-height * @heading-h3-text-line-height-scale-screen-medium;
@@ -7640,7 +7681,7 @@ ol {
 		
 		
 		
-		& when (@heading-h4-text-enabled) {
+		& when (@heading-h4-text-enabled) and (@heading-h4-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -7650,7 +7691,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h4 {
+			h4,
+			.h4 {
 				
 				font-size: @heading-h4-text-font-size * @heading-h4-text-font-size-scale-screen-medium;
 				line-height: @heading-h4-text-line-height * @heading-h4-text-line-height-scale-screen-medium;
@@ -7753,7 +7795,7 @@ ol {
 		
 		
 		
-		& when (@heading-h5-text-enabled) {
+		& when (@heading-h5-text-enabled) and (@heading-h5-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -7763,7 +7805,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h5 {
+			h5,
+			.h5 {
 				
 				font-size: @heading-h5-text-font-size * @heading-h5-text-font-size-scale-screen-medium;
 				line-height: @heading-h5-text-line-height * @heading-h5-text-line-height-scale-screen-medium;
@@ -7866,7 +7909,7 @@ ol {
 		
 		
 		
-		& when (@heading-h6-text-enabled) {
+		& when (@heading-h6-text-enabled) and (@heading-h6-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -7876,7 +7919,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h6 {
+			h6,
+			.h6 {
 				
 				font-size: @heading-h6-text-font-size * @heading-h6-text-font-size-scale-screen-medium;
 				line-height: @heading-h6-text-line-height * @heading-h6-text-line-height-scale-screen-medium;
@@ -7979,87 +8023,105 @@ ol {
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Lists
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		ul,
-		ol {
-			
-			margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-medium;
-			margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-			
-			
+		& when (@body-text-scale-screen-medium) {
 			
 			/* ----------------------------------------------------------------------------------------------------
-			Short
+			-------------------------------------------------------------------------------------------------------
+			
+			Lists
+			
+			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			&.short {
+			ul,
+			ol {
 				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-medium;
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+				margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-medium;
+				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
 				
-			}
-			
-			&.short-top {
 				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-medium;
 				
-			}
-			
-			&.short-bottom {
+				/* ----------------------------------------------------------------------------------------------------
+				Short
+				---------------------------------------------------------------------------------------------------- */
 				
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Tall
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.tall {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-medium;
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-			}
-			
-			&.tall-top {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-medium;
-				
-			}
-			
-			&.tall-bottom {
-				
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			List Item
-			---------------------------------------------------------------------------------------------------- */
-			
-			li {
-				
-				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 2.0;
-				
-				&:before {
+				&.short {
 					
-					top: ceil((ceil(@body-text-line-height * @body-text-line-height-scale-screen-medium) - ceil(@body-text-font-size * @body-text-font-size-scale-screen-medium * 0.4)) / 2);
-					width: ceil(@body-text-font-size * @body-text-font-size-scale-screen-medium * 0.3);
-					height: ceil(@body-text-font-size * @body-text-font-size-scale-screen-medium * 0.3);
-					.border-radius(ceil(@body-text-font-size * @body-text-font-size-scale-screen-medium * 0.3));
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-medium;
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				&.short-top {
+					
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-medium;
+					
+				}
+				
+				&.short-bottom {
+					
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Tall
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.tall {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-medium;
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				&.tall-top {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-medium;
+					
+				}
+				
+				&.tall-bottom {
+					
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				List Item
+				---------------------------------------------------------------------------------------------------- */
+				
+				li {
+					
+					margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 2.0;
+					
+					&:before {
+						
+						top: ceil((ceil(@body-text-line-height * @body-text-line-height-scale-screen-medium) - ceil(@body-text-font-size * @body-text-font-size-scale-screen-medium * 0.4)) / 2);
+						width: ceil(@body-text-font-size * @body-text-font-size-scale-screen-medium * 0.3);
+						height: ceil(@body-text-font-size * @body-text-font-size-scale-screen-medium * 0.3);
+						.border-radius(ceil(@body-text-font-size * @body-text-font-size-scale-screen-medium * 0.3));
+						
+					}
+					
+					
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Nested List
+					---------------------------------------------------------------------------------------------------- */
+					
+					> ul,
+					> ol {
+						
+						margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
+						margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
+						
+					}
 					
 				}
 				
@@ -8072,65 +8134,51 @@ ol {
 				> ul,
 				> ol {
 					
-					margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
-					margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Inline List
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.list-inline {
+					
+					margin-top: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
+					margin-left: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					
+					> li {
+						
+						margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
+						margin-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+						
+					}
 					
 				}
 				
 			}
-			
-			
-			
+				
+				
+				
 			/* ----------------------------------------------------------------------------------------------------
-			Nested List
+			Ordered List
 			---------------------------------------------------------------------------------------------------- */
 			
-			> ul,
-			> ol {
+			ol {
 				
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Inline List
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.list-inline {
-				
-				margin-top: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
-				margin-left: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
-				
-				> li {
+				li {
 					
-					margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 0.5;
-					margin-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 2.0;
 					
-				}
-				
-			}
-			
-		}
-			
-			
-			
-		/* ----------------------------------------------------------------------------------------------------
-		Ordered List
-		---------------------------------------------------------------------------------------------------- */
-		
-		ol {
-			
-			li {
-				
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-medium * 2.0;
-				
-				&:before {
-					
-					top: 0px;
-					width: auto;
-					height: @body-text-line-height * @body-text-line-height-scale-screen-medium;
+					&:before {
+						
+						top: 0px;
+						width: auto;
+						height: @body-text-line-height * @body-text-line-height-scale-screen-medium;
+						
+					}
 					
 				}
 				
@@ -8159,32 +8207,53 @@ ol {
 
 	@media (min-width: @screen-large) {
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Body
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		body {
+		& when (@body-text-scale-screen-large) {
 			
-			font-size: @body-text-font-size * @body-text-font-size-scale-screen-large;
-			line-height: @body-text-line-height * @body-text-line-height-scale-screen-large;
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
 			
+			Body
 			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
 			
-			& when (@body-text-emphasize-enabled) {
+			body {
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Emphasize
-				---------------------------------------------------------------------------------------------------- */
+				font-size: @body-text-font-size * @body-text-font-size-scale-screen-large;
+				line-height: @body-text-line-height * @body-text-line-height-scale-screen-large;
 				
-				strong,
-				.emphasize {
+				
+				
+				& when (@body-text-emphasize-enabled) {
 					
-					font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-large;
-					line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-large;
+					/* ----------------------------------------------------------------------------------------------------
+					Emphasize
+					---------------------------------------------------------------------------------------------------- */
+					
+					strong,
+					.emphasize {
+						
+						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-large;
+						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-large;
+						
+					}
+					
+				}
+				
+				
+				
+				& when (@body-text-mute-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Mute
+					---------------------------------------------------------------------------------------------------- */
+					
+					.mute {
+						
+						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-large;
+						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-large;
+						
+					}
 					
 				}
 				
@@ -8192,16 +8261,108 @@ ol {
 			
 			
 			
-			& when (@body-text-mute-enabled) {
+			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
+			
+			Paragraph
+			
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
+			
+			p {
+				
+				font-size: @body-text-font-size * @body-text-font-size-scale-screen-large;
+				line-height: @body-text-line-height * @body-text-line-height-scale-screen-large;
+				margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-large;
+				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+				
+				
 				
 				/* ----------------------------------------------------------------------------------------------------
-				Mute
+				Short
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute {
+				&.short {
 					
-					font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-large;
-					line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-large;
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-large;
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				&.short-top {
+					
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-large;
+					
+				}
+				
+				&.short-bottom {
+					
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Tall
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.tall {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-large;
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				&.tall-top {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-large;
+					
+				}
+				
+				&.tall-bottom {
+					
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				
+				
+				& when (@body-text-emphasize-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Emphasize
+					---------------------------------------------------------------------------------------------------- */
+					
+					strong,
+					.emphasize,
+					&.emphasize {
+						
+						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-large;
+						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-large;
+						
+					}
+					
+				}
+				
+				
+				
+				& when (@body-text-mute-enabled) {
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Mute
+					---------------------------------------------------------------------------------------------------- */
+					
+					.mute,
+					&.mute {
+						
+						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-large;
+						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-large;
+						
+					}
 					
 				}
 				
@@ -8214,116 +8375,7 @@ ol {
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Paragraph
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		p {
-			
-			font-size: @body-text-font-size * @body-text-font-size-scale-screen-large;
-			line-height: @body-text-line-height * @body-text-line-height-scale-screen-large;
-			margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-large;
-			margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Short
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.short {
-				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-large;
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-			}
-			
-			&.short-top {
-				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-large;
-				
-			}
-			
-			&.short-bottom {
-				
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Tall
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.tall {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-large;
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-			}
-			
-			&.tall-top {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-large;
-				
-			}
-			
-			&.tall-bottom {
-				
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-			}
-			
-			
-			
-			& when (@body-text-emphasize-enabled) {
-				
-				/* ----------------------------------------------------------------------------------------------------
-				Emphasize
-				---------------------------------------------------------------------------------------------------- */
-				
-				strong,
-				.emphasize,
-				&.emphasize {
-					
-					font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-large;
-					line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-large;
-					
-				}
-				
-			}
-			
-			
-			
-			& when (@body-text-mute-enabled) {
-				
-				/* ----------------------------------------------------------------------------------------------------
-				Mute
-				---------------------------------------------------------------------------------------------------- */
-				
-				.mute,
-				&.mute {
-					
-					font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-large;
-					line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-large;
-					
-				}
-				
-			}
-			
-		}
-		
-		
-		
-		
-		
-		
-		& when (@small-text-enabled) {
+		& when (@small-text-enabled) and (@small-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -8436,7 +8488,7 @@ ol {
 		
 		
 		
-		& when (@lead-text-enabled) {
+		& when (@lead-text-enabled) and (@lead-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -8549,7 +8601,7 @@ ol {
 		
 		
 		
-		& when (@heading-h1-text-enabled) {
+		& when (@heading-h1-text-enabled) and (@heading-h1-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -8559,7 +8611,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h1 {
+			h1,
+			.h1 {
 				
 				font-size: @heading-h1-text-font-size * @heading-h1-text-font-size-scale-screen-large;
 				line-height: @heading-h1-text-line-height * @heading-h1-text-line-height-scale-screen-large;
@@ -8662,7 +8715,7 @@ ol {
 		
 		
 		
-		& when (@heading-h2-text-enabled) {
+		& when (@heading-h2-text-enabled) and (@heading-h2-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -8672,7 +8725,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h2 {
+			h2,
+			.h2 {
 				
 				font-size: @heading-h2-text-font-size * @heading-h2-text-font-size-scale-screen-large;
 				line-height: @heading-h2-text-line-height * @heading-h2-text-line-height-scale-screen-large;
@@ -8775,7 +8829,7 @@ ol {
 		
 		
 		
-		& when (@heading-h3-text-enabled) {
+		& when (@heading-h3-text-enabled) and (@heading-h3-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -8785,7 +8839,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h3 {
+			h3,
+			.h3 {
 				
 				font-size: @heading-h3-text-font-size * @heading-h3-text-font-size-scale-screen-large;
 				line-height: @heading-h3-text-line-height * @heading-h3-text-line-height-scale-screen-large;
@@ -8888,7 +8943,7 @@ ol {
 		
 		
 		
-		& when (@heading-h4-text-enabled) {
+		& when (@heading-h4-text-enabled) and (@heading-h4-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -8898,7 +8953,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h4 {
+			h4,
+			.h4 {
 				
 				font-size: @heading-h4-text-font-size * @heading-h4-text-font-size-scale-screen-large;
 				line-height: @heading-h4-text-line-height * @heading-h4-text-line-height-scale-screen-large;
@@ -9001,7 +9057,7 @@ ol {
 		
 		
 		
-		& when (@heading-h5-text-enabled) {
+		& when (@heading-h5-text-enabled) and (@heading-h5-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -9011,7 +9067,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h5 {
+			h5,
+			.h5 {
 				
 				font-size: @heading-h5-text-font-size * @heading-h5-text-font-size-scale-screen-large;
 				line-height: @heading-h5-text-line-height * @heading-h5-text-line-height-scale-screen-large;
@@ -9114,7 +9171,7 @@ ol {
 		
 		
 		
-		& when (@heading-h6-text-enabled) {
+		& when (@heading-h6-text-enabled) and (@heading-h6-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -9124,7 +9181,8 @@ ol {
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			h6 {
+			h6,
+			.h6 {
 				
 				font-size: @heading-h6-text-font-size * @heading-h6-text-font-size-scale-screen-large;
 				line-height: @heading-h6-text-line-height * @heading-h6-text-line-height-scale-screen-large;
@@ -9227,87 +9285,105 @@ ol {
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Lists
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		ul,
-		ol {
-			
-			margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-large;
-			margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-			
-			
+		& when (@body-text-scale-screen-large) {
 			
 			/* ----------------------------------------------------------------------------------------------------
-			Short
+			-------------------------------------------------------------------------------------------------------
+			
+			Lists
+			
+			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			&.short {
+			ul,
+			ol {
 				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-large;
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+				margin-top: @body-text-margin-top * @body-text-margin-top-scale-screen-large;
+				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
 				
-			}
-			
-			&.short-top {
 				
-				margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-large;
 				
-			}
-			
-			&.short-bottom {
+				/* ----------------------------------------------------------------------------------------------------
+				Short
+				---------------------------------------------------------------------------------------------------- */
 				
-				margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Tall
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.tall {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-large;
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-			}
-			
-			&.tall-top {
-				
-				margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-large;
-				
-			}
-			
-			&.tall-bottom {
-				
-				margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			List Item
-			---------------------------------------------------------------------------------------------------- */
-			
-			li {
-				
-				margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 2.0;
-				
-				&:before {
+				&.short {
 					
-					top: ceil((ceil(@body-text-line-height * @body-text-line-height-scale-screen-large) - ceil(@body-text-font-size * @body-text-font-size-scale-screen-large * 0.4)) / 2);
-					width: ceil(@body-text-font-size * @body-text-font-size-scale-screen-large * 0.3);
-					height: ceil(@body-text-font-size * @body-text-font-size-scale-screen-large * 0.3);
-					.border-radius(ceil(@body-text-font-size * @body-text-font-size-scale-screen-large * 0.3));
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-large;
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				&.short-top {
+					
+					margin-top: @body-text-short-margin-top * @body-text-margin-top-scale-screen-large;
+					
+				}
+				
+				&.short-bottom {
+					
+					margin-bottom: @body-text-short-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Tall
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.tall {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-large;
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				&.tall-top {
+					
+					margin-top: @body-text-tall-margin-top * @body-text-margin-top-scale-screen-large;
+					
+				}
+				
+				&.tall-bottom {
+					
+					margin-bottom: @body-text-tall-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				List Item
+				---------------------------------------------------------------------------------------------------- */
+				
+				li {
+					
+					margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 2.0;
+					
+					&:before {
+						
+						top: ceil((ceil(@body-text-line-height * @body-text-line-height-scale-screen-large) - ceil(@body-text-font-size * @body-text-font-size-scale-screen-large * 0.4)) / 2);
+						width: ceil(@body-text-font-size * @body-text-font-size-scale-screen-large * 0.3);
+						height: ceil(@body-text-font-size * @body-text-font-size-scale-screen-large * 0.3);
+						.border-radius(ceil(@body-text-font-size * @body-text-font-size-scale-screen-large * 0.3));
+						
+					}
+					
+					
+					
+					/* ----------------------------------------------------------------------------------------------------
+					Nested List
+					---------------------------------------------------------------------------------------------------- */
+					
+					> ul,
+					> ol {
+						
+						margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
+						margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
+						
+					}
 					
 				}
 				
@@ -9320,65 +9396,51 @@ ol {
 				> ul,
 				> ol {
 					
-					margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
-					margin-bottom: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+				}
+				
+				
+				
+				/* ----------------------------------------------------------------------------------------------------
+				Inline List
+				---------------------------------------------------------------------------------------------------- */
+				
+				&.list-inline {
+					
+					margin-top: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
+					margin-left: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					
+					> li {
+						
+						margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
+						margin-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+						
+					}
 					
 				}
 				
 			}
-			
-			
-			
+				
+				
+				
 			/* ----------------------------------------------------------------------------------------------------
-			Nested List
+			Ordered List
 			---------------------------------------------------------------------------------------------------- */
 			
-			> ul,
-			> ol {
+			ol {
 				
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-			}
-			
-			
-			
-			/* ----------------------------------------------------------------------------------------------------
-			Inline List
-			---------------------------------------------------------------------------------------------------- */
-			
-			&.list-inline {
-				
-				margin-top: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
-				margin-left: -@body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
-				
-				> li {
+				li {
 					
-					margin-top: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 0.5;
-					margin-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large;
+					padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 2.0;
 					
-				}
-				
-			}
-			
-		}
-			
-			
-			
-		/* ----------------------------------------------------------------------------------------------------
-		Ordered List
-		---------------------------------------------------------------------------------------------------- */
-		
-		ol {
-			
-			li {
-				
-				padding-left: @body-text-margin-bottom * @body-text-margin-bottom-scale-screen-large * 2.0;
-				
-				&:before {
-					
-					top: 0px;
-					width: auto;
-					height: @body-text-line-height * @body-text-line-height-scale-screen-large;
+					&:before {
+						
+						top: 0px;
+						width: auto;
+						height: @body-text-line-height * @body-text-line-height-scale-screen-large;
+						
+					}
 					
 				}
 				
