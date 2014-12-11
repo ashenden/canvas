@@ -16,67 +16,6 @@ variables/buttons.less
 /* ----------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------
 
-Button Collection
-
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-Button Collection Spacing
----------------------------------------------------------------------------------------------------- */
-
-@button-collection-spacing:																		@base-spacing-unit * 0.2;
-@button-collection-spacing-screen-mini:															@base-spacing-unit-screen-mini * 0.2;
-@button-collection-spacing-screen-small:														@base-spacing-unit-screen-small * 0.2;
-@button-collection-spacing-screen-medium:														@base-spacing-unit-screen-medium * 0.15;
-@button-collection-spacing-screen-large:														@base-spacing-unit-screen-large * 0.15;
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-Button Collection Margins
----------------------------------------------------------------------------------------------------- */
-
-@button-collection-margin-top:																	0px;
-@button-collection-margin-bottom:																@base-spacing-unit * 0.5;
-
-@button-collection-short-margin-top:															0px;
-@button-collection-short-margin-bottom:															@base-spacing-unit * 0.25;
-
-@button-collection-tall-margin-top:																0px;
-@button-collection-tall-margin-bottom:															@base-spacing-unit * 1.0;
-
-
-
-/* ----------------------------------------------------------------------------------------------------
-Button Collection Responsive Scaling
----------------------------------------------------------------------------------------------------- */
-
-@button-collection-scale-screen-mini-enabled:													true;
-@button-collection-scale-screen-small-enabled:													true;
-@button-collection-scale-screen-medium-enabled:													true;
-@button-collection-scale-screen-large-enabled:													true;
-
-@button-collection-margin-top-scale-screen-mini:												1.0;
-@button-collection-margin-top-scale-screen-small:												1.1;
-@button-collection-margin-top-scale-screen-medium:												1.2;
-@button-collection-margin-top-scale-screen-large:												1.2;
-
-@button-collection-margin-bottom-scale-screen-mini:												1.0;
-@button-collection-margin-bottom-scale-screen-small:											1.1;
-@button-collection-margin-bottom-scale-screen-medium:											1.2;
-@button-collection-margin-bottom-scale-screen-large:											1.2;
-
-
-
-
-
-
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-
 Button
 
 -------------------------------------------------------------------------------------------------------
@@ -100,10 +39,10 @@ Button Styles
 Button Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
-@button-scale-screen-mini-enabled:																true;
-@button-scale-screen-small-enabled:																true;
-@button-scale-screen-medium-enabled:															true;
-@button-scale-screen-large-enabled:																true;
+@button-scale-screen-mini-enabled:																@screen-mini-enabled;
+@button-scale-screen-small-enabled:																@screen-small-enabled;
+@button-scale-screen-medium-enabled:															@screen-medium-enabled;
+@button-scale-screen-large-enabled:																@screen-large-enabled;
 
 @button-text-font-size-scale-screen-mini:														1.0;
 @button-text-font-size-scale-screen-small:														1.1;
@@ -145,7 +84,7 @@ Button (Mini)
 
 
 
-@button-mini-enabled:																			true;
+@button-mini-enabled:																			@button-enabled;
 
 
 
@@ -210,7 +149,7 @@ Button (Small)
 
 
 
-@button-small-enabled:																			true;
+@button-small-enabled:																			@button-enabled;
 
 
 
@@ -275,7 +214,7 @@ Button (Large)
 
 
 
-@button-large-enabled:																			true;
+@button-large-enabled:																			@button-enabled;
 
 
 
@@ -340,7 +279,7 @@ Button (Jumbo)
 
 
 
-@button-jumbo-enabled:																			true;
+@button-jumbo-enabled:																			@button-enabled;
 
 
 
@@ -535,7 +474,7 @@ Button (Default, Link)
 
 
 
-@button-default-link-enabled:																	true;
+@button-default-link-enabled:																	@button-enabled;
 
 
 
@@ -669,7 +608,7 @@ Button (Default, Stroke)
 
 
 
-@button-default-stroke-enabled:																	true;
+@button-default-stroke-enabled:																	@button-enabled;
 
 
 
@@ -803,7 +742,7 @@ Button (Default, Inverse)
 
 
 
-@button-default-inverse-enabled:																true;
+@button-default-inverse-enabled:																@button-enabled;
 
 
 
@@ -1205,7 +1144,7 @@ Button (Primary)
 
 
 
-@button-primary-enabled:																		true;
+@button-primary-enabled:																		@button-enabled;
 
 
 
@@ -2009,7 +1948,7 @@ Button (Success)
 
 
 
-@button-success-enabled:																		true;
+@button-success-enabled:																		@button-enabled;
 
 
 
@@ -2813,7 +2752,7 @@ Button (Warning)
 
 
 
-@button-warning-enabled:																		true;
+@button-warning-enabled:																		@button-enabled;
 
 
 
@@ -3617,7 +3556,7 @@ Button (Danger)
 
 
 
-@button-danger-enabled:																			true;
+@button-danger-enabled:																			@button-enabled;
 
 
 
@@ -4411,8 +4350,62 @@ Button (Danger, Inverse, Stroke) State: Disabled
 
 
 
+/* ----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+
+Button Collection
+
+-------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------- */
 
 
 
+@button-collection-enabled:																		@button-enabled;
 
 
+
+/* ----------------------------------------------------------------------------------------------------
+Button Collection Spacing
+---------------------------------------------------------------------------------------------------- */
+
+@button-collection-spacing:																		@base-spacing-unit * 0.2;
+@button-collection-spacing-screen-mini:															@base-spacing-unit-screen-mini * 0.2;
+@button-collection-spacing-screen-small:														@base-spacing-unit-screen-small * 0.2;
+@button-collection-spacing-screen-medium:														@base-spacing-unit-screen-medium * 0.15;
+@button-collection-spacing-screen-large:														@base-spacing-unit-screen-large * 0.15;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button Collection Margins
+---------------------------------------------------------------------------------------------------- */
+
+@button-collection-margin-top:																	0px;
+@button-collection-margin-bottom:																@base-spacing-unit * 0.5;
+
+@button-collection-short-margin-top:															0px;
+@button-collection-short-margin-bottom:															@base-spacing-unit * 0.25;
+
+@button-collection-tall-margin-top:																0px;
+@button-collection-tall-margin-bottom:															@base-spacing-unit * 1.0;
+
+
+
+/* ----------------------------------------------------------------------------------------------------
+Button Collection Responsive Scaling
+---------------------------------------------------------------------------------------------------- */
+
+@button-collection-scale-screen-mini-enabled:													@button-scale-screen-mini-enabled;
+@button-collection-scale-screen-small-enabled:													@button-scale-screen-small-enabled;
+@button-collection-scale-screen-medium-enabled:													@button-scale-screen-medium-enabled;
+@button-collection-scale-screen-large-enabled:													@button-scale-screen-large-enabled;
+
+@button-collection-margin-top-scale-screen-mini:												1.0;
+@button-collection-margin-top-scale-screen-small:												1.1;
+@button-collection-margin-top-scale-screen-medium:												1.2;
+@button-collection-margin-top-scale-screen-large:												1.2;
+
+@button-collection-margin-bottom-scale-screen-mini:												1.0;
+@button-collection-margin-bottom-scale-screen-small:											1.1;
+@button-collection-margin-bottom-scale-screen-medium:											1.2;
+@button-collection-margin-bottom-scale-screen-large:											1.2;

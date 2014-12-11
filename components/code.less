@@ -13,235 +13,239 @@ components/code.less
 
 
 
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-
-Code
-
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
-
-code {
-	
-	.text-styling (
-		
-		@code-text-color,
-		@code-text-font-family,
-		@code-text-font-size,
-		@code-text-font-style,
-		@code-text-font-weight,
-		@code-text-line-height,
-		@code-text-transform,
-		@code-text-shadow
-		
-	);
-	display: inline-block;
-	white-space: nowrap;
-	background: @code-background-color;
-	#gradient > .horizontal(@code-background-gradient-color-top, @code-background-gradient-color-bottom);
-	border-top-width: @code-border-top-width;
-	border-top-color: @code-border-top-color;
-	border-right-width: @code-border-right-width;
-	border-right-color: @code-border-right-color;
-	border-bottom-width: @code-border-bottom-width;
-	border-bottom-color: @code-border-bottom-color;
-	border-left-width: @code-border-left-width;
-	border-left-color: @code-border-left-color;
-	.box-shadow(@code-shadow);
-	padding: 0px @code-padding-horizontal;
-	.border-radius(@code-border-radius);
-	
-}
-
-
-
-
-
-
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-
-Code Block
-
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
-
-pre {
-	
-	margin-top: @code-block-margin-top;
-	margin-bottom: @code-block-margin-bottom;
-	word-break: break-all;
-	white-space: pre;
-	//word-wrap: break-word;
-	//white-space: pre-wrap;
-	
-	
+& when (@code-enabled) {
 	
 	/* ----------------------------------------------------------------------------------------------------
-	Short
+	-------------------------------------------------------------------------------------------------------
+	
+	Code
+	
+	-------------------------------------------------------------------------------------------------------
 	---------------------------------------------------------------------------------------------------- */
 	
-	&.short {
-		
-		margin-top: @code-block-short-margin-top;
-		margin-bottom: @code-block-short-margin-bottom;
-		
-	}
-	
-	&.short-top {
-		
-		margin-top: @code-block-short-margin-top;
-		
-	}
-	
-	&.short-bottom {
-		
-		margin-bottom: @code-block-short-margin-bottom;
-		
-	}
-	
-	
-	
-	/* ----------------------------------------------------------------------------------------------------
-	Tall
-	---------------------------------------------------------------------------------------------------- */
-	
-	&.tall {
-		
-		margin-top: @code-block-tall-margin-top;
-		margin-bottom: @code-block-tall-margin-bottom;
-		
-	}
-	
-	&.tall-top {
-		
-		margin-top: @code-block-tall-margin-top;
-		
-	}
-	
-	&.tall-bottom {
-		
-		margin-bottom: @code-block-tall-margin-bottom;
-		
-	}
-	
-}
-
-
-
-
-
-
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
-
-Code Block (Prettyprint)
-
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
-
-& when (@code-block-prettyprint-enabled) {
-	
-	pre.prettyprint {
+	code {
 		
 		.text-styling (
 			
-			@code-block-prettyprint-text-color,
-			@code-block-prettyprint-text-font-family,
-			@code-block-prettyprint-text-font-size,
-			@code-block-prettyprint-text-font-style,
-			@code-block-prettyprint-text-font-weight,
-			@code-block-prettyprint-text-line-height,
-			@code-block-prettyprint-text-transform,
-			@code-block-prettyprint-text-shadow
+			@code-text-color,
+			@code-text-font-family,
+			@code-text-font-size,
+			@code-text-font-style,
+			@code-text-font-weight,
+			@code-text-line-height,
+			@code-text-transform,
+			@code-text-shadow
 			
 		);
-		padding: @code-block-prettyprint-padding;
-		background: @code-block-prettyprint-background-color;
-		#gradient > .horizontal(@code-block-prettyprint-background-gradient-color-top, @code-block-prettyprint-background-gradient-color-bottom);
-		border-top-width: @code-block-prettyprint-border-top-width;
-		border-top-color: @code-block-prettyprint-border-top-color;
-		border-right-width: @code-block-prettyprint-border-right-width;
-		border-right-color: @code-block-prettyprint-border-right-color;
-		border-bottom-width: @code-block-prettyprint-border-bottom-width;
-		border-bottom-color: @code-block-prettyprint-border-bottom-color;
-		border-left-width: @code-block-prettyprint-border-left-width;
-		border-left-color: @code-block-prettyprint-border-left-color;
-		.box-shadow(@code-block-prettyprint-shadow);
-		margin-left: 0px;
-		margin-right: 0px;
-		overflow-x: auto;
+		display: inline-block;
+		white-space: nowrap;
+		background: @code-background-color;
+		#gradient > .horizontal(@code-background-gradient-color-top, @code-background-gradient-color-bottom);
+		border-top-width: @code-border-top-width;
+		border-top-color: @code-border-top-color;
+		border-right-width: @code-border-right-width;
+		border-right-color: @code-border-right-color;
+		border-bottom-width: @code-border-bottom-width;
+		border-bottom-color: @code-border-bottom-color;
+		border-left-width: @code-border-left-width;
+		border-left-color: @code-border-left-color;
+		.box-shadow(@code-shadow);
+		padding: 0px @code-padding-horizontal;
+		.border-radius(@code-border-radius);
+		
+	}
+	
+	
+	
+	
+	
+	
+	/* ----------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------
+	
+	Code Block
+	
+	-------------------------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------- */
+	
+	pre {
+		
+		margin-top: @code-block-margin-top;
+		margin-bottom: @code-block-margin-bottom;
+		word-break: break-all;
+		white-space: pre;
+		//word-wrap: break-word;
+		//white-space: pre-wrap;
 		
 		
 		
 		/* ----------------------------------------------------------------------------------------------------
-		Ordered List
+		Short
 		---------------------------------------------------------------------------------------------------- */
 		
-		ol {
+		&.short {
 			
-			position: relative;
-			margin-bottom: 0px;
+			margin-top: @code-block-short-margin-top;
+			margin-bottom: @code-block-short-margin-bottom;
 			
-			li {
-				
-				padding-left: 0px;
-				
-			}
+		}
+		
+		&.short-top {
+			
+			margin-top: @code-block-short-margin-top;
+			
+		}
+		
+		&.short-bottom {
+			
+			margin-bottom: @code-block-short-margin-bottom;
 			
 		}
 		
 		
 		
 		/* ----------------------------------------------------------------------------------------------------
-		Line Numbers
+		Tall
 		---------------------------------------------------------------------------------------------------- */
 		
-		&.linenums {
+		&.tall {
 			
-			position: relative;
+			margin-top: @code-block-tall-margin-top;
+			margin-bottom: @code-block-tall-margin-bottom;
 			
-			&:before {
+		}
+		
+		&.tall-top {
+			
+			margin-top: @code-block-tall-margin-top;
+			
+		}
+		
+		&.tall-bottom {
+			
+			margin-bottom: @code-block-tall-margin-bottom;
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	/* ----------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------
+	
+	Code Block (Prettyprint)
+	
+	-------------------------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------- */
+	
+	& when (@code-block-prettyprint-enabled) {
+		
+		pre.prettyprint {
+			
+			.text-styling (
 				
-				content: '';
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				width: @code-block-prettyprint-padding + @code-block-prettyprint-linenums-width;
-				height: 100%;
-				background: @code-block-prettyprint-linenums-background-color;
-				#gradient > .horizontal(@code-block-prettyprint-linenums-background-gradient-color-top, @code-block-prettyprint-linenums-background-gradient-color-bottom);
-				border-top-width: @code-block-prettyprint-linenums-border-top-width;
-				border-top-color: @code-block-prettyprint-linenums-border-top-color;
-				border-right-width: @code-block-prettyprint-linenums-border-right-width;
-				border-right-color: @code-block-prettyprint-linenums-border-right-color;
-				border-bottom-width: @code-block-prettyprint-linenums-border-bottom-width;
-				border-bottom-color: @code-block-prettyprint-linenums-border-bottom-color;
-				border-left-width: @code-block-prettyprint-linenums-border-left-width;
-				border-left-color: @code-block-prettyprint-linenums-border-left-color;
-				.box-shadow(@code-block-prettyprint-linenums-shadow);
+				@code-block-prettyprint-text-color,
+				@code-block-prettyprint-text-font-family,
+				@code-block-prettyprint-text-font-size,
+				@code-block-prettyprint-text-font-style,
+				@code-block-prettyprint-text-font-weight,
+				@code-block-prettyprint-text-line-height,
+				@code-block-prettyprint-text-transform,
+				@code-block-prettyprint-text-shadow
 				
-			}
+			);
+			padding: @code-block-prettyprint-padding;
+			background: @code-block-prettyprint-background-color;
+			#gradient > .horizontal(@code-block-prettyprint-background-gradient-color-top, @code-block-prettyprint-background-gradient-color-bottom);
+			border-top-width: @code-block-prettyprint-border-top-width;
+			border-top-color: @code-block-prettyprint-border-top-color;
+			border-right-width: @code-block-prettyprint-border-right-width;
+			border-right-color: @code-block-prettyprint-border-right-color;
+			border-bottom-width: @code-block-prettyprint-border-bottom-width;
+			border-bottom-color: @code-block-prettyprint-border-bottom-color;
+			border-left-width: @code-block-prettyprint-border-left-width;
+			border-left-color: @code-block-prettyprint-border-left-color;
+			.box-shadow(@code-block-prettyprint-shadow);
+			margin-left: 0px;
+			margin-right: 0px;
+			overflow-x: auto;
+			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			Ordered List
+			---------------------------------------------------------------------------------------------------- */
 			
 			ol {
 				
 				position: relative;
+				margin-bottom: 0px;
 				
 				li {
 					
-					margin: 0px;
-					padding-left: @code-block-prettyprint-linenums-width + @code-block-prettyprint-padding;
+					padding-left: 0px;
 					
-					&:before {
+				}
+				
+			}
+			
+			
+			
+			/* ----------------------------------------------------------------------------------------------------
+			Line Numbers
+			---------------------------------------------------------------------------------------------------- */
+			
+			&.linenums {
+				
+				position: relative;
+				
+				&:before {
+					
+					content: '';
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					width: @code-block-prettyprint-padding + @code-block-prettyprint-linenums-width;
+					height: 100%;
+					background: @code-block-prettyprint-linenums-background-color;
+					#gradient > .horizontal(@code-block-prettyprint-linenums-background-gradient-color-top, @code-block-prettyprint-linenums-background-gradient-color-bottom);
+					border-top-width: @code-block-prettyprint-linenums-border-top-width;
+					border-top-color: @code-block-prettyprint-linenums-border-top-color;
+					border-right-width: @code-block-prettyprint-linenums-border-right-width;
+					border-right-color: @code-block-prettyprint-linenums-border-right-color;
+					border-bottom-width: @code-block-prettyprint-linenums-border-bottom-width;
+					border-bottom-color: @code-block-prettyprint-linenums-border-bottom-color;
+					border-left-width: @code-block-prettyprint-linenums-border-left-width;
+					border-left-color: @code-block-prettyprint-linenums-border-left-color;
+					.box-shadow(@code-block-prettyprint-linenums-shadow);
+					
+				}
+				
+				ol {
+					
+					position: relative;
+					
+					li {
 						
-						content: counter(li);
-						color: @code-block-prettyprint-linenums-text-color;
-						font-family: @code-block-prettyprint-linenums-text-font-family;
-						font-style: @code-block-prettyprint-linenums-text-font-style;
-						font-weight: @code-block-prettyprint-linenums-text-font-weight;
-						text-transform: @code-block-prettyprint-linenums-text-transform;
-						text-shadow: @code-block-prettyprint-linenums-text-shadow;
-						text-rendering: @code-block-prettyprint-linenums-text-rendering;
+						margin: 0px;
+						padding-left: @code-block-prettyprint-linenums-width + @code-block-prettyprint-padding;
+						
+						&:before {
+							
+							content: counter(li);
+							color: @code-block-prettyprint-linenums-text-color;
+							font-family: @code-block-prettyprint-linenums-text-font-family;
+							font-style: @code-block-prettyprint-linenums-text-font-style;
+							font-weight: @code-block-prettyprint-linenums-text-font-weight;
+							text-transform: @code-block-prettyprint-linenums-text-transform;
+							text-shadow: @code-block-prettyprint-linenums-text-shadow;
+							text-rendering: @code-block-prettyprint-linenums-text-rendering;
+							
+						}
 						
 					}
 					
@@ -249,94 +253,94 @@ Code Block (Prettyprint)
 				
 			}
 			
-		}
-		
-		
-		
-		
-		
-		
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
-		
-		Code Syntax Highlighting
-		
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
-		
-		.com {
 			
-			color: #93a1a1;
 			
-		}
-		
-		
-		
-		.lit {
 			
-			color: #195f91;
 			
-		}
-		
-		
-		
-		.tag {
 			
-			color: @code-block-prettyprint-syntax-text-color-tag;
+			/* ----------------------------------------------------------------------------------------------------
+			-------------------------------------------------------------------------------------------------------
 			
-		}
-		
-		
-		.pun,
-		.opn,
-		.clo {
+			Code Syntax Highlighting
 			
-			color: @code-block-prettyprint-syntax-text-color-punctuation;
+			-------------------------------------------------------------------------------------------------------
+			---------------------------------------------------------------------------------------------------- */
 			
-		}
-		
-		
-		
-		.fun {
+			.com {
+				
+				color: #93a1a1;
+				
+			}
 			
-			color: #dc322f;
 			
-		}
-		
-		
-		
-		.str,
-		.atv {
 			
-			color: @code-block-prettyprint-syntax-text-color-attribute-value;
+			.lit {
+				
+				color: #195f91;
+				
+			}
 			
-		}
-		
-		
-		
-		.kwd,
-		.prettyprint .tag {
 			
-			color: #1e347b;
 			
-		}
-		
-		
-		
-		.typ,
-		.atn,
-		.dec,
-		.var {
+			.tag {
+				
+				color: @code-block-prettyprint-syntax-text-color-tag;
+				
+			}
 			
-			color: @code-block-prettyprint-syntax-text-color-attribute-name;
 			
-		}
-		
-		
-		
-		.pln {
+			.pun,
+			.opn,
+			.clo {
+				
+				color: @code-block-prettyprint-syntax-text-color-punctuation;
+				
+			}
 			
-			color: #48484c;
+			
+			
+			.fun {
+				
+				color: #dc322f;
+				
+			}
+			
+			
+			
+			.str,
+			.atv {
+				
+				color: @code-block-prettyprint-syntax-text-color-attribute-value;
+				
+			}
+			
+			
+			
+			.kwd,
+			.prettyprint .tag {
+				
+				color: #1e347b;
+				
+			}
+			
+			
+			
+			.typ,
+			.atn,
+			.dec,
+			.var {
+				
+				color: @code-block-prettyprint-syntax-text-color-attribute-name;
+				
+			}
+			
+			
+			
+			.pln {
+				
+				color: #48484c;
+				
+			}
 			
 		}
 		
@@ -349,7 +353,7 @@ Code Block (Prettyprint)
 
 
 
-& when (@screen-mini-enabled) {
+& when (@code-enabled) and (@screen-mini-enabled) {
 	
 	/* ----------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------------
@@ -507,7 +511,7 @@ Code Block (Prettyprint)
 
 
 
-& when (@screen-small-enabled) {
+& when (@code-enabled) and (@screen-small-enabled) {
 	
 	/* ----------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------------
@@ -665,7 +669,7 @@ Code Block (Prettyprint)
 
 
 
-& when (@screen-medium-enabled) {
+& when (@code-enabled) and (@screen-medium-enabled) {
 	
 	/* ----------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------------
@@ -823,7 +827,7 @@ Code Block (Prettyprint)
 
 
 
-& when (@screen-large-enabled) {
+& when (@code-enabled) and (@screen-large-enabled) {
 	
 	/* ----------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------------
@@ -981,7 +985,7 @@ Code Block (Prettyprint)
 
 
 
-& when (@screen-resolution-2x-enabled) {
+& when (@code-enabled) and (@screen-resolution-2x-enabled) {
 	
 	/* ----------------------------------------------------------------------------------------------------
 	-------------------------------------------------------------------------------------------------------
@@ -992,6 +996,27 @@ Code Block (Prettyprint)
 	---------------------------------------------------------------------------------------------------- */
 	
 	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		
+	}
+	
+}
+
+
+
+
+
+
+& when (@code-enabled) and (@screen-resolution-3x-enabled) {
+	
+	/* ----------------------------------------------------------------------------------------------------
+	-------------------------------------------------------------------------------------------------------
+	
+	Screen Resolution: 3x
+	
+	-------------------------------------------------------------------------------------------------------
+	---------------------------------------------------------------------------------------------------- */
+	
+	@media only screen and (-webkit-min-device-pixel-ratio: 3) {
 		
 	}
 	

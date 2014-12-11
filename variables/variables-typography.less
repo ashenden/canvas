@@ -42,6 +42,10 @@ Body Text
 
 
 
+@body-text-enabled:																				@typography-enabled;
+
+
+
 /* ----------------------------------------------------------------------------------------------------
 Body Text Styling
 ---------------------------------------------------------------------------------------------------- */
@@ -95,10 +99,10 @@ Body Text Margins
 Body Text Responsive Scaling
 ---------------------------------------------------------------------------------------------------- */
 
-@body-text-scale-screen-mini:																	true;
-@body-text-scale-screen-small:																	true;
-@body-text-scale-screen-medium:																	true;
-@body-text-scale-screen-large:																	true;
+@body-text-scale-screen-mini:																	@screen-mini-enabled;
+@body-text-scale-screen-small:																	@screen-small-enabled;
+@body-text-scale-screen-medium:																	@screen-medium-enabled;
+@body-text-scale-screen-large:																	@screen-large-enabled;
 
 @body-text-font-size-scale-screen-mini:															1.0;
 @body-text-font-size-scale-screen-small:														1.1;
@@ -126,7 +130,7 @@ Body Text Responsive Scaling
 Body Text Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
-@body-text-emphasize-enabled:																	true;
+@body-text-emphasize-enabled:																	@body-text-enabled;
 
 // Body Text Emphasize Styling
 
@@ -160,7 +164,7 @@ Body Text Emphasize
 Body Text Mute
 ---------------------------------------------------------------------------------------------------- */
 
-@body-text-mute-enabled:																		true;
+@body-text-mute-enabled:																		@body-text-enabled;
 
 // Body Text Mute Styling
 
@@ -194,7 +198,7 @@ Body Text Mute
 Body Text Inverse
 ---------------------------------------------------------------------------------------------------- */
 
-@body-text-inverse-enabled:																		true;
+@body-text-inverse-enabled:																		@body-text-enabled;
 
 // Body Text Inverse Styling
 
@@ -222,10 +226,14 @@ Body Text Inverse
 Body Text Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@body-text-inverse-emphasize-enabled:															@body-text-inverse-enabled;
+
+// Body Text Inverse Emphasize Styling
+
 @body-text-inverse-emphasize-color:																~`color_lightness("@{gray}", 0)`;
 @body-text-inverse-emphasize-shadow:															@body-text-inverse-shadow;
 
-// Body Text Emphasize Links
+// Body Text Inverse Emphasize Links
 
 @body-text-inverse-emphasize-link-text-color:													@body-text-inverse-link-text-color;
 @body-text-inverse-emphasize-link-text-decoration:												@body-text-inverse-link-text-decoration;
@@ -243,13 +251,17 @@ Body Text Inverse Emphasize
 
 
 /* ----------------------------------------------------------------------------------------------------
-Body Text Inverse mute
+Body Text Inverse Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@body-text-inverse-mute-enabled:																@body-text-inverse-enabled;
+
+// Body Text Inverse Mute Styling
 
 @body-text-inverse-mute-color:																	~`color_lightness("@{gray}", -40)`;
 @body-text-inverse-mute-shadow:																	@body-text-inverse-shadow;
 
-// Body Text mute Links
+// Body Text Inverse Mute Links
 
 @body-text-inverse-mute-link-text-color:														@body-text-inverse-link-text-color;
 @body-text-inverse-mute-link-text-decoration:													@body-text-inverse-link-text-decoration;
@@ -279,7 +291,7 @@ Small Text
 
 
 
-@small-text-enabled:																			true;
+@small-text-enabled:																			@body-text-enabled;
 
 
 
@@ -463,10 +475,14 @@ Small Text Inverse
 Small Text Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@small-text-inverse-emphasize-enabled:															@body-text-inverse-emphasize-enabled;
+
+// Small Text Inverse Emphasize Styling
+
 @small-text-inverse-emphasize-color:															~`color_lightness("@{gray}", -20)`;
 @small-text-inverse-emphasize-shadow:															@small-text-inverse-shadow;
 
-// Small Text Emphasize Links
+// Small Text Inverse Emphasize Links
 
 @small-text-inverse-emphasize-link-text-color:													@small-text-inverse-link-text-color;
 @small-text-inverse-emphasize-link-text-decoration:												@small-text-inverse-link-text-decoration;
@@ -484,13 +500,17 @@ Small Text Inverse Emphasize
 
 
 /* ----------------------------------------------------------------------------------------------------
-Small Text Inverse mute
+Small Text Inverse Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@small-text-inverse-mute-enabled:																@body-text-inverse-mute-enabled;
+
+// Small Text Inverse Mute Styling
 
 @small-text-inverse-mute-color:																	~`color_lightness("@{gray}", -60)`;
 @small-text-inverse-mute-shadow:																@small-text-inverse-shadow;
 
-// Small Text mute Links
+// Small Text Inverse Mute Links
 
 @small-text-inverse-mute-link-text-color:														@small-text-inverse-link-text-color;
 @small-text-inverse-mute-link-text-decoration:													@small-text-inverse-link-text-decoration;
@@ -520,7 +540,7 @@ Lead Text
 
 
 
-@lead-text-enabled:																				true;
+@lead-text-enabled:																				@body-text-enabled;
 
 
 
@@ -704,10 +724,14 @@ Lead Text Inverse
 Lead Text Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@lead-text-inverse-emphasize-enabled:															@body-text-inverse-emphasize-enabled;
+
+// Lead Text Inverse Emphasize Styling
+
 @lead-text-inverse-emphasize-color:																~`color_lightness("@{gray}", 40)`;
 @lead-text-inverse-emphasize-shadow:															@lead-text-inverse-shadow;
 
-// Lead Text Emphasize Links
+// Lead Text Inverse Emphasize Links
 
 @lead-text-inverse-emphasize-link-text-color:													@lead-text-inverse-link-text-color;
 @lead-text-inverse-emphasize-link-text-decoration:												@lead-text-inverse-link-text-decoration;
@@ -725,13 +749,17 @@ Lead Text Inverse Emphasize
 
 
 /* ----------------------------------------------------------------------------------------------------
-Lead Text Inverse mute
+Lead Text Inverse Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@lead-text-inverse-mute-enabled:																@body-text-inverse-mute-enabled;
+
+// Lead Text Inverse Mute Styling
 
 @lead-text-inverse-mute-color:																	~`color_lightness("@{gray}", -40)`;
 @lead-text-inverse-mute-shadow:																	@lead-text-inverse-shadow;
 
-// Lead Text mute Links
+// Lead Text Inverse Mute Links
 
 @lead-text-inverse-mute-link-text-color:														@lead-text-inverse-link-text-color;
 @lead-text-inverse-mute-link-text-decoration:													@lead-text-inverse-link-text-decoration;
@@ -761,7 +789,7 @@ Heading H1 Text
 
 
 
-@heading-h1-text-enabled:																		true;
+@heading-h1-text-enabled:																		@body-text-enabled;
 
 
 
@@ -945,10 +973,14 @@ Heading H1 Inverse
 Heading H1 Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@heading-h1-text-inverse-emphasize-enabled:														@body-text-inverse-emphasize-enabled;
+
+// Heading H1 Inverse Emphasize Styling
+
 @heading-h1-text-inverse-emphasize-color:														~`color_lightness("@{gray}", 70)`;
 @heading-h1-text-inverse-emphasize-shadow:														@heading-h1-text-inverse-shadow;
 
-// Heading H1 Emphasize Links
+// Heading H1 Inverse Emphasize Links
 
 @heading-h1-text-inverse-emphasize-link-text-color:												@heading-h1-text-inverse-link-text-color;
 @heading-h1-text-inverse-emphasize-link-text-decoration:										@heading-h1-text-inverse-link-text-decoration;
@@ -966,13 +998,17 @@ Heading H1 Inverse Emphasize
 
 
 /* ----------------------------------------------------------------------------------------------------
-Heading H1 Inverse mute
+Heading H1 Inverse Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@heading-h1-text-inverse-mute-enabled:															@body-text-inverse-mute-enabled;
+
+// Heading H1 Inverse Mute Styling
 
 @heading-h1-text-inverse-mute-color:															~`color_lightness("@{gray}", -10)`;
 @heading-h1-text-inverse-mute-shadow:															@heading-h1-text-inverse-shadow;
 
-// Heading H1 mute Links
+// Heading H1 Inverse Mute Links
 
 @heading-h1-text-inverse-mute-link-text-color:													@heading-h1-text-inverse-link-text-color;
 @heading-h1-text-inverse-mute-link-text-decoration:												@heading-h1-text-inverse-link-text-decoration;
@@ -1002,7 +1038,7 @@ Heading H2 Text
 
 
 
-@heading-h2-text-enabled:																		true;
+@heading-h2-text-enabled:																		@body-text-enabled;
 
 
 
@@ -1186,10 +1222,14 @@ Heading H2 Inverse
 Heading H2 Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@heading-h2-text-inverse-emphasize-enabled:														@body-text-inverse-emphasize-enabled;
+
+// Heading H2 Inverse Emphasize Styling
+
 @heading-h2-text-inverse-emphasize-color:														~`color_lightness("@{gray}", 60)`;
 @heading-h2-text-inverse-emphasize-shadow:														@heading-h2-text-inverse-shadow;
 
-// Heading H2 Emphasize Links
+// Heading H2 Inverse Emphasize Links
 
 @heading-h2-text-inverse-emphasize-link-text-color:												@heading-h2-text-inverse-link-text-color;
 @heading-h2-text-inverse-emphasize-link-text-decoration:										@heading-h2-text-inverse-link-text-decoration;
@@ -1207,13 +1247,17 @@ Heading H2 Inverse Emphasize
 
 
 /* ----------------------------------------------------------------------------------------------------
-Heading H2 Inverse mute
+Heading H2 Inverse Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@heading-h2-text-inverse-mute-enabled:															@body-text-inverse-mute-enabled;
+
+// Heading H2 Inverse Mute Styling
 
 @heading-h2-text-inverse-mute-color:															~`color_lightness("@{gray}", -20)`;
 @heading-h2-text-inverse-mute-shadow:															@heading-h2-text-inverse-shadow;
 
-// Heading H2 mute Links
+// Heading H2 Inverse Mute Links
 
 @heading-h2-text-inverse-mute-link-text-color:													@heading-h2-text-inverse-link-text-color;
 @heading-h2-text-inverse-mute-link-text-decoration:												@heading-h2-text-inverse-link-text-decoration;
@@ -1243,7 +1287,7 @@ Heading H3 Text
 
 
 
-@heading-h3-text-enabled:																		true;
+@heading-h3-text-enabled:																		@body-text-enabled;
 
 
 
@@ -1427,10 +1471,14 @@ Heading H3 Inverse
 Heading H3 Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@heading-h3-text-inverse-emphasize-enabled:														@body-text-inverse-emphasize-enabled;
+
+// Heading H3 Inverse Emphasize Styling
+
 @heading-h3-text-inverse-emphasize-color:														~`color_lightness("@{gray}", 50)`;
 @heading-h3-text-inverse-emphasize-shadow:														@heading-h3-text-inverse-shadow;
 
-// Heading H3 Emphasize Links
+// Heading H3 Inverse Emphasize Links
 
 @heading-h3-text-inverse-emphasize-link-text-color:												@heading-h3-text-inverse-link-text-color;
 @heading-h3-text-inverse-emphasize-link-text-decoration:										@heading-h3-text-inverse-link-text-decoration;
@@ -1451,10 +1499,14 @@ Heading H3 Inverse Emphasize
 Heading H3 Inverse mute
 ---------------------------------------------------------------------------------------------------- */
 
+@heading-h3-text-inverse-mute-enabled:															@body-text-inverse-mute-enabled;
+
+// Heading H3 Inverse Mute Styling
+
 @heading-h3-text-inverse-mute-color:															~`color_lightness("@{gray}", -30)`;
 @heading-h3-text-inverse-mute-shadow:															@heading-h3-text-inverse-shadow;
 
-// Heading H3 mute Links
+// Heading H3 Inverse Mute Links
 
 @heading-h3-text-inverse-mute-link-text-color:													@heading-h3-text-inverse-link-text-color;
 @heading-h3-text-inverse-mute-link-text-decoration:												@heading-h3-text-inverse-link-text-decoration;
@@ -1484,7 +1536,7 @@ Heading H4 Text
 
 
 
-@heading-h4-text-enabled:																		true;
+@heading-h4-text-enabled:																		@body-text-enabled;
 
 
 
@@ -1668,10 +1720,14 @@ Heading H4 Inverse
 Heading H4 Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@heading-h4-text-inverse-emphasize-enabled:														@body-text-inverse-emphasize-enabled;
+
+// Heading H4 Inverse Emphasize Styling
+
 @heading-h4-text-inverse-emphasize-color:														~`color_lightness("@{gray}", 40)`;
 @heading-h4-text-inverse-emphasize-shadow:														@heading-h4-text-inverse-shadow;
 
-// Heading H4 Emphasize Links
+// Heading H4 Inverse Emphasize Links
 
 @heading-h4-text-inverse-emphasize-link-text-color:												@heading-h4-text-inverse-link-text-color;
 @heading-h4-text-inverse-emphasize-link-text-decoration:										@heading-h4-text-inverse-link-text-decoration;
@@ -1689,13 +1745,17 @@ Heading H4 Inverse Emphasize
 
 
 /* ----------------------------------------------------------------------------------------------------
-Heading H4 Inverse mute
+Heading H4 Inverse Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@heading-h4-text-inverse-mute-enabled:															@body-text-inverse-mute-enabled;
+
+// Heading H4 Inverse Mute Styling
 
 @heading-h4-text-inverse-mute-color:															~`color_lightness("@{gray}", -40)`;
 @heading-h4-text-inverse-mute-shadow:															@heading-h4-text-inverse-shadow;
 
-// Heading H4 mute Links
+// Heading H4 Inverse Mute Links
 
 @heading-h4-text-inverse-mute-link-text-color:													@heading-h4-text-inverse-link-text-color;
 @heading-h4-text-inverse-mute-link-text-decoration:												@heading-h4-text-inverse-link-text-decoration;
@@ -1725,7 +1785,7 @@ Heading H5 Text
 
 
 
-@heading-h5-text-enabled:																		true;
+@heading-h5-text-enabled:																		@body-text-enabled;
 
 
 
@@ -1909,10 +1969,14 @@ Heading H5 Inverse
 Heading H5 Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@heading-h5-text-inverse-emphasize-enabled:														@body-text-inverse-emphasize-enabled;
+
+// Heading H5 Inverse Emphasize Styling
+
 @heading-h5-text-inverse-emphasize-color:														~`color_lightness("@{gray}", 30)`;
 @heading-h5-text-inverse-emphasize-shadow:														@heading-h5-text-inverse-shadow;
 
-// Heading H5 Emphasize Links
+// Heading H5 Inverse Emphasize Links
 
 @heading-h5-text-inverse-emphasize-link-text-color:												@heading-h5-text-inverse-link-text-color;
 @heading-h5-text-inverse-emphasize-link-text-decoration:										@heading-h5-text-inverse-link-text-decoration;
@@ -1930,13 +1994,17 @@ Heading H5 Inverse Emphasize
 
 
 /* ----------------------------------------------------------------------------------------------------
-Heading H5 Inverse mute
+Heading H5 Inverse Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@heading-h5-text-inverse-mute-enabled:															@body-text-inverse-mute-enabled;
+
+// Heading H5 Inverse Mute Styling
 
 @heading-h5-text-inverse-mute-color:															~`color_lightness("@{gray}", -50)`;
 @heading-h5-text-inverse-mute-shadow:															@heading-h5-text-inverse-shadow;
 
-// Heading H5 mute Links
+// Heading H5 Inverse Mute Links
 
 @heading-h5-text-inverse-mute-link-text-color:													@heading-h5-text-inverse-link-text-color;
 @heading-h5-text-inverse-mute-link-text-decoration:												@heading-h5-text-inverse-link-text-decoration;
@@ -1966,7 +2034,9 @@ Heading H6 Text
 
 
 
-@heading-h6-text-enabled:																		true;
+@heading-h6-text-enabled:																		@body-text-enabled;
+
+
 
 /* ----------------------------------------------------------------------------------------------------
 Heading H6 Text Styling
@@ -2148,10 +2218,14 @@ Heading H6 Inverse
 Heading H6 Inverse Emphasize
 ---------------------------------------------------------------------------------------------------- */
 
+@heading-h6-text-inverse-emphasize-enabled:														@body-text-inverse-emphasize-enabled;
+
+// Heading H6 Inverse Emphasize Styling
+
 @heading-h6-text-inverse-emphasize-color:														~`color_lightness("@{gray}", 20)`;
 @heading-h6-text-inverse-emphasize-shadow:														@heading-h6-text-inverse-shadow;
 
-// Heading H6 Emphasize Links
+// Heading H6 Inverse Emphasize Links
 
 @heading-h6-text-inverse-emphasize-link-text-color:												@heading-h6-text-inverse-link-text-color;
 @heading-h6-text-inverse-emphasize-link-text-decoration:										@heading-h6-text-inverse-link-text-decoration;
@@ -2169,13 +2243,17 @@ Heading H6 Inverse Emphasize
 
 
 /* ----------------------------------------------------------------------------------------------------
-Heading H6 Inverse mute
+Heading H6 Inverse Mute
 ---------------------------------------------------------------------------------------------------- */
+
+@heading-h6-text-inverse-mute-enabled:															@body-text-inverse-mute-enabled;
+
+// Heading H6 Inverse Mute Styling
 
 @heading-h6-text-inverse-mute-color:															~`color_lightness("@{gray}", -60)`;
 @heading-h6-text-inverse-mute-shadow:															@heading-h6-text-inverse-shadow;
 
-// Heading H6 mute Links
+// Heading H6 Inverse Mute Links
 
 @heading-h6-text-inverse-mute-link-text-color:													@heading-h6-text-inverse-link-text-color;
 @heading-h6-text-inverse-mute-link-text-decoration:												@heading-h6-text-inverse-link-text-decoration;
