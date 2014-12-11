@@ -40,34 +40,37 @@ base/typography.less
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		Links
-		---------------------------------------------------------------------------------------------------- */
-		
-		a {
+		& when (@body-text-link-enabled) {
 			
-			color: @body-text-link-text-color;
-			text-decoration: @body-text-link-text-decoration;
+			/* ----------------------------------------------------------------------------------------------------
+			Links
+			---------------------------------------------------------------------------------------------------- */
 			
-			&:hover {
+			a {
 				
-				color: @body-text-link-hover-text-color;
-				text-decoration: @body-text-link-hover-text-decoration;
+				color: @body-text-link-text-color;
+				text-decoration: @body-text-link-text-decoration;
 				
-			}
-			
-			&:active {
+				&:hover {
+					
+					color: @body-text-link-hover-text-color;
+					text-decoration: @body-text-link-hover-text-decoration;
+					
+				}
 				
-				color: @body-text-link-active-text-color;
-				text-decoration: @body-text-link-active-text-decoration;
+				&:active {
+					
+					color: @body-text-link-active-text-color;
+					text-decoration: @body-text-link-active-text-decoration;
+					
+				}
 				
-			}
-			
-			&:disabled,
-			&.disabled {
-				
-				color: @body-text-link-active-text-color;
-				text-decoration: @body-text-link-active-text-decoration;
+				&:disabled {
+					
+					color: @body-text-link-active-text-color;
+					text-decoration: @body-text-link-active-text-decoration;
+					
+				}
 				
 			}
 			
@@ -99,34 +102,37 @@ base/typography.less
 				
 				
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Links
-				---------------------------------------------------------------------------------------------------- */
-				
-				a {
+				& when (@body-text-emphasize-link-enabled) {
 					
-					color: @body-text-emphasize-link-text-color;
-					text-decoration: @body-text-emphasize-link-text-decoration;
+					/* ----------------------------------------------------------------------------------------------------
+					Links
+					---------------------------------------------------------------------------------------------------- */
 					
-					&:hover {
+					a {
 						
-						color: @body-text-emphasize-link-hover-text-color;
-						text-decoration: @body-text-emphasize-link-hover-text-decoration;
+						color: @body-text-emphasize-link-text-color;
+						text-decoration: @body-text-emphasize-link-text-decoration;
 						
-					}
-					
-					&:active {
+						&:hover {
+							
+							color: @body-text-emphasize-link-hover-text-color;
+							text-decoration: @body-text-emphasize-link-hover-text-decoration;
+							
+						}
 						
-						color: @body-text-emphasize-link-active-text-color;
-						text-decoration: @body-text-emphasize-link-active-text-decoration;
+						&:active {
+							
+							color: @body-text-emphasize-link-active-text-color;
+							text-decoration: @body-text-emphasize-link-active-text-decoration;
+							
+						}
 						
-					}
-					
-					&:disabled,
-					&.disabled {
-						
-						color: @body-text-emphasize-link-active-text-color;
-						text-decoration: @body-text-emphasize-link-active-text-decoration;
+						&:disabled {
+							
+							color: @body-text-emphasize-link-active-text-color;
+							text-decoration: @body-text-emphasize-link-active-text-decoration;
+							
+						}
 						
 					}
 					
@@ -161,34 +167,37 @@ base/typography.less
 				
 				
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Links
-				---------------------------------------------------------------------------------------------------- */
-				
-				a {
+				& when (@body-text-mute-link-enabled) {
 					
-					color: @body-text-mute-link-text-color;
-					text-decoration: @body-text-mute-link-text-decoration;
+					/* ----------------------------------------------------------------------------------------------------
+					Links
+					---------------------------------------------------------------------------------------------------- */
 					
-					&:hover {
+					a {
 						
-						color: @body-text-mute-link-hover-text-color;
-						text-decoration: @body-text-mute-link-hover-text-decoration;
+						color: @body-text-mute-link-text-color;
+						text-decoration: @body-text-mute-link-text-decoration;
 						
-					}
-					
-					&:active {
+						&:hover {
+							
+							color: @body-text-mute-link-hover-text-color;
+							text-decoration: @body-text-mute-link-hover-text-decoration;
+							
+						}
 						
-						color: @body-text-mute-link-active-text-color;
-						text-decoration: @body-text-mute-link-active-text-decoration;
+						&:active {
+							
+							color: @body-text-mute-link-active-text-color;
+							text-decoration: @body-text-mute-link-active-text-decoration;
+							
+						}
 						
-					}
-					
-					&:disabled,
-					&.disabled {
-						
-						color: @body-text-mute-link-active-text-color;
-						text-decoration: @body-text-mute-link-active-text-decoration;
+						&:disabled {
+							
+							color: @body-text-mute-link-active-text-color;
+							text-decoration: @body-text-mute-link-active-text-decoration;
+							
+						}
 						
 					}
 					
@@ -358,34 +367,37 @@ base/typography.less
 		
 		
 		
-		/* ----------------------------------------------------------------------------------------------------
-		Links
-		---------------------------------------------------------------------------------------------------- */
-		
-		a {
+		& when (@body-text-link-enabled) {
 			
-			color: @body-text-link-text-color;
-			text-decoration: @body-text-link-text-decoration;
+			/* ----------------------------------------------------------------------------------------------------
+			Links
+			---------------------------------------------------------------------------------------------------- */
 			
-			&:hover {
+			a {
 				
-				color: @body-text-link-hover-text-color;
-				text-decoration: @body-text-link-hover-text-decoration;
+				color: @body-text-link-text-color;
+				text-decoration: @body-text-link-text-decoration;
 				
-			}
-			
-			&:active {
+				&:hover {
+					
+					color: @body-text-link-hover-text-color;
+					text-decoration: @body-text-link-hover-text-decoration;
+					
+				}
 				
-				color: @body-text-link-active-text-color;
-				text-decoration: @body-text-link-active-text-decoration;
+				&:active {
+					
+					color: @body-text-link-active-text-color;
+					text-decoration: @body-text-link-active-text-decoration;
+					
+				}
 				
-			}
-			
-			&:disabled,
-			&.disabled {
-				
-				color: @body-text-link-active-text-color;
-				text-decoration: @body-text-link-active-text-decoration;
+				&:disabled {
+					
+					color: @body-text-link-active-text-color;
+					text-decoration: @body-text-link-active-text-decoration;
+					
+				}
 				
 			}
 			
@@ -400,8 +412,7 @@ base/typography.less
 			---------------------------------------------------------------------------------------------------- */
 			
 			strong,
-			.emphasize,
-			&.emphasize {
+			.emphasize {
 				
 				.text-styling (
 					
@@ -418,34 +429,37 @@ base/typography.less
 				
 				
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Links
-				---------------------------------------------------------------------------------------------------- */
-				
-				a {
+				& when (@body-text-emphasize-link-enabled) {
 					
-					color: @body-text-emphasize-link-text-color;
-					text-decoration: @body-text-emphasize-link-text-decoration;
+					/* ----------------------------------------------------------------------------------------------------
+					Links
+					---------------------------------------------------------------------------------------------------- */
 					
-					&:hover {
+					a {
 						
-						color: @body-text-emphasize-link-hover-text-color;
-						text-decoration: @body-text-emphasize-link-hover-text-decoration;
+						color: @body-text-emphasize-link-text-color;
+						text-decoration: @body-text-emphasize-link-text-decoration;
 						
-					}
-					
-					&:active {
+						&:hover {
+							
+							color: @body-text-emphasize-link-hover-text-color;
+							text-decoration: @body-text-emphasize-link-hover-text-decoration;
+							
+						}
 						
-						color: @body-text-emphasize-link-active-text-color;
-						text-decoration: @body-text-emphasize-link-active-text-decoration;
+						&:active {
+							
+							color: @body-text-emphasize-link-active-text-color;
+							text-decoration: @body-text-emphasize-link-active-text-decoration;
+							
+						}
 						
-					}
-					
-					&:disabled,
-					&.disabled {
-						
-						color: @body-text-emphasize-link-active-text-color;
-						text-decoration: @body-text-emphasize-link-active-text-decoration;
+						&:disabled {
+							
+							color: @body-text-emphasize-link-active-text-color;
+							text-decoration: @body-text-emphasize-link-active-text-decoration;
+							
+						}
 						
 					}
 					
@@ -463,8 +477,7 @@ base/typography.less
 			Mute
 			---------------------------------------------------------------------------------------------------- */
 			
-			.mute,
-			&.mute {
+			.mute {
 				
 				.text-styling (
 					
@@ -481,34 +494,37 @@ base/typography.less
 				
 				
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Links
-				---------------------------------------------------------------------------------------------------- */
-				
-				a {
+				& when (@body-text-mute-link-enabled) {
 					
-					color: @body-text-mute-link-text-color;
-					text-decoration: @body-text-mute-link-text-decoration;
+					/* ----------------------------------------------------------------------------------------------------
+					Links
+					---------------------------------------------------------------------------------------------------- */
 					
-					&:hover {
+					a {
 						
-						color: @body-text-mute-link-hover-text-color;
-						text-decoration: @body-text-mute-link-hover-text-decoration;
+						color: @body-text-mute-link-text-color;
+						text-decoration: @body-text-mute-link-text-decoration;
 						
-					}
-					
-					&:active {
+						&:hover {
+							
+							color: @body-text-mute-link-hover-text-color;
+							text-decoration: @body-text-mute-link-hover-text-decoration;
+							
+						}
 						
-						color: @body-text-mute-link-active-text-color;
-						text-decoration: @body-text-mute-link-active-text-decoration;
+						&:active {
+							
+							color: @body-text-mute-link-active-text-color;
+							text-decoration: @body-text-mute-link-active-text-decoration;
+							
+						}
 						
-					}
-					
-					&:disabled,
-					&.disabled {
-						
-						color: @body-text-mute-link-active-text-color;
-						text-decoration: @body-text-mute-link-active-text-decoration;
+						&:disabled {
+							
+							color: @body-text-mute-link-active-text-color;
+							text-decoration: @body-text-mute-link-active-text-decoration;
+							
+						}
 						
 					}
 					
@@ -533,34 +549,37 @@ base/typography.less
 				
 				
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Links
-				---------------------------------------------------------------------------------------------------- */
-				
-				a {
+				& when (@body-text-inverse-link-enabled) {
 					
-					color: @body-text-inverse-link-text-color;
-					text-decoration: @body-text-inverse-link-text-decoration;
+					/* ----------------------------------------------------------------------------------------------------
+					Links
+					---------------------------------------------------------------------------------------------------- */
 					
-					&:hover {
+					a {
 						
-						color: @body-text-inverse-link-hover-text-color;
-						text-decoration: @body-text-inverse-link-hover-text-decoration;
+						color: @body-text-inverse-link-text-color;
+						text-decoration: @body-text-inverse-link-text-decoration;
 						
-					}
-					
-					&:active {
+						&:hover {
+							
+							color: @body-text-inverse-link-hover-text-color;
+							text-decoration: @body-text-inverse-link-hover-text-decoration;
+							
+						}
 						
-						color: @body-text-inverse-link-active-text-color;
-						text-decoration: @body-text-inverse-link-active-text-decoration;
+						&:active {
+							
+							color: @body-text-inverse-link-active-text-color;
+							text-decoration: @body-text-inverse-link-active-text-decoration;
+							
+						}
 						
-					}
-					
-					&:disabled,
-					&.disabled {
-						
-						color: @body-text-inverse-link-active-text-color;
-						text-decoration: @body-text-inverse-link-active-text-decoration;
+						&:disabled {
+							
+							color: @body-text-inverse-link-active-text-color;
+							text-decoration: @body-text-inverse-link-active-text-decoration;
+							
+						}
 						
 					}
 					
@@ -574,6 +593,7 @@ base/typography.less
 					Emphasize Inverse
 					---------------------------------------------------------------------------------------------------- */
 					
+					strong,
 					.emphasize {
 						
 						color: @body-text-inverse-emphasize-color;
@@ -581,34 +601,37 @@ base/typography.less
 						
 						
 						
-						/* ----------------------------------------------------------------------------------------------------
-						Links
-						---------------------------------------------------------------------------------------------------- */
-						
-						a {
+						& when (@body-text-inverse-emphasize-link-enabled) {
 							
-							color: @body-text-inverse-emphasize-link-text-color;
-							text-decoration: @body-text-inverse-emphasize-link-text-decoration;
+							/* ----------------------------------------------------------------------------------------------------
+							Links
+							---------------------------------------------------------------------------------------------------- */
 							
-							&:hover {
+							a {
 								
-								color: @body-text-inverse-emphasize-link-hover-text-color;
-								text-decoration: @body-text-inverse-emphasize-link-hover-text-decoration;
+								color: @body-text-inverse-emphasize-link-text-color;
+								text-decoration: @body-text-inverse-emphasize-link-text-decoration;
 								
-							}
-							
-							&:active {
+								&:hover {
+									
+									color: @body-text-inverse-emphasize-link-hover-text-color;
+									text-decoration: @body-text-inverse-emphasize-link-hover-text-decoration;
+									
+								}
 								
-								color: @body-text-inverse-emphasize-link-active-text-color;
-								text-decoration: @body-text-inverse-emphasize-link-active-text-decoration;
+								&:active {
+									
+									color: @body-text-inverse-emphasize-link-active-text-color;
+									text-decoration: @body-text-inverse-emphasize-link-active-text-decoration;
+									
+								}
 								
-							}
-							
-							&:disabled,
-							&.disabled {
-								
-								color: @body-text-inverse-emphasize-link-active-text-color;
-								text-decoration: @body-text-inverse-emphasize-link-active-text-decoration;
+								&:disabled {
+									
+									color: @body-text-inverse-emphasize-link-active-text-color;
+									text-decoration: @body-text-inverse-emphasize-link-active-text-decoration;
+									
+								}
 								
 							}
 							
@@ -633,34 +656,37 @@ base/typography.less
 						
 						
 						
-						/* ----------------------------------------------------------------------------------------------------
-						Links
-						---------------------------------------------------------------------------------------------------- */
-						
-						a {
+						& when (@body-text-inverse-mute-link-enabled) {
 							
-							color: @body-text-inverse-mute-link-text-color;
-							text-decoration: @body-text-inverse-mute-link-text-decoration;
+							/* ----------------------------------------------------------------------------------------------------
+							Links
+							---------------------------------------------------------------------------------------------------- */
 							
-							&:hover {
+							a {
 								
-								color: @body-text-inverse-mute-link-hover-text-color;
-								text-decoration: @body-text-inverse-mute-link-hover-text-decoration;
+								color: @body-text-inverse-mute-link-text-color;
+								text-decoration: @body-text-inverse-mute-link-text-decoration;
 								
-							}
-							
-							&:active {
+								&:hover {
+									
+									color: @body-text-inverse-mute-link-hover-text-color;
+									text-decoration: @body-text-inverse-mute-link-hover-text-decoration;
+									
+								}
 								
-								color: @body-text-inverse-mute-link-active-text-color;
-								text-decoration: @body-text-inverse-mute-link-active-text-decoration;
+								&:active {
+									
+									color: @body-text-inverse-mute-link-active-text-color;
+									text-decoration: @body-text-inverse-mute-link-active-text-decoration;
+									
+								}
 								
-							}
-							
-							&:disabled,
-							&.disabled {
-								
-								color: @body-text-inverse-mute-link-active-text-color;
-								text-decoration: @body-text-inverse-mute-link-active-text-decoration;
+								&:disabled {
+									
+									color: @body-text-inverse-mute-link-active-text-color;
+									text-decoration: @body-text-inverse-mute-link-active-text-decoration;
+									
+								}
 								
 							}
 							
@@ -761,34 +787,37 @@ base/typography.less
 			
 			
 			
-			/* ----------------------------------------------------------------------------------------------------
-			Links
-			---------------------------------------------------------------------------------------------------- */
-			
-			a {
+			& when (@small-text-link-enabled) {
 				
-				color: @small-text-link-text-color;
-				text-decoration: @small-text-link-text-decoration;
+				/* ----------------------------------------------------------------------------------------------------
+				Links
+				---------------------------------------------------------------------------------------------------- */
 				
-				&:hover {
+				a {
 					
-					color: @small-text-link-hover-text-color;
-					text-decoration: @small-text-link-hover-text-decoration;
+					color: @small-text-link-text-color;
+					text-decoration: @small-text-link-text-decoration;
 					
-				}
-				
-				&:active {
+					&:hover {
+						
+						color: @small-text-link-hover-text-color;
+						text-decoration: @small-text-link-hover-text-decoration;
+						
+					}
 					
-					color: @small-text-link-active-text-color;
-					text-decoration: @small-text-link-active-text-decoration;
+					&:active {
+						
+						color: @small-text-link-active-text-color;
+						text-decoration: @small-text-link-active-text-decoration;
+						
+					}
 					
-				}
-				
-				&:disabled,
-				&.disabled {
-					
-					color: @small-text-link-active-text-color;
-					text-decoration: @small-text-link-active-text-decoration;
+					&:disabled {
+						
+						color: @small-text-link-active-text-color;
+						text-decoration: @small-text-link-active-text-decoration;
+						
+					}
 					
 				}
 				
@@ -803,8 +832,7 @@ base/typography.less
 				---------------------------------------------------------------------------------------------------- */
 				
 				strong,
-				.emphasize,
-				&.emphasize {
+				.emphasize {
 					
 					.text-styling (
 						
@@ -821,34 +849,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@small-text-emphasize-link-enabled) {
 						
-						color: @small-text-emphasize-link-text-color;
-						text-decoration: @small-text-emphasize-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @small-text-emphasize-link-hover-text-color;
-							text-decoration: @small-text-emphasize-link-hover-text-decoration;
+							color: @small-text-emphasize-link-text-color;
+							text-decoration: @small-text-emphasize-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @small-text-emphasize-link-hover-text-color;
+								text-decoration: @small-text-emphasize-link-hover-text-decoration;
+								
+							}
 							
-							color: @small-text-emphasize-link-active-text-color;
-							text-decoration: @small-text-emphasize-link-active-text-decoration;
+							&:active {
+								
+								color: @small-text-emphasize-link-active-text-color;
+								text-decoration: @small-text-emphasize-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @small-text-emphasize-link-active-text-color;
-							text-decoration: @small-text-emphasize-link-active-text-decoration;
+							&:disabled {
+								
+								color: @small-text-emphasize-link-active-text-color;
+								text-decoration: @small-text-emphasize-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -866,8 +897,7 @@ base/typography.less
 				Mute
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute,
-				&.mute {
+				.mute {
 					
 					.text-styling (
 						
@@ -884,34 +914,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@small-text-mute-link-enabled) {
 						
-						color: @small-text-mute-link-text-color;
-						text-decoration: @small-text-mute-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @small-text-mute-link-hover-text-color;
-							text-decoration: @small-text-mute-link-hover-text-decoration;
+							color: @small-text-mute-link-text-color;
+							text-decoration: @small-text-mute-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @small-text-mute-link-hover-text-color;
+								text-decoration: @small-text-mute-link-hover-text-decoration;
+								
+							}
 							
-							color: @small-text-mute-link-active-text-color;
-							text-decoration: @small-text-mute-link-active-text-decoration;
+							&:active {
+								
+								color: @small-text-mute-link-active-text-color;
+								text-decoration: @small-text-mute-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @small-text-mute-link-active-text-color;
-							text-decoration: @small-text-mute-link-active-text-decoration;
+							&:disabled {
+								
+								color: @small-text-mute-link-active-text-color;
+								text-decoration: @small-text-mute-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -936,34 +969,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@small-text-inverse-link-enabled) {
 						
-						color: @small-text-inverse-link-text-color;
-						text-decoration: @small-text-inverse-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @small-text-inverse-link-hover-text-color;
-							text-decoration: @small-text-inverse-link-hover-text-decoration;
+							color: @small-text-inverse-link-text-color;
+							text-decoration: @small-text-inverse-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @small-text-inverse-link-hover-text-color;
+								text-decoration: @small-text-inverse-link-hover-text-decoration;
+								
+							}
 							
-							color: @small-text-inverse-link-active-text-color;
-							text-decoration: @small-text-inverse-link-active-text-decoration;
+							&:active {
+								
+								color: @small-text-inverse-link-active-text-color;
+								text-decoration: @small-text-inverse-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @small-text-inverse-link-active-text-color;
-							text-decoration: @small-text-inverse-link-active-text-decoration;
+							&:disabled {
+								
+								color: @small-text-inverse-link-active-text-color;
+								text-decoration: @small-text-inverse-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -977,6 +1013,7 @@ base/typography.less
 						Emphasize Inverse
 						---------------------------------------------------------------------------------------------------- */
 						
+						strong,
 						.emphasize {
 							
 							color: @small-text-inverse-emphasize-color;
@@ -984,34 +1021,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@small-text-inverse-emphasize-link-enabled) {
 								
-								color: @small-text-inverse-emphasize-link-text-color;
-								text-decoration: @small-text-inverse-emphasize-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @small-text-inverse-emphasize-link-hover-text-color;
-									text-decoration: @small-text-inverse-emphasize-link-hover-text-decoration;
+									color: @small-text-inverse-emphasize-link-text-color;
+									text-decoration: @small-text-inverse-emphasize-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @small-text-inverse-emphasize-link-hover-text-color;
+										text-decoration: @small-text-inverse-emphasize-link-hover-text-decoration;
+										
+									}
 									
-									color: @small-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @small-text-inverse-emphasize-link-active-text-decoration;
+									&:active {
+										
+										color: @small-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @small-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @small-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @small-text-inverse-emphasize-link-active-text-decoration;
+									&:disabled {
+										
+										color: @small-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @small-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -1036,34 +1076,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@small-text-inverse-mute-link-enabled) {
 								
-								color: @small-text-inverse-mute-link-text-color;
-								text-decoration: @small-text-inverse-mute-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @small-text-inverse-mute-link-hover-text-color;
-									text-decoration: @small-text-inverse-mute-link-hover-text-decoration;
+									color: @small-text-inverse-mute-link-text-color;
+									text-decoration: @small-text-inverse-mute-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @small-text-inverse-mute-link-hover-text-color;
+										text-decoration: @small-text-inverse-mute-link-hover-text-decoration;
+										
+									}
 									
-									color: @small-text-inverse-mute-link-active-text-color;
-									text-decoration: @small-text-inverse-mute-link-active-text-decoration;
+									&:active {
+										
+										color: @small-text-inverse-mute-link-active-text-color;
+										text-decoration: @small-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @small-text-inverse-mute-link-active-text-color;
-									text-decoration: @small-text-inverse-mute-link-active-text-decoration;
+									&:disabled {
+										
+										color: @small-text-inverse-mute-link-active-text-color;
+										text-decoration: @small-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -1166,34 +1209,37 @@ base/typography.less
 			
 			
 			
-			/* ----------------------------------------------------------------------------------------------------
-			Links
-			---------------------------------------------------------------------------------------------------- */
-			
-			a {
+			& when (@lead-text-link-enabled) {
 				
-				color: @lead-text-link-text-color;
-				text-decoration: @lead-text-link-text-decoration;
+				/* ----------------------------------------------------------------------------------------------------
+				Links
+				---------------------------------------------------------------------------------------------------- */
 				
-				&:hover {
+				a {
 					
-					color: @lead-text-link-hover-text-color;
-					text-decoration: @lead-text-link-hover-text-decoration;
+					color: @lead-text-link-text-color;
+					text-decoration: @lead-text-link-text-decoration;
 					
-				}
-				
-				&:active {
+					&:hover {
+						
+						color: @lead-text-link-hover-text-color;
+						text-decoration: @lead-text-link-hover-text-decoration;
+						
+					}
 					
-					color: @lead-text-link-active-text-color;
-					text-decoration: @lead-text-link-active-text-decoration;
+					&:active {
+						
+						color: @lead-text-link-active-text-color;
+						text-decoration: @lead-text-link-active-text-decoration;
+						
+					}
 					
-				}
-				
-				&:disabled,
-				&.disabled {
-					
-					color: @lead-text-link-active-text-color;
-					text-decoration: @lead-text-link-active-text-decoration;
+					&:disabled {
+						
+						color: @lead-text-link-active-text-color;
+						text-decoration: @lead-text-link-active-text-decoration;
+						
+					}
 					
 				}
 				
@@ -1208,8 +1254,7 @@ base/typography.less
 				---------------------------------------------------------------------------------------------------- */
 				
 				strong,
-				.emphasize,
-				&.emphasize {
+				.emphasize {
 					
 					.text-styling (
 						
@@ -1226,34 +1271,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@lead-text-emphasize-link-enabled) {
 						
-						color: @lead-text-emphasize-link-text-color;
-						text-decoration: @lead-text-emphasize-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @lead-text-emphasize-link-hover-text-color;
-							text-decoration: @lead-text-emphasize-link-hover-text-decoration;
+							color: @lead-text-emphasize-link-text-color;
+							text-decoration: @lead-text-emphasize-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @lead-text-emphasize-link-hover-text-color;
+								text-decoration: @lead-text-emphasize-link-hover-text-decoration;
+								
+							}
 							
-							color: @lead-text-emphasize-link-active-text-color;
-							text-decoration: @lead-text-emphasize-link-active-text-decoration;
+							&:active {
+								
+								color: @lead-text-emphasize-link-active-text-color;
+								text-decoration: @lead-text-emphasize-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @lead-text-emphasize-link-active-text-color;
-							text-decoration: @lead-text-emphasize-link-active-text-decoration;
+							&:disabled {
+								
+								color: @lead-text-emphasize-link-active-text-color;
+								text-decoration: @lead-text-emphasize-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -1271,8 +1319,7 @@ base/typography.less
 				Mute
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute,
-				&.mute {
+				.mute {
 					
 					.text-styling (
 						
@@ -1289,34 +1336,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@lead-text-mute-link-enabled) {
 						
-						color: @lead-text-mute-link-text-color;
-						text-decoration: @lead-text-mute-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @lead-text-mute-link-hover-text-color;
-							text-decoration: @lead-text-mute-link-hover-text-decoration;
+							color: @lead-text-mute-link-text-color;
+							text-decoration: @lead-text-mute-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @lead-text-mute-link-hover-text-color;
+								text-decoration: @lead-text-mute-link-hover-text-decoration;
+								
+							}
 							
-							color: @lead-text-mute-link-active-text-color;
-							text-decoration: @lead-text-mute-link-active-text-decoration;
+							&:active {
+								
+								color: @lead-text-mute-link-active-text-color;
+								text-decoration: @lead-text-mute-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @lead-text-mute-link-active-text-color;
-							text-decoration: @lead-text-mute-link-active-text-decoration;
+							&:disabled {
+								
+								color: @lead-text-mute-link-active-text-color;
+								text-decoration: @lead-text-mute-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -1341,34 +1391,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@lead-text-inverse-link-enabled) {
 						
-						color: @lead-text-inverse-link-text-color;
-						text-decoration: @lead-text-inverse-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @lead-text-inverse-link-hover-text-color;
-							text-decoration: @lead-text-inverse-link-hover-text-decoration;
+							color: @lead-text-inverse-link-text-color;
+							text-decoration: @lead-text-inverse-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @lead-text-inverse-link-hover-text-color;
+								text-decoration: @lead-text-inverse-link-hover-text-decoration;
+								
+							}
 							
-							color: @lead-text-inverse-link-active-text-color;
-							text-decoration: @lead-text-inverse-link-active-text-decoration;
+							&:active {
+								
+								color: @lead-text-inverse-link-active-text-color;
+								text-decoration: @lead-text-inverse-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @lead-text-inverse-link-active-text-color;
-							text-decoration: @lead-text-inverse-link-active-text-decoration;
+							&:disabled {
+								
+								color: @lead-text-inverse-link-active-text-color;
+								text-decoration: @lead-text-inverse-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -1382,6 +1435,7 @@ base/typography.less
 						Emphasize Inverse
 						---------------------------------------------------------------------------------------------------- */
 						
+						strong,
 						.emphasize {
 							
 							color: @lead-text-inverse-emphasize-color;
@@ -1389,34 +1443,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@lead-text-inverse-emphasize-link-enabled) {
 								
-								color: @lead-text-inverse-emphasize-link-text-color;
-								text-decoration: @lead-text-inverse-emphasize-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @lead-text-inverse-emphasize-link-hover-text-color;
-									text-decoration: @lead-text-inverse-emphasize-link-hover-text-decoration;
+									color: @lead-text-inverse-emphasize-link-text-color;
+									text-decoration: @lead-text-inverse-emphasize-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @lead-text-inverse-emphasize-link-hover-text-color;
+										text-decoration: @lead-text-inverse-emphasize-link-hover-text-decoration;
+										
+									}
 									
-									color: @lead-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @lead-text-inverse-emphasize-link-active-text-decoration;
+									&:active {
+										
+										color: @lead-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @lead-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @lead-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @lead-text-inverse-emphasize-link-active-text-decoration;
+									&:disabled {
+										
+										color: @lead-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @lead-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -1441,34 +1498,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@lead-text-inverse-mute-link-enabled) {
 								
-								color: @lead-text-inverse-mute-link-text-color;
-								text-decoration: @lead-text-inverse-mute-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @lead-text-inverse-mute-link-hover-text-color;
-									text-decoration: @lead-text-inverse-mute-link-hover-text-decoration;
+									color: @lead-text-inverse-mute-link-text-color;
+									text-decoration: @lead-text-inverse-mute-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @lead-text-inverse-mute-link-hover-text-color;
+										text-decoration: @lead-text-inverse-mute-link-hover-text-decoration;
+										
+									}
 									
-									color: @lead-text-inverse-mute-link-active-text-color;
-									text-decoration: @lead-text-inverse-mute-link-active-text-decoration;
+									&:active {
+										
+										color: @lead-text-inverse-mute-link-active-text-color;
+										text-decoration: @lead-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @lead-text-inverse-mute-link-active-text-color;
-									text-decoration: @lead-text-inverse-mute-link-active-text-decoration;
+									&:disabled {
+										
+										color: @lead-text-inverse-mute-link-active-text-color;
+										text-decoration: @lead-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -1522,14 +1582,6 @@ base/typography.less
 			
 			
 			
-			&:first-child {
-				
-				//margin-top: 0px;
-				
-			}
-			
-			
-			
 			/* ----------------------------------------------------------------------------------------------------
 			Short
 			---------------------------------------------------------------------------------------------------- */
@@ -1580,34 +1632,37 @@ base/typography.less
 			
 			
 			
-			/* ----------------------------------------------------------------------------------------------------
-			Links
-			---------------------------------------------------------------------------------------------------- */
-			
-			a {
+			& when (@heading-h1-text-link-enabled) {
 				
-				color: @heading-h1-text-link-text-color;
-				text-decoration: @heading-h1-text-link-text-decoration;
+				/* ----------------------------------------------------------------------------------------------------
+				Links
+				---------------------------------------------------------------------------------------------------- */
 				
-				&:hover {
+				a {
 					
-					color: @heading-h1-text-link-hover-text-color;
-					text-decoration: @heading-h1-text-link-hover-text-decoration;
+					color: @heading-h1-text-link-text-color;
+					text-decoration: @heading-h1-text-link-text-decoration;
 					
-				}
-				
-				&:active {
+					&:hover {
+						
+						color: @heading-h1-text-link-hover-text-color;
+						text-decoration: @heading-h1-text-link-hover-text-decoration;
+						
+					}
 					
-					color: @heading-h1-text-link-active-text-color;
-					text-decoration: @heading-h1-text-link-active-text-decoration;
+					&:active {
+						
+						color: @heading-h1-text-link-active-text-color;
+						text-decoration: @heading-h1-text-link-active-text-decoration;
+						
+					}
 					
-				}
-				
-				&:disabled,
-				&.disabled {
-					
-					color: @heading-h1-text-link-active-text-color;
-					text-decoration: @heading-h1-text-link-active-text-decoration;
+					&:disabled {
+						
+						color: @heading-h1-text-link-active-text-color;
+						text-decoration: @heading-h1-text-link-active-text-decoration;
+						
+					}
 					
 				}
 				
@@ -1622,8 +1677,7 @@ base/typography.less
 				---------------------------------------------------------------------------------------------------- */
 				
 				strong,
-				.emphasize,
-				&.emphasize {
+				.emphasize {
 					
 					.text-styling (
 						
@@ -1640,34 +1694,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h1-text-emphasize-link-enabled) {
 						
-						color: @heading-h1-text-emphasize-link-text-color;
-						text-decoration: @heading-h1-text-emphasize-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h1-text-emphasize-link-hover-text-color;
-							text-decoration: @heading-h1-text-emphasize-link-hover-text-decoration;
+							color: @heading-h1-text-emphasize-link-text-color;
+							text-decoration: @heading-h1-text-emphasize-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h1-text-emphasize-link-hover-text-color;
+								text-decoration: @heading-h1-text-emphasize-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h1-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h1-text-emphasize-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h1-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h1-text-emphasize-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h1-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h1-text-emphasize-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h1-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h1-text-emphasize-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -1685,8 +1742,7 @@ base/typography.less
 				Mute
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute,
-				&.mute {
+				.mute {
 					
 					.text-styling (
 						
@@ -1703,34 +1759,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h1-text-mute-link-enabled) {
 						
-						color: @heading-h1-text-mute-link-text-color;
-						text-decoration: @heading-h1-text-mute-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h1-text-mute-link-hover-text-color;
-							text-decoration: @heading-h1-text-mute-link-hover-text-decoration;
+							color: @heading-h1-text-mute-link-text-color;
+							text-decoration: @heading-h1-text-mute-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h1-text-mute-link-hover-text-color;
+								text-decoration: @heading-h1-text-mute-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h1-text-mute-link-active-text-color;
-							text-decoration: @heading-h1-text-mute-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h1-text-mute-link-active-text-color;
+								text-decoration: @heading-h1-text-mute-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h1-text-mute-link-active-text-color;
-							text-decoration: @heading-h1-text-mute-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h1-text-mute-link-active-text-color;
+								text-decoration: @heading-h1-text-mute-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -1755,34 +1814,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h1-text-inverse-link-enabled) {
 						
-						color: @heading-h1-text-inverse-link-text-color;
-						text-decoration: @heading-h1-text-inverse-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h1-text-inverse-link-hover-text-color;
-							text-decoration: @heading-h1-text-inverse-link-hover-text-decoration;
+							color: @heading-h1-text-inverse-link-text-color;
+							text-decoration: @heading-h1-text-inverse-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h1-text-inverse-link-hover-text-color;
+								text-decoration: @heading-h1-text-inverse-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h1-text-inverse-link-active-text-color;
-							text-decoration: @heading-h1-text-inverse-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h1-text-inverse-link-active-text-color;
+								text-decoration: @heading-h1-text-inverse-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h1-text-inverse-link-active-text-color;
-							text-decoration: @heading-h1-text-inverse-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h1-text-inverse-link-active-text-color;
+								text-decoration: @heading-h1-text-inverse-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -1796,6 +1858,7 @@ base/typography.less
 						Emphasize Inverse
 						---------------------------------------------------------------------------------------------------- */
 						
+						strong,
 						.emphasize {
 							
 							color: @heading-h1-text-inverse-emphasize-color;
@@ -1803,34 +1866,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h1-text-inverse-emphasize-link-enabled) {	
 								
-								color: @heading-h1-text-inverse-emphasize-link-text-color;
-								text-decoration: @heading-h1-text-inverse-emphasize-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h1-text-inverse-emphasize-link-hover-text-color;
-									text-decoration: @heading-h1-text-inverse-emphasize-link-hover-text-decoration;
+									color: @heading-h1-text-inverse-emphasize-link-text-color;
+									text-decoration: @heading-h1-text-inverse-emphasize-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h1-text-inverse-emphasize-link-hover-text-color;
+										text-decoration: @heading-h1-text-inverse-emphasize-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h1-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h1-text-inverse-emphasize-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h1-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h1-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h1-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h1-text-inverse-emphasize-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h1-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h1-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -1842,7 +1908,7 @@ base/typography.less
 					
 					
 					
-					& when (@heading-h1-text-inverse-mute-enabled) {				
+					& when (@heading-h1-text-inverse-mute-enabled) {
 						
 						/* ----------------------------------------------------------------------------------------------------
 						Mute Inverse
@@ -1855,34 +1921,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h1-text-inverse-mute-link-enabled) {
 								
-								color: @heading-h1-text-inverse-mute-link-text-color;
-								text-decoration: @heading-h1-text-inverse-mute-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h1-text-inverse-mute-link-hover-text-color;
-									text-decoration: @heading-h1-text-inverse-mute-link-hover-text-decoration;
+									color: @heading-h1-text-inverse-mute-link-text-color;
+									text-decoration: @heading-h1-text-inverse-mute-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h1-text-inverse-mute-link-hover-text-color;
+										text-decoration: @heading-h1-text-inverse-mute-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h1-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h1-text-inverse-mute-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h1-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h1-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h1-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h1-text-inverse-mute-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h1-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h1-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -1914,7 +1983,7 @@ base/typography.less
 		
 		-------------------------------------------------------------------------------------------------------
 		---------------------------------------------------------------------------------------------------- */
-			
+		
 		h2,
 		.h2 {
 			
@@ -1986,34 +2055,37 @@ base/typography.less
 			
 			
 			
-			/* ----------------------------------------------------------------------------------------------------
-			Links
-			---------------------------------------------------------------------------------------------------- */
-			
-			a {
+			& when (@heading-h2-text-link-enabled) {
 				
-				color: @heading-h2-text-link-text-color;
-				text-decoration: @heading-h2-text-link-text-decoration;
+				/* ----------------------------------------------------------------------------------------------------
+				Links
+				---------------------------------------------------------------------------------------------------- */
 				
-				&:hover {
+				a {
 					
-					color: @heading-h2-text-link-hover-text-color;
-					text-decoration: @heading-h2-text-link-hover-text-decoration;
+					color: @heading-h2-text-link-text-color;
+					text-decoration: @heading-h2-text-link-text-decoration;
 					
-				}
-				
-				&:active {
+					&:hover {
+						
+						color: @heading-h2-text-link-hover-text-color;
+						text-decoration: @heading-h2-text-link-hover-text-decoration;
+						
+					}
 					
-					color: @heading-h2-text-link-active-text-color;
-					text-decoration: @heading-h2-text-link-active-text-decoration;
+					&:active {
+						
+						color: @heading-h2-text-link-active-text-color;
+						text-decoration: @heading-h2-text-link-active-text-decoration;
+						
+					}
 					
-				}
-				
-				&:disabled,
-				&.disabled {
-					
-					color: @heading-h2-text-link-active-text-color;
-					text-decoration: @heading-h2-text-link-active-text-decoration;
+					&:disabled {
+						
+						color: @heading-h2-text-link-active-text-color;
+						text-decoration: @heading-h2-text-link-active-text-decoration;
+						
+					}
 					
 				}
 				
@@ -2028,8 +2100,7 @@ base/typography.less
 				---------------------------------------------------------------------------------------------------- */
 				
 				strong,
-				.emphasize,
-				&.emphasize {
+				.emphasize {
 					
 					.text-styling (
 						
@@ -2046,34 +2117,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h2-text-emphasize-link-enabled) {
 						
-						color: @heading-h2-text-emphasize-link-text-color;
-						text-decoration: @heading-h2-text-emphasize-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h2-text-emphasize-link-hover-text-color;
-							text-decoration: @heading-h2-text-emphasize-link-hover-text-decoration;
+							color: @heading-h2-text-emphasize-link-text-color;
+							text-decoration: @heading-h2-text-emphasize-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h2-text-emphasize-link-hover-text-color;
+								text-decoration: @heading-h2-text-emphasize-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h2-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h2-text-emphasize-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h2-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h2-text-emphasize-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h2-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h2-text-emphasize-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h2-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h2-text-emphasize-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -2091,8 +2165,7 @@ base/typography.less
 				Mute
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute,
-				&.mute {
+				.mute {
 					
 					.text-styling (
 						
@@ -2109,34 +2182,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h2-text-mute-link-enabled) {
 						
-						color: @heading-h2-text-mute-link-text-color;
-						text-decoration: @heading-h2-text-mute-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h2-text-mute-link-hover-text-color;
-							text-decoration: @heading-h2-text-mute-link-hover-text-decoration;
+							color: @heading-h2-text-mute-link-text-color;
+							text-decoration: @heading-h2-text-mute-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h2-text-mute-link-hover-text-color;
+								text-decoration: @heading-h2-text-mute-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h2-text-mute-link-active-text-color;
-							text-decoration: @heading-h2-text-mute-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h2-text-mute-link-active-text-color;
+								text-decoration: @heading-h2-text-mute-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h2-text-mute-link-active-text-color;
-							text-decoration: @heading-h2-text-mute-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h2-text-mute-link-active-text-color;
+								text-decoration: @heading-h2-text-mute-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -2161,34 +2237,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h2-text-inverse-link-enabled) {
 						
-						color: @heading-h2-text-inverse-link-text-color;
-						text-decoration: @heading-h2-text-inverse-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h2-text-inverse-link-hover-text-color;
-							text-decoration: @heading-h2-text-inverse-link-hover-text-decoration;
+							color: @heading-h2-text-inverse-link-text-color;
+							text-decoration: @heading-h2-text-inverse-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h2-text-inverse-link-hover-text-color;
+								text-decoration: @heading-h2-text-inverse-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h2-text-inverse-link-active-text-color;
-							text-decoration: @heading-h2-text-inverse-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h2-text-inverse-link-active-text-color;
+								text-decoration: @heading-h2-text-inverse-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h2-text-inverse-link-active-text-color;
-							text-decoration: @heading-h2-text-inverse-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h2-text-inverse-link-active-text-color;
+								text-decoration: @heading-h2-text-inverse-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -2202,6 +2281,7 @@ base/typography.less
 						Emphasize Inverse
 						---------------------------------------------------------------------------------------------------- */
 						
+						strong,
 						.emphasize {
 							
 							color: @heading-h2-text-inverse-emphasize-color;
@@ -2209,34 +2289,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h2-text-inverse-emphasize-link-enabled) {	
 								
-								color: @heading-h2-text-inverse-emphasize-link-text-color;
-								text-decoration: @heading-h2-text-inverse-emphasize-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h2-text-inverse-emphasize-link-hover-text-color;
-									text-decoration: @heading-h2-text-inverse-emphasize-link-hover-text-decoration;
+									color: @heading-h2-text-inverse-emphasize-link-text-color;
+									text-decoration: @heading-h2-text-inverse-emphasize-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h2-text-inverse-emphasize-link-hover-text-color;
+										text-decoration: @heading-h2-text-inverse-emphasize-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h2-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h2-text-inverse-emphasize-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h2-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h2-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h2-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h2-text-inverse-emphasize-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h2-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h2-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -2248,7 +2331,7 @@ base/typography.less
 					
 					
 					
-					& when (@heading-h2-text-inverse-mute-enabled) {				
+					& when (@heading-h2-text-inverse-mute-enabled) {
 						
 						/* ----------------------------------------------------------------------------------------------------
 						Mute Inverse
@@ -2261,34 +2344,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h2-text-inverse-mute-link-enabled) {
 								
-								color: @heading-h2-text-inverse-mute-link-text-color;
-								text-decoration: @heading-h2-text-inverse-mute-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h2-text-inverse-mute-link-hover-text-color;
-									text-decoration: @heading-h2-text-inverse-mute-link-hover-text-decoration;
+									color: @heading-h2-text-inverse-mute-link-text-color;
+									text-decoration: @heading-h2-text-inverse-mute-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h2-text-inverse-mute-link-hover-text-color;
+										text-decoration: @heading-h2-text-inverse-mute-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h2-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h2-text-inverse-mute-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h2-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h2-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h2-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h2-text-inverse-mute-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h2-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h2-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -2320,7 +2406,7 @@ base/typography.less
 		
 		-------------------------------------------------------------------------------------------------------
 		---------------------------------------------------------------------------------------------------- */
-			
+		
 		h3,
 		.h3 {
 			
@@ -2392,34 +2478,37 @@ base/typography.less
 			
 			
 			
-			/* ----------------------------------------------------------------------------------------------------
-			Links
-			---------------------------------------------------------------------------------------------------- */
-			
-			a {
+			& when (@heading-h3-text-link-enabled) {
 				
-				color: @heading-h3-text-link-text-color;
-				text-decoration: @heading-h3-text-link-text-decoration;
+				/* ----------------------------------------------------------------------------------------------------
+				Links
+				---------------------------------------------------------------------------------------------------- */
 				
-				&:hover {
+				a {
 					
-					color: @heading-h3-text-link-hover-text-color;
-					text-decoration: @heading-h3-text-link-hover-text-decoration;
+					color: @heading-h3-text-link-text-color;
+					text-decoration: @heading-h3-text-link-text-decoration;
 					
-				}
-				
-				&:active {
+					&:hover {
+						
+						color: @heading-h3-text-link-hover-text-color;
+						text-decoration: @heading-h3-text-link-hover-text-decoration;
+						
+					}
 					
-					color: @heading-h3-text-link-active-text-color;
-					text-decoration: @heading-h3-text-link-active-text-decoration;
+					&:active {
+						
+						color: @heading-h3-text-link-active-text-color;
+						text-decoration: @heading-h3-text-link-active-text-decoration;
+						
+					}
 					
-				}
-				
-				&:disabled,
-				&.disabled {
-					
-					color: @heading-h3-text-link-active-text-color;
-					text-decoration: @heading-h3-text-link-active-text-decoration;
+					&:disabled {
+						
+						color: @heading-h3-text-link-active-text-color;
+						text-decoration: @heading-h3-text-link-active-text-decoration;
+						
+					}
 					
 				}
 				
@@ -2434,8 +2523,7 @@ base/typography.less
 				---------------------------------------------------------------------------------------------------- */
 				
 				strong,
-				.emphasize,
-				&.emphasize {
+				.emphasize {
 					
 					.text-styling (
 						
@@ -2452,34 +2540,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h3-text-emphasize-link-enabled) {
 						
-						color: @heading-h3-text-emphasize-link-text-color;
-						text-decoration: @heading-h3-text-emphasize-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h3-text-emphasize-link-hover-text-color;
-							text-decoration: @heading-h3-text-emphasize-link-hover-text-decoration;
+							color: @heading-h3-text-emphasize-link-text-color;
+							text-decoration: @heading-h3-text-emphasize-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h3-text-emphasize-link-hover-text-color;
+								text-decoration: @heading-h3-text-emphasize-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h3-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h3-text-emphasize-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h3-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h3-text-emphasize-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h3-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h3-text-emphasize-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h3-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h3-text-emphasize-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -2497,8 +2588,7 @@ base/typography.less
 				Mute
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute,
-				&.mute {
+				.mute {
 					
 					.text-styling (
 						
@@ -2515,34 +2605,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h3-text-mute-link-enabled) {
 						
-						color: @heading-h3-text-mute-link-text-color;
-						text-decoration: @heading-h3-text-mute-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h3-text-mute-link-hover-text-color;
-							text-decoration: @heading-h3-text-mute-link-hover-text-decoration;
+							color: @heading-h3-text-mute-link-text-color;
+							text-decoration: @heading-h3-text-mute-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h3-text-mute-link-hover-text-color;
+								text-decoration: @heading-h3-text-mute-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h3-text-mute-link-active-text-color;
-							text-decoration: @heading-h3-text-mute-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h3-text-mute-link-active-text-color;
+								text-decoration: @heading-h3-text-mute-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h3-text-mute-link-active-text-color;
-							text-decoration: @heading-h3-text-mute-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h3-text-mute-link-active-text-color;
+								text-decoration: @heading-h3-text-mute-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -2567,34 +2660,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h3-text-inverse-link-enabled) {
 						
-						color: @heading-h3-text-inverse-link-text-color;
-						text-decoration: @heading-h3-text-inverse-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h3-text-inverse-link-hover-text-color;
-							text-decoration: @heading-h3-text-inverse-link-hover-text-decoration;
+							color: @heading-h3-text-inverse-link-text-color;
+							text-decoration: @heading-h3-text-inverse-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h3-text-inverse-link-hover-text-color;
+								text-decoration: @heading-h3-text-inverse-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h3-text-inverse-link-active-text-color;
-							text-decoration: @heading-h3-text-inverse-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h3-text-inverse-link-active-text-color;
+								text-decoration: @heading-h3-text-inverse-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h3-text-inverse-link-active-text-color;
-							text-decoration: @heading-h3-text-inverse-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h3-text-inverse-link-active-text-color;
+								text-decoration: @heading-h3-text-inverse-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -2608,6 +2704,7 @@ base/typography.less
 						Emphasize Inverse
 						---------------------------------------------------------------------------------------------------- */
 						
+						strong,
 						.emphasize {
 							
 							color: @heading-h3-text-inverse-emphasize-color;
@@ -2615,34 +2712,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h3-text-inverse-emphasize-link-enabled) {	
 								
-								color: @heading-h3-text-inverse-emphasize-link-text-color;
-								text-decoration: @heading-h3-text-inverse-emphasize-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h3-text-inverse-emphasize-link-hover-text-color;
-									text-decoration: @heading-h3-text-inverse-emphasize-link-hover-text-decoration;
+									color: @heading-h3-text-inverse-emphasize-link-text-color;
+									text-decoration: @heading-h3-text-inverse-emphasize-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h3-text-inverse-emphasize-link-hover-text-color;
+										text-decoration: @heading-h3-text-inverse-emphasize-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h3-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h3-text-inverse-emphasize-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h3-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h3-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h3-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h3-text-inverse-emphasize-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h3-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h3-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -2654,7 +2754,7 @@ base/typography.less
 					
 					
 					
-					& when (@heading-h3-text-inverse-mute-enabled) {				
+					& when (@heading-h3-text-inverse-mute-enabled) {
 						
 						/* ----------------------------------------------------------------------------------------------------
 						Mute Inverse
@@ -2667,34 +2767,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h3-text-inverse-mute-link-enabled) {
 								
-								color: @heading-h3-text-inverse-mute-link-text-color;
-								text-decoration: @heading-h3-text-inverse-mute-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h3-text-inverse-mute-link-hover-text-color;
-									text-decoration: @heading-h3-text-inverse-mute-link-hover-text-decoration;
+									color: @heading-h3-text-inverse-mute-link-text-color;
+									text-decoration: @heading-h3-text-inverse-mute-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h3-text-inverse-mute-link-hover-text-color;
+										text-decoration: @heading-h3-text-inverse-mute-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h3-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h3-text-inverse-mute-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h3-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h3-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h3-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h3-text-inverse-mute-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h3-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h3-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -2726,7 +2829,7 @@ base/typography.less
 		
 		-------------------------------------------------------------------------------------------------------
 		---------------------------------------------------------------------------------------------------- */
-			
+		
 		h4,
 		.h4 {
 			
@@ -2798,34 +2901,37 @@ base/typography.less
 			
 			
 			
-			/* ----------------------------------------------------------------------------------------------------
-			Links
-			---------------------------------------------------------------------------------------------------- */
-			
-			a {
+			& when (@heading-h4-text-link-enabled) {
 				
-				color: @heading-h4-text-link-text-color;
-				text-decoration: @heading-h4-text-link-text-decoration;
+				/* ----------------------------------------------------------------------------------------------------
+				Links
+				---------------------------------------------------------------------------------------------------- */
 				
-				&:hover {
+				a {
 					
-					color: @heading-h4-text-link-hover-text-color;
-					text-decoration: @heading-h4-text-link-hover-text-decoration;
+					color: @heading-h4-text-link-text-color;
+					text-decoration: @heading-h4-text-link-text-decoration;
 					
-				}
-				
-				&:active {
+					&:hover {
+						
+						color: @heading-h4-text-link-hover-text-color;
+						text-decoration: @heading-h4-text-link-hover-text-decoration;
+						
+					}
 					
-					color: @heading-h4-text-link-active-text-color;
-					text-decoration: @heading-h4-text-link-active-text-decoration;
+					&:active {
+						
+						color: @heading-h4-text-link-active-text-color;
+						text-decoration: @heading-h4-text-link-active-text-decoration;
+						
+					}
 					
-				}
-				
-				&:disabled,
-				&.disabled {
-					
-					color: @heading-h4-text-link-active-text-color;
-					text-decoration: @heading-h4-text-link-active-text-decoration;
+					&:disabled {
+						
+						color: @heading-h4-text-link-active-text-color;
+						text-decoration: @heading-h4-text-link-active-text-decoration;
+						
+					}
 					
 				}
 				
@@ -2840,8 +2946,7 @@ base/typography.less
 				---------------------------------------------------------------------------------------------------- */
 				
 				strong,
-				.emphasize,
-				&.emphasize {
+				.emphasize {
 					
 					.text-styling (
 						
@@ -2858,34 +2963,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h4-text-emphasize-link-enabled) {
 						
-						color: @heading-h4-text-emphasize-link-text-color;
-						text-decoration: @heading-h4-text-emphasize-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h4-text-emphasize-link-hover-text-color;
-							text-decoration: @heading-h4-text-emphasize-link-hover-text-decoration;
+							color: @heading-h4-text-emphasize-link-text-color;
+							text-decoration: @heading-h4-text-emphasize-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h4-text-emphasize-link-hover-text-color;
+								text-decoration: @heading-h4-text-emphasize-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h4-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h4-text-emphasize-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h4-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h4-text-emphasize-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h4-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h4-text-emphasize-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h4-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h4-text-emphasize-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -2903,8 +3011,7 @@ base/typography.less
 				Mute
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute,
-				&.mute {
+				.mute {
 					
 					.text-styling (
 						
@@ -2921,34 +3028,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h4-text-mute-link-enabled) {
 						
-						color: @heading-h4-text-mute-link-text-color;
-						text-decoration: @heading-h4-text-mute-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h4-text-mute-link-hover-text-color;
-							text-decoration: @heading-h4-text-mute-link-hover-text-decoration;
+							color: @heading-h4-text-mute-link-text-color;
+							text-decoration: @heading-h4-text-mute-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h4-text-mute-link-hover-text-color;
+								text-decoration: @heading-h4-text-mute-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h4-text-mute-link-active-text-color;
-							text-decoration: @heading-h4-text-mute-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h4-text-mute-link-active-text-color;
+								text-decoration: @heading-h4-text-mute-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h4-text-mute-link-active-text-color;
-							text-decoration: @heading-h4-text-mute-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h4-text-mute-link-active-text-color;
+								text-decoration: @heading-h4-text-mute-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -2973,34 +3083,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h4-text-inverse-link-enabled) {
 						
-						color: @heading-h4-text-inverse-link-text-color;
-						text-decoration: @heading-h4-text-inverse-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h4-text-inverse-link-hover-text-color;
-							text-decoration: @heading-h4-text-inverse-link-hover-text-decoration;
+							color: @heading-h4-text-inverse-link-text-color;
+							text-decoration: @heading-h4-text-inverse-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h4-text-inverse-link-hover-text-color;
+								text-decoration: @heading-h4-text-inverse-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h4-text-inverse-link-active-text-color;
-							text-decoration: @heading-h4-text-inverse-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h4-text-inverse-link-active-text-color;
+								text-decoration: @heading-h4-text-inverse-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h4-text-inverse-link-active-text-color;
-							text-decoration: @heading-h4-text-inverse-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h4-text-inverse-link-active-text-color;
+								text-decoration: @heading-h4-text-inverse-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -3014,6 +3127,7 @@ base/typography.less
 						Emphasize Inverse
 						---------------------------------------------------------------------------------------------------- */
 						
+						strong,
 						.emphasize {
 							
 							color: @heading-h4-text-inverse-emphasize-color;
@@ -3021,34 +3135,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h4-text-inverse-emphasize-link-enabled) {	
 								
-								color: @heading-h4-text-inverse-emphasize-link-text-color;
-								text-decoration: @heading-h4-text-inverse-emphasize-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h4-text-inverse-emphasize-link-hover-text-color;
-									text-decoration: @heading-h4-text-inverse-emphasize-link-hover-text-decoration;
+									color: @heading-h4-text-inverse-emphasize-link-text-color;
+									text-decoration: @heading-h4-text-inverse-emphasize-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h4-text-inverse-emphasize-link-hover-text-color;
+										text-decoration: @heading-h4-text-inverse-emphasize-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h4-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h4-text-inverse-emphasize-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h4-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h4-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h4-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h4-text-inverse-emphasize-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h4-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h4-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -3060,7 +3177,7 @@ base/typography.less
 					
 					
 					
-					& when (@heading-h4-text-inverse-mute-enabled) {				
+					& when (@heading-h4-text-inverse-mute-enabled) {
 						
 						/* ----------------------------------------------------------------------------------------------------
 						Mute Inverse
@@ -3073,34 +3190,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h4-text-inverse-mute-link-enabled) {
 								
-								color: @heading-h4-text-inverse-mute-link-text-color;
-								text-decoration: @heading-h4-text-inverse-mute-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h4-text-inverse-mute-link-hover-text-color;
-									text-decoration: @heading-h4-text-inverse-mute-link-hover-text-decoration;
+									color: @heading-h4-text-inverse-mute-link-text-color;
+									text-decoration: @heading-h4-text-inverse-mute-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h4-text-inverse-mute-link-hover-text-color;
+										text-decoration: @heading-h4-text-inverse-mute-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h4-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h4-text-inverse-mute-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h4-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h4-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h4-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h4-text-inverse-mute-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h4-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h4-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -3132,7 +3252,7 @@ base/typography.less
 		
 		-------------------------------------------------------------------------------------------------------
 		---------------------------------------------------------------------------------------------------- */
-			
+		
 		h5,
 		.h5 {
 			
@@ -3204,34 +3324,37 @@ base/typography.less
 			
 			
 			
-			/* ----------------------------------------------------------------------------------------------------
-			Links
-			---------------------------------------------------------------------------------------------------- */
-			
-			a {
+			& when (@heading-h5-text-link-enabled) {
 				
-				color: @heading-h5-text-link-text-color;
-				text-decoration: @heading-h5-text-link-text-decoration;
+				/* ----------------------------------------------------------------------------------------------------
+				Links
+				---------------------------------------------------------------------------------------------------- */
 				
-				&:hover {
+				a {
 					
-					color: @heading-h5-text-link-hover-text-color;
-					text-decoration: @heading-h5-text-link-hover-text-decoration;
+					color: @heading-h5-text-link-text-color;
+					text-decoration: @heading-h5-text-link-text-decoration;
 					
-				}
-				
-				&:active {
+					&:hover {
+						
+						color: @heading-h5-text-link-hover-text-color;
+						text-decoration: @heading-h5-text-link-hover-text-decoration;
+						
+					}
 					
-					color: @heading-h5-text-link-active-text-color;
-					text-decoration: @heading-h5-text-link-active-text-decoration;
+					&:active {
+						
+						color: @heading-h5-text-link-active-text-color;
+						text-decoration: @heading-h5-text-link-active-text-decoration;
+						
+					}
 					
-				}
-				
-				&:disabled,
-				&.disabled {
-					
-					color: @heading-h5-text-link-active-text-color;
-					text-decoration: @heading-h5-text-link-active-text-decoration;
+					&:disabled {
+						
+						color: @heading-h5-text-link-active-text-color;
+						text-decoration: @heading-h5-text-link-active-text-decoration;
+						
+					}
 					
 				}
 				
@@ -3246,8 +3369,7 @@ base/typography.less
 				---------------------------------------------------------------------------------------------------- */
 				
 				strong,
-				.emphasize,
-				&.emphasize {
+				.emphasize {
 					
 					.text-styling (
 						
@@ -3264,34 +3386,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h5-text-emphasize-link-enabled) {
 						
-						color: @heading-h5-text-emphasize-link-text-color;
-						text-decoration: @heading-h5-text-emphasize-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h5-text-emphasize-link-hover-text-color;
-							text-decoration: @heading-h5-text-emphasize-link-hover-text-decoration;
+							color: @heading-h5-text-emphasize-link-text-color;
+							text-decoration: @heading-h5-text-emphasize-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h5-text-emphasize-link-hover-text-color;
+								text-decoration: @heading-h5-text-emphasize-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h5-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h5-text-emphasize-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h5-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h5-text-emphasize-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h5-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h5-text-emphasize-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h5-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h5-text-emphasize-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -3309,8 +3434,7 @@ base/typography.less
 				Mute
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute,
-				&.mute {
+				.mute {
 					
 					.text-styling (
 						
@@ -3327,34 +3451,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h5-text-mute-link-enabled) {
 						
-						color: @heading-h5-text-mute-link-text-color;
-						text-decoration: @heading-h5-text-mute-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h5-text-mute-link-hover-text-color;
-							text-decoration: @heading-h5-text-mute-link-hover-text-decoration;
+							color: @heading-h5-text-mute-link-text-color;
+							text-decoration: @heading-h5-text-mute-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h5-text-mute-link-hover-text-color;
+								text-decoration: @heading-h5-text-mute-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h5-text-mute-link-active-text-color;
-							text-decoration: @heading-h5-text-mute-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h5-text-mute-link-active-text-color;
+								text-decoration: @heading-h5-text-mute-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h5-text-mute-link-active-text-color;
-							text-decoration: @heading-h5-text-mute-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h5-text-mute-link-active-text-color;
+								text-decoration: @heading-h5-text-mute-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -3379,34 +3506,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h5-text-inverse-link-enabled) {
 						
-						color: @heading-h5-text-inverse-link-text-color;
-						text-decoration: @heading-h5-text-inverse-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h5-text-inverse-link-hover-text-color;
-							text-decoration: @heading-h5-text-inverse-link-hover-text-decoration;
+							color: @heading-h5-text-inverse-link-text-color;
+							text-decoration: @heading-h5-text-inverse-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h5-text-inverse-link-hover-text-color;
+								text-decoration: @heading-h5-text-inverse-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h5-text-inverse-link-active-text-color;
-							text-decoration: @heading-h5-text-inverse-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h5-text-inverse-link-active-text-color;
+								text-decoration: @heading-h5-text-inverse-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h5-text-inverse-link-active-text-color;
-							text-decoration: @heading-h5-text-inverse-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h5-text-inverse-link-active-text-color;
+								text-decoration: @heading-h5-text-inverse-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -3420,6 +3550,7 @@ base/typography.less
 						Emphasize Inverse
 						---------------------------------------------------------------------------------------------------- */
 						
+						strong,
 						.emphasize {
 							
 							color: @heading-h5-text-inverse-emphasize-color;
@@ -3427,34 +3558,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h5-text-inverse-emphasize-link-enabled) {	
 								
-								color: @heading-h5-text-inverse-emphasize-link-text-color;
-								text-decoration: @heading-h5-text-inverse-emphasize-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h5-text-inverse-emphasize-link-hover-text-color;
-									text-decoration: @heading-h5-text-inverse-emphasize-link-hover-text-decoration;
+									color: @heading-h5-text-inverse-emphasize-link-text-color;
+									text-decoration: @heading-h5-text-inverse-emphasize-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h5-text-inverse-emphasize-link-hover-text-color;
+										text-decoration: @heading-h5-text-inverse-emphasize-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h5-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h5-text-inverse-emphasize-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h5-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h5-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h5-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h5-text-inverse-emphasize-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h5-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h5-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -3466,7 +3600,7 @@ base/typography.less
 					
 					
 					
-					& when (@heading-h5-text-inverse-mute-enabled) {				
+					& when (@heading-h5-text-inverse-mute-enabled) {
 						
 						/* ----------------------------------------------------------------------------------------------------
 						Mute Inverse
@@ -3479,34 +3613,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h5-text-inverse-mute-link-enabled) {
 								
-								color: @heading-h5-text-inverse-mute-link-text-color;
-								text-decoration: @heading-h5-text-inverse-mute-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h5-text-inverse-mute-link-hover-text-color;
-									text-decoration: @heading-h5-text-inverse-mute-link-hover-text-decoration;
+									color: @heading-h5-text-inverse-mute-link-text-color;
+									text-decoration: @heading-h5-text-inverse-mute-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h5-text-inverse-mute-link-hover-text-color;
+										text-decoration: @heading-h5-text-inverse-mute-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h5-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h5-text-inverse-mute-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h5-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h5-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h5-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h5-text-inverse-mute-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h5-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h5-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -3534,11 +3671,11 @@ base/typography.less
 		/* ----------------------------------------------------------------------------------------------------
 		-------------------------------------------------------------------------------------------------------
 		
-		Heading H6 Text
+		Heading h6 Text
 		
 		-------------------------------------------------------------------------------------------------------
 		---------------------------------------------------------------------------------------------------- */
-			
+		
 		h6,
 		.h6 {
 			
@@ -3610,34 +3747,37 @@ base/typography.less
 			
 			
 			
-			/* ----------------------------------------------------------------------------------------------------
-			Links
-			---------------------------------------------------------------------------------------------------- */
-			
-			a {
+			& when (@heading-h6-text-link-enabled) {
 				
-				color: @heading-h6-text-link-text-color;
-				text-decoration: @heading-h6-text-link-text-decoration;
+				/* ----------------------------------------------------------------------------------------------------
+				Links
+				---------------------------------------------------------------------------------------------------- */
 				
-				&:hover {
+				a {
 					
-					color: @heading-h6-text-link-hover-text-color;
-					text-decoration: @heading-h6-text-link-hover-text-decoration;
+					color: @heading-h6-text-link-text-color;
+					text-decoration: @heading-h6-text-link-text-decoration;
 					
-				}
-				
-				&:active {
+					&:hover {
+						
+						color: @heading-h6-text-link-hover-text-color;
+						text-decoration: @heading-h6-text-link-hover-text-decoration;
+						
+					}
 					
-					color: @heading-h6-text-link-active-text-color;
-					text-decoration: @heading-h6-text-link-active-text-decoration;
+					&:active {
+						
+						color: @heading-h6-text-link-active-text-color;
+						text-decoration: @heading-h6-text-link-active-text-decoration;
+						
+					}
 					
-				}
-				
-				&:disabled,
-				&.disabled {
-					
-					color: @heading-h6-text-link-active-text-color;
-					text-decoration: @heading-h6-text-link-active-text-decoration;
+					&:disabled {
+						
+						color: @heading-h6-text-link-active-text-color;
+						text-decoration: @heading-h6-text-link-active-text-decoration;
+						
+					}
 					
 				}
 				
@@ -3652,8 +3792,7 @@ base/typography.less
 				---------------------------------------------------------------------------------------------------- */
 				
 				strong,
-				.emphasize,
-				&.emphasize {
+				.emphasize {
 					
 					.text-styling (
 						
@@ -3670,34 +3809,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h6-text-emphasize-link-enabled) {
 						
-						color: @heading-h6-text-emphasize-link-text-color;
-						text-decoration: @heading-h6-text-emphasize-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h6-text-emphasize-link-hover-text-color;
-							text-decoration: @heading-h6-text-emphasize-link-hover-text-decoration;
+							color: @heading-h6-text-emphasize-link-text-color;
+							text-decoration: @heading-h6-text-emphasize-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h6-text-emphasize-link-hover-text-color;
+								text-decoration: @heading-h6-text-emphasize-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h6-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h6-text-emphasize-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h6-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h6-text-emphasize-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h6-text-emphasize-link-active-text-color;
-							text-decoration: @heading-h6-text-emphasize-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h6-text-emphasize-link-active-text-color;
+								text-decoration: @heading-h6-text-emphasize-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -3715,8 +3857,7 @@ base/typography.less
 				Mute
 				---------------------------------------------------------------------------------------------------- */
 				
-				.mute,
-				&.mute {
+				.mute {
 					
 					.text-styling (
 						
@@ -3733,34 +3874,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h6-text-mute-link-enabled) {
 						
-						color: @heading-h6-text-mute-link-text-color;
-						text-decoration: @heading-h6-text-mute-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h6-text-mute-link-hover-text-color;
-							text-decoration: @heading-h6-text-mute-link-hover-text-decoration;
+							color: @heading-h6-text-mute-link-text-color;
+							text-decoration: @heading-h6-text-mute-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h6-text-mute-link-hover-text-color;
+								text-decoration: @heading-h6-text-mute-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h6-text-mute-link-active-text-color;
-							text-decoration: @heading-h6-text-mute-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h6-text-mute-link-active-text-color;
+								text-decoration: @heading-h6-text-mute-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h6-text-mute-link-active-text-color;
-							text-decoration: @heading-h6-text-mute-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h6-text-mute-link-active-text-color;
+								text-decoration: @heading-h6-text-mute-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -3785,34 +3929,37 @@ base/typography.less
 					
 					
 					
-					/* ----------------------------------------------------------------------------------------------------
-					Links
-					---------------------------------------------------------------------------------------------------- */
-					
-					a {
+					& when (@heading-h6-text-inverse-link-enabled) {
 						
-						color: @heading-h6-text-inverse-link-text-color;
-						text-decoration: @heading-h6-text-inverse-link-text-decoration;
+						/* ----------------------------------------------------------------------------------------------------
+						Links
+						---------------------------------------------------------------------------------------------------- */
 						
-						&:hover {
+						a {
 							
-							color: @heading-h6-text-inverse-link-hover-text-color;
-							text-decoration: @heading-h6-text-inverse-link-hover-text-decoration;
+							color: @heading-h6-text-inverse-link-text-color;
+							text-decoration: @heading-h6-text-inverse-link-text-decoration;
 							
-						}
-						
-						&:active {
+							&:hover {
+								
+								color: @heading-h6-text-inverse-link-hover-text-color;
+								text-decoration: @heading-h6-text-inverse-link-hover-text-decoration;
+								
+							}
 							
-							color: @heading-h6-text-inverse-link-active-text-color;
-							text-decoration: @heading-h6-text-inverse-link-active-text-decoration;
+							&:active {
+								
+								color: @heading-h6-text-inverse-link-active-text-color;
+								text-decoration: @heading-h6-text-inverse-link-active-text-decoration;
+								
+							}
 							
-						}
-						
-						&:disabled,
-						&.disabled {
-							
-							color: @heading-h6-text-inverse-link-active-text-color;
-							text-decoration: @heading-h6-text-inverse-link-active-text-decoration;
+							&:disabled {
+								
+								color: @heading-h6-text-inverse-link-active-text-color;
+								text-decoration: @heading-h6-text-inverse-link-active-text-decoration;
+								
+							}
 							
 						}
 						
@@ -3826,6 +3973,7 @@ base/typography.less
 						Emphasize Inverse
 						---------------------------------------------------------------------------------------------------- */
 						
+						strong,
 						.emphasize {
 							
 							color: @heading-h6-text-inverse-emphasize-color;
@@ -3833,34 +3981,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h6-text-inverse-emphasize-link-enabled) {	
 								
-								color: @heading-h6-text-inverse-emphasize-link-text-color;
-								text-decoration: @heading-h6-text-inverse-emphasize-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h6-text-inverse-emphasize-link-hover-text-color;
-									text-decoration: @heading-h6-text-inverse-emphasize-link-hover-text-decoration;
+									color: @heading-h6-text-inverse-emphasize-link-text-color;
+									text-decoration: @heading-h6-text-inverse-emphasize-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h6-text-inverse-emphasize-link-hover-text-color;
+										text-decoration: @heading-h6-text-inverse-emphasize-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h6-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h6-text-inverse-emphasize-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h6-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h6-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h6-text-inverse-emphasize-link-active-text-color;
-									text-decoration: @heading-h6-text-inverse-emphasize-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h6-text-inverse-emphasize-link-active-text-color;
+										text-decoration: @heading-h6-text-inverse-emphasize-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -3872,7 +4023,7 @@ base/typography.less
 					
 					
 					
-					& when (@heading-h6-text-inverse-mute-enabled) {				
+					& when (@heading-h6-text-inverse-mute-enabled) {
 						
 						/* ----------------------------------------------------------------------------------------------------
 						Mute Inverse
@@ -3885,34 +4036,37 @@ base/typography.less
 							
 							
 							
-							/* ----------------------------------------------------------------------------------------------------
-							Links
-							---------------------------------------------------------------------------------------------------- */
-							
-							a {
+							& when (@heading-h6-text-inverse-mute-link-enabled) {
 								
-								color: @heading-h6-text-inverse-mute-link-text-color;
-								text-decoration: @heading-h6-text-inverse-mute-link-text-decoration;
+								/* ----------------------------------------------------------------------------------------------------
+								Links
+								---------------------------------------------------------------------------------------------------- */
 								
-								&:hover {
+								a {
 									
-									color: @heading-h6-text-inverse-mute-link-hover-text-color;
-									text-decoration: @heading-h6-text-inverse-mute-link-hover-text-decoration;
+									color: @heading-h6-text-inverse-mute-link-text-color;
+									text-decoration: @heading-h6-text-inverse-mute-link-text-decoration;
 									
-								}
-								
-								&:active {
+									&:hover {
+										
+										color: @heading-h6-text-inverse-mute-link-hover-text-color;
+										text-decoration: @heading-h6-text-inverse-mute-link-hover-text-decoration;
+										
+									}
 									
-									color: @heading-h6-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h6-text-inverse-mute-link-active-text-decoration;
+									&:active {
+										
+										color: @heading-h6-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h6-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
-								}
-								
-								&:disabled,
-								&.disabled {
-									
-									color: @heading-h6-text-inverse-mute-link-active-text-color;
-									text-decoration: @heading-h6-text-inverse-mute-link-active-text-decoration;
+									&:disabled {
+										
+										color: @heading-h6-text-inverse-mute-link-active-text-color;
+										text-decoration: @heading-h6-text-inverse-mute-link-active-text-decoration;
+										
+									}
 									
 								}
 								
@@ -4147,34 +4301,37 @@ base/typography.less
 				
 				
 				
-				/* ----------------------------------------------------------------------------------------------------
-				Links
-				---------------------------------------------------------------------------------------------------- */
-				
-				a {
+				& when (@body-text-inverse-link-enabled) {
 					
-					color: @body-text-inverse-link-text-color;
-					text-decoration: @body-text-inverse-link-text-decoration;
+					/* ----------------------------------------------------------------------------------------------------
+					Links
+					---------------------------------------------------------------------------------------------------- */
 					
-					&:hover {
+					a {
 						
-						color: @body-text-inverse-link-hover-text-color;
-						text-decoration: @body-text-inverse-link-hover-text-decoration;
+						color: @body-text-inverse-link-text-color;
+						text-decoration: @body-text-inverse-link-text-decoration;
 						
-					}
-					
-					&:active {
+						&:hover {
+							
+							color: @body-text-inverse-link-hover-text-color;
+							text-decoration: @body-text-inverse-link-hover-text-decoration;
+							
+						}
 						
-						color: @body-text-inverse-link-active-text-color;
-						text-decoration: @body-text-inverse-link-active-text-decoration;
+						&:active {
+							
+							color: @body-text-inverse-link-active-text-color;
+							text-decoration: @body-text-inverse-link-active-text-decoration;
+							
+						}
 						
-					}
-					
-					&:disabled,
-					&.disabled {
-						
-						color: @body-text-inverse-link-active-text-color;
-						text-decoration: @body-text-inverse-link-active-text-decoration;
+						&:disabled {
+							
+							color: @body-text-inverse-link-active-text-color;
+							text-decoration: @body-text-inverse-link-active-text-decoration;
+							
+						}
 						
 					}
 					
@@ -4188,6 +4345,7 @@ base/typography.less
 					Emphasize Inverse
 					---------------------------------------------------------------------------------------------------- */
 					
+					strong,
 					.emphasize {
 						
 						color: @body-text-inverse-emphasize-color;
@@ -4195,34 +4353,37 @@ base/typography.less
 						
 						
 						
-						/* ----------------------------------------------------------------------------------------------------
-						Links
-						---------------------------------------------------------------------------------------------------- */
-						
-						a {
+						& when (@body-text-inverse-emphasize-link-enabled) {
 							
-							color: @body-text-inverse-emphasize-link-text-color;
-							text-decoration: @body-text-inverse-emphasize-link-text-decoration;
+							/* ----------------------------------------------------------------------------------------------------
+							Links
+							---------------------------------------------------------------------------------------------------- */
 							
-							&:hover {
+							a {
 								
-								color: @body-text-inverse-emphasize-link-hover-text-color;
-								text-decoration: @body-text-inverse-emphasize-link-hover-text-decoration;
+								color: @body-text-inverse-emphasize-link-text-color;
+								text-decoration: @body-text-inverse-emphasize-link-text-decoration;
 								
-							}
-							
-							&:active {
+								&:hover {
+									
+									color: @body-text-inverse-emphasize-link-hover-text-color;
+									text-decoration: @body-text-inverse-emphasize-link-hover-text-decoration;
+									
+								}
 								
-								color: @body-text-inverse-emphasize-link-active-text-color;
-								text-decoration: @body-text-inverse-emphasize-link-active-text-decoration;
+								&:active {
+									
+									color: @body-text-inverse-emphasize-link-active-text-color;
+									text-decoration: @body-text-inverse-emphasize-link-active-text-decoration;
+									
+								}
 								
-							}
-							
-							&:disabled,
-							&.disabled {
-								
-								color: @body-text-inverse-emphasize-link-active-text-color;
-								text-decoration: @body-text-inverse-emphasize-link-active-text-decoration;
+								&:disabled {
+									
+									color: @body-text-inverse-emphasize-link-active-text-color;
+									text-decoration: @body-text-inverse-emphasize-link-active-text-decoration;
+									
+								}
 								
 							}
 							
@@ -4231,6 +4392,8 @@ base/typography.less
 					}
 					
 				}
+				
+				
 				
 				& when (@body-text-inverse-mute-enabled) {
 					
@@ -4245,34 +4408,37 @@ base/typography.less
 						
 						
 						
-						/* ----------------------------------------------------------------------------------------------------
-						Links
-						---------------------------------------------------------------------------------------------------- */
-						
-						a {
+						& when (@body-text-inverse-mute-link-enabled) {
 							
-							color: @body-text-inverse-mute-link-text-color;
-							text-decoration: @body-text-inverse-mute-link-text-decoration;
+							/* ----------------------------------------------------------------------------------------------------
+							Links
+							---------------------------------------------------------------------------------------------------- */
 							
-							&:hover {
+							a {
 								
-								color: @body-text-inverse-mute-link-hover-text-color;
-								text-decoration: @body-text-inverse-mute-link-hover-text-decoration;
+								color: @body-text-inverse-mute-link-text-color;
+								text-decoration: @body-text-inverse-mute-link-text-decoration;
 								
-							}
-							
-							&:active {
+								&:hover {
+									
+									color: @body-text-inverse-mute-link-hover-text-color;
+									text-decoration: @body-text-inverse-mute-link-hover-text-decoration;
+									
+								}
 								
-								color: @body-text-inverse-mute-link-active-text-color;
-								text-decoration: @body-text-inverse-mute-link-active-text-decoration;
+								&:active {
+									
+									color: @body-text-inverse-mute-link-active-text-color;
+									text-decoration: @body-text-inverse-mute-link-active-text-decoration;
+									
+								}
 								
-							}
-							
-							&:disabled,
-							&.disabled {
-								
-								color: @body-text-inverse-mute-link-active-text-color;
-								text-decoration: @body-text-inverse-mute-link-active-text-decoration;
+								&:disabled {
+									
+									color: @body-text-inverse-mute-link-active-text-color;
+									text-decoration: @body-text-inverse-mute-link-active-text-decoration;
+									
+								}
 								
 							}
 							
@@ -4556,8 +4722,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-mini;
 						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-mini;
@@ -4574,8 +4739,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-mini;
 						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-mini;
@@ -4669,8 +4833,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @small-text-emphasize-font-size * @small-text-font-size-scale-screen-mini;
 						line-height: @small-text-emphasize-line-height * @small-text-line-height-scale-screen-mini;
@@ -4687,8 +4850,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @small-text-mute-font-size * @small-text-font-size-scale-screen-mini;
 						line-height: @small-text-mute-line-height * @small-text-line-height-scale-screen-mini;
@@ -4782,8 +4944,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @lead-text-emphasize-font-size * @lead-text-font-size-scale-screen-mini;
 						line-height: @lead-text-emphasize-line-height * @lead-text-line-height-scale-screen-mini;
@@ -4800,8 +4961,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @lead-text-mute-font-size * @lead-text-font-size-scale-screen-mini;
 						line-height: @lead-text-mute-line-height * @lead-text-line-height-scale-screen-mini;
@@ -4896,8 +5056,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h1-text-emphasize-font-size * @heading-h1-text-font-size-scale-screen-mini;
 						line-height: @heading-h1-text-emphasize-line-height * @heading-h1-text-line-height-scale-screen-mini;
@@ -4914,8 +5073,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h1-text-mute-font-size * @heading-h1-text-font-size-scale-screen-mini;
 						line-height: @heading-h1-text-mute-line-height * @heading-h1-text-line-height-scale-screen-mini;
@@ -5010,8 +5168,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h2-text-emphasize-font-size * @heading-h2-text-font-size-scale-screen-mini;
 						line-height: @heading-h2-text-emphasize-line-height * @heading-h2-text-line-height-scale-screen-mini;
@@ -5028,8 +5185,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h2-text-mute-font-size * @heading-h2-text-font-size-scale-screen-mini;
 						line-height: @heading-h2-text-mute-line-height * @heading-h2-text-line-height-scale-screen-mini;
@@ -5124,8 +5280,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h3-text-emphasize-font-size * @heading-h3-text-font-size-scale-screen-mini;
 						line-height: @heading-h3-text-emphasize-line-height * @heading-h3-text-line-height-scale-screen-mini;
@@ -5142,8 +5297,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h3-text-mute-font-size * @heading-h3-text-font-size-scale-screen-mini;
 						line-height: @heading-h3-text-mute-line-height * @heading-h3-text-line-height-scale-screen-mini;
@@ -5238,8 +5392,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h4-text-emphasize-font-size * @heading-h4-text-font-size-scale-screen-mini;
 						line-height: @heading-h4-text-emphasize-line-height * @heading-h4-text-line-height-scale-screen-mini;
@@ -5256,8 +5409,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h4-text-mute-font-size * @heading-h4-text-font-size-scale-screen-mini;
 						line-height: @heading-h4-text-mute-line-height * @heading-h4-text-line-height-scale-screen-mini;
@@ -5352,8 +5504,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h5-text-emphasize-font-size * @heading-h5-text-font-size-scale-screen-mini;
 						line-height: @heading-h5-text-emphasize-line-height * @heading-h5-text-line-height-scale-screen-mini;
@@ -5370,8 +5521,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h5-text-mute-font-size * @heading-h5-text-font-size-scale-screen-mini;
 						line-height: @heading-h5-text-mute-line-height * @heading-h5-text-line-height-scale-screen-mini;
@@ -5466,8 +5616,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h6-text-emphasize-font-size * @heading-h6-text-font-size-scale-screen-mini;
 						line-height: @heading-h6-text-emphasize-line-height * @heading-h6-text-line-height-scale-screen-mini;
@@ -5484,8 +5633,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h6-text-mute-font-size * @heading-h6-text-font-size-scale-screen-mini;
 						line-height: @heading-h6-text-mute-line-height * @heading-h6-text-line-height-scale-screen-mini;
@@ -5818,8 +5966,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-small;
 						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-small;
@@ -5836,8 +5983,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-small;
 						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-small;
@@ -5931,8 +6077,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @small-text-emphasize-font-size * @small-text-font-size-scale-screen-small;
 						line-height: @small-text-emphasize-line-height * @small-text-line-height-scale-screen-small;
@@ -5949,8 +6094,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @small-text-mute-font-size * @small-text-font-size-scale-screen-small;
 						line-height: @small-text-mute-line-height * @small-text-line-height-scale-screen-small;
@@ -6044,8 +6188,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @lead-text-emphasize-font-size * @lead-text-font-size-scale-screen-small;
 						line-height: @lead-text-emphasize-line-height * @lead-text-line-height-scale-screen-small;
@@ -6062,8 +6205,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @lead-text-mute-font-size * @lead-text-font-size-scale-screen-small;
 						line-height: @lead-text-mute-line-height * @lead-text-line-height-scale-screen-small;
@@ -6158,8 +6300,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h1-text-emphasize-font-size * @heading-h1-text-font-size-scale-screen-small;
 						line-height: @heading-h1-text-emphasize-line-height * @heading-h1-text-line-height-scale-screen-small;
@@ -6176,8 +6317,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h1-text-mute-font-size * @heading-h1-text-font-size-scale-screen-small;
 						line-height: @heading-h1-text-mute-line-height * @heading-h1-text-line-height-scale-screen-small;
@@ -6272,8 +6412,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h2-text-emphasize-font-size * @heading-h2-text-font-size-scale-screen-small;
 						line-height: @heading-h2-text-emphasize-line-height * @heading-h2-text-line-height-scale-screen-small;
@@ -6290,8 +6429,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h2-text-mute-font-size * @heading-h2-text-font-size-scale-screen-small;
 						line-height: @heading-h2-text-mute-line-height * @heading-h2-text-line-height-scale-screen-small;
@@ -6386,8 +6524,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h3-text-emphasize-font-size * @heading-h3-text-font-size-scale-screen-small;
 						line-height: @heading-h3-text-emphasize-line-height * @heading-h3-text-line-height-scale-screen-small;
@@ -6404,8 +6541,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h3-text-mute-font-size * @heading-h3-text-font-size-scale-screen-small;
 						line-height: @heading-h3-text-mute-line-height * @heading-h3-text-line-height-scale-screen-small;
@@ -6500,8 +6636,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h4-text-emphasize-font-size * @heading-h4-text-font-size-scale-screen-small;
 						line-height: @heading-h4-text-emphasize-line-height * @heading-h4-text-line-height-scale-screen-small;
@@ -6518,8 +6653,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h4-text-mute-font-size * @heading-h4-text-font-size-scale-screen-small;
 						line-height: @heading-h4-text-mute-line-height * @heading-h4-text-line-height-scale-screen-small;
@@ -6614,8 +6748,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h5-text-emphasize-font-size * @heading-h5-text-font-size-scale-screen-small;
 						line-height: @heading-h5-text-emphasize-line-height * @heading-h5-text-line-height-scale-screen-small;
@@ -6632,8 +6765,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h5-text-mute-font-size * @heading-h5-text-font-size-scale-screen-small;
 						line-height: @heading-h5-text-mute-line-height * @heading-h5-text-line-height-scale-screen-small;
@@ -6728,8 +6860,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h6-text-emphasize-font-size * @heading-h6-text-font-size-scale-screen-small;
 						line-height: @heading-h6-text-emphasize-line-height * @heading-h6-text-line-height-scale-screen-small;
@@ -6746,8 +6877,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h6-text-mute-font-size * @heading-h6-text-font-size-scale-screen-small;
 						line-height: @heading-h6-text-mute-line-height * @heading-h6-text-line-height-scale-screen-small;
@@ -7080,8 +7210,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-medium;
 						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-medium;
@@ -7098,8 +7227,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-medium;
 						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-medium;
@@ -7193,8 +7321,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @small-text-emphasize-font-size * @small-text-font-size-scale-screen-medium;
 						line-height: @small-text-emphasize-line-height * @small-text-line-height-scale-screen-medium;
@@ -7211,8 +7338,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @small-text-mute-font-size * @small-text-font-size-scale-screen-medium;
 						line-height: @small-text-mute-line-height * @small-text-line-height-scale-screen-medium;
@@ -7306,8 +7432,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @lead-text-emphasize-font-size * @lead-text-font-size-scale-screen-medium;
 						line-height: @lead-text-emphasize-line-height * @lead-text-line-height-scale-screen-medium;
@@ -7324,8 +7449,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @lead-text-mute-font-size * @lead-text-font-size-scale-screen-medium;
 						line-height: @lead-text-mute-line-height * @lead-text-line-height-scale-screen-medium;
@@ -7420,8 +7544,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h1-text-emphasize-font-size * @heading-h1-text-font-size-scale-screen-medium;
 						line-height: @heading-h1-text-emphasize-line-height * @heading-h1-text-line-height-scale-screen-medium;
@@ -7438,8 +7561,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h1-text-mute-font-size * @heading-h1-text-font-size-scale-screen-medium;
 						line-height: @heading-h1-text-mute-line-height * @heading-h1-text-line-height-scale-screen-medium;
@@ -7534,8 +7656,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h2-text-emphasize-font-size * @heading-h2-text-font-size-scale-screen-medium;
 						line-height: @heading-h2-text-emphasize-line-height * @heading-h2-text-line-height-scale-screen-medium;
@@ -7552,8 +7673,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h2-text-mute-font-size * @heading-h2-text-font-size-scale-screen-medium;
 						line-height: @heading-h2-text-mute-line-height * @heading-h2-text-line-height-scale-screen-medium;
@@ -7648,8 +7768,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h3-text-emphasize-font-size * @heading-h3-text-font-size-scale-screen-medium;
 						line-height: @heading-h3-text-emphasize-line-height * @heading-h3-text-line-height-scale-screen-medium;
@@ -7666,8 +7785,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h3-text-mute-font-size * @heading-h3-text-font-size-scale-screen-medium;
 						line-height: @heading-h3-text-mute-line-height * @heading-h3-text-line-height-scale-screen-medium;
@@ -7762,8 +7880,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h4-text-emphasize-font-size * @heading-h4-text-font-size-scale-screen-medium;
 						line-height: @heading-h4-text-emphasize-line-height * @heading-h4-text-line-height-scale-screen-medium;
@@ -7780,8 +7897,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h4-text-mute-font-size * @heading-h4-text-font-size-scale-screen-medium;
 						line-height: @heading-h4-text-mute-line-height * @heading-h4-text-line-height-scale-screen-medium;
@@ -7876,8 +7992,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h5-text-emphasize-font-size * @heading-h5-text-font-size-scale-screen-medium;
 						line-height: @heading-h5-text-emphasize-line-height * @heading-h5-text-line-height-scale-screen-medium;
@@ -7894,8 +8009,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h5-text-mute-font-size * @heading-h5-text-font-size-scale-screen-medium;
 						line-height: @heading-h5-text-mute-line-height * @heading-h5-text-line-height-scale-screen-medium;
@@ -7990,8 +8104,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h6-text-emphasize-font-size * @heading-h6-text-font-size-scale-screen-medium;
 						line-height: @heading-h6-text-emphasize-line-height * @heading-h6-text-line-height-scale-screen-medium;
@@ -8008,8 +8121,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h6-text-mute-font-size * @heading-h6-text-font-size-scale-screen-medium;
 						line-height: @heading-h6-text-mute-line-height * @heading-h6-text-line-height-scale-screen-medium;
@@ -8342,8 +8454,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @body-text-emphasize-font-size * @body-text-font-size-scale-screen-large;
 						line-height: @body-text-emphasize-line-height * @body-text-line-height-scale-screen-large;
@@ -8360,8 +8471,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @body-text-mute-font-size * @body-text-font-size-scale-screen-large;
 						line-height: @body-text-mute-line-height * @body-text-line-height-scale-screen-large;
@@ -8455,8 +8565,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @small-text-emphasize-font-size * @small-text-font-size-scale-screen-large;
 						line-height: @small-text-emphasize-line-height * @small-text-line-height-scale-screen-large;
@@ -8473,8 +8582,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @small-text-mute-font-size * @small-text-font-size-scale-screen-large;
 						line-height: @small-text-mute-line-height * @small-text-line-height-scale-screen-large;
@@ -8568,8 +8676,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @lead-text-emphasize-font-size * @lead-text-font-size-scale-screen-large;
 						line-height: @lead-text-emphasize-line-height * @lead-text-line-height-scale-screen-large;
@@ -8586,8 +8693,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @lead-text-mute-font-size * @lead-text-font-size-scale-screen-large;
 						line-height: @lead-text-mute-line-height * @lead-text-line-height-scale-screen-large;
@@ -8682,8 +8788,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h1-text-emphasize-font-size * @heading-h1-text-font-size-scale-screen-large;
 						line-height: @heading-h1-text-emphasize-line-height * @heading-h1-text-line-height-scale-screen-large;
@@ -8700,8 +8805,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h1-text-mute-font-size * @heading-h1-text-font-size-scale-screen-large;
 						line-height: @heading-h1-text-mute-line-height * @heading-h1-text-line-height-scale-screen-large;
@@ -8796,8 +8900,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h2-text-emphasize-font-size * @heading-h2-text-font-size-scale-screen-large;
 						line-height: @heading-h2-text-emphasize-line-height * @heading-h2-text-line-height-scale-screen-large;
@@ -8814,8 +8917,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h2-text-mute-font-size * @heading-h2-text-font-size-scale-screen-large;
 						line-height: @heading-h2-text-mute-line-height * @heading-h2-text-line-height-scale-screen-large;
@@ -8910,8 +9012,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h3-text-emphasize-font-size * @heading-h3-text-font-size-scale-screen-large;
 						line-height: @heading-h3-text-emphasize-line-height * @heading-h3-text-line-height-scale-screen-large;
@@ -8928,8 +9029,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h3-text-mute-font-size * @heading-h3-text-font-size-scale-screen-large;
 						line-height: @heading-h3-text-mute-line-height * @heading-h3-text-line-height-scale-screen-large;
@@ -9024,8 +9124,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h4-text-emphasize-font-size * @heading-h4-text-font-size-scale-screen-large;
 						line-height: @heading-h4-text-emphasize-line-height * @heading-h4-text-line-height-scale-screen-large;
@@ -9042,8 +9141,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h4-text-mute-font-size * @heading-h4-text-font-size-scale-screen-large;
 						line-height: @heading-h4-text-mute-line-height * @heading-h4-text-line-height-scale-screen-large;
@@ -9138,8 +9236,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h5-text-emphasize-font-size * @heading-h5-text-font-size-scale-screen-large;
 						line-height: @heading-h5-text-emphasize-line-height * @heading-h5-text-line-height-scale-screen-large;
@@ -9156,8 +9253,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h5-text-mute-font-size * @heading-h5-text-font-size-scale-screen-large;
 						line-height: @heading-h5-text-mute-line-height * @heading-h5-text-line-height-scale-screen-large;
@@ -9252,8 +9348,7 @@ base/typography.less
 					---------------------------------------------------------------------------------------------------- */
 					
 					strong,
-					.emphasize,
-					&.emphasize {
+					.emphasize {
 						
 						font-size: @heading-h6-text-emphasize-font-size * @heading-h6-text-font-size-scale-screen-large;
 						line-height: @heading-h6-text-emphasize-line-height * @heading-h6-text-line-height-scale-screen-large;
@@ -9270,8 +9365,7 @@ base/typography.less
 					Mute
 					---------------------------------------------------------------------------------------------------- */
 					
-					.mute,
-					&.mute {
+					.mute {
 						
 						font-size: @heading-h6-text-mute-font-size * @heading-h6-text-font-size-scale-screen-large;
 						line-height: @heading-h6-text-mute-line-height * @heading-h6-text-line-height-scale-screen-large;
