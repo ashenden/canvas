@@ -281,6 +281,8 @@ Option (Default) Styling
 Option (Default) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-option-default-link-enabled:																false;
+
 @form-option-default-link-text-color:															~`color_lightness("@{blue}", 0)`;
 @form-option-default-link-text-decoration:														none;
 
@@ -311,6 +313,8 @@ Option (Default) Emphasize
 @form-option-default-emphasize-shadow:															@form-option-default-shadow;
 
 // Option Emphasize Links
+
+@form-option-default-emphasize-link-enabled:													false;
 
 @form-option-default-emphasize-link-text-color:													@form-option-default-link-text-color;
 @form-option-default-emphasize-link-text-decoration:											@form-option-default-link-text-decoration;
@@ -343,6 +347,8 @@ Option (Default) Mute
 
 // Option Mute Links
 
+@form-option-default-mute-link-enabled:															false;
+
 @form-option-default-mute-link-text-color:														@form-option-default-link-text-color;
 @form-option-default-mute-link-text-decoration:													@form-option-default-link-text-decoration;
 
@@ -370,6 +376,8 @@ Option Inverse
 @form-option-default-inverse-shadow:															@form-option-default-shadow;
 
 // Option Inverse Links
+
+@form-option-default-inverse-link-enabled:														false;
 
 @form-option-default-inverse-link-text-color:													@form-option-default-link-text-color;
 @form-option-default-inverse-link-text-decoration:												@form-option-default-link-text-decoration;
@@ -399,6 +407,8 @@ Option Inverse Emphasize
 
 // Option Inverse Emphasize Links
 
+@form-option-default-inverse-emphasize-link-enabled:											false;
+
 @form-option-default-inverse-emphasize-link-text-color:											@form-option-default-inverse-link-text-color;
 @form-option-default-inverse-emphasize-link-text-decoration:									@form-option-default-inverse-link-text-decoration;
 
@@ -426,6 +436,8 @@ Option Inverse mute
 @form-option-default-inverse-mute-shadow:														@form-option-default-inverse-shadow;
 
 // Option Inverse Mute Links
+
+@form-option-default-inverse-mute-link-enabled:													false;
 
 @form-option-default-inverse-mute-link-text-color:												@form-option-default-inverse-link-text-color;
 @form-option-default-inverse-mute-link-text-decoration:											@form-option-default-inverse-link-text-decoration;
@@ -471,6 +483,8 @@ Option (Success) Styling
 Option (Success) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-option-success-link-text-enabled:															false;
+
 @form-option-success-link-text-color:															~`color_lightness("@{green}", 0)`;
 @form-option-success-link-text-decoration:														none;
 
@@ -501,6 +515,8 @@ Option (Success) Emphasize
 @form-option-success-emphasize-shadow:															@form-option-success-shadow;
 
 // Option Emphasize Links
+
+@form-option-success-emphasize-link-enabled:													false;
 
 @form-option-success-emphasize-link-text-color:													@form-option-success-link-text-color;
 @form-option-success-emphasize-link-text-decoration:											@form-option-success-link-text-decoration;
@@ -533,6 +549,8 @@ Option (Success) Mute
 
 // Option Mute Links
 
+@form-option-success-mute-link-enabled:															false;
+
 @form-option-success-mute-link-text-color:														@form-option-success-link-text-color;
 @form-option-success-mute-link-text-decoration:													@form-option-success-link-text-decoration;
 
@@ -560,6 +578,8 @@ Option (Success) Inverse
 @form-option-success-inverse-shadow:															@form-option-success-shadow;
 
 // Option (Success) Inverse Links
+
+@form-option-success-inverse-link-enabled:														false;
 
 @form-option-success-inverse-link-text-color:													@form-option-success-link-text-color;
 @form-option-success-inverse-link-text-decoration:												@form-option-success-link-text-decoration;
@@ -589,6 +609,8 @@ Option (Success) Inverse Emphasize
 
 // Option (Success) Inverse Emphasize Links
 
+@form-option-success-inverse-emphasize-link-enabled:											false;
+
 @form-option-success-inverse-emphasize-link-text-color:											@form-option-success-inverse-link-text-color;
 @form-option-success-inverse-emphasize-link-text-decoration:									@form-option-success-inverse-link-text-decoration;
 
@@ -616,6 +638,8 @@ Option (Success) Inverse Mute
 @form-option-success-inverse-mute-shadow:														@form-option-success-inverse-shadow;
 
 // Option (Success) Inverse Mute Links
+
+@form-option-success-inverse-mute-link-enabled:													false;
 
 @form-option-success-inverse-mute-link-text-color:												@form-option-success-inverse-link-text-color;
 @form-option-success-inverse-mute-link-text-decoration:											@form-option-success-inverse-link-text-decoration;
@@ -661,6 +685,8 @@ Option (Error) Styling
 Option (Error) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-option-error-link-enabled:																false;
+
 @form-option-error-link-text-color:																~`color_lightness("@{red}", 0)`;
 @form-option-error-link-text-decoration:														none;
 
@@ -691,6 +717,8 @@ Option (Error) Emphasize
 @form-option-error-emphasize-shadow:															@form-option-error-shadow;
 
 // Option Emphasize Links
+
+@form-option-error-emphasize-link-enabled:														false;
 
 @form-option-error-emphasize-link-text-color:													@form-option-error-link-text-color;
 @form-option-error-emphasize-link-text-decoration:												@form-option-error-link-text-decoration;
@@ -723,6 +751,8 @@ Option (Error) Mute
 
 // Option Mute Links
 
+@form-option-error-mute-link-enabled:															false;
+
 @form-option-error-mute-link-text-color:														@form-option-error-link-text-color;
 @form-option-error-mute-link-text-decoration:													@form-option-error-link-text-decoration;
 
@@ -750,6 +780,8 @@ Option (Error) Inverse
 @form-option-error-inverse-shadow:																@form-option-error-shadow;
 
 // Option (Error) Inverse Links
+
+@form-option-error-inverse-link-enabled:														false;
 
 @form-option-error-inverse-link-text-color:														@form-option-error-link-text-color;
 @form-option-error-inverse-link-text-decoration:												@form-option-error-link-text-decoration;
@@ -779,6 +811,8 @@ Option (Error) Inverse Emphasize
 
 // Option (Error) Inverse Emphasize Links
 
+@form-option-error-inverse-emphasize-link-enabled:												false;
+
 @form-option-error-inverse-emphasize-link-text-color:											@form-option-error-inverse-link-text-color;
 @form-option-error-inverse-emphasize-link-text-decoration:										@form-option-error-inverse-link-text-decoration;
 
@@ -806,6 +840,8 @@ Option (Error) Inverse mute
 @form-option-error-inverse-mute-shadow:															@form-option-error-inverse-shadow;
 
 // Option (Error) Inverse Mute Links
+
+@form-option-error-inverse-mute-link-enabled:													false;
 
 @form-option-error-inverse-mute-link-text-color:												@form-option-error-inverse-link-text-color;
 @form-option-error-inverse-mute-link-text-decoration:											@form-option-error-inverse-link-text-decoration;
@@ -952,6 +988,8 @@ Label (Default) Styling
 Label (Default) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-label-default-link-enabled:																false;
+
 @form-label-default-link-text-color:															~`color_lightness("@{blue}", 0)`;
 @form-label-default-link-text-decoration:														none;
 
@@ -982,6 +1020,8 @@ Label (Default) Emphasize
 @form-label-default-emphasize-shadow:															@form-label-default-shadow;
 
 // Label (Default) Emphasize Links
+
+@form-label-default-emphasize-link-enabled:														false;
 
 @form-label-default-emphasize-link-text-color:													@form-label-default-link-text-color;
 @form-label-default-emphasize-link-text-decoration:												@form-label-default-link-text-decoration;
@@ -1014,6 +1054,8 @@ Label (Default) Mute
 
 // Label (Default) Mute Links
 
+@form-label-default-mute-link-enabled:															false;
+
 @form-label-default-mute-link-text-color:														@form-label-default-link-text-color;
 @form-label-default-mute-link-text-decoration:													@form-label-default-link-text-decoration;
 
@@ -1041,6 +1083,8 @@ Label (Default) Inverse
 @form-label-default-inverse-shadow:																@form-label-default-shadow;
 
 // Label (Default) Inverse Links
+
+@form-label-default-inverse-link-enabled:														false;
 
 @form-label-default-inverse-link-text-color:													@form-label-default-link-text-color;
 @form-label-default-inverse-link-text-decoration:												@form-label-default-link-text-decoration;
@@ -1070,6 +1114,8 @@ Label (Default) Inverse Emphasize
 
 // Label (Default) Inverse Emphasize Links
 
+@form-label-default-inverse-emphasize-link-enabled:												false;
+
 @form-label-default-inverse-emphasize-link-text-color:											@form-label-default-inverse-link-text-color;
 @form-label-default-inverse-emphasize-link-text-decoration:										@form-label-default-inverse-link-text-decoration;
 
@@ -1097,6 +1143,8 @@ Label (Default) Inverse Mute
 @form-label-default-inverse-mute-shadow:														@form-label-default-inverse-shadow;
 
 // Label (Default) Inverse Mute Links
+
+@form-label-default-inverse-mute-link-enabled:													false;
 
 @form-label-default-inverse-mute-link-text-color:												@form-label-default-inverse-link-text-color;
 @form-label-default-inverse-mute-link-text-decoration:											@form-label-default-inverse-link-text-decoration;
@@ -1146,6 +1194,8 @@ Label (Success) Styling
 Label (Success) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-label-success-link-enabled:																false;
+
 @form-label-success-link-text-color:															~`color_lightness("@{green}", 0)`;
 @form-label-success-link-text-decoration:														none;
 
@@ -1176,6 +1226,8 @@ Label (Success) Emphasize
 @form-label-success-emphasize-shadow:															@form-label-success-shadow;
 
 // Label (Success) Emphasize Links
+
+@form-label-success-emphasize-link-enabled:														false;
 
 @form-label-success-emphasize-link-text-color:													@form-label-success-link-text-color;
 @form-label-success-emphasize-link-text-decoration:												@form-label-success-link-text-decoration;
@@ -1208,6 +1260,8 @@ Label (Success) Mute
 
 // Label (Success) Mute Links
 
+@form-label-success-mute-link-enabled:															false;
+
 @form-label-success-mute-link-text-color:														@form-label-success-link-text-color;
 @form-label-success-mute-link-text-decoration:													@form-label-success-link-text-decoration;
 
@@ -1235,6 +1289,8 @@ Label (Success) Inverse
 @form-label-success-inverse-shadow:																@form-label-success-shadow;
 
 // Label (Success) Inverse Links
+
+@form-label-success-inverse-link-enabled:														false;
 
 @form-label-success-inverse-link-text-color:													@form-label-success-link-text-color;
 @form-label-success-inverse-link-text-decoration:												@form-label-success-link-text-decoration;
@@ -1264,6 +1320,8 @@ Label (Success) Inverse Emphasize
 
 // Label (Success) Inverse Emphasize Links
 
+@form-label-success-inverse-emphasize-link-enabled:												false;
+
 @form-label-success-inverse-emphasize-link-text-color:											@form-label-success-inverse-link-text-color;
 @form-label-success-inverse-emphasize-link-text-decoration:										@form-label-success-inverse-link-text-decoration;
 
@@ -1291,6 +1349,8 @@ Label (Success) Inverse Mute
 @form-label-success-inverse-mute-shadow:														@form-label-success-inverse-shadow;
 
 // Label (Success) Inverse Mute Links
+
+@form-label-success-inverse-mute-link-enabled:													false;
 
 @form-label-success-inverse-mute-link-text-color:												@form-label-success-inverse-link-text-color;
 @form-label-success-inverse-mute-link-text-decoration:											@form-label-success-inverse-link-text-decoration;
@@ -1340,6 +1400,8 @@ Label (Error) Styling
 Label (Error) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-label-error-link-text-enabled:															false;
+
 @form-label-error-link-text-color:																~`color_lightness("@{red}", 0)`;
 @form-label-error-link-text-decoration:															none;
 
@@ -1370,6 +1432,8 @@ Label (Error) Emphasize
 @form-label-error-emphasize-shadow:																@form-label-error-shadow;
 
 // Label (Error) Emphasize Links
+
+@form-label-error-emphasize-link-enabled:														false;
 
 @form-label-error-emphasize-link-text-color:													@form-label-error-link-text-color;
 @form-label-error-emphasize-link-text-decoration:												@form-label-error-link-text-decoration;
@@ -1402,6 +1466,8 @@ Label (Error) Mute
 
 // Label (Error) Mute Links
 
+@form-label-error-mute-link-enabled:															false;
+
 @form-label-error-mute-link-text-color:															@form-label-error-link-text-color;
 @form-label-error-mute-link-text-decoration:													@form-label-error-link-text-decoration;
 
@@ -1429,6 +1495,8 @@ Label (Error) Inverse
 @form-label-error-inverse-shadow:																@form-label-error-shadow;
 
 // Label (Error) Inverse Links
+
+@form-label-error-inverse-link-enabled:															false;
 
 @form-label-error-inverse-link-text-color:														@form-label-error-link-text-color;
 @form-label-error-inverse-link-text-decoration:													@form-label-error-link-text-decoration;
@@ -1458,6 +1526,8 @@ Label (Error) Inverse Emphasize
 
 // Label (Error) Inverse Emphasize Links
 
+@form-label-error-inverse-emphasize-link-enabled:												false;
+
 @form-label-error-inverse-emphasize-link-text-color:											@form-label-error-inverse-link-text-color;
 @form-label-error-inverse-emphasize-link-text-decoration:										@form-label-error-inverse-link-text-decoration;
 
@@ -1485,6 +1555,8 @@ Label (Error) Inverse Mute
 @form-label-error-inverse-mute-shadow:															@form-label-error-inverse-shadow;
 
 // Label (Error) Inverse Mute Links
+
+@form-label-error-inverse-mute-link-enabled:													false;
 
 @form-label-error-inverse-mute-link-text-color:													@form-label-error-inverse-link-text-color;
 @form-label-error-inverse-mute-link-text-decoration:											@form-label-error-inverse-link-text-decoration;
@@ -1631,6 +1703,8 @@ Help Block (Default) Styling
 Help Block (Default) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-help-block-default-link-enabled:															false;
+
 @form-help-block-default-link-text-color:														~`color_lightness("@{blue}", 0)`;
 @form-help-block-default-link-text-decoration:													none;
 
@@ -1661,6 +1735,8 @@ Help Block (Default) Emphasize
 @form-help-block-default-emphasize-shadow:														@form-help-block-default-shadow;
 
 // Help Block (Default) Emphasize Links
+
+@form-help-block-default-emphasize-link-enabled:												false;
 
 @form-help-block-default-emphasize-link-text-color:												@form-help-block-default-link-text-color;
 @form-help-block-default-emphasize-link-text-decoration:										@form-help-block-default-link-text-decoration;
@@ -1693,6 +1769,8 @@ Help Block (Default) Mute
 
 // Help Block (Default) Mute Links
 
+@form-help-block-default-mute-link-enabled:														false;
+
 @form-help-block-default-mute-link-text-color:													@form-help-block-default-link-text-color;
 @form-help-block-default-mute-link-text-decoration:												@form-help-block-default-link-text-decoration;
 
@@ -1720,6 +1798,8 @@ Help Block (Default) Inverse
 @form-help-block-default-inverse-shadow:														@form-help-block-default-shadow;
 
 // Help Block (Default) Inverse Links
+
+@form-help-block-default-inverse-link-enabled:													false;
 
 @form-help-block-default-inverse-link-text-color:												@form-help-block-default-link-text-color;
 @form-help-block-default-inverse-link-text-decoration:											@form-help-block-default-link-text-decoration;
@@ -1749,6 +1829,8 @@ Help Block (Default) Inverse Emphasize
 
 // Help Block (Default) Inverse Emphasize Links
 
+@form-help-block-default-inverse-emphasize-link-enabled:										false;
+
 @form-help-block-default-inverse-emphasize-link-text-color:										@form-help-block-default-inverse-link-text-color;
 @form-help-block-default-inverse-emphasize-link-text-decoration:								@form-help-block-default-inverse-link-text-decoration;
 
@@ -1776,6 +1858,8 @@ Help Block (Default) Inverse Mute
 @form-help-block-default-inverse-mute-shadow:													@form-help-block-default-inverse-shadow;
 
 // Help Block (Default) Inverse Mute Links
+
+@form-help-block-default-inverse-mute-link-enabled:												false;
 
 @form-help-block-default-inverse-mute-link-text-color:											@form-help-block-default-inverse-link-text-color;
 @form-help-block-default-inverse-mute-link-text-decoration:										@form-help-block-default-inverse-link-text-decoration;
@@ -1825,6 +1909,8 @@ Help Block (Success) Styling
 Help Block (Success) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-help-block-success-link-enabled:															false;
+
 @form-help-block-success-link-text-color:														~`color_lightness("@{green}", 0)`;
 @form-help-block-success-link-text-decoration:													none;
 
@@ -1855,6 +1941,8 @@ Help Block (Success) Emphasize
 @form-help-block-success-emphasize-shadow:														@form-help-block-success-shadow;
 
 // Help Block (Success) Emphasize Links
+
+@form-help-block-success-emphasize-link-enabled:												false;
 
 @form-help-block-success-emphasize-link-text-color:												@form-help-block-success-link-text-color;
 @form-help-block-success-emphasize-link-text-decoration:										@form-help-block-success-link-text-decoration;
@@ -1887,6 +1975,8 @@ Help Block (Success) Mute
 
 // Help Block (Success) Mute Links
 
+@form-help-block-success-mute-link-enabled:														false;
+
 @form-help-block-success-mute-link-text-color:													@form-help-block-success-link-text-color;
 @form-help-block-success-mute-link-text-decoration:												@form-help-block-success-link-text-decoration;
 
@@ -1914,6 +2004,8 @@ Help Block (Success) Inverse
 @form-help-block-success-inverse-shadow:														@form-help-block-success-shadow;
 
 // Help Block (Success) Inverse Links
+
+@form-help-block-success-inverse-link-enabled:													false;
 
 @form-help-block-success-inverse-link-text-color:												@form-help-block-success-link-text-color;
 @form-help-block-success-inverse-link-text-decoration:											@form-help-block-success-link-text-decoration;
@@ -1943,6 +2035,8 @@ Help Block (Success) Inverse Emphasize
 
 // Help Block (Success) Inverse Emphasize Links
 
+@form-help-block-success-inverse-emphasize-link-enabled:										false;
+
 @form-help-block-success-inverse-emphasize-link-text-color:										@form-help-block-success-inverse-link-text-color;
 @form-help-block-success-inverse-emphasize-link-text-decoration:								@form-help-block-success-inverse-link-text-decoration;
 
@@ -1970,6 +2064,8 @@ Help Block (Success) Inverse Mute
 @form-help-block-success-inverse-mute-shadow:													@form-help-block-success-inverse-shadow;
 
 // Help Block (Success) Inverse Mute Links
+
+@form-help-block-success-inverse-mute-link-enabled:												false;
 
 @form-help-block-success-inverse-mute-link-text-color:											@form-help-block-success-inverse-link-text-color;
 @form-help-block-success-inverse-mute-link-text-decoration:										@form-help-block-success-inverse-link-text-decoration;
@@ -2019,6 +2115,8 @@ Help Block (Error) Styling
 Help Block (Error) Links
 ---------------------------------------------------------------------------------------------------- */
 
+@form-help-block-error-link-enabled:															false;
+
 @form-help-block-error-link-text-color:															~`color_lightness("@{red}", 0)`;
 @form-help-block-error-link-text-decoration:													none;
 
@@ -2049,6 +2147,8 @@ Help Block (Error) Emphasize
 @form-help-block-error-emphasize-shadow:														@form-help-block-error-shadow;
 
 // Help Block (Error) Emphasize Links
+
+@form-help-block-error-emphasize-link-enabled:													false;
 
 @form-help-block-error-emphasize-link-text-color:												@form-help-block-error-link-text-color;
 @form-help-block-error-emphasize-link-text-decoration:											@form-help-block-error-link-text-decoration;
@@ -2081,6 +2181,8 @@ Help Block (Error) Mute
 
 // Help Block (Error) Mute Links
 
+@form-help-block-error-mute-link-enabled:														false;
+
 @form-help-block-error-mute-link-text-color:													@form-help-block-error-link-text-color;
 @form-help-block-error-mute-link-text-decoration:												@form-help-block-error-link-text-decoration;
 
@@ -2108,6 +2210,8 @@ Help Block (Error) Inverse
 @form-help-block-error-inverse-shadow:															@form-help-block-error-shadow;
 
 // Help Block (Error) Inverse Links
+
+@form-help-block-error-inverse-link-enabled:													false;
 
 @form-help-block-error-inverse-link-text-color:													@form-help-block-error-link-text-color;
 @form-help-block-error-inverse-link-text-decoration:											@form-help-block-error-link-text-decoration;
@@ -2137,6 +2241,8 @@ Help Block (Error) Inverse Emphasize
 
 // Help Block (Error) Inverse Emphasize Links
 
+@form-help-block-error-inverse-emphasize-link-enabled:											false;
+
 @form-help-block-error-inverse-emphasize-link-text-color:										@form-help-block-error-inverse-link-text-color;
 @form-help-block-error-inverse-emphasize-link-text-decoration:									@form-help-block-error-inverse-link-text-decoration;
 
@@ -2164,6 +2270,8 @@ Help Block (Error) Inverse Mute
 @form-help-block-error-inverse-mute-shadow:														@form-help-block-error-inverse-shadow;
 
 // Help Block (Error) Inverse Mute Links
+
+@form-help-block-error-inverse-mute-link-enabled:												false;
 
 @form-help-block-error-inverse-mute-link-text-color:											@form-help-block-error-inverse-link-text-color;
 @form-help-block-error-inverse-mute-link-text-decoration:										@form-help-block-error-inverse-link-text-decoration;
