@@ -2596,7 +2596,7 @@ base/forms.less
 			
 			
 			
-		& when (@form-group-success-enabled) {
+		& when (@form-group-error-enabled) {
 			
 			/* ----------------------------------------------------------------------------------------------------
 			-------------------------------------------------------------------------------------------------------
@@ -2606,9 +2606,9 @@ base/forms.less
 			-------------------------------------------------------------------------------------------------------
 			---------------------------------------------------------------------------------------------------- */
 			
-			.form-group.form-group-Error {
+			.form-group.form-group-error {
 				
-				& when (@form-control-enabled) and (@form-control-success-enabled) {
+				& when (@form-control-enabled) and (@form-control-error-enabled) {
 					
 					/* ----------------------------------------------------------------------------------------------------
 					-------------------------------------------------------------------------------------------------------
@@ -2624,7 +2624,7 @@ base/forms.less
 						Form Control (Error) State: Normal
 						---------------------------------------------------------------------------------------------------- */
 						
-						.form-control-variant('success');
+						.form-control-variant('error');
 						
 						
 						
@@ -2646,7 +2646,7 @@ base/forms.less
 						
 						&:hover {
 							
-							.form-control-variant('success-hover');
+							.form-control-variant('error-hover');
 							
 						}
 						
@@ -2659,7 +2659,7 @@ base/forms.less
 						&:focus {
 							
 							outline: 0;
-							.form-control-variant('success-focus');
+							.form-control-variant('error-focus');
 							
 						}
 						
@@ -2675,8 +2675,8 @@ base/forms.less
 							outline: 0;
 							cursor: Error !important;
 							pointer-events: none;
-							.opacity(@form-control-success-disabled-opacity);
-							.form-control-variant('success-disabled');
+							.opacity(@form-control-error-disabled-opacity);
+							.form-control-variant('error-disabled');
 							
 						}
 						
@@ -2686,7 +2686,7 @@ base/forms.less
 						
 						
 						
-						& when (@form-control-success-inverse-enabled) {
+						& when (@form-control-error-inverse-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							-------------------------------------------------------------------------------------------------------
@@ -2702,7 +2702,7 @@ base/forms.less
 								Form Control (Error, Inverse) State: Normal
 								---------------------------------------------------------------------------------------------------- */
 								
-								.form-control-variant('success-inverse');
+								.form-control-variant('error-inverse');
 								
 								
 								
@@ -2712,7 +2712,7 @@ base/forms.less
 								
 								&:hover {
 									
-									.form-control-variant('success-inverse-hover');
+									.form-control-variant('error-inverse-hover');
 									
 								}
 								
@@ -2724,7 +2724,7 @@ base/forms.less
 								
 								&:focus {
 									
-									.form-control-variant('success-inverse-focus');
+									.form-control-variant('error-inverse-focus');
 									
 								}
 								
@@ -2737,8 +2737,8 @@ base/forms.less
 								&.disabled,
 								&[disabled] {
 									
-									.opacity(@form-control-success-inverse-disabled-opacity);
-									.form-control-variant('success-inverse-disabled');
+									.opacity(@form-control-error-inverse-disabled-opacity);
+									.form-control-variant('error-inverse-disabled');
 									
 								}
 								
@@ -2755,7 +2755,7 @@ base/forms.less
 				
 				
 				
-				& when (@form-label-enabled) and (@form-label-success-enabled) {
+				& when (@form-label-enabled) and (@form-label-error-enabled) {
 					
 					/* ----------------------------------------------------------------------------------------------------
 					-------------------------------------------------------------------------------------------------------
@@ -2767,15 +2767,15 @@ base/forms.less
 					
 					label {
 						
-						color: @form-label-success-color;
-						font-style: @form-label-success-font-style;
-						font-weight: @form-label-success-font-weight;
-						text-transform: @form-label-success-transform;
-						text-shadow: @form-label-success-shadow;
+						color: @form-label-error-color;
+						font-style: @form-label-error-font-style;
+						font-weight: @form-label-error-font-weight;
+						text-transform: @form-label-error-transform;
+						text-shadow: @form-label-error-shadow;
 						
 						
 						
-						& when (@form-label-success-link-enabled) {
+						& when (@form-label-error-link-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							Links
@@ -2783,27 +2783,27 @@ base/forms.less
 							
 							a {
 								
-								color: @form-label-success-link-text-color;
-								text-decoration: @form-label-success-link-text-decoration;
+								color: @form-label-error-link-text-color;
+								text-decoration: @form-label-error-link-text-decoration;
 								
 								&:hover {
 									
-									color: @form-label-success-link-hover-text-color;
-									text-decoration: @form-label-success-link-hover-text-decoration;
+									color: @form-label-error-link-hover-text-color;
+									text-decoration: @form-label-error-link-hover-text-decoration;
 									
 								}
 								
 								&:active {
 									
-									color: @form-label-success-link-active-text-color;
-									text-decoration: @form-label-success-link-active-text-decoration;
+									color: @form-label-error-link-active-text-color;
+									text-decoration: @form-label-error-link-active-text-decoration;
 									
 								}
 								
 								&:disabled {
 									
-									color: @form-label-success-link-active-text-color;
-									text-decoration: @form-label-success-link-active-text-decoration;
+									color: @form-label-error-link-active-text-color;
+									text-decoration: @form-label-error-link-active-text-decoration;
 									
 								}
 								
@@ -2813,7 +2813,7 @@ base/forms.less
 						
 						
 						
-						& when (@form-label-emphasize-enabled) and (@form-label-success-emphasize-enabled) {
+						& when (@form-label-emphasize-enabled) and (@form-label-error-emphasize-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							Emphasize
@@ -2822,15 +2822,15 @@ base/forms.less
 							strong,
 							.emphasize {
 								
-								color: @form-label-success-emphasize-color;
-								font-style: @form-label-success-emphasize-font-style;
-								font-weight: @form-label-success-emphasize-font-weight;
-								text-transform: @form-label-success-emphasize-transform;
-								text-shadow: @form-label-success-emphasize-shadow;
+								color: @form-label-error-emphasize-color;
+								font-style: @form-label-error-emphasize-font-style;
+								font-weight: @form-label-error-emphasize-font-weight;
+								text-transform: @form-label-error-emphasize-transform;
+								text-shadow: @form-label-error-emphasize-shadow;
 								
 								
 								
-								& when (@form-label-success-emphasize-link-enabled) {
+								& when (@form-label-error-emphasize-link-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Links
@@ -2838,28 +2838,28 @@ base/forms.less
 									
 									a {
 										
-										color: @form-label-success-emphasize-link-text-color;
-										text-decoration: @form-label-success-emphasize-link-text-decoration;
+										color: @form-label-error-emphasize-link-text-color;
+										text-decoration: @form-label-error-emphasize-link-text-decoration;
 										
 										&:hover {
 											
-											color: @form-label-success-emphasize-link-hover-text-color;
-											text-decoration: @form-label-success-emphasize-link-hover-text-decoration;
+											color: @form-label-error-emphasize-link-hover-text-color;
+											text-decoration: @form-label-error-emphasize-link-hover-text-decoration;
 											
 										}
 										
 										&:active {
 											
-											color: @form-label-success-emphasize-link-active-text-color;
-											text-decoration: @form-label-success-emphasize-link-active-text-decoration;
+											color: @form-label-error-emphasize-link-active-text-color;
+											text-decoration: @form-label-error-emphasize-link-active-text-decoration;
 											
 										}
 										
 										&:disabled,
 										&.disabled {
 											
-											color: @form-label-success-emphasize-link-active-text-color;
-											text-decoration: @form-label-success-emphasize-link-active-text-decoration;
+											color: @form-label-error-emphasize-link-active-text-color;
+											text-decoration: @form-label-error-emphasize-link-active-text-decoration;
 											
 										}
 										
@@ -2873,7 +2873,7 @@ base/forms.less
 						
 						
 						
-						& when (@form-label-mute-enabled) and (@form-label-success-mute-enabled) {
+						& when (@form-label-mute-enabled) and (@form-label-error-mute-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							Mute
@@ -2881,15 +2881,15 @@ base/forms.less
 							
 							.mute {
 								
-								color: @form-label-success-mute-color;
-								font-style: @form-label-success-mute-font-style;
-								font-weight: @form-label-success-mute-font-weight;
-								text-transform: @form-label-success-mute-transform;
-								text-shadow: @form-label-success-mute-shadow;
+								color: @form-label-error-mute-color;
+								font-style: @form-label-error-mute-font-style;
+								font-weight: @form-label-error-mute-font-weight;
+								text-transform: @form-label-error-mute-transform;
+								text-shadow: @form-label-error-mute-shadow;
 								
 								
 								
-								& when (@form-label-success-mute-link-enabled) {
+								& when (@form-label-error-mute-link-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Links
@@ -2897,28 +2897,28 @@ base/forms.less
 									
 									a {
 										
-										color: @form-label-success-mute-link-text-color;
-										text-decoration: @form-label-success-mute-link-text-decoration;
+										color: @form-label-error-mute-link-text-color;
+										text-decoration: @form-label-error-mute-link-text-decoration;
 										
 										&:hover {
 											
-											color: @form-label-success-mute-link-hover-text-color;
-											text-decoration: @form-label-success-mute-link-hover-text-decoration;
+											color: @form-label-error-mute-link-hover-text-color;
+											text-decoration: @form-label-error-mute-link-hover-text-decoration;
 											
 										}
 										
 										&:active {
 											
-											color: @form-label-success-mute-link-active-text-color;
-											text-decoration: @form-label-success-mute-link-active-text-decoration;
+											color: @form-label-error-mute-link-active-text-color;
+											text-decoration: @form-label-error-mute-link-active-text-decoration;
 											
 										}
 										
 										&:disabled,
 										&.disabled {
 											
-											color: @form-label-success-mute-link-active-text-color;
-											text-decoration: @form-label-success-mute-link-active-text-decoration;
+											color: @form-label-error-mute-link-active-text-color;
+											text-decoration: @form-label-error-mute-link-active-text-decoration;
 											
 										}
 										
@@ -2932,7 +2932,7 @@ base/forms.less
 						
 						
 						
-						& when (@form-label-success-inverse-enabled) {
+						& when (@form-label-error-inverse-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							Inverse
@@ -2940,12 +2940,12 @@ base/forms.less
 							
 							&.inverse {
 								
-								color: @form-label-success-inverse-color;
-								text-shadow: @form-label-success-inverse-shadow;
+								color: @form-label-error-inverse-color;
+								text-shadow: @form-label-error-inverse-shadow;
 								
 								
 								
-								& when (@form-label-success-inverse-link-enabled) {
+								& when (@form-label-error-inverse-link-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Links
@@ -2953,28 +2953,28 @@ base/forms.less
 									
 									a {
 										
-										color: @form-label-success-inverse-link-text-color;
-										text-decoration: @form-label-success-inverse-link-text-decoration;
+										color: @form-label-error-inverse-link-text-color;
+										text-decoration: @form-label-error-inverse-link-text-decoration;
 										
 										&:hover {
 											
-											color: @form-label-success-inverse-link-hover-text-color;
-											text-decoration: @form-label-success-inverse-link-hover-text-decoration;
+											color: @form-label-error-inverse-link-hover-text-color;
+											text-decoration: @form-label-error-inverse-link-hover-text-decoration;
 											
 										}
 										
 										&:active {
 											
-											color: @form-label-success-inverse-link-active-text-color;
-											text-decoration: @form-label-success-inverse-link-active-text-decoration;
+											color: @form-label-error-inverse-link-active-text-color;
+											text-decoration: @form-label-error-inverse-link-active-text-decoration;
 											
 										}
 										
 										&:disabled,
 										&.disabled {
 											
-											color: @form-label-success-inverse-link-active-text-color;
-											text-decoration: @form-label-success-inverse-link-active-text-decoration;
+											color: @form-label-error-inverse-link-active-text-color;
+											text-decoration: @form-label-error-inverse-link-active-text-decoration;
 											
 										}
 										
@@ -2984,7 +2984,7 @@ base/forms.less
 								
 								
 								
-								& when (@form-label-emphasize-enabled) and (@form-label-success-inverse-emphasize-enabled) {
+								& when (@form-label-emphasize-enabled) and (@form-label-error-inverse-emphasize-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Emphasize Inverse
@@ -2992,12 +2992,12 @@ base/forms.less
 									
 									.emphasize {
 										
-										color: @form-label-success-inverse-emphasize-color;
-										text-shadow: @form-label-success-inverse-emphasize-shadow;
+										color: @form-label-error-inverse-emphasize-color;
+										text-shadow: @form-label-error-inverse-emphasize-shadow;
 										
 										
 										
-										& when (@form-label-success-inverse-emphasize-link-enabled) {
+										& when (@form-label-error-inverse-emphasize-link-enabled) {
 											
 											/* ----------------------------------------------------------------------------------------------------
 											Links
@@ -3005,27 +3005,27 @@ base/forms.less
 											
 											a {
 												
-												color: @form-label-success-inverse-emphasize-link-text-color;
-												text-decoration: @form-label-success-inverse-emphasize-link-text-decoration;
+												color: @form-label-error-inverse-emphasize-link-text-color;
+												text-decoration: @form-label-error-inverse-emphasize-link-text-decoration;
 												
 												&:hover {
 													
-													color: @form-label-success-inverse-emphasize-link-hover-text-color;
-													text-decoration: @form-label-success-inverse-emphasize-link-hover-text-decoration;
+													color: @form-label-error-inverse-emphasize-link-hover-text-color;
+													text-decoration: @form-label-error-inverse-emphasize-link-hover-text-decoration;
 													
 												}
 												
 												&:active {
 													
-													color: @form-label-success-inverse-emphasize-link-active-text-color;
-													text-decoration: @form-label-success-inverse-emphasize-link-active-text-decoration;
+													color: @form-label-error-inverse-emphasize-link-active-text-color;
+													text-decoration: @form-label-error-inverse-emphasize-link-active-text-decoration;
 													
 												}
 												
 												&:disabled {
 													
-													color: @form-label-success-inverse-emphasize-link-active-text-color;
-													text-decoration: @form-label-success-inverse-emphasize-link-active-text-decoration;
+													color: @form-label-error-inverse-emphasize-link-active-text-color;
+													text-decoration: @form-label-error-inverse-emphasize-link-active-text-decoration;
 													
 												}
 												
@@ -3039,7 +3039,7 @@ base/forms.less
 								
 								
 								
-								& when (@form-label-mute-enabled) and (@form-label-success-inverse-mute-enabled) {
+								& when (@form-label-mute-enabled) and (@form-label-error-inverse-mute-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Mute Inverse
@@ -3047,12 +3047,12 @@ base/forms.less
 									
 									.mute {
 										
-										color: @form-label-success-inverse-mute-color;
-										text-shadow: @form-label-success-inverse-mute-shadow;
+										color: @form-label-error-inverse-mute-color;
+										text-shadow: @form-label-error-inverse-mute-shadow;
 										
 										
 										
-										& when (@form-label-success-inverse-mute-link-enabled) {
+										& when (@form-label-error-inverse-mute-link-enabled) {
 											
 											/* ----------------------------------------------------------------------------------------------------
 											Links
@@ -3060,27 +3060,27 @@ base/forms.less
 											
 											a {
 												
-												color: @form-label-success-inverse-mute-link-text-color;
-												text-decoration: @form-label-success-inverse-mute-link-text-decoration;
+												color: @form-label-error-inverse-mute-link-text-color;
+												text-decoration: @form-label-error-inverse-mute-link-text-decoration;
 												
 												&:hover {
 													
-													color: @form-label-success-inverse-mute-link-hover-text-color;
-													text-decoration: @form-label-success-inverse-mute-link-hover-text-decoration;
+													color: @form-label-error-inverse-mute-link-hover-text-color;
+													text-decoration: @form-label-error-inverse-mute-link-hover-text-decoration;
 													
 												}
 												
 												&:active {
 													
-													color: @form-label-success-inverse-mute-link-active-text-color;
-													text-decoration: @form-label-success-inverse-mute-link-active-text-decoration;
+													color: @form-label-error-inverse-mute-link-active-text-color;
+													text-decoration: @form-label-error-inverse-mute-link-active-text-decoration;
 													
 												}
 												
 												&:disabled {
 													
-													color: @form-label-success-inverse-mute-link-active-text-color;
-													text-decoration: @form-label-success-inverse-mute-link-active-text-decoration;
+													color: @form-label-error-inverse-mute-link-active-text-color;
+													text-decoration: @form-label-error-inverse-mute-link-active-text-decoration;
 													
 												}
 												
@@ -3105,7 +3105,7 @@ base/forms.less
 				
 				
 				
-				& when (@form-help-block-enabled) and (@form-help-block-success-enabled) {
+				& when (@form-help-block-enabled) and (@form-help-block-error-enabled) {
 					
 					/* ----------------------------------------------------------------------------------------------------
 					-------------------------------------------------------------------------------------------------------
@@ -3117,15 +3117,15 @@ base/forms.less
 					
 					.form-help-block {
 						
-						color: @form-help-block-success-color;
-						font-style: @form-help-block-success-font-style;
-						font-weight: @form-help-block-success-font-weight;
-						text-transform: @form-help-block-success-transform;
-						text-shadow: @form-help-block-success-shadow;
+						color: @form-help-block-error-color;
+						font-style: @form-help-block-error-font-style;
+						font-weight: @form-help-block-error-font-weight;
+						text-transform: @form-help-block-error-transform;
+						text-shadow: @form-help-block-error-shadow;
 						
 						
 						
-						& when (@form-help-block-success-link-enabled) {
+						& when (@form-help-block-error-link-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							Links
@@ -3133,27 +3133,27 @@ base/forms.less
 							
 							a {
 								
-								color: @form-help-block-success-link-text-color;
-								text-decoration: @form-help-block-success-link-text-decoration;
+								color: @form-help-block-error-link-text-color;
+								text-decoration: @form-help-block-error-link-text-decoration;
 								
 								&:hover {
 									
-									color: @form-help-block-success-link-hover-text-color;
-									text-decoration: @form-help-block-success-link-hover-text-decoration;
+									color: @form-help-block-error-link-hover-text-color;
+									text-decoration: @form-help-block-error-link-hover-text-decoration;
 									
 								}
 								
 								&:active {
 									
-									color: @form-help-block-success-link-active-text-color;
-									text-decoration: @form-help-block-success-link-active-text-decoration;
+									color: @form-help-block-error-link-active-text-color;
+									text-decoration: @form-help-block-error-link-active-text-decoration;
 									
 								}
 								
 								&:disabled {
 									
-									color: @form-help-block-success-link-active-text-color;
-									text-decoration: @form-help-block-success-link-active-text-decoration;
+									color: @form-help-block-error-link-active-text-color;
+									text-decoration: @form-help-block-error-link-active-text-decoration;
 									
 								}
 								
@@ -3163,7 +3163,7 @@ base/forms.less
 						
 						
 						
-						& when (@form-help-block-emphasize-enabled) and (@form-help-block-success-emphasize-enabled) {
+						& when (@form-help-block-emphasize-enabled) and (@form-help-block-error-emphasize-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							Emphasize
@@ -3172,15 +3172,15 @@ base/forms.less
 							strong,
 							.emphasize {
 								
-								color: @form-help-block-success-emphasize-color;
-								font-style: @form-help-block-success-emphasize-font-style;
-								font-weight: @form-help-block-success-emphasize-font-weight;
-								text-transform: @form-help-block-success-emphasize-transform;
-								text-shadow: @form-help-block-success-emphasize-shadow;
+								color: @form-help-block-error-emphasize-color;
+								font-style: @form-help-block-error-emphasize-font-style;
+								font-weight: @form-help-block-error-emphasize-font-weight;
+								text-transform: @form-help-block-error-emphasize-transform;
+								text-shadow: @form-help-block-error-emphasize-shadow;
 								
 								
 								
-								& when (@form-help-block-success-emphasize-link-enabled) {
+								& when (@form-help-block-error-emphasize-link-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Links
@@ -3188,28 +3188,28 @@ base/forms.less
 									
 									a {
 										
-										color: @form-help-block-success-emphasize-link-text-color;
-										text-decoration: @form-help-block-success-emphasize-link-text-decoration;
+										color: @form-help-block-error-emphasize-link-text-color;
+										text-decoration: @form-help-block-error-emphasize-link-text-decoration;
 										
 										&:hover {
 											
-											color: @form-help-block-success-emphasize-link-hover-text-color;
-											text-decoration: @form-help-block-success-emphasize-link-hover-text-decoration;
+											color: @form-help-block-error-emphasize-link-hover-text-color;
+											text-decoration: @form-help-block-error-emphasize-link-hover-text-decoration;
 											
 										}
 										
 										&:active {
 											
-											color: @form-help-block-success-emphasize-link-active-text-color;
-											text-decoration: @form-help-block-success-emphasize-link-active-text-decoration;
+											color: @form-help-block-error-emphasize-link-active-text-color;
+											text-decoration: @form-help-block-error-emphasize-link-active-text-decoration;
 											
 										}
 										
 										&:disabled,
 										&.disabled {
 											
-											color: @form-help-block-success-emphasize-link-active-text-color;
-											text-decoration: @form-help-block-success-emphasize-link-active-text-decoration;
+											color: @form-help-block-error-emphasize-link-active-text-color;
+											text-decoration: @form-help-block-error-emphasize-link-active-text-decoration;
 											
 										}
 										
@@ -3223,7 +3223,7 @@ base/forms.less
 						
 						
 						
-						& when (@form-help-block-mute-enabled) and (@form-help-block-success-mute-enabled) {
+						& when (@form-help-block-mute-enabled) and (@form-help-block-error-mute-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							Mute
@@ -3231,15 +3231,15 @@ base/forms.less
 							
 							.mute {
 								
-								color: @form-help-block-success-mute-color;
-								font-style: @form-help-block-success-mute-font-style;
-								font-weight: @form-help-block-success-mute-font-weight;
-								text-transform: @form-help-block-success-mute-transform;
-								text-shadow: @form-help-block-success-mute-shadow;
+								color: @form-help-block-error-mute-color;
+								font-style: @form-help-block-error-mute-font-style;
+								font-weight: @form-help-block-error-mute-font-weight;
+								text-transform: @form-help-block-error-mute-transform;
+								text-shadow: @form-help-block-error-mute-shadow;
 								
 								
 								
-								& when (@form-help-block-success-mute-link-enabled) {
+								& when (@form-help-block-error-mute-link-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Links
@@ -3247,28 +3247,28 @@ base/forms.less
 									
 									a {
 										
-										color: @form-help-block-success-mute-link-text-color;
-										text-decoration: @form-help-block-success-mute-link-text-decoration;
+										color: @form-help-block-error-mute-link-text-color;
+										text-decoration: @form-help-block-error-mute-link-text-decoration;
 										
 										&:hover {
 											
-											color: @form-help-block-success-mute-link-hover-text-color;
-											text-decoration: @form-help-block-success-mute-link-hover-text-decoration;
+											color: @form-help-block-error-mute-link-hover-text-color;
+											text-decoration: @form-help-block-error-mute-link-hover-text-decoration;
 											
 										}
 										
 										&:active {
 											
-											color: @form-help-block-success-mute-link-active-text-color;
-											text-decoration: @form-help-block-success-mute-link-active-text-decoration;
+											color: @form-help-block-error-mute-link-active-text-color;
+											text-decoration: @form-help-block-error-mute-link-active-text-decoration;
 											
 										}
 										
 										&:disabled,
 										&.disabled {
 											
-											color: @form-help-block-success-mute-link-active-text-color;
-											text-decoration: @form-help-block-success-mute-link-active-text-decoration;
+											color: @form-help-block-error-mute-link-active-text-color;
+											text-decoration: @form-help-block-error-mute-link-active-text-decoration;
 											
 										}
 										
@@ -3282,7 +3282,7 @@ base/forms.less
 						
 						
 						
-						& when (@form-help-block-success-inverse-enabled) {
+						& when (@form-help-block-error-inverse-enabled) {
 							
 							/* ----------------------------------------------------------------------------------------------------
 							Inverse
@@ -3290,12 +3290,12 @@ base/forms.less
 							
 							&.inverse {
 								
-								color: @form-help-block-success-inverse-color;
-								text-shadow: @form-help-block-success-inverse-shadow;
+								color: @form-help-block-error-inverse-color;
+								text-shadow: @form-help-block-error-inverse-shadow;
 								
 								
 								
-								& when (@form-help-block-success-inverse-link-enabled) {
+								& when (@form-help-block-error-inverse-link-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Links
@@ -3303,28 +3303,28 @@ base/forms.less
 									
 									a {
 										
-										color: @form-help-block-success-inverse-link-text-color;
-										text-decoration: @form-help-block-success-inverse-link-text-decoration;
+										color: @form-help-block-error-inverse-link-text-color;
+										text-decoration: @form-help-block-error-inverse-link-text-decoration;
 										
 										&:hover {
 											
-											color: @form-help-block-success-inverse-link-hover-text-color;
-											text-decoration: @form-help-block-success-inverse-link-hover-text-decoration;
+											color: @form-help-block-error-inverse-link-hover-text-color;
+											text-decoration: @form-help-block-error-inverse-link-hover-text-decoration;
 											
 										}
 										
 										&:active {
 											
-											color: @form-help-block-success-inverse-link-active-text-color;
-											text-decoration: @form-help-block-success-inverse-link-active-text-decoration;
+											color: @form-help-block-error-inverse-link-active-text-color;
+											text-decoration: @form-help-block-error-inverse-link-active-text-decoration;
 											
 										}
 										
 										&:disabled,
 										&.disabled {
 											
-											color: @form-help-block-success-inverse-link-active-text-color;
-											text-decoration: @form-help-block-success-inverse-link-active-text-decoration;
+											color: @form-help-block-error-inverse-link-active-text-color;
+											text-decoration: @form-help-block-error-inverse-link-active-text-decoration;
 											
 										}
 										
@@ -3334,7 +3334,7 @@ base/forms.less
 								
 								
 								
-								& when (@form-help-block-emphasize-enabled) and (@form-help-block-success-inverse-emphasize-enabled) {
+								& when (@form-help-block-emphasize-enabled) and (@form-help-block-error-inverse-emphasize-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Emphasize Inverse
@@ -3342,12 +3342,12 @@ base/forms.less
 									
 									.emphasize {
 										
-										color: @form-help-block-success-inverse-emphasize-color;
-										text-shadow: @form-help-block-success-inverse-emphasize-shadow;
+										color: @form-help-block-error-inverse-emphasize-color;
+										text-shadow: @form-help-block-error-inverse-emphasize-shadow;
 										
 										
 										
-										& when (@form-help-block-success-inverse-emphasize-link-enabled) {
+										& when (@form-help-block-error-inverse-emphasize-link-enabled) {
 											
 											/* ----------------------------------------------------------------------------------------------------
 											Links
@@ -3355,27 +3355,27 @@ base/forms.less
 											
 											a {
 												
-												color: @form-help-block-success-inverse-emphasize-link-text-color;
-												text-decoration: @form-help-block-success-inverse-emphasize-link-text-decoration;
+												color: @form-help-block-error-inverse-emphasize-link-text-color;
+												text-decoration: @form-help-block-error-inverse-emphasize-link-text-decoration;
 												
 												&:hover {
 													
-													color: @form-help-block-success-inverse-emphasize-link-hover-text-color;
-													text-decoration: @form-help-block-success-inverse-emphasize-link-hover-text-decoration;
+													color: @form-help-block-error-inverse-emphasize-link-hover-text-color;
+													text-decoration: @form-help-block-error-inverse-emphasize-link-hover-text-decoration;
 													
 												}
 												
 												&:active {
 													
-													color: @form-help-block-success-inverse-emphasize-link-active-text-color;
-													text-decoration: @form-help-block-success-inverse-emphasize-link-active-text-decoration;
+													color: @form-help-block-error-inverse-emphasize-link-active-text-color;
+													text-decoration: @form-help-block-error-inverse-emphasize-link-active-text-decoration;
 													
 												}
 												
 												&:disabled {
 													
-													color: @form-help-block-success-inverse-emphasize-link-active-text-color;
-													text-decoration: @form-help-block-success-inverse-emphasize-link-active-text-decoration;
+													color: @form-help-block-error-inverse-emphasize-link-active-text-color;
+													text-decoration: @form-help-block-error-inverse-emphasize-link-active-text-decoration;
 													
 												}
 												
@@ -3389,7 +3389,7 @@ base/forms.less
 								
 								
 								
-								& when (@form-help-block-mute-enabled) and (@form-help-block-success-inverse-mute-enabled) {
+								& when (@form-help-block-mute-enabled) and (@form-help-block-error-inverse-mute-enabled) {
 									
 									/* ----------------------------------------------------------------------------------------------------
 									Mute Inverse
@@ -3397,12 +3397,12 @@ base/forms.less
 									
 									.mute {
 										
-										color: @form-help-block-success-inverse-mute-color;
-										text-shadow: @form-help-block-success-inverse-mute-shadow;
+										color: @form-help-block-error-inverse-mute-color;
+										text-shadow: @form-help-block-error-inverse-mute-shadow;
 										
 										
 										
-										& when (@form-help-block-success-inverse-mute-link-enabled) {
+										& when (@form-help-block-error-inverse-mute-link-enabled) {
 											
 											/* ----------------------------------------------------------------------------------------------------
 											Links
@@ -3410,27 +3410,27 @@ base/forms.less
 											
 											a {
 												
-												color: @form-help-block-success-inverse-mute-link-text-color;
-												text-decoration: @form-help-block-success-inverse-mute-link-text-decoration;
+												color: @form-help-block-error-inverse-mute-link-text-color;
+												text-decoration: @form-help-block-error-inverse-mute-link-text-decoration;
 												
 												&:hover {
 													
-													color: @form-help-block-success-inverse-mute-link-hover-text-color;
-													text-decoration: @form-help-block-success-inverse-mute-link-hover-text-decoration;
+													color: @form-help-block-error-inverse-mute-link-hover-text-color;
+													text-decoration: @form-help-block-error-inverse-mute-link-hover-text-decoration;
 													
 												}
 												
 												&:active {
 													
-													color: @form-help-block-success-inverse-mute-link-active-text-color;
-													text-decoration: @form-help-block-success-inverse-mute-link-active-text-decoration;
+													color: @form-help-block-error-inverse-mute-link-active-text-color;
+													text-decoration: @form-help-block-error-inverse-mute-link-active-text-decoration;
 													
 												}
 												
 												&:disabled {
 													
-													color: @form-help-block-success-inverse-mute-link-active-text-color;
-													text-decoration: @form-help-block-success-inverse-mute-link-active-text-decoration;
+													color: @form-help-block-error-inverse-mute-link-active-text-color;
+													text-decoration: @form-help-block-error-inverse-mute-link-active-text-decoration;
 													
 												}
 												
@@ -4009,8 +4009,7 @@ base/forms.less
 						---------------------------------------------------------------------------------------------------- */
 						
 						strong,
-						.emphasize,
-						&.emphasize {
+						.emphasize {
 							
 							font-size: @form-option-emphasize-font-size * @form-option-font-size-scale-screen-mini;
 							line-height: @form-option-emphasize-line-height * @form-option-line-height-scale-screen-mini;
@@ -4027,8 +4026,7 @@ base/forms.less
 						Mute
 						---------------------------------------------------------------------------------------------------- */
 						
-						.mute,
-						&.mute {
+						.mute {
 							
 							font-size: @form-option-mute-font-size * @form-option-font-size-scale-screen-mini;
 							line-height: @form-option-mute-line-height * @form-option-line-height-scale-screen-mini;
@@ -4673,8 +4671,7 @@ base/forms.less
 						---------------------------------------------------------------------------------------------------- */
 						
 						strong,
-						.emphasize,
-						&.emphasize {
+						.emphasize {
 							
 							font-size: @form-option-emphasize-font-size * @form-option-font-size-scale-screen-small;
 							line-height: @form-option-emphasize-line-height * @form-option-line-height-scale-screen-small;
@@ -4691,8 +4688,7 @@ base/forms.less
 						Mute
 						---------------------------------------------------------------------------------------------------- */
 						
-						.mute,
-						&.mute {
+						.mute {
 							
 							font-size: @form-option-mute-font-size * @form-option-font-size-scale-screen-small;
 							line-height: @form-option-mute-line-height * @form-option-line-height-scale-screen-small;
@@ -5335,8 +5331,7 @@ base/forms.less
 						---------------------------------------------------------------------------------------------------- */
 						
 						strong,
-						.emphasize,
-						&.emphasize {
+						.emphasize {
 							
 							font-size: @form-option-emphasize-font-size * @form-option-font-size-scale-screen-medium;
 							line-height: @form-option-emphasize-line-height * @form-option-line-height-scale-screen-medium;
@@ -5353,8 +5348,7 @@ base/forms.less
 						Mute
 						---------------------------------------------------------------------------------------------------- */
 						
-						.mute,
-						&.mute {
+						.mute {
 							
 							font-size: @form-option-mute-font-size * @form-option-font-size-scale-screen-medium;
 							line-height: @form-option-mute-line-height * @form-option-line-height-scale-screen-medium;
@@ -5999,8 +5993,7 @@ base/forms.less
 						---------------------------------------------------------------------------------------------------- */
 						
 						strong,
-						.emphasize,
-						&.emphasize {
+						.emphasize {
 							
 							font-size: @form-option-emphasize-font-size * @form-option-font-size-scale-screen-large;
 							line-height: @form-option-emphasize-line-height * @form-option-line-height-scale-screen-large;
@@ -6017,8 +6010,7 @@ base/forms.less
 						Mute
 						---------------------------------------------------------------------------------------------------- */
 						
-						.mute,
-						&.mute {
+						.mute {
 							
 							font-size: @form-option-mute-font-size * @form-option-font-size-scale-screen-large;
 							line-height: @form-option-mute-line-height * @form-option-line-height-scale-screen-large;
