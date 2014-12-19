@@ -23,13 +23,13 @@ Lighten and Darken Colors
 
 .lighten-color(@color, @lightness) {
 
-	color: lighten(@color, @lightness * (100 - lightness(@color)));
+    color: lighten(@color, @lightness * (100 - lightness(@color)));
 
 }
 
 .darken-color(@color, @lightness) {
 
-	color: darken(@color, @lightness * lightness(@color));
+    color: darken(@color, @lightness * lightness(@color));
 
 }
 
@@ -69,18 +69,18 @@ Lighten and Darken Colors
         switch(max) {
             case red:
 
-            	hue = (green - blue) / delta + (green < blue ? 6 : 0);
-            	break;
+                hue = (green - blue) / delta + (green < blue ? 6 : 0);
+                break;
 
             case green:
 
-            	hue = (blue - red) / delta + 2;
-            	break;
+                hue = (blue - red) / delta + 2;
+                break;
 
             case blue:
 
-            	hue = (red - green) / delta + 4;
-            	break;
+                hue = (red - green) / delta + 4;
+                break;
 
         }
 
@@ -88,17 +88,17 @@ Lighten and Darken Colors
 
     }
 
-	// Adjust Lightness
+    // Adjust Lightness
 
-	if(amount > 0) {
+    if(amount > 0) {
 
-		lightness = lightness + ((amount / 100) * (1 - lightness));
+        lightness = lightness + ((amount / 100) * (1 - lightness));
 
-	} else {
+    } else {
 
-		lightness = ((100 - (-1 * amount)) / 100) * lightness;
+        lightness = ((100 - (-1 * amount)) / 100) * lightness;
 
-	}
+    }
 
     if(saturation == 0) {
 
@@ -127,37 +127,37 @@ Lighten and Darken Colors
 
     }
 
-	if (red > 255) {
+    if (red > 255) {
 
-    	red = 255;
+        red = 255;
 
     } else if (red < 0) {
 
-		red = 0;
+        red = 0;
 
     }
 
-	if (blue > 255) {
+    if (blue > 255) {
 
-    	blue = 255;
+        blue = 255;
 
     } else if (blue < 0) {
 
-    	blue = 0;
+        blue = 0;
 
     }
 
-	if (green > 255) {
+    if (green > 255) {
 
-    	green = 255;
+        green = 255;
 
     } else if (green < 0) {
 
-    	green = 0;
+        green = 0;
 
     }
 
-	return (usePound ? "#" : "") + ("0" + parseInt((red * 255), 10).toString(16)).slice(-2) + ("0" + parseInt((green * 255), 10).toString(16)).slice(-2) + ("0" + parseInt((blue * 255), 10).toString(16)).slice(-2);
+    return (usePound ? "#" : "") + ("0" + parseInt((red * 255), 10).toString(16)).slice(-2) + ("0" + parseInt((green * 255), 10).toString(16)).slice(-2) + ("0" + parseInt((blue * 255), 10).toString(16)).slice(-2);
 
 
 }`;
@@ -177,80 +177,80 @@ Gradients
 
 #gradient {
 
-	.horizontal(@color-1: #555, @color-2: #333) {
+    .horizontal(@color-1: #555, @color-2: #333) {
 
-		.horizontal(@color-1, 0%, @color-2, 100%);
+        .horizontal(@color-1, 0%, @color-2, 100%);
 
-	}
+    }
 
-	.horizontal(@color-1: #555, @color-1-stop: 0%, @color-2: #333, @color-2-stop: 100%) {
+    .horizontal(@color-1: #555, @color-1-stop: 0%, @color-2: #333, @color-2-stop: 100%) {
 
-		background-image: -webkit-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
-		background-image: -o-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
-		background-image: linear-gradient(to right, @color-1 @color-1-stop, @color-2 @color-2-stop);
-		background-repeat: repeat-x;
-		filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=1)");
-	}
+        background-image: -webkit-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
+        background-image: -o-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop);
+        background-image: linear-gradient(to right, @color-1 @color-1-stop, @color-2 @color-2-stop);
+        background-repeat: repeat-x;
+        filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=1)");
+    }
 
-	.vertical(@color-1: #555, @color-2: #333) {
+    .vertical(@color-1: #555, @color-2: #333) {
 
-		.vertical(@color-1, 0%, @color-2, 100%);
+        .vertical(@color-1, 0%, @color-2, 100%);
 
-	}
+    }
 
-	.vertical(@color-1: #555, @color-1-stop: 0%, @color-2: #333, @color-2-stop: 100%) {
+    .vertical(@color-1: #555, @color-1-stop: 0%, @color-2: #333, @color-2-stop: 100%) {
 
-		background-image: -webkit-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
-		background-image: -o-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
-		background-image: linear-gradient(to bottom, @color-1 @color-1-stop, @color-2 @color-2-stop);
-		background-repeat: repeat-x;
-		filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=0)");
+        background-image: -webkit-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
+        background-image: -o-linear-gradient(top, @color-1 @color-1-stop, @color-2 @color-2-stop);
+        background-image: linear-gradient(to bottom, @color-1 @color-1-stop, @color-2 @color-2-stop);
+        background-repeat: repeat-x;
+        filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-2}', GradientType=0)");
 
-	}
+    }
 
-	.directional(@color-1: #555, @color-2: #333, @deg: 45deg) {
+    .directional(@color-1: #555, @color-2: #333, @deg: 45deg) {
 
-		background-repeat: repeat-x;
-		background-image: -webkit-linear-gradient(@deg, @color-1, @color-2);
-		background-image: -o-linear-gradient(@deg, @color-1, @color-2);
-		background-image: linear-gradient(@deg, @color-1, @color-2);
+        background-repeat: repeat-x;
+        background-image: -webkit-linear-gradient(@deg, @color-1, @color-2);
+        background-image: -o-linear-gradient(@deg, @color-1, @color-2);
+        background-image: linear-gradient(@deg, @color-1, @color-2);
 
-	}
+    }
 
-	.horizontal-three-colors(@color-1: #00b3ee, @color-1-stop: 0%, @color-2: #7a43b6, @color-2-stop: 50%, @color-3: #c3325f, @color-3-stop: 0%) {
+    .horizontal-three-colors(@color-1: #00b3ee, @color-1-stop: 0%, @color-2: #7a43b6, @color-2-stop: 50%, @color-3: #c3325f, @color-3-stop: 0%) {
 
-		background-image: -webkit-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
-		background-image: -o-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
-		background-image: linear-gradient(to right, @color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
-		background-repeat: no-repeat;
-		filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-3}', GradientType=1)");;
+        background-image: -webkit-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
+        background-image: -o-linear-gradient(left, @color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
+        background-image: linear-gradient(to right, @color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
+        background-repeat: no-repeat;
+        filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-3}', GradientType=1)");;
 
-	}
+    }
 
-	.vertical-three-colors(@color-1: #00b3ee, @color-1-stop: 0%, @color-2: #7a43b6, @color-2-stop: 50%, @color-3: #c3325f, @color-3-stop: 0%) {
+    .vertical-three-colors(@color-1: #00b3ee, @color-1-stop: 0%, @color-2: #7a43b6, @color-2-stop: 50%, @color-3: #c3325f, @color-3-stop: 0%) {
 
-		background-image: -webkit-linear-gradient(@color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
-		background-image: -o-linear-gradient(@color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
-		background-image: linear-gradient(@color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
-		background-repeat: no-repeat;
-		filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-3}', GradientType=0)");
+        background-image: -webkit-linear-gradient(@color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
+        background-image: -o-linear-gradient(@color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
+        background-image: linear-gradient(@color-1 @color-1-stop, @color-2 @color-2-stop, @color-3 @color-3-stop);
+        background-repeat: no-repeat;
+        filter: e("progid:DXImageTransform.Microsoft.gradient(startColorstr='@{color-1}', endColorstr='@{color-3}', GradientType=0)");
 
-	}
+    }
 
-	.radial(@inner-color: #555, @outer-color: #333) {
+    .radial(@inner-color: #555, @outer-color: #333) {
 
-		background-image: -webkit-radial-gradient(circle, @inner-color, @outer-color);
-		background-image: radial-gradient(circle, @inner-color, @outer-color);
-		background-repeat: no-repeat;
+        background-image: -webkit-radial-gradient(circle, @inner-color, @outer-color);
+        background-image: radial-gradient(circle, @inner-color, @outer-color);
+        background-repeat: no-repeat;
 
-	}
+    }
 
-	.striped(@color: rgba(255, 255, 255, 0.15), @angle: 45deg) {
+    .striped(@color: rgba(255, 255, 255, 0.15), @angle: 45deg) {
 
-		background-image: -webkit-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
-		background-image: -o-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
-		background-image: linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+        background-image: -webkit-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+        background-image: -o-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+        background-image: linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
 
-	}
+    }
 
 }
