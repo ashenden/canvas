@@ -36,6 +36,34 @@ Lighten and Darken Colors
 // USAGE: ~`color_lightness("@{gray}", 50)`;
 
 @color_lightness: ~`color_lightness = function(color, amount) {
+    
+    var c0 = color;
+    var c1 = "#FFFFFF";
+    amount = amount / 100;
+    
+    if (amount < 0) {
+        
+        c1 = "#000000";
+        amount = -1 * amount;
+        
+    }
+    
+    var f = parseInt(c0.slice(1), 16);
+    var t = parseInt(c1.slice(1),16);
+    var R1 = f >> 16;
+    var G1 = f>>8&0x00FF;
+    var B1 = f&0x0000FF;
+    var R2 = t>>16;
+    var G2 = t>>8&0x00FF;
+    var B2 = t&0x0000FF;
+    
+    return "#" + (0x1000000 + (Math.round((R2 - R1) * amount) + R1) * 0x10000 + (Math.round((G2 - G1) * amount) + G1) * 0x100 + (Math.round((B2 - B1) * amount) + B1)).toString(16).slice(1);
+    
+    
+}`;
+
+/*
+@color_lightness: ~`color_lightness = function(color, amount) {
 
     var usePound = false;
 
@@ -161,7 +189,7 @@ Lighten and Darken Colors
 
 
 }`;
-
+*/
 
 
 
