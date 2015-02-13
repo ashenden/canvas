@@ -1,0 +1,19 @@
+{
+  "name": "canvas",
+  "version": "0.0.1",
+  "description": "Canvas is a frontend system for quickly developing reponsive user interfaces that are driven almost entirely by variable definitions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://ashenden@github.com/ashenden/canvas.git"
+  },
+  "author": "John Ashenden <jaashenden@gmail.com> (http://www.johnashenden.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashenden/canvas/issues"
+  },
+  "homepage": "https://github.com/ashenden/canvas"
+}
