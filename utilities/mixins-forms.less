@@ -1,70 +1,70 @@
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 utilities/mixins-forms.less
 
--------------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
 
 
 
 
 
 
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 Form Control Variant Styling
 
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
 
 
 .form-control-variant(@variant: 'default') {
-	
-	@form-control-variant-text-color: "form-control-@{variant}-text-color";
-	@form-control-variant-text-font-family: "form-control-@{variant}-text-font-family";
-	@form-control-variant-text-font-style: "form-control-@{variant}-text-font-style";
-	@form-control-variant-text-font-weight: "form-control-@{variant}-text-font-weight";
-	@form-control-variant-text-transform: "form-control-@{variant}-text-transform";
-	@form-control-variant-text-shadow: "form-control-@{variant}-text-shadow";
-	@form-control-variant-text-rendering: "form-control-@{variant}-text-rendering";
-	@form-control-variant-background-color: "form-control-@{variant}-background-color";
-	@form-control-variant-background-gradient-color-top: "form-control-@{variant}-background-gradient-color-top";
-	@form-control-variant-background-gradient-color-bottom: "form-control-@{variant}-background-gradient-color-bottom";
-	@form-control-variant-border-top-width: "form-control-@{variant}-border-top-width";
-	@form-control-variant-border-top-color: "form-control-@{variant}-border-top-color";
-	@form-control-variant-border-right-width: "form-control-@{variant}-border-right-width";
-	@form-control-variant-border-right-color: "form-control-@{variant}-border-right-color";
-	@form-control-variant-border-bottom-width: "form-control-@{variant}-border-bottom-width";
-	@form-control-variant-border-bottom-color: "form-control-@{variant}-border-bottom-color";
-	@form-control-variant-border-left-width: "form-control-@{variant}-border-left-width";
-	@form-control-variant-border-left-color: "form-control-@{variant}-border-left-color";
-	@form-control-variant-shadow: "form-control-@{variant}-shadow";
-	@form-control-variant-placeholder-text-color: "form-control-@{variant}-placeholder-text-color";
-	
-	color: @@form-control-variant-text-color;
-	font-family: @@form-control-variant-text-font-family;
-	font-style: @@form-control-variant-text-font-style;
-	font-weight: @@form-control-variant-text-font-weight;
-	text-transform: @@form-control-variant-text-transform;
-	text-shadow: @@form-control-variant-text-shadow;
-	text-rendering: @@form-control-variant-text-rendering;
-	background: @@form-control-variant-background-color;
-	#gradient > .vertical(@@form-control-variant-background-gradient-color-top, @@form-control-variant-background-gradient-color-bottom);
-	border-top-width: @@form-control-variant-border-top-width;
-	border-top-color: @@form-control-variant-border-top-color;
-	border-right-width: @@form-control-variant-border-right-width;
-	border-right-color: @@form-control-variant-border-right-color;
-	border-bottom-width: @@form-control-variant-border-bottom-width;
-	border-bottom-color: @@form-control-variant-border-bottom-color;
-	border-left-width: @@form-control-variant-border-left-width;
-	border-left-color: @@form-control-variant-border-left-color;
-	.box-shadow(@@form-control-variant-shadow);
-	.placeholder(@@form-control-variant-placeholder-text-color);
-	
+
+  @form-control-variant-text-color: "form-control-@{variant}-text-color";
+  @form-control-variant-text-font-family: "form-control-@{variant}-text-font-family";
+  @form-control-variant-text-font-style: "form-control-@{variant}-text-font-style";
+  @form-control-variant-text-font-weight: "form-control-@{variant}-text-font-weight";
+  @form-control-variant-text-transform: "form-control-@{variant}-text-transform";
+  @form-control-variant-text-shadow: "form-control-@{variant}-text-shadow";
+  @form-control-variant-text-rendering: "form-control-@{variant}-text-rendering";
+  @form-control-variant-background-color: "form-control-@{variant}-background-color";
+  @form-control-variant-background-gradient-color-top: "form-control-@{variant}-background-gradient-color-top";
+  @form-control-variant-background-gradient-color-bottom: "form-control-@{variant}-background-gradient-color-bottom";
+  @form-control-variant-border-top-width: "form-control-@{variant}-border-top-width";
+  @form-control-variant-border-top-color: "form-control-@{variant}-border-top-color";
+  @form-control-variant-border-right-width: "form-control-@{variant}-border-right-width";
+  @form-control-variant-border-right-color: "form-control-@{variant}-border-right-color";
+  @form-control-variant-border-bottom-width: "form-control-@{variant}-border-bottom-width";
+  @form-control-variant-border-bottom-color: "form-control-@{variant}-border-bottom-color";
+  @form-control-variant-border-left-width: "form-control-@{variant}-border-left-width";
+  @form-control-variant-border-left-color: "form-control-@{variant}-border-left-color";
+  @form-control-variant-shadow: "form-control-@{variant}-shadow";
+  @form-control-variant-placeholder-text-color: "form-control-@{variant}-placeholder-text-color";
+
+  color: @@form-control-variant-text-color;
+  font-family: @@form-control-variant-text-font-family;
+  font-style: @@form-control-variant-text-font-style;
+  font-weight: @@form-control-variant-text-font-weight;
+  text-transform: @@form-control-variant-text-transform;
+  text-shadow: @@form-control-variant-text-shadow;
+  text-rendering: @@form-control-variant-text-rendering;
+  background: @@form-control-variant-background-color;
+  #gradient > .vertical(@@form-control-variant-background-gradient-color-top, @@form-control-variant-background-gradient-color-bottom);
+  border-top-width: @@form-control-variant-border-top-width;
+  border-top-color: @@form-control-variant-border-top-color;
+  border-right-width: @@form-control-variant-border-right-width;
+  border-right-color: @@form-control-variant-border-right-color;
+  border-bottom-width: @@form-control-variant-border-bottom-width;
+  border-bottom-color: @@form-control-variant-border-bottom-color;
+  border-left-width: @@form-control-variant-border-left-width;
+  border-left-color: @@form-control-variant-border-left-color;
+  .box-shadow(@@form-control-variant-shadow);
+  .placeholder(@@form-control-variant-placeholder-text-color);
+
 }
 
 
@@ -72,101 +72,101 @@ Form Control Variant Styling
 
 
 
-/* ----------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 Form Control Size Styling
 
--------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------- */
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
 
 .form-control-size(@variant-size, @variant-screen-size) when (@variant-size = '') {
-	
-	.form-control-size-screen-size(@variant-size, @variant-screen-size);
-	
+
+  .form-control-size-screen-size(@variant-size, @variant-screen-size);
+
 }
-	
+
 .form-control-size(@variant-size, @variant-screen-size) when (default()) {
-	
-	.form-control-size-variant-size(@variant-size, @variant-screen-size);
-	
+
+  .form-control-size-variant-size(@variant-size, @variant-screen-size);
+
 }
 
 
 .form-control-size-screen-size(@variant-size, @variant-screen-size) when (@variant-screen-size = '') {
-	
-	@form-control-variant-text-font-size: "form-control-text-font-size";
-	@form-control-variant-text-line-height: "form-control-text-line-height";
-	@form-control-variant-height:	"form-control-height";
-	@form-control-variant-padding-horizontal: "form-control-padding-horizontal";
-	@form-control-variant-border-radius: "form-control-border-radius";
-	
-	font-size: floor(@@form-control-variant-text-font-size);
-	line-height: floor(@@form-control-variant-text-line-height);
-	.box-sizing-padding-vertical(floor(@@form-control-variant-height), floor(@@form-control-variant-text-line-height));
-	padding-left: floor(@@form-control-variant-padding-horizontal);
-	padding-right: floor(@@form-control-variant-padding-horizontal);
-	.border-radius(@@form-control-variant-border-radius);
+
+  @form-control-variant-text-font-size: "form-control-text-font-size";
+  @form-control-variant-text-line-height: "form-control-text-line-height";
+  @form-control-variant-height:  "form-control-height";
+  @form-control-variant-padding-horizontal: "form-control-padding-horizontal";
+  @form-control-variant-border-radius: "form-control-border-radius";
+
+  font-size: floor(@@form-control-variant-text-font-size);
+  line-height: floor(@@form-control-variant-text-line-height);
+  .box-sizing-padding-vertical(floor(@@form-control-variant-height), floor(@@form-control-variant-text-line-height));
+  padding-left: floor(@@form-control-variant-padding-horizontal);
+  padding-right: floor(@@form-control-variant-padding-horizontal);
+  .border-radius(@@form-control-variant-border-radius);
 
 }
-	
+
 .form-control-size-screen-size(@variant-size, @variant-screen-size) when (default()) {
-	
-	@form-control-variant-text-font-size: "form-control-text-font-size";
-	@form-control-variant-text-font-size-scale: "form-control-text-font-size-scale-@{variant-screen-size}";
-	@form-control-variant-text-line-height: "form-control-text-line-height";
-	@form-control-variant-text-line-height-scale: "form-control-text-line-height-scale-@{variant-screen-size}";
-	@form-control-variant-height:	"form-control-height";
-	@form-control-variant-height-scale: "form-control-height-scale-@{variant-screen-size}";
-	@form-control-variant-padding-horizontal: "form-control-padding-horizontal";
-	@form-control-variant-padding-horizontal-scale: "form-control-padding-horizontal-scale-@{variant-screen-size}";
-	@form-control-variant-border-radius: "form-control-border-radius";
-	@form-control-variant-border-radius-scale: "form-control-border-radius-scale-@{variant-screen-size}";
-	
-	font-size: floor(@@form-control-variant-text-font-size * @@form-control-variant-text-font-size-scale);
-	line-height: floor(@@form-control-variant-text-line-height * @@form-control-variant-text-line-height-scale);
-	.box-sizing-padding-vertical(floor(@@form-control-variant-height * @@form-control-variant-height-scale), floor(@@form-control-variant-text-line-height * @@form-control-variant-text-font-size-scale));
-	padding-left: floor(@@form-control-variant-padding-horizontal * @@form-control-variant-padding-horizontal-scale);
-	padding-right: floor(@@form-control-variant-padding-horizontal * @@form-control-variant-padding-horizontal-scale);
-	.border-radius(@@form-control-variant-border-radius * @@form-control-variant-border-radius-scale);
-	
+
+  @form-control-variant-text-font-size: "form-control-text-font-size";
+  @form-control-variant-text-font-size-scale: "form-control-text-font-size-scale-@{variant-screen-size}";
+  @form-control-variant-text-line-height: "form-control-text-line-height";
+  @form-control-variant-text-line-height-scale: "form-control-text-line-height-scale-@{variant-screen-size}";
+  @form-control-variant-height:  "form-control-height";
+  @form-control-variant-height-scale: "form-control-height-scale-@{variant-screen-size}";
+  @form-control-variant-padding-horizontal: "form-control-padding-horizontal";
+  @form-control-variant-padding-horizontal-scale: "form-control-padding-horizontal-scale-@{variant-screen-size}";
+  @form-control-variant-border-radius: "form-control-border-radius";
+  @form-control-variant-border-radius-scale: "form-control-border-radius-scale-@{variant-screen-size}";
+
+  font-size: floor(@@form-control-variant-text-font-size * @@form-control-variant-text-font-size-scale);
+  line-height: floor(@@form-control-variant-text-line-height * @@form-control-variant-text-line-height-scale);
+  .box-sizing-padding-vertical(floor(@@form-control-variant-height * @@form-control-variant-height-scale), floor(@@form-control-variant-text-line-height * @@form-control-variant-text-font-size-scale));
+  padding-left: floor(@@form-control-variant-padding-horizontal * @@form-control-variant-padding-horizontal-scale);
+  padding-right: floor(@@form-control-variant-padding-horizontal * @@form-control-variant-padding-horizontal-scale);
+  .border-radius(@@form-control-variant-border-radius * @@form-control-variant-border-radius-scale);
+
 }
 
 .form-control-size-variant-size(@variant-size, @variant-screen-size) when (@variant-screen-size = '') {
-	
-	@form-control-variant-text-font-size: "form-control-@{variant-size}-text-font-size";
-	@form-control-variant-text-line-height: "form-control-@{variant-size}-text-line-height";
-	@form-control-variant-height:	"form-control-@{variant-size}-height";
-	@form-control-variant-padding-horizontal: "form-control-@{variant-size}-padding-horizontal";
-	@form-control-variant-border-radius: "form-control-@{variant-size}-border-radius";
-	
-	font-size: floor(@@form-control-variant-text-font-size);
-	line-height: floor(@@form-control-variant-text-line-height);
-	.box-sizing-padding-vertical(floor(@@form-control-variant-height), floor(@@form-control-variant-text-line-height));
-	padding-left: floor(@@form-control-variant-padding-horizontal);
-	padding-right: floor(@@form-control-variant-padding-horizontal);
-	.border-radius(@@form-control-variant-border-radius);
+
+  @form-control-variant-text-font-size: "form-control-@{variant-size}-text-font-size";
+  @form-control-variant-text-line-height: "form-control-@{variant-size}-text-line-height";
+  @form-control-variant-height:  "form-control-@{variant-size}-height";
+  @form-control-variant-padding-horizontal: "form-control-@{variant-size}-padding-horizontal";
+  @form-control-variant-border-radius: "form-control-@{variant-size}-border-radius";
+
+  font-size: floor(@@form-control-variant-text-font-size);
+  line-height: floor(@@form-control-variant-text-line-height);
+  .box-sizing-padding-vertical(floor(@@form-control-variant-height), floor(@@form-control-variant-text-line-height));
+  padding-left: floor(@@form-control-variant-padding-horizontal);
+  padding-right: floor(@@form-control-variant-padding-horizontal);
+  .border-radius(@@form-control-variant-border-radius);
 
 }
-	
+
 .form-control-size-variant-size(@variant-size, @variant-screen-size) when (default()) {
-	
-	@form-control-variant-text-font-size: "form-control-@{variant-size}-text-font-size";
-		@form-control-variant-text-font-size-scale: "form-control-@{variant-size}-text-font-size-scale-@{variant-screen-size}";
-		@form-control-variant-text-line-height: "form-control-@{variant-size}-text-line-height";
-		@form-control-variant-text-line-height-scale: "form-control-@{variant-size}-text-line-height-scale-@{variant-screen-size}";
-		@form-control-variant-height:	"form-control-@{variant-size}-height";
-		@form-control-variant-height-scale: "form-control-@{variant-size}-height-scale-@{variant-screen-size}";
-		@form-control-variant-padding-horizontal: "form-control-@{variant-size}-padding-horizontal";
-		@form-control-variant-padding-horizontal-scale: "form-control-@{variant-size}-padding-horizontal-scale-@{variant-screen-size}";
-		@form-control-variant-border-radius: "form-control-@{variant-size}-border-radius";
-		@form-control-variant-border-radius-scale: "form-control-@{variant-size}-border-radius-scale-@{variant-screen-size}";
-		
-		font-size: floor(@@form-control-variant-text-font-size * @@form-control-variant-text-font-size-scale);
-		line-height: floor(@@form-control-variant-text-line-height * @@form-control-variant-text-line-height-scale);
-		.box-sizing-padding-vertical(floor(@@form-control-variant-height * @@form-control-variant-height-scale), floor(@@form-control-variant-text-line-height * @@form-control-variant-text-font-size-scale));
-		padding-left: floor(@@form-control-variant-padding-horizontal * @@form-control-variant-padding-horizontal-scale);
-		padding-right: floor(@@form-control-variant-padding-horizontal * @@form-control-variant-padding-horizontal-scale);
-		.border-radius(@@form-control-variant-border-radius * @@form-control-variant-border-radius-scale);
-	
+
+  @form-control-variant-text-font-size: "form-control-@{variant-size}-text-font-size";
+  @form-control-variant-text-font-size-scale: "form-control-@{variant-size}-text-font-size-scale-@{variant-screen-size}";
+  @form-control-variant-text-line-height: "form-control-@{variant-size}-text-line-height";
+  @form-control-variant-text-line-height-scale: "form-control-@{variant-size}-text-line-height-scale-@{variant-screen-size}";
+  @form-control-variant-height:  "form-control-@{variant-size}-height";
+  @form-control-variant-height-scale: "form-control-@{variant-size}-height-scale-@{variant-screen-size}";
+  @form-control-variant-padding-horizontal: "form-control-@{variant-size}-padding-horizontal";
+  @form-control-variant-padding-horizontal-scale: "form-control-@{variant-size}-padding-horizontal-scale-@{variant-screen-size}";
+  @form-control-variant-border-radius: "form-control-@{variant-size}-border-radius";
+  @form-control-variant-border-radius-scale: "form-control-@{variant-size}-border-radius-scale-@{variant-screen-size}";
+
+  font-size: floor(@@form-control-variant-text-font-size * @@form-control-variant-text-font-size-scale);
+  line-height: floor(@@form-control-variant-text-line-height * @@form-control-variant-text-line-height-scale);
+  .box-sizing-padding-vertical(floor(@@form-control-variant-height * @@form-control-variant-height-scale), floor(@@form-control-variant-text-line-height * @@form-control-variant-text-font-size-scale));
+  padding-left: floor(@@form-control-variant-padding-horizontal * @@form-control-variant-padding-horizontal-scale);
+  padding-right: floor(@@form-control-variant-padding-horizontal * @@form-control-variant-padding-horizontal-scale);
+  .border-radius(@@form-control-variant-border-radius * @@form-control-variant-border-radius-scale);
+
 }
