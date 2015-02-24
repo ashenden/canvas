@@ -1,6 +1,6 @@
 {
   "name": "canvas-ui-system",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Canvas is a frontend system for quickly developing reponsive user interfaces that are driven almost entirely by variable definitions.",
   "main": "index.js",
   "scripts": {
