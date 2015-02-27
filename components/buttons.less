@@ -236,6 +236,19 @@ base/buttons.less
 
 
     /* -----------------------------------------------------------------------------
+    Button (Default) State: Selected
+    ----------------------------------------------------------------------------- */
+
+    &.active {
+
+      outline: 0;
+      .button-variant('default-selected');
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
     Button (Default) State: Disabled
     ----------------------------------------------------------------------------- */
 
@@ -291,6 +304,18 @@ base/buttons.less
         &:active {
 
           .button-variant('default-link-active');
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Button (Default, Link) State: Selected
+        ----------------------------------------------------------------------------- */
+
+        &:active {
+
+          .button-variant('default-link-selected');
 
         }
 
@@ -359,6 +384,18 @@ base/buttons.less
 
 
         /* -----------------------------------------------------------------------------
+        Button (Default, Stroke) State: Selected
+        ----------------------------------------------------------------------------- */
+
+        &:active {
+
+          .button-variant('default-stroke-selected');
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
         Button (Default, Stroke) State: Disabled
         ----------------------------------------------------------------------------- */
 
@@ -415,6 +452,18 @@ base/buttons.less
         &:active {
 
           .button-variant('default-inverse-active');
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Button (Default, Inverse) State: Selected
+        ----------------------------------------------------------------------------- */
+
+        &:active {
+
+          .button-variant('default-inverse-selected');
 
         }
 
@@ -479,6 +528,18 @@ base/buttons.less
 
 
             /* -----------------------------------------------------------------------------
+            Button (Default, Inverse, Link) State: Selected
+            ----------------------------------------------------------------------------- */
+
+            &:active {
+
+              .button-variant('default-inverse-link-selected');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
             Button (Default, Inverse, Link) State: Disabled
             ----------------------------------------------------------------------------- */
 
@@ -535,6 +596,18 @@ base/buttons.less
             &:active {
 
               .button-variant('default-inverse-stroke-active');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Button (Default, Inverse, Stroke) State: Selected
+            ----------------------------------------------------------------------------- */
+
+            &:active {
+
+              .button-variant('default-inverse-stroke-selected');
 
             }
 
@@ -614,6 +687,18 @@ base/buttons.less
 
 
     /* -----------------------------------------------------------------------------
+    Button (Primary) State: Selected
+    ----------------------------------------------------------------------------- */
+
+    &.active {
+
+      .button-variant('primary-selected');
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
     Button (Primary) State: Disabled
     ----------------------------------------------------------------------------- */
 
@@ -666,6 +751,18 @@ base/buttons.less
         &:active {
 
           .button-variant('primary-link-active');
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Button (Primary, Link) State: Selected
+        ----------------------------------------------------------------------------- */
+
+        &.active {
+
+          .button-variant('primary-link-selected');
 
         }
 
@@ -734,6 +831,18 @@ base/buttons.less
 
 
         /* -----------------------------------------------------------------------------
+        Button (Primary, Stroke) State: Selected
+        ----------------------------------------------------------------------------- */
+
+        &.active {
+
+          .button-variant('primary-stroke-selected');
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
         Button (Primary, Stroke) State: Disabled
         ----------------------------------------------------------------------------- */
 
@@ -790,6 +899,18 @@ base/buttons.less
         &:active {
 
           .button-variant('primary-inverse-active');
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Button (Primary, Inverse) State: Selected
+        ----------------------------------------------------------------------------- */
+
+        &.active {
+
+          .button-variant('primary-inverse-selected');
 
         }
 
@@ -854,6 +975,18 @@ base/buttons.less
 
 
             /* -----------------------------------------------------------------------------
+            Button (Primary, Inverse, Link) State: Selected
+            ----------------------------------------------------------------------------- */
+
+            &.active {
+
+              .button-variant('primary-inverse-link-selected');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
             Button (Primary, Inverse, Link) State: Disabled
             ----------------------------------------------------------------------------- */
 
@@ -910,6 +1043,18 @@ base/buttons.less
             &:active {
 
               .button-variant('primary-inverse-stroke-active');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Button (Primary, Inverse, Stroke) State: Selected
+            ----------------------------------------------------------------------------- */
+
+            &.active {
+
+              .button-variant('primary-inverse-stroke-selected');
 
             }
 
@@ -2188,6 +2333,175 @@ base/buttons.less
 
 
 
+& when (@button-group-enabled) {
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Button Group
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  .button-group {
+
+    display: block;
+    font-size: 0px;
+    .clearfix();
+
+
+
+    /* -----------------------------------------------------------------------------
+    Button
+    ----------------------------------------------------------------------------- */
+
+    > .button {
+
+      position: relative;
+      float: left;
+
+      &:not(:first-child) {
+
+          &:not(:last-child) {
+
+              .border-radius(0px) !important;
+
+          }
+
+      }
+
+      &:first-child {
+
+          margin-left: 0px;
+
+          &:not(:last-child) {
+
+              .border-right-radius(0px) !important;
+
+          }
+
+      }
+
+      &:last-child {
+
+          &:not(:first-child) {
+
+              .border-left-radius(0px) !important;
+
+          }
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Button
+    ----------------------------------------------------------------------------- */
+
+    .button {
+
+      + .button {
+
+          margin-left: @button-group-button-default-offset-horizontal;
+
+          &.button-stroke {
+
+            margin-left: @button-group-button-stroke-offset-horizontal;
+
+          }
+
+      }
+
+      + .button-group {
+
+        margin-left: @button-group-button-default-offset-horizontal;
+
+      }
+
+    }
+
+
+
+    /* -----------------------------------------------------------------------------
+    Button Group
+    ----------------------------------------------------------------------------- */
+
+    .button-group {
+
+      + .button {
+
+          margin-left: @button-group-button-default-offset-horizontal;
+
+          &.button-stroke {
+
+            margin-left: @button-group-button-stroke-offset-horizontal;
+
+          }
+
+      }
+
+      + .button-group {
+
+        margin-left: @button-group-button-default-offset-horizontal;
+
+      }
+
+    }
+
+  }
+
+
+
+
+
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Button Controls
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
+  [data-toggle=buttons] {
+
+    > .button {
+
+      input[type=checkbox],
+      input[type=radio] {
+
+        .invisible();
+
+      }
+
+    }
+
+    > .button-group {
+
+      > .button {
+
+        input[type=checkbox],
+        input[type=radio] {
+
+          .invisible();
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
 & when (@button-enabled) and (@screen-mini-enabled) {
 
   /* -----------------------------------------------------------------------------
@@ -3069,7 +3383,7 @@ base/buttons.less
 
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
-  
+
   @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 
   }
