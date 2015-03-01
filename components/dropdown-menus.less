@@ -67,6 +67,28 @@ template.less
       display: block;
       padding: floor((@dropdown-menu-header-height-minimum - @dropdown-menu-header-text-line-height) / 2) @dropdown-menu-header-padding-horizontal;
       margin: @dropdown-menu-header-margin-vertical-top @dropdown-menu-header-margin-horizontal @dropdown-menu-header-margin-vertical-bottom;
+      font-size: @dropdown-menu-header-text-font-size;
+      line-height: @dropdown-menu-header-text-line-height;
+      .border-radius(@dropdown-menu-header-border-radius);
+      color: @dropdown-menu-header-default-text-color;
+      font-family: @dropdown-menu-header-default-text-font-family;
+      font-style: @dropdown-menu-header-default-text-font-style;
+      font-weight: @dropdown-menu-header-default-text-font-weight;
+      text-transform: @dropdown-menu-header-default-text-transform;
+      text-shadow: @dropdown-menu-header-default-text-shadow;
+      text-decoratino: @dropdown-menu-header-default-text-decoration;
+      text-rendering: @dropdown-menu-header-default-text-rendering;
+      background: @dropdown-menu-header-default-background-color;
+      #gradient > .vertical(@dropdown-menu-header-default-background-gradient-color-top, @dropdown-menu-header-default-background-gradient-color-bottom);
+      border-top-width: @dropdown-menu-header-default-border-top-width;
+      border-top-color: @dropdown-menu-header-default-border-top-color;
+      border-right-width: @dropdown-menu-header-default-border-right-width;
+      border-right-color: @dropdown-menu-header-default-border-right-color;
+      border-bottom-width: @dropdown-menu-header-default-border-bottom-width;
+      border-bottom-color: @dropdown-menu-header-default-border-bottom-color;
+      border-left-width: @dropdown-menu-header-default-border-left-width;
+      border-left-color: @dropdown-menu-header-default-border-left-color;
+      .box-shadow(@dropdown-menu-header-default-shadow);
 
 
 
@@ -219,6 +241,43 @@ template.less
         border-left-width: @dropdown-menu-inverse-border-left-width;
         border-left-color: @dropdown-menu-inverse-border-left-color;
         .box-shadow(@dropdown-menu-inverse-shadow);
+
+
+
+
+
+        
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+
+        Dropdown Menu Header
+
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        .dropdown-menu-header {
+
+          color: @dropdown-menu-header-inverse-text-color;
+          font-family: @dropdown-menu-header-inverse-text-font-family;
+          font-style: @dropdown-menu-header-inverse-text-font-style;
+          font-weight: @dropdown-menu-header-inverse-text-font-weight;
+          text-transform: @dropdown-menu-header-inverse-text-transform;
+          text-shadow: @dropdown-menu-header-inverse-text-shadow;
+          text-decoratino: @dropdown-menu-header-inverse-text-decoration;
+          text-rendering: @dropdown-menu-header-inverse-text-rendering;
+          background: @dropdown-menu-header-inverse-background-color;
+          #gradient > .vertical(@dropdown-menu-header-inverse-background-gradient-color-top, @dropdown-menu-header-inverse-background-gradient-color-bottom);
+          border-top-width: @dropdown-menu-header-inverse-border-top-width;
+          border-top-color: @dropdown-menu-header-inverse-border-top-color;
+          border-right-width: @dropdown-menu-header-inverse-border-right-width;
+          border-right-color: @dropdown-menu-header-inverse-border-right-color;
+          border-bottom-width: @dropdown-menu-header-inverse-border-bottom-width;
+          border-bottom-color: @dropdown-menu-header-inverse-border-bottom-color;
+          border-left-width: @dropdown-menu-header-inverse-border-left-width;
+          border-left-color: @dropdown-menu-header-inverse-border-left-color;
+          .box-shadow(@dropdown-menu-header-inverse-shadow);
+
+        }
 
 
 

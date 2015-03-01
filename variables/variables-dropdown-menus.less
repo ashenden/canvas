@@ -120,11 +120,13 @@ Dropdown Menu Header
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
+
+
 /* -----------------------------------------------------------------------------
 Dropdown Menu Header Styles
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-header-text-font-size:                                           @body-text-font-size;
+@dropdown-menu-header-text-font-size:                                           @body-text-font-size * 0.9;
 @dropdown-menu-header-text-line-height:                                         @body-text-line-height;
 @dropdown-menu-header-height-minimum:                                           @dropdown-menu-header-text-line-height;
 @dropdown-menu-header-padding-horizontal:                                       @dropdown-menu-padding-horizontal;
@@ -132,6 +134,7 @@ Dropdown Menu Header Styles
 @dropdown-menu-header-margin-vertical-bottom:                                   @dropdown-menu-padding-vertical;
 @dropdown-menu-header-margin-horizontal:                                        -@dropdown-menu-padding-horizontal;
 @dropdown-menu-header-border-radius:                                            0px;
+
 
 
 /* -----------------------------------------------------------------------------
@@ -180,6 +183,70 @@ Dropdown Menu Header Responsive Scaling
 
 
 
+/* -----------------------------------------------------------------------------
+Dropdown Menu Header (Default) Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-header-default-text-color:                                       ~`color_lightness("@{gray}", 0)`;
+@dropdown-menu-header-default-text-font-family:                                 @font-family-sans-serif;
+@dropdown-menu-header-default-text-font-style:                                  normal;
+@dropdown-menu-header-default-text-font-weight:                                 400;
+@dropdown-menu-header-default-text-transform:                                   none;
+@dropdown-menu-header-default-text-shadow:                                      none;
+@dropdown-menu-header-default-text-decoration:                                  none;
+@dropdown-menu-header-default-text-rendering:                                   optimizelegibility;
+@dropdown-menu-header-default-background-color:                                 none;
+@dropdown-menu-header-default-background-gradient-color-top:                    none;
+@dropdown-menu-header-default-background-gradient-color-bottom:                 none;
+@dropdown-menu-header-default-border-width:                                     0px;
+@dropdown-menu-header-default-border-color:                                     none;
+@dropdown-menu-header-default-border-top-width:                                 @dropdown-menu-header-default-border-width;
+@dropdown-menu-header-default-border-top-color:                                 @dropdown-menu-header-default-border-color;
+@dropdown-menu-header-default-border-right-width:                               @dropdown-menu-header-default-border-width;
+@dropdown-menu-header-default-border-right-color:                               @dropdown-menu-header-default-border-color;
+@dropdown-menu-header-default-border-bottom-width:                              @dropdown-menu-header-default-border-width;
+@dropdown-menu-header-default-border-bottom-color:                              @dropdown-menu-header-default-border-color;
+@dropdown-menu-header-default-border-left-width:                                @dropdown-menu-header-default-border-width;
+@dropdown-menu-header-default-border-left-color:                                @dropdown-menu-header-default-border-color;
+@dropdown-menu-header-default-caret-color:                                      @dropdown-menu-header-default-text-color;
+@dropdown-menu-header-default-shadow:                                           none;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu Header (Inverse) Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-header-inverse-text-color:                                       ~`color_lightness("@{gray}", -40)`;
+@dropdown-menu-header-inverse-text-font-family:                                 @font-family-sans-serif;
+@dropdown-menu-header-inverse-text-font-style:                                  normal;
+@dropdown-menu-header-inverse-text-font-weight:                                 400;
+@dropdown-menu-header-inverse-text-transform:                                   none;
+@dropdown-menu-header-inverse-text-shadow:                                      none;
+@dropdown-menu-header-inverse-text-decoration:                                  none;
+@dropdown-menu-header-inverse-text-rendering:                                   optimizelegibility;
+@dropdown-menu-header-inverse-background-color:                                 none;
+@dropdown-menu-header-inverse-background-gradient-color-top:                    none;
+@dropdown-menu-header-inverse-background-gradient-color-bottom:                 none;
+@dropdown-menu-header-inverse-border-width:                                     0px;
+@dropdown-menu-header-inverse-border-color:                                     none;
+@dropdown-menu-header-inverse-border-top-width:                                 @dropdown-menu-header-inverse-border-width;
+@dropdown-menu-header-inverse-border-top-color:                                 @dropdown-menu-header-inverse-border-color;
+@dropdown-menu-header-inverse-border-right-width:                               @dropdown-menu-header-inverse-border-width;
+@dropdown-menu-header-inverse-border-right-color:                               @dropdown-menu-header-inverse-border-color;
+@dropdown-menu-header-inverse-border-bottom-width:                              @dropdown-menu-header-inverse-border-width;
+@dropdown-menu-header-inverse-border-bottom-color:                              @dropdown-menu-header-inverse-border-color;
+@dropdown-menu-header-inverse-border-left-width:                                @dropdown-menu-header-inverse-border-width;
+@dropdown-menu-header-inverse-border-left-color:                                @dropdown-menu-header-inverse-border-color;
+@dropdown-menu-header-inverse-caret-color:                                      @dropdown-menu-header-inverse-text-color;
+@dropdown-menu-header-inverse-shadow:                                           none;
+
+
+
+
+
+
+
 
 
 
@@ -190,6 +257,8 @@ Dropdown Menu Divider
 
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
+
+
 
 /* -----------------------------------------------------------------------------
 Dropdown Menu Divider Styles
@@ -293,6 +362,8 @@ Dropdown Menu List
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
 
+
+
 /* -----------------------------------------------------------------------------
 Dropdown Menu List Styles
 ----------------------------------------------------------------------------- */
@@ -333,6 +404,8 @@ Dropdown Menu List Item
 
 --------------------------------------------------------------------------------
 ----------------------------------------------------------------------------- */
+
+
 
 /* -----------------------------------------------------------------------------
 Dropdown Menu List Item Styles
