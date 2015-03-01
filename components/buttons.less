@@ -2737,7 +2737,7 @@ base/buttons.less
   .button-group {
 
     display: block;
-    font-size: 0px;
+    position: relative;
     .clearfix();
 
 
@@ -2753,23 +2753,31 @@ base/buttons.less
 
       &:not(:first-child) {
 
-          &:not(:last-child) {
+        &:not(:last-child) {
 
-              .border-radius(0px) !important;
+          &:not(.dropdown-toggle) {
+
+            .border-radius(0px) !important;
 
           }
+
+        }
 
       }
 
       &:first-child {
 
-          margin-left: 0px;
+        margin-left: 0px;
 
-          &:not(:last-child) {
+        &:not(:last-child) {
 
-              .border-right-radius(0px) !important;
+          &:not(.dropdown-toggle) {
+
+            .border-right-radius(0px) !important;
 
           }
+
+        }
 
       }
 
@@ -2795,13 +2803,13 @@ base/buttons.less
 
       + .button {
 
-          margin-left: @button-group-button-default-offset-horizontal;
+        margin-left: @button-group-button-default-offset-horizontal;
 
-          &.button-stroke {
+        &.button-stroke {
 
-            margin-left: @button-group-button-stroke-offset-horizontal;
+          margin-left: @button-group-button-stroke-offset-horizontal;
 
-          }
+        }
 
       }
 
@@ -2823,13 +2831,13 @@ base/buttons.less
 
       + .button {
 
-          margin-left: @button-group-button-default-offset-horizontal;
+        margin-left: @button-group-button-default-offset-horizontal;
 
-          &.button-stroke {
+        &.button-stroke {
 
-            margin-left: @button-group-button-stroke-offset-horizontal;
+          margin-left: @button-group-button-stroke-offset-horizontal;
 
-          }
+        }
 
       }
 
