@@ -124,6 +124,13 @@ Button Size Styling
   @button-variant-height:  "button-height";
   @button-variant-padding-horizontal: "button-padding-horizontal";
   @button-variant-border-radius: "button-border-radius";
+  @button-variant-dropdown-caret-enabled: "button-dropdown-caret-enabled";
+  @button-variant-dropdown-caret-width: "button-dropdown-caret-width";
+  @button-variant-dropdown-caret-height: "button-dropdown-caret-height";
+  @button-variant-dropdown-caret-margin-horizontal: "button-dropdown-caret-margin-horizontal";
+  @button-variant-dropdown-caret-offset-vertical: "button-dropdown-caret-offset-vertical";
+  @button-variant-dropdown-caret-offset-horizontal: "button-dropdown-caret-offset-horizontal";
+
 
   font-size: floor(@@button-variant-text-font-size);
   line-height: floor(@@button-variant-text-line-height);
@@ -131,6 +138,37 @@ Button Size Styling
   padding-left: floor(@@button-variant-padding-horizontal);
   padding-right: floor(@@button-variant-padding-horizontal);
   .border-radius(@@button-variant-border-radius);
+
+
+
+  & when (@button-dropdown-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    Button Dropdown
+    ----------------------------------------------------------------------------- */
+
+    &.dropdown-toggle {
+
+      & when (@@button-variant-dropdown-caret-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Button Dropdown Caret
+        ----------------------------------------------------------------------------- */
+
+        &:after {
+
+          .triangle-size('down', floor(@@button-variant-dropdown-caret-width), floor(@@button-variant-dropdown-caret-height));
+          margin-left: floor(@@button-variant-dropdown-caret-margin-horizontal);
+          margin-top: floor(@@button-variant-dropdown-caret-offset-vertical);
+          margin-right: floor(@@button-variant-dropdown-caret-offset-horizontal);
+
+        }
+
+      }
+
+    }
+
+  }
 
 }
 
@@ -146,6 +184,13 @@ Button Size Styling
   @button-variant-padding-horizontal-scale: "button-padding-horizontal-scale-@{variant-screen-size}";
   @button-variant-border-radius: "button-border-radius";
   @button-variant-border-radius-scale: "button-border-radius-scale-@{variant-screen-size}";
+  @button-variant-dropdown-caret-enabled: "button-dropdown-caret-enabled";
+  @button-variant-dropdown-caret-width: "button-dropdown-caret-width";
+  @button-variant-dropdown-caret-height: "button-dropdown-caret-height";
+  @button-variant-dropdown-caret-margin-horizontal: "button-dropdown-caret-margin-horizontal";
+  @button-variant-dropdown-caret-offset-vertical: "button-dropdown-caret-offset-vertical";
+  @button-variant-dropdown-caret-offset-horizontal: "button-dropdown-caret-offset-horizontal";
+  @button-variant-dropdown-caret-scale: "button-dropdown-caret-scale-@{variant-screen-size}";
 
   font-size: floor(@@button-variant-text-font-size * @@button-variant-text-font-size-scale);
   line-height: floor(@@button-variant-text-line-height * @@button-variant-text-line-height-scale);
@@ -153,6 +198,37 @@ Button Size Styling
   padding-left: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
   padding-right: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
   .border-radius(@@button-variant-border-radius * @@button-variant-border-radius-scale);
+
+
+
+  & when (@button-dropdown-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    Button Dropdown
+    ----------------------------------------------------------------------------- */
+
+    &.dropdown-toggle {
+
+      & when (@@button-variant-dropdown-caret-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Button Dropdown Caret
+        ----------------------------------------------------------------------------- */
+
+        &:after {
+
+          .triangle-size('down', floor(@@button-variant-dropdown-caret-width * @@button-variant-dropdown-caret-scale), floor(@@button-variant-dropdown-caret-height * @@button-variant-dropdown-caret-scale));
+          margin-left: floor(@@button-variant-dropdown-caret-margin-horizontal * @@button-variant-dropdown-caret-scale);
+          margin-top: floor(@@button-variant-dropdown-caret-offset-vertical * @@button-variant-dropdown-caret-scale);
+          margin-right: floor(@@button-variant-dropdown-caret-offset-horizontal * @@button-variant-dropdown-caret-scale);
+
+        }
+
+      }
+
+    }
+
+  }
 
 }
 
@@ -163,6 +239,12 @@ Button Size Styling
   @button-variant-height:  "button-@{variant-size}-height";
   @button-variant-padding-horizontal: "button-@{variant-size}-padding-horizontal";
   @button-variant-border-radius: "button-@{variant-size}-border-radius";
+  @button-variant-dropdown-caret-enabled: "button-@{variant-size}-dropdown-caret-enabled";
+  @button-variant-dropdown-caret-width: "button-@{variant-size}-dropdown-caret-width";
+  @button-variant-dropdown-caret-height: "button-@{variant-size}-dropdown-caret-height";
+  @button-variant-dropdown-caret-margin-horizontal: "button-@{variant-size}-dropdown-caret-margin-horizontal";
+  @button-variant-dropdown-caret-offset-vertical: "button-@{variant-size}-dropdown-caret-offset-vertical";
+  @button-variant-dropdown-caret-offset-horizontal: "button-@{variant-size}-dropdown-caret-offset-horizontal";
 
   font-size: floor(@@button-variant-text-font-size);
   line-height: floor(@@button-variant-text-line-height);
@@ -170,6 +252,37 @@ Button Size Styling
   padding-left: floor(@@button-variant-padding-horizontal);
   padding-right: floor(@@button-variant-padding-horizontal);
   .border-radius(@@button-variant-border-radius);
+
+
+
+  & when (@button-dropdown-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    Button Dropdown
+    ----------------------------------------------------------------------------- */
+
+    &.dropdown-toggle {
+
+      & when (@@button-variant-dropdown-caret-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Button Dropdown Caret
+        ----------------------------------------------------------------------------- */
+
+        &:after {
+
+          .triangle-size('down', floor(@@button-variant-dropdown-caret-width), floor(@@button-variant-dropdown-caret-height));
+          margin-left: floor(@@button-variant-dropdown-caret-margin-horizontal);
+          margin-top: floor(@@button-variant-dropdown-caret-offset-vertical);
+          margin-right: floor(@@button-variant-dropdown-caret-offset-horizontal);
+
+        }
+
+      }
+
+    }
+
+  }
 
 }
 
@@ -185,6 +298,13 @@ Button Size Styling
   @button-variant-padding-horizontal-scale: "button-@{variant-size}-padding-horizontal-scale-@{variant-screen-size}";
   @button-variant-border-radius: "button-@{variant-size}-border-radius";
   @button-variant-border-radius-scale: "button-@{variant-size}-border-radius-scale-@{variant-screen-size}";
+  @button-variant-dropdown-caret-enabled: "button-@{variant-size}-dropdown-caret-enabled";
+  @button-variant-dropdown-caret-width: "button-@{variant-size}-dropdown-caret-width";
+  @button-variant-dropdown-caret-height: "button-@{variant-size}-dropdown-caret-height";
+  @button-variant-dropdown-caret-margin-horizontal: "button-@{variant-size}-dropdown-caret-margin-horizontal";
+  @button-variant-dropdown-caret-offset-vertical: "button-@{variant-size}-dropdown-caret-offset-vertical";
+  @button-variant-dropdown-caret-offset-horizontal: "button-@{variant-size}-dropdown-caret-offset-horizontal";
+  @button-variant-dropdown-caret-scale: "button-@{variant-size}-dropdown-caret-scale-@{variant-screen-size}";
 
   font-size: floor(@@button-variant-text-font-size * @@button-variant-text-font-size-scale);
   line-height: floor(@@button-variant-text-line-height * @@button-variant-text-line-height-scale);
@@ -192,5 +312,36 @@ Button Size Styling
   padding-left: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
   padding-right: floor(@@button-variant-padding-horizontal * @@button-variant-padding-horizontal-scale);
   .border-radius(@@button-variant-border-radius * @@button-variant-border-radius-scale);
+
+
+
+  & when (@button-dropdown-enabled) {
+
+    /* -----------------------------------------------------------------------------
+    Button Dropdown
+    ----------------------------------------------------------------------------- */
+
+    &.dropdown-toggle {
+
+      & when (@@button-variant-dropdown-caret-enabled) {
+
+        /* -----------------------------------------------------------------------------
+        Button Dropdown Caret
+        ----------------------------------------------------------------------------- */
+
+        &:after {
+
+          .triangle-size('down', floor(@@button-variant-dropdown-caret-width * @@button-variant-dropdown-caret-scale), floor(@@button-variant-dropdown-caret-height * @@button-variant-dropdown-caret-scale));
+          margin-left: floor(@@button-variant-dropdown-caret-margin-horizontal * @@button-variant-dropdown-caret-scale);
+          margin-top: floor(@@button-variant-dropdown-caret-offset-vertical * @@button-variant-dropdown-caret-scale);
+          margin-right: floor(@@button-variant-dropdown-caret-offset-horizontal * @@button-variant-dropdown-caret-scale);
+
+        }
+
+      }
+
+    }
+
+  }
 
 }

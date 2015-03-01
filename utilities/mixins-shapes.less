@@ -24,7 +24,7 @@ Triangle
 .triangle-base() {
 
   content: '';
-  display: block;
+  display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
@@ -33,15 +33,11 @@ Triangle
 
 }
 
-
-
 .triangle(@direction, @size, @color) {
 
   .triangle(@direction, @size * 2, @size, @color);
 
 }
-
-
 
 .triangle(@direction, @width, @height, @color) when (@direction = 'up') {
 
@@ -53,8 +49,6 @@ Triangle
 
 }
 
-
-
 .triangle(@direction, @width, @height, @color) when (@direction = 'down') {
 
   .triangle-base();
@@ -65,8 +59,6 @@ Triangle
 
 }
 
-
-
 .triangle(@direction, @width, @height, @color) when (@direction = 'left') {
 
   .triangle-base();
@@ -76,8 +68,6 @@ Triangle
   _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 
 }
-
-
 
 .triangle(@direction, @width, @height, @color) when (@direction = 'right') {
 
@@ -91,14 +81,46 @@ Triangle
 
 
 
+/* -----------------------------------------------------------------------------
+Triangle Size
+----------------------------------------------------------------------------- */
+
+.triangle-size(@direction, @width, @height) when (@direction = 'up') {
+
+  border-width: 0 (@width / 2) @height (@width / 2);
+
+}
+
+.triangle-size(@direction, @width, @height) when (@direction = 'down') {
+
+  border-width: @height (@width / 2) 0 (@width / 2);
+
+}
+
+.triangle-size(@direction, @width, @height) when (@direction = 'left') {
+
+  border-width: (@height / 2) @width (@height / 2) 0;
+
+}
+
+.triangle-size(@direction, @width, @height) when (@direction = 'right') {
+
+  border-width: (@height / 2) 0 (@height / 2) @width;
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+Triangle Color
+----------------------------------------------------------------------------- */
+
 .triangle-color(@direction, @color) when (@direction = 'up') {
 
   border-color: transparent transparent @color transparent;
   _border-color: #000000 #000000 @color #000000;
 
 }
-
-
 
 .triangle-color(@direction, @color) when (@direction = 'down') {
 
@@ -107,16 +129,12 @@ Triangle
 
 }
 
-
-
 .triangle-color(@direction, @color) when (@direction = 'left') {
 
   border-color: transparent @color transparent transparent;
   _border-color: #000000 @color #000000 #000000;
 
 }
-
-
 
 .triangle-color(@direction, @color) when (@direction = 'right') {
 

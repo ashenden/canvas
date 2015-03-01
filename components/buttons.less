@@ -84,12 +84,9 @@ base/buttons.less
           &:after {
 
             content: '';
-            display: inline-block !important;
+            display: inline-block;
             vertical-align: middle;
-            .triangle('down', @button-dropdown-caret-width, @button-dropdown-caret-height, #000000);
-            margin-left: @button-dropdown-caret-margin-horizontal;
-            margin-top: @button-dropdown-caret-offset-vertical;
-            margin-right: @button-dropdown-caret-offset-horizontal;
+            .triangle-base();
 
           }
 
@@ -134,7 +131,7 @@ base/buttons.less
 
         &.dropdown-toggle {
 
-          & when (@button-mini-dropdown-caret-enabled) {
+          & when not (@button-mini-dropdown-caret-enabled) {
 
             /* -----------------------------------------------------------------------------
             Button Dropdown Caret
@@ -142,10 +139,7 @@ base/buttons.less
 
             &:after {
 
-              .triangle('down', @button-mini-dropdown-caret-width, @button-mini-dropdown-caret-height, #000000);
-              margin-left: @button-mini-dropdown-caret-margin-horizontal;
-              margin-top: @button-mini-dropdown-caret-offset-vertical;
-              margin-right: @button-mini-dropdown-caret-offset-horizontal;
+              display: none;
 
             }
 
@@ -192,7 +186,7 @@ base/buttons.less
 
         &.dropdown-toggle {
 
-          & when (@button-small-dropdown-caret-enabled) {
+          & when not (@button-small-dropdown-caret-enabled) {
 
             /* -----------------------------------------------------------------------------
             Button Dropdown Caret
@@ -200,10 +194,7 @@ base/buttons.less
 
             &:after {
 
-              .triangle('down', @button-small-dropdown-caret-width, @button-small-dropdown-caret-height, #000000);
-              margin-left: @button-small-dropdown-caret-margin-horizontal;
-              margin-top: @button-small-dropdown-caret-offset-vertical;
-              margin-right: @button-small-dropdown-caret-offset-horizontal;
+              display: none;
 
             }
 
@@ -250,7 +241,7 @@ base/buttons.less
 
         &.dropdown-toggle {
 
-          & when (@button-large-dropdown-caret-enabled) {
+          & when not (@button-large-dropdown-caret-enabled) {
 
             /* -----------------------------------------------------------------------------
             Button Dropdown Caret
@@ -258,10 +249,7 @@ base/buttons.less
 
             &:after {
 
-              .triangle('down', @button-large-dropdown-caret-width, @button-large-dropdown-caret-height, #000000);
-              margin-left: @button-large-dropdown-caret-margin-horizontal;
-              margin-top: @button-large-dropdown-caret-offset-vertical;
-              margin-right: @button-large-dropdown-caret-offset-horizontal;
+              display: none;
 
             }
 
@@ -308,7 +296,7 @@ base/buttons.less
 
         &.dropdown-toggle {
 
-          & when (@button-jumbo-dropdown-caret-enabled) {
+          & when not (@button-jumbo-dropdown-caret-enabled) {
 
             /* -----------------------------------------------------------------------------
             Button Dropdown Caret
@@ -316,10 +304,7 @@ base/buttons.less
 
             &:after {
 
-              .triangle('down', @button-jumbo-dropdown-caret-width, @button-jumbo-dropdown-caret-height, #000000);
-              margin-left: @button-jumbo-dropdown-caret-margin-horizontal;
-              margin-top: @button-jumbo-dropdown-caret-offset-vertical;
-              margin-right: @button-jumbo-dropdown-caret-offset-horizontal;
+              display: none;
 
             }
 
