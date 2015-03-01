@@ -76,7 +76,7 @@ template.less
       font-weight: @dropdown-menu-header-default-text-font-weight;
       text-transform: @dropdown-menu-header-default-text-transform;
       text-shadow: @dropdown-menu-header-default-text-shadow;
-      text-decoratino: @dropdown-menu-header-default-text-decoration;
+      text-decoration: @dropdown-menu-header-default-text-decoration;
       text-rendering: @dropdown-menu-header-default-text-rendering;
       background: @dropdown-menu-header-default-background-color;
       #gradient > .vertical(@dropdown-menu-header-default-background-gradient-color-top, @dropdown-menu-header-default-background-gradient-color-bottom);
@@ -186,6 +186,17 @@ template.less
 
 
 
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Dropdown Menu List Item
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
       li {
 
         list-style: none;
@@ -193,6 +204,25 @@ template.less
         margin: @dropdown-menu-list-item-margin-vertical @dropdown-menu-list-item-margin-horizontal;
         font-size: @dropdown-menu-list-item-text-font-size;
         line-height: @dropdown-menu-list-item-text-line-height;
+        color: @dropdown-menu-list-item-text-color;
+        font-family: @dropdown-menu-list-item-text-font-family;
+        font-style: @dropdown-menu-list-item-text-font-style;
+        font-weight: @dropdown-menu-list-item-text-font-weight;
+        text-transform: @dropdown-menu-list-item-text-transform;
+        text-shadow: @dropdown-menu-list-item-text-shadow;
+        text-decoration: @dropdown-menu-list-item-text-decoration;
+        text-rendering: @dropdown-menu-list-item-text-rendering;
+        background: @dropdown-menu-list-item-background-color;
+        #gradient > .vertical(@dropdown-menu-list-item-background-gradient-color-top, @dropdown-menu-list-item-background-gradient-color-bottom);
+        border-top-width: @dropdown-menu-list-item-border-top-width;
+        border-top-color: @dropdown-menu-list-item-border-top-color;
+        border-right-width: @dropdown-menu-list-item-border-right-width;
+        border-right-color: @dropdown-menu-list-item-border-right-color;
+        border-bottom-width: @dropdown-menu-list-item-border-bottom-width;
+        border-bottom-color: @dropdown-menu-list-item-border-bottom-color;
+        border-left-width: @dropdown-menu-list-item-border-left-width;
+        border-left-color: @dropdown-menu-list-item-border-left-color;
+        .box-shadow(@dropdown-menu-list-item-shadow);
 
         &:before {
 
@@ -202,11 +232,294 @@ template.less
 
 
 
+        /* -----------------------------------------------------------------------------
+        Dropdown Menu List Item Link
+        ----------------------------------------------------------------------------- */
+
         a {
 
           display: block;
           margin: floor(-(@dropdown-menu-list-item-height - @dropdown-menu-list-item-text-line-height) / 2) -@dropdown-menu-list-item-padding-horizontal;
           padding: floor((@dropdown-menu-list-item-height - @dropdown-menu-list-item-text-line-height) / 2) @dropdown-menu-list-item-padding-horizontal;
+
+
+
+          /* -----------------------------------------------------------------------------
+          Dropdown Menu List Item (Default) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          color: @dropdown-menu-list-item-default-text-color;
+          font-family: @dropdown-menu-list-item-default-text-font-family;
+          font-style: @dropdown-menu-list-item-default-text-font-style;
+          font-weight: @dropdown-menu-list-item-default-text-font-weight;
+          text-transform: @dropdown-menu-list-item-default-text-transform;
+          text-shadow: @dropdown-menu-list-item-default-text-shadow;
+          text-decoration: @dropdown-menu-list-item-default-text-decoration;
+          text-rendering: @dropdown-menu-list-item-default-text-rendering;
+          background: @dropdown-menu-list-item-default-background-color;
+          #gradient > .vertical(@dropdown-menu-list-item-default-background-gradient-color-top, @dropdown-menu-list-item-default-background-gradient-color-bottom);
+          border-top-width: @dropdown-menu-list-item-default-border-top-width;
+          border-top-color: @dropdown-menu-list-item-default-border-top-color;
+          border-right-width: @dropdown-menu-list-item-default-border-right-width;
+          border-right-color: @dropdown-menu-list-item-default-border-right-color;
+          border-bottom-width: @dropdown-menu-list-item-default-border-bottom-width;
+          border-bottom-color: @dropdown-menu-list-item-default-border-bottom-color;
+          border-left-width: @dropdown-menu-list-item-default-border-left-width;
+          border-left-color: @dropdown-menu-list-item-default-border-left-color;
+          .box-shadow(@dropdown-menu-list-item-default-shadow);
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Dropdown Menu List Item (Default) State: Hover
+        ----------------------------------------------------------------------------- */
+
+        &:hover {
+
+          a {
+
+            color: @dropdown-menu-list-item-default-hover-text-color;
+            font-family: @dropdown-menu-list-item-default-hover-text-font-family;
+            font-style: @dropdown-menu-list-item-default-hover-text-font-style;
+            font-weight: @dropdown-menu-list-item-default-hover-text-font-weight;
+            text-transform: @dropdown-menu-list-item-default-hover-text-transform;
+            text-shadow: @dropdown-menu-list-item-default-hover-text-shadow;
+            text-decoration: @dropdown-menu-list-item-default-hover-text-decoration;
+            text-rendering: @dropdown-menu-list-item-default-hover-text-rendering;
+            background: @dropdown-menu-list-item-default-hover-background-color;
+            #gradient > .vertical(@dropdown-menu-list-item-default-hover-background-gradient-color-top, @dropdown-menu-list-item-default-hover-background-gradient-color-bottom);
+            border-top-width: @dropdown-menu-list-item-default-hover-border-top-width;
+            border-top-color: @dropdown-menu-list-item-default-hover-border-top-color;
+            border-right-width: @dropdown-menu-list-item-default-hover-border-right-width;
+            border-right-color: @dropdown-menu-list-item-default-hover-border-right-color;
+            border-bottom-width: @dropdown-menu-list-item-default-hover-border-bottom-width;
+            border-bottom-color: @dropdown-menu-list-item-default-hover-border-bottom-color;
+            border-left-width: @dropdown-menu-list-item-default-hover-border-left-width;
+            border-left-color: @dropdown-menu-list-item-default-hover-border-left-color;
+            .box-shadow(@dropdown-menu-list-item-default-hover-shadow);
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Dropdown Menu List Item (Default) State: Active
+        ----------------------------------------------------------------------------- */
+
+        &:active {
+
+          a {
+
+            color: @dropdown-menu-list-item-default-active-text-color;
+            font-family: @dropdown-menu-list-item-default-active-text-font-family;
+            font-style: @dropdown-menu-list-item-default-active-text-font-style;
+            font-weight: @dropdown-menu-list-item-default-active-text-font-weight;
+            text-transform: @dropdown-menu-list-item-default-active-text-transform;
+            text-shadow: @dropdown-menu-list-item-default-active-text-shadow;
+            text-decoration: @dropdown-menu-list-item-default-active-text-decoration;
+            text-rendering: @dropdown-menu-list-item-default-active-text-rendering;
+            background: @dropdown-menu-list-item-default-active-background-color;
+            #gradient > .vertical(@dropdown-menu-list-item-default-active-background-gradient-color-top, @dropdown-menu-list-item-default-active-background-gradient-color-bottom);
+            border-top-width: @dropdown-menu-list-item-default-active-border-top-width;
+            border-top-color: @dropdown-menu-list-item-default-active-border-top-color;
+            border-right-width: @dropdown-menu-list-item-default-active-border-right-width;
+            border-right-color: @dropdown-menu-list-item-default-active-border-right-color;
+            border-bottom-width: @dropdown-menu-list-item-default-active-border-bottom-width;
+            border-bottom-color: @dropdown-menu-list-item-default-active-border-bottom-color;
+            border-left-width: @dropdown-menu-list-item-default-active-border-left-width;
+            border-left-color: @dropdown-menu-list-item-default-active-border-left-color;
+            .box-shadow(@dropdown-menu-list-item-default-active-shadow);
+
+          }
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
+        Dropdown Menu List Item (Default) State: Selected
+        ----------------------------------------------------------------------------- */
+
+        &.selected {
+
+          a {
+
+            color: @dropdown-menu-list-item-default-selected-text-color;
+            font-family: @dropdown-menu-list-item-default-selected-text-font-family;
+            font-style: @dropdown-menu-list-item-default-selected-text-font-style;
+            font-weight: @dropdown-menu-list-item-default-selected-text-font-weight;
+            text-transform: @dropdown-menu-list-item-default-selected-text-transform;
+            text-shadow: @dropdown-menu-list-item-default-selected-text-shadow;
+            text-decoration: @dropdown-menu-list-item-default-selected-text-decoration;
+            text-rendering: @dropdown-menu-list-item-default-selected-text-rendering;
+            background: @dropdown-menu-list-item-default-selected-background-color;
+            #gradient > .vertical(@dropdown-menu-list-item-default-selected-background-gradient-color-top, @dropdown-menu-list-item-default-selected-background-gradient-color-bottom);
+            border-top-width: @dropdown-menu-list-item-default-selected-border-top-width;
+            border-top-color: @dropdown-menu-list-item-default-selected-border-top-color;
+            border-right-width: @dropdown-menu-list-item-default-selected-border-right-width;
+            border-right-color: @dropdown-menu-list-item-default-selected-border-right-color;
+            border-bottom-width: @dropdown-menu-list-item-default-selected-border-bottom-width;
+            border-bottom-color: @dropdown-menu-list-item-default-selected-border-bottom-color;
+            border-left-width: @dropdown-menu-list-item-default-selected-border-left-width;
+            border-left-color: @dropdown-menu-list-item-default-selected-border-left-color;
+            .box-shadow(@dropdown-menu-list-item-default-selected-shadow);
+
+          }
+
+        }
+
+
+
+        & when (@dropdown-menu-list-item-danger-enabled) {
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Dropdown Menu List Item (Danger)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          &.danger {
+
+            /* -----------------------------------------------------------------------------
+            Dropdown Menu List Item Link
+            ----------------------------------------------------------------------------- */
+
+            a {
+
+              /* -----------------------------------------------------------------------------
+              Dropdown Menu List Item (Danger) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              color: @dropdown-menu-list-item-danger-text-color;
+              font-family: @dropdown-menu-list-item-danger-text-font-family;
+              font-style: @dropdown-menu-list-item-danger-text-font-style;
+              font-weight: @dropdown-menu-list-item-danger-text-font-weight;
+              text-transform: @dropdown-menu-list-item-danger-text-transform;
+              text-shadow: @dropdown-menu-list-item-danger-text-shadow;
+              text-decoration: @dropdown-menu-list-item-danger-text-decoration;
+              text-rendering: @dropdown-menu-list-item-danger-text-rendering;
+              background: @dropdown-menu-list-item-danger-background-color;
+              #gradient > .vertical(@dropdown-menu-list-item-danger-background-gradient-color-top, @dropdown-menu-list-item-danger-background-gradient-color-bottom);
+              border-top-width: @dropdown-menu-list-item-danger-border-top-width;
+              border-top-color: @dropdown-menu-list-item-danger-border-top-color;
+              border-right-width: @dropdown-menu-list-item-danger-border-right-width;
+              border-right-color: @dropdown-menu-list-item-danger-border-right-color;
+              border-bottom-width: @dropdown-menu-list-item-danger-border-bottom-width;
+              border-bottom-color: @dropdown-menu-list-item-danger-border-bottom-color;
+              border-left-width: @dropdown-menu-list-item-danger-border-left-width;
+              border-left-color: @dropdown-menu-list-item-danger-border-left-color;
+              .box-shadow(@dropdown-menu-list-item-danger-shadow);
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Dropdown Menu List Item (Danger) State: Hover
+            ----------------------------------------------------------------------------- */
+
+            &:hover {
+
+              a {
+
+                color: @dropdown-menu-list-item-danger-hover-text-color;
+                font-family: @dropdown-menu-list-item-danger-hover-text-font-family;
+                font-style: @dropdown-menu-list-item-danger-hover-text-font-style;
+                font-weight: @dropdown-menu-list-item-danger-hover-text-font-weight;
+                text-transform: @dropdown-menu-list-item-danger-hover-text-transform;
+                text-shadow: @dropdown-menu-list-item-danger-hover-text-shadow;
+                text-decoration: @dropdown-menu-list-item-danger-hover-text-decoration;
+                text-rendering: @dropdown-menu-list-item-danger-hover-text-rendering;
+                background: @dropdown-menu-list-item-danger-hover-background-color;
+                #gradient > .vertical(@dropdown-menu-list-item-danger-hover-background-gradient-color-top, @dropdown-menu-list-item-danger-hover-background-gradient-color-bottom);
+                border-top-width: @dropdown-menu-list-item-danger-hover-border-top-width;
+                border-top-color: @dropdown-menu-list-item-danger-hover-border-top-color;
+                border-right-width: @dropdown-menu-list-item-danger-hover-border-right-width;
+                border-right-color: @dropdown-menu-list-item-danger-hover-border-right-color;
+                border-bottom-width: @dropdown-menu-list-item-danger-hover-border-bottom-width;
+                border-bottom-color: @dropdown-menu-list-item-danger-hover-border-bottom-color;
+                border-left-width: @dropdown-menu-list-item-danger-hover-border-left-width;
+                border-left-color: @dropdown-menu-list-item-danger-hover-border-left-color;
+                .box-shadow(@dropdown-menu-list-item-danger-hover-shadow);
+
+              }
+
+            }
+
+
+            /* -----------------------------------------------------------------------------
+            Dropdown Menu List Item (Danger) State: Active
+            ----------------------------------------------------------------------------- */
+
+            &:active {
+
+              a {
+
+                color: @dropdown-menu-list-item-danger-active-text-color;
+                font-family: @dropdown-menu-list-item-danger-active-text-font-family;
+                font-style: @dropdown-menu-list-item-danger-active-text-font-style;
+                font-weight: @dropdown-menu-list-item-danger-active-text-font-weight;
+                text-transform: @dropdown-menu-list-item-danger-active-text-transform;
+                text-shadow: @dropdown-menu-list-item-danger-active-text-shadow;
+                text-decoration: @dropdown-menu-list-item-danger-active-text-decoration;
+                text-rendering: @dropdown-menu-list-item-danger-active-text-rendering;
+                background: @dropdown-menu-list-item-danger-active-background-color;
+                #gradient > .vertical(@dropdown-menu-list-item-danger-active-background-gradient-color-top, @dropdown-menu-list-item-danger-active-background-gradient-color-bottom);
+                border-top-width: @dropdown-menu-list-item-danger-active-border-top-width;
+                border-top-color: @dropdown-menu-list-item-danger-active-border-top-color;
+                border-right-width: @dropdown-menu-list-item-danger-active-border-right-width;
+                border-right-color: @dropdown-menu-list-item-danger-active-border-right-color;
+                border-bottom-width: @dropdown-menu-list-item-danger-active-border-bottom-width;
+                border-bottom-color: @dropdown-menu-list-item-danger-active-border-bottom-color;
+                border-left-width: @dropdown-menu-list-item-danger-active-border-left-width;
+                border-left-color: @dropdown-menu-list-item-danger-active-border-left-color;
+                .box-shadow(@dropdown-menu-list-item-danger-active-shadow);
+
+              }
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Dropdown Menu List Item (Danger) State: Selected
+            ----------------------------------------------------------------------------- */
+
+            &.selected {
+
+              a {
+
+                color: @dropdown-menu-list-item-danger-selected-text-color;
+                font-family: @dropdown-menu-list-item-danger-selected-text-font-family;
+                font-style: @dropdown-menu-list-item-danger-selected-text-font-style;
+                font-weight: @dropdown-menu-list-item-danger-selected-text-font-weight;
+                text-transform: @dropdown-menu-list-item-danger-selected-text-transform;
+                text-shadow: @dropdown-menu-list-item-danger-selected-text-shadow;
+                text-decoration: @dropdown-menu-list-item-danger-selected-text-decoration;
+                text-rendering: @dropdown-menu-list-item-danger-selected-text-rendering;
+                background: @dropdown-menu-list-item-danger-selected-background-color;
+                #gradient > .vertical(@dropdown-menu-list-item-danger-selected-background-gradient-color-top, @dropdown-menu-list-item-danger-selected-background-gradient-color-bottom);
+                border-top-width: @dropdown-menu-list-item-danger-selected-border-top-width;
+                border-top-color: @dropdown-menu-list-item-danger-selected-border-top-color;
+                border-right-width: @dropdown-menu-list-item-danger-selected-border-right-width;
+                border-right-color: @dropdown-menu-list-item-danger-selected-border-right-color;
+                border-bottom-width: @dropdown-menu-list-item-danger-selected-border-bottom-width;
+                border-bottom-color: @dropdown-menu-list-item-danger-selected-border-bottom-color;
+                border-left-width: @dropdown-menu-list-item-danger-selected-border-left-width;
+                border-left-color: @dropdown-menu-list-item-danger-selected-border-left-color;
+                .box-shadow(@dropdown-menu-list-item-danger-selected-shadow);
+
+              }
+
+            }
+
+          }
 
         }
 
@@ -248,35 +561,72 @@ template.less
 
 
 
-        /* -----------------------------------------------------------------------------
-        --------------------------------------------------------------------------------
+        & when (@dropdown-menu-header-inverse-enabled) {
 
-        Dropdown Menu Header
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
 
-        --------------------------------------------------------------------------------
-        ----------------------------------------------------------------------------- */
+          Dropdown Menu Header
 
-        .dropdown-menu-header {
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
 
-          color: @dropdown-menu-header-inverse-text-color;
-          font-family: @dropdown-menu-header-inverse-text-font-family;
-          font-style: @dropdown-menu-header-inverse-text-font-style;
-          font-weight: @dropdown-menu-header-inverse-text-font-weight;
-          text-transform: @dropdown-menu-header-inverse-text-transform;
-          text-shadow: @dropdown-menu-header-inverse-text-shadow;
-          text-decoratino: @dropdown-menu-header-inverse-text-decoration;
-          text-rendering: @dropdown-menu-header-inverse-text-rendering;
-          background: @dropdown-menu-header-inverse-background-color;
-          #gradient > .vertical(@dropdown-menu-header-inverse-background-gradient-color-top, @dropdown-menu-header-inverse-background-gradient-color-bottom);
-          border-top-width: @dropdown-menu-header-inverse-border-top-width;
-          border-top-color: @dropdown-menu-header-inverse-border-top-color;
-          border-right-width: @dropdown-menu-header-inverse-border-right-width;
-          border-right-color: @dropdown-menu-header-inverse-border-right-color;
-          border-bottom-width: @dropdown-menu-header-inverse-border-bottom-width;
-          border-bottom-color: @dropdown-menu-header-inverse-border-bottom-color;
-          border-left-width: @dropdown-menu-header-inverse-border-left-width;
-          border-left-color: @dropdown-menu-header-inverse-border-left-color;
-          .box-shadow(@dropdown-menu-header-inverse-shadow);
+          .dropdown-menu-header {
+
+            color: @dropdown-menu-header-inverse-text-color;
+            font-family: @dropdown-menu-header-inverse-text-font-family;
+            font-style: @dropdown-menu-header-inverse-text-font-style;
+            font-weight: @dropdown-menu-header-inverse-text-font-weight;
+            text-transform: @dropdown-menu-header-inverse-text-transform;
+            text-shadow: @dropdown-menu-header-inverse-text-shadow;
+            text-decoration: @dropdown-menu-header-inverse-text-decoration;
+            text-rendering: @dropdown-menu-header-inverse-text-rendering;
+            background: @dropdown-menu-header-inverse-background-color;
+            #gradient > .vertical(@dropdown-menu-header-inverse-background-gradient-color-top, @dropdown-menu-header-inverse-background-gradient-color-bottom);
+            border-top-width: @dropdown-menu-header-inverse-border-top-width;
+            border-top-color: @dropdown-menu-header-inverse-border-top-color;
+            border-right-width: @dropdown-menu-header-inverse-border-right-width;
+            border-right-color: @dropdown-menu-header-inverse-border-right-color;
+            border-bottom-width: @dropdown-menu-header-inverse-border-bottom-width;
+            border-bottom-color: @dropdown-menu-header-inverse-border-bottom-color;
+            border-left-width: @dropdown-menu-header-inverse-border-left-width;
+            border-left-color: @dropdown-menu-header-inverse-border-left-color;
+            .box-shadow(@dropdown-menu-header-inverse-shadow);
+
+          }
+
+        }
+
+
+
+
+
+
+        & when (@dropdown-menu-divider-inverse-enabled) {
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Dropdown Menu Divider
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          .dropdown-menu-divider {
+
+            background: @dropdown-menu-divider-inverse-background-color;
+            #gradient > .vertical(@dropdown-menu-divider-inverse-background-gradient-color-top, @dropdown-menu-divider-inverse-background-gradient-color-bottom);
+            border-top-width: @dropdown-menu-divider-inverse-border-top-width;
+            border-top-color: @dropdown-menu-divider-inverse-border-top-color;
+            border-right-width: @dropdown-menu-divider-inverse-border-right-width;
+            border-right-color: @dropdown-menu-divider-inverse-border-right-color;
+            border-bottom-width: @dropdown-menu-divider-inverse-border-bottom-width;
+            border-bottom-color: @dropdown-menu-divider-inverse-border-bottom-color;
+            border-left-width: @dropdown-menu-divider-inverse-border-left-width;
+            border-left-color: @dropdown-menu-divider-inverse-border-left-color;
+            .box-shadow(@dropdown-menu-divider-inverse-shadow);
+
+          }
 
         }
 
@@ -288,24 +638,338 @@ template.less
         /* -----------------------------------------------------------------------------
         --------------------------------------------------------------------------------
 
-        Dropdown Menu Divider
+        Dropdown Menu List
 
         --------------------------------------------------------------------------------
         ----------------------------------------------------------------------------- */
 
-        .dropdown-menu-divider {
+        .dropdown-menu-list {
 
-          background: @dropdown-menu-divider-inverse-background-color;
-          #gradient > .vertical(@dropdown-menu-divider-inverse-background-gradient-color-top, @dropdown-menu-divider-inverse-background-gradient-color-bottom);
-          border-top-width: @dropdown-menu-divider-inverse-border-top-width;
-          border-top-color: @dropdown-menu-divider-inverse-border-top-color;
-          border-right-width: @dropdown-menu-divider-inverse-border-right-width;
-          border-right-color: @dropdown-menu-divider-inverse-border-right-color;
-          border-bottom-width: @dropdown-menu-divider-inverse-border-bottom-width;
-          border-bottom-color: @dropdown-menu-divider-inverse-border-bottom-color;
-          border-left-width: @dropdown-menu-divider-inverse-border-left-width;
-          border-left-color: @dropdown-menu-divider-inverse-border-left-color;
-          .box-shadow(@dropdown-menu-divider-inverse-shadow);
+          & when (@dropdown-menu-list-item-inverse-enabled) {
+
+            /* -----------------------------------------------------------------------------
+            --------------------------------------------------------------------------------
+
+            Dropdown Menu List Item
+
+            --------------------------------------------------------------------------------
+            ----------------------------------------------------------------------------- */
+
+            li {
+
+              color: @dropdown-menu-list-item-inverse-text-color;
+              font-family: @dropdown-menu-list-item-inverse-text-font-family;
+              font-style: @dropdown-menu-list-item-inverse-text-font-style;
+              font-weight: @dropdown-menu-list-item-inverse-text-font-weight;
+              text-transform: @dropdown-menu-list-item-inverse-text-transform;
+              text-shadow: @dropdown-menu-list-item-inverse-text-shadow;
+              text-decoration: @dropdown-menu-list-item-inverse-text-decoration;
+              text-rendering: @dropdown-menu-list-item-inverse-text-rendering;
+              background: @dropdown-menu-list-item-inverse-background-color;
+              #gradient > .vertical(@dropdown-menu-list-item-inverse-background-gradient-color-top, @dropdown-menu-list-item-inverse-background-gradient-color-bottom);
+              border-top-width: @dropdown-menu-list-item-inverse-border-top-width;
+              border-top-color: @dropdown-menu-list-item-inverse-border-top-color;
+              border-right-width: @dropdown-menu-list-item-inverse-border-right-width;
+              border-right-color: @dropdown-menu-list-item-inverse-border-right-color;
+              border-bottom-width: @dropdown-menu-list-item-inverse-border-bottom-width;
+              border-bottom-color: @dropdown-menu-list-item-inverse-border-bottom-color;
+              border-left-width: @dropdown-menu-list-item-inverse-border-left-width;
+              border-left-color: @dropdown-menu-list-item-inverse-border-left-color;
+              .box-shadow(@dropdown-menu-list-item-inverse-shadow);
+
+
+
+              /* -----------------------------------------------------------------------------
+              Dropdown Menu List Item Link
+              ----------------------------------------------------------------------------- */
+
+              a {
+
+                /* -----------------------------------------------------------------------------
+                Dropdown Menu List Item (Default) State: Normal
+                ----------------------------------------------------------------------------- */
+
+                color: @dropdown-menu-list-item-default-inverse-text-color;
+                font-family: @dropdown-menu-list-item-default-inverse-text-font-family;
+                font-style: @dropdown-menu-list-item-default-inverse-text-font-style;
+                font-weight: @dropdown-menu-list-item-default-inverse-text-font-weight;
+                text-transform: @dropdown-menu-list-item-default-inverse-text-transform;
+                text-shadow: @dropdown-menu-list-item-default-inverse-text-shadow;
+                text-decoration: @dropdown-menu-list-item-default-inverse-text-decoration;
+                text-rendering: @dropdown-menu-list-item-default-inverse-text-rendering;
+                background: @dropdown-menu-list-item-default-inverse-background-color;
+                #gradient > .vertical(@dropdown-menu-list-item-default-inverse-background-gradient-color-top, @dropdown-menu-list-item-default-inverse-background-gradient-color-bottom);
+                border-top-width: @dropdown-menu-list-item-default-inverse-border-top-width;
+                border-top-color: @dropdown-menu-list-item-default-inverse-border-top-color;
+                border-right-width: @dropdown-menu-list-item-default-inverse-border-right-width;
+                border-right-color: @dropdown-menu-list-item-default-inverse-border-right-color;
+                border-bottom-width: @dropdown-menu-list-item-default-inverse-border-bottom-width;
+                border-bottom-color: @dropdown-menu-list-item-default-inverse-border-bottom-color;
+                border-left-width: @dropdown-menu-list-item-default-inverse-border-left-width;
+                border-left-color: @dropdown-menu-list-item-default-inverse-border-left-color;
+                .box-shadow(@dropdown-menu-list-item-default-inverse-shadow);
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Dropdown Menu List Item (Default) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &:hover {
+
+                a {
+
+                  color: @dropdown-menu-list-item-default-inverse-hover-text-color;
+                  font-family: @dropdown-menu-list-item-default-inverse-hover-text-font-family;
+                  font-style: @dropdown-menu-list-item-default-inverse-hover-text-font-style;
+                  font-weight: @dropdown-menu-list-item-default-inverse-hover-text-font-weight;
+                  text-transform: @dropdown-menu-list-item-default-inverse-hover-text-transform;
+                  text-shadow: @dropdown-menu-list-item-default-inverse-hover-text-shadow;
+                  text-decoration: @dropdown-menu-list-item-default-inverse-hover-text-decoration;
+                  text-rendering: @dropdown-menu-list-item-default-inverse-hover-text-rendering;
+                  background: @dropdown-menu-list-item-default-inverse-hover-background-color;
+                  #gradient > .vertical(@dropdown-menu-list-item-default-inverse-hover-background-gradient-color-top, @dropdown-menu-list-item-default-inverse-hover-background-gradient-color-bottom);
+                  border-top-width: @dropdown-menu-list-item-default-inverse-hover-border-top-width;
+                  border-top-color: @dropdown-menu-list-item-default-inverse-hover-border-top-color;
+                  border-right-width: @dropdown-menu-list-item-default-inverse-hover-border-right-width;
+                  border-right-color: @dropdown-menu-list-item-default-inverse-hover-border-right-color;
+                  border-bottom-width: @dropdown-menu-list-item-default-inverse-hover-border-bottom-width;
+                  border-bottom-color: @dropdown-menu-list-item-default-inverse-hover-border-bottom-color;
+                  border-left-width: @dropdown-menu-list-item-default-inverse-hover-border-left-width;
+                  border-left-color: @dropdown-menu-list-item-default-inverse-hover-border-left-color;
+                  .box-shadow(@dropdown-menu-list-item-default-inverse-hover-shadow);
+
+                }
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Dropdown Menu List Item (Default) State: Active
+              ----------------------------------------------------------------------------- */
+
+              &:active {
+
+                a {
+
+                  color: @dropdown-menu-list-item-default-inverse-active-text-color;
+                  font-family: @dropdown-menu-list-item-default-inverse-active-text-font-family;
+                  font-style: @dropdown-menu-list-item-default-inverse-active-text-font-style;
+                  font-weight: @dropdown-menu-list-item-default-inverse-active-text-font-weight;
+                  text-transform: @dropdown-menu-list-item-default-inverse-active-text-transform;
+                  text-shadow: @dropdown-menu-list-item-default-inverse-active-text-shadow;
+                  text-decoration: @dropdown-menu-list-item-default-inverse-active-text-decoration;
+                  text-rendering: @dropdown-menu-list-item-default-inverse-active-text-rendering;
+                  background: @dropdown-menu-list-item-default-inverse-active-background-color;
+                  #gradient > .vertical(@dropdown-menu-list-item-default-inverse-active-background-gradient-color-top, @dropdown-menu-list-item-default-inverse-active-background-gradient-color-bottom);
+                  border-top-width: @dropdown-menu-list-item-default-inverse-active-border-top-width;
+                  border-top-color: @dropdown-menu-list-item-default-inverse-active-border-top-color;
+                  border-right-width: @dropdown-menu-list-item-default-inverse-active-border-right-width;
+                  border-right-color: @dropdown-menu-list-item-default-inverse-active-border-right-color;
+                  border-bottom-width: @dropdown-menu-list-item-default-inverse-active-border-bottom-width;
+                  border-bottom-color: @dropdown-menu-list-item-default-inverse-active-border-bottom-color;
+                  border-left-width: @dropdown-menu-list-item-default-inverse-active-border-left-width;
+                  border-left-color: @dropdown-menu-list-item-default-inverse-active-border-left-color;
+                  .box-shadow(@dropdown-menu-list-item-default-inverse-active-shadow);
+
+                }
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Dropdown Menu List Item (Default) State: Selected
+              ----------------------------------------------------------------------------- */
+
+              &.selected {
+
+                a {
+
+                  color: @dropdown-menu-list-item-default-inverse-selected-text-color;
+                  font-family: @dropdown-menu-list-item-default-inverse-selected-text-font-family;
+                  font-style: @dropdown-menu-list-item-default-inverse-selected-text-font-style;
+                  font-weight: @dropdown-menu-list-item-default-inverse-selected-text-font-weight;
+                  text-transform: @dropdown-menu-list-item-default-inverse-selected-text-transform;
+                  text-shadow: @dropdown-menu-list-item-default-inverse-selected-text-shadow;
+                  text-decoration: @dropdown-menu-list-item-default-inverse-selected-text-decoration;
+                  text-rendering: @dropdown-menu-list-item-default-inverse-selected-text-rendering;
+                  background: @dropdown-menu-list-item-default-inverse-selected-background-color;
+                  #gradient > .vertical(@dropdown-menu-list-item-default-inverse-selected-background-gradient-color-top, @dropdown-menu-list-item-default-inverse-selected-background-gradient-color-bottom);
+                  border-top-width: @dropdown-menu-list-item-default-inverse-selected-border-top-width;
+                  border-top-color: @dropdown-menu-list-item-default-inverse-selected-border-top-color;
+                  border-right-width: @dropdown-menu-list-item-default-inverse-selected-border-right-width;
+                  border-right-color: @dropdown-menu-list-item-default-inverse-selected-border-right-color;
+                  border-bottom-width: @dropdown-menu-list-item-default-inverse-selected-border-bottom-width;
+                  border-bottom-color: @dropdown-menu-list-item-default-inverse-selected-border-bottom-color;
+                  border-left-width: @dropdown-menu-list-item-default-inverse-selected-border-left-width;
+                  border-left-color: @dropdown-menu-list-item-default-inverse-selected-border-left-color;
+                  .box-shadow(@dropdown-menu-list-item-default-inverse-selected-shadow);
+
+                }
+
+              }
+
+
+
+
+              & when (@dropdown-menu-list-item-danger-enabled) and (@dropdown-menu-list-item-danger-inverse-enabled) {
+
+                /* -----------------------------------------------------------------------------
+                --------------------------------------------------------------------------------
+
+                Dropdown Menu List Item (danger-inverse)
+
+                --------------------------------------------------------------------------------
+                ----------------------------------------------------------------------------- */
+
+                &.danger {
+
+                  /* -----------------------------------------------------------------------------
+                  Dropdown Menu List Item Link
+                  ----------------------------------------------------------------------------- */
+
+                  a {
+
+                    /* -----------------------------------------------------------------------------
+                    Dropdown Menu List Item (danger-inverse) State: Normal
+                    ----------------------------------------------------------------------------- */
+
+                    color: @dropdown-menu-list-item-danger-inverse-text-color;
+                    font-family: @dropdown-menu-list-item-danger-inverse-text-font-family;
+                    font-style: @dropdown-menu-list-item-danger-inverse-text-font-style;
+                    font-weight: @dropdown-menu-list-item-danger-inverse-text-font-weight;
+                    text-transform: @dropdown-menu-list-item-danger-inverse-text-transform;
+                    text-shadow: @dropdown-menu-list-item-danger-inverse-text-shadow;
+                    text-decoration: @dropdown-menu-list-item-danger-inverse-text-decoration;
+                    text-rendering: @dropdown-menu-list-item-danger-inverse-text-rendering;
+                    background: @dropdown-menu-list-item-danger-inverse-background-color;
+                    #gradient > .vertical(@dropdown-menu-list-item-danger-inverse-background-gradient-color-top, @dropdown-menu-list-item-danger-inverse-background-gradient-color-bottom);
+                    border-top-width: @dropdown-menu-list-item-danger-inverse-border-top-width;
+                    border-top-color: @dropdown-menu-list-item-danger-inverse-border-top-color;
+                    border-right-width: @dropdown-menu-list-item-danger-inverse-border-right-width;
+                    border-right-color: @dropdown-menu-list-item-danger-inverse-border-right-color;
+                    border-bottom-width: @dropdown-menu-list-item-danger-inverse-border-bottom-width;
+                    border-bottom-color: @dropdown-menu-list-item-danger-inverse-border-bottom-color;
+                    border-left-width: @dropdown-menu-list-item-danger-inverse-border-left-width;
+                    border-left-color: @dropdown-menu-list-item-danger-inverse-border-left-color;
+                    .box-shadow(@dropdown-menu-list-item-danger-inverse-shadow);
+
+                  }
+
+
+
+                  /* -----------------------------------------------------------------------------
+                  Dropdown Menu List Item (danger-inverse) State: Hover
+                  ----------------------------------------------------------------------------- */
+
+                  &:hover {
+
+                    a {
+
+                      color: @dropdown-menu-list-item-danger-inverse-hover-text-color;
+                      font-family: @dropdown-menu-list-item-danger-inverse-hover-text-font-family;
+                      font-style: @dropdown-menu-list-item-danger-inverse-hover-text-font-style;
+                      font-weight: @dropdown-menu-list-item-danger-inverse-hover-text-font-weight;
+                      text-transform: @dropdown-menu-list-item-danger-inverse-hover-text-transform;
+                      text-shadow: @dropdown-menu-list-item-danger-inverse-hover-text-shadow;
+                      text-decoration: @dropdown-menu-list-item-danger-inverse-hover-text-decoration;
+                      text-rendering: @dropdown-menu-list-item-danger-inverse-hover-text-rendering;
+                      background: @dropdown-menu-list-item-danger-inverse-hover-background-color;
+                      #gradient > .vertical(@dropdown-menu-list-item-danger-inverse-hover-background-gradient-color-top, @dropdown-menu-list-item-danger-inverse-hover-background-gradient-color-bottom);
+                      border-top-width: @dropdown-menu-list-item-danger-inverse-hover-border-top-width;
+                      border-top-color: @dropdown-menu-list-item-danger-inverse-hover-border-top-color;
+                      border-right-width: @dropdown-menu-list-item-danger-inverse-hover-border-right-width;
+                      border-right-color: @dropdown-menu-list-item-danger-inverse-hover-border-right-color;
+                      border-bottom-width: @dropdown-menu-list-item-danger-inverse-hover-border-bottom-width;
+                      border-bottom-color: @dropdown-menu-list-item-danger-inverse-hover-border-bottom-color;
+                      border-left-width: @dropdown-menu-list-item-danger-inverse-hover-border-left-width;
+                      border-left-color: @dropdown-menu-list-item-danger-inverse-hover-border-left-color;
+                      .box-shadow(@dropdown-menu-list-item-danger-inverse-hover-shadow);
+
+                    }
+
+                  }
+
+
+                  /* -----------------------------------------------------------------------------
+                  Dropdown Menu List Item (danger-inverse) State: Active
+                  ----------------------------------------------------------------------------- */
+
+                  &:active {
+
+                    a {
+
+                      color: @dropdown-menu-list-item-danger-inverse-active-text-color;
+                      font-family: @dropdown-menu-list-item-danger-inverse-active-text-font-family;
+                      font-style: @dropdown-menu-list-item-danger-inverse-active-text-font-style;
+                      font-weight: @dropdown-menu-list-item-danger-inverse-active-text-font-weight;
+                      text-transform: @dropdown-menu-list-item-danger-inverse-active-text-transform;
+                      text-shadow: @dropdown-menu-list-item-danger-inverse-active-text-shadow;
+                      text-decoration: @dropdown-menu-list-item-danger-inverse-active-text-decoration;
+                      text-rendering: @dropdown-menu-list-item-danger-inverse-active-text-rendering;
+                      background: @dropdown-menu-list-item-danger-inverse-active-background-color;
+                      #gradient > .vertical(@dropdown-menu-list-item-danger-inverse-active-background-gradient-color-top, @dropdown-menu-list-item-danger-inverse-active-background-gradient-color-bottom);
+                      border-top-width: @dropdown-menu-list-item-danger-inverse-active-border-top-width;
+                      border-top-color: @dropdown-menu-list-item-danger-inverse-active-border-top-color;
+                      border-right-width: @dropdown-menu-list-item-danger-inverse-active-border-right-width;
+                      border-right-color: @dropdown-menu-list-item-danger-inverse-active-border-right-color;
+                      border-bottom-width: @dropdown-menu-list-item-danger-inverse-active-border-bottom-width;
+                      border-bottom-color: @dropdown-menu-list-item-danger-inverse-active-border-bottom-color;
+                      border-left-width: @dropdown-menu-list-item-danger-inverse-active-border-left-width;
+                      border-left-color: @dropdown-menu-list-item-danger-inverse-active-border-left-color;
+                      .box-shadow(@dropdown-menu-list-item-danger-inverse-active-shadow);
+
+                    }
+
+                  }
+
+
+
+                  /* -----------------------------------------------------------------------------
+                  Dropdown Menu List Item (danger-inverse) State: Selected
+                  ----------------------------------------------------------------------------- */
+
+                  &.selected {
+
+                    a {
+
+                      color: @dropdown-menu-list-item-danger-inverse-selected-text-color;
+                      font-family: @dropdown-menu-list-item-danger-inverse-selected-text-font-family;
+                      font-style: @dropdown-menu-list-item-danger-inverse-selected-text-font-style;
+                      font-weight: @dropdown-menu-list-item-danger-inverse-selected-text-font-weight;
+                      text-transform: @dropdown-menu-list-item-danger-inverse-selected-text-transform;
+                      text-shadow: @dropdown-menu-list-item-danger-inverse-selected-text-shadow;
+                      text-decoration: @dropdown-menu-list-item-danger-inverse-selected-text-decoration;
+                      text-rendering: @dropdown-menu-list-item-danger-inverse-selected-text-rendering;
+                      background: @dropdown-menu-list-item-danger-inverse-selected-background-color;
+                      #gradient > .vertical(@dropdown-menu-list-item-danger-inverse-selected-background-gradient-color-top, @dropdown-menu-list-item-danger-inverse-selected-background-gradient-color-bottom);
+                      border-top-width: @dropdown-menu-list-item-danger-inverse-selected-border-top-width;
+                      border-top-color: @dropdown-menu-list-item-danger-inverse-selected-border-top-color;
+                      border-right-width: @dropdown-menu-list-item-danger-inverse-selected-border-right-width;
+                      border-right-color: @dropdown-menu-list-item-danger-inverse-selected-border-right-color;
+                      border-bottom-width: @dropdown-menu-list-item-danger-inverse-selected-border-bottom-width;
+                      border-bottom-color: @dropdown-menu-list-item-danger-inverse-selected-border-bottom-color;
+                      border-left-width: @dropdown-menu-list-item-danger-inverse-selected-border-left-width;
+                      border-left-color: @dropdown-menu-list-item-danger-inverse-selected-border-left-color;
+                      .box-shadow(@dropdown-menu-list-item-danger-inverse-selected-shadow);
+
+                    }
+
+                  }
+
+                }
+
+              }
+
+
+
+            }
+
+          }
 
         }
 
@@ -352,7 +1016,7 @@ template.less
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @screen-mini) {
-    
+
     & when (@dropdown-menu-scale-screen-mini-enabled) {
 
       /* -----------------------------------------------------------------------------
@@ -439,9 +1103,9 @@ template.less
 
           .dropdown-menu-list {
 
-            margin-left: floor(@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-mini);
-            margin-right: floor(@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-mini);
-            margin-bottom: floor(@dropdown-menu-list-margin-vertical * @dropdown-menu-list-margin-vertical-scale-screen-mini);
+            margin-left: (-1 * floor(-@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-mini));
+            margin-right: (-1 * floor(-@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-mini));
+            margin-bottom: (-1 * floor(-@dropdown-menu-list-margin-vertical * @dropdown-menu-list-margin-vertical-scale-screen-mini));
 
 
 
@@ -457,7 +1121,7 @@ template.less
 
                 a {
 
-                  margin: floor(-(floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-mini) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-mini)) / 2) -floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-mini);
+                  margin: floor(-(floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-mini) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-mini)) / 2) (-1 * floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-mini));
                   padding: floor((floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-mini) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-mini)) / 2) floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-mini);
 
                 }
@@ -581,9 +1245,9 @@ template.less
 
           .dropdown-menu-list {
 
-            margin-left: floor(@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-small);
-            margin-right: floor(@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-small);
-            margin-bottom: floor(@dropdown-menu-list-margin-vertical * @dropdown-menu-list-margin-vertical-scale-screen-small);
+            margin-left: (-1 * floor(-@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-small));
+            margin-right: (-1 * floor(-@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-small));
+            margin-bottom: (-1 * floor(-@dropdown-menu-list-margin-vertical * @dropdown-menu-list-margin-vertical-scale-screen-small));
 
 
 
@@ -599,7 +1263,7 @@ template.less
 
                 a {
 
-                  margin: floor(-(floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-small) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-small)) / 2) -floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-small);
+                  margin: floor(-(floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-small) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-small)) / 2) (-1 * floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-small));
                   padding: floor((floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-small) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-small)) / 2) floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-small);
 
                 }
@@ -723,9 +1387,9 @@ template.less
 
           .dropdown-menu-list {
 
-            margin-left: floor(@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-medium);
-            margin-right: floor(@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-medium);
-            margin-bottom: floor(@dropdown-menu-list-margin-vertical * @dropdown-menu-list-margin-vertical-scale-screen-medium);
+            margin-left: (-1 * floor(-@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-medium));
+            margin-right: (-1 * floor(-@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-medium));
+            margin-bottom: (-1 * floor(-@dropdown-menu-list-margin-vertical * @dropdown-menu-list-margin-vertical-scale-screen-medium));
 
 
 
@@ -741,7 +1405,7 @@ template.less
 
                 a {
 
-                  margin: floor(-(floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-medium) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-medium)) / 2) -floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-medium);
+                  margin: floor(-(floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-medium) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-medium)) / 2) (-1 * floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-medium));
                   padding: floor((floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-medium) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-medium)) / 2) floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-medium);
 
                 }
@@ -865,9 +1529,9 @@ template.less
 
           .dropdown-menu-list {
 
-            margin-left: floor(@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-large);
-            margin-right: floor(@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-large);
-            margin-bottom: floor(@dropdown-menu-list-margin-vertical * @dropdown-menu-list-margin-vertical-scale-screen-large);
+            margin-left: (-1 * floor(-@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-large));
+            margin-right: (-1 * floor(-@dropdown-menu-list-margin-horizontal * @dropdown-menu-list-margin-horizontal-scale-screen-large));
+            margin-bottom: (-1 * floor(-@dropdown-menu-list-margin-vertical * @dropdown-menu-list-margin-vertical-scale-screen-large));
 
 
 
@@ -883,7 +1547,7 @@ template.less
 
                 a {
 
-                  margin: floor(-(floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-large) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-large)) / 2) -floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-large);
+                  margin: floor(-((floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-large) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-large)) / 2)) (-1 * floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-large));
                   padding: floor((floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-large) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-large)) / 2) floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-large);
 
                 }
