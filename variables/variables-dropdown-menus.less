@@ -66,15 +66,8 @@ Dropdown Menu Responsive Scaling
 
 
 
-
-
-
 /* -----------------------------------------------------------------------------
---------------------------------------------------------------------------------
-
-Button (Default)
-
---------------------------------------------------------------------------------
+Dropdown Menu Styling
 ----------------------------------------------------------------------------- */
 
 @dropdown-menu-default-background-color:                                        @white;
@@ -90,5 +83,137 @@ Button (Default)
 @dropdown-menu-default-border-bottom-color:                                     @dropdown-menu-default-border-color;
 @dropdown-menu-default-border-left-width:                                       @dropdown-menu-default-border-width;
 @dropdown-menu-default-border-left-color:                                       @dropdown-menu-default-border-color;
-@dropdown-menu-default-shadow:                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.1),
-                                                                                0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+@dropdown-menu-default-shadow:                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu (Inverse) Styling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-inverse-enabled:                                                 @dropdown-menu-enabled;
+@dropdown-menu-inverse-background-color:                                        ~`color_lightness("@{gray}", -80)`;
+@dropdown-menu-inverse-background-gradient-color-top:                           none;
+@dropdown-menu-inverse-background-gradient-color-bottom:                        none;
+@dropdown-menu-inverse-border-width:                                            @dropdown-menu-default-border-width;
+@dropdown-menu-inverse-border-color:                                            none;
+@dropdown-menu-inverse-border-top-width:                                        @dropdown-menu-inverse-border-width;
+@dropdown-menu-inverse-border-top-color:                                        @dropdown-menu-inverse-border-color;
+@dropdown-menu-inverse-border-right-width:                                      @dropdown-menu-inverse-border-width;
+@dropdown-menu-inverse-border-right-color:                                      @dropdown-menu-inverse-border-color;
+@dropdown-menu-inverse-border-bottom-width:                                     @dropdown-menu-inverse-border-width;
+@dropdown-menu-inverse-border-bottom-color:                                     @dropdown-menu-inverse-border-color;
+@dropdown-menu-inverse-border-left-width:                                       @dropdown-menu-inverse-border-width;
+@dropdown-menu-inverse-border-left-color:                                       @dropdown-menu-inverse-border-color;
+@dropdown-menu-inverse-shadow:                                                  0px 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 2px 6px 0px rgba(0, 0, 0, 0.1);
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu List
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-margin-horizontal:                                          -1 * @dropdown-menu-padding-horizontal;
+@dropdown-menu-list-margin-vertical:                                            @dropdown-menu-padding-vertical;
+
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-scale-screen-mini-enabled:                                  @dropdown-menu-scale-screen-mini-enabled;
+@dropdown-menu-list-scale-screen-small-enabled:                                 @dropdown-menu-scale-screen-small-enabled;
+@dropdown-menu-list-scale-screen-medium-enabled:                                @dropdown-menu-scale-screen-medium-enabled;
+@dropdown-menu-list-scale-screen-large-enabled:                                 @dropdown-menu-scale-screen-large-enabled;
+
+@dropdown-menu-list-margin-horizontal-scale-screen-mini:                        @dropdown-menu-padding-horizontal-scale-screen-mini;
+@dropdown-menu-list-margin-horizontal-scale-screen-small:                       @dropdown-menu-padding-horizontal-scale-screen-small;
+@dropdown-menu-list-margin-horizontal-scale-screen-medium:                      @dropdown-menu-padding-horizontal-scale-screen-medium;
+@dropdown-menu-list-margin-horizontal-scale-screen-large:                       @dropdown-menu-padding-horizontal-scale-screen-large;
+
+@dropdown-menu-list-margin-vertical-scale-screen-mini:                          @dropdown-menu-padding-vertical-scale-screen-mini;
+@dropdown-menu-list-margin-vertical-scale-screen-small:                         @dropdown-menu-padding-vertical-scale-screen-small;
+@dropdown-menu-list-margin-vertical-scale-screen-medium:                        @dropdown-menu-padding-vertical-scale-screen-medium;
+@dropdown-menu-list-margin-vertical-scale-screen-large:                         @dropdown-menu-padding-vertical-scale-screen-large;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Dropdown Menu List Item
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item Styles
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-text-font-size:                                        @body-text-font-size;
+@dropdown-menu-list-item-text-line-height:                                      @body-text-line-height;
+@dropdown-menu-list-item-height:                                                24px;
+@dropdown-menu-list-item-padding-horizontal:                                    @dropdown-menu-padding-horizontal;
+@dropdown-menu-list-item-margin-vertical:                                       0px;
+@dropdown-menu-list-item-margin-horizontal:                                     0px;
+@dropdown-menu-list-item-border-radius:                                         0px;
+
+
+/* -----------------------------------------------------------------------------
+Dropdown Menu List Item Responsive Scaling
+----------------------------------------------------------------------------- */
+
+@dropdown-menu-list-item-scale-screen-mini-enabled:                             @dropdown-menu-list-scale-screen-mini-enabled;
+@dropdown-menu-list-item-scale-screen-small-enabled:                            @dropdown-menu-list-scale-screen-small-enabled;
+@dropdown-menu-list-item-scale-screen-medium-enabled:                           @dropdown-menu-list-scale-screen-medium-enabled;
+@dropdown-menu-list-item-scale-screen-large-enabled:                            @dropdown-menu-list-scale-screen-large-enabled;
+
+@dropdown-menu-list-item-text-font-size-scale-screen-mini:                      @body-text-font-size-scale-screen-mini;
+@dropdown-menu-list-item-text-font-size-scale-screen-small:                     @body-text-font-size-scale-screen-small;
+@dropdown-menu-list-item-text-font-size-scale-screen-medium:                    @body-text-font-size-scale-screen-medium;
+@dropdown-menu-list-item-text-font-size-scale-screen-large:                     @body-text-font-size-scale-screen-large;
+
+@dropdown-menu-list-item-text-line-height-scale-screen-mini:                    @body-text-line-height-scale-screen-mini;
+@dropdown-menu-list-item-text-line-height-scale-screen-small:                   @body-text-line-height-scale-screen-small;
+@dropdown-menu-list-item-text-line-height-scale-screen-medium:                  @body-text-line-height-scale-screen-medium;
+@dropdown-menu-list-item-text-line-height-scale-screen-large:                   @body-text-line-height-scale-screen-large;
+
+@dropdown-menu-list-item-height-scale-screen-mini:                              @dropdown-menu-scale-screen-mini;
+@dropdown-menu-list-item-height-scale-screen-small:                             @dropdown-menu-scale-screen-small;
+@dropdown-menu-list-item-height-scale-screen-medium:                            @dropdown-menu-scale-screen-medium;
+@dropdown-menu-list-item-height-scale-screen-large:                             @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-list-item-padding-horizontal-scale-screen-mini:                  @dropdown-menu-padding-horizontal-scale-screen-mini;
+@dropdown-menu-list-item-padding-horizontal-scale-screen-small:                 @dropdown-menu-padding-horizontal-scale-screen-small;
+@dropdown-menu-list-item-padding-horizontal-scale-screen-medium:                @dropdown-menu-padding-horizontal-scale-screen-medium;
+@dropdown-menu-list-item-padding-horizontal-scale-screen-large:                 @dropdown-menu-padding-horizontal-scale-screen-large;
+
+@dropdown-menu-list-item-margin-vertical-scale-screen-mini:                     @dropdown-menu-scale-screen-mini;
+@dropdown-menu-list-item-margin-vertical-scale-screen-small:                    @dropdown-menu-scale-screen-small;
+@dropdown-menu-list-item-margin-vertical-scale-screen-medium:                   @dropdown-menu-scale-screen-medium;
+@dropdown-menu-list-item-margin-vertical-scale-screen-large:                    @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-list-item-margin-horizontal-scale-screen-mini:                   @dropdown-menu-scale-screen-mini;
+@dropdown-menu-list-item-margin-horizontal-scale-screen-small:                  @dropdown-menu-scale-screen-small;
+@dropdown-menu-list-item-margin-horizontal-scale-screen-medium:                 @dropdown-menu-scale-screen-medium;
+@dropdown-menu-list-item-margin-horizontal-scale-screen-large:                  @dropdown-menu-scale-screen-large;
+
+@dropdown-menu-list-item-border-radius-scale-screen-mini:                       @dropdown-menu-scale-screen-mini;
+@dropdown-menu-list-item-border-radius-scale-screen-small:                      @dropdown-menu-scale-screen-small;
+@dropdown-menu-list-item-border-radius-scale-screen-medium:                     @dropdown-menu-scale-screen-medium;
+@dropdown-menu-list-item-border-radius-scale-screen-large:                      @dropdown-menu-scale-screen-large;
