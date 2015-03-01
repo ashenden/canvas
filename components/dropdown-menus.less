@@ -23,6 +23,26 @@ template.less
   --------------------------------------------------------------------------------
   ----------------------------------------------------------------------------- */
 
+  .dropdown,
+  .dropup {
+
+    position: relative;
+
+  }
+
+
+
+
+
+
+  /* -----------------------------------------------------------------------------
+  --------------------------------------------------------------------------------
+
+  Dropdown Menu
+
+  --------------------------------------------------------------------------------
+  ----------------------------------------------------------------------------- */
+
   .dropdown-menu {
 
     .clearfix();
@@ -374,6 +394,42 @@ template.less
 
 
 
+        /* -----------------------------------------------------------------------------
+        Dropdown Menu List Item (Default) State: Disabled
+        ----------------------------------------------------------------------------- */
+
+        &.disabled {
+
+          a {
+
+            cursor: pointer;
+            .opacity(@dropdown-menu-list-item-default-disabled-opacity);
+            color: @dropdown-menu-list-item-default-disabled-text-color;
+            font-family: @dropdown-menu-list-item-default-disabled-text-font-family;
+            font-style: @dropdown-menu-list-item-default-disabled-text-font-style;
+            font-weight: @dropdown-menu-list-item-default-disabled-text-font-weight;
+            text-transform: @dropdown-menu-list-item-default-disabled-text-transform;
+            text-shadow: @dropdown-menu-list-item-default-disabled-text-shadow;
+            text-decoration: @dropdown-menu-list-item-default-disabled-text-decoration;
+            text-rendering: @dropdown-menu-list-item-default-disabled-text-rendering;
+            background: @dropdown-menu-list-item-default-disabled-background-color;
+            #gradient > .vertical(@dropdown-menu-list-item-default-disabled-background-gradient-color-top, @dropdown-menu-list-item-default-disabled-background-gradient-color-bottom);
+            border-top-width: @dropdown-menu-list-item-default-disabled-border-top-width;
+            border-top-color: @dropdown-menu-list-item-default-disabled-border-top-color;
+            border-right-width: @dropdown-menu-list-item-default-disabled-border-right-width;
+            border-right-color: @dropdown-menu-list-item-default-disabled-border-right-color;
+            border-bottom-width: @dropdown-menu-list-item-default-disabled-border-bottom-width;
+            border-bottom-color: @dropdown-menu-list-item-default-disabled-border-bottom-color;
+            border-left-width: @dropdown-menu-list-item-default-disabled-border-left-width;
+            border-left-color: @dropdown-menu-list-item-default-disabled-border-left-color;
+            .box-shadow(@dropdown-menu-list-item-default-disabled-shadow);
+
+          }
+
+        }
+
+
+
         & when (@dropdown-menu-list-item-danger-enabled) {
 
           /* -----------------------------------------------------------------------------
@@ -514,6 +570,42 @@ template.less
                 border-left-width: @dropdown-menu-list-item-danger-selected-border-left-width;
                 border-left-color: @dropdown-menu-list-item-danger-selected-border-left-color;
                 .box-shadow(@dropdown-menu-list-item-danger-selected-shadow);
+
+              }
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Dropdown Menu List Item (Danger) State: Disabled
+            ----------------------------------------------------------------------------- */
+
+            &.disabled {
+
+              a {
+
+                cursor: pointer;
+                .opacity(@dropdown-menu-list-item-danger-disabled-opacity);
+                color: @dropdown-menu-list-item-danger-disabled-text-color;
+                font-family: @dropdown-menu-list-item-danger-disabled-text-font-family;
+                font-style: @dropdown-menu-list-item-danger-disabled-text-font-style;
+                font-weight: @dropdown-menu-list-item-danger-disabled-text-font-weight;
+                text-transform: @dropdown-menu-list-item-danger-disabled-text-transform;
+                text-shadow: @dropdown-menu-list-item-danger-disabled-text-shadow;
+                text-decoration: @dropdown-menu-list-item-danger-disabled-text-decoration;
+                text-rendering: @dropdown-menu-list-item-danger-disabled-text-rendering;
+                background: @dropdown-menu-list-item-danger-disabled-background-color;
+                #gradient > .vertical(@dropdown-menu-list-item-danger-disabled-background-gradient-color-top, @dropdown-menu-list-item-danger-disabled-background-gradient-color-bottom);
+                border-top-width: @dropdown-menu-list-item-danger-disabled-border-top-width;
+                border-top-color: @dropdown-menu-list-item-danger-disabled-border-top-color;
+                border-right-width: @dropdown-menu-list-item-danger-disabled-border-right-width;
+                border-right-color: @dropdown-menu-list-item-danger-disabled-border-right-color;
+                border-bottom-width: @dropdown-menu-list-item-danger-disabled-border-bottom-width;
+                border-bottom-color: @dropdown-menu-list-item-danger-disabled-border-bottom-color;
+                border-left-width: @dropdown-menu-list-item-danger-disabled-border-left-width;
+                border-left-color: @dropdown-menu-list-item-danger-disabled-border-left-color;
+                .box-shadow(@dropdown-menu-list-item-danger-disabled-shadow);
 
               }
 
@@ -686,7 +778,7 @@ template.less
               a {
 
                 /* -----------------------------------------------------------------------------
-                Dropdown Menu List Item (Default) State: Normal
+                Dropdown Menu List Item (Default, Inverse) State: Normal
                 ----------------------------------------------------------------------------- */
 
                 color: @dropdown-menu-list-item-default-inverse-text-color;
@@ -714,7 +806,7 @@ template.less
 
 
               /* -----------------------------------------------------------------------------
-              Dropdown Menu List Item (Default) State: Hover
+              Dropdown Menu List Item (Default, Inverse) State: Hover
               ----------------------------------------------------------------------------- */
 
               &:hover {
@@ -748,7 +840,7 @@ template.less
 
 
               /* -----------------------------------------------------------------------------
-              Dropdown Menu List Item (Default) State: Active
+              Dropdown Menu List Item (Default, Inverse) State: Active
               ----------------------------------------------------------------------------- */
 
               &:active {
@@ -782,7 +874,7 @@ template.less
 
 
               /* -----------------------------------------------------------------------------
-              Dropdown Menu List Item (Default) State: Selected
+              Dropdown Menu List Item (Default, Inverse) State: Selected
               ----------------------------------------------------------------------------- */
 
               &.selected {
@@ -815,13 +907,48 @@ template.less
 
 
 
+              /* -----------------------------------------------------------------------------
+              Dropdown Menu List Item (Default, Inverse) State: Disabled
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                a {
+
+                  .opacity(@dropdown-menu-list-item-default-inverse-disabled-opacity);
+                  color: @dropdown-menu-list-item-default-inverse-disabled-text-color;
+                  font-family: @dropdown-menu-list-item-default-inverse-disabled-text-font-family;
+                  font-style: @dropdown-menu-list-item-default-inverse-disabled-text-font-style;
+                  font-weight: @dropdown-menu-list-item-default-inverse-disabled-text-font-weight;
+                  text-transform: @dropdown-menu-list-item-default-inverse-disabled-text-transform;
+                  text-shadow: @dropdown-menu-list-item-default-inverse-disabled-text-shadow;
+                  text-decoration: @dropdown-menu-list-item-default-inverse-disabled-text-decoration;
+                  text-rendering: @dropdown-menu-list-item-default-inverse-disabled-text-rendering;
+                  background: @dropdown-menu-list-item-default-inverse-disabled-background-color;
+                  #gradient > .vertical(@dropdown-menu-list-item-default-inverse-disabled-background-gradient-color-top, @dropdown-menu-list-item-default-inverse-disabled-background-gradient-color-bottom);
+                  border-top-width: @dropdown-menu-list-item-default-inverse-disabled-border-top-width;
+                  border-top-color: @dropdown-menu-list-item-default-inverse-disabled-border-top-color;
+                  border-right-width: @dropdown-menu-list-item-default-inverse-disabled-border-right-width;
+                  border-right-color: @dropdown-menu-list-item-default-inverse-disabled-border-right-color;
+                  border-bottom-width: @dropdown-menu-list-item-default-inverse-disabled-border-bottom-width;
+                  border-bottom-color: @dropdown-menu-list-item-default-inverse-disabled-border-bottom-color;
+                  border-left-width: @dropdown-menu-list-item-default-inverse-disabled-border-left-width;
+                  border-left-color: @dropdown-menu-list-item-default-inverse-disabled-border-left-color;
+                  .box-shadow(@dropdown-menu-list-item-default-inverse-disabled-shadow);
+
+                }
+
+              }
+
+
+
 
               & when (@dropdown-menu-list-item-danger-enabled) and (@dropdown-menu-list-item-danger-inverse-enabled) {
 
                 /* -----------------------------------------------------------------------------
                 --------------------------------------------------------------------------------
 
-                Dropdown Menu List Item (danger-inverse)
+                Dropdown Menu List Item (Danger, Inverse)
 
                 --------------------------------------------------------------------------------
                 ----------------------------------------------------------------------------- */
@@ -835,7 +962,7 @@ template.less
                   a {
 
                     /* -----------------------------------------------------------------------------
-                    Dropdown Menu List Item (danger-inverse) State: Normal
+                    Dropdown Menu List Item (Danger, Inverse) State: Normal
                     ----------------------------------------------------------------------------- */
 
                     color: @dropdown-menu-list-item-danger-inverse-text-color;
@@ -863,7 +990,7 @@ template.less
 
 
                   /* -----------------------------------------------------------------------------
-                  Dropdown Menu List Item (danger-inverse) State: Hover
+                  Dropdown Menu List Item (Danger, Inverse) State: Hover
                   ----------------------------------------------------------------------------- */
 
                   &:hover {
@@ -896,7 +1023,7 @@ template.less
 
 
                   /* -----------------------------------------------------------------------------
-                  Dropdown Menu List Item (danger-inverse) State: Active
+                  Dropdown Menu List Item (Danger, Inverse) State: Active
                   ----------------------------------------------------------------------------- */
 
                   &:active {
@@ -930,7 +1057,7 @@ template.less
 
 
                   /* -----------------------------------------------------------------------------
-                  Dropdown Menu List Item (danger-inverse) State: Selected
+                  Dropdown Menu List Item (Danger, Inverse) State: Selected
                   ----------------------------------------------------------------------------- */
 
                   &.selected {
@@ -956,6 +1083,41 @@ template.less
                       border-left-width: @dropdown-menu-list-item-danger-inverse-selected-border-left-width;
                       border-left-color: @dropdown-menu-list-item-danger-inverse-selected-border-left-color;
                       .box-shadow(@dropdown-menu-list-item-danger-inverse-selected-shadow);
+
+                    }
+
+                  }
+
+
+
+                  /* -----------------------------------------------------------------------------
+                  Dropdown Menu List Item (Danger, Inverse) State: Disabled
+                  ----------------------------------------------------------------------------- */
+
+                  &.disabled {
+
+                    a {
+
+                      .opacity(@dropdown-menu-list-item-danger-inverse-disabled-opacity);
+                      color: @dropdown-menu-list-item-danger-inverse-disabled-text-color;
+                      font-family: @dropdown-menu-list-item-danger-inverse-disabled-text-font-family;
+                      font-style: @dropdown-menu-list-item-danger-inverse-disabled-text-font-style;
+                      font-weight: @dropdown-menu-list-item-danger-inverse-disabled-text-font-weight;
+                      text-transform: @dropdown-menu-list-item-danger-inverse-disabled-text-transform;
+                      text-shadow: @dropdown-menu-list-item-danger-inverse-disabled-text-shadow;
+                      text-decoration: @dropdown-menu-list-item-danger-inverse-disabled-text-decoration;
+                      text-rendering: @dropdown-menu-list-item-danger-inverse-disabled-text-rendering;
+                      background: @dropdown-menu-list-item-danger-inverse-disabled-background-color;
+                      #gradient > .vertical(@dropdown-menu-list-item-danger-inverse-disabled-background-gradient-color-top, @dropdown-menu-list-item-danger-inverse-disabled-background-gradient-color-bottom);
+                      border-top-width: @dropdown-menu-list-item-danger-inverse-disabled-border-top-width;
+                      border-top-color: @dropdown-menu-list-item-danger-inverse-disabled-border-top-color;
+                      border-right-width: @dropdown-menu-list-item-danger-inverse-disabled-border-right-width;
+                      border-right-color: @dropdown-menu-list-item-danger-inverse-disabled-border-right-color;
+                      border-bottom-width: @dropdown-menu-list-item-danger-inverse-disabled-border-bottom-width;
+                      border-bottom-color: @dropdown-menu-list-item-danger-inverse-disabled-border-bottom-color;
+                      border-left-width: @dropdown-menu-list-item-danger-inverse-disabled-border-left-width;
+                      border-left-color: @dropdown-menu-list-item-danger-inverse-disabled-border-left-color;
+                      .box-shadow(@dropdown-menu-list-item-danger-inverse-disabled-shadow);
 
                     }
 
@@ -1263,7 +1425,7 @@ template.less
 
                 a {
 
-                  margin: floor(-(floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-small) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-small)) / 2) (-1 * floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-small));
+                  margin: floor(-((floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-small) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-small)) / 2)) (-1 * floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-small));
                   padding: floor((floor(@dropdown-menu-list-item-height * @dropdown-menu-list-item-height-scale-screen-small) - floor(@dropdown-menu-list-item-text-line-height * @dropdown-menu-list-item-text-line-height-scale-screen-small)) / 2) floor(@dropdown-menu-list-item-padding-horizontal * @dropdown-menu-list-item-padding-horizontal-scale-screen-small);
 
                 }
