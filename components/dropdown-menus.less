@@ -57,6 +57,92 @@ template.less
     /* -----------------------------------------------------------------------------
     --------------------------------------------------------------------------------
 
+    Dropdown Menu Header
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .dropdown-menu-header {
+
+      display: block;
+      padding: floor((@dropdown-menu-header-height-minimum - @dropdown-menu-header-text-line-height) / 2) @dropdown-menu-header-padding-horizontal;
+      margin: @dropdown-menu-header-margin-vertical-top @dropdown-menu-header-margin-horizontal @dropdown-menu-header-margin-vertical-bottom;
+
+
+
+      &:first-child {
+
+        margin-top: 0px;
+
+      }
+
+
+
+      &:last-child {
+
+        margin-bottom: 0px;
+
+      }
+
+    }
+
+
+
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Dropdown Menu Divider
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    .dropdown-menu-divider {
+
+      display: block;
+      padding: 0px @dropdown-menu-divider-padding-horizontal;
+      margin: @dropdown-menu-divider-margin-vertical-top @dropdown-menu-divider-margin-horizontal @dropdown-menu-divider-margin-vertical-bottom;
+      height: @dropdown-menu-divider-height;
+      .border-radius(@dropdown-menu-divider-border-radius);
+      background: @dropdown-menu-divider-default-background-color;
+      #gradient > .vertical(@dropdown-menu-divider-default-background-gradient-color-top, @dropdown-menu-divider-default-background-gradient-color-bottom);
+      border-top-width: @dropdown-menu-divider-default-border-top-width;
+      border-top-color: @dropdown-menu-divider-default-border-top-color;
+      border-right-width: @dropdown-menu-divider-default-border-right-width;
+      border-right-color: @dropdown-menu-divider-default-border-right-color;
+      border-bottom-width: @dropdown-menu-divider-default-border-bottom-width;
+      border-bottom-color: @dropdown-menu-divider-default-border-bottom-color;
+      border-left-width: @dropdown-menu-divider-default-border-left-width;
+      border-left-color: @dropdown-menu-divider-default-border-left-color;
+      .box-shadow(@dropdown-menu-divider-default-shadow);
+
+
+      &:first-child {
+
+        margin-top: 0px;
+
+      }
+
+
+
+      &:last-child {
+
+        margin-bottom: 0px;
+
+      }
+
+    }
+
+
+
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
     Dropdown Menu List
 
     --------------------------------------------------------------------------------
@@ -110,40 +196,6 @@ template.less
 
 
 
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-
-    Dropdown Menu Header
-
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
-
-    .dropdown-menu-header {
-
-    }
-
-
-
-
-
-
-    /* -----------------------------------------------------------------------------
-    --------------------------------------------------------------------------------
-
-    Dropdown Menu Divider
-
-    --------------------------------------------------------------------------------
-    ----------------------------------------------------------------------------- */
-
-    .dropdown-menu-divider {
-
-    }
-
-
-
-
-
-
     & when (@dropdown-menu-inverse-enabled) {
 
       /* -----------------------------------------------------------------------------
@@ -167,6 +219,35 @@ template.less
         border-left-width: @dropdown-menu-inverse-border-left-width;
         border-left-color: @dropdown-menu-inverse-border-left-color;
         .box-shadow(@dropdown-menu-inverse-shadow);
+
+
+
+
+
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+
+        Dropdown Menu Divider
+
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        .dropdown-menu-divider {
+
+          background: @dropdown-menu-divider-inverse-background-color;
+          #gradient > .vertical(@dropdown-menu-divider-inverse-background-gradient-color-top, @dropdown-menu-divider-inverse-background-gradient-color-bottom);
+          border-top-width: @dropdown-menu-divider-inverse-border-top-width;
+          border-top-color: @dropdown-menu-divider-inverse-border-top-color;
+          border-right-width: @dropdown-menu-divider-inverse-border-right-width;
+          border-right-color: @dropdown-menu-divider-inverse-border-right-color;
+          border-bottom-width: @dropdown-menu-divider-inverse-border-bottom-width;
+          border-bottom-color: @dropdown-menu-divider-inverse-border-bottom-color;
+          border-left-width: @dropdown-menu-divider-inverse-border-left-width;
+          border-left-color: @dropdown-menu-divider-inverse-border-left-color;
+          .box-shadow(@dropdown-menu-divider-inverse-shadow);
+
+        }
 
       }
 
