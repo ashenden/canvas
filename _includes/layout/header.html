@@ -24,11 +24,25 @@ BEGIN: Header
 
       <nav id="header-navigation" role="navigation">
 
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
+        <ul id="menu-header-menu">
+
+          {% assign url = page.url|remove:'index.html' %}
+
+          {% for link in site.navigation %}
+
+            {% if link.title %}
+
+              <li class="menu-item {% if url == link.url %}current_page_item{% endif %}">
+
+                <a class="page-link" href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a>
+
+              </li>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </ul>
 
       </nav>
 

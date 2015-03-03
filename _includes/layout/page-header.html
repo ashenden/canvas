@@ -1,0 +1,105 @@
+<?php
+
+$page_header_title = get_the_title();
+$page_header_headline = get_the_title();
+$page_header_description = get_field('header_description');
+
+// Initialize Page Header Headline
+
+if ((get_field('header_headline') != null) && (get_field('header_headline') != '')) {
+
+  $page_header_headline = get_field('header_headline');
+  
+}
+
+?>
+
+<!-- ************************************************** -->
+<!-- BEGIN: PAGE HEADER                                 -->
+<!-- ************************************************** -->
+
+<div id="page-header" class="canvas-pod canvas-pod-light" role="banner" data-template="page-header">
+
+  <div id="page-header-inner">
+
+    <div class="container container-pod">
+
+      <div class="row">
+
+        <div class="column-small-12">
+
+          <!-- BEGIN: PAGE TITLE -->
+
+          <h1 class="page-header-title invisible">
+
+            <?php
+
+            echo $page_header_title;
+
+            ?>
+
+          </h1>
+
+          <!-- END: PAGE TITLE -->
+
+          <?php
+
+          if (($page_header_headline != null) && ($page_header_headline != '')) :
+
+            ?>
+
+            <!-- BEGIN: PAGE TITLE -->
+
+            <h1 class="page-header-headline flush-top <?php if (($page_header_description != null) && ($page_header_description != '')) : ?>short<?php else: ?>flush-bottom<?php endif; ?>">
+
+              <?php
+
+              echo $page_header_headline;
+
+              ?>
+
+            </h1>
+
+            <!-- END: PAGE TITLE -->
+
+            <?php
+
+          endif;
+
+          if (($page_header_description != null) && ($page_header_description != '')) :
+
+            ?>
+
+            <!-- BEGIN: PAGE DESCRIPTION -->
+
+            <p class="page-header-description lead flush-bottom">
+
+              <?php
+
+              echo $page_header_description;
+
+              ?>
+
+            </p>
+
+            <!-- END: PAGE DESCRIPTION -->
+
+            <?php
+
+          endif;
+
+          ?>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ************************************************** -->
+<!-- END: PAGE HEADER                                   -->
+<!-- ************************************************** -->
