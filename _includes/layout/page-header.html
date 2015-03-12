@@ -1,34 +1,75 @@
-<?php
+{% if (page.page-header.theme == 'inverse') %}
 
-$page_header_title = get_the_title();
-$page_header_headline = get_the_title();
-$page_header_description = get_field('header_description');
+  {% assign page-header-class = 'canvas-pod-dark page-header-inverse' %}
 
-// Initialize Page Header Headline
+{% elsif (page.page-header.theme == 'transparent') %}
 
-if ((get_field('header_headline') != null) && (get_field('header_headline') != '')) {
+  {% assign page-header-class = '' %}
 
-  $page_header_headline = get_field('header_headline');
-  
-}
+{% else %}
 
-?>
+  {% assign page-header-class = 'canvas-pod-light' %}
 
-<!-- ************************************************** -->
-<!-- BEGIN: PAGE HEADER                                 -->
-<!-- ************************************************** -->
+{% endif %}
 
-<div id="page-header" class="canvas-pod canvas-pod-light" role="banner" data-template="page-header">
+
+
+{% if (page.page-header.size == 'tall') %}
+
+  {% assign page-header-container-class = 'container-pod-tall' %}
+
+{% else %}
+
+  {% assign page-header-container-class = '' %}
+
+{% endif %}
+
+
+
+{% if (page.page-header.alignment == 'left') %}
+
+  {% assign page-header-alignment-class = 'column-mini-8 column-small-6 column-medium-8' %}
+  {% assign page-header-headline-alignment-class = 'column-mini-12 column-large-10' %}
+  {% assign page-header-text-alignment-class = 'text-align-left' %}
+  {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-left' %}
+
+{% elsif (page.page-header.alignment == 'right') %}
+
+  {% assign page-header-alignment-class = 'column-mini-8 column-mini-offset-4 column-small-7 column-small-offset-5 column-medium-8 column-medium-offset-4' %}
+  {% assign page-header-headline-alignment-class = 'column-mini-12column-large-10 column-large-offset-2' %}
+  {% assign page-header-text-alignment-class = 'text-align-right' %}
+  {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-right' %}
+
+{% else %}
+
+  {% assign page-header-alignment-class = 'column-small-10 column-small-offset-1 column-medium-8 column-medium-offset-2' %}
+  {% assign page-header-headline-alignment-class = 'column-mini-8 column-mini-offset-2 column-small-10 column-small-offset-1' %}
+  {% assign page-header-text-alignment-class = 'text-align-center' %}
+  {% assign page-header-actions-alignment-class = 'button-collection-align-horizontal-center' %}
+
+{% endif %}
+
+<!-- =================================================
+BEGIN: Page Header
+================================================== -->
+
+<div id="page-header" class="canvas-pod {{ page-header-class }} {{ page.page-header.alignment }}">
+
+  {% if (page.page-header.background.image != null) and (page.page-header.background.image != empty) %}
+
+    <div class="canvas-pod-background backstretch" data-backstretch-image="/images/{{ page.page-header.background.image }} %}" data-no-retina></div>
+
+  {% endif %}
 
   <div id="page-header-inner">
 
-    <div class="container container-pod">
+    <div class="container container-pod {{ page-header-container-class }}">
 
       <div class="row">
 
-        <div class="column-small-12">
+        <div class="{{ page-header-alignment-class }}">
 
-          <!-- BEGIN: PAGE TITLE -->
+          <!-- BEGIN: Page Header Title -->
 
           <h1 class="page-header-title invisible">
 
@@ -40,55 +81,65 @@ if ((get_field('header_headline') != null) && (get_field('header_headline') != '
 
           </h1>
 
-          <!-- END: PAGE TITLE -->
+          <!-- END: Page Header Title -->
 
-          <?php
+          {% if (page.page-header.headline != null) and (page.page-header.headline != empty) %}
 
-          if (($page_header_headline != null) && ($page_header_headline != '')) :
+            <!-- BEGIN: Page Header Headline -->
 
-            ?>
+            <div class="row">
 
-            <!-- BEGIN: PAGE TITLE -->
+              <div class="{{ page-header-headline-alignment-class }}">
 
-            <h1 class="page-header-headline flush-top <?php if (($page_header_description != null) && ($page_header_description != '')) : ?>short<?php else: ?>flush-bottom<?php endif; ?>">
+                <h1 class="page-header-headline flush-top {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
 
-              <?php
+                  {{ page.page-header.headline }}
 
-              echo $page_header_headline;
+                </h1>
 
-              ?>
+              </div>
 
-            </h1>
+            </div>
 
-            <!-- END: PAGE TITLE -->
+            <!-- END: Page Header Headline -->
 
-            <?php
+          {% endif %}
 
-          endif;
+          {% if (page.page-header.description != null) and (page.page-header.description != empty) %}
 
-          if (($page_header_description != null) && ($page_header_description != '')) :
+            <!-- BEGIN: Page Header Overview -->
 
-            ?>
+            <p class="page-header-description lead {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if (page.page-header.actions == null) %}flush-bottom{% endif %}">
 
-            <!-- BEGIN: PAGE DESCRIPTION -->
-
-            <p class="page-header-description lead flush-bottom">
-
-              <?php
-
-              echo $page_header_description;
-
-              ?>
+              {{ page.page-header.description }}
 
             </p>
 
-            <!-- END: PAGE DESCRIPTION -->
+            <!-- END: Page Header Overview -->
 
-            <?php
+          {% endif %}
 
-          endif;
+          {% if (page.page-header.actions != null) %}
 
-          ?>
+            <!-- BEGIN: Page Header Actions -->
+
+            <div class="button-collection flush-bottom {{ page-header-actions-alignment-class }}">
+
+              {% for item in page.page-header.actions %}
+
+                <a href="{{ item.link }}" class="button button-large button-wide button-wide-below-screen-mini {{ item.class }}" id="{% if (item.id != null) and (item.id != empty) %}{{ item.id }}{% endif %}" {% if (item.modal != null) and (item.modal != empty) %}data-toggle="modal" data-target="{{ item.modal }}"{% endif %}>
+
+                  {{ item.label }}
+
+                </a>
+
+              {% endfor %}
+
+            </div>
+
+            <!-- END: Page Header Actions -->
+
+          {% endif %}
 
         </div>
 
@@ -100,6 +151,6 @@ if ((get_field('header_headline') != null) && (get_field('header_headline') != '
 
 </div>
 
-<!-- ************************************************** -->
-<!-- END: PAGE HEADER                                   -->
-<!-- ************************************************** -->
+<!-- =================================================
+END: Page Header
+================================================== -->

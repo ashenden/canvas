@@ -10,12 +10,10 @@ url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 navigation:
-  - title: Typography
-    url: /typography.html
+  - title: Styling
+    url: /index.html
   - title: Components
     url: /components.html
-  - title: Forms
-    url: /forms.html
 
 
 # Build settings
