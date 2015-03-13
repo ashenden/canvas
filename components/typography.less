@@ -4482,6 +4482,66 @@ base/typography.less
         
       }
       
+      ol {
+        
+        &.a {
+          
+          li {
+            
+            &:before {
+              
+              content: counter(li, lower-alpha) + ".";
+              
+            }
+            
+          }
+          
+        }
+        
+        &.A {
+          
+          li {
+            
+            &:before {
+              
+              content: counter(li, upper-alpha) + ".";
+              
+            }
+            
+          }
+          
+        }
+        
+        &.i {
+          
+          li {
+            
+            &:before {
+              
+              content: counter(li, lower-roman) + ".";
+              
+            }
+            
+          }
+          
+        }
+        
+        &.I {
+          
+          li {
+            
+            &:before {
+              
+              content: counter(li, upper-roman) + ".";
+              
+            }
+            
+          }
+          
+        }
+        
+      }
+      
     }
     
     &.a {
@@ -4509,8 +4569,6 @@ base/typography.less
         }
         
       }
-      
-      //list-style-type: upper-alpha;
       
     }
     
