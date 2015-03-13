@@ -36,104 +36,104 @@ Page Content
 
 #page-content {
 
-	/* ----------------------------------------------------------------------------------------------------
-	-------------------------------------------------------------------------------------------------------
+  /* ----------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
 
-	Page Content Navigation
+  Page Content Navigation
 
-	-------------------------------------------------------------------------------------------------------
-	---------------------------------------------------------------------------------------------------- */
+  -------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------- */
 
-	.page-content-navigation {
+  .page-content-navigation {
 
-		li {
+    li {
 
-			text-rendering: optimizelegibility;
-			font-family: @header-navigation-link-text-font-family;
-			font-size: @header-navigation-link-text-font-size;
-			font-weight: @header-navigation-link-text-font-weight;
-			font-style: @header-navigation-link-text-font-style;
-			//line-height: @header-logo-height;
-			text-transform: @header-navigation-link-text-transform;
-			color: @header-navigation-link-text-color;
-			text-shadow: @header-navigation-link-text-shadow;
-			position: relative;
+      text-rendering: optimizelegibility;
+      font-family: @header-navigation-link-text-font-family;
+      font-size: @header-navigation-link-text-font-size;
+      font-weight: @header-navigation-link-text-font-weight;
+      font-style: @header-navigation-link-text-font-style;
+      //line-height: @header-logo-height;
+      text-transform: @header-navigation-link-text-transform;
+      color: @header-navigation-link-text-color;
+      text-shadow: @header-navigation-link-text-shadow;
+      position: relative;
 
-			a {
+      a {
 
-				display: block;
-				//line-height: @header-logo-height;
-				color: @header-navigation-link-text-link-text-color;
-				text-decoration: @header-navigation-link-text-link-text-decoration;
+        display: block;
+        //line-height: @header-logo-height;
+        color: @header-navigation-link-text-link-text-color;
+        text-decoration: @header-navigation-link-text-link-text-decoration;
 
-				&:hover {
+        &:hover {
 
-					color: @header-navigation-link-text-link-hover-text-color;
-					text-decoration: @header-navigation-link-text-link-hover-text-decoration;
+          color: @header-navigation-link-text-link-hover-text-color;
+          text-decoration: @header-navigation-link-text-link-hover-text-decoration;
 
-				}
+        }
 
-				&:active {
+        &:active {
 
-					color: @header-navigation-link-text-link-active-text-color;
-					text-decoration: @header-navigation-link-text-link-active-text-decoration;
+          color: @header-navigation-link-text-link-active-text-color;
+          text-decoration: @header-navigation-link-text-link-active-text-decoration;
 
-				}
+        }
 
-			}
+      }
 
-			&:before {
+      &:before {
 
-				display: none;
-				content: '';
-				position: absolute;
-				top: auto;
-				bottom: 0px;
-				left: -(@base-spacing-unit * 0.5);
-				width: 2px;
-				height: 100%;
-				background: @header-navigation-link-text-link-text-color;
-				.border-radius(0px);
+        display: none;
+        content: '';
+        position: absolute;
+        top: auto;
+        bottom: 0px;
+        left: -(@base-spacing-unit * 0.5);
+        width: 2px;
+        height: 100%;
+        background: @header-navigation-link-text-link-text-color;
+        .border-radius(0px);
 
-			}
+      }
 
-			&:last-child {
+      &:last-child {
 
-				margin-right: 0px;
+        margin-right: 0px;
 
-			}
+      }
 
-			&.active {
+      &.active {
 
-				a {
+        a {
 
-					color: ~`color_lightness("@{gray}", -50)`;
+          color: ~`color_lightness("@{gray}", -50)`;
 
-				}
+        }
 
-				&:before {
+        &:before {
 
-					display: block;
+          display: block;
 
-				}
+        }
 
-			}
+      }
 
-			ul {
+      ul {
 
-				li {
+        li {
 
-					font-size: @small-text-font-size;
-					line-height: @small-text-line-height;
-					font-weight: 400;
+          font-size: @small-text-font-size;
+          line-height: @small-text-line-height;
+          font-weight: 400;
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -144,72 +144,72 @@ Page Content
 
 & when (@screen-mini-enabled) {
 
-	/* ----------------------------------------------------------------------------------------------------
-	-------------------------------------------------------------------------------------------------------
+  /* ----------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
 
-	Screen Size: Mini (@screen-mini) and above
+  Screen Size: Mini (@screen-mini) and above
 
-	-------------------------------------------------------------------------------------------------------
-	---------------------------------------------------------------------------------------------------- */
+  -------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------- */
 
-	@media (min-width: @screen-mini) {
+  @media (min-width: @screen-mini) {
 
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
+    /* ----------------------------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
 
-		Page Content
+    Page Content
 
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------- */
 
-		#page-content {
+    #page-content {
 
-			/* ----------------------------------------------------------------------------------------------------
-			-------------------------------------------------------------------------------------------------------
+      /* ----------------------------------------------------------------------------------------------------
+      -------------------------------------------------------------------------------------------------------
 
-			Page Content Navigation
+      Page Content Navigation
 
-			-------------------------------------------------------------------------------------------------------
-			---------------------------------------------------------------------------------------------------- */
+      -------------------------------------------------------------------------------------------------------
+      ---------------------------------------------------------------------------------------------------- */
 
-			.page-content-navigation {
+      .page-content-navigation {
 
-				li {
+        li {
 
-					//margin: 0px (@base-spacing-unit-screen-mini * 0.5) 0px 0px;
-					font-size: @header-navigation-link-text-font-size * @header-navigation-link-text-font-size-scale-screen-mini;
-					//line-height: @header-logo-height-screen-mini;
+          //margin: 0px (@base-spacing-unit-screen-mini * 0.5) 0px 0px;
+          font-size: @header-navigation-link-text-font-size * @header-navigation-link-text-font-size-scale-screen-mini;
+          //line-height: @header-logo-height-screen-mini;
 
-					a {
+          a {
 
-						//line-height: @header-logo-height-screen-mini;
+            //line-height: @header-logo-height-screen-mini;
 
-					}
+          }
 
-					&:before {
+          &:before {
 
-						bottom: -@header-container-padding-vertical-screen-mini;
+            bottom: -@header-container-padding-vertical-screen-mini;
 
-					}
+          }
 
-					ul {
+          ul {
 
-						li {
+            li {
 
-							font-size: @small-text-font-size * @small-text-font-size-scale-screen-mini;
-							line-height: @small-text-line-height * @small-text-line-height-scale-screen-mini;
+              font-size: @small-text-font-size * @small-text-font-size-scale-screen-mini;
+              line-height: @small-text-line-height * @small-text-line-height-scale-screen-mini;
 
-						}
+            }
 
-					}
+          }
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -220,94 +220,94 @@ Page Content
 
 & when (@screen-small-enabled) {
 
-	/* ----------------------------------------------------------------------------------------------------
-	-------------------------------------------------------------------------------------------------------
+  /* ----------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
 
-	Screen Size: Small (@screen-small) and above
+  Screen Size: Small (@screen-small) and above
 
-	-------------------------------------------------------------------------------------------------------
-	---------------------------------------------------------------------------------------------------- */
+  -------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------- */
 
-	@media (min-width: @screen-small) {
+  @media (min-width: @screen-small) {
 
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
+    /* ----------------------------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
 
-		Page Content
+    Page Content
 
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------- */
 
-		#page-content {
+    #page-content {
 
-			/* ----------------------------------------------------------------------------------------------------
-			-------------------------------------------------------------------------------------------------------
+      /* ----------------------------------------------------------------------------------------------------
+      -------------------------------------------------------------------------------------------------------
 
-			Page Content Navigation
+      Page Content Navigation
 
-			-------------------------------------------------------------------------------------------------------
-			---------------------------------------------------------------------------------------------------- */
+      -------------------------------------------------------------------------------------------------------
+      ---------------------------------------------------------------------------------------------------- */
 
-			.page-content-navigation {
+      .page-content-navigation {
 
-				&.anchor {
+        margin-bottom: @container-pod-padding-vertical-screen-small !important;
 
-					position: fixed;
+        &.affix {
 
-					&.anchor-top {
+          position: fixed;
+          top: @container-pod-padding-vertical-screen-small;
 
-						top: @container-pod-padding-vertical-screen-small;
-						bottom: auto;
+        }
 
-					}
+        &.affix-top {
 
-					&.anchor-bottom {
+          top: auto;
+          bottom: auto;
 
-						top: auto;
-						bottom: @container-pod-padding-vertical-screen-small;
+        }
 
-					}
+        &.affix-bottom {
 
-				}
-
+        }
 
 
-				li {
 
-					//margin: 0px (@base-spacing-unit-screen-small * 0.5) 0px 0px;
-					font-size: @header-navigation-link-text-font-size * @header-navigation-link-text-font-size-scale-screen-small;
-					//line-height: @header-logo-height-screen-small;
+        li {
 
-					a {
+          //margin: 0px (@base-spacing-unit-screen-small * 0.5) 0px 0px;
+          font-size: @header-navigation-link-text-font-size * @header-navigation-link-text-font-size-scale-screen-small;
+          //line-height: @header-logo-height-screen-small;
 
-						//line-height: @header-logo-height-screen-small;
+          a {
 
-					}
+            //line-height: @header-logo-height-screen-small;
 
-					&:before {
+          }
 
-						bottom: -@header-container-padding-vertical-screen-small;
+          &:before {
 
-					}
+            bottom: -@header-container-padding-vertical-screen-small;
 
-					ul {
+          }
 
-						li {
+          ul {
 
-							font-size: @small-text-font-size * @small-text-font-size-scale-screen-small;
-							line-height: @small-text-line-height * @small-text-line-height-scale-screen-small;
+            li {
 
-						}
+              font-size: @small-text-font-size * @small-text-font-size-scale-screen-small;
+              line-height: @small-text-line-height * @small-text-line-height-scale-screen-small;
 
-					}
+            }
 
-				}
+          }
 
-			}
+        }
 
-		}
+      }
 
-	}
+    }
+
+  }
 
 }
 
@@ -318,92 +318,94 @@ Page Content
 
 & when (@screen-medium-enabled) {
 
-	/* ----------------------------------------------------------------------------------------------------
-	-------------------------------------------------------------------------------------------------------
+  /* ----------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
 
-	Screen Size: Medium (@screen-medium) and above
+  Screen Size: Medium (@screen-medium) and above
 
-	-------------------------------------------------------------------------------------------------------
-	---------------------------------------------------------------------------------------------------- */
+  -------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------- */
 
-	@media (min-width: @screen-medium) {
+  @media (min-width: @screen-medium) {
 
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
+    /* ----------------------------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
 
-		Page Content
+    Page Content
 
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------- */
 
-		#page-content {
+    #page-content {
 
-			/* ----------------------------------------------------------------------------------------------------
-			-------------------------------------------------------------------------------------------------------
+      /* ----------------------------------------------------------------------------------------------------
+      -------------------------------------------------------------------------------------------------------
 
-			Page Content Navigation
+      Page Content Navigation
 
-			-------------------------------------------------------------------------------------------------------
-			---------------------------------------------------------------------------------------------------- */
+      -------------------------------------------------------------------------------------------------------
+      ---------------------------------------------------------------------------------------------------- */
 
-			.page-content-navigation {
+      .page-content-navigation {
 
-				&.anchor {
+        margin-bottom: @container-pod-padding-vertical-screen-medium !important;
 
-					&.anchor-top {
+        &.affix {
 
-						top: @container-pod-padding-vertical-screen-medium;
-						bottom: auto;
+          position: fixed;
+          top: @container-pod-padding-vertical-screen-medium;
 
-					}
+        }
 
-					&.anchor-bottom {
+        &.affix-top {
 
-						top: auto;
-						bottom: @container-pod-padding-vertical-screen-medium;
+          top: auto;
+          bottom: auto;
 
-					}
+        }
 
-				}
+        &.affix-bottom {
+
+        }
 
 
 
-				li {
+        li {
 
-					//margin: 0px (@base-spacing-unit-screen-medium * 0.5) 0px 0px;
-					font-size: @header-navigation-link-text-font-size * @header-navigation-link-text-font-size-scale-screen-medium;
-					//line-height: @header-logo-height-screen-medium;
+          //margin: 0px (@base-spacing-unit-screen-medium * 0.5) 0px 0px;
+          font-size: @header-navigation-link-text-font-size * @header-navigation-link-text-font-size-scale-screen-medium;
+          //line-height: @header-logo-height-screen-medium;
 
-					a {
+          a {
 
-						//line-height: @header-logo-height-screen-medium;
+            //line-height: @header-logo-height-screen-medium;
 
-					}
+          }
 
-					&:before {
+          &:before {
 
-						bottom: -@header-container-padding-vertical-screen-medium;
+            bottom: -@header-container-padding-vertical-screen-medium;
 
-					}
+          }
 
-					ul {
+          ul {
 
-						li {
+            li {
 
-							font-size: @small-text-font-size * @small-text-font-size-scale-screen-medium;
-							line-height: @small-text-line-height * @small-text-line-height-scale-screen-medium;
+              font-size: @small-text-font-size * @small-text-font-size-scale-screen-medium;
+              line-height: @small-text-line-height * @small-text-line-height-scale-screen-medium;
 
-						}
+            }
 
-					}
+          }
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -414,92 +416,94 @@ Page Content
 
 & when (@screen-medium-enabled) {
 
-	/* ----------------------------------------------------------------------------------------------------
-	-------------------------------------------------------------------------------------------------------
+  /* ----------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
 
-	Screen Size: Large (@screen-medium) and above
+  Screen Size: Large (@screen-large) and above
 
-	-------------------------------------------------------------------------------------------------------
-	---------------------------------------------------------------------------------------------------- */
+  -------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------- */
 
-	@media (min-width: @screen-medium) {
+  @media (min-width: @screen-large) {
 
-		/* ----------------------------------------------------------------------------------------------------
-		-------------------------------------------------------------------------------------------------------
+    /* ----------------------------------------------------------------------------------------------------
+    -------------------------------------------------------------------------------------------------------
 
-		Page Content
+    Page Content
 
-		-------------------------------------------------------------------------------------------------------
-		---------------------------------------------------------------------------------------------------- */
+    -------------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------- */
 
-		#page-content {
+    #page-content {
 
-			/* ----------------------------------------------------------------------------------------------------
-			-------------------------------------------------------------------------------------------------------
+      /* ----------------------------------------------------------------------------------------------------
+      -------------------------------------------------------------------------------------------------------
 
-			Page Content Navigation
+      Page Content Navigation
 
-			-------------------------------------------------------------------------------------------------------
-			---------------------------------------------------------------------------------------------------- */
+      -------------------------------------------------------------------------------------------------------
+      ---------------------------------------------------------------------------------------------------- */
 
-			.page-content-navigation {
+      .page-content-navigation {
 
-				&.anchor {
+        margin-bottom: @container-pod-padding-vertical-screen-large !important;
 
-					&.anchor-top {
+        &.affix {
 
-						top: @container-pod-padding-vertical-screen-large;
-						bottom: auto;
+          position: fixed;
+          top: @container-pod-padding-vertical-screen-large;
 
-					}
+        }
 
-					&.anchor-bottom {
+        &.affix-top {
 
-						top: auto;
-						bottom: @container-pod-padding-vertical-screen-large;
+          top: auto;
+          bottom: auto;
 
-					}
+        }
 
-				}
+        &.affix-bottom {
+
+        }
 
 
 
-				li {
+        li {
 
-					//margin: 0px (@base-spacing-unit-screen-medium * 0.5) 0px 0px;
-					font-size: @header-navigation-link-text-font-size * @header-navigation-link-text-font-size-scale-screen-medium;
-					//line-height: @header-logo-height-screen-medium;
+          //margin: 0px (@base-spacing-unit-screen-large * 0.5) 0px 0px;
+          font-size: @header-navigation-link-text-font-size * @header-navigation-link-text-font-size-scale-screen-large;
+          //line-height: @header-logo-height-screen-large;
 
-					a {
+          a {
 
-						//line-height: @header-logo-height-screen-medium;
+            //line-height: @header-logo-height-screen-large;
 
-					}
+          }
 
-					&:before {
+          &:before {
 
-						bottom: -@header-container-padding-vertical-screen-medium;
+            bottom: -@header-container-padding-vertical-screen-large;
 
-					}
+          }
 
-					ul {
+          ul {
 
-						li {
+            li {
 
-							font-size: @small-text-font-size * @small-text-font-size-scale-screen-large;
-							line-height: @small-text-line-height * @small-text-line-height-scale-screen-large;
+              font-size: @small-text-font-size * @small-text-font-size-scale-screen-large;
+              line-height: @small-text-line-height * @small-text-line-height-scale-screen-large;
 
-						}
+            }
 
-					}
+          }
 
-				}
+        }
 
-			}
+      }
 
-		}
+    }
 
-	}
+  }
 
 }
 
@@ -510,16 +514,16 @@ Page Content
 
 & when (@screen-resolution-2x-enabled) {
 
-	/* ----------------------------------------------------------------------------------------------------
-	-------------------------------------------------------------------------------------------------------
+  /* ----------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
 
-	Screen Resolution: 2x
+  Screen Resolution: 2x
 
-	-------------------------------------------------------------------------------------------------------
-	---------------------------------------------------------------------------------------------------- */
+  -------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------- */
 
-	@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 
-	}
+  }
 
 }

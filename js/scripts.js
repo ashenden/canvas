@@ -147,19 +147,19 @@
     Adjust Stage Height for WP Admin Bar
     ---------------------------------------------------------------------------------------------------- */
 
-      var wordpress_admin_bar = $("#wpadminbar");
+    var wordpress_admin_bar = $("#wpadminbar");
 
-      if (wordpress_admin_bar != null) {
+    if (wordpress_admin_bar != null) {
 
-       var wordpress_admin_bar_height = wordpress_admin_bar.outerHeight();
+     var wordpress_admin_bar_height = wordpress_admin_bar.outerHeight();
 
-       $("#stage").css({
+     $("#stage").css({
 
-        'margin-top'  :  wordpress_admin_bar_height
+      'margin-top'  :  wordpress_admin_bar_height
 
-       });
+     });
 
-      }
+    }
 
 
 
@@ -168,6 +168,39 @@
     ---------------------------------------------------------------------------------------------------- */
 
     window_scroll();
+
+
+
+    /* ----------------------------------------------------------------------------------------------------
+    Anchor Page Content Navigation
+    ---------------------------------------------------------------------------------------------------- */
+
+    $('#page-content-navigation').affix({
+
+      offset: {
+
+        top: function () {
+
+          var page_content_navigation = $('#page-content-navigation');
+          var page_content_navigation_threshold_top = $('#page-content').offset().top;
+
+          return (page_content_navigation_threshold_top);
+
+        },
+
+        bottom: function () {
+
+          var footer_height = $('#footer').outerHeight(true);
+          var page_content_navigation_margin_bottom = parseInt(jQuery('#page-content-navigation').css('margin-bottom'));
+          var page_content_navigation_threshold_bottom = footer_height + page_content_navigation_margin_bottom;
+
+          return (page_content_navigation_threshold_bottom);
+
+        }
+
+      }
+
+    });
 
   }
 
@@ -189,25 +222,6 @@
   function window_scroll() {
 
     var scroll_top = $(window).scrollTop() - $('#canvas').offset().top;
-
-
-
-    /* ----------------------------------------------------------------------------------------------------
-    Anchor Page Content Navigation
-    ---------------------------------------------------------------------------------------------------- */
-
-    var page_content_navigation = $('#page-content-navigation');
-    var page_content_navigation_threshold_min = $('#page-content').offset().top;
-
-    if (scroll_top >= page_content_navigation_threshold_min) {
-
-      page_content_navigation.addClass("anchor").addClass("anchor-top");
-
-    } else {
-
-      page_content_navigation.removeClass("anchor").removeClass("anchor-top");
-
-    }
 
   }
 
