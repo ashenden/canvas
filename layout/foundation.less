@@ -316,6 +316,56 @@ Column Overflow
 
 
 
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Horizontal Divider
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+hr,
+.divider {
+
+  border: 0px;
+  height: 1px;
+  margin-top: @container-pod-padding-vertical;
+  margin-bottom: @container-pod-padding-vertical;
+  background: @border-color;
+
+  &.short {
+
+    padding-top: @container-pod-short-padding-vertical;
+    padding-bottom: @container-pod-short-padding-vertical;
+
+  }
+
+  &.tall {
+
+    padding-top: @container-pod-tall-padding-vertical;
+    padding-bottom: @container-pod-tall-padding-vertical;
+
+  }
+
+
+
+  /* -----------------------------------------------------------------------------
+  Inverse
+  ----------------------------------------------------------------------------- */
+
+  &.inverse {
+
+    background: @border-color-inverse;
+
+  }
+
+}
+
+
+
+
+
+
 & when (@screen-mini-enabled) {
 
   /* -----------------------------------------------------------------------------
@@ -433,6 +483,41 @@ Column Overflow
       &[class*="column-mini-"] {
 
         margin-top: 0px;
+
+      }
+
+    }
+
+
+
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Horizontal Divider
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    hr,
+    .divider {
+
+      margin-top: @container-pod-padding-vertical-screen-mini;
+      margin-bottom: @container-pod-padding-vertical-screen-mini;
+
+      &.short {
+
+        padding-top: @container-pod-short-padding-vertical-screen-mini;
+        padding-bottom: @container-pod-short-padding-vertical-screen-mini;
+
+      }
+
+      &.tall {
+
+        padding-top: @container-pod-tall-padding-vertical-screen-mini;
+        padding-bottom: @container-pod-tall-padding-vertical-screen-mini;
 
       }
 
@@ -569,6 +654,41 @@ Column Overflow
 
     }
 
+
+
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Horizontal Divider
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    hr,
+    .divider {
+
+      margin-top: @container-pod-padding-vertical-screen-small;
+      margin-bottom: @container-pod-padding-vertical-screen-small;
+
+      &.short {
+
+        padding-top: @container-pod-short-padding-vertical-screen-small;
+        padding-bottom: @container-pod-short-padding-vertical-screen-small;
+
+      }
+
+      &.tall {
+
+        padding-top: @container-pod-tall-padding-vertical-screen-small;
+        padding-bottom: @container-pod-tall-padding-vertical-screen-small;
+
+      }
+
+    }
+
   }
 
 }
@@ -700,6 +820,41 @@ Column Overflow
 
     }
 
+
+
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Horizontal Divider
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    hr,
+    .divider {
+
+      margin-top: @container-pod-padding-vertical-screen-medium;
+      margin-bottom: @container-pod-padding-vertical-screen-medium;
+
+      &.short {
+
+        padding-top: @container-pod-short-padding-vertical-screen-medium;
+        padding-bottom: @container-pod-short-padding-vertical-screen-medium;
+
+      }
+
+      &.tall {
+
+        padding-top: @container-pod-tall-padding-vertical-screen-medium;
+        padding-bottom: @container-pod-tall-padding-vertical-screen-medium;
+
+      }
+
+    }
+
   }
 
 }
@@ -826,6 +981,41 @@ Column Overflow
       &[class^="column-large-"] {
 
         margin-top: 0px;
+
+      }
+
+    }
+
+
+
+
+
+
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
+
+    Horizontal Divider
+
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    hr,
+    .divider {
+
+      margin-top: @container-pod-padding-vertical-screen-large;
+      margin-bottom: @container-pod-padding-vertical-screen-large;
+
+      &.short {
+
+        padding-top: @container-pod-short-padding-vertical-screen-large;
+        padding-bottom: @container-pod-short-padding-vertical-screen-large;
+
+      }
+
+      &.tall {
+
+        padding-top: @container-pod-tall-padding-vertical-screen-large;
+        padding-bottom: @container-pod-tall-padding-vertical-screen-large;
 
       }
 
