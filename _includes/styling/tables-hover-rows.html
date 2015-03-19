@@ -1,18 +1,18 @@
 <!-- =================================================
-BEGIN: Tables
+BEGIN: Tables Hover Rows
 ================================================== -->
 
-<section id="tables">
+<section id="tables-hover-rows">
 
-  <h1 class="flush-top">
+  <h2>
 
-    Tables
+    Hover Rows
 
-  </h1>
+  </h2>
 
   <p>
 
-    For truly tabular data, use the <code>&lt;table&gt;</code> tag and add the class <code>.table</code>.  The table element applies basic stying propeties and padding to the default <code>&lt;table&gt;</code> element.
+    Add <code>.table-hover</code> to enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.
 
   </p>
 
@@ -24,7 +24,7 @@ BEGIN: Tables
 
     <div class="example-block-content">
 
-      <table class="table">
+      <table class="table table-hover">
 
         <thead>
 
@@ -181,31 +181,8 @@ BEGIN: Tables
     <div class="example-block-footer example-block-footer-codeblock">
 
 <pre class="prettyprint linenums flush-bottom">
-&lt;table class="table"&gt;
-
-  &lt;!--Table Head--&gt;
-  &lt;thead&gt;
-    &lt;!--Table Row--&gt;
-    &lt;tr&gt;
-      &lt;!--Table Head Cell--&gt;
-      &lt;th&gt;
-      &lt;/th&gt;
-      &hellip;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-
-  &lt;!--Table Body--&gt;
-  &lt;tbody&gt;
-    &lt;!--Table Row--&gt;
-    &lt;tr&gt;
-      &lt;!--Table Cell--&gt;
-      &lt;td&gt;
-      &lt;/td&gt;
-      &hellip;
-    &lt;/tr&gt;
-    &hellip;
-  &lt;/tbody&gt;
-
+&lt;table class="table table-hover"&gt;
+  &hellip;
 &lt;/table&gt;
 </pre>
 
@@ -217,11 +194,8 @@ BEGIN: Tables
   END: Example
   ================================================== -->
 
-  {% include styling/tables-hover-rows.html %}
-  {% include styling/tables-conditional-row-states.html %}
-
 </section>
 
 <!-- =================================================
-END: Tables
+END: Tables Hover Rows
 ================================================== -->
