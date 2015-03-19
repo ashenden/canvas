@@ -25,12 +25,15 @@ components/tables.less
 
   table {
 
+    border-collapse: @table-border-collapse;
+
   }
 
   th,
   td {
 
     text-align: left;
+    border-collapse: @table-border-collapse;
 
   }
 
@@ -69,18 +72,275 @@ components/tables.less
           > td {
 
             .table-cell-size-variant('table-cell', '', '');
-            .table-cell-style-variant('default');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Default) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            .table-cell-style-variant('table-cell', 'default');
 
           }
 
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Default, Highlight) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.highlight > td,
+          > td.highlight {
+
+            .table-cell-style-variant('table-cell', 'default-highlight');
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Default, Disabled) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.disabled > td,
+          > td.disabled {
+
+            .opacity(@table-cell-default-disabled-opacity);
+            .table-cell-style-variant('table-cell', 'default-disabled');
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Selected) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.selected > td,
+          > td.selected {
+
+            .table-cell-style-variant('table-cell', 'selected');
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Selected, Highlight) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.selected > td.highlight,
+          &.selected.highlight > td,
+          > td.selected.highlight {
+
+            .table-cell-style-variant('table-cell', 'selected-highlight');
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Selected, Disabled) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.selected > td.disabled,
+          &.selected.disabled > td,
+          > td.selected.disabled {
+
+            .opacity(@table-cell-selected-disabled-opacity);
+            .table-cell-style-variant('table-cell', 'selected-disabled');
+
+          }
+
+
+
           & when (@table-header-cell-enabled) {
 
-             > th {
+            > th {
 
-               .table-cell-size-variant('table-header-cell', '', '');
-               vertical-align: bottom;
+              vertical-align: bottom;
+              .table-cell-size-variant('table-header-cell', '', '');
 
-             }
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Default) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              .table-cell-style-variant('table-header-cell', 'default');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Default, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight > th,
+            > th.highlight {
+
+              .table-cell-style-variant('table-header-cell', 'default-highlight');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Default, Disabled) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.disabled > th,
+            > th.disabled {
+
+              .opacity(@table-header-cell-default-disabled-opacity);
+              .table-cell-style-variant('table-header-cell', 'default-disabled');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Selected) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.selected > th,
+            > th.selected {
+
+              .table-cell-style-variant('table-header-cell', 'selected');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Selected, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.selected > th.highlight,
+            &.selected.highlight > th,
+            > th.selected.highlight {
+
+              .table-cell-style-variant('table-header-cell', 'selected-highlight');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Selected, Disabled) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.selected > th.disabled,
+            &.selected.disabled > th,
+            > th.selected.disabled {
+
+              .opacity(@table-header-cell-selected-disabled-opacity);
+              .table-cell-style-variant('table-header-cell', 'selected-disabled');
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+    & when (@table-hover-enabled) {
+
+      &.table-hover {
+
+        & when (@table-cell-enabled) {
+
+          /* -----------------------------------------------------------------------------
+          Table Cells
+          ----------------------------------------------------------------------------- */
+
+          > thead,
+          > tbody,
+          > tfoot {
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Default) State: Hover
+            ----------------------------------------------------------------------------- */
+
+            > tr:hover > td {
+
+              .table-cell-style-variant('table-cell', 'default-hover');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Default, Highlight) State: Hover
+            ----------------------------------------------------------------------------- */
+
+            > tr:hover > td.highlight,
+            > tr.highlight:hover > td {
+
+              .table-cell-style-variant('table-cell', 'default-highlight-hover');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Default, Disabled) State: Hover
+            ----------------------------------------------------------------------------- */
+
+            > tr:hover > td.disabled,
+            > tr.disabled:hover > td {
+
+              .opacity(@table-cell-default-disabled-hover-opacity);
+              .table-cell-style-variant('table-cell', 'default-disabled-hover');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Selected) State: Hover
+            ----------------------------------------------------------------------------- */
+
+            > tr:hover > td.selected,
+            > tr.selected:hover > td {
+
+              .table-cell-style-variant('table-cell', 'selected-hover');
+
+            }
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Selected, Highlight) State: Hover
+            ----------------------------------------------------------------------------- */
+
+            > tr:hover > td.selected.highlight,
+            > tr.selected.highlight:hover > td,
+            > tr.selected:hover > td.highlight,
+            > tr.highlight:hover > td.selected {
+
+              .table-cell-style-variant('table-cell', 'selected-highlight-hover');
+
+            }
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Selected, Disabled) State: Hover
+            ----------------------------------------------------------------------------- */
+
+            > tr:hover > td.selected.disabled,
+            > tr.selected.disabled:hover > td,
+            > tr.selected:hover > td.disabled,
+            > tr.disabled:hover > td.selected {
+
+              .table-cell-style-variant('table-cell', 'selected-disabled-hover');
+
+            }
 
           }
 

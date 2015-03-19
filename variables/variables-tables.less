@@ -28,6 +28,15 @@ Table Styles
 ----------------------------------------------------------------------------- */
 
 
+
+/* -----------------------------------------------------------------------------
+Table Styles
+----------------------------------------------------------------------------- */
+
+@table-border-collapse:                                                         collapse;
+
+
+
 /* -----------------------------------------------------------------------------
 Table Responsive Scaling
 ----------------------------------------------------------------------------- */
@@ -67,8 +76,8 @@ Table Cell Styles
 
 @table-cell-text-font-size:                                                     null;
 @table-cell-text-line-height:                                                   null;
-@table-cell-padding-horizontal:                                                 @base-spacing-unit * 0.5;
-@table-cell-padding-vertical:                                                   @base-spacing-unit * 0.25;
+@table-cell-padding-horizontal:                                                 @base-spacing-unit * 0.25;
+@table-cell-padding-vertical:                                                   @base-spacing-unit * 0.125;
 @table-cell-height:                                                             @base-spacing-unit;
 
 
@@ -92,15 +101,15 @@ Table Cell Responsive Scaling
 @table-cell-text-line-height-scale-screen-medium:                               @body-text-line-height-scale-screen-medium;
 @table-cell-text-line-height-scale-screen-large:                                @body-text-line-height-scale-screen-large;
 
-@table-cell-padding-horizontal-scale-screen-mini:                               @table-scale-screen-mini;
-@table-cell-padding-horizontal-scale-screen-small:                              @table-scale-screen-small;
-@table-cell-padding-horizontal-scale-screen-medium:                             @table-scale-screen-medium;
-@table-cell-padding-horizontal-scale-screen-large:                              @table-scale-screen-large;
+@table-cell-padding-horizontal-scale-screen-mini:                               @base-spacing-unit-screen-mini / @base-spacing-unit;
+@table-cell-padding-horizontal-scale-screen-small:                              @base-spacing-unit-screen-small / @base-spacing-unit;
+@table-cell-padding-horizontal-scale-screen-medium:                             @base-spacing-unit-screen-medium / @base-spacing-unit;
+@table-cell-padding-horizontal-scale-screen-large:                              @base-spacing-unit-screen-large / @base-spacing-unit;
 
-@table-cell-padding-vertical-scale-screen-mini:                                 @table-scale-screen-mini;
-@table-cell-padding-vertical-scale-screen-small:                                @table-scale-screen-small;
-@table-cell-padding-vertical-scale-screen-medium:                               @table-scale-screen-medium;
-@table-cell-padding-vertical-scale-screen-large:                                @table-scale-screen-large;
+@table-cell-padding-vertical-scale-screen-mini:                                 @base-spacing-unit-screen-mini / @base-spacing-unit;
+@table-cell-padding-vertical-scale-screen-small:                                @base-spacing-unit-screen-small / @base-spacing-unit;
+@table-cell-padding-vertical-scale-screen-medium:                               @base-spacing-unit-screen-medium / @base-spacing-unit;
+@table-cell-padding-vertical-scale-screen-large:                                @base-spacing-unit-screen-large / @base-spacing-unit;
 
 
 
@@ -195,15 +204,876 @@ Table Cell (Default) State: Normal
 @table-cell-default-border-color:                                               null;
 @table-cell-default-border-style:                                               null;
 @table-cell-default-border-top-width:                                           1px;
-@table-cell-default-border-top-color:                                           rgba(0, 0, 0, 0.1);
+@table-cell-default-border-top-color:                                           rgba(0, 0, 0, 0.05);
 @table-cell-default-border-top-style:                                           solid;
 @table-cell-default-border-right-width:                                         null;
 @table-cell-default-border-right-color:                                         null;
 @table-cell-default-border-right-style:                                         null;
-@table-cell-default-border-bottom-width:                                        null;
-@table-cell-default-border-bottom-color:                                        null;
-@table-cell-default-border-bottom-style:                                        null;
+@table-cell-default-border-bottom-width:                                        1px;
+@table-cell-default-border-bottom-color:                                        rgba(0, 0, 0, 0.05);
+@table-cell-default-border-bottom-style:                                        solid;
 @table-cell-default-border-left-width:                                          null;
 @table-cell-default-border-left-color:                                          null;
 @table-cell-default-border-left-style:                                          null;
 @table-cell-default-shadow:                                                     null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Default) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-cell-default-hover-text-color:                                           null;
+@table-cell-default-hover-text-font-family:                                     null;
+@table-cell-default-hover-text-font-style:                                      null;
+@table-cell-default-hover-text-font-weight:                                     null;
+@table-cell-default-hover-text-transform:                                       null;
+@table-cell-default-hover-text-shadow:                                          null;
+@table-cell-default-hover-text-rendering:                                       null;
+@table-cell-default-hover-background-color:                                     rgba(0, 0, 0, 0.025);
+@table-cell-default-hover-background-gradient-color-top:                        null;
+@table-cell-default-hover-background-gradient-color-bottom:                     null;
+@table-cell-default-hover-border-width:                                         null;
+@table-cell-default-hover-border-color:                                         null;
+@table-cell-default-hover-border-style:                                         null;
+@table-cell-default-hover-border-top-width:                                     null;
+@table-cell-default-hover-border-top-color:                                     null;
+@table-cell-default-hover-border-top-style:                                     null;
+@table-cell-default-hover-border-right-width:                                   null;
+@table-cell-default-hover-border-right-color:                                   null;
+@table-cell-default-hover-border-right-style:                                   null;
+@table-cell-default-hover-border-bottom-width:                                  null;
+@table-cell-default-hover-border-bottom-color:                                  null;
+@table-cell-default-hover-border-bottom-style:                                  null;
+@table-cell-default-hover-border-left-width:                                    null;
+@table-cell-default-hover-border-left-color:                                    null;
+@table-cell-default-hover-border-left-style:                                    null;
+@table-cell-default-hover-shadow:                                               null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Default, Highlight) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-cell-default-highlight-text-color:                                       null;
+@table-cell-default-highlight-text-font-family:                                 null;
+@table-cell-default-highlight-text-font-style:                                  null;
+@table-cell-default-highlight-text-font-weight:                                 null;
+@table-cell-default-highlight-text-transform:                                   null;
+@table-cell-default-highlight-text-shadow:                                      null;
+@table-cell-default-highlight-text-rendering:                                   null;
+@table-cell-default-highlight-background-color:                                 rgba(0, 0, 0, 0.05);
+@table-cell-default-highlight-background-gradient-color-top:                    null;
+@table-cell-default-highlight-background-gradient-color-bottom:                 null;
+@table-cell-default-highlight-border-width:                                     null;
+@table-cell-default-highlight-border-color:                                     null;
+@table-cell-default-highlight-border-style:                                     null;
+@table-cell-default-highlight-border-top-width:                                 null;
+@table-cell-default-highlight-border-top-color:                                 null;
+@table-cell-default-highlight-border-top-style:                                 null;
+@table-cell-default-highlight-border-right-width:                               null;
+@table-cell-default-highlight-border-right-color:                               null;
+@table-cell-default-highlight-border-right-style:                               null;
+@table-cell-default-highlight-border-bottom-width:                              null;
+@table-cell-default-highlight-border-bottom-color:                              null;
+@table-cell-default-highlight-border-bottom-style:                              null;
+@table-cell-default-highlight-border-left-width:                                null;
+@table-cell-default-highlight-border-left-color:                                null;
+@table-cell-default-highlight-border-left-style:                                null;
+@table-cell-default-highlight-shadow:                                           null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Default, Highlight) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-cell-default-highlight-hover-text-color:                                 null;
+@table-cell-default-highlight-hover-text-font-family:                           null;
+@table-cell-default-highlight-hover-text-font-style:                            null;
+@table-cell-default-highlight-hover-text-font-weight:                           null;
+@table-cell-default-highlight-hover-text-transform:                             null;
+@table-cell-default-highlight-hover-text-shadow:                                null;
+@table-cell-default-highlight-hover-text-rendering:                             null;
+@table-cell-default-highlight-hover-background-color:                           rgba(0, 0, 0, 0.075);
+@table-cell-default-highlight-hover-background-gradient-color-top:              null;
+@table-cell-default-highlight-hover-background-gradient-color-bottom:           null;
+@table-cell-default-highlight-hover-border-width:                               null;
+@table-cell-default-highlight-hover-border-color:                               null;
+@table-cell-default-highlight-hover-border-style:                               null;
+@table-cell-default-highlight-hover-border-top-width:                           null;
+@table-cell-default-highlight-hover-border-top-color:                           null;
+@table-cell-default-highlight-hover-border-top-style:                           null;
+@table-cell-default-highlight-hover-border-right-width:                         null;
+@table-cell-default-highlight-hover-border-right-color:                         null;
+@table-cell-default-highlight-hover-border-right-style:                         null;
+@table-cell-default-highlight-hover-border-bottom-width:                        null;
+@table-cell-default-highlight-hover-border-bottom-color:                        null;
+@table-cell-default-highlight-hover-border-bottom-style:                        null;
+@table-cell-default-highlight-hover-border-left-width:                          null;
+@table-cell-default-highlight-hover-border-left-color:                          null;
+@table-cell-default-highlight-hover-border-left-style:                          null;
+@table-cell-default-highlight-hover-shadow:                                     null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Default, Disabled) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-cell-default-disabled-opacity:                                           0.5;
+@table-cell-default-disabled-text-color:                                        null;
+@table-cell-default-disabled-text-font-family:                                  null;
+@table-cell-default-disabled-text-font-style:                                   null;
+@table-cell-default-disabled-text-font-weight:                                  null;
+@table-cell-default-disabled-text-transform:                                    null;
+@table-cell-default-disabled-text-shadow:                                       null;
+@table-cell-default-disabled-text-rendering:                                    null;
+@table-cell-default-disabled-background-color:                                  null;
+@table-cell-default-disabled-background-gradient-color-top:                     null;
+@table-cell-default-disabled-background-gradient-color-bottom:                  null;
+@table-cell-default-disabled-border-width:                                      null;
+@table-cell-default-disabled-border-color:                                      null;
+@table-cell-default-disabled-border-style:                                      null;
+@table-cell-default-disabled-border-top-width:                                  null;
+@table-cell-default-disabled-border-top-color:                                  null;
+@table-cell-default-disabled-border-top-style:                                  null;
+@table-cell-default-disabled-border-right-width:                                null;
+@table-cell-default-disabled-border-right-color:                                null;
+@table-cell-default-disabled-border-right-style:                                null;
+@table-cell-default-disabled-border-bottom-width:                               null;
+@table-cell-default-disabled-border-bottom-color:                               null;
+@table-cell-default-disabled-border-bottom-style:                               null;
+@table-cell-default-disabled-border-left-width:                                 null;
+@table-cell-default-disabled-border-left-color:                                 null;
+@table-cell-default-disabled-border-left-style:                                 null;
+@table-cell-default-disabled-shadow:                                            null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Default, Disabled) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-cell-default-disabled-hover-opacity:                                     0.5;
+@table-cell-default-disabled-hover-text-color:                                  null;
+@table-cell-default-disabled-hover-text-font-family:                            null;
+@table-cell-default-disabled-hover-text-font-style:                             null;
+@table-cell-default-disabled-hover-text-font-weight:                            null;
+@table-cell-default-disabled-hover-text-transform:                              null;
+@table-cell-default-disabled-hover-text-shadow:                                 null;
+@table-cell-default-disabled-hover-text-rendering:                              null;
+@table-cell-default-disabled-hover-background-color:                            null;
+@table-cell-default-disabled-hover-background-gradient-color-top:               null;
+@table-cell-default-disabled-hover-background-gradient-color-bottom:            null;
+@table-cell-default-disabled-hover-border-width:                                null;
+@table-cell-default-disabled-hover-border-color:                                null;
+@table-cell-default-disabled-hover-border-style:                                null;
+@table-cell-default-disabled-hover-border-top-width:                            null;
+@table-cell-default-disabled-hover-border-top-color:                            null;
+@table-cell-default-disabled-hover-border-top-style:                            null;
+@table-cell-default-disabled-hover-border-right-width:                          null;
+@table-cell-default-disabled-hover-border-right-color:                          null;
+@table-cell-default-disabled-hover-border-right-style:                          null;
+@table-cell-default-disabled-hover-border-bottom-width:                         null;
+@table-cell-default-disabled-hover-border-bottom-color:                         null;
+@table-cell-default-disabled-hover-border-bottom-style:                         null;
+@table-cell-default-disabled-hover-border-left-width:                           null;
+@table-cell-default-disabled-hover-border-left-color:                           null;
+@table-cell-default-disabled-hover-border-left-style:                           null;
+@table-cell-default-disabled-hover-shadow:                                      null;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Table Cell (Selected)
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Selected) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-cell-selected-text-color:                                                null;
+@table-cell-selected-text-font-family:                                          null;
+@table-cell-selected-text-font-style:                                           null;
+@table-cell-selected-text-font-weight:                                          null;
+@table-cell-selected-text-transform:                                            null;
+@table-cell-selected-text-shadow:                                               null;
+@table-cell-selected-text-rendering:                                            null;
+@table-cell-selected-background-color:                                          rgba(0, 0, 0, 0.1);
+@table-cell-selected-background-gradient-color-top:                             null;
+@table-cell-selected-background-gradient-color-bottom:                          null;
+@table-cell-selected-border-width:                                              null;
+@table-cell-selected-border-color:                                              null;
+@table-cell-selected-border-style:                                              null;
+@table-cell-selected-border-top-width:                                          null;
+@table-cell-selected-border-top-color:                                          null;
+@table-cell-selected-border-top-style:                                          null;
+@table-cell-selected-border-right-width:                                        null;
+@table-cell-selected-border-right-color:                                        null;
+@table-cell-selected-border-right-style:                                        null;
+@table-cell-selected-border-bottom-width:                                       null;
+@table-cell-selected-border-bottom-color:                                       null;
+@table-cell-selected-border-bottom-style:                                       null;
+@table-cell-selected-border-left-width:                                         null;
+@table-cell-selected-border-left-color:                                         null;
+@table-cell-selected-border-left-style:                                         null;
+@table-cell-selected-shadow:                                                    null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Selected) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-cell-selected-hover-text-color:                                          null;
+@table-cell-selected-hover-text-font-family:                                    null;
+@table-cell-selected-hover-text-font-style:                                     null;
+@table-cell-selected-hover-text-font-weight:                                    null;
+@table-cell-selected-hover-text-transform:                                      null;
+@table-cell-selected-hover-text-shadow:                                         null;
+@table-cell-selected-hover-text-rendering:                                      null;
+@table-cell-selected-hover-background-color:                                    rgba(0, 0, 0, 0.1);
+@table-cell-selected-hover-background-gradient-color-top:                       null;
+@table-cell-selected-hover-background-gradient-color-bottom:                    null;
+@table-cell-selected-hover-border-width:                                        null;
+@table-cell-selected-hover-border-color:                                        null;
+@table-cell-selected-hover-border-style:                                        null;
+@table-cell-selected-hover-border-top-width:                                    null;
+@table-cell-selected-hover-border-top-color:                                    null;
+@table-cell-selected-hover-border-top-style:                                    null;
+@table-cell-selected-hover-border-right-width:                                  null;
+@table-cell-selected-hover-border-right-color:                                  null;
+@table-cell-selected-hover-border-right-style:                                  null;
+@table-cell-selected-hover-border-bottom-width:                                 null;
+@table-cell-selected-hover-border-bottom-color:                                 null;
+@table-cell-selected-hover-border-bottom-style:                                 null;
+@table-cell-selected-hover-border-left-width:                                   null;
+@table-cell-selected-hover-border-left-color:                                   null;
+@table-cell-selected-hover-border-left-style:                                   null;
+@table-cell-selected-hover-shadow:                                              null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Selected, Highlight) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-cell-selected-highlight-text-color:                                      null;
+@table-cell-selected-highlight-text-font-family:                                null;
+@table-cell-selected-highlight-text-font-style:                                 null;
+@table-cell-selected-highlight-text-font-weight:                                null;
+@table-cell-selected-highlight-text-transform:                                  null;
+@table-cell-selected-highlight-text-shadow:                                     null;
+@table-cell-selected-highlight-text-rendering:                                  null;
+@table-cell-selected-highlight-background-color:                                rgba(0, 0, 0, 0.15);
+@table-cell-selected-highlight-background-gradient-color-top:                   null;
+@table-cell-selected-highlight-background-gradient-color-bottom:                null;
+@table-cell-selected-highlight-border-width:                                    null;
+@table-cell-selected-highlight-border-color:                                    null;
+@table-cell-selected-highlight-border-style:                                    null;
+@table-cell-selected-highlight-border-top-width:                                null;
+@table-cell-selected-highlight-border-top-color:                                null;
+@table-cell-selected-highlight-border-top-style:                                null;
+@table-cell-selected-highlight-border-right-width:                              null;
+@table-cell-selected-highlight-border-right-color:                              null;
+@table-cell-selected-highlight-border-right-style:                              null;
+@table-cell-selected-highlight-border-bottom-width:                             null;
+@table-cell-selected-highlight-border-bottom-color:                             null;
+@table-cell-selected-highlight-border-bottom-style:                             null;
+@table-cell-selected-highlight-border-left-width:                               null;
+@table-cell-selected-highlight-border-left-color:                               null;
+@table-cell-selected-highlight-border-left-style:                               null;
+@table-cell-selected-highlight-shadow:                                          null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Selected, Highlight) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-cell-selected-highlight-hover-text-color:                                null;
+@table-cell-selected-highlight-hover-text-font-family:                          null;
+@table-cell-selected-highlight-hover-text-font-style:                           null;
+@table-cell-selected-highlight-hover-text-font-weight:                          null;
+@table-cell-selected-highlight-hover-text-transform:                            null;
+@table-cell-selected-highlight-hover-text-shadow:                               null;
+@table-cell-selected-highlight-hover-text-rendering:                            null;
+@table-cell-selected-highlight-hover-background-color:                          rgba(0, 0, 0, 0.15);
+@table-cell-selected-highlight-hover-background-gradient-color-top:             null;
+@table-cell-selected-highlight-hover-background-gradient-color-bottom:          null;
+@table-cell-selected-highlight-hover-border-width:                              null;
+@table-cell-selected-highlight-hover-border-color:                              null;
+@table-cell-selected-highlight-hover-border-style:                              null;
+@table-cell-selected-highlight-hover-border-top-width:                          null;
+@table-cell-selected-highlight-hover-border-top-color:                          null;
+@table-cell-selected-highlight-hover-border-top-style:                          null;
+@table-cell-selected-highlight-hover-border-right-width:                        null;
+@table-cell-selected-highlight-hover-border-right-color:                        null;
+@table-cell-selected-highlight-hover-border-right-style:                        null;
+@table-cell-selected-highlight-hover-border-bottom-width:                       null;
+@table-cell-selected-highlight-hover-border-bottom-color:                       null;
+@table-cell-selected-highlight-hover-border-bottom-style:                       null;
+@table-cell-selected-highlight-hover-border-left-width:                         null;
+@table-cell-selected-highlight-hover-border-left-color:                         null;
+@table-cell-selected-highlight-hover-border-left-style:                         null;
+@table-cell-selected-highlight-hover-shadow:                                    null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Selected, Disabled) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-cell-selected-disabled-opacity:                                          0.5;
+@table-cell-selected-disabled-text-color:                                       null;
+@table-cell-selected-disabled-text-font-family:                                 null;
+@table-cell-selected-disabled-text-font-style:                                  null;
+@table-cell-selected-disabled-text-font-weight:                                 null;
+@table-cell-selected-disabled-text-transform:                                   null;
+@table-cell-selected-disabled-text-shadow:                                      null;
+@table-cell-selected-disabled-text-rendering:                                   null;
+@table-cell-selected-disabled-background-color:                                 null;
+@table-cell-selected-disabled-background-gradient-color-top:                    null;
+@table-cell-selected-disabled-background-gradient-color-bottom:                 null;
+@table-cell-selected-disabled-border-width:                                     null;
+@table-cell-selected-disabled-border-color:                                     null;
+@table-cell-selected-disabled-border-style:                                     null;
+@table-cell-selected-disabled-border-top-width:                                 null;
+@table-cell-selected-disabled-border-top-color:                                 null;
+@table-cell-selected-disabled-border-top-style:                                 null;
+@table-cell-selected-disabled-border-right-width:                               null;
+@table-cell-selected-disabled-border-right-color:                               null;
+@table-cell-selected-disabled-border-right-style:                               null;
+@table-cell-selected-disabled-border-bottom-width:                              null;
+@table-cell-selected-disabled-border-bottom-color:                              null;
+@table-cell-selected-disabled-border-bottom-style:                              null;
+@table-cell-selected-disabled-border-left-width:                                null;
+@table-cell-selected-disabled-border-left-color:                                null;
+@table-cell-selected-disabled-border-left-style:                                null;
+@table-cell-selected-disabled-shadow:                                           null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Selected, Disabled) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-cell-selected-disabled-hover-opacity:                                    0.5;
+@table-cell-selected-disabled-hover-text-color:                                 null;
+@table-cell-selected-disabled-hover-text-font-family:                           null;
+@table-cell-selected-disabled-hover-text-font-style:                            null;
+@table-cell-selected-disabled-hover-text-font-weight:                           null;
+@table-cell-selected-disabled-hover-text-transform:                             null;
+@table-cell-selected-disabled-hover-text-shadow:                                null;
+@table-cell-selected-disabled-hover-text-rendering:                             null;
+@table-cell-selected-disabled-hover-background-color:                           null;
+@table-cell-selected-disabled-hover-background-gradient-color-top:              null;
+@table-cell-selected-disabled-hover-background-gradient-color-bottom:           null;
+@table-cell-selected-disabled-hover-border-width:                               null;
+@table-cell-selected-disabled-hover-border-color:                               null;
+@table-cell-selected-disabled-hover-border-style:                               null;
+@table-cell-selected-disabled-hover-border-top-width:                           null;
+@table-cell-selected-disabled-hover-border-top-color:                           null;
+@table-cell-selected-disabled-hover-border-top-style:                           null;
+@table-cell-selected-disabled-hover-border-right-width:                         null;
+@table-cell-selected-disabled-hover-border-right-color:                         null;
+@table-cell-selected-disabled-hover-border-right-style:                         null;
+@table-cell-selected-disabled-hover-border-bottom-width:                        null;
+@table-cell-selected-disabled-hover-border-bottom-color:                        null;
+@table-cell-selected-disabled-hover-border-bottom-style:                        null;
+@table-cell-selected-disabled-hover-border-left-width:                          null;
+@table-cell-selected-disabled-hover-border-left-color:                          null;
+@table-cell-selected-disabled-hover-border-left-style:                          null;
+@table-cell-selected-disabled-hover-shadow:                                     null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Table Header Cell (Default)
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Table Header Cell (Default) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-header-cell-default-text-color:                                          ~`color_lightness("@{neutral}", -30)`;;
+@table-header-cell-default-text-font-family:                                    null;
+@table-header-cell-default-text-font-style:                                     null;
+@table-header-cell-default-text-font-weight:                                    500;
+@table-header-cell-default-text-transform:                                      null;
+@table-header-cell-default-text-shadow:                                         null;
+@table-header-cell-default-text-rendering:                                      optimizelegibility;
+@table-header-cell-default-background-color:                                    rgba(0, 0, 0, 0.05);
+@table-header-cell-default-background-gradient-color-top:                       null;
+@table-header-cell-default-background-gradient-color-bottom:                    null;
+@table-header-cell-default-border-width:                                        null;
+@table-header-cell-default-border-color:                                        null;
+@table-header-cell-default-border-style:                                        null;
+@table-header-cell-default-border-top-width:                                    null;
+@table-header-cell-default-border-top-color:                                    null;
+@table-header-cell-default-border-top-style:                                    null;
+@table-header-cell-default-border-right-width:                                  null;
+@table-header-cell-default-border-right-color:                                  null;
+@table-header-cell-default-border-right-style:                                  null;
+@table-header-cell-default-border-bottom-width:                                 1px;
+@table-header-cell-default-border-bottom-color:                                 rgba(0, 0, 0, 0.1);
+@table-header-cell-default-border-bottom-style:                                 solid;
+@table-header-cell-default-border-left-width:                                   null;
+@table-header-cell-default-border-left-color:                                   null;
+@table-header-cell-default-border-left-style:                                   null;
+@table-header-cell-default-shadow:                                              null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Header Cell (Default) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-header-cell-default-hover-text-color:                                    null;
+@table-header-cell-default-hover-text-font-family:                              null;
+@table-header-cell-default-hover-text-font-style:                               null;
+@table-header-cell-default-hover-text-font-weight:                              null;
+@table-header-cell-default-hover-text-transform:                                null;
+@table-header-cell-default-hover-text-shadow:                                   null;
+@table-header-cell-default-hover-text-rendering:                                null;
+@table-header-cell-default-hover-background-color:                              null;
+@table-header-cell-default-hover-background-gradient-color-top:                 null;
+@table-header-cell-default-hover-background-gradient-color-bottom:              null;
+@table-header-cell-default-hover-border-width:                                  null;
+@table-header-cell-default-hover-border-color:                                  null;
+@table-header-cell-default-hover-border-style:                                  null;
+@table-header-cell-default-hover-border-top-width:                              null;
+@table-header-cell-default-hover-border-top-color:                              null;
+@table-header-cell-default-hover-border-top-style:                              null;
+@table-header-cell-default-hover-border-right-width:                            null;
+@table-header-cell-default-hover-border-right-color:                            null;
+@table-header-cell-default-hover-border-right-style:                            null;
+@table-header-cell-default-hover-border-bottom-width:                           null;
+@table-header-cell-default-hover-border-bottom-color:                           null;
+@table-header-cell-default-hover-border-bottom-style:                           null;
+@table-header-cell-default-hover-border-left-width:                             null;
+@table-header-cell-default-hover-border-left-color:                             null;
+@table-header-cell-default-hover-border-left-style:                             null;
+@table-header-cell-default-hover-shadow:                                        null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Default, Highlight) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-header-cell-default-highlight-text-color:                                null;
+@table-header-cell-default-highlight-text-font-family:                          null;
+@table-header-cell-default-highlight-text-font-style:                           null;
+@table-header-cell-default-highlight-text-font-weight:                          null;
+@table-header-cell-default-highlight-text-transform:                            null;
+@table-header-cell-default-highlight-text-shadow:                               null;
+@table-header-cell-default-highlight-text-rendering:                            null;
+@table-header-cell-default-highlight-background-color:                          rgba(0, 0, 0, 0.075);
+@table-header-cell-default-highlight-background-gradient-color-top:             null;
+@table-header-cell-default-highlight-background-gradient-color-bottom:          null;
+@table-header-cell-default-highlight-border-width:                              null;
+@table-header-cell-default-highlight-border-color:                              null;
+@table-header-cell-default-highlight-border-style:                              null;
+@table-header-cell-default-highlight-border-top-width:                          null;
+@table-header-cell-default-highlight-border-top-color:                          null;
+@table-header-cell-default-highlight-border-top-style:                          null;
+@table-header-cell-default-highlight-border-right-width:                        null;
+@table-header-cell-default-highlight-border-right-color:                        null;
+@table-header-cell-default-highlight-border-right-style:                        null;
+@table-header-cell-default-highlight-border-bottom-width:                       null;
+@table-header-cell-default-highlight-border-bottom-color:                       null;
+@table-header-cell-default-highlight-border-bottom-style:                       null;
+@table-header-cell-default-highlight-border-left-width:                         null;
+@table-header-cell-default-highlight-border-left-color:                         null;
+@table-header-cell-default-highlight-border-left-style:                         null;
+@table-header-cell-default-highlight-shadow:                                    null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Default, Highlight) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-header-cell-default-highlight-hover-text-color:                          null;
+@table-header-cell-default-highlight-hover-text-font-family:                    null;
+@table-header-cell-default-highlight-hover-text-font-style:                     null;
+@table-header-cell-default-highlight-hover-text-font-weight:                    null;
+@table-header-cell-default-highlight-hover-text-transform:                      null;
+@table-header-cell-default-highlight-hover-text-shadow:                         null;
+@table-header-cell-default-highlight-hover-text-rendering:                      null;
+@table-header-cell-default-highlight-hover-background-color:                    rgba(0, 0, 0, 0.075);
+@table-header-cell-default-highlight-hover-background-gradient-color-top:       null;
+@table-header-cell-default-highlight-hover-background-gradient-color-bottom:    null;
+@table-header-cell-default-highlight-hover-border-width:                        null;
+@table-header-cell-default-highlight-hover-border-color:                        null;
+@table-header-cell-default-highlight-hover-border-style:                        null;
+@table-header-cell-default-highlight-hover-border-top-width:                    null;
+@table-header-cell-default-highlight-hover-border-top-color:                    null;
+@table-header-cell-default-highlight-hover-border-top-style:                    null;
+@table-header-cell-default-highlight-hover-border-right-width:                  null;
+@table-header-cell-default-highlight-hover-border-right-color:                  null;
+@table-header-cell-default-highlight-hover-border-right-style:                  null;
+@table-header-cell-default-highlight-hover-border-bottom-width:                 null;
+@table-header-cell-default-highlight-hover-border-bottom-color:                 null;
+@table-header-cell-default-highlight-hover-border-bottom-style:                 null;
+@table-header-cell-default-highlight-hover-border-left-width:                   null;
+@table-header-cell-default-highlight-hover-border-left-color:                   null;
+@table-header-cell-default-highlight-hover-border-left-style:                   null;
+@table-header-cell-default-highlight-hover-shadow:                              null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Header Cell (Default, Disabled) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-header-cell-default-disabled-opacity:                                    0.5;
+@table-header-cell-default-disabled-text-color:                                 null;
+@table-header-cell-default-disabled-text-font-family:                           null;
+@table-header-cell-default-disabled-text-font-style:                            null;
+@table-header-cell-default-disabled-text-font-weight:                           null;
+@table-header-cell-default-disabled-text-transform:                             null;
+@table-header-cell-default-disabled-text-shadow:                                null;
+@table-header-cell-default-disabled-text-rendering:                             null;
+@table-header-cell-default-disabled-background-color:                           null;
+@table-header-cell-default-disabled-background-gradient-color-top:              null;
+@table-header-cell-default-disabled-background-gradient-color-bottom:           null;
+@table-header-cell-default-disabled-border-width:                               null;
+@table-header-cell-default-disabled-border-color:                               null;
+@table-header-cell-default-disabled-border-style:                               null;
+@table-header-cell-default-disabled-border-top-width:                           null;
+@table-header-cell-default-disabled-border-top-color:                           null;
+@table-header-cell-default-disabled-border-top-style:                           null;
+@table-header-cell-default-disabled-border-right-width:                         null;
+@table-header-cell-default-disabled-border-right-color:                         null;
+@table-header-cell-default-disabled-border-right-style:                         null;
+@table-header-cell-default-disabled-border-bottom-width:                        null;
+@table-header-cell-default-disabled-border-bottom-color:                        null;
+@table-header-cell-default-disabled-border-bottom-style:                        null;
+@table-header-cell-default-disabled-border-left-width:                          null;
+@table-header-cell-default-disabled-border-left-color:                          null;
+@table-header-cell-default-disabled-border-left-style:                          null;
+@table-header-cell-default-disabled-shadow:                                     null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Header Cell (Default, Disabled) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-header-cell-default-disabled-hover-opacity:                              0.5;
+@table-header-cell-default-disabled-hover-text-color:                           null;
+@table-header-cell-default-disabled-hover-text-font-family:                     null;
+@table-header-cell-default-disabled-hover-text-font-style:                      null;
+@table-header-cell-default-disabled-hover-text-font-weight:                     null;
+@table-header-cell-default-disabled-hover-text-transform:                       null;
+@table-header-cell-default-disabled-hover-text-shadow:                          null;
+@table-header-cell-default-disabled-hover-text-rendering:                       null;
+@table-header-cell-default-disabled-hover-background-color:                     null;
+@table-header-cell-default-disabled-hover-background-gradient-color-top:        null;
+@table-header-cell-default-disabled-hover-background-gradient-color-bottom:     null;
+@table-header-cell-default-disabled-hover-border-width:                         null;
+@table-header-cell-default-disabled-hover-border-color:                         null;
+@table-header-cell-default-disabled-hover-border-style:                         null;
+@table-header-cell-default-disabled-hover-border-top-width:                     null;
+@table-header-cell-default-disabled-hover-border-top-color:                     null;
+@table-header-cell-default-disabled-hover-border-top-style:                     null;
+@table-header-cell-default-disabled-hover-border-right-width:                   null;
+@table-header-cell-default-disabled-hover-border-right-color:                   null;
+@table-header-cell-default-disabled-hover-border-right-style:                   null;
+@table-header-cell-default-disabled-hover-border-bottom-width:                  null;
+@table-header-cell-default-disabled-hover-border-bottom-color:                  null;
+@table-header-cell-default-disabled-hover-border-bottom-style:                  null;
+@table-header-cell-default-disabled-hover-border-left-width:                    null;
+@table-header-cell-default-disabled-hover-border-left-color:                    null;
+@table-header-cell-default-disabled-hover-border-left-style:                    null;
+@table-header-cell-default-disabled-hover-shadow:                               null;
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Table Header Cell (Selected)
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+/* -----------------------------------------------------------------------------
+Table Header Cell (Selected) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-header-cell-selected-text-color:                                         ~`color_lightness("@{neutral}", -30)`;;
+@table-header-cell-selected-text-font-family:                                   null;
+@table-header-cell-selected-text-font-style:                                    null;
+@table-header-cell-selected-text-font-weight:                                   500;
+@table-header-cell-selected-text-transform:                                     null;
+@table-header-cell-selected-text-shadow:                                        null;
+@table-header-cell-selected-text-rendering:                                     optimizelegibility;
+@table-header-cell-selected-background-color:                                   rgba(0, 0, 0, 0.05);
+@table-header-cell-selected-background-gradient-color-top:                      null;
+@table-header-cell-selected-background-gradient-color-bottom:                   null;
+@table-header-cell-selected-border-width:                                       null;
+@table-header-cell-selected-border-color:                                       null;
+@table-header-cell-selected-border-style:                                       null;
+@table-header-cell-selected-border-top-width:                                   null;
+@table-header-cell-selected-border-top-color:                                   null;
+@table-header-cell-selected-border-top-style:                                   null;
+@table-header-cell-selected-border-right-width:                                 null;
+@table-header-cell-selected-border-right-color:                                 null;
+@table-header-cell-selected-border-right-style:                                 null;
+@table-header-cell-selected-border-bottom-width:                                1px;
+@table-header-cell-selected-border-bottom-color:                                rgba(0, 0, 0, 0.1);
+@table-header-cell-selected-border-bottom-style:                                solid;
+@table-header-cell-selected-border-left-width:                                  null;
+@table-header-cell-selected-border-left-color:                                  null;
+@table-header-cell-selected-border-left-style:                                  null;
+@table-header-cell-selected-shadow:                                             null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Header Cell (Selected) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-header-cell-selected-hover-text-color:                                   null;
+@table-header-cell-selected-hover-text-font-family:                             null;
+@table-header-cell-selected-hover-text-font-style:                              null;
+@table-header-cell-selected-hover-text-font-weight:                             null;
+@table-header-cell-selected-hover-text-transform:                               null;
+@table-header-cell-selected-hover-text-shadow:                                  null;
+@table-header-cell-selected-hover-text-rendering:                               null;
+@table-header-cell-selected-hover-background-color:                             null;
+@table-header-cell-selected-hover-background-gradient-color-top:                null;
+@table-header-cell-selected-hover-background-gradient-color-bottom:             null;
+@table-header-cell-selected-hover-border-width:                                 null;
+@table-header-cell-selected-hover-border-color:                                 null;
+@table-header-cell-selected-hover-border-style:                                 null;
+@table-header-cell-selected-hover-border-top-width:                             null;
+@table-header-cell-selected-hover-border-top-color:                             null;
+@table-header-cell-selected-hover-border-top-style:                             null;
+@table-header-cell-selected-hover-border-right-width:                           null;
+@table-header-cell-selected-hover-border-right-color:                           null;
+@table-header-cell-selected-hover-border-right-style:                           null;
+@table-header-cell-selected-hover-border-bottom-width:                          null;
+@table-header-cell-selected-hover-border-bottom-color:                          null;
+@table-header-cell-selected-hover-border-bottom-style:                          null;
+@table-header-cell-selected-hover-border-left-width:                            null;
+@table-header-cell-selected-hover-border-left-color:                            null;
+@table-header-cell-selected-hover-border-left-style:                            null;
+@table-header-cell-selected-hover-shadow:                                       null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Selected, Highlight) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-header-cell-selected-highlight-text-color:                               null;
+@table-header-cell-selected-highlight-text-font-family:                         null;
+@table-header-cell-selected-highlight-text-font-style:                          null;
+@table-header-cell-selected-highlight-text-font-weight:                         null;
+@table-header-cell-selected-highlight-text-transform:                           null;
+@table-header-cell-selected-highlight-text-shadow:                              null;
+@table-header-cell-selected-highlight-text-rendering:                           null;
+@table-header-cell-selected-highlight-background-color:                         rgba(0, 0, 0, 0.075);
+@table-header-cell-selected-highlight-background-gradient-color-top:            null;
+@table-header-cell-selected-highlight-background-gradient-color-bottom:         null;
+@table-header-cell-selected-highlight-border-width:                             null;
+@table-header-cell-selected-highlight-border-color:                             null;
+@table-header-cell-selected-highlight-border-style:                             null;
+@table-header-cell-selected-highlight-border-top-width:                         null;
+@table-header-cell-selected-highlight-border-top-color:                         null;
+@table-header-cell-selected-highlight-border-top-style:                         null;
+@table-header-cell-selected-highlight-border-right-width:                       null;
+@table-header-cell-selected-highlight-border-right-color:                       null;
+@table-header-cell-selected-highlight-border-right-style:                       null;
+@table-header-cell-selected-highlight-border-bottom-width:                      null;
+@table-header-cell-selected-highlight-border-bottom-color:                      null;
+@table-header-cell-selected-highlight-border-bottom-style:                      null;
+@table-header-cell-selected-highlight-border-left-width:                        null;
+@table-header-cell-selected-highlight-border-left-color:                        null;
+@table-header-cell-selected-highlight-border-left-style:                        null;
+@table-header-cell-selected-highlight-shadow:                                   null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Cell (Selected, Highlight) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-header-cell-selected-highlight-hover-text-color:                         null;
+@table-header-cell-selected-highlight-hover-text-font-family:                   null;
+@table-header-cell-selected-highlight-hover-text-font-style:                    null;
+@table-header-cell-selected-highlight-hover-text-font-weight:                   null;
+@table-header-cell-selected-highlight-hover-text-transform:                     null;
+@table-header-cell-selected-highlight-hover-text-shadow:                        null;
+@table-header-cell-selected-highlight-hover-text-rendering:                     null;
+@table-header-cell-selected-highlight-hover-background-color:                   rgba(0, 0, 0, 0.075);
+@table-header-cell-selected-highlight-hover-background-gradient-color-top:      null;
+@table-header-cell-selected-highlight-hover-background-gradient-color-bottom:   null;
+@table-header-cell-selected-highlight-hover-border-width:                       null;
+@table-header-cell-selected-highlight-hover-border-color:                       null;
+@table-header-cell-selected-highlight-hover-border-style:                       null;
+@table-header-cell-selected-highlight-hover-border-top-width:                   null;
+@table-header-cell-selected-highlight-hover-border-top-color:                   null;
+@table-header-cell-selected-highlight-hover-border-top-style:                   null;
+@table-header-cell-selected-highlight-hover-border-right-width:                 null;
+@table-header-cell-selected-highlight-hover-border-right-color:                 null;
+@table-header-cell-selected-highlight-hover-border-right-style:                 null;
+@table-header-cell-selected-highlight-hover-border-bottom-width:                null;
+@table-header-cell-selected-highlight-hover-border-bottom-color:                null;
+@table-header-cell-selected-highlight-hover-border-bottom-style:                null;
+@table-header-cell-selected-highlight-hover-border-left-width:                  null;
+@table-header-cell-selected-highlight-hover-border-left-color:                  null;
+@table-header-cell-selected-highlight-hover-border-left-style:                  null;
+@table-header-cell-selected-highlight-hover-shadow:                             null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Header Cell (Selected, Disabled) State: Normal
+----------------------------------------------------------------------------- */
+
+@table-header-cell-selected-disabled-opacity:                                   0.5;
+@table-header-cell-selected-disabled-text-color:                                null;
+@table-header-cell-selected-disabled-text-font-family:                          null;
+@table-header-cell-selected-disabled-text-font-style:                           null;
+@table-header-cell-selected-disabled-text-font-weight:                          null;
+@table-header-cell-selected-disabled-text-transform:                            null;
+@table-header-cell-selected-disabled-text-shadow:                               null;
+@table-header-cell-selected-disabled-text-rendering:                            null;
+@table-header-cell-selected-disabled-background-color:                          null;
+@table-header-cell-selected-disabled-background-gradient-color-top:             null;
+@table-header-cell-selected-disabled-background-gradient-color-bottom:          null;
+@table-header-cell-selected-disabled-border-width:                              null;
+@table-header-cell-selected-disabled-border-color:                              null;
+@table-header-cell-selected-disabled-border-style:                              null;
+@table-header-cell-selected-disabled-border-top-width:                          null;
+@table-header-cell-selected-disabled-border-top-color:                          null;
+@table-header-cell-selected-disabled-border-top-style:                          null;
+@table-header-cell-selected-disabled-border-right-width:                        null;
+@table-header-cell-selected-disabled-border-right-color:                        null;
+@table-header-cell-selected-disabled-border-right-style:                        null;
+@table-header-cell-selected-disabled-border-bottom-width:                       null;
+@table-header-cell-selected-disabled-border-bottom-color:                       null;
+@table-header-cell-selected-disabled-border-bottom-style:                       null;
+@table-header-cell-selected-disabled-border-left-width:                         null;
+@table-header-cell-selected-disabled-border-left-color:                         null;
+@table-header-cell-selected-disabled-border-left-style:                         null;
+@table-header-cell-selected-disabled-shadow:                                    null;
+
+
+
+/* -----------------------------------------------------------------------------
+Table Header Cell (Selected, Disabled) State: Hover
+----------------------------------------------------------------------------- */
+
+@table-header-cell-selected-disabled-hover-opacity:                             0.5;
+@table-header-cell-selected-disabled-hover-text-color:                          null;
+@table-header-cell-selected-disabled-hover-text-font-family:                    null;
+@table-header-cell-selected-disabled-hover-text-font-style:                     null;
+@table-header-cell-selected-disabled-hover-text-font-weight:                    null;
+@table-header-cell-selected-disabled-hover-text-transform:                      null;
+@table-header-cell-selected-disabled-hover-text-shadow:                         null;
+@table-header-cell-selected-disabled-hover-text-rendering:                      null;
+@table-header-cell-selected-disabled-hover-background-color:                    null;
+@table-header-cell-selected-disabled-hover-background-gradient-color-top:       null;
+@table-header-cell-selected-disabled-hover-background-gradient-color-bottom:    null;
+@table-header-cell-selected-disabled-hover-border-width:                        null;
+@table-header-cell-selected-disabled-hover-border-color:                        null;
+@table-header-cell-selected-disabled-hover-border-style:                        null;
+@table-header-cell-selected-disabled-hover-border-top-width:                    null;
+@table-header-cell-selected-disabled-hover-border-top-color:                    null;
+@table-header-cell-selected-disabled-hover-border-top-style:                    null;
+@table-header-cell-selected-disabled-hover-border-right-width:                  null;
+@table-header-cell-selected-disabled-hover-border-right-color:                  null;
+@table-header-cell-selected-disabled-hover-border-right-style:                  null;
+@table-header-cell-selected-disabled-hover-border-bottom-width:                 null;
+@table-header-cell-selected-disabled-hover-border-bottom-color:                 null;
+@table-header-cell-selected-disabled-hover-border-bottom-style:                 null;
+@table-header-cell-selected-disabled-hover-border-left-width:                   null;
+@table-header-cell-selected-disabled-hover-border-left-color:                   null;
+@table-header-cell-selected-disabled-hover-border-left-style:                   null;
+@table-header-cell-selected-disabled-hover-shadow:                              null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Table Hover
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+
+@table-hover-enabled:                                                           @table-enabled;
