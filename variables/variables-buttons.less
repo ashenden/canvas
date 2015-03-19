@@ -800,7 +800,7 @@ Button (Default, Stroke) State: Normal
 @button-default-stroke-border-left-width:                                       @button-default-stroke-border-width;
 @button-default-stroke-border-left-color:                                       @button-default-stroke-border-color;
 @button-default-stroke-caret-color:                                             @button-default-stroke-text-color;
-@button-default-stroke-shadow:                                                  0px 0px 0px 1px @button-default-background-color;
+@button-default-stroke-shadow:                                                  inset 0px 0px 0px 1px @button-default-background-color;
 
 
 
@@ -830,7 +830,7 @@ Button (Default, Stroke) State: Hover
 @button-default-stroke-hover-border-left-width:                                 @button-default-stroke-hover-border-width;
 @button-default-stroke-hover-border-left-color:                                 @button-default-stroke-hover-border-color;
 @button-default-stroke-hover-caret-color:                                       @button-default-stroke-hover-text-color;
-@button-default-stroke-hover-shadow:                                            0px 0px 0px 1px @button-default-hover-background-color;
+@button-default-stroke-hover-shadow:                                            inset 0px 0px 0px 1px @button-default-hover-background-color;
 
 
 
@@ -860,7 +860,7 @@ Button (Default, Stroke) State: Active
 @button-default-stroke-active-border-left-width:                                @button-default-stroke-active-border-width;
 @button-default-stroke-active-border-left-color:                                @button-default-stroke-active-border-color;
 @button-default-stroke-active-caret-color:                                      @button-default-stroke-active-text-color;
-@button-default-stroke-active-shadow:                                           0px 0px 0px 1px @button-default-active-background-color;
+@button-default-stroke-active-shadow:                                           inset 0px 0px 0px 1px @button-default-active-background-color;
 
 
 
@@ -954,7 +954,7 @@ Button (Default, Inverse) State: Normal
 @button-default-inverse-text-shadow:                                            none;
 @button-default-inverse-text-decoration:                                        none;
 @button-default-inverse-text-rendering:                                         optimizelegibility;
-@button-default-inverse-background-color:                                       rgba(255, 255, 255, 0.2);
+@button-default-inverse-background-color:                                       ~`color_lightness("@{neutral}", 5)`;
 @button-default-inverse-background-gradient-color-top:                          none;
 @button-default-inverse-background-gradient-color-bottom:                       none;
 @button-default-inverse-border-width:                                           0px;
@@ -984,7 +984,7 @@ Button (Default, Inverse) State: Hover
 @button-default-inverse-hover-text-shadow:                                      none;
 @button-default-inverse-hover-text-decoration:                                  none;
 @button-default-inverse-hover-text-rendering:                                   optimizelegibility;
-@button-default-inverse-hover-background-color:                                 rgba(255, 255, 255, 0.25);
+@button-default-inverse-hover-background-color:                                 ~`color_lightness("@{neutral}", 10)`;
 @button-default-inverse-hover-background-gradient-color-top:                    none;
 @button-default-inverse-hover-background-gradient-color-bottom:                 none;
 @button-default-inverse-hover-border-width:                                     0px;
@@ -1014,7 +1014,7 @@ Button (Default, Inverse) State: Active
 @button-default-inverse-active-text-shadow:                                     none;
 @button-default-inverse-active-text-decoration:                                 none;
 @button-default-inverse-active-text-rendering:                                  optimizelegibility;
-@button-default-inverse-active-background-color:                                rgba(255, 255, 255, 0.4);
+@button-default-inverse-active-background-color:                                ~`color_lightness("@{neutral}", 15)`;
 @button-default-inverse-active-background-gradient-color-top:                   none;
 @button-default-inverse-active-background-gradient-color-bottom:                none;
 @button-default-inverse-active-border-width:                                    0px;
@@ -1304,7 +1304,7 @@ Button (Default, Inverse, Stroke) State: Normal
 @button-default-inverse-stroke-border-left-width:                               @button-default-inverse-stroke-border-width;
 @button-default-inverse-stroke-border-left-color:                               @button-default-inverse-stroke-border-color;
 @button-default-inverse-stroke-caret-color:                                     @button-default-inverse-stroke-text-color;
-@button-default-inverse-stroke-shadow:                                          0px 0px 0px 1px @button-default-inverse-background-color;
+@button-default-inverse-stroke-shadow:                                          inset 0px 0px 0px 1px @button-default-inverse-background-color;
 
 
 
@@ -1334,7 +1334,7 @@ Button (Default, Inverse, Stroke) State: Hover
 @button-default-inverse-stroke-hover-border-left-width:                         @button-default-inverse-stroke-hover-border-width;
 @button-default-inverse-stroke-hover-border-left-color:                         @button-default-inverse-stroke-hover-border-color;
 @button-default-inverse-stroke-hover-caret-color:                               @button-default-inverse-stroke-hover-text-color;
-@button-default-inverse-stroke-hover-shadow:                                    0px 0px 0px 1px @button-default-inverse-hover-background-color;
+@button-default-inverse-stroke-hover-shadow:                                    inset 0px 0px 0px 1px @button-default-inverse-hover-background-color;
 
 
 
@@ -1364,7 +1364,7 @@ Button (Default, Inverse, Stroke) State: Active
 @button-default-inverse-stroke-active-border-left-width:                        @button-default-inverse-stroke-active-border-width;
 @button-default-inverse-stroke-active-border-left-color:                        @button-default-inverse-stroke-active-border-color;
 @button-default-inverse-stroke-active-caret-color:                              @button-default-inverse-stroke-active-text-color;
-@button-default-inverse-stroke-active-shadow:                                   0px 0px 0px 1px @button-default-inverse-active-background-color;
+@button-default-inverse-stroke-active-shadow:                                   inset 0px 0px 0px 1px @button-default-inverse-active-background-color;
 
 
 
@@ -1808,7 +1808,7 @@ Button (Primary, Stroke) State: Normal
 @button-primary-stroke-border-left-width:                                       @button-primary-stroke-border-width;
 @button-primary-stroke-border-left-color:                                       @button-primary-stroke-border-color;
 @button-primary-stroke-caret-color:                                             @button-primary-stroke-text-color;
-@button-primary-stroke-shadow:                                                  0px 0px 0px 1px @button-primary-background-color;
+@button-primary-stroke-shadow:                                                  inset 0px 0px 0px 1px @button-primary-background-color;
 
 
 
@@ -1838,7 +1838,7 @@ Button (Primary, Stroke) State: Hover
 @button-primary-stroke-hover-border-left-width:                                 @button-primary-stroke-hover-border-width;
 @button-primary-stroke-hover-border-left-color:                                 @button-primary-stroke-hover-border-color;
 @button-primary-stroke-hover-caret-color:                                       @button-primary-stroke-hover-text-color;
-@button-primary-stroke-hover-shadow:                                            0px 0px 0px 1px @button-primary-hover-background-color;
+@button-primary-stroke-hover-shadow:                                            inset 0px 0px 0px 1px @button-primary-hover-background-color;
 
 
 
@@ -1868,7 +1868,7 @@ Button (Primary, Stroke) State: Active
 @button-primary-stroke-active-border-left-width:                                @button-primary-stroke-active-border-width;
 @button-primary-stroke-active-border-left-color:                                @button-primary-stroke-active-border-color;
 @button-primary-stroke-active-caret-color:                                      @button-primary-stroke-active-text-color;
-@button-primary-stroke-active-shadow:                                           0px 0px 0px 1px @button-primary-active-background-color;
+@button-primary-stroke-active-shadow:                                           inset 0px 0px 0px 1px @button-primary-active-background-color;
 
 
 
@@ -2312,7 +2312,7 @@ Button (Primary, Inverse, Stroke) State: Normal
 @button-primary-inverse-stroke-border-left-width:                               @button-primary-inverse-stroke-border-width;
 @button-primary-inverse-stroke-border-left-color:                               @button-primary-inverse-stroke-border-color;
 @button-primary-inverse-stroke-caret-color:                                     @button-primary-inverse-stroke-text-color;
-@button-primary-inverse-stroke-shadow:                                          0px 0px 0px 1px @button-primary-inverse-background-color;
+@button-primary-inverse-stroke-shadow:                                          inset 0px 0px 0px 1px @button-primary-inverse-background-color;
 
 
 
@@ -2342,7 +2342,7 @@ Button (Primary, Inverse, Stroke) State: Hover
 @button-primary-inverse-stroke-hover-border-left-width:                         @button-primary-inverse-stroke-hover-border-width;
 @button-primary-inverse-stroke-hover-border-left-color:                         @button-primary-inverse-stroke-hover-border-color;
 @button-primary-inverse-stroke-hover-caret-color:                               @button-primary-inverse-stroke-hover-text-color;
-@button-primary-inverse-stroke-hover-shadow:                                    0px 0px 0px 1px @button-primary-inverse-hover-background-color;
+@button-primary-inverse-stroke-hover-shadow:                                    inset 0px 0px 0px 1px @button-primary-inverse-hover-background-color;
 
 
 
@@ -2372,7 +2372,7 @@ Button (Primary, Inverse, Stroke) State: Active
 @button-primary-inverse-stroke-active-border-left-width:                        @button-primary-inverse-stroke-active-border-width;
 @button-primary-inverse-stroke-active-border-left-color:                        @button-primary-inverse-stroke-active-border-color;
 @button-primary-inverse-stroke-active-caret-color:                              @button-primary-inverse-stroke-active-text-color;
-@button-primary-inverse-stroke-active-shadow:                                   0px 0px 0px 1px @button-primary-inverse-active-background-color;
+@button-primary-inverse-stroke-active-shadow:                                   inset 0px 0px 0px 1px @button-primary-inverse-active-background-color;
 
 
 
@@ -2816,7 +2816,7 @@ Button (Success, Stroke) State: Normal
 @button-success-stroke-border-left-width:                                       @button-success-stroke-border-width;
 @button-success-stroke-border-left-color:                                       @button-success-stroke-border-color;
 @button-success-stroke-caret-color:                                             @button-success-stroke-text-color;
-@button-success-stroke-shadow:                                                  0px 0px 0px 1px @button-success-background-color;
+@button-success-stroke-shadow:                                                  inset 0px 0px 0px 1px @button-success-background-color;
 
 
 
@@ -2846,7 +2846,7 @@ Button (Success, Stroke) State: Hover
 @button-success-stroke-hover-border-left-width:                                 @button-success-stroke-hover-border-width;
 @button-success-stroke-hover-border-left-color:                                 @button-success-stroke-hover-border-color;
 @button-success-stroke-hover-caret-color:                                       @button-success-stroke-hover-text-color;
-@button-success-stroke-hover-shadow:                                            0px 0px 0px 1px @button-success-hover-background-color;
+@button-success-stroke-hover-shadow:                                            inset 0px 0px 0px 1px @button-success-hover-background-color;
 
 
 
@@ -2876,7 +2876,7 @@ Button (Success, Stroke) State: Active
 @button-success-stroke-active-border-left-width:                                @button-success-stroke-active-border-width;
 @button-success-stroke-active-border-left-color:                                @button-success-stroke-active-border-color;
 @button-success-stroke-active-caret-color:                                      @button-success-stroke-active-text-color;
-@button-success-stroke-active-shadow:                                           0px 0px 0px 1px @button-success-active-background-color;
+@button-success-stroke-active-shadow:                                           inset 0px 0px 0px 1px @button-success-active-background-color;
 
 
 
@@ -3320,7 +3320,7 @@ Button (Success, Inverse, Stroke) State: Normal
 @button-success-inverse-stroke-border-left-width:                               @button-success-inverse-stroke-border-width;
 @button-success-inverse-stroke-border-left-color:                               @button-success-inverse-stroke-border-color;
 @button-success-inverse-stroke-caret-color:                                     @button-success-inverse-stroke-text-color;
-@button-success-inverse-stroke-shadow:                                          0px 0px 0px 1px @button-success-inverse-background-color;
+@button-success-inverse-stroke-shadow:                                          inset 0px 0px 0px 1px @button-success-inverse-background-color;
 
 
 
@@ -3350,7 +3350,7 @@ Button (Success, Inverse, Stroke) State: Hover
 @button-success-inverse-stroke-hover-border-left-width:                         @button-success-inverse-stroke-hover-border-width;
 @button-success-inverse-stroke-hover-border-left-color:                         @button-success-inverse-stroke-hover-border-color;
 @button-success-inverse-stroke-hover-caret-color:                               @button-success-inverse-stroke-hover-text-color;
-@button-success-inverse-stroke-hover-shadow:                                    0px 0px 0px 1px @button-success-inverse-hover-background-color;
+@button-success-inverse-stroke-hover-shadow:                                    inset 0px 0px 0px 1px @button-success-inverse-hover-background-color;
 
 
 
@@ -3380,7 +3380,7 @@ Button (Success, Inverse, Stroke) State: Active
 @button-success-inverse-stroke-active-border-left-width:                        @button-success-inverse-stroke-active-border-width;
 @button-success-inverse-stroke-active-border-left-color:                        @button-success-inverse-stroke-active-border-color;
 @button-success-inverse-stroke-active-caret-color:                              @button-success-inverse-stroke-active-text-color;
-@button-success-inverse-stroke-active-shadow:                                   0px 0px 0px 1px @button-success-inverse-active-background-color;
+@button-success-inverse-stroke-active-shadow:                                   inset 0px 0px 0px 1px @button-success-inverse-active-background-color;
 
 
 
@@ -3824,7 +3824,7 @@ Button (Warning, Stroke) State: Normal
 @button-warning-stroke-border-left-width:                                       @button-warning-stroke-border-width;
 @button-warning-stroke-border-left-color:                                       @button-warning-stroke-border-color;
 @button-warning-stroke-caret-color:                                             @button-warning-stroke-text-color;
-@button-warning-stroke-shadow:                                                  0px 0px 0px 1px @button-warning-background-color;
+@button-warning-stroke-shadow:                                                  inset 0px 0px 0px 1px @button-warning-background-color;
 
 
 
@@ -3854,7 +3854,7 @@ Button (Warning, Stroke) State: Hover
 @button-warning-stroke-hover-border-left-width:                                 @button-warning-stroke-hover-border-width;
 @button-warning-stroke-hover-border-left-color:                                 @button-warning-stroke-hover-border-color;
 @button-warning-stroke-hover-caret-color:                                       @button-warning-stroke-hover-text-color;
-@button-warning-stroke-hover-shadow:                                            0px 0px 0px 1px @button-warning-hover-background-color;
+@button-warning-stroke-hover-shadow:                                            inset 0px 0px 0px 1px @button-warning-hover-background-color;
 
 
 
@@ -3884,7 +3884,7 @@ Button (Warning, Stroke) State: Active
 @button-warning-stroke-active-border-left-width:                                @button-warning-stroke-active-border-width;
 @button-warning-stroke-active-border-left-color:                                @button-warning-stroke-active-border-color;
 @button-warning-stroke-active-caret-color:                                      @button-warning-stroke-active-text-color;
-@button-warning-stroke-active-shadow:                                           0px 0px 0px 1px @button-warning-active-background-color;
+@button-warning-stroke-active-shadow:                                           inset 0px 0px 0px 1px @button-warning-active-background-color;
 
 
 
@@ -4328,7 +4328,7 @@ Button (Warning, Inverse, Stroke) State: Normal
 @button-warning-inverse-stroke-border-left-width:                               @button-warning-inverse-stroke-border-width;
 @button-warning-inverse-stroke-border-left-color:                               @button-warning-inverse-stroke-border-color;
 @button-warning-inverse-stroke-caret-color:                                     @button-warning-inverse-stroke-text-color;
-@button-warning-inverse-stroke-shadow:                                          0px 0px 0px 1px @button-warning-inverse-background-color;
+@button-warning-inverse-stroke-shadow:                                          inset 0px 0px 0px 1px @button-warning-inverse-background-color;
 
 
 
@@ -4358,7 +4358,7 @@ Button (Warning, Inverse, Stroke) State: Hover
 @button-warning-inverse-stroke-hover-border-left-width:                         @button-warning-inverse-stroke-hover-border-width;
 @button-warning-inverse-stroke-hover-border-left-color:                         @button-warning-inverse-stroke-hover-border-color;
 @button-warning-inverse-stroke-hover-caret-color:                               @button-warning-inverse-stroke-hover-text-color;
-@button-warning-inverse-stroke-hover-shadow:                                    0px 0px 0px 1px @button-warning-inverse-hover-background-color;
+@button-warning-inverse-stroke-hover-shadow:                                    inset 0px 0px 0px 1px @button-warning-inverse-hover-background-color;
 
 
 
@@ -4388,7 +4388,7 @@ Button (Warning, Inverse, Stroke) State: Active
 @button-warning-inverse-stroke-active-border-left-width:                        @button-warning-inverse-stroke-active-border-width;
 @button-warning-inverse-stroke-active-border-left-color:                        @button-warning-inverse-stroke-active-border-color;
 @button-warning-inverse-stroke-active-caret-color:                              @button-warning-inverse-stroke-active-text-color;
-@button-warning-inverse-stroke-active-shadow:                                   0px 0px 0px 1px @button-warning-inverse-active-background-color;
+@button-warning-inverse-stroke-active-shadow:                                   inset 0px 0px 0px 1px @button-warning-inverse-active-background-color;
 
 
 
@@ -4832,7 +4832,7 @@ Button (Danger, Stroke) State: Normal
 @button-danger-stroke-border-left-width:                                        @button-danger-stroke-border-width;
 @button-danger-stroke-border-left-color:                                        @button-danger-stroke-border-color;
 @button-danger-stroke-caret-color:                                              @button-danger-stroke-text-color;
-@button-danger-stroke-shadow:                                                   0px 0px 0px 1px @button-danger-background-color;
+@button-danger-stroke-shadow:                                                   inset 0px 0px 0px 1px @button-danger-background-color;
 
 
 
@@ -4862,7 +4862,7 @@ Button (Danger, Stroke) State: Hover
 @button-danger-stroke-hover-border-left-width:                                  @button-danger-stroke-hover-border-width;
 @button-danger-stroke-hover-border-left-color:                                  @button-danger-stroke-hover-border-color;
 @button-danger-stroke-hover-caret-color:                                        @button-danger-stroke-hover-text-color;
-@button-danger-stroke-hover-shadow:                                             0px 0px 0px 1px @button-danger-hover-background-color;
+@button-danger-stroke-hover-shadow:                                             inset 0px 0px 0px 1px @button-danger-hover-background-color;
 
 
 
@@ -4892,7 +4892,7 @@ Button (Danger, Stroke) State: Active
 @button-danger-stroke-active-border-left-width:                                 @button-danger-stroke-active-border-width;
 @button-danger-stroke-active-border-left-color:                                 @button-danger-stroke-active-border-color;
 @button-danger-stroke-active-caret-color:                                       @button-danger-stroke-active-text-color;
-@button-danger-stroke-active-shadow:                                            0px 0px 0px 1px @button-danger-active-background-color;
+@button-danger-stroke-active-shadow:                                            inset 0px 0px 0px 1px @button-danger-active-background-color;
 
 
 
@@ -5336,7 +5336,7 @@ Button (Danger, Inverse, Stroke) State: Normal
 @button-danger-inverse-stroke-border-left-width:                                @button-danger-inverse-stroke-border-width;
 @button-danger-inverse-stroke-border-left-color:                                @button-danger-inverse-stroke-border-color;
 @button-danger-inverse-stroke-caret-color:                                      @button-danger-inverse-stroke-text-color;
-@button-danger-inverse-stroke-shadow:                                           0px 0px 0px 1px @button-danger-inverse-background-color;
+@button-danger-inverse-stroke-shadow:                                           inset 0px 0px 0px 1px @button-danger-inverse-background-color;
 
 
 
@@ -5366,7 +5366,7 @@ Button (Danger, Inverse, Stroke) State: Hover
 @button-danger-inverse-stroke-hover-border-left-width:                          @button-danger-inverse-stroke-hover-border-width;
 @button-danger-inverse-stroke-hover-border-left-color:                          @button-danger-inverse-stroke-hover-border-color;
 @button-danger-inverse-stroke-hover-caret-color:                                @button-danger-inverse-stroke-hover-text-color;
-@button-danger-inverse-stroke-hover-shadow:                                     0px 0px 0px 1px @button-danger-inverse-hover-background-color;
+@button-danger-inverse-stroke-hover-shadow:                                     inset 0px 0px 0px 1px @button-danger-inverse-hover-background-color;
 
 
 
@@ -5396,7 +5396,7 @@ Button (Danger, Inverse, Stroke) State: Active
 @button-danger-inverse-stroke-active-border-left-width:                         @button-danger-inverse-stroke-active-border-width;
 @button-danger-inverse-stroke-active-border-left-color:                         @button-danger-inverse-stroke-active-border-color;
 @button-danger-inverse-stroke-active-caret-color:                               @button-danger-inverse-stroke-active-text-color;
-@button-danger-inverse-stroke-active-shadow:                                    0px 0px 0px 1px @button-danger-inverse-active-background-color;
+@button-danger-inverse-stroke-active-shadow:                                    inset 0px 0px 0px 1px @button-danger-inverse-active-background-color;
 
 
 
@@ -5551,8 +5551,8 @@ Button Collection Spacing
 @button-group-button-default-offset-horizontal:                                 0px;
 @button-group-button-default-offset-vertical:                                   0px;
 
-@button-group-button-stroke-offset-horizontal:                                  1px;
-@button-group-button-stroke-offset-vertical:                                    1px;
+@button-group-button-stroke-offset-horizontal:                                  -1px;
+@button-group-button-stroke-offset-vertical:                                    0px;
 
 
 

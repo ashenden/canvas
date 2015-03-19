@@ -402,7 +402,7 @@ template.less
 
           a {
 
-            cursor: pointer;
+            cursor: default;
             .opacity(@dropdown-menu-list-item-default-disabled-opacity);
             color: @dropdown-menu-list-item-default-disabled-text-color;
             font-family: @dropdown-menu-list-item-default-disabled-text-font-family;
@@ -1240,7 +1240,7 @@ template.less
           .dropdown-menu-divider {
 
             padding: 0px floor(@dropdown-menu-divider-padding-horizontal * @dropdown-menu-divider-padding-horizontal-scale-screen-mini);
-            margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-mini) floor(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-mini) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-mini);
+            margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-mini) ceil(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-mini) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-mini);
             height: floor(@dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-mini);
             .border-radius(floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-mini));
 
@@ -1382,7 +1382,7 @@ template.less
           .dropdown-menu-divider {
 
             padding: 0px floor(@dropdown-menu-divider-padding-horizontal * @dropdown-menu-divider-padding-horizontal-scale-screen-small);
-            margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-small) floor(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-small) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-small);
+            margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-small) ceil(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-small) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-small);
             height: floor(@dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-small);
             .border-radius(floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-small));
 
@@ -1524,7 +1524,7 @@ template.less
           .dropdown-menu-divider {
 
             padding: 0px floor(@dropdown-menu-divider-padding-horizontal * @dropdown-menu-divider-padding-horizontal-scale-screen-medium);
-            margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-medium) floor(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-medium) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-medium);
+            margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-medium) ceil(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-medium) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-medium);
             height: floor(@dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-medium);
             .border-radius(floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-medium));
 
@@ -1666,7 +1666,7 @@ template.less
           .dropdown-menu-divider {
 
             padding: 0px floor(@dropdown-menu-divider-padding-horizontal * @dropdown-menu-divider-padding-horizontal-scale-screen-large);
-            margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-large) floor(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-large) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-large);
+            margin: floor(@dropdown-menu-divider-margin-vertical-top * @dropdown-menu-divider-margin-vertical-scale-screen-large) ceil(@dropdown-menu-divider-margin-horizontal * @dropdown-menu-divider-margin-horizontal-scale-screen-large) floor(@dropdown-menu-divider-margin-vertical-bottom * @dropdown-menu-divider-margin-vertical-scale-screen-large);
             height: floor(@dropdown-menu-divider-height * @dropdown-menu-divider-height-scale-screen-large);
             .border-radius(floor(@dropdown-menu-divider-border-radius * @dropdown-menu-divider-border-radius-scale-screen-large));
 

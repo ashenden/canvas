@@ -57,31 +57,36 @@ components/tables.less
 
 
 
-    & when (@table-cell-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      Table Cells
-      ----------------------------------------------------------------------------- */
-
-      > thead,
-      > tbody,
-      > tfoot {
-
-        > tr {
-
-          > td {
-
-            .table-cell-size-variant('table-cell', '', '');
 
 
 
-            /* -----------------------------------------------------------------------------
-            Table Cell (Default) State: Normal
-            ----------------------------------------------------------------------------- */
+    /* -----------------------------------------------------------------------------
+    --------------------------------------------------------------------------------
 
-            .table-cell-style-variant('table-cell', 'default');
+    Table Cells
 
-          }
+    --------------------------------------------------------------------------------
+    ----------------------------------------------------------------------------- */
+
+    > thead,
+    > tbody,
+    > tfoot {
+
+      tr {
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+
+        Table Cell (Default)
+
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        > th,
+        > td {
+
+          .table-cell-size-variant('table-cell', '', '');
+          .table-cell-style-variant('table-cell', 'default');
 
 
 
@@ -89,8 +94,7 @@ components/tables.less
           Table Cell (Default, Highlight) State: Normal
           ----------------------------------------------------------------------------- */
 
-          &.highlight > td,
-          > td.highlight {
+          &.highlight {
 
             .table-cell-style-variant('table-cell', 'default-highlight');
 
@@ -102,26 +106,37 @@ components/tables.less
           Table Cell (Default, Disabled) State: Normal
           ----------------------------------------------------------------------------- */
 
-          &.disabled > td,
-          > td.disabled {
+          &.disabled {
+
 
             .opacity(@table-cell-default-disabled-opacity);
             .table-cell-style-variant('table-cell', 'default-disabled');
 
           }
 
+        }
 
 
-          /* -----------------------------------------------------------------------------
-          Table Cell (Selected) State: Normal
-          ----------------------------------------------------------------------------- */
 
-          &.selected > td,
-          > td.selected {
 
-            .table-cell-style-variant('table-cell', 'selected');
 
-          }
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+
+        Table Cell (Selected)
+
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        /* -----------------------------------------------------------------------------
+        Table Cell (Selected) State: Normal
+        ----------------------------------------------------------------------------- */
+
+        > th.selected,
+        > td.selected {
+
+          .table-cell-style-variant('table-cell', 'selected');
 
 
 
@@ -129,9 +144,7 @@ components/tables.less
           Table Cell (Selected, Highlight) State: Normal
           ----------------------------------------------------------------------------- */
 
-          &.selected > td.highlight,
-          &.selected.highlight > td,
-          > td.selected.highlight {
+          &.highlight {
 
             .table-cell-style-variant('table-cell', 'selected-highlight');
 
@@ -143,100 +156,323 @@ components/tables.less
           Table Cell (Selected, Disabled) State: Normal
           ----------------------------------------------------------------------------- */
 
-          &.selected > td.disabled,
-          &.selected.disabled > td,
-          > td.selected.disabled {
+          &.disabled {
 
             .opacity(@table-cell-selected-disabled-opacity);
             .table-cell-style-variant('table-cell', 'selected-disabled');
 
           }
 
-
-
-          & when (@table-header-cell-enabled) {
-
-            > th {
-
-              vertical-align: bottom;
-              .table-cell-size-variant('table-header-cell', '', '');
+        }
 
 
 
-              /* -----------------------------------------------------------------------------
-              Table Header Cell (Default) State: Normal
-              ----------------------------------------------------------------------------- */
+        &.selected {
 
-              .table-cell-style-variant('table-header-cell', 'default');
+          /* -----------------------------------------------------------------------------
+          Table Cell (Selected) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          > th,
+          > td {
+
+            .table-cell-style-variant('table-cell', 'selected');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Selected, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight {
+
+              .table-cell-style-variant('table-cell', 'selected-highlight');
 
             }
 
 
 
             /* -----------------------------------------------------------------------------
-            Table Header Cell (Default, Highlight) State: Normal
+            Table Cell (Selected, Disabled) State: Normal
             ----------------------------------------------------------------------------- */
 
-            &.highlight > th,
-            > th.highlight {
+            &.disabled {
 
-              .table-cell-style-variant('table-header-cell', 'default-highlight');
+              .opacity(@table-cell-selected-disabled-opacity);
+              .table-cell-style-variant('table-cell', 'selected-disabled');
+
+            }
+
+          }
+
+        }
+
+
+
+
+
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+
+        Table Cell (Success)
+
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        /* -----------------------------------------------------------------------------
+        Table Cell (Success) State: Normal
+        ----------------------------------------------------------------------------- */
+
+        > th.success,
+        > td.success {
+
+          .table-cell-style-variant('table-cell', 'success');
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Success, Highlight) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.highlight {
+
+            .table-cell-style-variant('table-cell', 'success-highlight');
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Success, Disabled) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.disabled {
+
+            .opacity(@table-cell-success-disabled-opacity);
+            .table-cell-style-variant('table-cell', 'success-disabled');
+
+          }
+
+        }
+
+
+
+        &.success {
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Success) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          > th,
+          > td {
+
+            .table-cell-style-variant('table-cell', 'success');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Success, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight {
+
+              .table-cell-style-variant('table-cell', 'success-highlight');
 
             }
 
 
 
             /* -----------------------------------------------------------------------------
-            Table Header Cell (Default, Disabled) State: Normal
+            Table Cell (Success, Disabled) State: Normal
             ----------------------------------------------------------------------------- */
 
-            &.disabled > th,
-            > th.disabled {
+            &.disabled {
 
-              .opacity(@table-header-cell-default-disabled-opacity);
-              .table-cell-style-variant('table-header-cell', 'default-disabled');
+              .opacity(@table-cell-success-disabled-opacity);
+              .table-cell-style-variant('table-cell', 'success-disabled');
+
+            }
+
+          }
+
+        }
+
+
+
+
+
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+
+        Table Cell (Warning)
+
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        /* -----------------------------------------------------------------------------
+        Table Cell (Warning) State: Normal
+        ----------------------------------------------------------------------------- */
+
+        > th.warning,
+        > td.warning {
+
+          .table-cell-style-variant('table-cell', 'warning');
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Warning, Highlight) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.highlight {
+
+            .table-cell-style-variant('table-cell', 'warning-highlight');
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Warning, Disabled) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.disabled {
+
+            .opacity(@table-cell-warning-disabled-opacity);
+            .table-cell-style-variant('table-cell', 'warning-disabled');
+
+          }
+
+        }
+
+
+
+        &.warning {
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Warning) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          > th,
+          > td {
+
+            .table-cell-style-variant('table-cell', 'warning');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Warning, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight {
+
+              .table-cell-style-variant('table-cell', 'warning-highlight');
 
             }
 
 
 
             /* -----------------------------------------------------------------------------
-            Table Header Cell (Selected) State: Normal
+            Table Cell (Warning, Disabled) State: Normal
             ----------------------------------------------------------------------------- */
 
-            &.selected > th,
-            > th.selected {
+            &.disabled {
 
-              .table-cell-style-variant('table-header-cell', 'selected');
+              .opacity(@table-cell-warning-disabled-opacity);
+              .table-cell-style-variant('table-cell', 'warning-disabled');
+
+            }
+
+          }
+
+        }
+
+
+
+
+
+
+        /* -----------------------------------------------------------------------------
+        --------------------------------------------------------------------------------
+
+        Table Cell (Danger)
+
+        --------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------- */
+
+        /* -----------------------------------------------------------------------------
+        Table Cell (Danger) State: Normal
+        ----------------------------------------------------------------------------- */
+
+        > th.danger,
+        > td.danger {
+
+          .table-cell-style-variant('table-cell', 'danger');
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Danger, Highlight) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.highlight {
+
+            .table-cell-style-variant('table-cell', 'danger-highlight');
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Danger, Disabled) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          &.disabled {
+
+            .opacity(@table-cell-danger-disabled-opacity);
+            .table-cell-style-variant('table-cell', 'danger-disabled');
+
+          }
+
+        }
+
+
+
+        &.danger {
+
+          /* -----------------------------------------------------------------------------
+          Table Cell (Danger) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          > th,
+          > td {
+
+            .table-cell-style-variant('table-cell', 'danger');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Cell (Danger, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight {
+
+              .table-cell-style-variant('table-cell', 'danger-highlight');
 
             }
 
 
 
             /* -----------------------------------------------------------------------------
-            Table Header Cell (Selected, Highlight) State: Normal
+            Table Cell (Danger, Disabled) State: Normal
             ----------------------------------------------------------------------------- */
 
-            &.selected > th.highlight,
-            &.selected.highlight > th,
-            > th.selected.highlight {
+            &.disabled {
 
-              .table-cell-style-variant('table-header-cell', 'selected-highlight');
-
-            }
-
-
-
-            /* -----------------------------------------------------------------------------
-            Table Header Cell (Selected, Disabled) State: Normal
-            ----------------------------------------------------------------------------- */
-
-            &.selected > th.disabled,
-            &.selected.disabled > th,
-            > th.selected.disabled {
-
-              .opacity(@table-header-cell-selected-disabled-opacity);
-              .table-cell-style-variant('table-header-cell', 'selected-disabled');
+              .opacity(@table-cell-danger-disabled-opacity);
+              .table-cell-style-variant('table-cell', 'danger-disabled');
 
             }
 
@@ -250,95 +486,853 @@ components/tables.less
 
 
 
-    & when (@table-hover-enabled) {
+    > tbody {
 
-      &.table-hover {
+      tr {
 
-        & when (@table-cell-enabled) {
+        & when (@table-body-border-top = false) {
+
+          &:first-child {
+
+            td,
+            th {
+
+              border-top: 0px;
+
+            }
+
+          }
+
+        }
+
+        & when (@table-body-border-bottom = false) {
+
+          &:last-child {
+
+            td,
+            th {
+
+              border-bottom: 0px;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+
+
+
+    & when (@table-header-cell-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Table Header
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      > thead {
+
+        tr {
 
           /* -----------------------------------------------------------------------------
-          Table Cells
+          --------------------------------------------------------------------------------
+
+          Table Header Cell (Default)
+
+          --------------------------------------------------------------------------------
           ----------------------------------------------------------------------------- */
 
-          > thead,
-          > tbody,
-          > tfoot {
+          > th {
+
+            .table-cell-size-variant('table-header-cell', '', '');
+            .table-cell-style-variant('table-header-cell', 'default');
+
+
 
             /* -----------------------------------------------------------------------------
-            Table Cell (Default) State: Hover
+            Table Header Cell (Default, Highlight) State: Normal
             ----------------------------------------------------------------------------- */
 
-            > tr:hover > td {
+            &.highlight {
+
+              .table-cell-style-variant('table-header-cell', 'default-highlight');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Default, Disabled) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.disabled {
+
+
+              .opacity(@table-header-cell-default-disabled-opacity);
+              .table-cell-style-variant('table-header-cell', 'default-disabled');
+
+            }
+
+          }
+
+
+
+
+
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Header Cell (Selected)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          /* -----------------------------------------------------------------------------
+          Table Header Cell (Selected) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          > th.selected {
+
+            .table-cell-style-variant('table-header-cell', 'selected');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Selected, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight {
+
+              .table-cell-style-variant('table-header-cell', 'selected-highlight');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Selected, Disabled) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.disabled {
+
+              .opacity(@table-header-cell-selected-disabled-opacity);
+              .table-cell-style-variant('table-header-cell', 'selected-disabled');
+
+            }
+
+          }
+
+
+
+          &.selected {
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Selected) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            > th {
+
+              .table-cell-style-variant('table-header-cell', 'selected');
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Selected, Highlight) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-header-cell', 'selected-highlight');
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Selected, Disabled) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                .opacity(@table-header-cell-selected-disabled-opacity);
+                .table-cell-style-variant('table-header-cell', 'selected-disabled');
+
+              }
+
+            }
+
+          }
+
+
+
+
+
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Header Cell (Success)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          /* -----------------------------------------------------------------------------
+          Table Header Cell (Success) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          > th.success {
+
+            .table-cell-style-variant('table-header-cell', 'success');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Success, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight {
+
+              .table-cell-style-variant('table-header-cell', 'success-highlight');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Success, Disabled) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.disabled {
+
+              .opacity(@table-header-cell-success-disabled-opacity);
+              .table-cell-style-variant('table-header-cell', 'success-disabled');
+
+            }
+
+          }
+
+
+
+          &.success {
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Success) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            > th {
+
+              .table-cell-style-variant('table-header-cell', 'success');
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Success, Highlight) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-header-cell', 'success-highlight');
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Success, Disabled) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                .opacity(@table-header-cell-success-disabled-opacity);
+                .table-cell-style-variant('table-header-cell', 'success-disabled');
+
+              }
+
+            }
+
+          }
+
+
+
+
+
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Header Cell (Warning)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          /* -----------------------------------------------------------------------------
+          Table Header Cell (Warning) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          > th.warning {
+
+            .table-cell-style-variant('table-header-cell', 'warning');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Warning, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight {
+
+              .table-cell-style-variant('table-header-cell', 'warning-highlight');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Warning, Disabled) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.disabled {
+
+              .opacity(@table-header-cell-warning-disabled-opacity);
+              .table-cell-style-variant('table-header-cell', 'warning-disabled');
+
+            }
+
+          }
+
+
+
+          &.warning {
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Warning) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            > th {
+
+              .table-cell-style-variant('table-header-cell', 'warning');
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Warning, Highlight) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-header-cell', 'warning-highlight');
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Warning, Disabled) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                .opacity(@table-header-cell-warning-disabled-opacity);
+                .table-cell-style-variant('table-header-cell', 'warning-disabled');
+
+              }
+
+            }
+
+          }
+
+
+
+
+
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Header Cell (Danger)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          /* -----------------------------------------------------------------------------
+          Table Header Cell (Danger) State: Normal
+          ----------------------------------------------------------------------------- */
+
+          > th.danger {
+
+            .table-cell-style-variant('table-header-cell', 'danger');
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Danger, Highlight) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.highlight {
+
+              .table-cell-style-variant('table-header-cell', 'danger-highlight');
+
+            }
+
+
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Danger, Disabled) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            &.disabled {
+
+              .opacity(@table-header-cell-danger-disabled-opacity);
+              .table-cell-style-variant('table-header-cell', 'danger-disabled');
+
+            }
+
+          }
+
+
+
+          &.danger {
+
+            /* -----------------------------------------------------------------------------
+            Table Header Cell (Danger) State: Normal
+            ----------------------------------------------------------------------------- */
+
+            > th {
+
+              .table-cell-style-variant('table-header-cell', 'danger');
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Danger, Highlight) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-header-cell', 'danger-highlight');
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Header Cell (Danger, Disabled) State: Normal
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                .opacity(@table-header-cell-danger-disabled-opacity);
+                .table-cell-style-variant('table-header-cell', 'danger-disabled');
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+
+
+
+    & when not (@table-border-radius = null) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Table Border Radius
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .border-radius(@table-border-radius);
+
+
+
+      > tbody {
+
+        tr {
+
+          &:first-child {
+
+            td,
+            th {
+
+              &:first-child {
+
+                .border-top-left-radius(@table-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-top-right-radius(@table-border-radius);
+
+              }
+
+            }
+
+          }
+
+          &:last-child {
+
+            td,
+            th {
+
+              &:first-child {
+
+                .border-bottom-left-radius(@table-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-bottom-right-radius(@table-border-radius);
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      > thead {
+
+        tr {
+
+          &:first-child {
+
+            th {
+
+              &:first-child {
+
+                .border-top-left-radius(@table-border-radius);
+
+              }
+
+              &:last-child {
+
+                .border-top-right-radius(@table-border-radius);
+
+              }
+
+            }
+
+          }
+
+        }
+
+        + tbody {
+
+          tr {
+
+            &:first-child {
+
+              th,
+              td {
+
+                .border-radius(0px) !important;
+
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+
+
+
+    & when (@table-hover-enabled) {
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Table Hover
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      > tbody {
+
+        tr {
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Cell (Default)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          &:hover {
+
+            > th,
+            > td {
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Default) State: Hover
+              ----------------------------------------------------------------------------- */
 
               .table-cell-style-variant('table-cell', 'default-hover');
 
-            }
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Default, Highlight) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-cell', 'default-highlight-hover');
+
+              }
 
 
 
-            /* -----------------------------------------------------------------------------
-            Table Cell (Default, Highlight) State: Hover
-            ----------------------------------------------------------------------------- */
+              /* -----------------------------------------------------------------------------
+              Table Cell (Default, Disabled) State: Hover
+              ----------------------------------------------------------------------------- */
 
-            > tr:hover > td.highlight,
-            > tr.highlight:hover > td {
+              &.disabled {
 
-              .table-cell-style-variant('table-cell', 'default-highlight-hover');
+                .table-cell-style-variant('table-cell', 'default-disabled-hover');
 
-            }
-
-
-
-            /* -----------------------------------------------------------------------------
-            Table Cell (Default, Disabled) State: Hover
-            ----------------------------------------------------------------------------- */
-
-            > tr:hover > td.disabled,
-            > tr.disabled:hover > td {
-
-              .opacity(@table-cell-default-disabled-hover-opacity);
-              .table-cell-style-variant('table-cell', 'default-disabled-hover');
+              }
 
             }
 
+          }
 
 
-            /* -----------------------------------------------------------------------------
-            Table Cell (Selected) State: Hover
-            ----------------------------------------------------------------------------- */
 
-            > tr:hover > td.selected,
-            > tr.selected:hover > td {
+
+
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Cell (Selected)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          &.selected:hover {
+
+            > th,
+            > td {
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Selected) State: Hover
+              ----------------------------------------------------------------------------- */
 
               .table-cell-style-variant('table-cell', 'selected-hover');
 
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Selected, Highlight) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-cell', 'selected-highlight-hover');
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Selected, Disabled) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                .table-cell-style-variant('table-cell', 'selected-disabled-hover');
+
+              }
+
             }
 
+          }
 
-            /* -----------------------------------------------------------------------------
-            Table Cell (Selected, Highlight) State: Hover
-            ----------------------------------------------------------------------------- */
 
-            > tr:hover > td.selected.highlight,
-            > tr.selected.highlight:hover > td,
-            > tr.selected:hover > td.highlight,
-            > tr.highlight:hover > td.selected {
 
-              .table-cell-style-variant('table-cell', 'selected-highlight-hover');
+
+
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Cell (Success)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          &.success:hover {
+
+            > th,
+            > td {
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Success) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              .table-cell-style-variant('table-cell', 'success-hover');
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Success, Highlight) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-cell', 'success-highlight-hover');
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Success, Disabled) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                .table-cell-style-variant('table-cell', 'success-disabled-hover');
+
+              }
 
             }
 
+          }
 
-            /* -----------------------------------------------------------------------------
-            Table Cell (Selected, Disabled) State: Hover
-            ----------------------------------------------------------------------------- */
 
-            > tr:hover > td.selected.disabled,
-            > tr.selected.disabled:hover > td,
-            > tr.selected:hover > td.disabled,
-            > tr.disabled:hover > td.selected {
 
-              .table-cell-style-variant('table-cell', 'selected-disabled-hover');
+
+
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Cell (Warning)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          &.warning:hover {
+
+            > th,
+            > td {
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Warning) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              .table-cell-style-variant('table-cell', 'warning-hover');
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Warning, Highlight) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-cell', 'warning-highlight-hover');
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Warning, Disabled) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                .table-cell-style-variant('table-cell', 'warning-disabled-hover');
+
+              }
+
+            }
+
+          }
+
+
+
+
+
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Cell (Danger)
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          &.danger:hover {
+
+            > th,
+            > td {
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Danger) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              .table-cell-style-variant('table-cell', 'danger-hover');
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Danger, Highlight) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.highlight {
+
+                .table-cell-style-variant('table-cell', 'danger-highlight-hover');
+
+              }
+
+
+
+              /* -----------------------------------------------------------------------------
+              Table Cell (Danger, Disabled) State: Hover
+              ----------------------------------------------------------------------------- */
+
+              &.disabled {
+
+                .table-cell-style-variant('table-cell', 'danger-disabled-hover');
+
+              }
 
             }
 
@@ -371,60 +1365,6 @@ components/tables.less
 
   @media (min-width: @screen-mini) {
 
-    & when (@table-scale-screen-mini-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-
-      Table
-
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      .table {
-
-        & when (@table-cell-scale-screen-mini-enabled) {
-
-          & when (@table-cell-enabled) {
-
-            /* -----------------------------------------------------------------------------
-            Table Cells
-            ----------------------------------------------------------------------------- */
-
-            > thead,
-            > tbody,
-            > tfoot {
-
-              > tr {
-
-                > td {
-
-                  .table-cell-size-variant('table-cell', '', 'screen-mini');
-
-                }
-
-                & when (@table-header-cell-enabled) {
-
-                  > th {
-
-                    .table-cell-size-variant('table-header-cell', '', 'screen-mini');
-
-                  }
-
-                }
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
   }
 
 }
@@ -446,60 +1386,6 @@ components/tables.less
 
   @media (min-width: @screen-small) {
 
-    & when (@table-scale-screen-small-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-
-      Table
-
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      .table {
-
-        & when (@table-cell-scale-screen-small-enabled) {
-
-          & when (@table-cell-enabled) {
-
-            /* -----------------------------------------------------------------------------
-            Table Cells
-            ----------------------------------------------------------------------------- */
-
-            > thead,
-            > tbody,
-            > tfoot {
-
-              > tr {
-
-                > td {
-
-                  .table-cell-size-variant('table-cell', '', 'screen-small');
-
-                }
-
-                & when (@table-header-cell-enabled) {
-
-                  > th {
-
-                    .table-cell-size-variant('table-header-cell', '', 'screen-small');
-
-                  }
-
-                }
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
   }
 
 }
@@ -520,60 +1406,6 @@ components/tables.less
   ----------------------------------------------------------------------------- */
 
   @media (min-width: @screen-medium) {
-
-    & when (@table-scale-screen-large-enabled) {
-
-      /* -----------------------------------------------------------------------------
-      --------------------------------------------------------------------------------
-
-      Table
-
-      --------------------------------------------------------------------------------
-      ----------------------------------------------------------------------------- */
-
-      .table {
-
-        & when (@table-cell-scale-screen-medium-enabled) {
-
-          & when (@table-cell-enabled) {
-
-            /* -----------------------------------------------------------------------------
-            Table Cells
-            ----------------------------------------------------------------------------- */
-
-            > thead,
-            > tbody,
-            > tfoot {
-
-              > tr {
-
-                > td {
-
-                  .table-cell-size-variant('table-cell', '', 'screen-medium');
-
-                }
-
-                & when (@table-header-cell-enabled) {
-
-                  > th {
-
-                    .table-cell-size-variant('table-header-cell', '', 'screen-medium');
-
-                  }
-
-                }
-
-              }
-
-            }
-
-          }
-
-        }
-
-      }
-
-    }
 
   }
 
@@ -610,29 +1442,160 @@ components/tables.less
 
         & when (@table-cell-scale-screen-large-enabled) {
 
-          & when (@table-cell-enabled) {
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
 
-            /* -----------------------------------------------------------------------------
-            Table Cells
-            ----------------------------------------------------------------------------- */
+          Table Cells
 
-            > thead,
-            > tbody,
-            > tfoot {
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
 
-              > tr {
+          > thead,
+          > tbody,
+          > tfoot {
 
-                > td {
+            tr {
 
-                  .table-cell-size-variant('table-cell', '', 'screen-large');
+              /* -----------------------------------------------------------------------------
+              --------------------------------------------------------------------------------
+
+              Table Cell (Default)
+
+              --------------------------------------------------------------------------------
+              ----------------------------------------------------------------------------- */
+
+              > th,
+              > td {
+
+                .table-cell-size-variant('table-cell', '', 'screen-large');
+
+              }
+
+            }
+
+          }
+
+        }
+
+
+
+        & when (@table-header-cell-enabled) and (@table-header-cell-scale-screen-large-enabled) {
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Header
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          > thead {
+
+            tr {
+
+              /* -----------------------------------------------------------------------------
+              --------------------------------------------------------------------------------
+
+              Table Header Cell (Default)
+
+              --------------------------------------------------------------------------------
+              ----------------------------------------------------------------------------- */
+
+              > th {
+
+                .table-cell-size-variant('table-header-cell', '', 'screen-large');
+
+              }
+
+            }
+
+          }
+
+        }
+
+
+
+        & when not (@table-border-radius = null) {
+
+          /* -----------------------------------------------------------------------------
+          --------------------------------------------------------------------------------
+
+          Table Border Radius
+
+          --------------------------------------------------------------------------------
+          ----------------------------------------------------------------------------- */
+
+          .border-radius(@table-border-radius * @table-border-radius-scale-screen-large);
+
+
+
+          > tbody {
+
+            tr {
+
+              &:first-child {
+
+                td,
+                th {
+
+                  &:first-child {
+
+                    .border-top-left-radius(@table-border-radius * @table-border-radius-scale-screen-large);
+
+                  }
+
+                  &:last-child {
+
+                    .border-top-right-radius(@table-border-radius * @table-border-radius-scale-screen-large);
+
+                  }
 
                 }
 
-                & when (@table-header-cell-enabled) {
+              }
 
-                  > th {
+              &:last-child {
 
-                    .table-cell-size-variant('table-header-cell', '', 'screen-large');
+                td,
+                th {
+
+                  &:first-child {
+
+                    .border-bottom-left-radius(@table-border-radius * @table-border-radius-scale-screen-large);
+
+                  }
+
+                  &:last-child {
+
+                    .border-bottom-right-radius(@table-border-radius * @table-border-radius-scale-screen-large);
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+          > thead {
+
+            tr {
+
+              &:first-child {
+
+                th {
+
+                  &:first-child {
+
+                    .border-top-left-radius(@table-border-radius * @table-border-radius-scale-screen-large);
+
+                  }
+
+                  &:last-child {
+
+                    .border-top-right-radius(@table-border-radius * @table-border-radius-scale-screen-large);
 
                   }
 
