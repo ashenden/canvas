@@ -1,14 +1,23 @@
 {% if (page.page-header.theme == 'inverse') %}
 
   {% assign page-header-class = 'canvas-pod-dark page-header-inverse' %}
+  {% assign page-header-title-class = 'inverse' %}
+  {% assign page-header-headline-class = 'inverse' %}
+  {% assign page-header-description-class = 'inverse' %}
 
 {% elsif (page.page-header.theme == 'transparent') %}
 
   {% assign page-header-class = '' %}
+  {% assign page-header-title-class = '' %}
+  {% assign page-header-headline-class = '' %}
+  {% assign page-header-description-class = '' %}
 
 {% else %}
 
   {% assign page-header-class = 'canvas-pod-light' %}
+  {% assign page-header-title-class = '' %}
+  {% assign page-header-headline-class = '' %}
+  {% assign page-header-description-class = '' %}
 
 {% endif %}
 
@@ -63,7 +72,7 @@ BEGIN: Page Header
 
   <div id="page-header-inner">
 
-    <div class="container container-pod {{ page-header-container-class }}">
+    <div class="container container-pod container-pod-short-top {{ page-header-container-class }}">
 
       <div class="row">
 
@@ -71,7 +80,7 @@ BEGIN: Page Header
 
           <!-- BEGIN: Page Header Title -->
 
-          <h1 class="page-header-title invisible">
+          <h1 class="page-header-title invisible {{ page-header-title-class }}">
 
             <?php
 
@@ -91,7 +100,7 @@ BEGIN: Page Header
 
               <div class="{{ page-header-headline-alignment-class }}">
 
-                <h1 class="page-header-headline flush-top {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
+                <h1 class="page-header-headline flush-top {{ page-header-headline-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if ((page.page-header.description != null) and (page.page-header.description != empty)) or (page.page-header.actions != null) %}short{% else %}flush-bottom{% endif %}">
 
                   {{ page.page-header.headline }}
 
@@ -109,7 +118,7 @@ BEGIN: Page Header
 
             <!-- BEGIN: Page Header Overview -->
 
-            <p class="page-header-description lead {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if (page.page-header.actions == null) %}flush-bottom{% endif %}">
+            <p class="page-header-description lead {{ page-header-description-class }} {{ page-header-text-alignment-class }} {% if (page.page-header.theme == 'inverse') %}inverse{% endif %} {% if (page.page-header.actions == null) %}flush-bottom{% endif %}">
 
               {{ page.page-header.description }}
 

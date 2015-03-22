@@ -100,6 +100,14 @@
 
 
     /* ----------------------------------------------------------------------------------------------------
+    Initialize Page Content Navigation
+    ---------------------------------------------------------------------------------------------------- */
+
+    page_content_navigation_update();
+
+
+
+    /* ----------------------------------------------------------------------------------------------------
     Initialize Views
     ---------------------------------------------------------------------------------------------------- */
 
@@ -222,6 +230,56 @@
   function window_scroll() {
 
     var scroll_top = $(window).scrollTop() - $('#canvas').offset().top;
+
+    page_content_navigation_update();
+
+  }
+
+
+
+
+
+
+  /* ----------------------------------------------------------------------------------------------------
+  -------------------------------------------------------------------------------------------------------
+
+  Page Content Navigation
+
+  -------------------------------------------------------------------------------------------------------
+  ---------------------------------------------------------------------------------------------------- */
+
+  function page_content_navigation_update() {
+
+    var scroll_top = $(window).scrollTop() - $('#canvas').offset().top;
+    var page_content_navigation = $('#page-content-navigation');
+
+    page_content_navigation.find('li').each(function() {
+
+      $(this).children('a').each(function() {
+
+        var el = $($(this).attr('href'));
+
+        if (el != null) {
+
+          var el_top = el.offset().top;
+          var el_height = el.height();
+
+          if ((scroll_top >= (el_top - 1)) && (scroll_top < (el_top + el_height))) {
+
+            $(this).parent().addClass('active');
+
+          } else {
+
+            $(this).parent().removeClass('active');
+
+          }
+
+
+        }
+
+      })
+
+    });
 
   }
 

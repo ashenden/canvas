@@ -2,9 +2,10 @@
 layout: default
 title: Styling
 page-header:
-  headline: "Base Styling"
-  description: "Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system."
-  alignment: left
+  headline: "Canvas UI System"
+  description: "Canvas is a system of user interface elements and components for use across Mesosphere sites and products. Canvas provides guidelines for the aesthetic, function and form of user interfaces to provide a consistent experience for our customers."
+  alignment: center
+  theme: inverse
 page-navigation:
 - label: "Typography"
   link: "#typography"
@@ -44,6 +45,73 @@ page-navigation:
       link: "#typography-lists-inline"
 - label: "Tables"
   link: "#tables"
+  navigation:
+  - label: "Hover Rows"
+    link: "#tables-hover-rows"
+  - label: "Conditional Row States"
+    link: "#tables-conditional-row-states"
+- label: "Buttons"
+  link: "#buttons"
+  navigation:
+  - label: "Button Sizes"
+    link: "#buttons-sizes"
+  - label: "Button States"
+    link: "#buttons-states"
+  - label: "Button Types"
+    link: "#buttons-types"
+    navigation:
+    - label: "Rounded"
+      link: "#buttons-types-rounded"
+    - label: "Stroke"
+      link: "#buttons-types-stroke"
+    - label: "Link"
+      link: "#buttons-types-link"
+    - label: "Combined"
+      link: "#buttons-types-combine"
+  - label: "Button Collection"
+    link: "#buttons-collection"
+    navigation:
+    - label: "Vertical Alignment"
+      link: "#buttons-collection-vertical-alignment"
+  - label: "Wide Button"
+    link: "#buttons-wide"
+    navigation:
+    - label: "Responsive Wide Buttons"
+      link: "#buttons-wide-responsive"
+  - label: "Button Groups"
+    link: "#buttons-button-groups"
+    navigation:
+    - label: "Styled Button Groups"
+      link: "#buttons-button-groups-styles"
+  - label: "Button Dropdowns"
+    link: "#buttons-dropdowns"
+    navigation:
+    - label: "Single Button Dropdowns"
+      link: "#buttons-dropdowns-single-button"
+    - label: "Button Dropdown Sizes"
+      link: "#buttons-dropdowns-sizing"
+    - label: "Styled Button Dropdowns"
+      link: "#buttons-dropdowns-styled"
+  - label: "Button Controls"
+    link: "#buttons-controls"
+    navigation:
+    - label: "Toggle Buttons"
+      link: "#buttons-controls-toggle"
+    - label: "Checkbox &amp; Radio Button Groups"
+      link: "#buttons-controls-button-groups"
+- label: "Dropdowns"
+  link: "#dropdowns"
+  navigation:
+  - label: "Alignment"
+    link: "#dropdowns-alignment"
+  - label: "Headers"
+    link: "#dropdowns-headers"
+  - label: "Dividers"
+    link: "#dropdowns-dividers"
+  - label: "Dropdown Menu List States"
+    link: "#dropdowns-menu-list-states"
+  - label: "Dropdown Menu Inverted"
+    link: "#dropdowns-menu-inverted"
 - label: "Forms"
   link: "#forms"
   navigation:
@@ -79,15 +147,23 @@ page-navigation:
 
     {% include layout/page-content-navigation-open.html %}
 
-    {% include styling/typography.html %}
+    {% include components/typography.html %}
 
     <hr>
 
-    {% include styling/tables.html %}
+    {% include components/tables.html %}
 
     <hr>
 
-    {% include styling/forms.html %}
+    {% include components/buttons.html %}
+
+    <hr>
+
+    {% include components/dropdowns.html %}
+
+    <hr>
+
+    {% include components/forms.html %}
 
     {% include layout/page-content-navigation-close.html %}
 

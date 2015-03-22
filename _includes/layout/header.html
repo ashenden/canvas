@@ -1,8 +1,18 @@
+{% if (page.page-header.theme == 'transparent') %}
+
+  {% assign header-class = '' %}
+
+{% else %}
+
+  {% assign header-class = '' %}
+
+{% endif %}
+
 <!-- =================================================
 BEGIN: Header
 ================================================== -->
 
-<header id="header" data-template="canvas-header" class="canvas-pod canvas-pod-dark">
+<header id="header" data-template="canvas-header" class="canvas-pod {{ page-header-class }}">
 
   <div id="header-inner">
 

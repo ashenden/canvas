@@ -27,13 +27,18 @@ Page Header Headline
 ---------------------------------------------------------------------------------------------------- */
 
 @page-header-headline-text-font-family:																					@font-family-sans-serif;
-@page-header-headline-text-font-size:																						@heading-h4-text-font-size;
-@page-header-headline-text-font-weight:																					600;
-@page-header-headline-text-font-style:																					@heading-h4-text-font-style;
-@page-header-headline-text-line-height:																					@heading-h4-text-line-height;
-@page-header-headline-text-transform:																						uppercase;
+@page-header-headline-text-font-size:																						@heading-h2-text-font-size;
+@page-header-headline-text-font-weight:																					@heading-h2-text-font-weight;
+@page-header-headline-text-font-style:																					@heading-h2-text-font-style;
+@page-header-headline-text-line-height:																					@heading-h2-text-line-height;
+@page-header-headline-text-transform:																						normal;
 @page-header-headline-text-color:																								~`color_lightness("@{neutral}", -60)`;
 @page-header-headline-text-shadow:																							none;
+
+// Inverse
+
+@page-header-headline-inverse-text-color:																				~`color_lightness("@{neutral}", 100)`;
+@page-header-headline-inverse-text-shadow:																			none;
 
 // Margins
 
@@ -42,25 +47,25 @@ Page Header Headline
 
 // Responsive Sizing
 
-@page-header-headline-text-font-size-scale-screen-mini:													@heading-h4-text-font-size-scale-screen-mini;
-@page-header-headline-text-font-size-scale-screen-small:												@heading-h4-text-font-size-scale-screen-small;
-@page-header-headline-text-font-size-scale-screen-medium:												@heading-h4-text-font-size-scale-screen-medium;
-@page-header-headline-text-font-size-scale-screen-large:												@heading-h4-text-font-size-scale-screen-large;
+@page-header-headline-text-font-size-scale-screen-mini:													@heading-h2-text-font-size-scale-screen-mini;
+@page-header-headline-text-font-size-scale-screen-small:												@heading-h2-text-font-size-scale-screen-small;
+@page-header-headline-text-font-size-scale-screen-medium:												@heading-h2-text-font-size-scale-screen-medium;
+@page-header-headline-text-font-size-scale-screen-large:												@heading-h2-text-font-size-scale-screen-large;
 
-@page-header-headline-text-line-height-scale-screen-mini:												@heading-h4-text-line-height-scale-screen-mini;
-@page-header-headline-text-line-height-scale-screen-small:											@heading-h4-text-line-height-scale-screen-small;
-@page-header-headline-text-line-height-scale-screen-medium:											@heading-h4-text-line-height-scale-screen-medium;
-@page-header-headline-text-line-height-scale-screen-large:											@heading-h4-text-line-height-scale-screen-large;
+@page-header-headline-text-line-height-scale-screen-mini:												@heading-h2-text-line-height-scale-screen-mini;
+@page-header-headline-text-line-height-scale-screen-small:											@heading-h2-text-line-height-scale-screen-small;
+@page-header-headline-text-line-height-scale-screen-medium:											@heading-h2-text-line-height-scale-screen-medium;
+@page-header-headline-text-line-height-scale-screen-large:											@heading-h2-text-line-height-scale-screen-large;
 
-@page-header-headline-text-margin-top-scale-screen-mini:												@heading-h4-text-margin-top-scale-screen-mini;
-@page-header-headline-text-margin-top-scale-screen-small:												@heading-h4-text-margin-top-scale-screen-small;
-@page-header-headline-text-margin-top-scale-screen-medium:											@heading-h4-text-margin-top-scale-screen-medium;
-@page-header-headline-text-margin-top-scale-screen-large:												@heading-h4-text-margin-top-scale-screen-large;
+@page-header-headline-text-margin-top-scale-screen-mini:												@heading-h2-text-margin-top-scale-screen-mini;
+@page-header-headline-text-margin-top-scale-screen-small:												@heading-h2-text-margin-top-scale-screen-small;
+@page-header-headline-text-margin-top-scale-screen-medium:											@heading-h2-text-margin-top-scale-screen-medium;
+@page-header-headline-text-margin-top-scale-screen-large:												@heading-h2-text-margin-top-scale-screen-large;
 
-@page-header-headline-text-margin-bottom-scale-screen-mini:											@heading-h4-text-margin-bottom-scale-screen-mini;
-@page-header-headline-text-margin-bottom-scale-screen-small:										@heading-h4-text-margin-bottom-scale-screen-small;
-@page-header-headline-text-margin-bottom-scale-screen-medium:										@heading-h4-text-margin-bottom-scale-screen-medium;
-@page-header-headline-text-margin-bottom-scale-screen-large:										@heading-h4-text-margin-bottom-scale-screen-large;
+@page-header-headline-text-margin-bottom-scale-screen-mini:											@heading-h2-text-margin-bottom-scale-screen-mini;
+@page-header-headline-text-margin-bottom-scale-screen-small:										@heading-h2-text-margin-bottom-scale-screen-small;
+@page-header-headline-text-margin-bottom-scale-screen-medium:										@heading-h2-text-margin-bottom-scale-screen-medium;
+@page-header-headline-text-margin-bottom-scale-screen-large:										@heading-h2-text-margin-bottom-scale-screen-large;
 
 /* ----------------------------------------------------------------------------------------------------
 Page Header Description
@@ -74,6 +79,11 @@ Page Header Description
 @page-header-description-text-transform:																				@lead-text-transform;
 @page-header-description-text-color:																						~`color_lightness("@{neutral}", -20)`;
 @page-header-description-text-shadow:																						@lead-text-shadow;
+
+// Inverse
+
+@page-header-description-inverse-text-color:																		~`color_lightness("@{neutral}", 40)`;
+@page-header-description-inverse-text-shadow:																		@lead-text-shadow;
 
 // Margins
 
@@ -148,6 +158,13 @@ Page Header
 
 		);
 
+		&.inverse {
+
+			color: @page-header-headline-inverse-text-color;
+			text-shadow: @page-header-headline-inverse-text-color;
+
+		}
+
 	}
 
 
@@ -172,6 +189,13 @@ Page Header
 			@page-header-description-text-shadow
 
 		);
+
+		&.inverse {
+
+			color: @page-header-description-inverse-text-color;
+			text-shadow: @page-header-description-inverse-text-color;
+
+		}
 
 	}
 
