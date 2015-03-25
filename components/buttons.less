@@ -764,7 +764,8 @@ components/buttons.less
             Button (Default, Inverse, Stroke) State: Active
             ----------------------------------------------------------------------------- */
 
-            &:active {
+            &:active,
+            &.active {
 
               .button-variant('default-inverse-stroke-active');
 
@@ -776,7 +777,7 @@ components/buttons.less
             Button (Default, Inverse, Stroke) State: Selected
             ----------------------------------------------------------------------------- */
 
-            &:active {
+            &.selected {
 
               .button-variant('default-inverse-stroke-selected');
 
