@@ -37,19 +37,19 @@ Button Variant Styling
   @button-variant-background-gradient-color-bottom: "button-@{variant-class}-background-gradient-color-bottom";
   @button-variant-border-width: "button-@{variant-class}-border-width";
   @button-variant-border-color: "button-@{variant-class}-border-color";
-  //@button-variant-border-style: "button-@{variant-class}-border-style";
+  @button-variant-border-style: "button-@{variant-class}-border-style";
   @button-variant-border-top-width: "button-@{variant-class}-border-top-width";
   @button-variant-border-top-color: "button-@{variant-class}-border-top-color";
-  //@button-variant-border-top-style: "button-@{variant-class}-border-top-style";
+  @button-variant-border-top-style: "button-@{variant-class}-border-top-style";
   @button-variant-border-right-width: "button-@{variant-class}-border-right-width";
   @button-variant-border-right-color: "button-@{variant-class}-border-right-color";
-  //@button-variant-border-right-style: "button-@{variant-class}-border-right-style";
+  @button-variant-border-right-style: "button-@{variant-class}-border-right-style";
   @button-variant-border-bottom-width: "button-@{variant-class}-border-bottom-width";
   @button-variant-border-bottom-color: "button-@{variant-class}-border-bottom-color";
-  //@button-variant-border-bottom-style: "button-@{variant-class}-border-bottom-style";
+  @button-variant-border-bottom-style: "button-@{variant-class}-border-bottom-style";
   @button-variant-border-left-width: "button-@{variant-class}-border-left-width";
   @button-variant-border-left-color: "button-@{variant-class}-border-left-color";
-  //@button-variant-border-left-style: "button-@{variant-class}-border-left-style";
+  @button-variant-border-left-style: "button-@{variant-class}-border-left-style";
   @button-variant-shadow: "button-@{variant-class}-shadow";
   @button-variant-caret-color: "button-@{variant-class}-caret-color";
 
@@ -113,7 +113,7 @@ Button Variant Styling
     #gradient > .vertical(@@button-variant-background-gradient-color-top, @@button-variant-background-gradient-color-bottom);
 
   }
-  
+
   & when not (@@button-variant-border-width = null) {
 
     border-width: @@button-variant-border-width;
@@ -144,11 +144,11 @@ Button Variant Styling
 
   }
 
-  /*& when not (@@button-variant-border-top-style = null) {
+  & when not (@@button-variant-border-top-style = null) {
 
     border-top-style: @@button-variant-border-top-style;
 
-  }*/
+  }
 
   & when not (@@button-variant-border-right-width = null) {
 
@@ -162,11 +162,11 @@ Button Variant Styling
 
   }
 
-  /*& when not (@@button-variant-border-right-style = null) {
+  & when not (@@button-variant-border-right-style = null) {
 
     border-right-style: @@button-variant-border-right-style;
 
-  }*/
+  }
 
   & when not (@@button-variant-border-bottom-width = null) {
 
@@ -180,11 +180,11 @@ Button Variant Styling
 
   }
 
-  /*& when not (@@button-variant-border-bottom-style = null) {
+  & when not (@@button-variant-border-bottom-style = null) {
 
     border-bottom-style: @@button-variant-border-bottom-style;
 
-  }*/
+  }
 
   & when not (@@button-variant-border-left-width = null) {
 
@@ -198,11 +198,11 @@ Button Variant Styling
 
   }
 
-  /*& when not (@@button-variant-border-left-style = null) {
+  & when not (@@button-variant-border-left-style = null) {
 
     border-left-style: @@button-variant-border-left-style;
 
-  }*/
+  }
 
   & when not (@@button-variant-shadow = null) {
 
