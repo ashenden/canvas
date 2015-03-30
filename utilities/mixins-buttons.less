@@ -35,6 +35,9 @@ Button Variant Styling
   @button-variant-background-color: "button-@{variant-class}-background-color";
   @button-variant-background-gradient-color-top: "button-@{variant-class}-background-gradient-color-top";
   @button-variant-background-gradient-color-bottom: "button-@{variant-class}-background-gradient-color-bottom";
+  @button-variant-border-width: "button-@{variant-class}-border-width";
+  @button-variant-border-color: "button-@{variant-class}-border-color";
+  //@button-variant-border-style: "button-@{variant-class}-border-style";
   @button-variant-border-top-width: "button-@{variant-class}-border-top-width";
   @button-variant-border-top-color: "button-@{variant-class}-border-top-color";
   //@button-variant-border-top-style: "button-@{variant-class}-border-top-style";
@@ -110,6 +113,24 @@ Button Variant Styling
     #gradient > .vertical(@@button-variant-background-gradient-color-top, @@button-variant-background-gradient-color-bottom);
 
   }
+  
+  & when not (@@button-variant-border-width = null) {
+
+    border-width: @@button-variant-border-width;
+
+  }
+
+  & when not (@@button-variant-border-color = null) {
+
+    border-color: @@button-variant-border-color;
+
+  }
+
+  /*& when not (@@button-variant-border-style = null) {
+
+    border-style: @@button-variant-border-style;
+
+  }*/
 
   & when not (@@button-variant-border-top-width = null) {
 
