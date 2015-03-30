@@ -484,7 +484,7 @@ components/buttons.less
         Button (Default, Link) State: Selected
         ----------------------------------------------------------------------------- */
 
-        &:active {
+        &.active {
 
           .button-variant('default-link-selected');
 
@@ -558,7 +558,7 @@ components/buttons.less
         Button (Default, Stroke) State: Selected
         ----------------------------------------------------------------------------- */
 
-        &:active {
+        &.active {
 
           .button-variant('default-stroke-selected');
 
@@ -632,7 +632,7 @@ components/buttons.less
         Button (Default, Inverse) State: Selected
         ----------------------------------------------------------------------------- */
 
-        &:active {
+        &.active {
 
           .button-variant('default-inverse-selected');
 
@@ -702,7 +702,7 @@ components/buttons.less
             Button (Default, Inverse, Link) State: Selected
             ----------------------------------------------------------------------------- */
 
-            &:active {
+            &.active {
 
               .button-variant('default-inverse-link-selected');
 
@@ -764,8 +764,7 @@ components/buttons.less
             Button (Default, Inverse, Stroke) State: Active
             ----------------------------------------------------------------------------- */
 
-            &:active,
-            &.active {
+            &:active {
 
               .button-variant('default-inverse-stroke-active');
 
@@ -777,7 +776,7 @@ components/buttons.less
             Button (Default, Inverse, Stroke) State: Selected
             ----------------------------------------------------------------------------- */
 
-            &.selected {
+            &.active {
 
               .button-variant('default-inverse-stroke-selected');
 

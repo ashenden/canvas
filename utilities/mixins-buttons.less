@@ -22,67 +22,194 @@ Button Variant Styling
 ----------------------------------------------------------------------------- */
 
 
-.button-variant(@variant: 'default') {
+.button-variant(@variant-class: 'default') {
 
-  @button-variant-text-color: "button-@{variant}-text-color";
-  @button-variant-text-font-family: "button-@{variant}-text-font-family";
-  @button-variant-text-font-style: "button-@{variant}-text-font-style";
-  @button-variant-text-font-weight: "button-@{variant}-text-font-weight";
-  @button-variant-text-transform: "button-@{variant}-text-transform";
-  @button-variant-text-shadow: "button-@{variant}-text-shadow";
-  @button-variant-text-decoration: "button-@{variant}-text-decoration";
-  @button-variant-text-rendering: "button-@{variant}-text-rendering";
-  @button-variant-background-color: "button-@{variant}-background-color";
-  @button-variant-background-gradient-color-top: "button-@{variant}-background-gradient-color-top";
-  @button-variant-background-gradient-color-bottom: "button-@{variant}-background-gradient-color-bottom";
-  @button-variant-border-top-width: "button-@{variant}-border-top-width";
-  @button-variant-border-top-color: "button-@{variant}-border-top-color";
-  @button-variant-border-right-width: "button-@{variant}-border-right-width";
-  @button-variant-border-right-color: "button-@{variant}-border-right-color";
-  @button-variant-border-bottom-width: "button-@{variant}-border-bottom-width";
-  @button-variant-border-bottom-color: "button-@{variant}-border-bottom-color";
-  @button-variant-border-left-width: "button-@{variant}-border-left-width";
-  @button-variant-border-left-color: "button-@{variant}-border-left-color";
-  @button-variant-shadow: "button-@{variant}-shadow";
-  @button-variant-caret-color: "button-@{variant}-caret-color";
+  @button-variant-text-color: "button-@{variant-class}-text-color";
+  @button-variant-text-font-family: "button-@{variant-class}-text-font-family";
+  @button-variant-text-font-style: "button-@{variant-class}-text-font-style";
+  @button-variant-text-font-weight: "button-@{variant-class}-text-font-weight";
+  @button-variant-text-transform: "button-@{variant-class}-text-transform";
+  @button-variant-text-shadow: "button-@{variant-class}-text-shadow";
+  @button-variant-text-decoration: "button-@{variant-class}-text-decoration";
+  @button-variant-text-rendering: "button-@{variant-class}-text-rendering";
+  @button-variant-background-color: "button-@{variant-class}-background-color";
+  @button-variant-background-gradient-color-top: "button-@{variant-class}-background-gradient-color-top";
+  @button-variant-background-gradient-color-bottom: "button-@{variant-class}-background-gradient-color-bottom";
+  @button-variant-border-top-width: "button-@{variant-class}-border-top-width";
+  @button-variant-border-top-color: "button-@{variant-class}-border-top-color";
+  //@button-variant-border-top-style: "button-@{variant-class}-border-top-style";
+  @button-variant-border-right-width: "button-@{variant-class}-border-right-width";
+  @button-variant-border-right-color: "button-@{variant-class}-border-right-color";
+  //@button-variant-border-right-style: "button-@{variant-class}-border-right-style";
+  @button-variant-border-bottom-width: "button-@{variant-class}-border-bottom-width";
+  @button-variant-border-bottom-color: "button-@{variant-class}-border-bottom-color";
+  //@button-variant-border-bottom-style: "button-@{variant-class}-border-bottom-style";
+  @button-variant-border-left-width: "button-@{variant-class}-border-left-width";
+  @button-variant-border-left-color: "button-@{variant-class}-border-left-color";
+  //@button-variant-border-left-style: "button-@{variant-class}-border-left-style";
+  @button-variant-shadow: "button-@{variant-class}-shadow";
+  @button-variant-caret-color: "button-@{variant-class}-caret-color";
 
-  color: @@button-variant-text-color;
-  font-family: @@button-variant-text-font-family;
-  font-style: @@button-variant-text-font-style;
-  font-weight: @@button-variant-text-font-weight;
-  text-transform: @@button-variant-text-transform;
-  text-shadow: @@button-variant-text-shadow;
-  text-decoration: @@button-variant-text-decoration;
-  text-rendering: @@button-variant-text-rendering;
-  background: @@button-variant-background-color;
-  #gradient > .vertical(@@button-variant-background-gradient-color-top, @@button-variant-background-gradient-color-bottom);
-  border-top-width: @@button-variant-border-top-width;
-  border-top-color: @@button-variant-border-top-color;
-  border-right-width: @@button-variant-border-right-width;
-  border-right-color: @@button-variant-border-right-color;
-  border-bottom-width: @@button-variant-border-bottom-width;
-  border-bottom-color: @@button-variant-border-bottom-color;
-  border-left-width: @@button-variant-border-left-width;
-  border-left-color: @@button-variant-border-left-color;
-  .box-shadow(@@button-variant-shadow);
+  & when not (@@button-variant-text-color = null) {
+
+    color: @@button-variant-text-color;
+
+  }
+
+  & when not (@@button-variant-text-font-family = null) {
+
+    font-family: @@button-variant-text-font-family;
+
+  }
+
+  & when not (@@button-variant-text-font-style = null) {
+
+    font-style: @@button-variant-text-font-style;
+
+  }
+
+  & when not (@@button-variant-text-font-weight = null) {
+
+    font-weight: @@button-variant-text-font-weight;
+
+  }
+
+  & when not (@@button-variant-text-transform = null) {
+
+    text-transform: @@button-variant-text-transform;
+
+  }
+
+  & when not (@@button-variant-text-shadow = null) {
+
+    text-shadow: @@button-variant-text-shadow;
+
+  }
+
+  & when not (@@button-variant-text-decoration = null) {
+
+    text-decoration: @@button-variant-text-decoration;
+
+  }
+
+  & when not (@@button-variant-text-rendering = null) {
+
+    text-rendering: @@button-variant-text-rendering;
+
+  }
+
+
+  & when not (@@button-variant-background-color = null) {
+
+    background: @@button-variant-background-color;
+
+  }
+
+  & when not (@@button-variant-background-gradient-color-top = null) and not (@@button-variant-background-gradient-color-bottom = null) {
+
+    #gradient > .vertical(@@button-variant-background-gradient-color-top, @@button-variant-background-gradient-color-bottom);
+
+  }
+
+  & when not (@@button-variant-border-top-width = null) {
+
+    border-top-width: @@button-variant-border-top-width;
+
+  }
+
+  & when not (@@button-variant-border-top-color = null) {
+
+    border-top-color: @@button-variant-border-top-color;
+
+  }
+
+  /*& when not (@@button-variant-border-top-style = null) {
+
+    border-top-style: @@button-variant-border-top-style;
+
+  }*/
+
+  & when not (@@button-variant-border-right-width = null) {
+
+    border-right-width: @@button-variant-border-right-width;
+
+  }
+
+  & when not (@@button-variant-border-right-color = null) {
+
+    border-right-color: @@button-variant-border-right-color;
+
+  }
+
+  /*& when not (@@button-variant-border-right-style = null) {
+
+    border-right-style: @@button-variant-border-right-style;
+
+  }*/
+
+  & when not (@@button-variant-border-bottom-width = null) {
+
+    border-bottom-width: @@button-variant-border-bottom-width;
+
+  }
+
+  & when not (@@button-variant-border-bottom-color = null) {
+
+    border-bottom-color: @@button-variant-border-bottom-color;
+
+  }
+
+  /*& when not (@@button-variant-border-bottom-style = null) {
+
+    border-bottom-style: @@button-variant-border-bottom-style;
+
+  }*/
+
+  & when not (@@button-variant-border-left-width = null) {
+
+    border-left-width: @@button-variant-border-left-width;
+
+  }
+
+  & when not (@@button-variant-border-left-color = null) {
+
+    border-left-color: @@button-variant-border-left-color;
+
+  }
+
+  /*& when not (@@button-variant-border-left-style = null) {
+
+    border-left-style: @@button-variant-border-left-style;
+
+  }*/
+
+  & when not (@@button-variant-shadow = null) {
+
+    .box-shadow(@@button-variant-shadow);
+
+  }
 
   & when (@button-dropdown-enabled) {
 
-    /* -----------------------------------------------------------------------------
-    Button Dropdown
-    ----------------------------------------------------------------------------- */
-
-    &.dropdown-toggle {
+    & when not (@@button-variant-caret-color = null) {
 
       /* -----------------------------------------------------------------------------
-      Button Dropdown Caret
+      Button Dropdown
       ----------------------------------------------------------------------------- */
 
-      &:after {
+      &.dropdown-toggle {
 
-        //.triangle-color('down', @@button-variant-caret-color) !import;
-        border-color: @@button-variant-caret-color transparent transparent transparent !important;
-        _border-color: @@button-variant-caret-color #000000 #000000 #000000 !important;
+        /* -----------------------------------------------------------------------------
+        Button Dropdown Caret
+        ----------------------------------------------------------------------------- */
+
+        &:after {
+
+          //.triangle-color('down', @@button-variant-caret-color) !import;
+          border-color: @@button-variant-caret-color transparent transparent transparent !important;
+          _border-color: @@button-variant-caret-color #000000 #000000 #000000 !important;
+
+        }
 
       }
 
@@ -91,6 +218,7 @@ Button Variant Styling
   }
 
 }
+
 
 
 
