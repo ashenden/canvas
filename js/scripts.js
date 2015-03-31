@@ -105,6 +105,15 @@
 
     page_content_navigation_update();
 
+    $('.form-control-group input').focus(function() {
+
+      $(this).parent().addClass('focus');
+
+    }).blur(function() {
+
+      $(this).parent().removeClass('focus');
+
+    });
 
 
     /* ----------------------------------------------------------------------------------------------------
