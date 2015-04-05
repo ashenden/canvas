@@ -29,7 +29,7 @@ Dropdown Menu Styles
 
 @dropdown-menu-width-minimum:                                                   160px;
 @dropdown-menu-padding-horizontal:                                              @base-spacing-unit * 0.5;
-@dropdown-menu-padding-vertical:                                                @base-spacing-unit * 0.5;
+@dropdown-menu-padding-vertical:                                                @base-spacing-unit * 0.25;
 @dropdown-menu-offset-horizontal:                                               0px;
 @dropdown-menu-offset-vertical:                                                 2px;
 @dropdown-menu-border-radius:                                                   @button-border-radius;
@@ -126,8 +126,8 @@ Dropdown Menu Header
 Dropdown Menu Header Styles
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-header-text-font-size:                                           @body-text-font-size * 0.85;
-@dropdown-menu-header-text-line-height:                                         @body-text-line-height;
+@dropdown-menu-header-text-font-size:                                           @dropdown-menu-list-item-text-font-size * 0.85;
+@dropdown-menu-header-text-line-height:                                         @dropdown-menu-list-item-text-line-height;
 @dropdown-menu-header-height-minimum:                                           @dropdown-menu-header-text-line-height;
 @dropdown-menu-header-padding-horizontal:                                       @dropdown-menu-padding-horizontal;
 @dropdown-menu-header-margin-vertical-top:                                      @dropdown-menu-padding-vertical * 1.5;
@@ -413,13 +413,14 @@ Dropdown Menu List Item
 Dropdown Menu List Item Styles
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-text-font-size:                                        @body-text-font-size;
-@dropdown-menu-list-item-text-line-height:                                      @body-text-line-height;
+@dropdown-menu-list-item-text-font-size:                                        @button-small-text-font-size;
+@dropdown-menu-list-item-text-line-height:                                      @button-small-text-line-height;
 @dropdown-menu-list-item-height:                                                26px;
 @dropdown-menu-list-item-padding-horizontal:                                    @dropdown-menu-padding-horizontal;
 @dropdown-menu-list-item-margin-vertical:                                       0px;
 @dropdown-menu-list-item-margin-horizontal:                                     0px;
 @dropdown-menu-list-item-border-radius:                                         0px;
+
 @dropdown-menu-list-item-text-color:                                            @body-text-color;
 @dropdown-menu-list-item-text-font-family:                                      @font-family-sans-serif;
 @dropdown-menu-list-item-text-font-style:                                       normal;
@@ -451,6 +452,7 @@ Dropdown Menu List Item Styles (Inverse)
 ----------------------------------------------------------------------------- */
 
 @dropdown-menu-list-item-inverse-enabled:                                       @dropdown-menu-inverse-enabled;
+
 @dropdown-menu-list-item-inverse-text-color:                                    @body-text-inverse-color;
 @dropdown-menu-list-item-inverse-text-font-family:                              @font-family-sans-serif;
 @dropdown-menu-list-item-inverse-text-font-style:                               normal;
@@ -484,15 +486,15 @@ Dropdown Menu List Item Responsive Scaling
 @dropdown-menu-list-item-scale-screen-medium-enabled:                           @dropdown-menu-list-scale-screen-medium-enabled;
 @dropdown-menu-list-item-scale-screen-large-enabled:                            @dropdown-menu-list-scale-screen-large-enabled;
 
-@dropdown-menu-list-item-text-font-size-scale-screen-mini:                      @body-text-font-size-scale-screen-mini;
-@dropdown-menu-list-item-text-font-size-scale-screen-small:                     @body-text-font-size-scale-screen-small;
-@dropdown-menu-list-item-text-font-size-scale-screen-medium:                    @body-text-font-size-scale-screen-medium;
-@dropdown-menu-list-item-text-font-size-scale-screen-large:                     @body-text-font-size-scale-screen-large;
+@dropdown-menu-list-item-text-font-size-scale-screen-mini:                      @button-small-text-font-size-scale-screen-mini;
+@dropdown-menu-list-item-text-font-size-scale-screen-small:                     @button-small-text-font-size-scale-screen-small;
+@dropdown-menu-list-item-text-font-size-scale-screen-medium:                    @button-small-text-font-size-scale-screen-medium;
+@dropdown-menu-list-item-text-font-size-scale-screen-large:                     @button-small-text-font-size-scale-screen-large;
 
-@dropdown-menu-list-item-text-line-height-scale-screen-mini:                    @body-text-line-height-scale-screen-mini;
-@dropdown-menu-list-item-text-line-height-scale-screen-small:                   @body-text-line-height-scale-screen-small;
-@dropdown-menu-list-item-text-line-height-scale-screen-medium:                  @body-text-line-height-scale-screen-medium;
-@dropdown-menu-list-item-text-line-height-scale-screen-large:                   @body-text-line-height-scale-screen-large;
+@dropdown-menu-list-item-text-line-height-scale-screen-mini:                    @button-small-text-line-height-scale-screen-mini;
+@dropdown-menu-list-item-text-line-height-scale-screen-small:                   @button-small-text-line-height-scale-screen-small;
+@dropdown-menu-list-item-text-line-height-scale-screen-medium:                  @button-small-text-line-height-scale-screen-medium;
+@dropdown-menu-list-item-text-line-height-scale-screen-large:                   @button-small-text-line-height-scale-screen-large;
 
 @dropdown-menu-list-item-height-scale-screen-mini:                              @dropdown-menu-scale-screen-mini;
 @dropdown-menu-list-item-height-scale-screen-small:                             @dropdown-menu-scale-screen-small;
