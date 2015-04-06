@@ -7,6 +7,13 @@ page-header:
   alignment: center
   theme: inverse
 page-navigation:
+- label: "Colors"
+  link: "#colors"
+  navigation:
+  - label: "Color Palettes"
+    link: "#colors-palettes"
+  - label: "Color Blending"
+    link: "#colors-blending"
 - label: "Typography"
   link: "#typography"
   navigation:
@@ -156,6 +163,10 @@ page-navigation:
   <div class="container container-pod">
 
     {% include layout/page-content-navigation-open.html %}
+
+    {% include components/colors.html %}
+
+    <hr>
 
     {% include components/typography.html %}
 
