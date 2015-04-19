@@ -183,7 +183,7 @@ Sizing
 }
 
 .box-sizing-padding-vertical(@height, @content-height) when (@height > @content-height) {
-  
+
   padding-top: ((@height - @content-height) / 2);
   padding-bottom: ((@height - @content-height) / 2);
 
@@ -246,6 +246,36 @@ Transformations
   -ms-transform: translate(@x, @y);
   -o-transform: translate(@x, @y);
   transform: translate(@x, @y);
+
+}
+
+.translateX(@x) {
+
+  -webkit-transform: translateX(@x);
+  -moz-transform: translateX(@x);
+  -ms-transform: translateX(@x);
+  -o-transform: translateX(@x);
+  transform: translateX(@x);
+
+}
+
+.translateY(@y) {
+
+  -webkit-transform: translateY(@y);
+  -moz-transform: translateY(@y);
+  -ms-transform: translateY(@y);
+  -o-transform: translateY(@y);
+  transform: translateY(@y);
+
+}
+
+.translateZ(@z) {
+
+  -webkit-transform: translateZ(@z);
+  -moz-transform: translateZ(@z);
+  -ms-transform: translateZ(@z);
+  -o-transform: translateZ(@z);
+  transform: translateZ(@z);
 
 }
 
