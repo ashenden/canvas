@@ -159,7 +159,7 @@ Pretty Print Styling
 @code-block-prettyprint-padding-screen-small:                                   @base-spacing-unit-screen-small * 0.5;
 @code-block-prettyprint-padding-screen-medium:                                  @base-spacing-unit-screen-medium * 0.5;
 @code-block-prettyprint-padding-screen-large:                                   @base-spacing-unit-screen-large * 0.5;
-@code-block-prettyprint-background-color:                                       @white;
+@code-block-prettyprint-background-color:                                       ~`color_lightness("@{neutral}", -20)`;
 @code-block-prettyprint-background-gradient-color-top:                          none;
 @code-block-prettyprint-background-gradient-color-bottom:                       none;
 @code-block-prettyprint-border-width:                                           0px;
@@ -180,7 +180,7 @@ Pretty Print Styling
 Pretty Print Text Styling
 ----------------------------------------------------------------------------- */
 
-@code-block-prettyprint-text-color:                                             ~`color_lightness("@{neutral}", -20)`;
+@code-block-prettyprint-text-color:                                             ~`color_lightness("@{neutral}", 80)`;
 @code-block-prettyprint-text-font-family:                                       @font-family-monospace;
 @code-block-prettyprint-text-font-size:                                         11px;
 @code-block-prettyprint-text-font-style:                                        normal;
@@ -244,7 +244,18 @@ Pretty Print Line Number Styling
 Syntax Highlighting
 ----------------------------------------------------------------------------- */
 
-@code-block-prettyprint-syntax-text-color-tag:                                  ~`color_lightness("@{pink}", 0)`;
-@code-block-prettyprint-syntax-text-color-punctuation:                          ~`color_lightness("@{neutral}", 0)`;
-@code-block-prettyprint-syntax-text-color-attribute-name:                       ~`color_lightness("@{green}", 0)`;
-@code-block-prettyprint-syntax-text-color-attribute-value:                      ~`color_lightness("@{blue}", 0)`;
+@code-block-prettyprint-syntax-text-color-pln:                                  ~`color_lightness("@{neutral}", 60)`;
+@code-block-prettyprint-syntax-text-color-str:                                  @green;
+@code-block-prettyprint-syntax-text-color-kwd:                                  ~`color_lightness("@{purple}", 40)`;
+@code-block-prettyprint-syntax-text-color-com:                                  ~`color_lightness("@{neutral}", 60)`;
+@code-block-prettyprint-syntax-text-color-typ:                                  @blue;
+@code-block-prettyprint-syntax-text-color-lit:                                  @orange;
+@code-block-prettyprint-syntax-text-color-pun:                                  ~`color_lightness("@{neutral}", 60)`;
+@code-block-prettyprint-syntax-text-color-opn:                                  ~`color_lightness("@{neutral}", 60)`;
+@code-block-prettyprint-syntax-text-color-clo:                                  ~`color_lightness("@{neutral}", 60)`;
+@code-block-prettyprint-syntax-text-color-tag:                                  @orange;
+@code-block-prettyprint-syntax-text-color-atn:                                  @orchid;
+@code-block-prettyprint-syntax-text-color-atv:                                  @cyan;
+@code-block-prettyprint-syntax-text-color-dec:                                  @orchid;
+@code-block-prettyprint-syntax-text-color-var:                                  @pink;
+@code-block-prettyprint-syntax-text-color-fun:                                  @blue;
