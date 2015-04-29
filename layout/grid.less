@@ -23,8 +23,8 @@ Fixed Container
 
 .container {
 
-  margin-left:  (@grid-gutter-width * 0.5);
-  margin-right: (@grid-gutter-width * 0.5);
+  margin-left: @grid-container-fluid-gutter-width;
+  margin-right: @grid-container-fluid-gutter-width;
 
   &:extend(.clearfix all);
 
@@ -46,8 +46,22 @@ Fluid Container
 .container.container-fluid {
 
   width: auto;
-  margin-left:  (@grid-gutter-width * 0.5);
-  margin-right: (@grid-gutter-width * 0.5);
+  margin-left: @grid-container-fluid-gutter-width;
+  margin-right: @grid-container-fluid-gutter-width;
+
+  &.container-fluid-narrow {
+
+    margin-left: @grid-container-fluid-narrow-gutter-width;
+    margin-right: @grid-container-fluid-narrow-gutter-width;
+
+  }
+
+  &.container-fluid-wide {
+
+    margin-left: @grid-container-fluid-wide-gutter-width;
+    margin-right: @grid-container-fluid-wide-gutter-width;
+
+  }
 
 }
 
@@ -147,8 +161,8 @@ Grid
     .container {
 
       width: auto;
-      margin-left: @grid-gutter-width-screen-mini * 0.5;
-      margin-right: @grid-gutter-width-screen-mini * 0.5;
+      margin-left: @grid-container-fluid-gutter-width-screen-mini;
+      margin-right: @grid-container-fluid-gutter-width-screen-mini;
 
     }
 
@@ -167,8 +181,22 @@ Grid
 
     .container.container-fluid {
 
-      margin-left: @grid-gutter-width-screen-mini * 0.5;
-      margin-right: @grid-gutter-width-screen-mini * 0.5;
+      margin-left: @grid-container-fluid-gutter-width-screen-mini;
+      margin-right: @grid-container-fluid-gutter-width-screen-mini;
+
+      &.container-fluid-narrow {
+
+        margin-left: @grid-container-fluid-narrow-gutter-width-screen-mini;
+        margin-right: @grid-container-fluid-narrow-gutter-width-screen-mini;
+
+      }
+
+      &.container-fluid-wide {
+
+        margin-left: @grid-container-fluid-wide-gutter-width-screen-mini;
+        margin-right: @grid-container-fluid-wide-gutter-width-screen-mini;
+
+      }
 
     }
 
@@ -278,8 +306,22 @@ Grid
 
     .container.container-fluid {
 
-      margin-left:  (@grid-gutter-width-screen-small * 0.5);
-      margin-right: (@grid-gutter-width-screen-small * 0.5);
+      margin-left: @grid-container-fluid-gutter-width-screen-small;
+      margin-right: @grid-container-fluid-gutter-width-screen-small;
+
+      &.container-fluid-narrow {
+
+        margin-left: @grid-container-fluid-narrow-gutter-width-screen-small;
+        margin-right: @grid-container-fluid-narrow-gutter-width-screen-small;
+
+      }
+
+      &.container-fluid-wide {
+
+        margin-left: @grid-container-fluid-wide-gutter-width-screen-small;
+        margin-right: @grid-container-fluid-wide-gutter-width-screen-small;
+
+      }
 
     }
 
@@ -388,8 +430,22 @@ Grid
 
     .container.container-fluid {
 
-      margin-left:  (@grid-gutter-width-screen-medium * 0.5);
-      margin-right: (@grid-gutter-width-screen-medium * 0.5);
+      margin-left: @grid-container-fluid-gutter-width-screen-medium;
+      margin-right: @grid-container-fluid-gutter-width-screen-medium;
+
+      &.container-fluid-narrow {
+
+        margin-left: @grid-container-fluid-narrow-gutter-width-screen-medium;
+        margin-right: @grid-container-fluid-narrow-gutter-width-screen-medium;
+
+      }
+
+      &.container-fluid-wide {
+
+        margin-left: @grid-container-fluid-wide-gutter-width-screen-medium;
+        margin-right: @grid-container-fluid-wide-gutter-width-screen-medium;
+
+      }
 
     }
 
@@ -499,8 +555,22 @@ Grid
 
     .container.container-fluid {
 
-      margin-left:  (@grid-gutter-width-screen-large * 0.5);
-      margin-right: (@grid-gutter-width-screen-large * 0.5);
+      margin-left: @grid-container-fluid-gutter-width-screen-large;
+      margin-right: @grid-container-fluid-gutter-width-screen-large;
+
+      &.container-fluid-narrow {
+
+        margin-left: @grid-container-fluid-narrow-gutter-width-screen-large;
+        margin-right: @grid-container-fluid-narrow-gutter-width-screen-large;
+
+      }
+
+      &.container-fluid-wide {
+
+        margin-left: @grid-container-fluid-wide-gutter-width-screen-large;
+        margin-right: @grid-container-fluid-wide-gutter-width-screen-large;
+
+      }
 
     }
 
