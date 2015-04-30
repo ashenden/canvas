@@ -384,6 +384,7 @@ Form Control Size Styling
 
   & when not (@height = null) {
 
+    height: floor(@height * @height-scale);
     padding-top: floor((floor(@height * @height-scale) - floor(@text-line-height * @text-line-height-scale)) / 2);
     padding-bottom: floor((floor(@height * @height-scale) - floor(@text-line-height * @text-line-height-scale)) / 2);
 

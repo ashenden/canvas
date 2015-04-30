@@ -147,6 +147,8 @@ Form Control Styles
 @form-control-height:                                                           @button-height;
 @form-control-padding-horizontal:                                               @button-padding-horizontal * 0.5;
 @form-control-border-radius:                                                    @button-border-radius;
+@form-control-box-sizing:                                                       border-box;
+@form-control-background-clip:                                                  padding-box;
 
 
 
@@ -519,9 +521,9 @@ Form Control (Default) State: Normal
 @form-control-default-background-color:                                         @white;
 @form-control-default-background-gradient-color-top:                            null;
 @form-control-default-background-gradient-color-bottom:                         null;
-@form-control-default-border-width:                                             0px;
-@form-control-default-border-color:                                             null;
-@form-control-default-border-style:                                             null;
+@form-control-default-border-width:                                             1px;
+@form-control-default-border-color:                                             rgba(0, 0, 0, 0.2);
+@form-control-default-border-style:                                             solid;
 @form-control-default-border-top-width:                                         null;
 @form-control-default-border-top-color:                                         null;
 @form-control-default-border-top-style:                                         null;
@@ -534,7 +536,7 @@ Form Control (Default) State: Normal
 @form-control-default-border-left-width:                                        null;
 @form-control-default-border-left-color:                                        null;
 @form-control-default-border-left-style:                                        null;
-@form-control-default-shadow:                                                   0px 0px 0px 1px rgba(0, 0, 0, 0.2);
+@form-control-default-shadow:                                                   null;
 
 
 
@@ -554,7 +556,7 @@ Form Control (Default) State: Hover
 @form-control-default-hover-background-gradient-color-top:                      null;
 @form-control-default-hover-background-gradient-color-bottom:                   null;
 @form-control-default-hover-border-width:                                       null;
-@form-control-default-hover-border-color:                                       null;
+@form-control-default-hover-border-color:                                       rgba(0, 0, 0, 0.4);
 @form-control-default-hover-border-style:                                       null;
 @form-control-default-hover-border-top-width:                                   null;
 @form-control-default-hover-border-top-color:                                   null;
@@ -568,7 +570,7 @@ Form Control (Default) State: Hover
 @form-control-default-hover-border-left-width:                                  null;
 @form-control-default-hover-border-left-color:                                  null;
 @form-control-default-hover-border-left-style:                                  null;
-@form-control-default-hover-shadow:                                             0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+@form-control-default-hover-shadow:                                             null;
 
 
 
@@ -588,7 +590,7 @@ Form Control (Default) State: Focus
 @form-control-default-focus-background-gradient-color-top:                      null;
 @form-control-default-focus-background-gradient-color-bottom:                   null;
 @form-control-default-focus-border-width:                                       null;
-@form-control-default-focus-border-color:                                       null;
+@form-control-default-focus-border-color:                                       @purple;
 @form-control-default-focus-border-style:                                       null;
 @form-control-default-focus-border-top-width:                                   null;
 @form-control-default-focus-border-top-color:                                   null;
@@ -602,7 +604,7 @@ Form Control (Default) State: Focus
 @form-control-default-focus-border-left-width:                                  null;
 @form-control-default-focus-border-left-color:                                  null;
 @form-control-default-focus-border-left-style:                                  null;
-@form-control-default-focus-shadow:                                             0px 0px 0px 1px @purple;
+@form-control-default-focus-shadow:                                             null;
 
 
 
@@ -674,7 +676,7 @@ Form Control (Default, Inverse) State: Normal
 @form-control-default-inverse-background-gradient-color-top:                    null;
 @form-control-default-inverse-background-gradient-color-bottom:                 null;
 @form-control-default-inverse-border-width:                                     null;
-@form-control-default-inverse-border-color:                                     null;
+@form-control-default-inverse-border-color:                                     ~`color_lightness("@{neutral}", 10)`;
 @form-control-default-inverse-border-style:                                     null;
 @form-control-default-inverse-border-top-width:                                 null;
 @form-control-default-inverse-border-top-color:                                 null;
@@ -688,7 +690,7 @@ Form Control (Default, Inverse) State: Normal
 @form-control-default-inverse-border-left-width:                                null;
 @form-control-default-inverse-border-left-color:                                null;
 @form-control-default-inverse-border-left-style:                                null;
-@form-control-default-inverse-shadow:                                           0px 0px 0px 1px ~`color_lightness("@{neutral}", 10)`;
+@form-control-default-inverse-shadow:                                           null;
 
 
 
@@ -708,7 +710,7 @@ Form Control (Default, Inverse) State: Hover
 @form-control-default-inverse-hover-background-gradient-color-top:              null;
 @form-control-default-inverse-hover-background-gradient-color-bottom:           null;
 @form-control-default-inverse-hover-border-width:                               null;
-@form-control-default-inverse-hover-border-color:                               null;
+@form-control-default-inverse-hover-border-color:                               ~`color_lightness("@{neutral}", 20)`;
 @form-control-default-inverse-hover-border-style:                               null;
 @form-control-default-inverse-hover-border-top-width:                           null;
 @form-control-default-inverse-hover-border-top-color:                           null;
@@ -722,7 +724,7 @@ Form Control (Default, Inverse) State: Hover
 @form-control-default-inverse-hover-border-left-width:                          null;
 @form-control-default-inverse-hover-border-left-color:                          null;
 @form-control-default-inverse-hover-border-left-style:                          null;
-@form-control-default-inverse-hover-shadow:                                     0px 0px 0px 1px ~`color_lightness("@{neutral}", 20)`;
+@form-control-default-inverse-hover-shadow:                                     null;
 
 
 
@@ -742,7 +744,7 @@ Form Control (Default, Inverse) State: Focus
 @form-control-default-inverse-focus-background-gradient-color-top:              null;
 @form-control-default-inverse-focus-background-gradient-color-bottom:           null;
 @form-control-default-inverse-focus-border-width:                               null;
-@form-control-default-inverse-focus-border-color:                               null;
+@form-control-default-inverse-focus-border-color:                               ~`color_lightness("@{purple}", 5)`;
 @form-control-default-inverse-focus-border-style:                               null;
 @form-control-default-inverse-focus-border-top-width:                           null;
 @form-control-default-inverse-focus-border-top-color:                           null;
@@ -756,7 +758,7 @@ Form Control (Default, Inverse) State: Focus
 @form-control-default-inverse-focus-border-left-width:                          null;
 @form-control-default-inverse-focus-border-left-color:                          null;
 @form-control-default-inverse-focus-border-left-style:                          null;
-@form-control-default-inverse-focus-shadow:                                     0px 0px 0px 1px ~`color_lightness("@{purple}", 5)`;
+@form-control-default-inverse-focus-shadow:                                     null;
 
 
 
@@ -828,7 +830,7 @@ Form Control (Success) State: Normal
 @form-control-success-background-gradient-color-top:                            null;
 @form-control-success-background-gradient-color-bottom:                         null;
 @form-control-success-border-width:                                             null;
-@form-control-success-border-color:                                             null;
+@form-control-success-border-color:                                             @green;
 @form-control-success-border-style:                                             null;
 @form-control-success-border-top-width:                                         null;
 @form-control-success-border-top-color:                                         null;
@@ -842,7 +844,7 @@ Form Control (Success) State: Normal
 @form-control-success-border-left-width:                                        null;
 @form-control-success-border-left-color:                                        null;
 @form-control-success-border-left-style:                                        null;
-@form-control-success-shadow:                                                   0px 0px 0px 1px @green;
+@form-control-success-shadow:                                                   null;
 
 
 
@@ -876,7 +878,7 @@ Form Control (Success) State: Hover
 @form-control-success-hover-border-left-width:                                  null;
 @form-control-success-hover-border-left-color:                                  null;
 @form-control-success-hover-border-left-style:                                  null;
-@form-control-success-hover-shadow:                                             0px 0px 0px 1px @green;
+@form-control-success-hover-shadow:                                             null;
 
 
 
@@ -910,7 +912,7 @@ Form Control (Success) State: Focus
 @form-control-success-focus-border-left-width:                                  null;
 @form-control-success-focus-border-left-color:                                  null;
 @form-control-success-focus-border-left-style:                                  null;
-@form-control-success-focus-shadow:                                             0px 0px 0px 1px @green;
+@form-control-success-focus-shadow:                                             null;
 
 
 
@@ -982,7 +984,7 @@ Form Control (Success, Inverse) State: Normal
 @form-control-success-inverse-background-gradient-color-top:                    null;
 @form-control-success-inverse-background-gradient-color-bottom:                 null;
 @form-control-success-inverse-border-width:                                     null;
-@form-control-success-inverse-border-color:                                     null;
+@form-control-success-inverse-border-color:                                     @green;
 @form-control-success-inverse-border-style:                                     null;
 @form-control-success-inverse-border-top-width:                                 null;
 @form-control-success-inverse-border-top-color:                                 null;
@@ -996,7 +998,7 @@ Form Control (Success, Inverse) State: Normal
 @form-control-success-inverse-border-left-width:                                null;
 @form-control-success-inverse-border-left-color:                                null;
 @form-control-success-inverse-border-left-style:                                null;
-@form-control-success-inverse-shadow:                                           0px 0px 0px 1px @green;
+@form-control-success-inverse-shadow:                                           null;
 
 
 
@@ -1030,7 +1032,7 @@ Form Control (Success, Inverse) State: Hover
 @form-control-success-inverse-hover-border-left-width:                          null;
 @form-control-success-inverse-hover-border-left-color:                          null;
 @form-control-success-inverse-hover-border-left-style:                          null;
-@form-control-success-inverse-hover-shadow:                                     0px 0px 0px 1px @green;
+@form-control-success-inverse-hover-shadow:                                     null;
 
 
 
@@ -1064,7 +1066,7 @@ Form Control (Success, Inverse) State: Focus
 @form-control-success-inverse-focus-border-left-width:                          null;
 @form-control-success-inverse-focus-border-left-color:                          null;
 @form-control-success-inverse-focus-border-left-style:                          null;
-@form-control-success-inverse-focus-shadow:                                     0px 0px 0px 1px @green;
+@form-control-success-inverse-focus-shadow:                                     null;
 
 
 
@@ -1136,7 +1138,7 @@ Form Control (Error) State: Normal
 @form-control-error-background-gradient-color-top:                              null;
 @form-control-error-background-gradient-color-bottom:                           null;
 @form-control-error-border-width:                                               null;
-@form-control-error-border-color:                                               null;
+@form-control-error-border-color:                                               @red;
 @form-control-error-border-style:                                               null;
 @form-control-error-border-top-width:                                           null;
 @form-control-error-border-top-color:                                           null;
@@ -1150,7 +1152,7 @@ Form Control (Error) State: Normal
 @form-control-error-border-left-width:                                          null;
 @form-control-error-border-left-color:                                          null;
 @form-control-error-border-left-style:                                          null;
-@form-control-error-shadow:                                                     0px 0px 0px 1px @red;
+@form-control-error-shadow:                                                     null;
 
 
 
@@ -1184,7 +1186,7 @@ Form Control (Error) State: Hover
 @form-control-error-hover-border-left-width:                                    null;
 @form-control-error-hover-border-left-color:                                    null;
 @form-control-error-hover-border-left-style:                                    null;
-@form-control-error-hover-shadow:                                               0px 0px 0px 1px @red;
+@form-control-error-hover-shadow:                                               null;
 
 
 
@@ -1218,7 +1220,7 @@ Form Control (Error) State: Focus
 @form-control-error-focus-border-left-width:                                    null;
 @form-control-error-focus-border-left-color:                                    null;
 @form-control-error-focus-border-left-style:                                    null;
-@form-control-error-focus-shadow:                                               0px 0px 0px 1px @red;
+@form-control-error-focus-shadow:                                               null;
 
 
 
@@ -1290,7 +1292,7 @@ Form Control (Error, Inverse) State: Normal
 @form-control-error-inverse-background-gradient-color-top:                      null;
 @form-control-error-inverse-background-gradient-color-bottom:                   null;
 @form-control-error-inverse-border-width:                                       null;
-@form-control-error-inverse-border-color:                                       null;
+@form-control-error-inverse-border-color:                                       @red;
 @form-control-error-inverse-border-style:                                       null;
 @form-control-error-inverse-border-top-width:                                   null;
 @form-control-error-inverse-border-top-color:                                   null;
@@ -1304,7 +1306,7 @@ Form Control (Error, Inverse) State: Normal
 @form-control-error-inverse-border-left-width:                                  null;
 @form-control-error-inverse-border-left-color:                                  null;
 @form-control-error-inverse-border-left-style:                                  null;
-@form-control-error-inverse-shadow:                                             0px 0px 0px 1px @red;
+@form-control-error-inverse-shadow:                                             null;
 
 
 
@@ -1338,7 +1340,7 @@ Form Control (Error, Inverse) State: Hover
 @form-control-error-inverse-hover-border-left-width:                            null;
 @form-control-error-inverse-hover-border-left-color:                            null;
 @form-control-error-inverse-hover-border-left-style:                            null;
-@form-control-error-inverse-hover-shadow:                                       0px 0px 0px 1px @red;
+@form-control-error-inverse-hover-shadow:                                       null;
 
 
 
@@ -1372,7 +1374,7 @@ Form Control (Error, Inverse) State: Focus
 @form-control-error-inverse-focus-border-left-width:                            null;
 @form-control-error-inverse-focus-border-left-color:                            null;
 @form-control-error-inverse-focus-border-left-style:                            null;
-@form-control-error-inverse-focus-shadow:                                       0px 0px 0px 1px @red;
+@form-control-error-inverse-focus-shadow:                                       null;
 
 
 
