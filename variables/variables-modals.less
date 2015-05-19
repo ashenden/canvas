@@ -91,11 +91,7 @@ Modal Styling
 Modal Transitions
 ----------------------------------------------------------------------------- */
 
-@modal-transition-in:                                                           e('opacity 0.3s linear, top 0.3s ease-out');
-@modal-transition-in-top:                                                       50%;
-
-@modal-transition-out:                                                          e('opacity 0.3s linear, top 0.3s ease-out');
-@modal-transition-out-top:                                                      40%;
+@modal-transition-duration:                                                     0.3s;
 
 
 
@@ -256,7 +252,7 @@ Modal Backdrop
 Modal Backdrop Styling
 ----------------------------------------------------------------------------- */
 
-@modal-backdrop-background-color:                                               @canvas-pod-dark-background-color;
+@modal-backdrop-background-color:                                               hsla(hue(color(@canvas-pod-dark-background-color)), saturation(color(@canvas-pod-dark-background-color)), lightness(color(@canvas-pod-dark-background-color)), 0.8);
 
 
 
@@ -264,8 +260,4 @@ Modal Backdrop Styling
 Modal Backdrop Transitions
 ----------------------------------------------------------------------------- */
 
-@modal-backdrop-transition-in:                                                  e('opacity 0.5s linear');
-@modal-backdrop-transition-in-opacity:                                          0.50;
-
-@modal-backdrop-transition-out:                                                 e('opacity 0.3s linear');
-@modal-backdrop-transition-out-opacity:                                         0.0;
+@modal-backdrop-transition-duration:                                            @modal-transition-duration;

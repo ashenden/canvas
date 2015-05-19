@@ -158,6 +158,62 @@ Animation Keyframes
 
 
 /* -----------------------------------------------------------------------------
+Fade In
+----------------------------------------------------------------------------- */
+
+@-webkit-keyframes fade-in { .fade-in(); }
+@-moz-keyframes fade-in { .fade-in(); }
+@-ms-keyframes fade-in { .fade-in(); }
+@-o-keyframes fade-in { .fade-in(); }
+@keyframes fade-in { .fade-in(); }
+
+.fade-in() {
+
+  0% {
+
+    .opacity(0.0);
+
+  }
+
+  100% {
+
+    .opacity(1.0);
+
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
+Fade Out
+----------------------------------------------------------------------------- */
+
+@-webkit-keyframes fade-out { .fade-out(); }
+@-moz-keyframes fade-out { .fade-out(); }
+@-ms-keyframes fade-out { .fade-out(); }
+@-o-keyframes fade-out { .fade-out(); }
+@keyframes fade-out { .fade-out(); }
+
+.fade-out() {
+
+  0% {
+
+    .opacity(1.0);
+
+  }
+
+  100% {
+
+    .opacity(0.0);
+
+  }
+
+}
+
+
+
+/* -----------------------------------------------------------------------------
 Zoom In
 ----------------------------------------------------------------------------- */
 
@@ -179,6 +235,7 @@ Zoom In
   50% {
 
     .opacity(1.0);
+    .scale3d(1.0, 1.0, 1.0);
 
   }
 
@@ -197,10 +254,11 @@ Zoom Out
 @keyframes zoom-out { .zoom-out(); }
 
 .zoom-out() {
-  
+
   0% {
 
     .opacity(1.0);
+    .scale3d(1.0, 1.0, 1.0);
 
   }
 
@@ -214,6 +272,7 @@ Zoom Out
   100% {
 
     .opacity(0);
+    .scale3d(0.5, 0.5, 0.5);
 
   }
 

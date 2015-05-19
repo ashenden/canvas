@@ -52,17 +52,15 @@ layout/modal/index.less
     cursor: pointer;
     z-index: @z-index-modal;
     background-color: @modal-backdrop-background-color;
-    .opacity(@modal-backdrop-transition-out-opacity);
 
     &.fade {
 
-      .opacity(@modal-backdrop-transition-out-opacity);
-      .transition(@modal-backdrop-transition-out);
+      .transition(e('all @{modal-backdrop-transition-duration} ease'));
+      .opacity(0.0);
 
       &.in {
 
-        .opacity(@modal-backdrop-transition-in-opacity);
-        .transition(@modal-backdrop-transition-in);
+        .opacity(1.0);
 
       }
 
@@ -86,7 +84,7 @@ layout/modal/index.less
   .modal {
 
     position: fixed;
-    top: auto;
+    top: 50%;
     left: @modal-margin-horizontal;
     right: @modal-margin-horizontal;
     display: block;
@@ -108,20 +106,18 @@ layout/modal/index.less
 
     &.fade {
 
-      .opacity(0);
-      top: @modal-transition-out-top;
-      .transition(@modal-transition-out);
+      .transition(e('all @{modal-transition-duration} ease'));
+      .opacity(0.0);
+      .scale3d(0.5, 0.5, 0.5);
+
+      &.in {
+
+        .opacity(1.0);
+        .scale3d(1.0, 1.0, 1.0);
+
+      }
 
     }
-
-    &.fade.in {
-
-      .opacity(100);
-      top: @modal-transition-in-top;
-      .transition(@modal-transition-in);
-
-    }
-
 
 
     /* -----------------------------------------------------------------------------
