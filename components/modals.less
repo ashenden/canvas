@@ -177,10 +177,70 @@ layout/modal/index.less
 
     .modal-close {
 
+      display: block;
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: (@modal-header-padding-vertical - (@base-spacing-unit * 0.75)) * 0.5;
+      right: (@modal-header-padding-horizontal - (@base-spacing-unit * 0.75)) * 0.5;
       z-index: @z-index-modal + 2;
+      width: @base-spacing-unit * 0.5;
+      height: @base-spacing-unit * 0.5;
+      cursor: pointer;
+      .transition(e('all 0.2s ease'));
+
+      span {
+
+        display: none;
+
+      }
+
+      &:before,
+      &:after {
+
+        content: '';
+        display: block;
+        width: @base-spacing-unit * 0.75;
+        height: 1px;
+        position: absolute;
+        top: ((@base-spacing-unit * 0.75) * 0.5);
+        left: 0px;
+        .rotate(45deg);
+        background-color: @body-text-link-text-color;
+
+      }
+
+      &:after {
+
+        .rotate(-45deg);
+
+      }
+
+      &:hover {
+
+        //.scale3d(1.2, 1.2, 1.2);
+        .rotate(90deg);
+
+        &:before,
+        &:after {
+
+          color: @body-text-link-hover-text-color;
+
+        }
+
+      }
+
+      &:active {
+
+        //.scale3d(0.9, 0.9, 0.9);
+        .rotate(0deg);
+
+        &:before,
+        &:after {
+
+          color: @body-text-link-active-text-color;
+
+        }
+
+      }
 
     }
 
@@ -387,6 +447,19 @@ layout/modal/index.less
 
       .modal-close {
 
+        top: (@modal-header-padding-vertical-screen-small - (@base-spacing-unit-screen-small * 0.75)) * 0.5;
+        right: (@modal-header-padding-horizontal-screen-small - (@base-spacing-unit-screen-small * 0.75)) * 0.5;
+        width: @base-spacing-unit-screen-small * 0.75;
+        height: @base-spacing-unit-screen-small * 0.75;
+
+        &:before,
+        &:after {
+
+          width: @base-spacing-unit-screen-small * 0.75;
+          top: ((@base-spacing-unit-screen-small * 0.75) * 0.5);
+
+        }
+
       }
 
 
@@ -523,6 +596,19 @@ layout/modal/index.less
 
       .modal-close {
 
+        top: (@modal-header-padding-vertical-screen-medium - (@base-spacing-unit-screen-medium * 0.75)) * 0.5;
+        right: (@modal-header-padding-horizontal-screen-medium - (@base-spacing-unit-screen-medium * 0.75)) * 0.5;
+        width: @base-spacing-unit-screen-medium * 0.75;
+        height: @base-spacing-unit-screen-medium * 0.75;
+
+        &:before,
+        &:after {
+
+          width: @base-spacing-unit-screen-medium * 0.75;
+          top: ((@base-spacing-unit-screen-medium * 0.75) * 0.5);
+
+        }
+
       }
 
 
@@ -658,6 +744,19 @@ layout/modal/index.less
       ----------------------------------------------------------------------------- */
 
       .modal-close {
+
+        top: (@modal-header-padding-vertical-screen-large - (@base-spacing-unit-screen-large * 0.75)) * 0.5;
+        right: (@modal-header-padding-horizontal-screen-large - (@base-spacing-unit-screen-large * 0.75)) * 0.5;
+        width: @base-spacing-unit-screen-large * 0.75;
+        height: @base-spacing-unit-screen-large * 0.75;
+
+        &:before,
+        &:after {
+
+          width: @base-spacing-unit-screen-large * 0.75;
+          top: ((@base-spacing-unit-screen-large * 0.75) * 0.5);
+
+        }
 
       }
 
