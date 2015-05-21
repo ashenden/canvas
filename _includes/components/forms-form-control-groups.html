@@ -100,7 +100,7 @@ BEGIN: Form Control Groups
 
         </div>
 
-        <div class="form-group flush-bottom">
+        <div class="form-group">
 
           <label>
 
@@ -109,6 +109,34 @@ BEGIN: Form Control Groups
           </label>
 
           <div class="form-control-group form-control">
+
+            <input type="text" class="form-control" placeholder="Placeholder">
+
+            <span class="form-control-group-add-on form-control-group-add-on-append">
+
+              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="form-group flush-bottom">
+
+          <label>
+
+            Input With Nested Add On (Before &amp; After)
+
+          </label>
+
+          <div class="form-control-group form-control">
+
+            <span class="form-control-group-add-on form-control-group-add-on-prepend">
+
+              <span style="display: block; background: black; width: 16px; height: 16px;"></span>
+
+            </span>
 
             <input type="text" class="form-control" placeholder="Placeholder">
 
@@ -159,6 +187,18 @@ BEGIN: Form Control Groups
 &lt;!-- Input With Nested Add On After --&gt;
 
 &lt;div class="form-control-group form-control"&gt;
+  &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
+  &lt;span class="form-control-group-add-on form-control-group-add-on-append"&gt;
+    &hellip;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- Input With Nested Add On Before &amp; After --&gt;
+
+&lt;div class="form-control-group form-control"&gt;
+  &lt;span class="form-control-group-add-on form-control-group-add-on-prepend"&gt;
+    &hellip;
+  &lt;/span&gt;
   &lt;input type="text" class="form-control" placeholder="Placeholder"&gt;
   &lt;span class="form-control-group-add-on form-control-group-add-on-append"&gt;
     &hellip;
