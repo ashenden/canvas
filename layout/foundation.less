@@ -402,6 +402,19 @@ Flex Box
   display: flex;
   flex-direction: row;
 
+  &:before,
+  &:after {
+
+    display: none;
+
+  }
+
+  &.flex-box-wrap {
+
+    flex-wrap: wrap;
+
+  }
+
   &.flex-box-fit-height {
 
     align-items: stretch;
