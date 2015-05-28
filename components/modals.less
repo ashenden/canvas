@@ -25,7 +25,7 @@ layout/modal/index.less
 
   body.modal-open {
 
-    //overflow: hidden;
+    overflow: hidden;
 
   }
 
@@ -178,14 +178,18 @@ layout/modal/index.less
     .modal-close {
 
       display: block;
-      position: absolute;
-      top: (@modal-header-padding-vertical - (@base-spacing-unit * 0.75)) * 0.5;
-      right: (@modal-header-padding-horizontal - (@base-spacing-unit * 0.75)) * 0.5;
+      position: fixed;
+      top: -(@modal-header-padding-vertical + @button-large-height);
+      left: 50%;
       z-index: @z-index-modal + 2;
-      width: @base-spacing-unit * 0.5;
-      height: @base-spacing-unit * 0.5;
+      width: @button-large-height;
+      height: @button-large-height;
+      margin-left: -(@button-large-height) * 0.5;
       cursor: pointer;
-      .transition(e('all 0.2s ease'));
+      .transition(e('all 0.15s ease'));
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      .border-radius(50%);
+      .box-sizing(content-box);
 
       span {
 
@@ -198,13 +202,14 @@ layout/modal/index.less
 
         content: '';
         display: block;
-        width: @base-spacing-unit * 0.75;
-        height: 1px;
+        width: @button-large-height * 0.5;
+        height: 2px;
         position: absolute;
-        top: ((@base-spacing-unit * 0.75) * 0.5);
-        left: 0px;
+        top: (@button-large-height * 0.5) - 1px;
+        left: 50%;
+        margin-left: -(@button-large-height * 0.5) * 0.5;
         .rotate(45deg);
-        background-color: @body-text-link-text-color;
+        background-color: @white;
 
       }
 
@@ -217,6 +222,7 @@ layout/modal/index.less
       &:hover {
 
         //.scale3d(1.2, 1.2, 1.2);
+        border: 1px solid rgba(255, 255, 255, 1.0);
         .rotate(90deg);
 
         &:before,
@@ -231,6 +237,8 @@ layout/modal/index.less
       &:active {
 
         //.scale3d(0.9, 0.9, 0.9);
+        border: 1px solid @body-text-link-text-color;
+        background: @body-text-link-text-color;
         .rotate(0deg);
 
         &:before,
@@ -324,6 +332,54 @@ layout/modal/index.less
       margin: 0px !important;
       top: 0px !important;
       left: 0px !important;
+
+
+
+      /* -----------------------------------------------------------------------------
+      Modal Close
+      ----------------------------------------------------------------------------- */
+
+      .modal-close {
+
+        top: @modal-header-padding-vertical * 0.5;
+        border: 1px solid hsla(hue(color(~`color_lightness("@{neutral}", 0)`)), saturation(color(~`color_lightness("@{neutral}", 0)`)), lightness(color(~`color_lightness("@{neutral}", 0)`)), 0.2);
+
+        &:before,
+        &:after {
+
+          background-color: @neutral;
+          .opacity(0.8);
+
+        }
+
+        &:hover {
+
+          border: 1px solid hsla(hue(color(~`color_lightness("@{neutral}", 0)`)), saturation(color(~`color_lightness("@{neutral}", 0)`)), lightness(color(~`color_lightness("@{neutral}", 0)`)), 0.6);
+
+          &:before,
+          &:after {
+
+            .opacity(0.8);
+
+          }
+
+        }
+
+        &:active {
+
+          border: 1px solid @body-text-link-text-color;
+          background: @body-text-link-text-color;
+
+          &:before,
+          &:after {
+
+            background-color: @white;
+
+          }
+
+        }
+
+      }
 
 
 
@@ -447,16 +503,17 @@ layout/modal/index.less
 
       .modal-close {
 
-        top: (@modal-header-padding-vertical-screen-small - (@base-spacing-unit-screen-small * 0.75)) * 0.5;
-        right: (@modal-header-padding-horizontal-screen-small - (@base-spacing-unit-screen-small * 0.75)) * 0.5;
-        width: @base-spacing-unit-screen-small * 0.75;
-        height: @base-spacing-unit-screen-small * 0.75;
+        top: -(@modal-header-padding-vertical-screen-small + (@button-large-height * @button-large-height-scale-screen-small));
+        width: @button-large-height * @button-large-height-scale-screen-small;
+        height: @button-large-height * @button-large-height-scale-screen-small;
+        margin-left: -(@button-large-height * @button-large-height-scale-screen-small) * 0.5;
 
         &:before,
         &:after {
 
-          width: @base-spacing-unit-screen-small * 0.75;
-          top: ((@base-spacing-unit-screen-small * 0.75) * 0.5);
+          width: @button-large-height * @button-large-height-scale-screen-small * 0.5;
+          top: (@button-large-height * @button-large-height-scale-screen-small * 0.5) - 1px;
+          margin-left: -(@button-large-height * @button-large-height-scale-screen-small * 0.5) * 0.5;
 
         }
 
@@ -535,6 +592,18 @@ layout/modal/index.less
       &.modal-fullscreen {
 
         /* -----------------------------------------------------------------------------
+        Modal Close
+        ----------------------------------------------------------------------------- */
+
+        .modal-close {
+
+          top: @modal-header-padding-vertical-screen-small * 0.5;;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
         Container
         ----------------------------------------------------------------------------- */
 
@@ -596,16 +665,17 @@ layout/modal/index.less
 
       .modal-close {
 
-        top: (@modal-header-padding-vertical-screen-medium - (@base-spacing-unit-screen-medium * 0.75)) * 0.5;
-        right: (@modal-header-padding-horizontal-screen-medium - (@base-spacing-unit-screen-medium * 0.75)) * 0.5;
-        width: @base-spacing-unit-screen-medium * 0.75;
-        height: @base-spacing-unit-screen-medium * 0.75;
+        top: -(@modal-header-padding-vertical-screen-medium + (@button-large-height * @button-large-height-scale-screen-medium));
+        width: @button-large-height * @button-large-height-scale-screen-medium;
+        height: @button-large-height * @button-large-height-scale-screen-medium;
+        margin-left: -(@button-large-height * @button-large-height-scale-screen-medium) * 0.5;
 
         &:before,
         &:after {
 
-          width: @base-spacing-unit-screen-medium * 0.75;
-          top: ((@base-spacing-unit-screen-medium * 0.75) * 0.5);
+          width: @button-large-height * @button-large-height-scale-screen-medium * 0.5;
+          top: (@button-large-height * @button-large-height-scale-screen-medium * 0.5) - 1px;
+          margin-left: -(@button-large-height * @button-large-height-scale-screen-medium * 0.5) * 0.5;
 
         }
 
@@ -684,6 +754,18 @@ layout/modal/index.less
       &.modal-fullscreen {
 
         /* -----------------------------------------------------------------------------
+        Modal Close
+        ----------------------------------------------------------------------------- */
+
+        .modal-close {
+
+          top: @modal-header-padding-vertical-screen-medium * 0.5;;
+
+        }
+
+
+
+        /* -----------------------------------------------------------------------------
         Container
         ----------------------------------------------------------------------------- */
 
@@ -745,16 +827,17 @@ layout/modal/index.less
 
       .modal-close {
 
-        top: (@modal-header-padding-vertical-screen-large - (@base-spacing-unit-screen-large * 0.75)) * 0.5;
-        right: (@modal-header-padding-horizontal-screen-large - (@base-spacing-unit-screen-large * 0.75)) * 0.5;
-        width: @base-spacing-unit-screen-large * 0.75;
-        height: @base-spacing-unit-screen-large * 0.75;
+        top: -(@modal-header-padding-vertical-screen-large + (@button-large-height * @button-large-height-scale-screen-large));
+        width: @button-large-height * @button-large-height-scale-screen-large;
+        height: @button-large-height * @button-large-height-scale-screen-large;
+        margin-left: -(@button-large-height * @button-large-height-scale-screen-large) * 0.5;
 
         &:before,
         &:after {
 
-          width: @base-spacing-unit-screen-large * 0.75;
-          top: ((@base-spacing-unit-screen-large * 0.75) * 0.5);
+          width: @button-large-height * @button-large-height-scale-screen-large * 0.5;
+          top: (@button-large-height * @button-large-height-scale-screen-large * 0.5) - 1px;
+          margin-left: -(@button-large-height * @button-large-height-scale-screen-large * 0.5) * 0.5;
 
         }
 
@@ -831,6 +914,18 @@ layout/modal/index.less
       ----------------------------------------------------------------------------- */
 
       &.modal-fullscreen {
+
+        /* -----------------------------------------------------------------------------
+        Modal Close
+        ----------------------------------------------------------------------------- */
+
+        .modal-close {
+
+          top: @modal-header-padding-vertical-screen-large * 0.5;;
+
+        }
+
+
 
         /* -----------------------------------------------------------------------------
         Container
