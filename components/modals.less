@@ -110,10 +110,22 @@ layout/modal/index.less
       .opacity(0.0);
       .scale3d(0.5, 0.5, 0.5);
 
+      .modal-close {
+
+        .rotate(-360deg);
+
+      }
+
       &.in {
 
         .opacity(1.0);
         .scale3d(1.0, 1.0, 1.0);
+
+        .modal-close {
+
+          .rotate(0deg);
+
+        }
 
       }
 
@@ -154,9 +166,34 @@ layout/modal/index.less
 
       position: relative;
 
+      &:after {
+
+        content: '';
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: (2 * (@modal-header-padding-vertical * 0.5)) + @button-large-height;
+        display: block;
+        @color-top: @modal-background-color;
+        @color-bottom: hsla(hue(color(@modal-background-color)), saturation(color(@modal-background-color)), saturation(color(@modal-background-color)), 0.0);
+        #gradient > .vertical-three-colors(@color-top, 0%, @color-top, 80%, @color-bottom, 100%);
+        z-index: 2;
+
+      }
+
+      .ps-scrollbar-x-rail,
+      .ps-scrollbar-y-rail {
+
+        position: fixed;
+        z-index: 3;
+
+      }
+
       .modal-content-inner {
 
         position: relative;
+        padding-top: (2 * (@modal-header-padding-vertical * 0.5)) + @button-large-height;
         width: 100%;
 
       }
@@ -179,7 +216,7 @@ layout/modal/index.less
 
       display: block;
       position: fixed;
-      top: -(@modal-header-padding-vertical + @button-large-height);
+      top: @modal-header-padding-vertical * 0.5;
       left: 50%;
       z-index: @z-index-modal + 2;
       width: @button-large-height;
@@ -187,9 +224,9 @@ layout/modal/index.less
       margin-left: -(@button-large-height) * 0.5;
       cursor: pointer;
       .transition(e('all 0.15s ease'));
-      border: 1px solid rgba(255, 255, 255, 0.6);
       .border-radius(50%);
       .box-sizing(content-box);
+      border: 1px solid hsla(hue(color(~`color_lightness("@{neutral}", 0)`)), saturation(color(~`color_lightness("@{neutral}", 0)`)), lightness(color(~`color_lightness("@{neutral}", 0)`)), 0.2);
 
       span {
 
@@ -209,7 +246,8 @@ layout/modal/index.less
         left: 50%;
         margin-left: -(@button-large-height * 0.5) * 0.5;
         .rotate(45deg);
-        background-color: @white;
+        background-color: @neutral;
+        .opacity(0.8);
 
       }
 
@@ -221,14 +259,13 @@ layout/modal/index.less
 
       &:hover {
 
-        //.scale3d(1.2, 1.2, 1.2);
-        border: 1px solid rgba(255, 255, 255, 1.0);
+        border: 1px solid hsla(hue(color(~`color_lightness("@{neutral}", 0)`)), saturation(color(~`color_lightness("@{neutral}", 0)`)), lightness(color(~`color_lightness("@{neutral}", 0)`)), 0.6);
         .rotate(90deg);
 
         &:before,
         &:after {
 
-          color: @body-text-link-hover-text-color;
+          .opacity(0.8);
 
         }
 
@@ -236,7 +273,6 @@ layout/modal/index.less
 
       &:active {
 
-        //.scale3d(0.9, 0.9, 0.9);
         border: 1px solid @body-text-link-text-color;
         background: @body-text-link-text-color;
         .rotate(0deg);
@@ -244,7 +280,7 @@ layout/modal/index.less
         &:before,
         &:after {
 
-          color: @body-text-link-active-text-color;
+          background-color: @white;
 
         }
 
@@ -341,29 +377,10 @@ layout/modal/index.less
 
       .modal-content {
 
-        padding-top: (2 * (@modal-header-padding-vertical * 0.5)) + @button-large-height;
+        .modal-content-inner {
 
-        &:after {
-
-          content: '';
-          position: fixed;
-          top: 0px;
-          left: 0px;
-          width: 100%;
-          height: (2 * (@modal-header-padding-vertical * 0.5)) + @button-large-height;
-          display: block;
-          @color-top: @modal-background-color;
-          @color-bottom: hsla(hue(color(@modal-background-color)), saturation(color(@modal-background-color)), saturation(color(@modal-background-color)), 0.0);
-          #gradient > .vertical-three-colors(@color-top, 0%, @color-top, 80%, @color-bottom, 100%);
-          z-index: 2;
-
-        }
-
-        .ps-scrollbar-x-rail,
-        .ps-scrollbar-y-rail {
-
-          position: fixed;
-          z-index: 3;
+          padding-top: (2 * (@modal-header-padding-vertical * 0.5)) + @button-large-height;
+          padding-bottom: (2 * (@modal-header-padding-vertical * 0.5)) + @button-large-height;
 
         }
 
@@ -542,6 +559,7 @@ layout/modal/index.less
         width: @button-large-height * @button-large-height-scale-screen-small;
         height: @button-large-height * @button-large-height-scale-screen-small;
         margin-left: -(@button-large-height * @button-large-height-scale-screen-small) * 0.5;
+        border: 1px solid rgba(255, 255, 255, 0.6);
 
         &:before,
         &:after {
@@ -549,6 +567,64 @@ layout/modal/index.less
           width: @button-large-height * @button-large-height-scale-screen-small * 0.5;
           top: (@button-large-height * @button-large-height-scale-screen-small * 0.5) - 1px;
           margin-left: -(@button-large-height * @button-large-height-scale-screen-small * 0.5) * 0.5;
+          background-color: @white;
+
+        }
+
+        &:hover {
+
+          border: 1px solid rgba(255, 255, 255, 1.0);
+
+          &:before,
+          &:after {
+
+            color: @body-text-link-hover-text-color;
+
+          }
+
+        }
+
+        &:active {
+
+          border: 1px solid @body-text-link-text-color;
+          background: @body-text-link-text-color;
+
+          &:before,
+          &:after {
+
+            color: @body-text-link-active-text-color;
+
+          }
+
+        }
+
+
+      }
+
+
+
+
+
+
+      /* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------
+
+      Modal Header
+
+      --------------------------------------------------------------------------------
+      ----------------------------------------------------------------------------- */
+
+      .modal-content {
+
+        &:after {
+
+          display: none;
+
+        }
+
+        .modal-content-inner {
+
+          padding-top: 0px;
 
         }
 
@@ -632,11 +708,17 @@ layout/modal/index.less
 
         .modal-content {
 
-          padding-top: (2 * (@modal-header-padding-vertical-screen-small * 0.5)) + (@button-large-height * @button-large-height-scale-screen-small) - ( @modal-header-padding-vertical-screen-small * 0.5);
-
           &:after {
 
+            display: block;
             height: (2 * (@modal-header-padding-vertical-screen-small * 0.5)) + (@button-large-height * @button-large-height-scale-screen-small) - ( @modal-header-padding-vertical-screen-small * 0.5);
+
+          }
+
+          .modal-content-inner {
+
+            padding-top: (2 * (@modal-header-padding-vertical-screen-small * 0.5)) + (@button-large-height * @button-large-height-scale-screen-small) - ( @modal-header-padding-vertical-screen-small * 0.5);
+            padding-bottom: (2 * (@modal-header-padding-vertical-screen-small * 0.5)) + (@button-large-height * @button-large-height-scale-screen-small) - ( @modal-header-padding-vertical-screen-small * 0.5);
 
           }
 
@@ -812,11 +894,16 @@ layout/modal/index.less
 
         .modal-content {
 
-          padding-top: (2 * (@modal-header-padding-vertical-screen-medium * 0.5)) + (@button-large-height * @button-large-height-scale-screen-medium) - ( @modal-header-padding-vertical-screen-medium * 0.5);
-
           &:after {
 
             height: (2 * (@modal-header-padding-vertical-screen-medium * 0.5)) + (@button-large-height * @button-large-height-scale-screen-medium) - ( @modal-header-padding-vertical-screen-medium * 0.5);
+
+          }
+
+          .modal-content-inner {
+
+            padding-top: (2 * (@modal-header-padding-vertical-screen-medium * 0.5)) + (@button-large-height * @button-large-height-scale-screen-medium) - ( @modal-header-padding-vertical-screen-medium * 0.5);
+            padding-bottom: (2 * (@modal-header-padding-vertical-screen-medium * 0.5)) + (@button-large-height * @button-large-height-scale-screen-medium) - ( @modal-header-padding-vertical-screen-medium * 0.5);
 
           }
 
@@ -992,11 +1079,16 @@ layout/modal/index.less
 
         .modal-content {
 
-          padding-top: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@button-large-height * @button-large-height-scale-screen-large);
-
           &:after {
 
             height: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@button-large-height * @button-large-height-scale-screen-large);
+
+          }
+
+          .modal-content-inner {
+
+            padding-top: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@button-large-height * @button-large-height-scale-screen-large);
+            padding-bottom: (2 * (@modal-header-padding-vertical-screen-large * 0.5)) + (@button-large-height * @button-large-height-scale-screen-large);
 
           }
 
