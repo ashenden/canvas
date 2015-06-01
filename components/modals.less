@@ -176,7 +176,11 @@ layout/modal/index.less
         height: (2 * (@modal-header-padding-vertical * 0.5)) + @button-large-height;
         display: block;
         @color-top: @modal-background-color;
-        @color-bottom: hsla(hue(color(@modal-background-color)), saturation(color(@modal-background-color)), saturation(color(@modal-background-color)), 0.0);
+        @color-top-red: red(color(@color-top));
+        @color-top-green: green(color(@color-top));
+        @color-top-blue: blue(color(@color-top));
+        @color-bottom: rgba(@color-top-red, @color-top-green, @color-top-blue, 0.0);
+
         #gradient > .vertical-three-colors(@color-top, 0%, @color-top, 80%, @color-bottom, 100%);
         z-index: 2;
 
