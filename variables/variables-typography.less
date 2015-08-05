@@ -50,7 +50,7 @@ Body Text
 Body Text Styling
 ----------------------------------------------------------------------------- */
 
-@body-text-color:                                                               ~`color_lightness("@{neutral}", 40)`;
+@body-text-color:                                                               color-lighten(@neutral, 40);
 @body-text-font-family:                                                         @font-family-sans-serif;
 @body-text-font-size:                                                           14px;
 @body-text-font-style:                                                          normal;
@@ -67,13 +67,13 @@ Body Text Links
 
 @body-text-link-enabled:                                                        @body-text-enabled;
 
-@body-text-link-text-color:                                                     ~`color_lightness("@{purple}", 0)`;
+@body-text-link-text-color:                                                     color-lighten(@purple, 0);
 @body-text-link-text-decoration:                                                none;
 
-@body-text-link-hover-text-color:                                               ~`color_lightness("@{purple}", -20)`;
+@body-text-link-hover-text-color:                                               color-lighten(@purple, -20);
 @body-text-link-hover-text-decoration:                                          underline;
 
-@body-text-link-active-text-color:                                              ~`color_lightness("@{purple}", -40)`;
+@body-text-link-active-text-color:                                              color-lighten(@purple, -40);
 @body-text-link-active-text-decoration:                                         none;
 
 @body-text-link-disabled-text-color:                                            @body-text-link-text-color;
@@ -136,7 +136,7 @@ Body Text Emphasize
 
 // Body Text Emphasize Styling
 
-@body-text-emphasize-color:                                                     ~`color_lightness("@{neutral}", 20)`;
+@body-text-emphasize-color:                                                     color-lighten(@neutral, 20);
 @body-text-emphasize-font-family:                                               @body-text-font-family;
 @body-text-emphasize-font-size:                                                 @body-text-font-size;
 @body-text-emphasize-font-style:                                                @body-text-font-style;
@@ -172,7 +172,7 @@ Body Text Mute
 
 // Body Text Mute Styling
 
-@body-text-mute-color:                                                          ~`color_lightness("@{neutral}", 60)`;
+@body-text-mute-color:                                                          color-lighten(@neutral, 60);
 @body-text-mute-font-family:                                                    @body-text-font-family;
 @body-text-mute-font-size:                                                      @body-text-font-size;
 @body-text-mute-font-style:                                                     @body-text-font-style;
@@ -208,7 +208,7 @@ Body Text Inverse
 
 // Body Text Inverse Styling
 
-@body-text-inverse-color:                                                       ~`color_lightness("@{neutral}", 40)`;
+@body-text-inverse-color:                                                       color-lighten(@neutral, 40);
 @body-text-inverse-shadow:                                                      @body-text-shadow;
 
 // Body Text inverse Links
@@ -238,7 +238,7 @@ Body Text Inverse Emphasize
 
 // Body Text Inverse Emphasize Styling
 
-@body-text-inverse-emphasize-color:                                             ~`color_lightness("@{neutral}", 80)`;
+@body-text-inverse-emphasize-color:                                             color-lighten(@neutral, 80);
 @body-text-inverse-emphasize-shadow:                                            @body-text-inverse-shadow;
 
 // Body Text Inverse Emphasize Links
@@ -268,7 +268,7 @@ Body Text Inverse Mute
 
 // Body Text Inverse Mute Styling
 
-@body-text-inverse-mute-color:                                                  ~`color_lightness("@{neutral}", 20)`;
+@body-text-inverse-mute-color:                                                  color-lighten(@neutral, 20);
 @body-text-inverse-mute-shadow:                                                 @body-text-inverse-shadow;
 
 // Body Text Inverse Mute Links
@@ -311,7 +311,7 @@ Small Text
 Small Text Styling
 ----------------------------------------------------------------------------- */
 
-@small-text-color:                                                              ~`color_lightness("@{neutral}", 50)`;
+@small-text-color:                                                              color-lighten(@neutral, 50);
 @small-text-font-family:                                                        @font-family-sans-serif;
 @small-text-font-size:                                                          @body-text-font-size * 0.8;
 @small-text-font-style:                                                         normal;
@@ -397,7 +397,7 @@ Small Text Emphasize
 
 // Small Text Emphasize Styling
 
-@small-text-emphasize-color:                                                    ~`color_lightness("@{neutral}", 30)`;
+@small-text-emphasize-color:                                                    color-lighten(@neutral, 30);
 @small-text-emphasize-font-family:                                              @small-text-font-family;
 @small-text-emphasize-font-size:                                                @small-text-font-size;
 @small-text-emphasize-font-style:                                               @small-text-font-style;
@@ -433,7 +433,7 @@ Small Text Mute
 
 // Small Text Mute Styling
 
-@small-text-mute-color:                                                         ~`color_lightness("@{neutral}", 70)`;
+@small-text-mute-color:                                                         color-lighten(@neutral, 70);
 @small-text-mute-font-family:                                                   @small-text-font-family;
 @small-text-mute-font-size:                                                     @small-text-font-size;
 @small-text-mute-font-style:                                                    @small-text-font-style;
@@ -469,7 +469,7 @@ Small Text Inverse
 
 // Small Text Inverse Styling
 
-@small-text-inverse-color:                                                      ~`color_lightness("@{neutral}", -40)`;
+@small-text-inverse-color:                                                      color-lighten(@neutral, -40);
 @small-text-inverse-shadow:                                                     @small-text-shadow;
 
 // Small Text Inverse Links
@@ -499,7 +499,7 @@ Small Text Inverse Emphasize
 
 // Small Text Inverse Emphasize Styling
 
-@small-text-inverse-emphasize-color:                                            ~`color_lightness("@{neutral}", -20)`;
+@small-text-inverse-emphasize-color:                                            color-lighten(@neutral, -20);
 @small-text-inverse-emphasize-shadow:                                           @small-text-inverse-shadow;
 
 // Small Text Inverse Emphasize Links
@@ -529,7 +529,7 @@ Small Text Inverse Mute
 
 // Small Text Inverse Mute Styling
 
-@small-text-inverse-mute-color:                                                 ~`color_lightness("@{neutral}", -60)`;
+@small-text-inverse-mute-color:                                                 color-lighten(@neutral, -60);
 @small-text-inverse-mute-shadow:                                                @small-text-inverse-shadow;
 
 // Small Text Inverse Mute Links
@@ -572,7 +572,7 @@ Lead Text
 Lead Text Styling
 ----------------------------------------------------------------------------- */
 
-@lead-text-color:                                                               ~`color_lightness("@{neutral}", -30)`;
+@lead-text-color:                                                               color-lighten(@neutral, -30);
 @lead-text-font-family:                                                         @font-family-sans-serif;
 @lead-text-font-size:                                                           @body-text-font-size * 1.2;
 @lead-text-font-style:                                                          normal;
@@ -658,7 +658,7 @@ Lead Text Emphasize
 
 // Lead Text Emphasize Styling
 
-@lead-text-emphasize-color:                                                     ~`color_lightness("@{neutral}", -50)`;
+@lead-text-emphasize-color:                                                     color-lighten(@neutral, -50);
 @lead-text-emphasize-font-family:                                               @lead-text-font-family;
 @lead-text-emphasize-font-size:                                                 @lead-text-font-size;
 @lead-text-emphasize-font-style:                                                @lead-text-font-style;
@@ -694,7 +694,7 @@ Lead Text Mute
 
 // Lead Text Mute Styling
 
-@lead-text-mute-color:                                                          ~`color_lightness("@{neutral}", -10)`;
+@lead-text-mute-color:                                                          color-lighten(@neutral, -10);
 @lead-text-mute-font-family:                                                    @lead-text-font-family;
 @lead-text-mute-font-size:                                                      @lead-text-font-size;
 @lead-text-mute-font-style:                                                     @lead-text-font-style;
@@ -730,7 +730,7 @@ Lead Text Inverse
 
 // Lead Text Inverse Styling
 
-@lead-text-inverse-color:                                                       ~`color_lightness("@{neutral}", 70)`;
+@lead-text-inverse-color:                                                       color-lighten(@neutral, 70);
 @lead-text-inverse-shadow:                                                      @lead-text-shadow;
 
 // Lead Text Inverse Links
@@ -760,7 +760,7 @@ Lead Text Inverse Emphasize
 
 // Lead Text Inverse Emphasize Styling
 
-@lead-text-inverse-emphasize-color:                                             ~`color_lightness("@{neutral}", 100)`;
+@lead-text-inverse-emphasize-color:                                             color-lighten(@neutral, 100);
 @lead-text-inverse-emphasize-shadow:                                            @lead-text-inverse-shadow;
 
 // Lead Text Inverse Emphasize Links
@@ -790,7 +790,7 @@ Lead Text Inverse Mute
 
 // Lead Text Inverse Mute Styling
 
-@lead-text-inverse-mute-color:                                                  ~`color_lightness("@{neutral}", 40)`;
+@lead-text-inverse-mute-color:                                                  color-lighten(@neutral, 40);
 @lead-text-inverse-mute-shadow:                                                 @lead-text-inverse-shadow;
 
 // Lead Text Inverse Mute Links
@@ -833,7 +833,7 @@ Heading H1 Text
 Heading H1 Text Styling
 ----------------------------------------------------------------------------- */
 
-@heading-h1-text-color:                                                         ~`color_lightness("@{neutral}", -80)`;
+@heading-h1-text-color:                                                         color-lighten(@neutral, -80);
 @heading-h1-text-font-family:                                                   @font-family-sans-serif;
 @heading-h1-text-font-size:                                                     @heading-h2-text-font-size * 1.3;
 @heading-h1-text-font-style:                                                    normal;
@@ -919,7 +919,7 @@ Heading H1 Text Emphasize
 
 // Heading H1 Text Emphasize Styling
 
-@heading-h1-text-emphasize-color:                                               ~`color_lightness("@{neutral}", -40)`;
+@heading-h1-text-emphasize-color:                                               color-lighten(@neutral, -40);
 @heading-h1-text-emphasize-font-family:                                         @heading-h1-text-font-family;
 @heading-h1-text-emphasize-font-size:                                           @heading-h1-text-font-size;
 @heading-h1-text-emphasize-font-style:                                          @heading-h1-text-font-style;
@@ -955,7 +955,7 @@ Heading H1 Text Mute
 
 // Heading H1 Text Mute Styling
 
-@heading-h1-text-mute-color:                                                    ~`color_lightness("@{neutral}", -10)`;
+@heading-h1-text-mute-color:                                                    color-lighten(@neutral, -10);
 @heading-h1-text-mute-font-family:                                              @heading-h1-text-font-family;
 @heading-h1-text-mute-font-size:                                                @heading-h1-text-font-size;
 @heading-h1-text-mute-font-style:                                               @heading-h1-text-font-style;
@@ -991,7 +991,7 @@ Heading H1 Text Inverse
 
 // Heading H1 Text Inverse Styling
 
-@heading-h1-text-inverse-color:                                                 ~`color_lightness("@{neutral}", 100)`;
+@heading-h1-text-inverse-color:                                                 color-lighten(@neutral, 100);
 @heading-h1-text-inverse-shadow:                                                @heading-h1-text-shadow;
 
 // Heading H1 Text Inverse Links
@@ -1021,7 +1021,7 @@ Heading H1 Text Inverse Emphasize
 
 // Heading H1 Text Inverse Emphasize Styling
 
-@heading-h1-text-inverse-emphasize-color:                                       ~`color_lightness("@{neutral}", 70)`;
+@heading-h1-text-inverse-emphasize-color:                                       color-lighten(@neutral, 70);
 @heading-h1-text-inverse-emphasize-shadow:                                      @heading-h1-text-inverse-shadow;
 
 // Heading H1 Text Inverse Emphasize Links
@@ -1051,7 +1051,7 @@ Heading H1 Text Inverse Mute
 
 // Heading H1 Text Inverse Mute Styling
 
-@heading-h1-text-inverse-mute-color:                                            ~`color_lightness("@{neutral}", -10)`;
+@heading-h1-text-inverse-mute-color:                                            color-lighten(@neutral, -10);
 @heading-h1-text-inverse-mute-shadow:                                           @heading-h1-text-inverse-shadow;
 
 // Heading H1 Text Inverse Mute Links
@@ -1094,7 +1094,7 @@ Heading H2 Text
 Heading H2 Text Styling
 ----------------------------------------------------------------------------- */
 
-@heading-h2-text-color:                                                         ~`color_lightness("@{neutral}", 0)`;
+@heading-h2-text-color:                                                         color-lighten(@neutral, 0);
 @heading-h2-text-font-family:                                                   @font-family-sans-serif;
 @heading-h2-text-font-size:                                                     @heading-h3-text-font-size * 1.2;
 @heading-h2-text-font-style:                                                    normal;
@@ -1180,7 +1180,7 @@ Heading H2 Text Emphasize
 
 // Heading H2 Text Emphasize Styling
 
-@heading-h2-text-emphasize-color:                                               ~`color_lightness("@{neutral}", -90)`;
+@heading-h2-text-emphasize-color:                                               color-lighten(@neutral, -90);
 @heading-h2-text-emphasize-font-family:                                         @heading-h2-text-font-family;
 @heading-h2-text-emphasize-font-size:                                           @heading-h2-text-font-size;
 @heading-h2-text-emphasize-font-style:                                          @heading-h2-text-font-style;
@@ -1216,7 +1216,7 @@ Heading H2 Text Mute
 
 // Heading H2 Text Mute Styling
 
-@heading-h2-text-mute-color:                                                    ~`color_lightness("@{neutral}", 10)`;
+@heading-h2-text-mute-color:                                                    color-lighten(@neutral, 10);
 @heading-h2-text-mute-font-family:                                              @heading-h2-text-font-family;
 @heading-h2-text-mute-font-size:                                                @heading-h2-text-font-size;
 @heading-h2-text-mute-font-style:                                               @heading-h2-text-font-style;
@@ -1252,7 +1252,7 @@ Heading H2 Text Inverse
 
 // Heading H2 Text Inverse Styling
 
-@heading-h2-text-inverse-color:                                                 ~`color_lightness("@{neutral}", 100)`;
+@heading-h2-text-inverse-color:                                                 color-lighten(@neutral, 100);
 @heading-h2-text-inverse-shadow:                                                @heading-h2-text-shadow;
 
 // Heading H2 Text Inverse Links
@@ -1282,7 +1282,7 @@ Heading H2 Text Inverse Emphasize
 
 // Heading H2 Text Inverse Emphasize Styling
 
-@heading-h2-text-inverse-emphasize-color:                                       ~`color_lightness("@{neutral}", 60)`;
+@heading-h2-text-inverse-emphasize-color:                                       color-lighten(@neutral, 60);
 @heading-h2-text-inverse-emphasize-shadow:                                      @heading-h2-text-inverse-shadow;
 
 // Heading H2 Text Inverse Emphasize Links
@@ -1312,7 +1312,7 @@ Heading H2 Text Inverse Mute
 
 // Heading H2 Text Inverse Mute Styling
 
-@heading-h2-text-inverse-mute-color:                                            ~`color_lightness("@{neutral}", -20)`;
+@heading-h2-text-inverse-mute-color:                                            color-lighten(@neutral, -20);
 @heading-h2-text-inverse-mute-shadow:                                           @heading-h2-text-inverse-shadow;
 
 // Heading H2 Text Inverse Mute Links
@@ -1355,7 +1355,7 @@ Heading H3 Text
 Heading H3 Text Styling
 ----------------------------------------------------------------------------- */
 
-@heading-h3-text-color:                                                         ~`color_lightness("@{neutral}", 20)`;
+@heading-h3-text-color:                                                         color-lighten(@neutral, 20);
 @heading-h3-text-font-family:                                                   @font-family-sans-serif;
 @heading-h3-text-font-size:                                                     @heading-h4-text-font-size * 1.3;
 @heading-h3-text-font-style:                                                    normal;
@@ -1441,7 +1441,7 @@ Heading H3 Text Emphasize
 
 // Heading H3 Text Emphasize Styling
 
-@heading-h3-text-emphasize-color:                                               ~`color_lightness("@{neutral}", -80)`;
+@heading-h3-text-emphasize-color:                                               color-lighten(@neutral, -80);
 @heading-h3-text-emphasize-font-family:                                         @heading-h3-text-font-family;
 @heading-h3-text-emphasize-font-size:                                           @heading-h3-text-font-size;
 @heading-h3-text-emphasize-font-style:                                          @heading-h3-text-font-style;
@@ -1477,7 +1477,7 @@ Heading H3 Text Mute
 
 // Heading H3 Text Mute Styling
 
-@heading-h3-text-mute-color:                                                    ~`color_lightness("@{neutral}", 20)`;
+@heading-h3-text-mute-color:                                                    color-lighten(@neutral, 20);
 @heading-h3-text-mute-font-family:                                              @heading-h3-text-font-family;
 @heading-h3-text-mute-font-size:                                                @heading-h3-text-font-size;
 @heading-h3-text-mute-font-style:                                               @heading-h3-text-font-style;
@@ -1513,7 +1513,7 @@ Heading H3 Text Inverse
 
 // Heading H3 Text Inverse Styling
 
-@heading-h3-text-inverse-color:                                                 ~`color_lightness("@{neutral}", 80)`;
+@heading-h3-text-inverse-color:                                                 color-lighten(@neutral, 80);
 @heading-h3-text-inverse-shadow:                                                @heading-h3-text-shadow;
 
 // Heading H3 Text Inverse Links
@@ -1543,7 +1543,7 @@ Heading H3 Text Inverse Emphasize
 
 // Heading H3 Text Inverse Emphasize Styling
 
-@heading-h3-text-inverse-emphasize-color:                                       ~`color_lightness("@{neutral}", 50)`;
+@heading-h3-text-inverse-emphasize-color:                                       color-lighten(@neutral, 50);
 @heading-h3-text-inverse-emphasize-shadow:                                      @heading-h3-text-inverse-shadow;
 
 // Heading H3 Text Inverse Emphasize Links
@@ -1573,7 +1573,7 @@ Heading H3 Text Inverse Mute
 
 // Heading H3 Text Inverse Mute Styling
 
-@heading-h3-text-inverse-mute-color:                                            ~`color_lightness("@{neutral}", -30)`;
+@heading-h3-text-inverse-mute-color:                                            color-lighten(@neutral, -30);
 @heading-h3-text-inverse-mute-shadow:                                           @heading-h3-text-inverse-shadow;
 
 // Heading H3 Text Inverse Mute Links
@@ -1616,7 +1616,7 @@ Heading H4 Text
 Heading H4 Text Styling
 ----------------------------------------------------------------------------- */
 
-@heading-h4-text-color:                                                         ~`color_lightness("@{neutral}", 20)`;
+@heading-h4-text-color:                                                         color-lighten(@neutral, 20);
 @heading-h4-text-font-family:                                                   @font-family-sans-serif;
 @heading-h4-text-font-size:                                                     @heading-h5-text-font-size * 1.1;
 @heading-h4-text-font-style:                                                    normal;
@@ -1702,7 +1702,7 @@ Heading H4 Text Emphasize
 
 // Heading H4 Text Emphasize Styling
 
-@heading-h4-text-emphasize-color:                                               ~`color_lightness("@{neutral}", -70)`;
+@heading-h4-text-emphasize-color:                                               color-lighten(@neutral, -70);
 @heading-h4-text-emphasize-font-family:                                         @heading-h4-text-font-family;
 @heading-h4-text-emphasize-font-size:                                           @heading-h4-text-font-size;
 @heading-h4-text-emphasize-font-style:                                          @heading-h4-text-font-style;
@@ -1738,7 +1738,7 @@ Heading H4 Text Mute
 
 // Heading H4 Text Mute Styling
 
-@heading-h4-text-mute-color:                                                    ~`color_lightness("@{neutral}", 30)`;
+@heading-h4-text-mute-color:                                                    color-lighten(@neutral, 30);
 @heading-h4-text-mute-font-family:                                              @heading-h4-text-font-family;
 @heading-h4-text-mute-font-size:                                                @heading-h4-text-font-size;
 @heading-h4-text-mute-font-style:                                               @heading-h4-text-font-style;
@@ -1774,7 +1774,7 @@ Heading H4 Inverse
 
 // Heading H4 Text Inverse Styling
 
-@heading-h4-text-inverse-color:                                                 ~`color_lightness("@{neutral}", 60)`;
+@heading-h4-text-inverse-color:                                                 color-lighten(@neutral, 60);
 @heading-h4-text-inverse-shadow:                                                @heading-h4-text-shadow;
 
 // Heading H4 Text Inverse Links
@@ -1804,7 +1804,7 @@ Heading H4 Inverse Emphasize
 
 // Heading H4 Inverse Emphasize Styling
 
-@heading-h4-text-inverse-emphasize-color:                                       ~`color_lightness("@{neutral}", 40)`;
+@heading-h4-text-inverse-emphasize-color:                                       color-lighten(@neutral, 40);
 @heading-h4-text-inverse-emphasize-shadow:                                      @heading-h4-text-inverse-shadow;
 
 // Heading H4 Inverse Emphasize Links
@@ -1834,7 +1834,7 @@ Heading H4 Inverse Mute
 
 // Heading H4 Inverse Mute Styling
 
-@heading-h4-text-inverse-mute-color:                                            ~`color_lightness("@{neutral}", -40)`;
+@heading-h4-text-inverse-mute-color:                                            color-lighten(@neutral, -40);
 @heading-h4-text-inverse-mute-shadow:                                           @heading-h4-text-inverse-shadow;
 
 // Heading H4 Inverse Mute Links
@@ -1877,7 +1877,7 @@ Heading H5 Text
 Heading H5 Text Styling
 ----------------------------------------------------------------------------- */
 
-@heading-h5-text-color:                                                         ~`color_lightness("@{neutral}", 40)`;
+@heading-h5-text-color:                                                         color-lighten(@neutral, 40);
 @heading-h5-text-font-family:                                                   @font-family-sans-serif;
 @heading-h5-text-font-size:                                                     @heading-h6-text-font-size * 1.1;
 @heading-h5-text-font-style:                                                    normal;
@@ -1963,7 +1963,7 @@ Heading H5 Text Emphasize
 
 // Heading H5 Text Emphasize Styling
 
-@heading-h5-text-emphasize-color:                                               ~`color_lightness("@{neutral}", -60)`;
+@heading-h5-text-emphasize-color:                                               color-lighten(@neutral, -60);
 @heading-h5-text-emphasize-font-family:                                         @heading-h5-text-font-family;
 @heading-h5-text-emphasize-font-size:                                           @heading-h5-text-font-size;
 @heading-h5-text-emphasize-font-style:                                          @heading-h5-text-font-style;
@@ -1999,7 +1999,7 @@ Heading H5 Text Mute
 
 // Heading H5 Text Mute Styling
 
-@heading-h5-text-mute-color:                                                    ~`color_lightness("@{neutral}", 40)`;
+@heading-h5-text-mute-color:                                                    color-lighten(@neutral, 40);
 @heading-h5-text-mute-font-family:                                              @heading-h5-text-font-family;
 @heading-h5-text-mute-font-size:                                                @heading-h5-text-font-size;
 @heading-h5-text-mute-font-style:                                               @heading-h5-text-font-style;
@@ -2035,7 +2035,7 @@ Heading H5 Text Inverse
 
 // Heading H5 Text Inverse Styling
 
-@heading-h5-text-inverse-color:                                                 ~`color_lightness("@{neutral}", 40)`;
+@heading-h5-text-inverse-color:                                                 color-lighten(@neutral, 40);
 @heading-h5-text-inverse-shadow:                                                @heading-h5-text-shadow;
 
 // Heading H5 Text Inverse Links
@@ -2065,7 +2065,7 @@ Heading H5 Text Inverse Emphasize
 
 // Heading H5 Text Inverse Emphasize Styling
 
-@heading-h5-text-inverse-emphasize-color:                                       ~`color_lightness("@{neutral}", 30)`;
+@heading-h5-text-inverse-emphasize-color:                                       color-lighten(@neutral, 30);
 @heading-h5-text-inverse-emphasize-shadow:                                      @heading-h5-text-inverse-shadow;
 
 // Heading H5 Text Inverse Emphasize Links
@@ -2095,7 +2095,7 @@ Heading H5 Text Inverse Mute
 
 // Heading H5 Text Inverse Mute Styling
 
-@heading-h5-text-inverse-mute-color:                                            ~`color_lightness("@{neutral}", -50)`;
+@heading-h5-text-inverse-mute-color:                                            color-lighten(@neutral, -50);
 @heading-h5-text-inverse-mute-shadow:                                           @heading-h5-text-inverse-shadow;
 
 // Heading H5 Text Inverse Mute Links
@@ -2138,7 +2138,7 @@ Heading H6 Text
 Heading H6 Text Styling
 ----------------------------------------------------------------------------- */
 
-@heading-h6-text-color:                                                         ~`color_lightness("@{neutral}", 40)`;
+@heading-h6-text-color:                                                         color-lighten(@neutral, 40);
 @heading-h6-text-font-family:                                                   @font-family-sans-serif;
 @heading-h6-text-font-size:                                                     @body-text-font-size * 1.0;
 @heading-h6-text-font-style:                                                    normal;
@@ -2224,7 +2224,7 @@ Heading H6 Text Emphasize
 
 // Heading H6 Text Emphasize Styling
 
-@heading-h6-text-emphasize-color:                                               ~`color_lightness("@{neutral}", -50)`;
+@heading-h6-text-emphasize-color:                                               color-lighten(@neutral, -50);
 @heading-h6-text-emphasize-font-family:                                         @heading-h6-text-font-family;
 @heading-h6-text-emphasize-font-size:                                           @heading-h6-text-font-size;
 @heading-h6-text-emphasize-font-style:                                          @heading-h6-text-font-style;
@@ -2260,7 +2260,7 @@ Heading H6 Text Mute
 
 // Heading H6 Text Mute Styling
 
-@heading-h6-text-mute-color:                                                    ~`color_lightness("@{neutral}", 50)`;
+@heading-h6-text-mute-color:                                                    color-lighten(@neutral, 50);
 @heading-h6-text-mute-font-family:                                              @heading-h6-text-font-family;
 @heading-h6-text-mute-font-size:                                                @heading-h6-text-font-size;
 @heading-h6-text-mute-font-style:                                               @heading-h6-text-font-style;
@@ -2296,7 +2296,7 @@ Heading H6 Text Inverse
 
 // Heading H6 Text Inverse Styling
 
-@heading-h6-text-inverse-color:                                                 ~`color_lightness("@{neutral}", 40)`;
+@heading-h6-text-inverse-color:                                                 color-lighten(@neutral, 40);
 @heading-h6-text-inverse-shadow:                                                @heading-h6-text-shadow;
 
 // Heading H6 Text Inverse Links
@@ -2326,7 +2326,7 @@ Heading H6 Text Inverse Emphasize
 
 // Heading H6 Text Inverse Emphasize Styling
 
-@heading-h6-text-inverse-emphasize-color:                                       ~`color_lightness("@{neutral}", 20)`;
+@heading-h6-text-inverse-emphasize-color:                                       color-lighten(@neutral, 20);
 @heading-h6-text-inverse-emphasize-shadow:                                      @heading-h6-text-inverse-shadow;
 
 // Heading H6 Text Inverse Emphasize Links
@@ -2356,7 +2356,7 @@ Heading H6 Text Inverse Mute
 
 // Heading H6 Text Inverse Mute Styling
 
-@heading-h6-text-inverse-mute-color:                                            ~`color_lightness("@{neutral}", -60)`;
+@heading-h6-text-inverse-mute-color:                                            color-lighten(@neutral, -60);
 @heading-h6-text-inverse-mute-shadow:                                           @heading-h6-text-inverse-shadow;
 
 // Heading H6 Text Inverse Mute Links

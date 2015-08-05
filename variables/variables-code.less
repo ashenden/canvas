@@ -27,7 +27,7 @@ Code
 Code Styling
 ----------------------------------------------------------------------------- */
 
-@code-background-color:                                                         ~`color_lightness("@{pink}", 90)`;
+@code-background-color:                                                         color-lighten(@pink, 90);
 @code-background-gradient-color-top:                                            none;
 @code-background-gradient-color-bottom:                                         none;
 @code-border-radius:                                                            4px;
@@ -60,7 +60,7 @@ Code Padding
 Code Text Styling
 ----------------------------------------------------------------------------- */
 
-@code-text-color:                                                               ~`color_lightness("@{pink}", 0)`;
+@code-text-color:                                                               color-lighten(@pink, 0);
 @code-text-font-family:                                                         @font-family-monospace;
 @code-text-font-size:                                                           @body-text-font-size * 0.8;
 @code-text-font-style:                                                          normal;
@@ -159,7 +159,7 @@ Pretty Print Styling
 @code-block-prettyprint-padding-screen-small:                                   @base-spacing-unit-screen-small * 0.5;
 @code-block-prettyprint-padding-screen-medium:                                  @base-spacing-unit-screen-medium * 0.5;
 @code-block-prettyprint-padding-screen-large:                                   @base-spacing-unit-screen-large * 0.5;
-@code-block-prettyprint-background-color:                                       ~`color_lightness("@{neutral}", -20)`;
+@code-block-prettyprint-background-color:                                       color-lighten(@neutral, -20);
 @code-block-prettyprint-background-gradient-color-top:                          none;
 @code-block-prettyprint-background-gradient-color-bottom:                       none;
 @code-block-prettyprint-border-width:                                           0px;
@@ -180,7 +180,7 @@ Pretty Print Styling
 Pretty Print Text Styling
 ----------------------------------------------------------------------------- */
 
-@code-block-prettyprint-text-color:                                             ~`color_lightness("@{neutral}", 80)`;
+@code-block-prettyprint-text-color:                                             color-lighten(@neutral, 80);
 @code-block-prettyprint-text-font-family:                                       @font-family-monospace;
 @code-block-prettyprint-text-font-size:                                         11px;
 @code-block-prettyprint-text-font-style:                                        normal;
@@ -216,14 +216,14 @@ Pretty Print Line Number Styling
 @code-block-prettyprint-linenums-width-screen-small:                            @base-spacing-unit-screen-small * 1.0;
 @code-block-prettyprint-linenums-width-screen-medium:                           @base-spacing-unit-screen-medium * 0.75;
 @code-block-prettyprint-linenums-width-screen-large:                            @base-spacing-unit-screen-large * 0.75;
-@code-block-prettyprint-linenums-text-color:                                    ~`color_lightness("@{neutral}", 50)`;
+@code-block-prettyprint-linenums-text-color:                                    color-lighten(@neutral, 50);
 @code-block-prettyprint-linenums-text-font-family:                              @font-family-monospace;
 @code-block-prettyprint-linenums-text-font-style:                               normal;
 @code-block-prettyprint-linenums-text-font-weight:                              normal;
 @code-block-prettyprint-linenums-text-transform:                                none;
 @code-block-prettyprint-linenums-text-shadow:                                   none;
 @code-block-prettyprint-linenums-text-rendering:                                optimizelegibility;
-@code-block-prettyprint-linenums-background-color:                              ~`color_lightness("@{neutral}", 95)`;
+@code-block-prettyprint-linenums-background-color:                              color-lighten(@neutral, 95);
 @code-block-prettyprint-linenums-background-gradient-color-top:                 none;
 @code-block-prettyprint-linenums-background-gradient-color-bottom:              none;
 @code-block-prettyprint-linenums-border-width:                                  0px;
@@ -244,15 +244,15 @@ Pretty Print Line Number Styling
 Syntax Highlighting
 ----------------------------------------------------------------------------- */
 
-@code-block-prettyprint-syntax-text-color-pln:                                  ~`color_lightness("@{neutral}", 60)`;
+@code-block-prettyprint-syntax-text-color-pln:                                  color-lighten(@neutral, 60);
 @code-block-prettyprint-syntax-text-color-str:                                  @green;
-@code-block-prettyprint-syntax-text-color-kwd:                                  ~`color_lightness("@{purple}", 40)`;
-@code-block-prettyprint-syntax-text-color-com:                                  ~`color_lightness("@{neutral}", 60)`;
+@code-block-prettyprint-syntax-text-color-kwd:                                  color-lighten(@purple, 40);
+@code-block-prettyprint-syntax-text-color-com:                                  color-lighten(@neutral, 60);
 @code-block-prettyprint-syntax-text-color-typ:                                  @blue;
 @code-block-prettyprint-syntax-text-color-lit:                                  @orange;
-@code-block-prettyprint-syntax-text-color-pun:                                  ~`color_lightness("@{neutral}", 60)`;
-@code-block-prettyprint-syntax-text-color-opn:                                  ~`color_lightness("@{neutral}", 60)`;
-@code-block-prettyprint-syntax-text-color-clo:                                  ~`color_lightness("@{neutral}", 60)`;
+@code-block-prettyprint-syntax-text-color-pun:                                  color-lighten(@neutral, 60);
+@code-block-prettyprint-syntax-text-color-opn:                                  color-lighten(@neutral, 60);
+@code-block-prettyprint-syntax-text-color-clo:                                  color-lighten(@neutral, 60);
 @code-block-prettyprint-syntax-text-color-tag:                                  @orange;
 @code-block-prettyprint-syntax-text-color-atn:                                  @orchid;
 @code-block-prettyprint-syntax-text-color-atv:                                  @cyan;

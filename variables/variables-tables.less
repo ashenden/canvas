@@ -580,7 +580,7 @@ Table Cell (Selected)
 Table Cell (Selected) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-cell-selected-text-color:                                                ~`color_lightness("@{neutral}", -30)`;
+@table-cell-selected-text-color:                                                color-lighten(@neutral, -30);
 @table-cell-selected-text-font-family:                                          null;
 @table-cell-selected-text-font-style:                                           null;
 @table-cell-selected-text-font-weight:                                          null;
@@ -782,7 +782,7 @@ Table Cell (Selected, Inverse) State: Normal
 
 @table-cell-selected-inverse-enabled:                                           @table-cell-default-inverse-enabled;
 
-@table-cell-selected-inverse-text-color:                                        ~`color_lightness("@{neutral}", 60)`;
+@table-cell-selected-inverse-text-color:                                        color-lighten(@neutral, 60);
 @table-cell-selected-inverse-text-font-family:                                  null;
 @table-cell-selected-inverse-text-font-style:                                   null;
 @table-cell-selected-inverse-text-font-weight:                                  null;
@@ -995,14 +995,14 @@ Table Cell (Success)
 Table Cell (Success) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-cell-success-text-color:                                                 ~`color_lightness("@{green}", 0)`;
+@table-cell-success-text-color:                                                 color-lighten(@green, 0);
 @table-cell-success-text-font-family:                                           null;
 @table-cell-success-text-font-style:                                            null;
 @table-cell-success-text-font-weight:                                           null;
 @table-cell-success-text-transform:                                             null;
 @table-cell-success-text-shadow:                                                null;
 @table-cell-success-text-rendering:                                             null;
-@table-cell-success-background-color:                                           ~`color_lightness("@{green}", 90)`;
+@table-cell-success-background-color:                                           color-lighten(@green, 90);
 @table-cell-success-background-gradient-color-top:                              null;
 @table-cell-success-background-gradient-color-bottom:                           null;
 @table-cell-success-border-width:                                               null;
@@ -1035,7 +1035,7 @@ Table Cell (Success) State: Hover
 @table-cell-success-hover-text-transform:                                       null;
 @table-cell-success-hover-text-shadow:                                          null;
 @table-cell-success-hover-text-rendering:                                       null;
-@table-cell-success-hover-background-color:                                     ~`color_lightness("@{green}", 90)`;
+@table-cell-success-hover-background-color:                                     color-lighten(@green, 90);
 @table-cell-success-hover-background-gradient-color-top:                        null;
 @table-cell-success-hover-background-gradient-color-bottom:                     null;
 @table-cell-success-hover-border-width:                                         null;
@@ -1068,7 +1068,7 @@ Table Cell (Success, Highlight) State: Normal
 @table-cell-success-highlight-text-transform:                                   null;
 @table-cell-success-highlight-text-shadow:                                      null;
 @table-cell-success-highlight-text-rendering:                                   null;
-@table-cell-success-highlight-background-color:                                 ~`color_lightness("@{green}", 85)`;
+@table-cell-success-highlight-background-color:                                 color-lighten(@green, 85);
 @table-cell-success-highlight-background-gradient-color-top:                    null;
 @table-cell-success-highlight-background-gradient-color-bottom:                 null;
 @table-cell-success-highlight-border-width:                                     null;
@@ -1101,7 +1101,7 @@ Table Cell (Success, Highlight) State: Hover
 @table-cell-success-highlight-hover-text-transform:                             null;
 @table-cell-success-highlight-hover-text-shadow:                                null;
 @table-cell-success-highlight-hover-text-rendering:                             null;
-@table-cell-success-highlight-hover-background-color:                           ~`color_lightness("@{green}", 85)`;
+@table-cell-success-highlight-hover-background-color:                           color-lighten(@green, 85);
 @table-cell-success-highlight-hover-background-gradient-color-top:              null;
 @table-cell-success-highlight-hover-background-gradient-color-bottom:           null;
 @table-cell-success-highlight-hover-border-width:                               null;
@@ -1197,14 +1197,14 @@ Table Cell (Success, Inverse) State: Normal
 
 @table-cell-success-inverse-enabled:                                            @table-cell-default-inverse-enabled;
 
-@table-cell-success-inverse-text-color:                                         ~`color_lightness("@{white}", 0)`;
+@table-cell-success-inverse-text-color:                                         color-lighten(@white, 0);
 @table-cell-success-inverse-text-font-family:                                   null;
 @table-cell-success-inverse-text-font-style:                                    null;
 @table-cell-success-inverse-text-font-weight:                                   null;
 @table-cell-success-inverse-text-transform:                                     null;
 @table-cell-success-inverse-text-shadow:                                        null;
 @table-cell-success-inverse-text-rendering:                                     null;
-@table-cell-success-inverse-background-color:                                   ~`color_lightness("@{green}", 0)`;
+@table-cell-success-inverse-background-color:                                   color-lighten(@green, 0);
 @table-cell-success-inverse-background-gradient-color-top:                      null;
 @table-cell-success-inverse-background-gradient-color-bottom:                   null;
 @table-cell-success-inverse-border-width:                                       null;
@@ -1237,7 +1237,7 @@ Table Cell (Success, Inverse) State: Hover
 @table-cell-success-inverse-hover-text-transform:                               null;
 @table-cell-success-inverse-hover-text-shadow:                                  null;
 @table-cell-success-inverse-hover-text-rendering:                               null;
-@table-cell-success-inverse-hover-background-color:                             ~`color_lightness("@{green}", 10)`;
+@table-cell-success-inverse-hover-background-color:                             color-lighten(@green, 10);
 @table-cell-success-inverse-hover-background-gradient-color-top:                null;
 @table-cell-success-inverse-hover-background-gradient-color-bottom:             null;
 @table-cell-success-inverse-hover-border-width:                                 null;
@@ -1270,7 +1270,7 @@ Table Cell (Success, Inverse, Highlight) State: Normal
 @table-cell-success-inverse-highlight-text-transform:                           null;
 @table-cell-success-inverse-highlight-text-shadow:                              null;
 @table-cell-success-inverse-highlight-text-rendering:                           null;
-@table-cell-success-inverse-highlight-background-color:                         ~`color_lightness("@{green}", -15)`;
+@table-cell-success-inverse-highlight-background-color:                         color-lighten(@green, -15);
 @table-cell-success-inverse-highlight-background-gradient-color-top:            null;
 @table-cell-success-inverse-highlight-background-gradient-color-bottom:         null;
 @table-cell-success-inverse-highlight-border-width:                             null;
@@ -1303,7 +1303,7 @@ Table Cell (Success, Inverse, Highlight) State: Hover
 @table-cell-success-inverse-highlight-hover-text-transform:                     null;
 @table-cell-success-inverse-highlight-hover-text-shadow:                        null;
 @table-cell-success-inverse-highlight-hover-text-rendering:                     null;
-@table-cell-success-inverse-highlight-hover-background-color:                   ~`color_lightness("@{green}", -5)`;
+@table-cell-success-inverse-highlight-hover-background-color:                   color-lighten(@green, -5);
 @table-cell-success-inverse-highlight-hover-background-gradient-color-top:      null;
 @table-cell-success-inverse-highlight-hover-background-gradient-color-bottom:   null;
 @table-cell-success-inverse-highlight-hover-border-width:                       null;
@@ -1410,14 +1410,14 @@ Table Cell (Warning)
 Table Cell (Warning) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-cell-warning-text-color:                                                 ~`color_lightness("@{orange}", 0)`;
+@table-cell-warning-text-color:                                                 color-lighten(@orange, 0);
 @table-cell-warning-text-font-family:                                           null;
 @table-cell-warning-text-font-style:                                            null;
 @table-cell-warning-text-font-weight:                                           null;
 @table-cell-warning-text-transform:                                             null;
 @table-cell-warning-text-shadow:                                                null;
 @table-cell-warning-text-rendering:                                             null;
-@table-cell-warning-background-color:                                           ~`color_lightness("@{orange}", 90)`;
+@table-cell-warning-background-color:                                           color-lighten(@orange, 90);
 @table-cell-warning-background-gradient-color-top:                              null;
 @table-cell-warning-background-gradient-color-bottom:                           null;
 @table-cell-warning-border-width:                                               null;
@@ -1450,7 +1450,7 @@ Table Cell (Warning) State: Hover
 @table-cell-warning-hover-text-transform:                                       null;
 @table-cell-warning-hover-text-shadow:                                          null;
 @table-cell-warning-hover-text-rendering:                                       null;
-@table-cell-warning-hover-background-color:                                     ~`color_lightness("@{orange}", 90)`;
+@table-cell-warning-hover-background-color:                                     color-lighten(@orange, 90);
 @table-cell-warning-hover-background-gradient-color-top:                        null;
 @table-cell-warning-hover-background-gradient-color-bottom:                     null;
 @table-cell-warning-hover-border-width:                                         null;
@@ -1483,7 +1483,7 @@ Table Cell (Warning, Highlight) State: Normal
 @table-cell-warning-highlight-text-transform:                                   null;
 @table-cell-warning-highlight-text-shadow:                                      null;
 @table-cell-warning-highlight-text-rendering:                                   null;
-@table-cell-warning-highlight-background-color:                                 ~`color_lightness("@{orange}", 85)`;
+@table-cell-warning-highlight-background-color:                                 color-lighten(@orange, 85);
 @table-cell-warning-highlight-background-gradient-color-top:                    null;
 @table-cell-warning-highlight-background-gradient-color-bottom:                 null;
 @table-cell-warning-highlight-border-width:                                     null;
@@ -1516,7 +1516,7 @@ Table Cell (Warning, Highlight) State: Hover
 @table-cell-warning-highlight-hover-text-transform:                             null;
 @table-cell-warning-highlight-hover-text-shadow:                                null;
 @table-cell-warning-highlight-hover-text-rendering:                             null;
-@table-cell-warning-highlight-hover-background-color:                           ~`color_lightness("@{orange}", 85)`;
+@table-cell-warning-highlight-hover-background-color:                           color-lighten(@orange, 85);
 @table-cell-warning-highlight-hover-background-gradient-color-top:              null;
 @table-cell-warning-highlight-hover-background-gradient-color-bottom:           null;
 @table-cell-warning-highlight-hover-border-width:                               null;
@@ -1612,14 +1612,14 @@ Table Cell (Warning, Inverse) State: Normal
 
 @table-cell-warning-inverse-enabled:                                            @table-cell-default-inverse-enabled;
 
-@table-cell-warning-inverse-text-color:                                         ~`color_lightness("@{white}", 0)`;
+@table-cell-warning-inverse-text-color:                                         color-lighten(@white, 0);
 @table-cell-warning-inverse-text-font-family:                                   null;
 @table-cell-warning-inverse-text-font-style:                                    null;
 @table-cell-warning-inverse-text-font-weight:                                   null;
 @table-cell-warning-inverse-text-transform:                                     null;
 @table-cell-warning-inverse-text-shadow:                                        null;
 @table-cell-warning-inverse-text-rendering:                                     null;
-@table-cell-warning-inverse-background-color:                                   ~`color_lightness("@{orange}", 0)`;
+@table-cell-warning-inverse-background-color:                                   color-lighten(@orange, 0);
 @table-cell-warning-inverse-background-gradient-color-top:                      null;
 @table-cell-warning-inverse-background-gradient-color-bottom:                   null;
 @table-cell-warning-inverse-border-width:                                       null;
@@ -1652,7 +1652,7 @@ Table Cell (Warning, Inverse) State: Hover
 @table-cell-warning-inverse-hover-text-transform:                               null;
 @table-cell-warning-inverse-hover-text-shadow:                                  null;
 @table-cell-warning-inverse-hover-text-rendering:                               null;
-@table-cell-warning-inverse-hover-background-color:                             ~`color_lightness("@{orange}", 10)`;
+@table-cell-warning-inverse-hover-background-color:                             color-lighten(@orange, 10);
 @table-cell-warning-inverse-hover-background-gradient-color-top:                null;
 @table-cell-warning-inverse-hover-background-gradient-color-bottom:             null;
 @table-cell-warning-inverse-hover-border-width:                                 null;
@@ -1685,7 +1685,7 @@ Table Cell (Warning, Inverse, Highlight) State: Normal
 @table-cell-warning-inverse-highlight-text-transform:                           null;
 @table-cell-warning-inverse-highlight-text-shadow:                              null;
 @table-cell-warning-inverse-highlight-text-rendering:                           null;
-@table-cell-warning-inverse-highlight-background-color:                         ~`color_lightness("@{orange}", -15)`;
+@table-cell-warning-inverse-highlight-background-color:                         color-lighten(@orange, -15);
 @table-cell-warning-inverse-highlight-background-gradient-color-top:            null;
 @table-cell-warning-inverse-highlight-background-gradient-color-bottom:         null;
 @table-cell-warning-inverse-highlight-border-width:                             null;
@@ -1718,7 +1718,7 @@ Table Cell (Warning, Inverse, Highlight) State: Hover
 @table-cell-warning-inverse-highlight-hover-text-transform:                     null;
 @table-cell-warning-inverse-highlight-hover-text-shadow:                        null;
 @table-cell-warning-inverse-highlight-hover-text-rendering:                     null;
-@table-cell-warning-inverse-highlight-hover-background-color:                   ~`color_lightness("@{orange}", -5)`;
+@table-cell-warning-inverse-highlight-hover-background-color:                   color-lighten(@orange, -5);
 @table-cell-warning-inverse-highlight-hover-background-gradient-color-top:      null;
 @table-cell-warning-inverse-highlight-hover-background-gradient-color-bottom:   null;
 @table-cell-warning-inverse-highlight-hover-border-width:                       null;
@@ -1825,14 +1825,14 @@ Table Cell (Danger)
 Table Cell (Danger) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-cell-danger-text-color:                                                  ~`color_lightness("@{red}", 0)`;
+@table-cell-danger-text-color:                                                  color-lighten(@red, 0);
 @table-cell-danger-text-font-family:                                            null;
 @table-cell-danger-text-font-style:                                             null;
 @table-cell-danger-text-font-weight:                                            null;
 @table-cell-danger-text-transform:                                              null;
 @table-cell-danger-text-shadow:                                                 null;
 @table-cell-danger-text-rendering:                                              null;
-@table-cell-danger-background-color:                                            ~`color_lightness("@{red}", 90)`;
+@table-cell-danger-background-color:                                            color-lighten(@red, 90);
 @table-cell-danger-background-gradient-color-top:                               null;
 @table-cell-danger-background-gradient-color-bottom:                            null;
 @table-cell-danger-border-width:                                                null;
@@ -1865,7 +1865,7 @@ Table Cell (Danger) State: Hover
 @table-cell-danger-hover-text-transform:                                        null;
 @table-cell-danger-hover-text-shadow:                                           null;
 @table-cell-danger-hover-text-rendering:                                        null;
-@table-cell-danger-hover-background-color:                                      ~`color_lightness("@{red}", 90)`;
+@table-cell-danger-hover-background-color:                                      color-lighten(@red, 90);
 @table-cell-danger-hover-background-gradient-color-top:                         null;
 @table-cell-danger-hover-background-gradient-color-bottom:                      null;
 @table-cell-danger-hover-border-width:                                          null;
@@ -1898,7 +1898,7 @@ Table Cell (Danger, Highlight) State: Normal
 @table-cell-danger-highlight-text-transform:                                    null;
 @table-cell-danger-highlight-text-shadow:                                       null;
 @table-cell-danger-highlight-text-rendering:                                    null;
-@table-cell-danger-highlight-background-color:                                  ~`color_lightness("@{red}", 85)`;
+@table-cell-danger-highlight-background-color:                                  color-lighten(@red, 85);
 @table-cell-danger-highlight-background-gradient-color-top:                     null;
 @table-cell-danger-highlight-background-gradient-color-bottom:                  null;
 @table-cell-danger-highlight-border-width:                                      null;
@@ -1931,7 +1931,7 @@ Table Cell (Danger, Highlight) State: Hover
 @table-cell-danger-highlight-hover-text-transform:                              null;
 @table-cell-danger-highlight-hover-text-shadow:                                 null;
 @table-cell-danger-highlight-hover-text-rendering:                              null;
-@table-cell-danger-highlight-hover-background-color:                            ~`color_lightness("@{red}", 85)`;
+@table-cell-danger-highlight-hover-background-color:                            color-lighten(@red, 85);
 @table-cell-danger-highlight-hover-background-gradient-color-top:               null;
 @table-cell-danger-highlight-hover-background-gradient-color-bottom:            null;
 @table-cell-danger-highlight-hover-border-width:                                null;
@@ -2027,14 +2027,14 @@ Table Cell (Danger, Inverse) State: Normal
 
 @table-cell-danger-inverse-enabled:                                             @table-cell-default-inverse-enabled;
 
-@table-cell-danger-inverse-text-color:                                          ~`color_lightness("@{white}", 0)`;
+@table-cell-danger-inverse-text-color:                                          color-lighten(@white, 0);
 @table-cell-danger-inverse-text-font-family:                                    null;
 @table-cell-danger-inverse-text-font-style:                                     null;
 @table-cell-danger-inverse-text-font-weight:                                    null;
 @table-cell-danger-inverse-text-transform:                                      null;
 @table-cell-danger-inverse-text-shadow:                                         null;
 @table-cell-danger-inverse-text-rendering:                                      null;
-@table-cell-danger-inverse-background-color:                                    ~`color_lightness("@{red}", 0)`;
+@table-cell-danger-inverse-background-color:                                    color-lighten(@red, 0);
 @table-cell-danger-inverse-background-gradient-color-top:                       null;
 @table-cell-danger-inverse-background-gradient-color-bottom:                    null;
 @table-cell-danger-inverse-border-width:                                        null;
@@ -2067,7 +2067,7 @@ Table Cell (Danger, Inverse) State: Hover
 @table-cell-danger-inverse-hover-text-transform:                                null;
 @table-cell-danger-inverse-hover-text-shadow:                                   null;
 @table-cell-danger-inverse-hover-text-rendering:                                null;
-@table-cell-danger-inverse-hover-background-color:                              ~`color_lightness("@{red}", 10)`;
+@table-cell-danger-inverse-hover-background-color:                              color-lighten(@red, 10);
 @table-cell-danger-inverse-hover-background-gradient-color-top:                 null;
 @table-cell-danger-inverse-hover-background-gradient-color-bottom:              null;
 @table-cell-danger-inverse-hover-border-width:                                  null;
@@ -2100,7 +2100,7 @@ Table Cell (Danger, Inverse, Highlight) State: Normal
 @table-cell-danger-inverse-highlight-text-transform:                            null;
 @table-cell-danger-inverse-highlight-text-shadow:                               null;
 @table-cell-danger-inverse-highlight-text-rendering:                            null;
-@table-cell-danger-inverse-highlight-background-color:                          ~`color_lightness("@{red}", -15)`;
+@table-cell-danger-inverse-highlight-background-color:                          color-lighten(@red, -15);
 @table-cell-danger-inverse-highlight-background-gradient-color-top:             null;
 @table-cell-danger-inverse-highlight-background-gradient-color-bottom:          null;
 @table-cell-danger-inverse-highlight-border-width:                              null;
@@ -2133,7 +2133,7 @@ Table Cell (Danger, Inverse, Highlight) State: Hover
 @table-cell-danger-inverse-highlight-hover-text-transform:                      null;
 @table-cell-danger-inverse-highlight-hover-text-shadow:                         null;
 @table-cell-danger-inverse-highlight-hover-text-rendering:                      null;
-@table-cell-danger-inverse-highlight-hover-background-color:                    ~`color_lightness("@{red}", 5)`;
+@table-cell-danger-inverse-highlight-hover-background-color:                    color-lighten(@red, 5);
 @table-cell-danger-inverse-highlight-hover-background-gradient-color-top:       null;
 @table-cell-danger-inverse-highlight-hover-background-gradient-color-bottom:    null;
 @table-cell-danger-inverse-highlight-hover-border-width:                        null;
@@ -2300,7 +2300,7 @@ Table Header Cell (Default)
 Table Header Cell (Default) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-default-text-color:                                          ~`color_lightness("@{neutral}", -30)`;
+@table-header-cell-default-text-color:                                          color-lighten(@neutral, -30);
 @table-header-cell-default-text-font-family:                                    null;
 @table-header-cell-default-text-font-style:                                     null;
 @table-header-cell-default-text-font-weight:                                    500;
@@ -2713,7 +2713,7 @@ Table Header Cell (Selected)
 Table Header Cell (Selected) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-selected-text-color:                                         ~`color_lightness("@{neutral}", -30)`;
+@table-header-cell-selected-text-color:                                         color-lighten(@neutral, -30);
 @table-header-cell-selected-text-font-family:                                   null;
 @table-header-cell-selected-text-font-style:                                    null;
 @table-header-cell-selected-text-font-weight:                                   null;
@@ -2913,7 +2913,7 @@ Table Header Cell (Selected, Disabled) State: Hover
 Table Header Cell (Selected, Inverse) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-selected-inverse-text-color:                                 ~`color_lightness("@{neutral}", 80)`;
+@table-header-cell-selected-inverse-text-color:                                 color-lighten(@neutral, 80);
 @table-header-cell-selected-inverse-text-font-family:                           null;
 @table-header-cell-selected-inverse-text-font-style:                            null;
 @table-header-cell-selected-inverse-text-font-weight:                           null;
@@ -3126,14 +3126,14 @@ Table Header Cell (Success)
 Table Header Cell (Success) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-success-text-color:                                          ~`color_lightness("@{green}", 0)`;
+@table-header-cell-success-text-color:                                          color-lighten(@green, 0);
 @table-header-cell-success-text-font-family:                                    null;
 @table-header-cell-success-text-font-style:                                     null;
 @table-header-cell-success-text-font-weight:                                    null;
 @table-header-cell-success-text-transform:                                      null;
 @table-header-cell-success-text-shadow:                                         null;
 @table-header-cell-success-text-rendering:                                      null;
-@table-header-cell-success-background-color:                                    ~`color_lightness("@{green}", 85)`;
+@table-header-cell-success-background-color:                                    color-lighten(@green, 85);
 @table-header-cell-success-background-gradient-color-top:                       null;
 @table-header-cell-success-background-gradient-color-bottom:                    null;
 @table-header-cell-success-border-width:                                        null;
@@ -3326,14 +3326,14 @@ Table Header Cell (Success, Disabled) State: Hover
 Table Header Cell (Sucess, Inverse) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-success-inverse-text-color:                                  ~`color_lightness("@{white}", 0)`;
+@table-header-cell-success-inverse-text-color:                                  color-lighten(@white, 0);
 @table-header-cell-success-inverse-text-font-family:                            null;
 @table-header-cell-success-inverse-text-font-style:                             null;
 @table-header-cell-success-inverse-text-font-weight:                            null;
 @table-header-cell-success-inverse-text-transform:                              null;
 @table-header-cell-success-inverse-text-shadow:                                 null;
 @table-header-cell-success-inverse-text-rendering:                              null;
-@table-header-cell-success-inverse-background-color:                            ~`color_lightness("@{green}", 0)`;
+@table-header-cell-success-inverse-background-color:                            color-lighten(@green, 0);
 @table-header-cell-success-inverse-background-gradient-color-top:               null;
 @table-header-cell-success-inverse-background-gradient-color-bottom:            null;
 @table-header-cell-success-inverse-border-width:                                null;
@@ -3539,14 +3539,14 @@ Table Header Cell (Warning)
 Table Header Cell (Warning) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-warning-text-color:                                          ~`color_lightness("@{orange}", 0)`;
+@table-header-cell-warning-text-color:                                          color-lighten(@orange, 0);
 @table-header-cell-warning-text-font-family:                                    null;
 @table-header-cell-warning-text-font-style:                                     null;
 @table-header-cell-warning-text-font-weight:                                    null;
 @table-header-cell-warning-text-transform:                                      null;
 @table-header-cell-warning-text-shadow:                                         null;
 @table-header-cell-warning-text-rendering:                                      null;
-@table-header-cell-warning-background-color:                                    ~`color_lightness("@{orange}", 85)`;
+@table-header-cell-warning-background-color:                                    color-lighten(@orange, 85);
 @table-header-cell-warning-background-gradient-color-top:                       null;
 @table-header-cell-warning-background-gradient-color-bottom:                    null;
 @table-header-cell-warning-border-width:                                        null;
@@ -3739,14 +3739,14 @@ Table Header Cell (Warning, Disabled) State: Hover
 Table Header Cell (Warning, Inverse) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-warning-inverse-text-color:                                  ~`color_lightness("@{orange}", 0)`;
+@table-header-cell-warning-inverse-text-color:                                  color-lighten(@orange, 0);
 @table-header-cell-warning-inverse-text-font-family:                            null;
 @table-header-cell-warning-inverse-text-font-style:                             null;
 @table-header-cell-warning-inverse-text-font-weight:                            null;
 @table-header-cell-warning-inverse-text-transform:                              null;
 @table-header-cell-warning-inverse-text-shadow:                                 null;
 @table-header-cell-warning-inverse-text-rendering:                              null;
-@table-header-cell-warning-inverse-background-color:                            ~`color_lightness("@{orange}", 85)`;
+@table-header-cell-warning-inverse-background-color:                            color-lighten(@orange, 85);
 @table-header-cell-warning-inverse-background-gradient-color-top:               null;
 @table-header-cell-warning-inverse-background-gradient-color-bottom:            null;
 @table-header-cell-warning-inverse-border-width:                                null;
@@ -3952,14 +3952,14 @@ Table Header Cell (Danger)
 Table Header Cell (Danger) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-danger-text-color:                                           ~`color_lightness("@{red}", 0)`;
+@table-header-cell-danger-text-color:                                           color-lighten(@red, 0);
 @table-header-cell-danger-text-font-family:                                     null;
 @table-header-cell-danger-text-font-style:                                      null;
 @table-header-cell-danger-text-font-weight:                                     null;
 @table-header-cell-danger-text-transform:                                       null;
 @table-header-cell-danger-text-shadow:                                          null;
 @table-header-cell-danger-text-rendering:                                       null;
-@table-header-cell-danger-background-color:                                     ~`color_lightness("@{red}", 85)`;
+@table-header-cell-danger-background-color:                                     color-lighten(@red, 85);
 @table-header-cell-danger-background-gradient-color-top:                        null;
 @table-header-cell-danger-background-gradient-color-bottom:                     null;
 @table-header-cell-danger-border-width:                                         null;
@@ -4152,14 +4152,14 @@ Table Header Cell (Danger, Disabled) State: Hover
 Table Header Cell (Danger, Inverse) State: Normal
 ----------------------------------------------------------------------------- */
 
-@table-header-cell-danger-inverse-text-color:                                   ~`color_lightness("@{red}", 0)`;
+@table-header-cell-danger-inverse-text-color:                                   color-lighten(@red, 0);
 @table-header-cell-danger-inverse-text-font-family:                             null;
 @table-header-cell-danger-inverse-text-font-style:                              null;
 @table-header-cell-danger-inverse-text-font-weight:                             null;
 @table-header-cell-danger-inverse-text-transform:                               null;
 @table-header-cell-danger-inverse-text-shadow:                                  null;
 @table-header-cell-danger-inverse-text-rendering:                               null;
-@table-header-cell-danger-inverse-background-color:                             ~`color_lightness("@{red}", 85)`;
+@table-header-cell-danger-inverse-background-color:                             color-lighten(@red, 85);
 @table-header-cell-danger-inverse-background-gradient-color-top:                null;
 @table-header-cell-danger-inverse-background-gradient-color-bottom:             null;
 @table-header-cell-danger-inverse-border-width:                                 null;
