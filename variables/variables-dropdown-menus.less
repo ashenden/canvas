@@ -92,7 +92,7 @@ Dropdown Menu (Inverse) Styling
 ----------------------------------------------------------------------------- */
 
 @dropdown-menu-inverse-enabled:                                                 @dropdown-menu-enabled;
-@dropdown-menu-inverse-background-color:                                        ~`color_lightness("@{neutral}", 5)`;
+@dropdown-menu-inverse-background-color:                                        color-lighten(@neutral, 5);
 @dropdown-menu-inverse-background-gradient-color-top:                           none;
 @dropdown-menu-inverse-background-gradient-color-bottom:                        none;
 @dropdown-menu-inverse-border-width:                                            @dropdown-menu-default-border-width;
@@ -187,7 +187,7 @@ Dropdown Menu Header Responsive Scaling
 Dropdown Menu Header (Default) Styles
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-header-default-text-color:                                       ~`color_lightness("@{neutral}", 60)`;
+@dropdown-menu-header-default-text-color:                                       color-lighten(@neutral, 60);
 @dropdown-menu-header-default-text-font-family:                                 @font-family-sans-serif;
 @dropdown-menu-header-default-text-font-style:                                  normal;
 @dropdown-menu-header-default-text-font-weight:                                 400;
@@ -218,7 +218,7 @@ Dropdown Menu Header (Inverse) Styles
 ----------------------------------------------------------------------------- */
 
 @dropdown-menu-header-inverse-enabled:                                          @dropdown-menu-inverse-enabled;
-@dropdown-menu-header-inverse-text-color:                                       ~`color_lightness("@{neutral}", 40)`;
+@dropdown-menu-header-inverse-text-color:                                       color-lighten(@neutral, 40);
 @dropdown-menu-header-inverse-text-font-family:                                 @font-family-sans-serif;
 @dropdown-menu-header-inverse-text-font-style:                                  normal;
 @dropdown-menu-header-inverse-text-font-weight:                                 400;
@@ -540,7 +540,7 @@ Dropdown Menu List Item (Default)
 Dropdown Menu List Item (Default) State: Normal
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-default-text-color:                                    ~`color_lightness("@{neutral}", 40)`;
+@dropdown-menu-list-item-default-text-color:                                    color-lighten(@neutral, 40);
 @dropdown-menu-list-item-default-text-font-family:                              @font-family-sans-serif;
 @dropdown-menu-list-item-default-text-font-style:                               normal;
 @dropdown-menu-list-item-default-text-font-weight:                              400;
@@ -570,7 +570,7 @@ Dropdown Menu List Item (Default) State: Normal
 Dropdown Menu List Item (Default) State: Hover
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-default-hover-text-color:                              ~`color_lightness("@{neutral}", 30)`;
+@dropdown-menu-list-item-default-hover-text-color:                              color-lighten(@neutral, 30);
 @dropdown-menu-list-item-default-hover-text-font-family:                        @font-family-sans-serif;
 @dropdown-menu-list-item-default-hover-text-font-style:                         normal;
 @dropdown-menu-list-item-default-hover-text-font-weight:                        400;
@@ -578,7 +578,7 @@ Dropdown Menu List Item (Default) State: Hover
 @dropdown-menu-list-item-default-hover-text-shadow:                             none;
 @dropdown-menu-list-item-default-hover-text-decoration:                         none;
 @dropdown-menu-list-item-default-hover-text-rendering:                          optimizelegibility;
-@dropdown-menu-list-item-default-hover-background-color:                        ~`color_lightness("@{neutral}", 95)`;
+@dropdown-menu-list-item-default-hover-background-color:                        color-lighten(@neutral, 95);
 @dropdown-menu-list-item-default-hover-background-gradient-color-top:           none;
 @dropdown-menu-list-item-default-hover-background-gradient-color-bottom:        none;
 @dropdown-menu-list-item-default-hover-border-width:                            0px;
@@ -600,7 +600,7 @@ Dropdown Menu List Item (Default) State: Hover
 Dropdown Menu List Item (Default) State: Active
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-default-active-text-color:                             ~`color_lightness("@{neutral}", 20)`;
+@dropdown-menu-list-item-default-active-text-color:                             color-lighten(@neutral, 20);
 @dropdown-menu-list-item-default-active-text-font-family:                       @font-family-sans-serif;
 @dropdown-menu-list-item-default-active-text-font-style:                        normal;
 @dropdown-menu-list-item-default-active-text-font-weight:                       400;
@@ -608,7 +608,7 @@ Dropdown Menu List Item (Default) State: Active
 @dropdown-menu-list-item-default-active-text-shadow:                            none;
 @dropdown-menu-list-item-default-active-text-decoration:                        none;
 @dropdown-menu-list-item-default-active-text-rendering:                         optimizelegibility;
-@dropdown-menu-list-item-default-active-background-color:                       ~`color_lightness("@{neutral}", 90)`;
+@dropdown-menu-list-item-default-active-background-color:                       color-lighten(@neutral, 90);
 @dropdown-menu-list-item-default-active-background-gradient-color-top:          none;
 @dropdown-menu-list-item-default-active-background-gradient-color-bottom:       none;
 @dropdown-menu-list-item-default-active-border-width:                           0px;
@@ -703,7 +703,7 @@ Dropdown Menu List Item (Default, Inverse)
 Dropdown Menu List Item (Default, Inverse) State: Normal
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-default-inverse-text-color:                            ~`color_lightness("@{white}", 0)`;
+@dropdown-menu-list-item-default-inverse-text-color:                            color-lighten(@white, 0);
 @dropdown-menu-list-item-default-inverse-text-font-family:                      @font-family-sans-serif;
 @dropdown-menu-list-item-default-inverse-text-font-style:                       normal;
 @dropdown-menu-list-item-default-inverse-text-font-weight:                      400;
@@ -733,7 +733,7 @@ Dropdown Menu List Item (Default, Inverse) State: Normal
 Dropdown Menu List Item (Default, Inverse) State: Hover
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-default-inverse-hover-text-color:                      ~`color_lightness("@{white}", 0)`;
+@dropdown-menu-list-item-default-inverse-hover-text-color:                      color-lighten(@white, 0);
 @dropdown-menu-list-item-default-inverse-hover-text-font-family:                @font-family-sans-serif;
 @dropdown-menu-list-item-default-inverse-hover-text-font-style:                 normal;
 @dropdown-menu-list-item-default-inverse-hover-text-font-weight:                400;
@@ -741,7 +741,7 @@ Dropdown Menu List Item (Default, Inverse) State: Hover
 @dropdown-menu-list-item-default-inverse-hover-text-shadow:                     none;
 @dropdown-menu-list-item-default-inverse-hover-text-decoration:                 none;
 @dropdown-menu-list-item-default-inverse-hover-text-rendering:                  optimizelegibility;
-@dropdown-menu-list-item-default-inverse-hover-background-color:                ~`color_lightness("@{neutral}", 10)`;
+@dropdown-menu-list-item-default-inverse-hover-background-color:                color-lighten(@neutral, 10);
 @dropdown-menu-list-item-default-inverse-hover-background-gradient-color-top:   none;
 @dropdown-menu-list-item-default-inverse-hover-background-gradient-color-bottom:none;
 @dropdown-menu-list-item-default-inverse-hover-border-width:                    0px;
@@ -763,7 +763,7 @@ Dropdown Menu List Item (Default, Inverse) State: Hover
 Dropdown Menu List Item (Default, Inverse) State: Active
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-default-inverse-active-text-color:                     ~`color_lightness("@{white}", 0)`;
+@dropdown-menu-list-item-default-inverse-active-text-color:                     color-lighten(@white, 0);
 @dropdown-menu-list-item-default-inverse-active-text-font-family:               @font-family-sans-serif;
 @dropdown-menu-list-item-default-inverse-active-text-font-style:                normal;
 @dropdown-menu-list-item-default-inverse-active-text-font-weight:               400;
@@ -771,7 +771,7 @@ Dropdown Menu List Item (Default, Inverse) State: Active
 @dropdown-menu-list-item-default-inverse-active-text-shadow:                    none;
 @dropdown-menu-list-item-default-inverse-active-text-decoration:                none;
 @dropdown-menu-list-item-default-inverse-active-text-rendering:                 optimizelegibility;
-@dropdown-menu-list-item-default-inverse-active-background-color:               ~`color_lightness("@{neutral}", 20)`;
+@dropdown-menu-list-item-default-inverse-active-background-color:               color-lighten(@neutral, 20);
 @dropdown-menu-list-item-default-inverse-active-background-gradient-color-top:  none;
 @dropdown-menu-list-item-default-inverse-active-background-gradient-color-bottom: none;
 @dropdown-menu-list-item-default-inverse-active-border-width:                   0px;
@@ -871,7 +871,7 @@ Dropdown Menu List Item (Danger)
 Dropdown Menu List Item (Danger) State:  Normal
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-danger-text-color:                                     ~`color_lightness("@{red}", 0)`;
+@dropdown-menu-list-item-danger-text-color:                                     color-lighten(@red, 0);
 @dropdown-menu-list-item-danger-text-font-family:                               @font-family-sans-serif;
 @dropdown-menu-list-item-danger-text-font-style:                                normal;
 @dropdown-menu-list-item-danger-text-font-weight:                               400;
@@ -901,7 +901,7 @@ Dropdown Menu List Item (Danger) State:  Normal
 Dropdown Menu List Item (Danger) State:  Hover
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-danger-hover-text-color:                               ~`color_lightness("@{red}", -20)`;
+@dropdown-menu-list-item-danger-hover-text-color:                               color-lighten(@red, -20);
 @dropdown-menu-list-item-danger-hover-text-font-family:                         @font-family-sans-serif;
 @dropdown-menu-list-item-danger-hover-text-font-style:                          normal;
 @dropdown-menu-list-item-danger-hover-text-font-weight:                         400;
@@ -909,7 +909,7 @@ Dropdown Menu List Item (Danger) State:  Hover
 @dropdown-menu-list-item-danger-hover-text-shadow:                              none;
 @dropdown-menu-list-item-danger-hover-text-decoration:                          none;
 @dropdown-menu-list-item-danger-hover-text-rendering:                           optimizelegibility;
-@dropdown-menu-list-item-danger-hover-background-color:                         ~`color_lightness("@{red}", 90)`;
+@dropdown-menu-list-item-danger-hover-background-color:                         color-lighten(@red, 90);
 @dropdown-menu-list-item-danger-hover-background-gradient-color-top:            none;
 @dropdown-menu-list-item-danger-hover-background-gradient-color-bottom:         none;
 @dropdown-menu-list-item-danger-hover-border-width:                             0px;
@@ -931,7 +931,7 @@ Dropdown Menu List Item (Danger) State:  Hover
 Dropdown Menu List Item (Danger) State:  Active
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-danger-active-text-color:                              ~`color_lightness("@{red}", -40)`;
+@dropdown-menu-list-item-danger-active-text-color:                              color-lighten(@red, -40);
 @dropdown-menu-list-item-danger-active-text-font-family:                        @font-family-sans-serif;
 @dropdown-menu-list-item-danger-active-text-font-style:                         normal;
 @dropdown-menu-list-item-danger-active-text-font-weight:                        400;
@@ -939,7 +939,7 @@ Dropdown Menu List Item (Danger) State:  Active
 @dropdown-menu-list-item-danger-active-text-shadow:                             none;
 @dropdown-menu-list-item-danger-active-text-decoration:                         none;
 @dropdown-menu-list-item-danger-active-text-rendering:                          optimizelegibility;
-@dropdown-menu-list-item-danger-active-background-color:                        ~`color_lightness("@{red}", 80)`;
+@dropdown-menu-list-item-danger-active-background-color:                        color-lighten(@red, 80);
 @dropdown-menu-list-item-danger-active-background-gradient-color-top:           none;
 @dropdown-menu-list-item-danger-active-background-gradient-color-bottom:        none;
 @dropdown-menu-list-item-danger-active-border-width:                            0px;
@@ -1035,7 +1035,7 @@ Dropdown Menu List Item (Danger, Inverse)
 Dropdown Menu List Item (Danger, Inverse) State:  Normal
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-danger-inverse-text-color:                             ~`color_lightness("@{red}", 0)`;
+@dropdown-menu-list-item-danger-inverse-text-color:                             color-lighten(@red, 0);
 @dropdown-menu-list-item-danger-inverse-text-font-family:                       @font-family-sans-serif;
 @dropdown-menu-list-item-danger-inverse-text-font-style:                        normal;
 @dropdown-menu-list-item-danger-inverse-text-font-weight:                       400;
@@ -1065,7 +1065,7 @@ Dropdown Menu List Item (Danger, Inverse) State:  Normal
 Dropdown Menu List Item (Danger, Inverse) State:  Hover
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-danger-inverse-hover-text-color:                       ~`color_lightness("@{red}", 0)`;
+@dropdown-menu-list-item-danger-inverse-hover-text-color:                       color-lighten(@red, 0);
 @dropdown-menu-list-item-danger-inverse-hover-text-font-family:                 @font-family-sans-serif;
 @dropdown-menu-list-item-danger-inverse-hover-text-font-style:                  normal;
 @dropdown-menu-list-item-danger-inverse-hover-text-font-weight:                 400;
@@ -1073,7 +1073,7 @@ Dropdown Menu List Item (Danger, Inverse) State:  Hover
 @dropdown-menu-list-item-danger-inverse-hover-text-shadow:                      none;
 @dropdown-menu-list-item-danger-inverse-hover-text-decoration:                  none;
 @dropdown-menu-list-item-danger-inverse-hover-text-rendering:                   optimizelegibility;
-@dropdown-menu-list-item-danger-inverse-hover-background-color:                 ~`color_lightness("@{neutral}", 10)`;
+@dropdown-menu-list-item-danger-inverse-hover-background-color:                 color-lighten(@neutral, 10);
 @dropdown-menu-list-item-danger-inverse-hover-background-gradient-color-top:    none;
 @dropdown-menu-list-item-danger-inverse-hover-background-gradient-color-bottom: none;
 @dropdown-menu-list-item-danger-inverse-hover-border-width:                     0px;
@@ -1095,7 +1095,7 @@ Dropdown Menu List Item (Danger, Inverse) State:  Hover
 Dropdown Menu List Item (Danger, Inverse) State:  Active
 ----------------------------------------------------------------------------- */
 
-@dropdown-menu-list-item-danger-inverse-active-text-color:                      ~`color_lightness("@{red}", 0)`;
+@dropdown-menu-list-item-danger-inverse-active-text-color:                      color-lighten(@red, 0);
 @dropdown-menu-list-item-danger-inverse-active-text-font-family:                @font-family-sans-serif;
 @dropdown-menu-list-item-danger-inverse-active-text-font-style:                 normal;
 @dropdown-menu-list-item-danger-inverse-active-text-font-weight:                400;
@@ -1103,7 +1103,7 @@ Dropdown Menu List Item (Danger, Inverse) State:  Active
 @dropdown-menu-list-item-danger-inverse-active-text-shadow:                     none;
 @dropdown-menu-list-item-danger-inverse-active-text-decoration:                 none;
 @dropdown-menu-list-item-danger-inverse-active-text-rendering:                  optimizelegibility;
-@dropdown-menu-list-item-danger-inverse-active-background-color:                ~`color_lightness("@{neutral}", 20)`;
+@dropdown-menu-list-item-danger-inverse-active-background-color:                color-lighten(@neutral, 20);
 @dropdown-menu-list-item-danger-inverse-active-background-gradient-color-top:   none;
 @dropdown-menu-list-item-danger-inverse-active-background-gradient-color-bottom:  none;
 @dropdown-menu-list-item-danger-inverse-active-border-width:                    0px;

@@ -180,8 +180,8 @@ Canvas
 Canvas Pod
 ----------------------------------------------------------------------------- */
 
-@canvas-pod-light-background-color:                                             ~`color_lightness("@{neutral}", 95)`;
-@canvas-pod-dark-background-color:                                              ~`color_lightness("@{neutral}", -30)`;
+@canvas-pod-light-background-color:                                             color-lighten(@neutral, 95);
+@canvas-pod-dark-background-color:                                              color-lighten(@neutral, -30);
 
 
 
@@ -217,5 +217,5 @@ Container Pod
 Borders
 ----------------------------------------------------------------------------- */
 
-@border-color:                                                                  ~`color_lightness("@{neutral}", 90)`;
-@border-color-inverse:                                                          ~`color_lightness("@{neutral}", 20)`;
+@border-color:                                                                  color-lighten(@neutral, 90);
+@border-color-inverse:                                                          color-lighten(@neutral, 20);

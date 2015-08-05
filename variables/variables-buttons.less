@@ -444,7 +444,7 @@ Button (Default)
 Button (Default) State: Normal
 ----------------------------------------------------------------------------- */
 
-@button-default-text-color:                                                     ~`color_lightness("@{neutral}", 0)`;
+@button-default-text-color:                                                     color-lighten(@neutral, 0);
 @button-default-text-font-family:                                               @font-family-sans-serif;
 @button-default-text-font-style:                                                null;
 @button-default-text-font-weight:                                               400;
@@ -452,7 +452,7 @@ Button (Default) State: Normal
 @button-default-text-shadow:                                                    null;
 @button-default-text-decoration:                                                none;
 @button-default-text-rendering:                                                 optimizelegibility;
-@button-default-background-color:                                               ~`color_lightness("@{neutral}", 85)`;
+@button-default-background-color:                                               color-lighten(@neutral, 85);
 @button-default-background-gradient-color-top:                                  null;
 @button-default-background-gradient-color-bottom:                               null;
 @button-default-border-width:                                                   0px;
@@ -479,7 +479,7 @@ Button (Default) State: Normal
 Button (Default) State: Hover
 ----------------------------------------------------------------------------- */
 
-@button-default-hover-text-color:                                               ~`color_lightness("@{neutral}", -20)`;
+@button-default-hover-text-color:                                               color-lighten(@neutral, -20);
 @button-default-hover-text-font-family:                                         null;
 @button-default-hover-text-font-style:                                          null;
 @button-default-hover-text-font-weight:                                         null;
@@ -487,7 +487,7 @@ Button (Default) State: Hover
 @button-default-hover-text-shadow:                                              null;
 @button-default-hover-text-decoration:                                          none;
 @button-default-hover-text-rendering:                                           null;
-@button-default-hover-background-color:                                         ~`color_lightness("@{neutral}", 80)`;
+@button-default-hover-background-color:                                         color-lighten(@neutral, 80);
 @button-default-hover-background-gradient-color-top:                            null;
 @button-default-hover-background-gradient-color-bottom:                         null;
 @button-default-hover-border-width:                                             null;
@@ -514,7 +514,7 @@ Button (Default) State: Hover
 Button (Default) State: Active
 ----------------------------------------------------------------------------- */
 
-@button-default-active-text-color:                                              ~`color_lightness("@{neutral}", 20)`;
+@button-default-active-text-color:                                              color-lighten(@neutral, 20);
 @button-default-active-text-font-family:                                        null;
 @button-default-active-text-font-style:                                         null;
 @button-default-active-text-font-weight:                                        null;
@@ -522,7 +522,7 @@ Button (Default) State: Active
 @button-default-active-text-shadow:                                             null;
 @button-default-active-text-decoration:                                         null;
 @button-default-active-text-rendering:                                          null;
-@button-default-active-background-color:                                        ~`color_lightness("@{neutral}", 65)`;
+@button-default-active-background-color:                                        color-lighten(@neutral, 65);
 @button-default-active-background-gradient-color-top:                           null;
 @button-default-active-background-gradient-color-bottom:                        null;
 @button-default-active-border-width:                                            null;
@@ -557,7 +557,7 @@ Button (Default) State: Selected
 @button-default-selected-text-shadow:                                           @button-default-active-text-shadow;
 @button-default-selected-text-decoration:                                       @button-default-active-text-decoration;
 @button-default-selected-text-rendering:                                        @button-default-active-text-rendering;
-@button-default-selected-background-color:                                      ~`color_lightness("@{neutral}", 70)`;
+@button-default-selected-background-color:                                      color-lighten(@neutral, 70);
 @button-default-selected-background-gradient-color-top:                         @button-default-active-background-gradient-color-top;
 @button-default-selected-background-gradient-color-bottom:                      @button-default-active-background-gradient-color-bottom;
 @button-default-selected-border-width:                                          @button-default-active-border-width;
@@ -1023,7 +1023,7 @@ Button (Default, Inverse)
 Button (Default, Inverse) State: Normal
 ----------------------------------------------------------------------------- */
 
-@button-default-inverse-text-color:                                             ~`color_lightness("@{white}", 0)`;
+@button-default-inverse-text-color:                                             color-lighten(@white, 0);
 @button-default-inverse-text-font-family:                                       null;
 @button-default-inverse-text-font-style:                                        null;
 @button-default-inverse-text-font-weight:                                       null;
@@ -1031,7 +1031,7 @@ Button (Default, Inverse) State: Normal
 @button-default-inverse-text-shadow:                                            null;
 @button-default-inverse-text-decoration:                                        null;
 @button-default-inverse-text-rendering:                                         null;
-@button-default-inverse-background-color:                                       ~`color_lightness("@{neutral}", 5)`;
+@button-default-inverse-background-color:                                       color-lighten(@neutral, 5);
 @button-default-inverse-background-gradient-color-top:                          null;
 @button-default-inverse-background-gradient-color-bottom:                       null;
 @button-default-inverse-border-width:                                           null;
@@ -1058,7 +1058,7 @@ Button (Default, Inverse) State: Normal
 Button (Default, Inverse) State: Hover
 ----------------------------------------------------------------------------- */
 
-@button-default-inverse-hover-text-color:                                       ~`color_lightness("@{white}", 0)`;
+@button-default-inverse-hover-text-color:                                       color-lighten(@white, 0);
 @button-default-inverse-hover-text-font-family:                                 null;
 @button-default-inverse-hover-text-font-style:                                  null;
 @button-default-inverse-hover-text-font-weight:                                 null;
@@ -1066,7 +1066,7 @@ Button (Default, Inverse) State: Hover
 @button-default-inverse-hover-text-shadow:                                      null;
 @button-default-inverse-hover-text-decoration:                                  null;
 @button-default-inverse-hover-text-rendering:                                   null;
-@button-default-inverse-hover-background-color:                                 ~`color_lightness("@{neutral}", 10)`;
+@button-default-inverse-hover-background-color:                                 color-lighten(@neutral, 10);
 @button-default-inverse-hover-background-gradient-color-top:                    null;
 @button-default-inverse-hover-background-gradient-color-bottom:                 null;
 @button-default-inverse-hover-border-width:                                     null;
@@ -1093,7 +1093,7 @@ Button (Default, Inverse) State: Hover
 Button (Default, Inverse) State: Active
 ----------------------------------------------------------------------------- */
 
-@button-default-inverse-active-text-color:                                      ~`color_lightness("@{white}", 0)`;
+@button-default-inverse-active-text-color:                                      color-lighten(@white, 0);
 @button-default-inverse-active-text-font-family:                                null;
 @button-default-inverse-active-text-font-style:                                 null;
 @button-default-inverse-active-text-font-weight:                                null;
@@ -1101,7 +1101,7 @@ Button (Default, Inverse) State: Active
 @button-default-inverse-active-text-shadow:                                     null;
 @button-default-inverse-active-text-decoration:                                 null;
 @button-default-inverse-active-text-rendering:                                  null;
-@button-default-inverse-active-background-color:                                ~`color_lightness("@{neutral}", 15)`;
+@button-default-inverse-active-background-color:                                color-lighten(@neutral, 15);
 @button-default-inverse-active-background-gradient-color-top:                   null;
 @button-default-inverse-active-background-gradient-color-bottom:                null;
 @button-default-inverse-active-border-width:                                    null;
@@ -1140,7 +1140,7 @@ Button (Default, Inverse) State: Selected
 @button-default-inverse-selected-background-gradient-color-top:                 null;
 @button-default-inverse-selected-background-gradient-color-bottom:              null;
 @button-default-inverse-selected-border-width:                                  null;
-@button-default-inverse-selected-border-color:                                  ~`color_lightness("@{white}", 0)`;
+@button-default-inverse-selected-border-color:                                  color-lighten(@white, 0);
 @button-default-inverse-selected-border-style:                                  null;
 @button-default-inverse-selected-border-top-width:                              null;
 @button-default-inverse-selected-border-top-color:                              null;
@@ -1602,7 +1602,7 @@ Button (Primary)
 Button (Primary) State: Normal
 ----------------------------------------------------------------------------- */
 
-@button-primary-text-color:                                                     ~`color_lightness("@{white}", 0)`;
+@button-primary-text-color:                                                     color-lighten(@white, 0);
 @button-primary-text-font-family:                                               null;
 @button-primary-text-font-style:                                                null;
 @button-primary-text-font-weight:                                               null;
@@ -1610,7 +1610,7 @@ Button (Primary) State: Normal
 @button-primary-text-shadow:                                                    null;
 @button-primary-text-decoration:                                                null;
 @button-primary-text-rendering:                                                 null;
-@button-primary-background-color:                                               ~`color_lightness("@{purple}", 0)`;
+@button-primary-background-color:                                               color-lighten(@purple, 0);
 @button-primary-background-gradient-color-top:                                  null;
 @button-primary-background-gradient-color-bottom:                               null;
 @button-primary-border-width:                                                   null;
@@ -1645,7 +1645,7 @@ Button (Primary) State: Hover
 @button-primary-hover-text-shadow:                                              null;
 @button-primary-hover-text-decoration:                                          null;
 @button-primary-hover-text-rendering:                                           null;
-@button-primary-hover-background-color:                                         ~`color_lightness("@{purple}", -10)`;
+@button-primary-hover-background-color:                                         color-lighten(@purple, -10);
 @button-primary-hover-background-gradient-color-top:                            null;
 @button-primary-hover-background-gradient-color-bottom:                         null;
 @button-primary-hover-border-width:                                             null;
@@ -1672,7 +1672,7 @@ Button (Primary) State: Hover
 Button (Primary) State: Active
 ----------------------------------------------------------------------------- */
 
-@button-primary-active-text-color:                                              ~`color_lightness("@{purple}", 80)`;
+@button-primary-active-text-color:                                              color-lighten(@purple, 80);
 @button-primary-active-text-font-family:                                        null;
 @button-primary-active-text-font-style:                                         null;
 @button-primary-active-text-font-weight:                                        null;
@@ -1680,7 +1680,7 @@ Button (Primary) State: Active
 @button-primary-active-text-shadow:                                             null;
 @button-primary-active-text-decoration:                                         null;
 @button-primary-active-text-rendering:                                          null;
-@button-primary-active-background-color:                                        ~`color_lightness("@{purple}", -30)`;
+@button-primary-active-background-color:                                        color-lighten(@purple, -30);
 @button-primary-active-background-gradient-color-top:                           null;
 @button-primary-active-background-gradient-color-bottom:                        null;
 @button-primary-active-border-width:                                            null;
@@ -1715,7 +1715,7 @@ Button (Primary) State: Selected
 @button-primary-selected-text-shadow:                                           @button-primary-active-text-shadow;
 @button-primary-selected-text-decoration:                                       @button-primary-active-text-decoration;
 @button-primary-selected-text-rendering:                                        @button-primary-active-text-rendering;
-@button-primary-selected-background-color:                                      ~`color_lightness("@{purple}", -20)`;
+@button-primary-selected-background-color:                                      color-lighten(@purple, -20);
 @button-primary-selected-background-gradient-color-top:                         @button-primary-active-background-gradient-color-top;
 @button-primary-selected-background-gradient-color-bottom:                      @button-primary-active-background-gradient-color-bottom;
 @button-primary-selected-border-width:                                          @button-primary-active-border-width;
@@ -2224,7 +2224,7 @@ Button (Primary, Inverse) State: Hover
 @button-primary-inverse-hover-text-shadow:                                      null;
 @button-primary-inverse-hover-text-decoration:                                  null;
 @button-primary-inverse-hover-text-rendering:                                   null;
-@button-primary-inverse-hover-background-color:                                 ~`color_lightness("@{purple}", 90)`;
+@button-primary-inverse-hover-background-color:                                 color-lighten(@purple, 90);
 @button-primary-inverse-hover-background-gradient-color-top:                    null;
 @button-primary-inverse-hover-background-gradient-color-bottom:                 null;
 @button-primary-inverse-hover-border-width:                                     null;
@@ -2259,7 +2259,7 @@ Button (Primary, Inverse) State: Active
 @button-primary-inverse-active-text-shadow:                                     null;
 @button-primary-inverse-active-text-decoration:                                 null;
 @button-primary-inverse-active-text-rendering:                                  null;
-@button-primary-inverse-active-background-color:                                ~`color_lightness("@{purple}", 80)`;
+@button-primary-inverse-active-background-color:                                color-lighten(@purple, 80);
 @button-primary-inverse-active-background-gradient-color-top:                   null;
 @button-primary-inverse-active-background-gradient-color-bottom:                null;
 @button-primary-inverse-active-border-width:                                    null;
@@ -2294,11 +2294,11 @@ Button (Primary, Inverse) State: Selected
 @button-primary-inverse-selected-text-shadow:                                   null;
 @button-primary-inverse-selected-text-decoration:                               null;
 @button-primary-inverse-selected-text-rendering:                                null;
-@button-primary-inverse-selected-background-color:                              ~`color_lightness("@{purple}", 0)`;
+@button-primary-inverse-selected-background-color:                              color-lighten(@purple, 0);
 @button-primary-inverse-selected-background-gradient-color-top:                 null;
 @button-primary-inverse-selected-background-gradient-color-bottom:              null;
 @button-primary-inverse-selected-border-width:                                  null;
-@button-primary-inverse-selected-border-color:                                  ~`color_lightness("@{purple}", 0)`;
+@button-primary-inverse-selected-border-color:                                  color-lighten(@purple, 0);
 @button-primary-inverse-selected-border-style:                                  null;
 @button-primary-inverse-selected-border-top-width:                              null;
 @button-primary-inverse-selected-border-top-color:                              null;
@@ -2579,7 +2579,7 @@ Button (Primary, Inverse, Stroke) State: Normal
 @button-primary-inverse-stroke-background-gradient-color-top:                   none;
 @button-primary-inverse-stroke-background-gradient-color-bottom:                none;
 @button-primary-inverse-stroke-border-width:                                    null;
-@button-primary-inverse-stroke-border-color:                                    ~`color_lightness("@{purple}", 0)`;
+@button-primary-inverse-stroke-border-color:                                    color-lighten(@purple, 0);
 @button-primary-inverse-stroke-border-style:                                    null;
 @button-primary-inverse-stroke-border-top-width:                                null;
 @button-primary-inverse-stroke-border-top-color:                                null;
@@ -2614,7 +2614,7 @@ Button (Primary, Inverse, Stroke) State: Hover
 @button-primary-inverse-stroke-hover-background-gradient-color-top:             null;
 @button-primary-inverse-stroke-hover-background-gradient-color-bottom:          null;
 @button-primary-inverse-stroke-hover-border-width:                              null;
-@button-primary-inverse-stroke-hover-border-color:                              ~`color_lightness("@{purple}", 0)`;
+@button-primary-inverse-stroke-hover-border-color:                              color-lighten(@purple, 0);
 @button-primary-inverse-stroke-hover-border-style:                              null;
 @button-primary-inverse-stroke-hover-border-top-width:                          null;
 @button-primary-inverse-stroke-hover-border-top-color:                          null;
@@ -2649,7 +2649,7 @@ Button (Primary, Inverse, Stroke) State: Active
 @button-primary-inverse-stroke-active-background-gradient-color-top:            null;
 @button-primary-inverse-stroke-active-background-gradient-color-bottom:         null;
 @button-primary-inverse-stroke-active-border-width:                             null;
-@button-primary-inverse-stroke-active-border-color:                             ~`color_lightness("@{purple}", 0)`;
+@button-primary-inverse-stroke-active-border-color:                             color-lighten(@purple, 0);
 @button-primary-inverse-stroke-active-border-style:                             null;
 @button-primary-inverse-stroke-active-border-top-width:                         null;
 @button-primary-inverse-stroke-active-border-top-color:                         null;
@@ -2761,7 +2761,7 @@ Button (Success)
 Button (Success) State: Normal
 ----------------------------------------------------------------------------- */
 
-@button-success-text-color:                                                     ~`color_lightness("@{white}", 0)`;
+@button-success-text-color:                                                     color-lighten(@white, 0);
 @button-success-text-font-family:                                               null;
 @button-success-text-font-style:                                                null;
 @button-success-text-font-weight:                                               null;
@@ -2769,7 +2769,7 @@ Button (Success) State: Normal
 @button-success-text-shadow:                                                    null;
 @button-success-text-decoration:                                                null;
 @button-success-text-rendering:                                                 null;
-@button-success-background-color:                                               ~`color_lightness("@{green}", 0)`;
+@button-success-background-color:                                               color-lighten(@green, 0);
 @button-success-background-gradient-color-top:                                  null;
 @button-success-background-gradient-color-bottom:                               null;
 @button-success-border-width:                                                   null;
@@ -2804,7 +2804,7 @@ Button (Success) State: Hover
 @button-success-hover-text-shadow:                                              null;
 @button-success-hover-text-decoration:                                          null;
 @button-success-hover-text-rendering:                                           null;
-@button-success-hover-background-color:                                         ~`color_lightness("@{green}", -10)`;
+@button-success-hover-background-color:                                         color-lighten(@green, -10);
 @button-success-hover-background-gradient-color-top:                            null;
 @button-success-hover-background-gradient-color-bottom:                         null;
 @button-success-hover-border-width:                                             null;
@@ -2831,7 +2831,7 @@ Button (Success) State: Hover
 Button (Success) State: Active
 ----------------------------------------------------------------------------- */
 
-@button-success-active-text-color:                                              ~`color_lightness("@{green}", 80)`;
+@button-success-active-text-color:                                              color-lighten(@green, 80);
 @button-success-active-text-font-family:                                        null;
 @button-success-active-text-font-style:                                         null;
 @button-success-active-text-font-weight:                                        null;
@@ -2839,7 +2839,7 @@ Button (Success) State: Active
 @button-success-active-text-shadow:                                             null;
 @button-success-active-text-decoration:                                         null;
 @button-success-active-text-rendering:                                          null;
-@button-success-active-background-color:                                        ~`color_lightness("@{green}", -30)`;
+@button-success-active-background-color:                                        color-lighten(@green, -30);
 @button-success-active-background-gradient-color-top:                           null;
 @button-success-active-background-gradient-color-bottom:                        null;
 @button-success-active-border-width:                                            null;
@@ -2874,7 +2874,7 @@ Button (Success) State: Selected
 @button-success-selected-text-shadow:                                           @button-success-active-text-shadow;
 @button-success-selected-text-decoration:                                       @button-success-active-text-decoration;
 @button-success-selected-text-rendering:                                        @button-success-active-text-rendering;
-@button-success-selected-background-color:                                      ~`color_lightness("@{green}", -20)`;
+@button-success-selected-background-color:                                      color-lighten(@green, -20);
 @button-success-selected-background-gradient-color-top:                         @button-success-active-background-gradient-color-top;
 @button-success-selected-background-gradient-color-bottom:                      @button-success-active-background-gradient-color-bottom;
 @button-success-selected-border-width:                                          @button-success-active-border-width;
@@ -3383,7 +3383,7 @@ Button (Success, Inverse) State: Hover
 @button-success-inverse-hover-text-shadow:                                      null;
 @button-success-inverse-hover-text-decoration:                                  null;
 @button-success-inverse-hover-text-rendering:                                   null;
-@button-success-inverse-hover-background-color:                                 ~`color_lightness("@{green}", 90)`;
+@button-success-inverse-hover-background-color:                                 color-lighten(@green, 90);
 @button-success-inverse-hover-background-gradient-color-top:                    null;
 @button-success-inverse-hover-background-gradient-color-bottom:                 null;
 @button-success-inverse-hover-border-width:                                     null;
@@ -3418,7 +3418,7 @@ Button (Success, Inverse) State: Active
 @button-success-inverse-active-text-shadow:                                     null;
 @button-success-inverse-active-text-decoration:                                 null;
 @button-success-inverse-active-text-rendering:                                  null;
-@button-success-inverse-active-background-color:                                ~`color_lightness("@{green}", 80)`;
+@button-success-inverse-active-background-color:                                color-lighten(@green, 80);
 @button-success-inverse-active-background-gradient-color-top:                   null;
 @button-success-inverse-active-background-gradient-color-bottom:                null;
 @button-success-inverse-active-border-width:                                    null;
@@ -3453,11 +3453,11 @@ Button (Success, Inverse) State: Selected
 @button-success-inverse-selected-text-shadow:                                   null;
 @button-success-inverse-selected-text-decoration:                               null;
 @button-success-inverse-selected-text-rendering:                                null;
-@button-success-inverse-selected-background-color:                              ~`color_lightness("@{green}", 0)`;
+@button-success-inverse-selected-background-color:                              color-lighten(@green, 0);
 @button-success-inverse-selected-background-gradient-color-top:                 null;
 @button-success-inverse-selected-background-gradient-color-bottom:              null;
 @button-success-inverse-selected-border-width:                                  null;
-@button-success-inverse-selected-border-color:                                  ~`color_lightness("@{green}", 0)`;
+@button-success-inverse-selected-border-color:                                  color-lighten(@green, 0);
 @button-success-inverse-selected-border-style:                                  null;
 @button-success-inverse-selected-border-top-width:                              null;
 @button-success-inverse-selected-border-top-color:                              null;
@@ -3738,7 +3738,7 @@ Button (Success, Inverse, Stroke) State: Normal
 @button-success-inverse-stroke-background-gradient-color-top:                   none;
 @button-success-inverse-stroke-background-gradient-color-bottom:                none;
 @button-success-inverse-stroke-border-width:                                    null;
-@button-success-inverse-stroke-border-color:                                    ~`color_lightness("@{green}", 0)`;
+@button-success-inverse-stroke-border-color:                                    color-lighten(@green, 0);
 @button-success-inverse-stroke-border-style:                                    null;
 @button-success-inverse-stroke-border-top-width:                                null;
 @button-success-inverse-stroke-border-top-color:                                null;
@@ -3919,7 +3919,7 @@ Button (Warning)
 Button (Warning) State: Normal
 ----------------------------------------------------------------------------- */
 
-@button-warning-text-color:                                                     ~`color_lightness("@{white}", 0)`;
+@button-warning-text-color:                                                     color-lighten(@white, 0);
 @button-warning-text-font-family:                                               null;
 @button-warning-text-font-style:                                                null;
 @button-warning-text-font-weight:                                               null;
@@ -3927,7 +3927,7 @@ Button (Warning) State: Normal
 @button-warning-text-shadow:                                                    null;
 @button-warning-text-decoration:                                                null;
 @button-warning-text-rendering:                                                 null;
-@button-warning-background-color:                                               ~`color_lightness("@{orange}", 0)`;
+@button-warning-background-color:                                               color-lighten(@orange, 0);
 @button-warning-background-gradient-color-top:                                  null;
 @button-warning-background-gradient-color-bottom:                               null;
 @button-warning-border-width:                                                   null;
@@ -3962,7 +3962,7 @@ Button (Warning) State: Hover
 @button-warning-hover-text-shadow:                                              null;
 @button-warning-hover-text-decoration:                                          null;
 @button-warning-hover-text-rendering:                                           null;
-@button-warning-hover-background-color:                                         ~`color_lightness("@{orange}", -10)`;
+@button-warning-hover-background-color:                                         color-lighten(@orange, -10);
 @button-warning-hover-background-gradient-color-top:                            null;
 @button-warning-hover-background-gradient-color-bottom:                         null;
 @button-warning-hover-border-width:                                             null;
@@ -3989,7 +3989,7 @@ Button (Warning) State: Hover
 Button (Warning) State: Active
 ----------------------------------------------------------------------------- */
 
-@button-warning-active-text-color:                                              ~`color_lightness("@{orange}", 80)`;
+@button-warning-active-text-color:                                              color-lighten(@orange, 80);
 @button-warning-active-text-font-family:                                        null;
 @button-warning-active-text-font-style:                                         null;
 @button-warning-active-text-font-weight:                                        null;
@@ -3997,7 +3997,7 @@ Button (Warning) State: Active
 @button-warning-active-text-shadow:                                             null;
 @button-warning-active-text-decoration:                                         null;
 @button-warning-active-text-rendering:                                          null;
-@button-warning-active-background-color:                                        ~`color_lightness("@{orange}", -30)`;
+@button-warning-active-background-color:                                        color-lighten(@orange, -30);
 @button-warning-active-background-gradient-color-top:                           null;
 @button-warning-active-background-gradient-color-bottom:                        null;
 @button-warning-active-border-width:                                            null;
@@ -4032,7 +4032,7 @@ Button (Warning) State: Selected
 @button-warning-selected-text-shadow:                                           @button-warning-active-text-shadow;
 @button-warning-selected-text-decoration:                                       @button-warning-active-text-decoration;
 @button-warning-selected-text-rendering:                                        @button-warning-active-text-rendering;
-@button-warning-selected-background-color:                                      ~`color_lightness("@{orange}", -20)`;
+@button-warning-selected-background-color:                                      color-lighten(@orange, -20);
 @button-warning-selected-background-gradient-color-top:                         @button-warning-active-background-gradient-color-top;
 @button-warning-selected-background-gradient-color-bottom:                      @button-warning-active-background-gradient-color-bottom;
 @button-warning-selected-border-width:                                          @button-warning-active-border-width;
@@ -4541,7 +4541,7 @@ Button (Warning, Inverse) State: Hover
 @button-warning-inverse-hover-text-shadow:                                      null;
 @button-warning-inverse-hover-text-decoration:                                  null;
 @button-warning-inverse-hover-text-rendering:                                   null;
-@button-warning-inverse-hover-background-color:                                 ~`color_lightness("@{orange}", 90)`;
+@button-warning-inverse-hover-background-color:                                 color-lighten(@orange, 90);
 @button-warning-inverse-hover-background-gradient-color-top:                    null;
 @button-warning-inverse-hover-background-gradient-color-bottom:                 null;
 @button-warning-inverse-hover-border-width:                                     null;
@@ -4576,7 +4576,7 @@ Button (Warning, Inverse) State: Active
 @button-warning-inverse-active-text-shadow:                                     null;
 @button-warning-inverse-active-text-decoration:                                 null;
 @button-warning-inverse-active-text-rendering:                                  null;
-@button-warning-inverse-active-background-color:                                ~`color_lightness("@{orange}", 80)`;
+@button-warning-inverse-active-background-color:                                color-lighten(@orange, 80);
 @button-warning-inverse-active-background-gradient-color-top:                   null;
 @button-warning-inverse-active-background-gradient-color-bottom:                null;
 @button-warning-inverse-active-border-width:                                    null;
@@ -4611,11 +4611,11 @@ Button (Warning, Inverse) State: Selected
 @button-warning-inverse-selected-text-shadow:                                   null;
 @button-warning-inverse-selected-text-decoration:                               null;
 @button-warning-inverse-selected-text-rendering:                                null;
-@button-warning-inverse-selected-background-color:                              ~`color_lightness("@{orange}", 0)`;
+@button-warning-inverse-selected-background-color:                              color-lighten(@orange, 0);
 @button-warning-inverse-selected-background-gradient-color-top:                 null;
 @button-warning-inverse-selected-background-gradient-color-bottom:              null;
 @button-warning-inverse-selected-border-width:                                  null;
-@button-warning-inverse-selected-border-color:                                  ~`color_lightness("@{orange}", 0)`;
+@button-warning-inverse-selected-border-color:                                  color-lighten(@orange, 0);
 @button-warning-inverse-selected-border-style:                                  null;
 @button-warning-inverse-selected-border-top-width:                              null;
 @button-warning-inverse-selected-border-top-color:                              null;
@@ -4896,7 +4896,7 @@ Button (Warning, Inverse, Stroke) State: Normal
 @button-warning-inverse-stroke-background-gradient-color-top:                   none;
 @button-warning-inverse-stroke-background-gradient-color-bottom:                none;
 @button-warning-inverse-stroke-border-width:                                    null;
-@button-warning-inverse-stroke-border-color:                                    ~`color_lightness("@{orange}", 0)`;
+@button-warning-inverse-stroke-border-color:                                    color-lighten(@orange, 0);
 @button-warning-inverse-stroke-border-style:                                    null;
 @button-warning-inverse-stroke-border-top-width:                                null;
 @button-warning-inverse-stroke-border-top-color:                                null;
@@ -5077,7 +5077,7 @@ Button (Danger)
 Button (Danger) State: Normal
 ----------------------------------------------------------------------------- */
 
-@button-danger-text-color:                                                      ~`color_lightness("@{white}", 0)`;
+@button-danger-text-color:                                                      color-lighten(@white, 0);
 @button-danger-text-font-family:                                                null;
 @button-danger-text-font-style:                                                 null;
 @button-danger-text-font-weight:                                                null;
@@ -5085,7 +5085,7 @@ Button (Danger) State: Normal
 @button-danger-text-shadow:                                                     null;
 @button-danger-text-decoration:                                                 null;
 @button-danger-text-rendering:                                                  null;
-@button-danger-background-color:                                                ~`color_lightness("@{red}", 0)`;
+@button-danger-background-color:                                                color-lighten(@red, 0);
 @button-danger-background-gradient-color-top:                                   null;
 @button-danger-background-gradient-color-bottom:                                null;
 @button-danger-border-width:                                                    null;
@@ -5120,7 +5120,7 @@ Button (Danger) State: Hover
 @button-danger-hover-text-shadow:                                               null;
 @button-danger-hover-text-decoration:                                           null;
 @button-danger-hover-text-rendering:                                            null;
-@button-danger-hover-background-color:                                          ~`color_lightness("@{red}", -10)`;
+@button-danger-hover-background-color:                                          color-lighten(@red, -10);
 @button-danger-hover-background-gradient-color-top:                             null;
 @button-danger-hover-background-gradient-color-bottom:                          null;
 @button-danger-hover-border-width:                                              null;
@@ -5147,7 +5147,7 @@ Button (Danger) State: Hover
 Button (Danger) State: Active
 ----------------------------------------------------------------------------- */
 
-@button-danger-active-text-color:                                               ~`color_lightness("@{red}", 80)`;
+@button-danger-active-text-color:                                               color-lighten(@red, 80);
 @button-danger-active-text-font-family:                                         null;
 @button-danger-active-text-font-style:                                          null;
 @button-danger-active-text-font-weight:                                         null;
@@ -5155,7 +5155,7 @@ Button (Danger) State: Active
 @button-danger-active-text-shadow:                                              null;
 @button-danger-active-text-decoration:                                          null;
 @button-danger-active-text-rendering:                                           null;
-@button-danger-active-background-color:                                         ~`color_lightness("@{red}", -30)`;
+@button-danger-active-background-color:                                         color-lighten(@red, -30);
 @button-danger-active-background-gradient-color-top:                            null;
 @button-danger-active-background-gradient-color-bottom:                         null;
 @button-danger-active-border-width:                                             null;
@@ -5190,7 +5190,7 @@ Button (Danger) State: Selected
 @button-danger-selected-text-shadow:                                            @button-danger-active-text-shadow;
 @button-danger-selected-text-decoration:                                        @button-danger-active-text-decoration;
 @button-danger-selected-text-rendering:                                         @button-danger-active-text-rendering;
-@button-danger-selected-background-color:                                       ~`color_lightness("@{red}", -20)`;
+@button-danger-selected-background-color:                                       color-lighten(@red, -20);
 @button-danger-selected-background-gradient-color-top:                          @button-danger-active-background-gradient-color-top;
 @button-danger-selected-background-gradient-color-bottom:                       @button-danger-active-background-gradient-color-bottom;
 @button-danger-selected-border-width:                                           @button-danger-active-border-width;
@@ -5699,7 +5699,7 @@ Button (Danger, Inverse) State: Hover
 @button-danger-inverse-hover-text-shadow:                                       null;
 @button-danger-inverse-hover-text-decoration:                                   null;
 @button-danger-inverse-hover-text-rendering:                                    null;
-@button-danger-inverse-hover-background-color:                                  ~`color_lightness("@{red}", 90)`;
+@button-danger-inverse-hover-background-color:                                  color-lighten(@red, 90);
 @button-danger-inverse-hover-background-gradient-color-top:                     null;
 @button-danger-inverse-hover-background-gradient-color-bottom:                  null;
 @button-danger-inverse-hover-border-width:                                      null;
@@ -5734,7 +5734,7 @@ Button (Danger, Inverse) State: Active
 @button-danger-inverse-active-text-shadow:                                      null;
 @button-danger-inverse-active-text-decoration:                                  null;
 @button-danger-inverse-active-text-rendering:                                   null;
-@button-danger-inverse-active-background-color:                                 ~`color_lightness("@{red}", 80)`;
+@button-danger-inverse-active-background-color:                                 color-lighten(@red, 80);
 @button-danger-inverse-active-background-gradient-color-top:                    null;
 @button-danger-inverse-active-background-gradient-color-bottom:                 null;
 @button-danger-inverse-active-border-width:                                     null;
@@ -5769,11 +5769,11 @@ Button (Danger, Inverse) State: Selected
 @button-danger-inverse-selected-text-shadow:                                    null;
 @button-danger-inverse-selected-text-decoration:                                null;
 @button-danger-inverse-selected-text-rendering:                                 null;
-@button-danger-inverse-selected-background-color:                               ~`color_lightness("@{red}", 0)`;
+@button-danger-inverse-selected-background-color:                               color-lighten(@red, 0);
 @button-danger-inverse-selected-background-gradient-color-top:                  null;
 @button-danger-inverse-selected-background-gradient-color-bottom:               null;
 @button-danger-inverse-selected-border-width:                                   null;
-@button-danger-inverse-selected-border-color:                                   ~`color_lightness("@{red}", 0)`;
+@button-danger-inverse-selected-border-color:                                   color-lighten(@red, 0);
 @button-danger-inverse-selected-border-style:                                   null;
 @button-danger-inverse-selected-border-top-width:                               null;
 @button-danger-inverse-selected-border-top-color:                               null;
@@ -6054,7 +6054,7 @@ Button (Danger, Inverse, Stroke) State: Normal
 @button-danger-inverse-stroke-background-gradient-color-top:                    none;
 @button-danger-inverse-stroke-background-gradient-color-bottom:                 none;
 @button-danger-inverse-stroke-border-width:                                     null;
-@button-danger-inverse-stroke-border-color:                                     ~`color_lightness("@{red}", 0)`;
+@button-danger-inverse-stroke-border-color:                                     color-lighten(@red, 0);
 @button-danger-inverse-stroke-border-style:                                     null;
 @button-danger-inverse-stroke-border-top-width:                                 null;
 @button-danger-inverse-stroke-border-top-color:                                 null;
