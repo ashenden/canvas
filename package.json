@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ashenden/canvas/issues"
   },
-  "homepage": "https://github.com/ashenden/canvas"
+  "homepage": "https://github.com/ashenden/canvas",
+  "dependencies": {
+    "less-color-lighten": "0.0.1"
+  }
 }
