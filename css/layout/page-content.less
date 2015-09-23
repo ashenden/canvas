@@ -56,7 +56,7 @@ Page Content
       font-weight: @header-navigation-link-text-font-weight;
       font-style: @header-navigation-link-text-font-style;
       text-transform: @header-navigation-link-text-transform;
-      color: ~`color_lightness("@{neutral}", 0)`;
+      color: color-lighten(@neutral, 0);
       text-shadow: @header-navigation-link-text-shadow;
       position: relative;
 
@@ -75,7 +75,7 @@ Page Content
       a {
 
         display: block;
-        color: ~`color_lightness("@{neutral}", 40)`;
+        color: color-lighten(@neutral, 40);
         text-decoration: @header-navigation-link-text-link-text-decoration;
         .transition(e('padding 0.2s ease, color 0.2s ease'));
         position: relative;
@@ -90,7 +90,7 @@ Page Content
           left: -(@base-spacing-unit * 0.5);
           width: 1px;
           height: 100%;
-          background: ~`color_lightness("@{neutral}", 60)`;
+          background: color-lighten(@neutral, 60);
           .border-radius(0px);
           .opacity(0);
           .transition(opacity 0.2s ease);
@@ -99,7 +99,7 @@ Page Content
 
         &:hover {
 
-          color: ~`color_lightness("@{neutral}", 20)`;
+          color: color-lighten(@neutral, 20);
           text-decoration: none;
 
           &:before {
