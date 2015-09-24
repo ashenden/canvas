@@ -404,3 +404,46 @@ Form Control Size Styling
   }
 
 }
+
+
+
+
+
+
+/* -----------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+Form Control Group Variant Styling
+
+--------------------------------------------------------------------------------
+----------------------------------------------------------------------------- */
+
+
+.form-control-group-variant(@variant-class: 'default') {
+
+  @form-control-variant-border-width: "form-control-@{variant-class}-border-width";
+  @form-control-variant-border-top-width: "form-control-@{variant-class}-border-top-width";
+  @form-control-variant-border-right-width: "form-control-@{variant-class}-border-right-width";
+  @form-control-variant-border-bottom-width: "form-control-@{variant-class}-border-bottom-width";
+  @form-control-variant-border-left-width: "form-control-@{variant-class}-border-left-width";
+
+  & when not (@@form-control-variant-border-width = null) {
+
+    margin-top: -1 * @@form-control-variant-border-width !important;
+    margin-bottom: -1 * @@form-control-variant-border-width !important;
+
+  }
+
+  & when not (@@form-control-variant-border-top-width = null) {
+
+    margin-top: -1 *@@form-control-variant-border-top-width !important;
+
+  }
+
+  & when not (@@form-control-variant-border-bottom-width = null) {
+
+    margin-bottom: -1 * @@form-control-variant-border-bottom-width !important;
+
+  }
+
+}

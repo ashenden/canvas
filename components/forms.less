@@ -1416,6 +1416,71 @@ base/forms.less
           padding-left: 0px !important;
           padding-right: 0px !important;
           margin: 0px !important;
+          .form-control-group-variant(@variant-class: 'default');
+
+        }
+
+        &:hover {
+
+          .form-control {
+
+            .form-control-group-variant(@variant-class: 'default-hover');
+
+          }
+
+        }
+
+        &.focus {
+
+          .form-control {
+
+            .form-control-group-variant(@variant-class: 'default-focus');
+
+          }
+
+        }
+
+        & when (@form-control-error-inverse-enabled) {
+
+          &.form-control-inverse {
+
+            .form-control.form-control-inverse {
+
+              .form-control-group-variant(@variant-class: 'default-inverse');
+
+            }
+
+            &:hover {
+
+              .form-control.form-control-inverse {
+
+                .form-control-group-variant(@variant-class: 'default-inverse-hover');
+
+              }
+
+            }
+
+            &.focus {
+
+              .form-control.form-control-inverse {
+
+                .form-control-group-variant(@variant-class: 'default-inverse-focus');
+
+              }
+
+            }
+
+            &.disabled {
+
+              .form-control.form-control-inverse {
+
+                .form-control-group-variant(@variant-class: 'default-inverse-disabled');
+
+              }
+
+            }
+
+          }
 
         }
 
@@ -2895,6 +2960,98 @@ base/forms.less
 
           }
 
+
+
+          /* -----------------------------------------------------------------------------
+          Form Control Group
+          ----------------------------------------------------------------------------- */
+
+          .form-control-group.form-control {
+
+            .form-control {
+
+              .form-control-group-variant(@variant-class: 'success');
+
+            }
+
+            &:hover {
+
+              .form-control {
+
+                .form-control-group-variant(@variant-class: 'success-hover');
+
+              }
+
+            }
+
+            &.focus {
+
+              .form-control {
+
+                .form-control-group-variant(@variant-class: 'success-focus');
+
+              }
+
+            }
+
+            &.disabled {
+
+              .form-control {
+
+                .form-control-group-variant(@variant-class: 'success-disabled');
+
+              }
+
+            }
+
+
+
+            & when (@form-control-success-inverse-enabled) {
+
+              .form-control-group.form-control.form-control-inverse {
+
+                .form-control.form-control-inverse {
+
+                  .form-control-group-variant(@variant-class: 'success-inverse');
+
+                }
+
+                &:hover {
+
+                  .form-control.form-control-inverse {
+
+                    .form-control-group-variant(@variant-class: 'success-inverse-hover');
+
+                  }
+
+                }
+
+                &.focus {
+
+                  .form-control.form-control-inverse {
+
+                    .form-control-group-variant(@variant-class: 'success-inverse-focus');
+
+                  }
+
+                }
+
+                &.disabled {
+
+                  .form-control.form-control-inverse {
+
+                    .form-control-group-variant(@variant-class: 'success-inverse-disabled');
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
         }
 
 
@@ -3989,6 +4146,98 @@ base/forms.less
                       border-top-color: @form-control-error-inverse-disabled-text-color;
 
                     }
+
+                  }
+
+                }
+
+              }
+
+            }
+
+          }
+
+
+
+          /* -----------------------------------------------------------------------------
+          Form Control Group
+          ----------------------------------------------------------------------------- */
+
+          .form-control-group.form-control {
+
+            .form-control {
+
+              .form-control-group-variant(@variant-class: 'error');
+
+            }
+
+            &:hover {
+
+              .form-control {
+
+                .form-control-group-variant(@variant-class: 'error-hover');
+
+              }
+
+            }
+
+            &.focus {
+
+              .form-control {
+
+                .form-control-group-variant(@variant-class: 'error-focus');
+
+              }
+
+            }
+
+            &.disabled {
+
+              .form-control {
+
+                .form-control-group-variant(@variant-class: 'error-disabled');
+
+              }
+
+            }
+
+
+
+            & when (@form-control-error-inverse-enabled) {
+
+              .form-control-group.form-control.form-control-inverse {
+
+                .form-control.form-control-inverse {
+
+                  .form-control-group-variant(@variant-class: 'error-inverse');
+
+                }
+
+                &:hover {
+
+                  .form-control.form-control-inverse {
+
+                    .form-control-group-variant(@variant-class: 'error-inverse-hover');
+
+                  }
+
+                }
+
+                &.focus {
+
+                  .form-control.form-control-inverse {
+
+                    .form-control-group-variant(@variant-class: 'error-inverse-focus');
+
+                  }
+
+                }
+
+                &.disabled {
+
+                  .form-control.form-control-inverse {
+
+                    .form-control-group-variant(@variant-class: 'error-inverse-disabled');
 
                   }
 
